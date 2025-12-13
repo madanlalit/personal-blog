@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { triggerAlert } from '../../features/system/SystemAlert';
-import { mockPosts } from '../../data/mockData';
+import type { Post } from '../../types';
+import type { Theme } from '../../hooks/useTheme';
 import './CommandLine.css';
 
 interface CommandLineProps {
     onKey?: () => void;
     onCommand?: (cmd: string) => void;
+    setTheme: (theme: Theme) => void;
+    availableThemes: readonly Theme[];
+    searchPosts: (query: string) => Post[];
 }
 
-const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
+const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand, setTheme, availableThemes, searchPosts }) => {
     const [input, setInput] = useState('');
     const [displayHistory, setDisplayHistory] = useState<(string | React.ReactNode)[]>([]); // Visual output
     const [commandHistory, setCommandHistory] = useState<string[]>([]); // Executed commands
@@ -63,7 +67,7 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
         else if (e.key === 'Tab') {
             e.preventDefault();
             const commands = ['help', 'cd', 'ls', 'theme', 'clear', 'reboot', 'snake', 'grep', 'neofetch', 'amp'];
-            const args = ['home', 'about', 'archive', 'sage', 'amber', 'dracula', 'light', 'cyan'];
+            const args = ['home', 'about', 'archive', ...availableThemes];
             const allOptions = [...commands, ...args];
 
             const match = allOptions.find(opt => opt.startsWith(input.toLowerCase()));
@@ -88,12 +92,12 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
         setDisplayHistory(prev => [...prev.slice(-4), `> ${cmd}`]);
 
         switch (command) {
-            case 'help':
+            case 'help': {
                 setDisplayHistory(prev => [...prev,
                     'Available commands:',
                     '  cd [page]   - Navigate (home, about, archive)',
                     '  grep [term] - Search blog posts',
-                    '  theme [opt] - Set theme (sage, amber, dracula, cyan, openai)',
+                    `  theme [opt] - Set theme (${availableThemes.join(' | ')})`,
                     '  amp         - Launch Audio Player',
                     '  neofetch    - System Information',
                     '  snake       - Play Snake',
@@ -102,14 +106,17 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
                     '  clear       - Clear screen'
                 ]);
                 break;
-            case 'clear':
+            }
+            case 'clear': {
                 setDisplayHistory([]);
                 break;
-            case 'reboot':
+            }
+            case 'reboot': {
                 sessionStorage.removeItem('hasBooted');
                 window.location.reload();
                 break;
-            case 'neofetch':
+            }
+            case 'neofetch': {
                 const info = (
                     <div className="neofetch-output" style={{ display: 'flex', gap: '20px', margin: '10px 0', color: 'var(--accent)' }}>
                         <pre style={{ margin: 0, lineHeight: 1.2, fontWeight: 'bold' }}>
@@ -126,7 +133,7 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div><strong style={{ color: 'var(--text-primary)' }}>OS:</strong> RetroReactOS v1.0</div>
                             <div><strong style={{ color: 'var(--text-primary)' }}>Host:</strong> {navigator.userAgent}</div>
-                            <div><strong style={{ color: 'var(--text-primary)' }}>Theme:</strong> {localStorage.getItem('theme') || 'openai'} / flat</div>
+                            <div><strong style={{ color: 'var(--text-primary)' }}>Theme:</strong> {localStorage.getItem('app-theme') || 'sage'} / flat</div>
                             <div><strong style={{ color: 'var(--text-primary)' }}>Uptime:</strong> Forever</div>
                             <div><strong style={{ color: 'var(--text-primary)' }}>Shell:</strong> ReactCLI</div>
                         </div>
@@ -134,16 +141,13 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
                 );
                 setDisplayHistory(prev => [...prev, info]);
                 break;
-            case 'grep':
+            }
+            case 'grep': {
                 if (!arg) {
                     setDisplayHistory(prev => [...prev, 'Usage: grep [search term]']);
                     break;
                 }
-                const results = mockPosts.filter(p =>
-                    p.title.toLowerCase().includes(arg) ||
-                    p.content.toLowerCase().includes(arg) ||
-                    p.tags?.some(t => t.toLowerCase().includes(arg))
-                );
+                const results = searchPosts(arg);
 
                 if (results.length === 0) {
                     setDisplayHistory(prev => [...prev, `grep: ${arg}: No matches found`]);
@@ -169,7 +173,8 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
                     setDisplayHistory(prev => [...prev, ...resultNodes]);
                 }
                 break;
-            case 'cd':
+            }
+            case 'cd': {
                 if (!arg || arg === 'home') navigate('/');
                 else if (['about', 'archive', 'contact'].includes(arg)) navigate(`/${arg}`);
                 else {
@@ -177,33 +182,38 @@ const CommandLine: React.FC<CommandLineProps> = ({ onKey, onCommand }) => {
                     triggerAlert(`Directory '${arg}' not found`, 'warning');
                 }
                 break;
-            case 'ls':
+            }
+            case 'ls': {
                 setDisplayHistory(prev => [...prev, 'home/  about/  archive/  contact/']);
                 break;
-            case 'theme':
-                if (['amber', 'dracula', 'sage', 'light', 'cyan', 'matrix', 'openai'].includes(arg)) {
-                    document.documentElement.setAttribute('data-theme', arg);
-                    localStorage.setItem('theme', arg);
+            }
+            case 'theme': {
+                if (availableThemes.includes(arg as Theme)) {
+                    setTheme(arg as Theme);
                     setDisplayHistory(prev => [...prev, `Theme set to ${arg}`]);
                     triggerAlert(`Theme updated to ${arg}`, 'success');
                 } else {
-                    setDisplayHistory(prev => [...prev, 'Usage: theme [sage | amber | cyan | dracula | light | openai]']);
+                    setDisplayHistory(prev => [...prev, `Usage: theme [${availableThemes.join(' | ')}]`]);
                 }
                 break;
-            case 'snake':
+            }
+            case 'snake': {
                 if (onCommand) onCommand('snake');
                 break;
-            case 'amp':
+            }
+            case 'amp': {
                 if (onCommand) onCommand('amp'); // Delegate to App
                 else setDisplayHistory(prev => [...prev, 'Amp Audio Player starting...']);
                 break;
-            default:
+            }
+            default: {
                 if (onCommand) {
                     onCommand(command);
                 }
                 if (command !== 'snake' && command !== 'amp') {
                     if (trimmed !== '') setDisplayHistory(prev => [...prev, `Command not found: ${command}`]);
                 }
+            }
         }
     };
 

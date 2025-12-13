@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { mockPosts } from '../data/mockData';
+import { usePosts } from '../hooks/usePosts';
 import './Archive.css';
 
 const Archive: React.FC = () => {
-    const postsByYear = mockPosts.reduce((acc, post) => {
+    const { getAllPosts } = usePosts();
+    const allPosts = getAllPosts();
+
+    const postsByYear = allPosts.reduce((acc, post) => {
         const year = new Date(post.date).getFullYear().toString();
         if (!acc[year]) acc[year] = [];
         acc[year].push(post);
         return acc;
-    }, {} as Record<string, typeof mockPosts>);
+    }, {} as Record<string, typeof allPosts>);
 
     return (
         <div className="archive-container fade-in">

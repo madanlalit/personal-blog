@@ -10,6 +10,8 @@ import SnakeGame from './features/terminal/SnakeGame';
 import AudioPlayer from './features/terminal/AudioPlayer'; // Import
 import useSound from './hooks/useSound';
 import useKonamiCode from './hooks/useKonamiCode';
+import { useTheme } from './hooks/useTheme';
+import { usePosts } from './hooks/usePosts';
 import { HelmetProvider } from 'react-helmet-async';
 
 import Home from './pages/Home';
@@ -27,10 +29,11 @@ function App() {
   const [ampOpen, setAmpOpen] = useState(false); // Amp state
 
   const { playHoverSound, playKeySound, toggleMute, muted } = useSound();
+  const { setTheme, availableThemes } = useTheme();
+  const { searchPosts, getAllPosts } = usePosts();
 
   useKonamiCode(() => {
-    document.documentElement.setAttribute('data-theme', 'matrix');
-    localStorage.setItem('theme', 'matrix');
+    setTheme('matrix');
     triggerAlert('GOD MODE ACTIVATED: SYSTEM COMPROMISED', 'warning');
   });
 
@@ -48,15 +51,10 @@ function App() {
 
   useEffect(() => {
     // Check if we've already booted this session
-    // Check if we've already booted this session
     const hasBooted = sessionStorage.getItem('hasBooted');
     if (hasBooted) {
       setBooted(true);
     }
-
-    // Initialize Theme (Default to Light)
-    const savedTheme = localStorage.getItem('theme') || 'openai';
-    document.documentElement.setAttribute('data-theme', savedTheme);
 
     // Toggle Commander with Shift + M (Global Override)
     const handleKey = (e: KeyboardEvent) => {
@@ -89,7 +87,14 @@ function App() {
           {ampOpen && <AudioPlayer onExit={() => setAmpOpen(false)} />}
 
           {/* Modal Navigation */}
-          <Commander isOpen={commanderOpen} onClose={() => setCommanderOpen(false)} />
+          <Commander
+            isOpen={commanderOpen}
+            onClose={() => setCommanderOpen(false)}
+            setTheme={setTheme}
+            availableThemes={availableThemes}
+            searchPosts={searchPosts}
+            getAllPosts={getAllPosts}
+          />
 
           {/* TUI Top Bar */}
           <StatusBar muted={muted} onToggleMute={toggleMute} />
@@ -111,6 +116,9 @@ function App() {
           {/* TUI Bottom Bar with Tabs */}
           <CommandLine
             onKey={playKeySound}
+            setTheme={setTheme}
+            searchPosts={searchPosts}
+            availableThemes={availableThemes}
             onCommand={(cmd) => {
               if (cmd === 'snake') {
                 setSnakeGameOpen(true);

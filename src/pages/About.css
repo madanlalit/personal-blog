@@ -22,6 +22,22 @@
     color: var(--text-secondary);
 }
 
+.about-intro {
+    display: flex;
+    flex-direction: column; /* Default to column without image */
+    align-items: flex-start; /* Align text to start */
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+
+
+.intro-text-content h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+}
+
 .lead {
     font-size: 1.25rem;
     color: var(--text-primary);

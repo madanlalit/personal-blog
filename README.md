@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Personal Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal blog application built with React, Vite, and TypeScript, featuring a unique, retro-style terminal interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Blog Engine**: Write and display blog posts using Markdown.
+- **Retro UI/UX**: A nostalgic user interface that mimics old-school computer terminals.
+- **Terminal Commands**: Interactive command-line interface to navigate the blog.
+- **Games**: Includes a classic Snake game.
+- **Easter Eggs**: Discover hidden secrets like the Konami code.
+- **SEO Optimized**: Uses `react-helmet-async` for better search engine visibility.
+- **RSS Feed**: Automatically generates an `rss.xml` file for content syndication.
+- **Syntax Highlighting**: Code blocks in posts are highlighted for readability.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/) for routing
+- [React Markdown](https://github.com/remarkjs/react-markdown) for rendering Markdown content
+- [ESLint](https://eslint.org/) for code linting
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To get a local copy up and running, follow these simple steps.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+You need to have Node.js and npm installed on your machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/get-npm)
+
+### Installation
+
+1.  Clone the repo:
+    ```sh
+    git clone https://github.com/your_username/personal-blog.git
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd personal-blog
+    ```
+3.  Install NPM packages:
+    ```sh
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `npm run dev`: Runs the app in the development mode.
+- `npm run build`: Builds the app for production to the `dist` folder.
+- `npm run lint`: Lints the code using ESLint.
+- `npm run preview`: Serves the production build locally.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.

@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { mockPosts } from '../data/mockData';
+import { usePosts } from '../hooks/usePosts';
 import SEO from '../components/SEO';
 import './Archive.css'; // Re-use Archive styles
 
 const TagArchive: React.FC = () => {
     const { tag } = useParams<{ tag: string }>();
     const decodedTag = decodeURIComponent(tag || '');
+    const { getPostsByTag } = usePosts();
 
-    const filteredPosts = mockPosts.filter(post =>
-        post.tags?.some(t => t.toLowerCase() === decodedTag.toLowerCase())
-    );
+    const filteredPosts = getPostsByTag(decodedTag);
 
     const postsByYear = filteredPosts.reduce((acc, post) => {
         const year = new Date(post.date).getFullYear().toString();
         if (!acc[year]) acc[year] = [];
         acc[year].push(post);
         return acc;
-    }, {} as Record<string, typeof mockPosts>);
+    }, {} as Record<string, typeof filteredPosts>);
 
     return (
         <div className="archive-container fade-in">

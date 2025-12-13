@@ -78,7 +78,7 @@
 /* The Commander Window itself */
 .commander-window {
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     height: 80vh;
     max-height: 600px;
     background-color: var(--bg-secondary);
@@ -112,100 +112,65 @@
     background-color: var(--bg-primary);
     color: var(--accent);
     padding: 8px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-frame-top {
     border-bottom: 1px dashed var(--border);
 }
 
 .sidebar-frame-bottom {
     border-top: 1px dashed var(--border);
-    border-bottom: none;
-    margin-top: auto;
 }
 
-/* File System Container */
-.fs-container {
+.commander-output-area {
     padding: 16px;
     flex: 1;
     overflow-y: auto;
     font-family: var(--font-primary);
-}
-
-.fs-root {
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-/* Tree Items */
-.tree-item {
     font-size: 0.9rem;
     line-height: 1.6;
 }
 
-.tree-label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    white-space: pre;
-    /* Keep spaces for indent */
-    color: var(--text-secondary);
-}
-
-.tree-label:hover {
-    color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
-.tree-prefix {
-    color: var(--text-tertiary);
-    margin-right: 4px;
-}
-
-.tree-label.folder {
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.tree-label.active-file {
-    background-color: var(--selection-bg);
-    color: var(--selection-text);
-}
-
-.active-link {
-    color: inherit;
-    text-decoration: underline;
-}
-
-.folder-name {
-    color: var(--accent-hover);
-}
-
-/* System Dashboard */
-.sys-dashboard {
-    padding: 16px;
+.commander-input-area {
+    padding: 8px 16px;
     border-top: 1px solid var(--border);
-    background-color: rgba(0, 0, 0, 0.2);
-    font-size: 0.8rem;
-    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
 }
 
-.sys-row {
+.commander-input-area form {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 6px;
+}
+
+.prompt {
+    color: var(--accent);
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.commander-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+.commander-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 16px;
+}
+
+.commander-list li a {
+    text-decoration: none;
     color: var(--text-secondary);
 }
 
-.progress-bar {
-    flex: 1;
-    height: 10px;
-    background-color: var(--bg-primary);
-    border: 1px solid var(--text-tertiary);
-    margin: 0 8px;
-    position: relative;
-}
-
-.progress-bar div {
-    height: 100%;
-    background-color: var(--accent);
+.commander-list li a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
 }

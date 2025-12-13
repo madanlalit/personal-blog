@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import Typewriter from '../components/ui/Typewriter';
-import { mockPosts } from '../data/mockData';
-import type { Post as PostType } from '../types';
+import { usePosts } from '../hooks/usePosts';
+
 import SEO from '../components/SEO';
 import '../features/terminal/SyntaxTheme.css'; // Dynamic Theme
 import './Post.css';
 
 const Post: React.FC = () => {
     const { id } = useParams<{ id: string }>();
-    const [post, setPost] = useState<PostType | undefined>(undefined);
-
-    useEffect(() => {
-        const foundPost = mockPosts.find(p => p.id === id);
-        setPost(foundPost);
-    }, [id]);
+    const { getPostById } = usePosts();
+    const post = getPostById(id || '');
 
     if (!post) {
         return (

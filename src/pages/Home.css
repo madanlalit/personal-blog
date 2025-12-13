@@ -17,12 +17,24 @@
 }
 
 .highlight {
-    color: var(--text-primary);
-    /* Optional: underline or emphasis */
-    text-decoration: underline;
-    text-decoration-color: var(--border);
-    text-underline-offset: 6px;
-    text-decoration-thickness: 2px;
+    color: var(--accent); /* Use accent color for text */
+    position: relative;
+    text-decoration: none; /* Ensure no default underline */
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; /* Position below the text */
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease-out;
+}
+
+.highlight:hover::after {
+    width: 100%; /* Expand to full width on hover */
 }
 
 .sub-intro {
