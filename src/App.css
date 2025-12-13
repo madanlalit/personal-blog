@@ -1,0 +1,61 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* TUI Status Bars */
+/* TUI Status Bars - Moved to StatusBar.css */
+
+/* Main Layout (Sidebar + Content) */
+.main-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /* Mobile first */
+  position: relative;
+  overflow: hidden;
+}
+
+.content-area {
+  flex: 1;
+  width: 100%;
+  padding: var(--space-lg);
+  overflow-y: scroll;
+}
+
+.content-area::-webkit-scrollbar {
+  width: 14px;
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border);
+}
+
+.content-area::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 0;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary);
+  border: none;
+  border-radius: 0;
+}
+
+.content-area::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-primary);
+}
+
+@media (min-width: 1024px) {
+  .main-layout {
+    flex-direction: row;
+  }
+
+  .content-area {
+    width: 100%;
+    /* max-width removed to keep scrollbar at edge */
+    /* margin: 0 auto; removed */
+    padding: var(--space-xl) var(--space-lg);
+  }
+}

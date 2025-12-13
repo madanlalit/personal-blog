@@ -1,0 +1,403 @@
+/* ================================
+   Subtle Terminal Design System
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Colors - Subtle TUI (Sage/Slate/Nord-ish) */
+  --bg-primary: #18191A;
+  /* Soft Charcoal (less harsh than #000) */
+  --bg-secondary: #202224;
+  /* Slightly lighter panel */
+
+  --text-primary: #D4D4D4;
+  /* Soft White/Grey */
+  --text-secondary: #8B949E;
+  /* Dimmed Grey for comments/meta */
+  --text-tertiary: #5C6370;
+  /* Very dimmed for structure */
+
+  --accent: #A8B9A8;
+  /* Soft Sage Green */
+  --accent-hover: #C5D4C5;
+  /* Lighter Sage */
+
+  --border: #3E4451;
+  /* Structural Grey */
+  --selection-bg: #3E4451;
+  --selection-text: #FFFFFF;
+
+  /* Typography - Monospace */
+  --font-primary: 'JetBrains Mono', monospace;
+  --font-serif: 'JetBrains Mono', monospace;
+
+  /* Scale */
+  --font-size-hero: clamp(2rem, 4vw, 3rem);
+  --font-size-title: clamp(1.25rem, 2.5vw, 1.75rem);
+  --font-size-subtitle: 1rem;
+  --font-size-body: 0.9375rem;
+  /* slightly smaller for heavy code feel */
+  --font-size-small: 0.8125rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --content-max-width: 960px;
+  --header-height: 0px;
+}
+
+/* Force Dark Mode defaults */
+[data-theme="light"] {
+  /* "Paper Terminal" mode if forced */
+  --bg-primary: #F0F2F5;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #2D3138;
+  --text-secondary: #6B7685;
+  --text-tertiary: #A0AAB8;
+  --accent: #4F6F52;
+  /* Darker Sage */
+  --border: #D1D5DB;
+  --selection-bg: #D1D5DB;
+  --selection-text: #2D3138;
+}
+
+[data-theme="amber"] {
+  /* Retro CRT Amber */
+  --bg-primary: #181000;
+  /* Deepest Amber Black */
+  --bg-secondary: #2B1D00;
+  --text-primary: #FFB000;
+  /* Amber Glow */
+  --text-secondary: #CC8F00;
+  --text-tertiary: #664800;
+  --accent: #FFB000;
+  --accent-hover: #FFD574;
+  --border: #664800;
+  --selection-bg: #FFB000;
+  --selection-text: #181000;
+}
+
+[data-theme="dracula"] {
+  /* Dracula Theme */
+  --bg-primary: #282A36;
+  --bg-secondary: #44475A;
+  --text-primary: #F8F8F2;
+  --text-secondary: #6272A4;
+  --text-tertiary: #44475A;
+  --accent: #FF79C6;
+  /* Pink */
+  --accent-hover: #BD93F9;
+  /* Purple */
+  --border: #6272A4;
+  --selection-bg: #FF79C6;
+  --selection-background: #FF79C6;
+  --selection-text: #282A36;
+}
+
+[data-theme="sage"] {
+  /* Default Sage/Nord (Explicit) */
+  --bg-primary: #18191A;
+  --bg-secondary: #202224;
+  --text-primary: #D4D4D4;
+  --text-secondary: #8B949E;
+  --text-tertiary: #5C6370;
+  --accent: #A8B9A8;
+  --accent-hover: #C5D4C5;
+  --border: #3E4451;
+  --selection-bg: #3E4451;
+  --selection-text: #FFFFFF;
+}
+
+[data-theme="cyan"] {
+  /* Cyber Blue/Cyan */
+  --bg-primary: #051923;
+  --bg-secondary: #003554;
+  --text-primary: #00F0FF;
+  /* Bright Cyan */
+  --text-secondary: #00A6FB;
+  --text-tertiary: #0582CA;
+  --accent: #00F0FF;
+  --accent-hover: #50F7FF;
+  --border: #006494;
+  --selection-bg: #00F0FF;
+  --selection-text: #051923;
+}
+
+[data-theme="matrix"] {
+  /* God Mode - Cyberpunk/Matrix */
+  --bg-primary: #0D0208;
+  /* Deep Void */
+  --bg-secondary: #001f0f;
+  --text-primary: #00FF41;
+  /* CRT Green */
+  --text-secondary: #008F11;
+  --text-tertiary: #003B00;
+  --accent: #D00000;
+  /* Error Red Accent */
+  --accent-hover: #FF0000;
+  --border: #003B00;
+  --selection-bg: #00FF41;
+  --selection-text: #000000;
+  --font-primary: 'Courier New', monospace;
+  /* Harsh retro font */
+}
+
+[data-theme="openai"] {
+  /* OpenAI Playground - Minimalist */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F7F7F8;
+  --text-primary: #000000;
+  --text-secondary: #40414F;
+  --text-tertiary: #8E8EA0;
+  --accent: #000000;
+  --accent-hover: #333333;
+  --border: #E5E5E5;
+  --selection-bg: #000000;
+  --selection-text: #FFFFFF;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  /* Prevent scrollbar flicker */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 14px;
+  /* Fixed width */
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary);
+  /* Solid block color */
+  border: none;
+  /* No spacing/floating effect */
+  border-radius: 0;
+  /* Strict square corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-primary);
+  /* No hover change */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+h1::after {
+  content: ' █';
+  /* Block cursor */
+  animation: blink 1.2s step-end infinite;
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Utils */
+.container,
+.home-container,
+.post-container,
+.archive-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0 var(--space-lg);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  color: var(--text-primary);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+}
+
+.skip-hint {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  animation: pulse 2s infinite;
+  z-index: 100;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+
+  20% {
+    clip: rect(6px, 9999px, 83px, 0);
+  }
+
+  40% {
+    clip: rect(80px, 9999px, 33px, 0);
+  }
+
+  60% {
+    clip: rect(88px, 9999px, 21px, 0);
+  }
+
+  80% {
+    clip: rect(81px, 9999px, 81px, 0);
+  }
+
+  100% {
+    clip: rect(10px, 9999px, 13px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(65px, 9999px, 55px, 0);
+  }
+
+  20% {
+    clip: rect(78px, 9999px, 57px, 0);
+  }
+
+  40% {
+    clip: rect(41px, 9999px, 11px, 0);
+  }
+
+  60% {
+    clip: rect(13px, 9999px, 89px, 0);
+  }
+
+  80% {
+    clip: rect(34px, 9999px, 23px, 0);
+  }
+
+  100% {
+    clip: rect(48px, 9999px, 60px, 0);
+  }
+}

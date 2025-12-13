@@ -1,0 +1,45 @@
+.archive-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.year-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.year-label {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+}
+
+.year-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.year-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: baseline;
+    margin-bottom: var(--space-md);
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    font-feature-settings: "tnum";
+}
+
+.item-title {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.item-title:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--text-tertiary);
+}

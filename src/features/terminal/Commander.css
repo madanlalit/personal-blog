@@ -1,0 +1,211 @@
+/* Mobile Drawer Default */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background-color: var(--bg-secondary);
+    border-right: 3px double var(--border);
+    /* Double border TUI style */
+    padding: 0;
+    /* Remove padding for raw text feel */
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s steps(15);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        position: relative;
+        transform: translateX(0);
+        height: 100%;
+        box-shadow: none;
+    }
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    position: fixed;
+    top: 50px;
+    right: 16px;
+    z-index: 200;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .mobile-toggle {
+        display: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 40;
+}
+
+@media (min-width: 1024px) {
+    .overlay {
+        display: none;
+    }
+}
+
+/* Commander Modal Overlay */
+.commander-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Commander Window itself */
+.commander-window {
+    width: 90%;
+    max-width: 400px;
+    height: 80vh;
+    max-height: 600px;
+    background-color: var(--bg-secondary);
+    border: 3px double var(--accent);
+    /* Retro double border */
+    box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.5);
+    /* Deep shadow */
+    display: flex;
+    flex-direction: column;
+    animation: popIn 0.1s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ASCII Frames */
+.sidebar-frame-top,
+.sidebar-frame-bottom {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--bg-primary);
+    color: var(--accent);
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.sidebar-frame-bottom {
+    border-top: 1px dashed var(--border);
+    border-bottom: none;
+    margin-top: auto;
+}
+
+/* File System Container */
+.fs-container {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+    font-family: var(--font-primary);
+}
+
+.fs-root {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Tree Items */
+.tree-item {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tree-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    /* Keep spaces for indent */
+    color: var(--text-secondary);
+}
+
+.tree-label:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.tree-prefix {
+    color: var(--text-tertiary);
+    margin-right: 4px;
+}
+
+.tree-label.folder {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.tree-label.active-file {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+.active-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.folder-name {
+    color: var(--accent-hover);
+}
+
+/* System Dashboard */
+.sys-dashboard {
+    padding: 16px;
+    border-top: 1px solid var(--border);
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    font-family: var(--font-primary);
+}
+
+.sys-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 10px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--text-tertiary);
+    margin: 0 8px;
+    position: relative;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: var(--accent);
+}

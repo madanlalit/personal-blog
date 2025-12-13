@@ -1,0 +1,39 @@
+.system-alert-container {
+    position: fixed;
+    top: 60px;
+    /* Below top status bar */
+    right: 20px;
+    z-index: 9999;
+    font-family: var(--font-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.system-alert {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--accent);
+    color: var(--text-primary);
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    max-width: 300px;
+    font-weight: 500;
+}
+
+.system-alert.success {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.system-alert.warning {
+    border-color: #FFA500;
+    color: #FFA500;
+}
+
+.alert-prefix {
+    margin-right: 8px;
+    font-weight: 700;
+}

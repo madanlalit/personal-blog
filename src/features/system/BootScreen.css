@@ -1,0 +1,31 @@
+.boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #4AF626;
+    /* Always green for boot unless theme overrides, defaulting retro green */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    padding: 32px;
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.boot-line {
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+}
+
+.cursor-block {
+    width: 10px;
+    height: 18px;
+    background-color: #4AF626;
+    animation: blink 0.5s step-end infinite;
+    margin-top: 4px;
+}

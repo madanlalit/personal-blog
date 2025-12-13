@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>Giant Sagan Blog</title>
+    <link>https://giant-sagan.vercel.app</link>
+    <description>A minimal, retro-themed personal blog.</description>
+    <language>en-us</language>
+    
+    <item>
+        <title><![CDATA[The Future of Web Development: A Minimalist Approach]]></title>
+        <link>https://giant-sagan.vercel.app/post/1</link>
+        <guid>https://giant-sagan.vercel.app/post/1</guid>
+        <description><![CDATA[In an era of increasing complexity, there's something profound about returning to simplicity. This post explores how minimalist design principles are shaping the future of web development, and why less is often more when it comes to creating meaningful digital experiences.]]></description>
+        <pubDate>Tue, 09 Dec 2025 18:30:00 GMT</pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[On Writing and Thinking Clearly]]></title>
+        <link>https://giant-sagan.vercel.app/post/2</link>
+        <guid>https://giant-sagan.vercel.app/post/2</guid>
+        <description><![CDATA[Clear writing is clear thinking. In this essay, I explore the deep connection between the words we choose and the thoughts we form.]]></description>
+        <pubDate>Thu, 04 Dec 2025 18:30:00 GMT</pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Building Better Habits]]></title>
+        <link>https://giant-sagan.vercel.app/post/3</link>
+        <guid>https://giant-sagan.vercel.app/post/3</guid>
+        <description><![CDATA[Transformation doesn't happen overnight. It happens through consistent, small actions compounded over time.]]></description>
+        <pubDate>Thu, 27 Nov 2025 18:30:00 GMT</pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Terminal Magic]]></title>
+        <link>https://giant-sagan.vercel.app/post/4</link>
+        <guid>https://giant-sagan.vercel.app/post/4</guid>
+        <description><![CDATA[A love letter to the CLI and why it remains the most powerful tool for developers.]]></description>
+        <pubDate>Wed, 19 Nov 2025 18:30:00 GMT</pubDate>
+    </item>
+    
+</channel>
+</rss>

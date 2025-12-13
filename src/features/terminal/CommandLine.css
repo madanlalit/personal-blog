@@ -1,0 +1,121 @@
+/* Wrapper to hold tabs + input */
+.cli-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+}
+
+.cli-tabs {
+    display: flex;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-secondary);
+}
+
+.cli-tab {
+    background: none;
+    border: none;
+    border-right: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cli-tab:hover {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.cli-tab.active {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    font-weight: 700;
+}
+
+.cli-tab.action-tab {
+    /* margin-left: auto; Removed in favor of flex spacer */
+    border-right: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    color: var(--text-tertiary);
+}
+
+.cli-tab.action-tab:hover {
+    color: var(--accent);
+}
+
+/* Existing Input Styles */
+.command-line-container {
+    background-color: var(--bg-primary);
+    /* Blend with bottom */
+    border-top: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: var(--font-size-small);
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-height: 200px;
+}
+
+.command-line-container.focused {
+    border-top: 1px solid var(--accent);
+}
+
+.cli-form {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.prompt {
+    color: var(--accent);
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.cli-input {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: inherit;
+    flex: 1;
+    outline: none;
+    caret-color: var(--accent);
+}
+
+.cli-input::placeholder {
+    color: var(--text-tertiary);
+    opacity: 0.5;
+}
+
+/* History overlay that appears ABOVE the input */
+/* History overlay that appears ABOVE the input */
+.cli-history {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    max-height: 50vh;
+    /* Allow it to grow up to half screen height */
+    overflow-y: auto;
+    /* Enable scrolling */
+    background-color: rgba(0, 0, 0, 0.95);
+    border-top: 1px solid var(--border);
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--text-secondary);
+    pointer-events: auto;
+    /* Allow interaction (scrolling/clicking) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-primary);
+}
+
+.status-right {
+    color: var(--text-tertiary);
+    font-weight: 700;
+}
