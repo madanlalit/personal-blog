@@ -1,45 +1,362 @@
-.archive-container {
+/* Maintain strict adherence to your theme variables */
+:root {
+    --arch-font: var(--font-primary);
+    --arch-border: var(--border, #e5e5e5);
+    --arch-accent: var(--accent, #2563eb);
+    --arch-text: var(--text-primary, #111);
+    --arch-muted: var(--text-tertiary, #888);
+}
+
+.archive-root {
     max-width: var(--content-max-width);
     margin: 0 auto;
+    font-family: var(--arch-font);
+    color: var(--arch-text);
+    height: 100%;
+    padding: 0 var(--space-lg);
+    position: relative;
 }
 
-.year-section {
-    margin-bottom: var(--space-2xl);
+/* Background Grid Overlay */
+.grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--arch-border) 1px, transparent 1px);
+    background-size: 100% 40px;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
 }
 
-.year-label {
-    font-size: 1rem;
-    color: var(--text-tertiary);
+/* --- 1. Dashboard HUD --- */
+.archive-hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: var(--space-lg) 0;
+    border-bottom: 2px solid var(--arch-text);
     margin-bottom: var(--space-lg);
-    font-weight: 500;
 }
 
-.year-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.year-item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    align-items: baseline;
-    margin-bottom: var(--space-md);
-}
-
-.item-date {
-    font-size: 0.9rem;
-    color: var(--text-tertiary);
-    font-feature-settings: "tnum";
-}
-
-.item-title {
+.hud-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
     font-size: 1.1rem;
-    color: var(--text-primary);
-    font-weight: 500;
+    letter-spacing: -0.5px;
 }
 
-.item-title:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--text-tertiary);
+.hud-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.stat-pill .label {
+    font-size: 0.65rem;
+    color: var(--arch-muted);
+    letter-spacing: 1px;
+}
+
+.stat-pill .value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* --- 2. Heatmap --- */
+.activity-section {
+    margin-bottom: var(--space-xl);
+}
+
+.section-label {
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    color: var(--arch-muted);
+}
+
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    gap: 2px;
+    height: 12px;
+}
+
+.heat-cell {
+    background-color: var(--arch-accent);
+    border-radius: 1px;
+}
+
+/* --- 3. Control Module --- */
+.control-module {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.search-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--arch-border);
+    padding: 10px 14px;
+    font-size: var(--font-size-body);
+    position: relative; /* Added for relative positioning if needed later */
+}
+
+.search-wrapper .prompt {
+    color: var(--arch-accent);
+    margin-right: 10px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.search-wrapper input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+    color: var(--arch-text);
+}
+
+.search-wrapper .icon-right {
+    color: var(--arch-muted);
+}
+
+.view-toggles {
+    display: flex;
+    border: 1px solid var(--arch-border);
+}
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    padding: 0 16px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: var(--arch-muted);
+    transition: all 0.2s;
+}
+
+.toggle-btn:hover {
+    color: var(--arch-text);
+}
+
+.toggle-btn.active {
+    background: var(--arch-text);
+    color: var(--bg-primary, #fff);
+}
+
+/* --- 4. Tag Rail --- */
+.tag-rail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px dashed var(--arch-border);
+}
+
+.tag-chip {
+    background: transparent;
+    border: 1px solid var(--arch-border);
+    padding: 4px 10px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    color: var(--arch-muted);
+}
+
+.tag-chip:hover,
+.tag-chip.active {
+    border-color: var(--arch-accent);
+    color: var(--arch-accent);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* --- 5. List View (File System) --- */
+.year-block {
+    margin-bottom: var(--space-xl);
+}
+
+.year-marker {
+    font-weight: bold;
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-subtitle);
+    color: var(--arch-text);
+}
+
+.year-marker .bracket {
+    color: var(--arch-muted);
+}
+
+.file-row {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    align-items: center;
+    padding: 8px 12px;
+    border-left: 2px solid transparent;
+    text-decoration: none;
+    color: var(--arch-text);
+    transition: all 0.1s;
+    position: relative;
+    gap: 15px;
+}
+
+.file-row:hover,
+.file-row.selected {
+    background: rgba(0, 0, 0, 0.03);
+    border-left-color: var(--arch-accent);
+}
+
+.col-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--arch-muted);
+}
+
+.col-meta .hash {
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+.col-title {
+    font-weight: 500;
+    font-size: var(--font-size-body);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-title .ext {
+    color: var(--arch-muted);
+    opacity: 0.6;
+}
+
+.col-tags {
+    font-size: 0.75rem;
+    color: var(--arch-muted);
+    opacity: 0.7;
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .col-tags {
+        display: block;
+    }
+}
+
+.cursor-indicator {
+    position: absolute;
+    left: -18px;
+    color: var(--arch-accent);
+}
+
+/* --- 6. Grid View (Data Cards) --- */
+.view-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.grid-card {
+    border: 1px solid var(--arch-border);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--arch-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    transition: all 0.2s;
+    background: var(--bg-primary);
+}
+
+.grid-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--arch-accent);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.card-header .hash {
+    font-size: 0.7rem;
+    color: var(--arch-muted);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+}
+
+.card-dots span {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--arch-border);
+    margin-left: 3px;
+    border-radius: 50%;
+}
+
+.card-body h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.meta-row {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+    color: var(--arch-muted);
+}
+
+.meta-row span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px dashed var(--arch-border);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--arch-accent);
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+.sys-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--arch-border);
+    font-size: 0.7rem;
+    color: var(--arch-muted);
+    text-align: center;
+    letter-spacing: 1px;
 }
