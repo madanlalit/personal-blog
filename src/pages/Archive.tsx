@@ -92,156 +92,158 @@ const Archive: React.FC = () => {
                 </div>
             </header>
 
-            {/* --- 2. Activity Heatmap (Visual Decoration) --- */}
-            <section className="activity-section">
-                <div className="section-label">ACTIVITY_LOG [LAST_12_MONTHS]</div>
-                <div className="heatmap-grid">
-                    {Array.from({ length: 52 }).map((_, i) => (
-                        <div
-                            key={i}
-                            className="heat-cell"
-                            style={{ opacity: Math.random() > 0.7 ? 1 : 0.2 }}
-                        ></div>
+            <div className="archive-body">
+                {/* --- 2. Activity Heatmap (Visual Decoration) --- */}
+                <section className="activity-section">
+                    <div className="section-label">ACTIVITY_LOG [LAST_12_MONTHS]</div>
+                    <div className="heatmap-grid">
+                        {Array.from({ length: 52 }).map((_, i) => (
+                            <div
+                                key={i}
+                                className="heat-cell"
+                                style={{ opacity: Math.random() > 0.7 ? 1 : 0.2 }}
+                            ></div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* --- 3. Control Module --- */}
+                <section className="control-module">
+                    <div className="search-wrapper">
+                        <span className="prompt">root@find:~$</span>
+                        <input
+                            type="text"
+                            placeholder="query_database..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                        <Search size={14} className="icon-right" />
+                    </div>
+
+                    <div className="view-toggles">
+                        <button
+                            className={`toggle-btn ${viewMode === 'LIST' ? 'active' : ''}`}
+                            onClick={() => setViewMode('LIST')}
+                        >
+                            <List size={14} /> LIST
+                        </button>
+                        <button
+                            className={`toggle-btn ${viewMode === 'GRID' ? 'active' : ''}`}
+                            onClick={() => setViewMode('GRID')}
+                        >
+                            <LayoutGrid size={14} /> GRID
+                        </button>
+                    </div>
+                </section>
+
+                {/* --- 4. Tag Filter Rail --- */}
+                <div className="tag-rail">
+                    <button
+                        className={`tag-chip ${!activeTag ? 'active' : ''}`}
+                        onClick={() => setActiveTag(null)}
+                    >
+                        [*] ALL
+                    </button>
+                    {allTags.map(tag => (
+                        <button
+                            key={tag}
+                            className={`tag-chip ${activeTag === tag ? 'active' : ''}`}
+                            onClick={() => setActiveTag(tag)}
+                        >
+                            {tag}
+                        </button>
                     ))}
                 </div>
-            </section>
 
-            {/* --- 3. Control Module --- */}
-            <section className="control-module">
-                <div className="search-wrapper">
-                    <span className="prompt">root@find:~$</span>
-                    <input
-                        type="text"
-                        placeholder="query_database..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                    <Search size={14} className="icon-right" />
-                </div>
-
-                <div className="view-toggles">
-                    <button
-                        className={`toggle-btn ${viewMode === 'LIST' ? 'active' : ''}`}
-                        onClick={() => setViewMode('LIST')}
-                    >
-                        <List size={14} /> LIST
-                    </button>
-                    <button
-                        className={`toggle-btn ${viewMode === 'GRID' ? 'active' : ''}`}
-                        onClick={() => setViewMode('GRID')}
-                    >
-                        <LayoutGrid size={14} /> GRID
-                    </button>
-                </div>
-            </section>
-
-            {/* --- 4. Tag Filter Rail --- */}
-            <div className="tag-rail">
-                <button
-                    className={`tag-chip ${!activeTag ? 'active' : ''}`}
-                    onClick={() => setActiveTag(null)}
-                >
-                    [*] ALL
-                </button>
-                {allTags.map(tag => (
-                    <button
-                        key={tag}
-                        className={`tag-chip ${activeTag === tag ? 'active' : ''}`}
-                        onClick={() => setActiveTag(tag)}
-                    >
-                        {tag}
-                    </button>
-                ))}
+                {/* --- 5. Main Content Area --- */}
+                <main className="content-viewport">
+                    <AnimatePresence mode='wait'>
+                        {filteredPosts.length === 0 ? (
+                            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="empty-buffer">
+                                [!] ERR_NO_RESULTS_FOUND
+                            </motion.div>
+                        ) : viewMode === 'LIST' ? (
+                            // --- LIST VIEW (File System) ---
+                            <motion.div
+                                key="list"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                className="view-list"
+                            >
+                                {Object.entries(postsByYear)
+                                    .sort(([a], [b]) => parseInt(b) - parseInt(a))
+                                    .map(([year, posts]) => (
+                                        <div key={year} className="year-block">
+                                            <div className="year-marker">
+                                                <span className="bracket">[</span>
+                                                {year}
+                                                <span className="bracket">]</span>
+                                            </div>
+                                            <div className="file-tree">
+                                                {posts.map((post, index) => {
+                                                    const isSelected = post.id === filteredPosts[selectedIndex]?.id;
+                                                    return (
+                                                        <Link
+                                                            to={`/post/${post.id}`}
+                                                            key={post.id}
+                                                            className={`file-row ${isSelected ? 'selected' : ''}`}
+                                                        >
+                                                            <div className="col-meta">
+                                                                <span className="hash">{generateHash(post.title)}</span>
+                                                                <span className="date">
+                                                                    {new Date(post.date).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' })}
+                                                                </span>
+                                                            </div>
+                                                            <div className="col-title">
+                                                                {post.title}<span className="ext">.md</span>
+                                                            </div>
+                                                            <div className="col-tags">
+                                                                {post.tags?.slice(0, 2).map(t => `#${t} `)}
+                                                            </div>
+                                                            {isSelected && <ChevronRight size={14} className="cursor-indicator" />}
+                                                        </Link>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </motion.div>
+                        ) : (
+                            // --- GRID VIEW (Data Cards) ---
+                            <motion.div
+                                key="grid"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                className="view-grid"
+                            >
+                                {filteredPosts.map((post) => (
+                                    <Link to={`/post/${post.id}`} key={post.id} className="grid-card">
+                                        <div className="card-header">
+                                            <span className="hash">{generateHash(post.title)}</span>
+                                            <div className="card-dots">
+                                                <span></span><span></span>
+                                            </div>
+                                        </div>
+                                        <div className="card-body">
+                                            <h3>{post.title}</h3>
+                                            <div className="meta-row">
+                                                <span><Calendar size={12} /> {new Date(post.date).toLocaleDateString()}</span>
+                                                <span><Clock size={12} /> 5m read</span>
+                                            </div>
+                                        </div>
+                                        <div className="card-footer">
+                                            <FileText size={14} /> OPEN_FILE
+                                        </div>
+                                    </Link>
+                                ))}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </main>
             </div>
-
-            {/* --- 5. Main Content Area --- */}
-            <main className="content-viewport">
-                <AnimatePresence mode='wait'>
-                    {filteredPosts.length === 0 ? (
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="empty-buffer">
-                            [!] ERR_NO_RESULTS_FOUND
-                        </motion.div>
-                    ) : viewMode === 'LIST' ? (
-                        // --- LIST VIEW (File System) ---
-                        <motion.div
-                            key="list"
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            className="view-list"
-                        >
-                            {Object.entries(postsByYear)
-                                .sort(([a], [b]) => parseInt(b) - parseInt(a))
-                                .map(([year, posts]) => (
-                                    <div key={year} className="year-block">
-                                        <div className="year-marker">
-                                            <span className="bracket">[</span>
-                                            {year}
-                                            <span className="bracket">]</span>
-                                        </div>
-                                        <div className="file-tree">
-                                            {posts.map((post, index) => {
-                                                const isSelected = post.id === filteredPosts[selectedIndex]?.id;
-                                                return (
-                                                    <Link
-                                                        to={`/post/${post.id}`}
-                                                        key={post.id}
-                                                        className={`file-row ${isSelected ? 'selected' : ''}`}
-                                                    >
-                                                        <div className="col-meta">
-                                                            <span className="hash">{generateHash(post.title)}</span>
-                                                            <span className="date">
-                                                                {new Date(post.date).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' })}
-                                                            </span>
-                                                        </div>
-                                                        <div className="col-title">
-                                                            {post.title}<span className="ext">.md</span>
-                                                        </div>
-                                                        <div className="col-tags">
-                                                            {post.tags?.slice(0, 2).map(t => `#${t} `)}
-                                                        </div>
-                                                        {isSelected && <ChevronRight size={14} className="cursor-indicator" />}
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </motion.div>
-                    ) : (
-                        // --- GRID VIEW (Data Cards) ---
-                        <motion.div
-                            key="grid"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="view-grid"
-                        >
-                            {filteredPosts.map((post) => (
-                                <Link to={`/post/${post.id}`} key={post.id} className="grid-card">
-                                    <div className="card-header">
-                                        <span className="hash">{generateHash(post.title)}</span>
-                                        <div className="card-dots">
-                                            <span></span><span></span>
-                                        </div>
-                                    </div>
-                                    <div className="card-body">
-                                        <h3>{post.title}</h3>
-                                        <div className="meta-row">
-                                            <span><Calendar size={12} /> {new Date(post.date).toLocaleDateString()}</span>
-                                            <span><Clock size={12} /> 5m read</span>
-                                        </div>
-                                    </div>
-                                    <div className="card-footer">
-                                        <FileText size={14} /> OPEN_FILE
-                                    </div>
-                                </Link>
-                            ))}
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </main>
 
             <footer className="sys-footer">
                 <span>KEYS: ↑↓ TO NAVIGATE // ENTER TO OPEN // ESC TO CLEAR</span>

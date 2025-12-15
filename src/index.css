@@ -36,16 +36,24 @@
   --font-size-hero: clamp(2rem, 4vw, 3rem);
   --font-size-title: clamp(1.25rem, 2.5vw, 1.75rem);
   --font-size-subtitle: 1rem;
-  --font-size-body: 0.9375rem;
-  /* slightly smaller for heavy code feel */
-  --font-size-small: 0.8125rem;
-
-  /* Spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 4rem;
+    --font-size-body: 0.9375rem; /* slightly smaller for heavy code feel */
+    --font-size-small: 0.8125rem;
+    --font-size-xs: 0.75rem;
+    --font-size-xxs: 0.625rem;
+    --font-size-h3: 1.1rem;
+    --font-size-h4: 1.2rem;
+  
+    /* Spacing */
+    --space-xxs: 0.125rem;
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    --space-2xl: 6rem;
+    --space-3xl: 8rem;
+    --space-4xl: 12rem;
 
   /* Layout */
   --sidebar-width: 260px;

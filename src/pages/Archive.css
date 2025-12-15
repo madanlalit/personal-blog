@@ -15,6 +15,12 @@
     height: 100%;
     padding: 0 var(--space-lg);
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.archive-body {
+    flex: 1;
 }
 
 /* Background Grid Overlay */
@@ -35,24 +41,26 @@
 .archive-hud {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: var(--space-lg) 0;
+    padding: var(--space-md) 0;
     border-bottom: 2px solid var(--arch-text);
     margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: var(--font-size-subtitle);
+    height: 60px;
 }
 
 .hud-title {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: -0.5px;
+    gap: var(--space-sm);
+    font-size: inherit;
 }
 
 .hud-stats {
     display: flex;
-    gap: 20px;
+    gap: var(--space-md);
 }
 
 .stat-pill {
@@ -62,32 +70,32 @@
 }
 
 .stat-pill .label {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xxs);
     color: var(--arch-muted);
     letter-spacing: 1px;
 }
 
 .stat-pill .value {
-    font-size: 1.2rem;
+    font-size: var(--font-size-h4);
     font-weight: bold;
     line-height: 1;
 }
 
 /* --- 2. Heatmap --- */
 .activity-section {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
 }
 
 .section-label {
-    font-size: 0.7rem;
-    margin-bottom: 8px;
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--space-xs);
     color: var(--arch-muted);
 }
 
 .heatmap-grid {
     display: grid;
     grid-template-columns: repeat(52, 1fr);
-    gap: 2px;
+    gap: var(--space-xxs);
     height: 12px;
 }
 
@@ -100,7 +108,7 @@
 .control-module {
     display: flex;
     gap: var(--space-md);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
     flex-wrap: wrap;
 }
 
@@ -110,14 +118,15 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.03);
     border: 1px solid var(--arch-border);
-    padding: 10px 14px;
+    padding: var(--space-sm) var(--space-md-sm);
     font-size: var(--font-size-body);
-    position: relative; /* Added for relative positioning if needed later */
+    position: relative;
+    /* Added for relative positioning if needed later */
 }
 
 .search-wrapper .prompt {
     color: var(--arch-accent);
-    margin-right: 10px;
+    margin-right: var(--space-sm);
     font-weight: bold;
     user-select: none;
 }
@@ -143,13 +152,13 @@
 .toggle-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: var(--space-xxs);
     background: transparent;
     border: none;
-    padding: 0 16px;
+    padding: 0 var(--space-md-sm);
     cursor: pointer;
     font-family: inherit;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: var(--arch-muted);
     transition: all 0.2s;
 }
@@ -167,8 +176,8 @@
 .tag-rail {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: var(--space-2xl);
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
     padding-bottom: var(--space-lg);
     border-bottom: 1px dashed var(--arch-border);
 }
@@ -176,9 +185,9 @@
 .tag-chip {
     background: transparent;
     border: 1px solid var(--arch-border);
-    padding: 4px 10px;
+    padding: var(--space-xxs) var(--space-sm);
     font-family: inherit;
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.2s;
@@ -194,7 +203,7 @@
 
 /* --- 5. List View (File System) --- */
 .year-block {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
 }
 
 .year-marker {
@@ -212,13 +221,13 @@
     display: grid;
     grid-template-columns: 140px 1fr auto;
     align-items: center;
-    padding: 8px 12px;
+    padding: var(--space-xs) var(--space-sm);
     border-left: 2px solid transparent;
     text-decoration: none;
     color: var(--arch-text);
     transition: all 0.1s;
     position: relative;
-    gap: 15px;
+    gap: var(--space-md-sm);
 }
 
 .file-row:hover,
@@ -229,14 +238,14 @@
 
 .col-meta {
     display: flex;
-    gap: 10px;
-    font-size: 0.8rem;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
     color: var(--arch-muted);
 }
 
 .col-meta .hash {
     opacity: 0.5;
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
 }
 
 .col-title {
@@ -253,7 +262,7 @@
 }
 
 .col-tags {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     color: var(--arch-muted);
     opacity: 0.7;
     display: none;
@@ -275,12 +284,12 @@
 .view-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: var(--space-md);
 }
 
 .grid-card {
     border: 1px solid var(--arch-border);
-    padding: 20px;
+    padding: var(--space-md);
     text-decoration: none;
     color: var(--arch-text);
     display: flex;
@@ -300,14 +309,14 @@
 .card-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: var(--space-md-sm);
 }
 
 .card-header .hash {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: var(--arch-muted);
     background: rgba(0, 0, 0, 0.05);
-    padding: 2px 6px;
+    padding: var(--space-xxs) var(--space-xs);
 }
 
 .card-dots span {
@@ -315,47 +324,47 @@
     width: 4px;
     height: 4px;
     background: var(--arch-border);
-    margin-left: 3px;
+    margin-left: var(--space-xxs);
     border-radius: 50%;
 }
 
 .card-body h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.1rem;
+    margin: 0 0 var(--space-sm) 0;
+    font-s_ize: var(--font-size-h3);
     line-height: 1.4;
 }
 
 .meta-row {
     display: flex;
-    gap: 15px;
-    font-size: 0.8rem;
+    gap: var(--space-md-sm);
+    font-size: var(--font-size-sm);
     color: var(--arch-muted);
 }
 
 .meta-row span {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: var(--space-sm);
 }
 
 .card-footer {
     margin-top: auto;
-    padding-top: 15px;
+    padding-top: var(--space-md-sm);
     border-top: 1px dashed var(--arch-border);
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: var(--space-xxs);
     color: var(--arch-accent);
     font-weight: bold;
 }
 
 /* --- Footer --- */
 .sys-footer {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
     border-top: 1px solid var(--arch-border);
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: var(--arch-muted);
     text-align: center;
     letter-spacing: 1px;

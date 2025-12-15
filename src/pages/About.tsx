@@ -89,7 +89,7 @@ const About: React.FC = () => {
             {/* Header HUD */}
             <header className="sys-header">
                 <div className="sys-title">
-                    <Terminal size={16} />
+                    <Terminal size={18} />
                     <span>SYS.ADMIN // <DecryptText text="LALIT_MADAN" /></span>
                 </div>
                 <div className="sys-meta">

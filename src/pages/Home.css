@@ -1,10 +1,11 @@
 .home-container {
     max-width: var(--content-max-width);
     margin: 0 auto;
+    padding: 0 var(--space-lg);
 }
 
 .home-header {
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-xl);
     padding-top: var(--space-xl);
 }
 
@@ -17,24 +18,29 @@
 }
 
 .highlight {
-    color: var(--accent); /* Use accent color for text */
+    color: var(--accent);
+    /* Use accent color for text */
     position: relative;
-    text-decoration: none; /* Ensure no default underline */
+    text-decoration: none;
+    /* Ensure no default underline */
 }
 
 .highlight::after {
     content: '';
     position: absolute;
-    bottom: -4px; /* Position below the text */
+    bottom: -4px;
+    /* Position below the text */
     left: 0;
-    width: 0; /* Start with no width */
+    width: 0;
+    /* Start with no width */
     height: 2px;
     background-color: var(--accent);
     transition: width 0.3s ease-out;
 }
 
 .highlight:hover::after {
-    width: 100%; /* Expand to full width on hover */
+    width: 100%;
+    /* Expand to full width on hover */
 }
 
 .sub-intro {

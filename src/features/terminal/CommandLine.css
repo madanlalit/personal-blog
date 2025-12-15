@@ -56,7 +56,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    max-height: 200px;
+    max-height: 34px;
 }
 
 .command-line-container.focused {
