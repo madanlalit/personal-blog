@@ -1,26 +1,26 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Commander from './features/terminal/Commander';
-import BootScreen from './features/system/BootScreen';
-import CommandLine from './features/terminal/CommandLine';
-import SystemAlert, { triggerAlert } from './features/system/SystemAlert';
-import Screensaver from './features/system/Screensaver';
-import StatusBar from './components/ui/StatusBar';
-import SnakeGame from './features/terminal/SnakeGame';
-import AudioPlayer from './features/terminal/AudioPlayer'; // Import
-import useSound from './hooks/useSound';
-import useKonamiCode from './hooks/useKonamiCode';
-import { useTheme } from './hooks/useTheme';
-import { usePosts } from './hooks/usePosts';
-import { HelmetProvider } from 'react-helmet-async';
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Commander from "./features/terminal/Commander";
+import BootScreen from "./features/system/BootScreen";
+import CommandLine from "./features/terminal/CommandLine";
+import SystemAlert, { triggerAlert } from "./features/system/SystemAlert";
+import Screensaver from "./features/system/Screensaver";
+import StatusBar from "./components/ui/StatusBar";
+import SnakeGame from "./features/terminal/SnakeGame";
+import AudioPlayer from "./features/terminal/AudioPlayer"; // Import
+import useSound from "./hooks/useSound";
+import useKonamiCode from "./hooks/useKonamiCode";
+import { useTheme } from "./hooks/useTheme";
+import { usePosts } from "./hooks/usePosts";
+import { HelmetProvider } from "react-helmet-async";
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Archive from './pages/Archive';
-import Contact from './pages/Contact';
-import Post from './pages/Post';
-import TagArchive from './pages/TagArchive';
-import './App.css';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Archive from "./pages/Archive";
+import Contact from "./pages/Contact";
+import Post from "./pages/Post";
+import TagArchive from "./pages/TagArchive";
+import "./App.css";
 
 function App() {
   const [booted, setBooted] = useState(false);
@@ -33,43 +33,47 @@ function App() {
   const { searchPosts, getAllPosts } = usePosts();
 
   useKonamiCode(() => {
-    setTheme('matrix');
-    triggerAlert('GOD MODE ACTIVATED: SYSTEM COMPROMISED', 'warning');
+    setTheme("matrix");
+    triggerAlert("GOD MODE ACTIVATED: SYSTEM COMPROMISED", "warning");
   });
 
   useEffect(() => {
     // Add global hover sound to all interactive elements
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('.cli-tab')) {
+      if (
+        target.tagName === "A" ||
+        target.tagName === "BUTTON" ||
+        target.closest(".cli-tab")
+      ) {
         playHoverSound();
       }
     };
-    document.addEventListener('mouseover', handleMouseOver);
-    return () => document.removeEventListener('mouseover', handleMouseOver);
+    document.addEventListener("mouseover", handleMouseOver);
+    return () => document.removeEventListener("mouseover", handleMouseOver);
   }, [playHoverSound]);
 
   useEffect(() => {
     // Check if we've already booted this session
-    const hasBooted = sessionStorage.getItem('hasBooted');
+    const hasBooted = sessionStorage.getItem("hasBooted");
     if (hasBooted) {
       setBooted(true);
     }
 
     // Toggle Commander with Shift + M (Global Override)
     const handleKey = (e: KeyboardEvent) => {
-      if (e.shiftKey && e.code === 'KeyM') {
+      if (e.shiftKey && e.code === "KeyM") {
         e.preventDefault(); // Stop 'M' from being typed if focused
-        setCommanderOpen(prev => !prev);
+        setCommanderOpen((prev) => !prev);
       }
     };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
   const handleBootComplete = () => {
     setBooted(true);
-    sessionStorage.setItem('hasBooted', 'true');
+    sessionStorage.setItem("hasBooted", "true");
   };
 
   if (!booted) {
@@ -79,11 +83,21 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="app tui-window fade-in" style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+        <div
+          className="app tui-window fade-in"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100vh",
+            overflow: "hidden",
+          }}
+        >
           <SystemAlert />
           <Screensaver />
 
-          {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}
+          {snakeGameOpen && (
+            <SnakeGame onExit={() => setSnakeGameOpen(false)} />
+          )}
           {ampOpen && <AudioPlayer onExit={() => setAmpOpen(false)} />}
 
           {/* Modal Navigation */}
@@ -100,8 +114,14 @@ function App() {
           <StatusBar muted={muted} onToggleMute={toggleMute} />
 
           {/* Main Content - No Sidebar here! */}
-          <div className="main-layout" style={{ flex: 1, overflow: 'hidden', display: 'flex' }}>
-            <main className="content-area" style={{ flex: 1, padding: '20px', overflowY: 'auto' }}>
+          <div
+            className="main-layout"
+            style={{ flex: 1, overflow: "hidden", display: "flex" }}
+          >
+            <main
+              className="content-area"
+              style={{ flex: 1, padding: "20px", overflowY: "auto" }}
+            >
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -120,10 +140,10 @@ function App() {
             searchPosts={searchPosts}
             availableThemes={availableThemes}
             onCommand={(cmd) => {
-              if (cmd === 'snake') {
+              if (cmd === "snake") {
                 setSnakeGameOpen(true);
               }
-              if (cmd === 'amp') {
+              if (cmd === "amp") {
                 setAmpOpen(true);
               }
             }}

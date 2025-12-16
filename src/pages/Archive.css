@@ -330,8 +330,10 @@
 
 .card-body h3 {
     margin: 0 0 var(--space-sm) 0;
-    font-s_ize: var(--font-size-h3);
+    font-size: var(--font-size-h3);
     line-height: 1.4;
+    overflow: hidden;
+    max-height: 50px;
 }
 
 .meta-row {
