@@ -20,6 +20,7 @@ import Archive from "./pages/Archive";
 import Contact from "./pages/Contact";
 import Post from "./pages/Post";
 import TagArchive from "./pages/TagArchive";
+import Projects from "./pages/Projects";
 import "./App.css";
 
 function App() {
@@ -127,6 +128,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/archive" element={<Archive />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/projects" element={<Projects />} />
                 <Route path="/post/:id" element={<Post />} />
                 <Route path="/tags/:tag" element={<TagArchive />} />
               </Routes>

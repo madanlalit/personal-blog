@@ -1,39 +1,229 @@
-import React from 'react';
-import './Contact.css';
+import React, { useState, useEffect } from "react";
+import {
+  Mail,
+  Send,
+  Wifi,
+  MapPin,
+  Clock,
+  Github,
+  Linkedin,
+  Twitter,
+  CheckCircle,
+  Copy,
+  Terminal,
+  BatteryCharging,
+} from "lucide-react";
+import "./Contact.css";
+import "./About.css";
 
 const Contact: React.FC = () => {
-    return (
-        <div className="contact-container fade-in">
-            <header className="page-header">
-                <h1 className="page-title">Contact</h1>
-            </header>
+  const [status, setStatus] = useState<"IDLE" | "SENDING" | "SENT">("IDLE");
+  const [time, setTime] = useState("");
+  const [copied, setCopied] = useState(false);
 
-            <div className="contact-content">
-                <p className="lead">
-                    Got a project in mind, or just want to chat?
-                </p>
+  // Replace with your info
+  const EMAIL = "hello@madanlalit.com";
 
-                <form className="minimal-form" onSubmit={(e) => e.preventDefault()}>
-                    <div className="form-row">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" id="name" placeholder="Jane Doe" />
-                    </div>
+  // Live Clock
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleTimeString("en-US", { hour12: false }));
+    }, 1000);
+    setTime(new Date().toLocaleTimeString("en-US", { hour12: false }));
+    return () => clearInterval(timer);
+  }, []);
 
-                    <div className="form-row">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="jane@example.com" />
-                    </div>
+  const handleCopy = () => {
+    navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-                    <div className="form-row">
-                        <label htmlFor="message">Message</label>
-                        <textarea id="message" rows={5} placeholder="Hello..."></textarea>
-                    </div>
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("SENDING");
+    // Fake delay
+    setTimeout(() => setStatus("SENT"), 1500);
+  };
 
-                    <button type="submit" className="btn-submit">Send Message →</button>
-                </form>
-            </div>
+  return (
+    <div className="sys-container">
+      <div className="grid-bg"></div>
+
+      <header className="sys-header">
+        <div className="sys-title">
+          <Terminal size={18} />
+          <span>COMMS_MOD // V.4.0</span>
         </div>
-    );
+        <div className="sys-meta">
+          <span style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <Wifi size={14} className="blink" /> SIGNAL_STRONG
+          </span>
+        </div>
+      </header>
+
+      <main
+        className="sys-content"
+        style={{ padding: "20px", overflowY: "auto" }}
+      >
+        <div className="comms-wrapper">
+          {/* Main Interface Box */}
+          <div className="comms-interface">
+            {/* LEFT: Operator / Info Sidebar */}
+            <aside className="sidebar-info">
+              <div>
+                <div className="operator-card">
+                  <div className="op-avatar">LM</div>
+                  <div className="op-name">LALIT_MADAN</div>
+                  <div className="op-role">SYS_ADMIN // DEV</div>
+                </div>
+
+                <div style={{ marginBottom: "20px" }}>
+                  <div className="field-label">DIRECT_CONNECT</div>
+                  <button
+                    onClick={handleCopy}
+                    className="conn-link"
+                    style={{
+                      width: "100%",
+                      cursor: "pointer",
+                      background: "transparent",
+                    }}
+                  >
+                    <Mail size={16} />
+                    <span
+                      style={{ overflow: "hidden", textOverflow: "ellipsis" }}
+                    >
+                      {EMAIL}
+                    </span>
+                    {copied ? (
+                      <CheckCircle size={14} color="var(--arch-accent)" />
+                    ) : (
+                      <Copy size={14} />
+                    )}
+                  </button>
+                </div>
+
+                <div className="conn-list">
+                  <div className="field-label">SOCIAL_LINKS</div>
+                  <a
+                    href="https://github.com/madanlalit"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="conn-link"
+                  >
+                    <Github size={16} /> GITHUB
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/madanlalit"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="conn-link"
+                  >
+                    <Linkedin size={16} /> LINKEDIN
+                  </a>
+                  <a
+                    href="https://x.com/lalitmadan"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="conn-link"
+                  >
+                    <Twitter size={16} /> TWITTER_X
+                  </a>
+                </div>
+              </div>
+
+              {/* Bottom System Stats */}
+              <div
+                style={{
+                  marginTop: "30px",
+                  fontSize: "0.75rem",
+                  color: "var(--arch-muted)",
+                  display: "grid",
+                  gap: "8px",
+                }}
+              >
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <Clock size={14} /> {time} UTC+05:30
+                </div>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <MapPin size={14} /> SECTOR: INDIA
+                </div>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <BatteryCharging size={14} /> SYS_POWER: 100%
+                </div>
+              </div>
+            </aside>
+
+            {/* RIGHT: Input Form */}
+            <div className="form-area">
+              {status === "SENT" ? (
+                <div className="success-display">
+                  <CheckCircle
+                    size={48}
+                    color="var(--arch-accent)"
+                    style={{ marginBottom: 20 }}
+                  />
+                  <h3>TRANSMISSION_ESTABLISHED</h3>
+                  <p style={{ color: "var(--arch-muted)", margin: "15px 0" }}>
+                    Packet successfully routed to the administrator.
+                  </p>
+                  <button
+                    onClick={() => setStatus("IDLE")}
+                    className="execute-btn"
+                    style={{ margin: "0 auto" }}
+                  >
+                    NEW_TRANSMISSION
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit}>
+                  <div className="input-field-group">
+                    <label className="field-label">01 // SENDER_IDENTITY</label>
+                    <input
+                      type="email"
+                      required
+                      className="tech-input"
+                      placeholder="Enter your email frequency..."
+                    />
+                  </div>
+
+                  <div className="input-field-group">
+                    <label className="field-label">02 // MESSAGE_PAYLOAD</label>
+                    <textarea
+                      required
+                      rows={5}
+                      className="tech-input"
+                      placeholder="Initialize message sequence..."
+                      style={{ resize: "vertical" }}
+                    ></textarea>
+                  </div>
+
+                  {status === "SENDING" ? (
+                    <div style={{ marginTop: "20px" }}>
+                      <div className="field-label">UPLINKING...</div>
+                      <div className="transmission-bar">
+                        <div className="transmission-fill"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <button type="submit" className="execute-btn">
+                      INITIATE_SEND <Send size={16} />
+                    </button>
+                  )}
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 };
 
 export default Contact;

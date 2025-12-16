@@ -1,0 +1,136 @@
+/* src/pages/Projects.css */
+
+.repo-controls {
+    display: flex;
+    gap: 10px;
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--arch-border);
+    overflow-x: auto;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--arch-border);
+    color: var(--arch-muted);
+    padding: 6px 12px;
+    font-family: var(--arch-font);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--arch-accent);
+    color: var(--arch-accent);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.repo-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--arch-border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    transition:
+        transform 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.repo-card:hover {
+    border-color: var(--arch-accent);
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.repo-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--arch-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.repo-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--arch-text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.repo-body {
+    padding: 15px;
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--arch-muted);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.repo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.tech-tag {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border: 1px solid var(--arch-border);
+    color: var(--arch-muted);
+    font-family: monospace;
+}
+
+.repo-footer {
+    padding: 12px 15px;
+    border-top: 1px dashed var(--arch-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--arch-muted);
+}
+
+.stat-group {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.repo-link {
+    color: var(--arch-accent);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.repo-link:hover {
+    text-decoration: underline;
+}

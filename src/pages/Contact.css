@@ -1,64 +1,263 @@
-.contact-container {
-    max-width: var(--content-max-width);
+/* src/pages/Contact.css */
+
+.comms-wrapper {
+    max-width: 900px;
     margin: 0 auto;
-}
-
-.minimal-form {
-    margin-top: var(--space-xl);
-}
-
-.form-row {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--space-xl);
 }
 
-label {
+/* --- The Main Interface Card --- */
+.comms-interface {
+    /* High contrast borders instead of soft shadows */
+    border: 2px solid var(--arch-text);
+    background: var(--bg-primary);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 20px;
+    /* Retro "Hard" Shadow */
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .comms-interface {
+        grid-template-columns: 280px 1fr; /* Sidebar | Form */
+        min-height: 500px;
+    }
+}
+
+/* Decorative Corner Brackets - Crisp and Sharp */
+.comms-interface::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid var(--arch-accent);
+    border-left: 4px solid var(--arch-accent);
+    z-index: 5;
+}
+.comms-interface::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 15px;
+    height: 15px;
+    border-bottom: 4px solid var(--arch-accent);
+    border-right: 4px solid var(--arch-accent);
+    z-index: 5;
+}
+
+/* --- Sidebar: Operator Data --- */
+.sidebar-info {
+    border-right: 2px solid var(--arch-text);
+    /* Removed gray background */
+    background: var(--bg-primary);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.operator-card {
+    border-bottom: 2px dashed var(--arch-border);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.op-avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--arch-text);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--arch-text);
+    background: transparent;
+}
+
+.op-name {
+    font-size: 1.2rem;
+    font-weight: 800; /* Bolder */
+    letter-spacing: 1px;
+    color: var(--arch-text);
+    text-transform: uppercase;
+}
+
+.op-role {
+    font-size: 0.8rem;
+    color: var(--arch-accent); /* Accent color instead of gray */
+    font-family: monospace;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.conn-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.conn-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-secondary);
+    color: var(--arch-text); /* Black text */
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.conn-link:hover {
+    border-color: var(--arch-text);
+    background: var(--arch-text);
+    color: var(--bg-primary); /* Invert colors on hover */
+}
+
+/* --- Main Area: Input Form --- */
+.form-area {
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-primary);
+}
+
+/* Subtle Grid Background (Very Faint) */
+.form-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--arch-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--arch-border) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.15; /* Low opacity to avoid gray mud */
+    pointer-events: none;
+}
+
+.input-field-group {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.field-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--arch-text); /* Black text */
     margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 
-input,
-textarea {
+/* The Tech Input - Stark Lines */
+.tech-input {
     width: 100%;
-    padding: 12px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--border);
-    font-family: inherit;
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    border-radius: 0;
+    background: transparent; /* No gray fill */
+    border: 2px solid var(--arch-border); /* Thicker border */
+    padding: 15px;
+    color: var(--arch-text);
+    font-family: monospace;
+    font-size: 1rem;
+    outline: none;
     transition: all 0.2s;
 }
 
-input:focus,
-textarea:focus {
-    outline: none;
-    border-bottom-color: var(--text-primary);
+.tech-input:focus {
+    border-color: var(--arch-accent);
+    /* Hard shadow offset instead of glow */
+    box-shadow: 4px 4px 0 var(--arch-border);
+    background: var(--bg-primary);
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: var(--border);
+.tech-input::placeholder {
+    color: var(--arch-text);
+    opacity: 0.4;
 }
 
-.btn-submit {
-    background: var(--text-primary);
+/* Send Button - High Contrast Block */
+.execute-btn {
+    align-self: flex-start;
+    background: var(--arch-text);
     color: var(--bg-primary);
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 500;
+    border: 2px solid var(--arch-text);
+    padding: 15px 35px;
+    font-family: inherit;
+    font-weight: 800;
     cursor: pointer;
-    border-radius: 4px;
-    transition: opacity 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    /* Angled Cut */
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+    transition: all 0.2s;
 }
 
-.btn-submit:hover {
-    opacity: 0.9;
+.execute-btn:hover {
+    background: var(--arch-accent);
+    border-color: var(--arch-accent);
+    transform: translateX(5px);
+}
+
+.execute-btn:disabled {
+    background: var(--arch-border);
+    cursor: not-allowed;
+}
+
+/* --- Progress Bar --- */
+.transmission-bar {
+    height: 6px;
+    width: 100%;
+    border: 1px solid var(--arch-text);
+    background: transparent;
+    margin-top: 20px;
+    padding: 1px;
+}
+.transmission-fill {
+    height: 100%;
+    background: var(--arch-text);
+    width: 0%;
+    animation: transmit 1.5s ease-in-out forwards;
+}
+
+@keyframes transmit {
+    0% {
+        width: 0%;
+    }
+    40% {
+        width: 60%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Success State */
+.success-display {
+    text-align: center;
+    border: 2px solid var(--arch-accent);
+    padding: 30px;
+    background: var(--bg-primary);
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.05);
 }

@@ -1,69 +1,552 @@
+/* --- CONTAINER SETUP (960px Strict) --- */
 .home-container {
-    max-width: var(--content-max-width);
+    max-width: var(--content-max-width); /* 960px */
     margin: 0 auto;
-    padding: 0 var(--space-lg);
-}
-
-.home-header {
-    margin-bottom: var(--space-xl);
-    padding-top: var(--space-xl);
-}
-
-.intro-text {
-    font-size: var(--font-size-title);
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: var(--space-md);
-    line-height: 1.3;
-}
-
-.highlight {
-    color: var(--accent);
-    /* Use accent color for text */
-    position: relative;
-    text-decoration: none;
-    /* Ensure no default underline */
-}
-
-.highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    /* Position below the text */
-    left: 0;
-    width: 0;
-    /* Start with no width */
-    height: 2px;
-    background-color: var(--accent);
-    transition: width 0.3s ease-out;
-}
-
-.highlight:hover::after {
-    width: 100%;
-    /* Expand to full width on hover */
-}
-
-.sub-intro {
-    font-size: var(--font-size-subtitle);
-    color: var(--text-secondary);
-    line-height: 1.6;
-    max-width: 540px;
-}
-
-.section-label {
-    font-size: var(--font-size-small);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-tertiary);
-    margin-bottom: var(--space-xl);
-    font-weight: 600;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: var(--space-sm);
-    display: inline-block;
-}
-
-.posts-list {
+    padding: var(--space-lg) var(--space-md); /* Vertical / Horizontal Padding */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-main {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 1.2rem; /* Scaled down for 960px */
+    line-height: 1;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+}
+.hero-title .accent {
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 450px;
+}
+
+.hero-telemetry {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tele-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.t-label {
+    color: var(--text-tertiary);
+}
+.t-val {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+.t-val.numeric {
+    font-variant-numeric: tabular-nums;
+}
+.t-val.active {
+    color: var(--accent);
+}
+
+/* --- MAIN GRID (250px Sidebar / Rest Main) --- */
+.sys-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    flex: 1;
+}
+
+/* On Tablet/Mobile -> Stack */
+@media (max-width: 768px) {
+    .sys-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .hero-telemetry {
+        text-align: left;
+        align-items: flex-start;
+    }
+    .tele-row {
+        justify-content: flex-start;
+    }
+}
+
+.grid-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.grid-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- GENERIC MODULE STYLES --- */
+.sys-module {
+    display: flex;
+    flex-direction: column;
+}
+
+.mod-header {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mod-meta {
+    font-family: var(--font-mono);
+}
+.mod-action {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+.mod-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* --- SIDEBAR MODULES --- */
+
+/* 1. Identity */
+.status-indicator {
+    background: var(--bg-secondary);
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+.pulse {
+    box-shadow: 0 0 5px var(--accent);
+}
+
+/* 2. Tech Stack */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.sys-tag {
+    font-size: 0.65rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* 3. Input Stream */
+.stream-item {
+    margin-bottom: 1rem;
+}
+.stream-item:last-child {
+    margin-bottom: 0;
+}
+.stream-type {
+    font-size: 0.6rem;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 2px;
+}
+.stream-title {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+    display: block;
+}
+.micro-progress {
+    height: 2px;
+    background: var(--border);
+    margin-top: 6px;
+    width: 100%;
+}
+.micro-progress .bar {
+    height: 100%;
+    background: var(--text-secondary);
+}
+
+/* 4. Comm Ports */
+.comm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+.comm-link {
+    text-align: center;
+    border: 1px solid var(--border);
+    font-size: 0.65rem;
+    padding: 0.4rem 0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.comm-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--bg-secondary);
+}
+
+/* --- MAIN MODULES --- */
+
+/* 5. Activity Heatmap */
+.heatmap-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+.heat-bit {
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 1px;
+}
+
+/* 6. Active Projects (Rows instead of Grid to save space) */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        var(--bg-secondary) 0%,
+        transparent 100%
+    );
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    transition: transform 0.2s;
+}
+.project-row:hover {
+    transform: translateX(2px);
+    border-color: var(--text-tertiary);
+}
+
+.p-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+}
+.p-desc {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+.p-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+.p-badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--bg-primary);
+    background: var(--text-secondary);
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+.p-badge.dev {
+    background: var(--text-tertiary);
+}
+.p-lang {
+    font-size: 0.6rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+}
+
+/* 7. Logs Timeline */
+.timeline-entry {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+.timeline-entry:last-child {
+    padding-bottom: 0;
+}
+.timeline-marker {
+    width: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+.t-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    z-index: 2;
+    margin-top: 6px;
+    transition: border-color 0.2s;
+}
+.t-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    position: absolute;
+    top: 12px;
+    bottom: -6px;
+    left: 7px;
+    z-index: 1;
+}
+.timeline-entry:last-child .t-line {
+    display: none;
+}
+.timeline-entry:hover .t-dot {
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+/* Timeline Card Override */
+.clean-card .post-card {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.clean-card h3,
+.clean-card h2 {
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.timeline-entry:hover .clean-card h3 {
+    color: var(--accent);
+}
+.clean-card .date {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    display: block;
+    margin-bottom: 2px;
+}
+.clean-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 8. Newsletter */
+.newsletter-box {
+    background: var(--bg-secondary);
+    border: 1px dashed var(--border);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.nl-head {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+}
+.nl-text {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 0 0 0.75rem 0;
+}
+.nl-form {
+    display: flex;
+    gap: 0.5rem;
+}
+.nl-form input {
+    flex: 1;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.4rem;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+}
+.nl-form button {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: none;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0 0.75rem;
+    cursor: pointer;
+}
+
+/* --- FOOTER --- */
+.sys-footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    color: var(--text-tertiary);
+}
+.f-left,
+.f-right {
+    display: flex;
+    gap: 1rem;
+}
+.sys-footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+.sys-footer a:hover {
+    color: var(--accent);
+}
+.sep {
+    color: var(--border);
+}
+
+/* --- Keep previous CSS, ADD/REPLACE these sections --- */
+
+/* --- REAL HEATMAP & COMMIT LOG --- */
+.heatmap-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+}
+
+.heat-bit {
+    width: 8px;
+    height: 12px; /* Taller bits look more like server indicators */
+    background: var(--text-tertiary);
+    border-radius: 1px;
+    transition: opacity 0.3s;
+}
+
+/* New: Commit Log List */
+.commit-log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    max-height: 150px; /* Limit height if many commits */
+    overflow-y: hidden; /* Hide scrollbar for clean look */
+}
+
+.commit-row {
+    display: grid;
+    grid-template-columns: 50px auto 1fr;
+    gap: 0.5rem;
+    align-items: baseline;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    padding-bottom: 4px;
+}
+
+.commit-row:last-child {
+    border-bottom: none;
+}
+
+.c-id {
+    color: var(--accent);
+    opacity: 0.8;
+}
+
+.c-repo {
+    color: var(--text-tertiary);
+    white-space: nowrap;
+}
+
+.c-msg {
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.loading-text {
+    color: var(--text-tertiary);
+    font-size: 0.7rem;
+    padding: 1rem 0;
+    text-align: center;
+    animation: blink 1.5s infinite;
+}
+
+/* --- Updates to previous classes for fit --- */
+.activity-wrapper {
+    /* Ensure it stands out as the dynamic part */
+    position: relative;
+}
+
+/* Ensure PostCard is minimal (same as before) */
+.clean-card .post-card {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.clean-card h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.clean-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

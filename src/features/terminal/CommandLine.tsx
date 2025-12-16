@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom"; // Added useLocation for better active state check
 import { triggerAlert } from "../../features/system/SystemAlert";
 import type { Post } from "../../types";
 import type { Theme } from "../../hooks/useTheme";
@@ -23,12 +23,16 @@ const CommandLine: React.FC<CommandLineProps> = ({
   const [input, setInput] = useState("");
   const [displayHistory, setDisplayHistory] = useState<
     (string | React.ReactNode)[]
-  >([]); // Visual output
-  const [commandHistory, setCommandHistory] = useState<string[]>([]); // Executed commands
+  >([]);
+  const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [tempInput, setTempInput] = useState("");
+
   const inputRef = useRef<HTMLInputElement>(null);
+  const historyRef = useRef<HTMLDivElement>(null);
+
   const navigate = useNavigate();
+  const location = useLocation(); // Hook to get current path
 
   // Focus on '/'
   useEffect(() => {
@@ -86,7 +90,15 @@ const CommandLine: React.FC<CommandLineProps> = ({
         "neofetch",
         "amp",
       ];
-      const args = ["home", "about", "archive", ...availableThemes];
+      // UPDATED: Added 'projects' and 'contact' to arguments
+      const args = [
+        "home",
+        "about",
+        "archive",
+        "projects",
+        "contact",
+        ...availableThemes,
+      ];
       const allOptions = [...commands, ...args];
 
       const match = allOptions.find((opt) =>
@@ -102,13 +114,13 @@ const CommandLine: React.FC<CommandLineProps> = ({
     const trimmed = cmd.trim().toLowerCase();
     if (!trimmed) return;
 
-    setCommandHistory((prev) => [...prev, trimmed]); // Add to history
-    setHistoryIndex(-1); // Reset index
+    setCommandHistory((prev) => [...prev, trimmed]);
+    setHistoryIndex(-1);
     setTempInput("");
 
     const parts = trimmed.split(" ");
     const command = parts[0];
-    const arg = parts.slice(1).join(" "); // Join remaining parts
+    const arg = parts.slice(1).join(" ");
 
     setDisplayHistory((prev) => [...prev.slice(-4), `> ${cmd}`]);
 
@@ -117,7 +129,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         setDisplayHistory((prev) => [
           ...prev,
           "Available commands:",
-          "  cd [page]   - Navigate (home, about, archive)",
+          "  cd [page]   - Navigate (home, about, archive, projects, contact)",
           "  grep [term] - Search blog posts",
           `  theme [opt] - Set theme (${availableThemes.join(" | ")})`,
           "  amp         - Launch Audio Player",
@@ -139,6 +151,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         break;
       }
       case "neofetch": {
+        // ... (Neofetch code remains same) ...
         const info = (
           <div
             className="neofetch-output"
@@ -173,11 +186,11 @@ const CommandLine: React.FC<CommandLineProps> = ({
               </div>
               <div>
                 <strong style={{ color: "var(--text-primary)" }}>Host:</strong>{" "}
-                {navigator.userAgent}
+                {navigator.userAgent.split(")")[0] + ")"}
               </div>
               <div>
                 <strong style={{ color: "var(--text-primary)" }}>Theme:</strong>{" "}
-                {localStorage.getItem("app-theme") || "sage"} / flat
+                {localStorage.getItem("app-theme") || "sage"}
               </div>
               <div>
                 <strong style={{ color: "var(--text-primary)" }}>
@@ -201,7 +214,6 @@ const CommandLine: React.FC<CommandLineProps> = ({
           break;
         }
         const results = searchPosts(arg);
-
         if (results.length === 0) {
           setDisplayHistory((prev) => [
             ...prev,
@@ -234,7 +246,8 @@ const CommandLine: React.FC<CommandLineProps> = ({
       }
       case "cd": {
         if (!arg || arg === "home") navigate("/");
-        else if (["about", "archive", "contact"].includes(arg))
+        // UPDATED: Added projects and contact to allowed navigation
+        else if (["about", "archive", "contact", "projects"].includes(arg))
           navigate(`/${arg}`);
         else {
           setDisplayHistory((prev) => [
@@ -246,9 +259,10 @@ const CommandLine: React.FC<CommandLineProps> = ({
         break;
       }
       case "ls": {
+        // UPDATED: Added projects/ to listing
         setDisplayHistory((prev) => [
           ...prev,
-          "home/  about/  archive/  contact/",
+          "home/  about/  archive/  projects/  contact/",
         ]);
         break;
       }
@@ -270,8 +284,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         break;
       }
       case "amp": {
-        if (onCommand)
-          onCommand("amp"); // Delegate to App
+        if (onCommand) onCommand("amp");
         else
           setDisplayHistory((prev) => [
             ...prev,
@@ -280,9 +293,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         break;
       }
       default: {
-        if (onCommand) {
-          onCommand(command);
-        }
+        if (onCommand) onCommand(command);
         if (command !== "snake" && command !== "amp") {
           if (trimmed !== "")
             setDisplayHistory((prev) => [
@@ -300,9 +311,6 @@ const CommandLine: React.FC<CommandLineProps> = ({
     setInput("");
   };
 
-  const historyRef = useRef<HTMLDivElement>(null);
-
-  // Auto-scroll to bottom of history
   useEffect(() => {
     if (historyRef.current) {
       historyRef.current.scrollTop = historyRef.current.scrollHeight;
@@ -342,31 +350,41 @@ const CommandLine: React.FC<CommandLineProps> = ({
         </form>
       </div>
 
-      {/* Bottom Tabs navigation - BELOW input to prevent covering */}
+      {/* UPDATED: Added Projects and Contact Tabs */}
       <div className="cli-tabs">
         <button
-          className={`cli-tab ${window.location.pathname === "/" ? "active" : ""}`}
+          className={`cli-tab ${location.pathname === "/" ? "active" : ""}`}
           onClick={() => navigate("/")}
         >
           [1: HOME]
         </button>
         <button
-          className={`cli-tab ${window.location.pathname === "/archive" ? "active" : ""}`}
+          className={`cli-tab ${location.pathname === "/archive" ? "active" : ""}`}
           onClick={() => navigate("/archive")}
         >
           [2: ARCHIVE]
         </button>
         <button
-          className={`cli-tab ${window.location.pathname === "/about" ? "active" : ""}`}
+          className={`cli-tab ${location.pathname === "/about" ? "active" : ""}`}
           onClick={() => navigate("/about")}
         >
           [3: ABOUT]
         </button>
+        <button
+          className={`cli-tab ${location.pathname === "/projects" ? "active" : ""}`}
+          onClick={() => navigate("/projects")}
+        >
+          [4: PROJECTS]
+        </button>
+        <button
+          className={`cli-tab ${location.pathname === "/contact" ? "active" : ""}`}
+          onClick={() => navigate("/contact")}
+        >
+          [5: CONTACT]
+        </button>
 
-        {/* Spacer to push social links to the right */}
         <div style={{ flex: 1 }}></div>
 
-        {/* Social Links */}
         <button
           className="cli-tab action-tab"
           onClick={() => window.open("https://github.com/madanlalit", "_blank")}
