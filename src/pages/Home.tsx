@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PostCard from "../components/ui/PostCard";
+import Typewriter from "../components/ui/Typewriter";
+import { Mail } from "lucide-react";
 import { usePosts } from "../hooks/usePosts";
 import "./Home.css";
 
@@ -23,6 +26,21 @@ interface StaticDataResponse {
   lastUpdated: number;
   events: GitHubEvent[];
 }
+
+const SKILLS = [
+  { name: "Python / AI", level: 75 },
+  { name: "Javascript", level: 60 },
+  { name: "AWS / Cloud", level: 50 },
+  { name: "LangGraph / AI", level: 60 },
+  { name: "Langchain / AI", level: 50 },
+];
+
+const SYSTEM_LOGS = [
+  { id: 1, type: "INFO", msg: "Initializing system interface..." },
+  { id: 2, type: "SUCCESS", msg: "Connected to GitHub API (Status: 200)" },
+  { id: 3, type: "WARN", msg: "Coffee levels low (15%) - Refill advised" },
+  { id: 4, type: "INFO", msg: "Loading latest project modules..." },
+];
 
 const Home: React.FC = () => {
   const { getAllPosts } = usePosts();
@@ -138,9 +156,23 @@ const Home: React.FC = () => {
           <h1 className="hero-title">
             LALIT<span className="accent">_</span>MADAN
           </h1>
-          <p className="hero-subtitle">
-            Engineering Reality. Architecting Intelligence.
-          </p>
+          <div className="hero-subtitle">
+            <Typewriter
+              text="Engineering Reality. Architecting Intelligence."
+              speed={30}
+              delay={500}
+            />
+          </div>
+
+          <div className="hero-actions">
+            <Link to="/projects" className="hero-btn primary">
+              <span className="bracket">[</span> EXECUTE_PROJECTS{" "}
+              <span className="bracket">]</span>
+            </Link>
+            <Link to="/contact" className="hero-btn secondary">
+              INIT_COMMS
+            </Link>
+          </div>
         </div>
 
         <div className="hero-telemetry">
@@ -168,25 +200,41 @@ const Home: React.FC = () => {
       <main className="sys-grid">
         {/* [LEFT COL] CONTEXT */}
         <aside className="grid-sidebar">
+          {/* 1. AVAILABILITY BEACON (New) */}
           <div className="sys-module">
-            <div className="mod-header">/// SYSTEM_DESCRIPTION</div>
-            <p className="mod-text">
-              Full-stack engineer building digital systems that bridge logic and
-              creativity.
-            </p>
-            <div className="status-indicator">
-              <span className="status-dot pulse"></span>
-              <span>FOCUS: Agentic Workflows</span>
+            <div className="mod-header">/// SYSTEM_STATUS</div>
+            <div className="availability-beacon">
+              <div className="beacon-signal">
+                <span className="beacon-dot pulse"></span>
+                <span className="beacon-ring"></span>
+              </div>
+              <div className="beacon-text">
+                <span className="status-label">AVAILABLE_FOR_HIRE</span>
+                <span className="status-sub">Open for contracts</span>
+              </div>
             </div>
+            <Link to="/contact" className="beacon-action">
+              <Mail size={14} /> INITIALIZE_HANDSHAKE
+            </Link>
           </div>
 
+          {/* 2. SKILL MONITOR (New) */}
           <div className="sys-module">
-            <div className="mod-header">/// RUNTIME_ENV</div>
-            <div className="tag-cloud">
-              {["React", "Javascript", "Python", "Docker"].map((t) => (
-                <span key={t} className="sys-tag">
-                  {t}
-                </span>
+            <div className="mod-header">/// SYSTEM_RESOURCES</div>
+            <div className="skill-monitor">
+              {SKILLS.map((skill) => (
+                <div key={skill.name} className="skill-row">
+                  <div className="skill-info">
+                    <span className="skill-name">{skill.name}</span>
+                    <span className="skill-val">{skill.level}%</span>
+                  </div>
+                  <div className="skill-track">
+                    <div
+                      className="skill-fill"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -224,6 +272,32 @@ const Home: React.FC = () => {
 
         {/* [RIGHT COL] DATA STREAMS */}
         <section className="grid-main">
+          {/* 4. LIVE SYSTEM LOG (New) */}
+          <div className="sys-module">
+            <div className="mod-header">
+              <span>/// KERNEL_LOG</span>
+              <span className="mod-meta">TAIL -F</span>
+            </div>
+            <div className="system-log-terminal">
+              {SYSTEM_LOGS.map((log) => (
+                <div key={log.id} className="log-row">
+                  <span className="log-time">
+                    [{new Date().getHours()}:
+                    {String(
+                      new Date().getMinutes() - (SYSTEM_LOGS.length - log.id),
+                    ).padStart(2, "0")}
+                    ]
+                  </span>
+                  <span className={`log-type ${log.type}`}>{log.type}</span>
+                  <span className="log-msg">{log.msg}</span>
+                </div>
+              ))}
+              <div className="log-cursor">
+                <span className="blink">_</span>
+              </div>
+            </div>
+          </div>
+
           {/* 5. GITHUB HEATMAP MODULE */}
           <div className="sys-module activity-wrapper">
             <div className="mod-header">

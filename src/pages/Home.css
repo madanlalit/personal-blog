@@ -38,6 +38,54 @@
     color: var(--text-secondary);
     margin: 0;
     max-width: 450px;
+    height: 1.5em; /* Prevent layout shift on type */
+}
+
+/* New: Hero Actions */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.hero-btn.primary {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.hero-btn.primary:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+.hero-btn.secondary {
+    color: var(--text-secondary);
+}
+
+.hero-btn.secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.hero-btn .bracket {
+    color: var(--text-tertiary);
+    margin: 0 4px;
+    transition: color 0.2s;
+}
+.hero-btn:hover .bracket {
+    color: inherit;
 }
 
 .hero-telemetry {
@@ -142,73 +190,132 @@
 
 /* --- SIDEBAR MODULES --- */
 
-/* 1. Identity */
-.status-indicator {
-    background: var(--bg-secondary);
-    padding: 0.5rem;
-    border: 1px solid var(--border);
-    font-size: var(--font-size-xs);
-    color: var(--text-primary);
+/* 1. Availability Beacon */
+.availability-beacon {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-}
-.status-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-}
-.pulse {
-    box-shadow: 0 0 5px var(--accent);
-}
-
-/* 2. Tech Stack */
-.tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-.sys-tag {
-    font-size: var(--font-size-xxs);
-    font-family: var(--font-mono);
-    color: var(--text-secondary);
+    gap: 1rem;
+    padding: 1rem;
     border: 1px solid var(--border);
-    padding: 2px 6px;
-    background: rgba(255, 255, 255, 0.02);
 }
 
-/* 3. Input Stream */
-.stream-item {
-    margin-bottom: 1rem;
+.beacon-signal {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.stream-item:last-child {
-    margin-bottom: 0;
+
+.beacon-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent); /* Green */
+    border-radius: 50%;
+    z-index: 2;
 }
-.stream-type {
-    font-size: var(--font-size-xxs);
-    color: var(--accent);
-    display: block;
-    margin-bottom: 2px;
-}
-.stream-title {
-    font-size: var(--font-size-small);
-    color: var(--text-primary);
-    line-height: 1.3;
-    display: block;
-}
-.micro-progress {
-    height: 2px;
-    background: var(--border);
-    margin-top: 6px;
+
+.beacon-ring {
+    position: absolute;
     width: 100%;
-}
-.micro-progress .bar {
     height: 100%;
-    background: var(--text-secondary);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    opacity: 0.5;
 }
 
-/* 4. Comm Ports */
+@keyframes ping {
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.beacon-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-label {
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.status-sub {
+    font-size: 0.65rem;
+    color: var(--text-tertiary);
+}
+
+.beacon-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-top: none; /* Connect to box above */
+    color: var(--text-secondary);
+    font-size: var(--font-size-xxs);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.beacon-action:hover {
+    background: var(--bg-secondary);
+    color: var(--accent);
+}
+
+/* 2. Skill Monitor */
+.skill-monitor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-xxs);
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.skill-track {
+    height: 4px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: var(--text-tertiary); /* Default subtle fill */
+    transition: width 1s ease-out;
+}
+
+/* Make top skills accented */
+.skill-row:nth-child(1) .skill-fill,
+.skill-row:nth-child(2) .skill-fill {
+    background: var(--accent);
+}
+
+/* 3. Comm Ports */
 .comm-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -231,6 +338,55 @@
 
 /* --- MAIN MODULES --- */
 
+/* 4. Live System Log */
+.system-log-terminal {
+    border: 1px solid var(--border);
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* Optional: Fixed height or auto */
+}
+
+.log-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.log-time {
+    color: var(--text-tertiary);
+    white-space: nowrap;
+}
+
+.log-type {
+    font-weight: bold;
+    min-width: 50px;
+}
+.log-type.INFO {
+    color: var(--text-secondary);
+}
+.log-type.SUCCESS {
+    color: var(--accent);
+}
+.log-type.WARN {
+    color: #000;
+} /* Amber */
+.log-type.ERROR {
+    color: #ff5555;
+} /* Red */
+
+.log-msg {
+    color: var(--text-primary);
+}
+
+.log-cursor {
+    color: var(--accent);
+    margin-top: 0.25rem;
+}
+
 /* 5. Activity Heatmap */
 .heatmap-strip {
     display: grid;
@@ -239,65 +395,7 @@
     gap: 3px;
 }
 
-/* 6. Active Projects (Rows instead of Grid to save space) */
-.project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-.project-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(
-        90deg,
-        var(--bg-secondary) 0%,
-        transparent 100%
-    );
-    border: 1px solid var(--border);
-    padding: 0.75rem 1rem;
-    transition: transform 0.2s;
-}
-.project-row:hover {
-    transform: translateX(2px);
-    border-color: var(--text-tertiary);
-}
-
-.p-name {
-    font-size: var(--font-size-body);
-    font-weight: 600;
-    color: var(--text-primary);
-    display: block;
-}
-.p-desc {
-    font-size: var(--font-size-xs);
-    color: var(--text-secondary);
-}
-.p-meta {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 2px;
-}
-.p-badge {
-    font-size: var(--font-size-xxs);
-    font-weight: 700;
-    color: var(--bg-primary);
-    background: var(--text-secondary);
-    padding: 1px 4px;
-    border-radius: 2px;
-}
-.p-badge.dev {
-    background: var(--text-tertiary);
-}
-.p-lang {
-    font-size: var(--font-size-xxs);
-    color: var(--text-tertiary);
-    font-family: var(--font-mono);
-}
-
-/* 7. Logs Timeline */
+/* 6. Logs Timeline */
 .timeline-entry {
     display: flex;
     gap: 1rem;
@@ -359,7 +457,7 @@
     margin-bottom: 2px;
 }
 
-/* 8. Newsletter */
+/* 7. Newsletter */
 .newsletter-box {
     background: var(--bg-secondary);
     border: 1px dashed var(--border);
