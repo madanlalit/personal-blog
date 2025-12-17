@@ -21,7 +21,7 @@
 
 /* Pseudo corners for TUI feel */
 .post-card::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 4px;
     right: 4px;
@@ -102,6 +102,6 @@
 }
 
 .read-link::after {
-    content: '>>';
+    content: ">>";
     font-size: 0.8em;
 }

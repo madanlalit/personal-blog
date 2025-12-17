@@ -233,15 +233,10 @@
 
 /* 5. Activity Heatmap */
 .heatmap-strip {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* This forces exactly 30 columns to fill 100% of the width */
+    grid-template-columns: repeat(30, 1fr);
     gap: 3px;
-}
-.heat-bit {
-    width: 10px;
-    height: 10px;
-    background: var(--accent);
-    border-radius: 1px;
 }
 
 /* 6. Active Projects (Rows instead of Grid to save space) */
@@ -347,14 +342,6 @@
     background: var(--accent);
 }
 
-/* Timeline Card Override */
-.clean-card .post-card {
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-}
 .clean-card h3,
 .clean-card h2 {
     font-size: 1rem;
@@ -450,67 +437,11 @@
     color: var(--border);
 }
 
-/* --- Keep previous CSS, ADD/REPLACE these sections --- */
-
-/* --- REAL HEATMAP & COMMIT LOG --- */
-.heatmap-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-}
-
 .heat-bit {
-    width: 8px;
-    height: 12px; /* Taller bits look more like server indicators */
     background: var(--text-tertiary);
-    border-radius: 1px;
     transition: opacity 0.3s;
-}
-
-/* New: Commit Log List */
-.commit-log-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    max-height: 150px; /* Limit height if many commits */
-    overflow-y: hidden; /* Hide scrollbar for clean look */
-}
-
-.commit-row {
-    display: grid;
-    grid-template-columns: 50px auto 1fr;
-    gap: 0.5rem;
-    align-items: baseline;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
-    padding-bottom: 4px;
-}
-
-.commit-row:last-child {
-    border-bottom: none;
-}
-
-.c-id {
-    color: var(--accent);
-    opacity: 0.8;
-}
-
-.c-repo {
-    color: var(--text-tertiary);
-    white-space: nowrap;
-}
-
-.c-msg {
-    color: var(--text-secondary);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 16px;
+    height: 16px;
 }
 
 .loading-text {
@@ -529,8 +460,6 @@
 
 /* Ensure PostCard is minimal (same as before) */
 .clean-card .post-card {
-    border: none !important;
-    padding: 0 !important;
     margin: 0 !important;
     background: transparent !important;
     box-shadow: none !important;
