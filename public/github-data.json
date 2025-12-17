@@ -1,6 +1,58 @@
 {
-  "lastUpdated": 1765981451867,
+  "lastUpdated": 1765985104274,
   "events": [
+    {
+      "id": "6806424404",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "repository_id": 1115612558,
+        "push_id": 29100311545,
+        "ref": "refs/heads/main",
+        "head": "05faf7f1bbaddc1946efc7b1b49f39014ceb5d8a",
+        "before": "0fd91abaa35760afdaab6c368fe19e31589341f0"
+      },
+      "public": true,
+      "created_at": "2025-12-17T14:56:24Z"
+    },
+    {
+      "id": "6805569773",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "repository_id": 1115612558,
+        "push_id": 29099464636,
+        "ref": "refs/heads/main",
+        "head": "0fd91abaa35760afdaab6c368fe19e31589341f0",
+        "before": "6efe9a0767bac57286599baf2a3b9ad6ab8558c3"
+      },
+      "public": true,
+      "created_at": "2025-12-17T14:27:09Z"
+    },
     {
       "id": "6805296961",
       "type": "PushEvent",
