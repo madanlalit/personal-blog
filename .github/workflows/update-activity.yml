@@ -2,11 +2,11 @@ name: Update GitHub Activity
 
 on:
   schedule:
-    - cron: "0 * * * *" 
+    - cron: '0 * * * *' # Runs every hour
   workflow_dispatch:
 
 permissions:
-  contents: write # Still needed to commit the file back to your repo
+  contents: write
 
 jobs:
   refresh-data:
@@ -18,10 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
-      - name: Install Dependencies
-        run: npm install node-fetch
+          node-version: '20'
 
       - name: Fetch Data
         run: node scripts/update-github-data.js
