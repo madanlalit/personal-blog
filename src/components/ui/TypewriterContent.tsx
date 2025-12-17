@@ -67,7 +67,7 @@ const TypewriterContent: React.FC<TypewriterContentProps> = ({ content, speed = 
         // Determine Tag type
         let Tag: any = 'p';
         let contentText = textToShow;
-        let className = '';
+        const className = '';
 
         if (block.startsWith('## ')) {
             Tag = 'h2';

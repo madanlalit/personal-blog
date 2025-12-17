@@ -16,6 +16,16 @@ import {
 import "./Contact.css";
 import "./About.css";
 
+// Helper Component for Status Items
+const StatusItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
+  icon,
+  text,
+}) => (
+  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+    {icon} {text}
+  </div>
+);
+
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<"IDLE" | "SENDING" | "SENT">("IDLE");
   const [time, setTime] = useState("");
@@ -142,21 +152,9 @@ const Contact: React.FC = () => {
                   gap: "8px",
                 }}
               >
-                <div
-                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
-                >
-                  <Clock size={14} /> {time} UTC+05:30
-                </div>
-                <div
-                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
-                >
-                  <MapPin size={14} /> SECTOR: INDIA
-                </div>
-                <div
-                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
-                >
-                  <BatteryCharging size={14} /> SYS_POWER: 100%
-                </div>
+                <StatusItem icon={<Clock size={14} />} text={`${time} UTC+05:30`} />
+                <StatusItem icon={<MapPin size={14} />} text="SECTOR: INDIA" />
+                <StatusItem icon={<BatteryCharging size={14} />} text="SYS_POWER: 100%" />
               </div>
             </aside>
 

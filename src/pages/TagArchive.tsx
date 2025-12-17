@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { usePosts } from '../hooks/usePosts';
+import { groupPostsByYear } from '../utils/postHelpers';
 import SEO from '../components/SEO';
 import './Archive.css'; // Re-use Archive styles
 
@@ -11,12 +12,7 @@ const TagArchive: React.FC = () => {
 
     const filteredPosts = getPostsByTag(decodedTag);
 
-    const postsByYear = filteredPosts.reduce((acc, post) => {
-        const year = new Date(post.date).getFullYear().toString();
-        if (!acc[year]) acc[year] = [];
-        acc[year].push(post);
-        return acc;
-    }, {} as Record<string, typeof filteredPosts>);
+    const postsByYear = groupPostsByYear(filteredPosts);
 
     return (
         <div className="archive-container fade-in">

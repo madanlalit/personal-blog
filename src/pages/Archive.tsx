@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+  Terminal,
   Search,
   LayoutGrid,
   List,
@@ -9,9 +10,9 @@ import {
   Clock,
   FileText,
   ChevronRight,
-  Terminal,
 } from "lucide-react";
 import { usePosts } from "../hooks/usePosts";
+import { groupPostsByYear } from "../utils/postHelpers";
 import "./Archive.css";
 
 // --- Helper: Generate pseudo-random "System Hash" for posts ---
@@ -75,15 +76,7 @@ const Archive: React.FC = () => {
 
   // Group by Year for List View
   const postsByYear = useMemo(() => {
-    return filteredPosts.reduce(
-      (acc, post) => {
-        const year = new Date(post.date).getFullYear().toString();
-        if (!acc[year]) acc[year] = [];
-        acc[year].push(post);
-        return acc;
-      },
-      {} as Record<string, typeof filteredPosts>,
-    );
+    return groupPostsByYear(filteredPosts);
   }, [filteredPosts]);
 
   return (
@@ -201,7 +194,7 @@ const Archive: React.FC = () => {
                         <span className="bracket">]</span>
                       </div>
                       <div className="file-tree">
-                        {posts.map((post, index) => {
+                        {posts.map((post) => {
                           const isSelected =
                             post.id === filteredPosts[selectedIndex]?.id;
                           return (

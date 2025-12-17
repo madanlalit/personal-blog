@@ -4,10 +4,6 @@ const THEMES = ['sage', 'light', 'amber', 'dracula', 'cyan', 'matrix', 'openai']
 export type Theme = typeof THEMES[number];
 const THEME_STORAGE_KEY = 'app-theme';
 
-const isTheme = (value: string | null): value is Theme => {
-    return THEMES.includes(value as any);
-};
-
 export const useTheme = () => {
     const [theme, setThemeState] = useState<Theme>(() => {
         const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);

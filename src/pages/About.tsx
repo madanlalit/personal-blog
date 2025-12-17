@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Terminal, Cpu, Layers, Box, Activity, Command } from "lucide-react";
 import "./About.css";
@@ -17,7 +17,7 @@ const DecryptText: React.FC<{ text: string; className?: string }> = ({
       setDisplay(
         text
           .split("")
-          .map((letter, index) => {
+          .map((_, index) => {
             if (index < iterations) return text[index];
             return chars[Math.floor(Math.random() * chars.length)];
           })
