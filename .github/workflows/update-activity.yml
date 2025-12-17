@@ -2,7 +2,7 @@ name: Update GitHub Activity
 
 on:
   schedule:
-    - cron: '0 * * * *' # Runs every hour
+    - cron: '0 8,20 * * *'
   workflow_dispatch:
 
 permissions:
