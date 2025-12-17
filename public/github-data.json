@@ -1,6 +1,32 @@
 {
-  "lastUpdated": 1765978440017,
+  "lastUpdated": 1765981451867,
   "events": [
+    {
+      "id": "6805296961",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "repository_id": 1115612558,
+        "push_id": 29099178735,
+        "ref": "refs/heads/main",
+        "head": "14f952742b53b61c92eb9cd7c5030de1459880e2",
+        "before": "acc7ac17f11bbf61c9a4c854fe16f82c04003e69"
+      },
+      "public": true,
+      "created_at": "2025-12-17T14:17:12Z"
+    },
     {
       "id": "6800385180",
       "type": "PushEvent",
