@@ -7,11 +7,6 @@ interface Alert {
     type: 'info' | 'success' | 'warning';
 }
 
-export const triggerAlert = (message: string, type: 'info' | 'success' | 'warning' = 'info') => {
-    const event = new CustomEvent('system-alert', { detail: { message, type } });
-    window.dispatchEvent(event);
-};
-
 const SystemAlert: React.FC = () => {
     const [alerts, setAlerts] = useState<Alert[]>([]);
 

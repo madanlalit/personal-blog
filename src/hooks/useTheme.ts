@@ -7,7 +7,9 @@ const THEME_STORAGE_KEY = 'app-theme';
 export const useTheme = () => {
     const [theme, setThemeState] = useState<Theme>(() => {
         const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-        return THEMES.includes(storedTheme as any) ? storedTheme as Theme : 'openai';
+        // Check if storedTheme is a valid Theme
+        const isValidTheme = THEMES.includes(storedTheme as Theme);
+        return isValidTheme ? (storedTheme as Theme) : 'openai';
     });
 
     useEffect(() => {

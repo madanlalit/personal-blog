@@ -1,6 +1,11 @@
 
 import { useCallback, useRef, useEffect, useState } from 'react';
 
+// Extend Window interface to include webkitAudioContext
+interface CustomWindow extends Window {
+    webkitAudioContext: typeof AudioContext;
+}
+
 const useSound = () => {
     const audioCtxRef = useRef<AudioContext | null>(null);
     const [muted, setMuted] = useState(false);
@@ -9,7 +14,7 @@ const useSound = () => {
         // Initialize AudioContext on first user interaction to bypass autoplay policy
         const initAudio = () => {
             if (!audioCtxRef.current) {
-                const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+                const AudioContextClass = window.AudioContext || (window as unknown as CustomWindow).webkitAudioContext;
                 audioCtxRef.current = new AudioContextClass();
             }
             if (audioCtxRef.current.state === 'suspended') {

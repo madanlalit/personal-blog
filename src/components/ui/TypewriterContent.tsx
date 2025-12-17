@@ -65,7 +65,7 @@ const TypewriterContent: React.FC<TypewriterContentProps> = ({ content, speed = 
         }
 
         // Determine Tag type
-        let Tag: any = 'p';
+        let Tag: React.ElementType = 'p';
         let contentText = textToShow;
         const className = '';
 

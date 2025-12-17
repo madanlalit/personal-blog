@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Commander from "./features/terminal/Commander";
 import BootScreen from "./features/system/BootScreen";
 import CommandLine from "./features/terminal/CommandLine";
-import SystemAlert, { triggerAlert } from "./features/system/SystemAlert";
+import SystemAlert from "./features/system/SystemAlert";
+import { triggerAlert } from "./utils/systemEvents";
 import Screensaver from "./features/system/Screensaver";
 import StatusBar from "./components/ui/StatusBar";
 import SnakeGame from "./features/terminal/SnakeGame";
@@ -24,7 +25,9 @@ import Projects from "./pages/Projects";
 import "./App.css";
 
 function App() {
-  const [booted, setBooted] = useState(false);
+  const [booted, setBooted] = useState(() => {
+    return !!sessionStorage.getItem("hasBooted");
+  });
   const [commanderOpen, setCommanderOpen] = useState(false); // Modal state
   const [snakeGameOpen, setSnakeGameOpen] = useState(false);
   const [ampOpen, setAmpOpen] = useState(false); // Amp state
@@ -55,12 +58,6 @@ function App() {
   }, [playHoverSound]);
 
   useEffect(() => {
-    // Check if we've already booted this session
-    const hasBooted = sessionStorage.getItem("hasBooted");
-    if (hasBooted) {
-      setBooted(true);
-    }
-
     // Toggle Commander with Shift + M (Global Override)
     const handleKey = (e: KeyboardEvent) => {
       if (e.shiftKey && e.code === "KeyM") {

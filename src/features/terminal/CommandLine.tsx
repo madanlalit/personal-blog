@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom"; // Added useLocation for better active state check
-import { triggerAlert } from "../../features/system/SystemAlert";
+import { triggerAlert } from "../../utils/systemEvents";
 import type { Post } from "../../types";
 import type { Theme } from "../../hooks/useTheme";
 import "./CommandLine.css";
@@ -339,7 +339,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
             value={input}
             onChange={(e) => {
               setInput(e.target.value);
-              onKey && onKey();
+              if (onKey) onKey();
             }}
             onKeyDown={handleInputKeyDown}
             autoFocus

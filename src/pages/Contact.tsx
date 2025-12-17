@@ -28,7 +28,9 @@ const StatusItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
 
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<"IDLE" | "SENDING" | "SENT">("IDLE");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState(
+    new Date().toLocaleTimeString("en-US", { hour12: false }),
+  );
   const [copied, setCopied] = useState(false);
 
   // Replace with your info
@@ -39,7 +41,6 @@ const Contact: React.FC = () => {
     const timer = setInterval(() => {
       setTime(new Date().toLocaleTimeString("en-US", { hour12: false }));
     }, 1000);
-    setTime(new Date().toLocaleTimeString("en-US", { hour12: false }));
     return () => clearInterval(timer);
   }, []);
 

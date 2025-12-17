@@ -114,7 +114,9 @@ const Commander: React.FC<CommanderProps> = ({
             // Focus input when commander opens
             setTimeout(() => inputRef.current?.focus(), 100);
             // Show welcome message
-            setOutput([<div>Welcome to Commander. Type 'help' for a list of commands.</div>]);
+            setTimeout(() => {
+                setOutput([<div key="welcome">Welcome to Commander. Type 'help' for a list of commands.</div>]);
+            }, 0);
         }
     }, [isOpen]);
 

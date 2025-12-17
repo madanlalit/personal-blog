@@ -79,6 +79,18 @@ const Archive: React.FC = () => {
     return groupPostsByYear(filteredPosts);
   }, [filteredPosts]);
 
+  const [heatmapOpacities, setHeatmapOpacities] = useState<number[]>([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHeatmapOpacities(
+        Array.from({ length: 52 }).map(() =>
+          Math.random() > 0.7 ? 1 : 0.15,
+        ),
+      );
+    }, 0);
+  }, []);
+
   return (
     <div className="archive-root">
       <div className="grid-overlay"></div>
@@ -106,11 +118,11 @@ const Archive: React.FC = () => {
         <section className="activity-section">
           <div className="section-label">ACTIVITY_LOG [LAST_12_MONTHS]</div>
           <div className="heatmap-grid">
-            {Array.from({ length: 52 }).map((_, i) => (
+            {heatmapOpacities.map((opacity, i) => (
               <div
                 key={i}
                 className="heat-cell"
-                style={{ opacity: Math.random() > 0.7 ? 1 : 0.15 }}
+                style={{ opacity }}
               ></div>
             ))}
           </div>
