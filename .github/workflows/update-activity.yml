@@ -1,0 +1,33 @@
+name: Update GitHub Activity
+
+on:
+  schedule:
+    - cron: "0 * * * *" 
+  workflow_dispatch:
+
+permissions:
+  contents: write # Still needed to commit the file back to your repo
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Dependencies
+        run: npm install node-fetch
+
+      - name: Fetch Data
+        run: node scripts/update-github-data.js
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update github activity data [skip ci]"
+          file_pattern: public/github-data.json
