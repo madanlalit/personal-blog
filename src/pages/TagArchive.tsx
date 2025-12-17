@@ -15,7 +15,7 @@ const TagArchive: React.FC = () => {
     const postsByYear = groupPostsByYear(filteredPosts);
 
     return (
-        <div className="archive-container fade-in">
+        <div className="archive-root fade-in">
             <SEO title={`Tag: ${decodedTag}`} description={`Posts tagged with ${decodedTag}`} />
             <header className="page-header">
                 <div className="back-link-container">

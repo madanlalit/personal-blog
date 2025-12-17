@@ -15,7 +15,7 @@
     color: var(--arch-muted);
     padding: 6px 12px;
     font-family: var(--arch-font);
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     cursor: pointer;
     transition: all 0.2s;
     text-transform: uppercase;
@@ -66,7 +66,7 @@
 
 .repo-title {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: var(--font-size-subtitle);
     color: var(--arch-text);
     display: flex;
     align-items: center;
@@ -76,7 +76,7 @@
 .repo-body {
     padding: 15px;
     flex: 1;
-    font-size: 0.9rem;
+    font-size: var(--font-size-body);
     color: var(--arch-muted);
     line-height: 1.5;
     display: flex;
@@ -92,7 +92,7 @@
 }
 
 .tech-tag {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     padding: 2px 6px;
     border: 1px solid var(--arch-border);
     color: var(--arch-muted);
@@ -105,7 +105,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     color: var(--arch-muted);
 }
 
@@ -128,7 +128,7 @@
     align-items: center;
     gap: 5px;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
 }
 
 .repo-link:hover {

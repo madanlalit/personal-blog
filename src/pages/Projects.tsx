@@ -85,7 +85,6 @@ const Projects: React.FC = () => {
       <main
         className="sys-content"
         style={{
-          padding: "0 20px 20px 20px",
           display: "flex",
           flexDirection: "column",
         }}

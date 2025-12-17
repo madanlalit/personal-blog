@@ -13,7 +13,7 @@
     font-family: var(--arch-font);
     color: var(--arch-text);
     height: 100%;
-    padding: 0 var(--space-lg);
+    padding: var(--space-lg) var(--space-md);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -42,13 +42,22 @@
     display: flex;
     justify-content: space-between;
     padding: var(--space-md) 0;
-    border-bottom: 2px solid var(--arch-text);
+    border-bottom: 1px solid var(--arch-border);
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: var(--font-size-subtitle);
-    height: 60px;
+    padding-bottom: 1rem;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--arch-border);
+    margin-bottom: var(--space-lg);
+    padding-bottom: 1rem;
 }
 
 .hud-title {
@@ -158,7 +167,7 @@
     padding: 0 var(--space-md-sm);
     cursor: pointer;
     font-family: inherit;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-small);
     color: var(--arch-muted);
     transition: all 0.2s;
 }
@@ -239,7 +248,7 @@
 .col-meta {
     display: flex;
     gap: var(--space-sm);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-small);
     color: var(--arch-muted);
 }
 
@@ -339,7 +348,7 @@
 .meta-row {
     display: flex;
     gap: var(--space-md-sm);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-small);
     color: var(--arch-muted);
 }
 

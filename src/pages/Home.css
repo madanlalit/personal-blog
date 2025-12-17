@@ -23,7 +23,7 @@
 }
 
 .hero-title {
-    font-size: 1.2rem; /* Scaled down for 960px */
+    font-size: var(--font-size-title);
     line-height: 1;
     margin: 0 0 0.5rem 0;
     letter-spacing: -0.05em;
@@ -34,7 +34,7 @@
 }
 
 .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     color: var(--text-secondary);
     margin: 0;
     max-width: 450px;
@@ -43,7 +43,7 @@
 .hero-telemetry {
     text-align: right;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -114,7 +114,7 @@
 }
 
 .mod-header {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     letter-spacing: 0.1em;
     border-bottom: 1px solid var(--border);
@@ -131,10 +131,10 @@
 .mod-action {
     color: var(--accent);
     text-decoration: none;
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
 }
 .mod-text {
-    font-size: 0.9rem;
+    font-size: var(--font-size-body);
     color: var(--text-secondary);
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -147,7 +147,7 @@
     background: var(--bg-secondary);
     padding: 0.5rem;
     border: 1px solid var(--border);
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: var(--text-primary);
     display: flex;
     align-items: center;
@@ -170,7 +170,7 @@
     gap: 6px;
 }
 .sys-tag {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xxs);
     font-family: var(--font-mono);
     color: var(--text-secondary);
     border: 1px solid var(--border);
@@ -186,13 +186,13 @@
     margin-bottom: 0;
 }
 .stream-type {
-    font-size: 0.6rem;
+    font-size: var(--font-size-xxs);
     color: var(--accent);
     display: block;
     margin-bottom: 2px;
 }
 .stream-title {
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     color: var(--text-primary);
     line-height: 1.3;
     display: block;
@@ -217,7 +217,7 @@
 .comm-link {
     text-align: center;
     border: 1px solid var(--border);
-    font-size: 0.65rem;
+    font-size: var(--font-size-xxs);
     padding: 0.4rem 0;
     color: var(--text-secondary);
     text-decoration: none;
@@ -264,13 +264,13 @@
 }
 
 .p-name {
-    font-size: 0.9rem;
+    font-size: var(--font-size-body);
     font-weight: 600;
     color: var(--text-primary);
     display: block;
 }
 .p-desc {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     color: var(--text-secondary);
 }
 .p-meta {
@@ -281,7 +281,7 @@
     gap: 2px;
 }
 .p-badge {
-    font-size: 0.6rem;
+    font-size: var(--font-size-xxs);
     font-weight: 700;
     color: var(--bg-primary);
     background: var(--text-secondary);
@@ -292,7 +292,7 @@
     background: var(--text-tertiary);
 }
 .p-lang {
-    font-size: 0.6rem;
+    font-size: var(--font-size-xxs);
     color: var(--text-tertiary);
     font-family: var(--font-mono);
 }
@@ -344,7 +344,7 @@
 
 .clean-card h3,
 .clean-card h2 {
-    font-size: 1rem;
+    font-size: var(--font-size-subtitle);
     margin: 0 0 0.25rem 0;
     font-weight: 600;
     color: var(--text-primary);
@@ -353,7 +353,7 @@
     color: var(--accent);
 }
 .clean-card .date {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     display: block;
     margin-bottom: 2px;
@@ -367,13 +367,13 @@
     margin-top: 1rem;
 }
 .nl-head {
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     color: var(--accent);
     margin: 0 0 0.25rem 0;
     text-transform: uppercase;
 }
 .nl-text {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     color: var(--text-secondary);
     margin: 0 0 0.75rem 0;
 }
@@ -387,7 +387,7 @@
     border: 1px solid var(--border);
     color: var(--text-primary);
     padding: 0.4rem;
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
     font-family: var(--font-mono);
 }
 .nl-form button {
@@ -395,7 +395,7 @@
     color: var(--bg-primary);
     border: none;
     font-weight: 700;
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     padding: 0 0.75rem;
     cursor: pointer;
 }
@@ -407,7 +407,7 @@
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     font-family: var(--font-mono);
     color: var(--text-tertiary);
 }
@@ -436,7 +436,7 @@
 
 .loading-text {
     color: var(--text-tertiary);
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     padding: 1rem 0;
     text-align: center;
     animation: blink 1.5s infinite;
@@ -455,13 +455,13 @@
     box-shadow: none !important;
 }
 .clean-card h3 {
-    font-size: 0.95rem;
+    font-size: var(--font-size-subtitle);
     margin: 0 0 0.25rem 0;
     font-weight: 600;
     color: var(--text-primary);
 }
 .clean-card p {
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     color: var(--text-secondary);
     line-height: 1.4;
     display: -webkit-box;

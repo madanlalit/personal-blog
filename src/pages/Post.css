@@ -1,6 +1,7 @@
 .post-container {
     max-width: var(--content-max-width);
     margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
 }
 
 .back-link {
@@ -25,7 +26,7 @@
 
 .entry-header {
     margin-bottom: var(--space-2xl);
-    border-bottom: 1px dashed var(--border);
+    border-bottom: 1px solid var(--border);
     padding-bottom: var(--space-lg);
 }
 
@@ -46,7 +47,7 @@
 }
 
 .entry-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: var(--font-size-hero);
     line-height: 1.1;
     font-weight: 700;
     color: var(--text-primary);
@@ -55,14 +56,14 @@
 }
 
 .entry-subtitle {
-    font-size: 1.25rem;
+    font-size: var(--font-size-title);
     color: var(--text-secondary);
     line-height: 1.5;
     font-weight: 400;
 }
 
 .entry-content {
-    font-size: 1.125rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
     color: var(--text-primary);
 }
@@ -72,7 +73,7 @@
 }
 
 .entry-content h2 {
-    font-size: 1.75rem;
+    font-size: var(--font-size-title);
     margin-top: 3rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -81,7 +82,7 @@
 }
 
 .entry-content h3 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-h3);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -92,7 +93,7 @@
     margin: 2.5rem 0;
     padding-left: 1.5rem;
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: var(--font-size-h4);
     color: var(--text-secondary);
     background: rgba(255, 255, 255, 0.05);
     /* Subtle box for quotes */
@@ -118,7 +119,7 @@
     background: none;
     border: 1px solid var(--border);
     padding: 6px 12px;
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     color: var(--text-secondary);
     cursor: pointer;
     margin-left: 16px;

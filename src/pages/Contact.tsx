@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
 
       <main
         className="sys-content"
-        style={{ padding: "20px", overflowY: "auto" }}
+        style={{ overflowY: "auto" }}
       >
         <div className="comms-wrapper">
           {/* Main Interface Box */}

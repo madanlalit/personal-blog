@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding: 0 var(--space-lg);
+    padding: var(--space-lg) var(--space-md);
 }
 
 /* --- 1. Background Grid Effect --- */
@@ -42,13 +42,14 @@
     display: flex;
     justify-content: space-between;
     padding: var(--space-md) 0;
-    border-bottom: 2px solid var(--sys-text);
+    border-bottom: 1px solid var(--sys-border);
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: var(--font-size-subtitle);
-    height: 60px;
+    height: auto; /* Allow auto height like Home */
+    padding-bottom: 1rem; /* Match Home */
 }
 
 .sys-title {
@@ -198,7 +199,7 @@
 
 /* --- 6. Content Panels --- */
 .panel h1 {
-    font-size: 2rem;
+    /*font-size: var(--font-size-hero);*/
     margin-top: 0;
     text-transform: uppercase;
 }
