@@ -1,349 +1,369 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, Cpu, Layers, Box, Activity, Command } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  ArrowRight,
+  MapPin,
+  Briefcase,
+  GraduationCap,
+  Heart,
+  Zap,
+  Download,
+} from "lucide-react";
 import "./About.css";
 
-// --- 1. Helper: "Decryption" Text Effect Component ---
-const DecryptText: React.FC<{ text: string; className?: string }> = ({
-  text,
-  className,
-}) => {
-  const [display, setDisplay] = useState(text);
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
+// --- Animated Counter Hook ---
+const useCounter = (target: number, duration: number = 2000) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef<HTMLDivElement | null>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const handleHover = () => {
-    let iterations = 0;
-    const interval = setInterval(() => {
-      setDisplay(
-        text
-          .split("")
-          .map((_, index) => {
-            if (index < iterations) return text[index];
-            return chars[Math.floor(Math.random() * chars.length)];
-          })
-          .join(""),
-      );
-      if (iterations >= text.length) clearInterval(interval);
-      iterations += 1 / 2; // Speed
-    }, 30);
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observerRef.current?.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (elementRef.current) {
+      observerRef.current.observe(elementRef.current);
+    }
+
+    return () => observerRef.current?.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let start = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [isVisible, target, duration]);
+
+  // Callback ref to set element reference
+  const setRef = (node: HTMLDivElement | null) => {
+    elementRef.current = node;
+    if (node && observerRef.current) {
+      observerRef.current.observe(node);
+    }
   };
 
+  return { count, setRef };
+};
+
+// --- Typing Effect Component ---
+const TypingText: React.FC<{ text: string; delay?: number }> = ({
+  text,
+  delay = 0,
+}) => {
+  const [displayText, setDisplayText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      let index = 0;
+      const interval = setInterval(() => {
+        setDisplayText(text.slice(0, index + 1));
+        index++;
+        if (index >= text.length) {
+          clearInterval(interval);
+          setTimeout(() => setShowCursor(false), 1000);
+        }
+      }, 50);
+      return () => clearInterval(interval);
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [text, delay]);
+
   return (
-    <span className={className} onMouseEnter={handleHover}>
-      {display}
+    <span className="typing-text">
+      {displayText}
+      {showCursor && <span className="cursor">|</span>}
     </span>
   );
 };
 
-// --- 2. Main Component ---
-type Tab = "OVERVIEW" | "EXPERIENCE" | "STACK" | "HARDWARE" | "STATUS";
+// --- Frame Component (Reusable) ---
+const Frame: React.FC<{ label: string; children: React.ReactNode; className?: string }> = ({
+  label,
+  children,
+  className = "",
+}) => (
+  <section className={`about-frame ${className}`}>
+    <div className="frame-corner topleft" />
+    <div className="frame-corner topright" />
+    <div className="frame-corner bottomleft" />
+    <div className="frame-corner bottomright" />
+    <div className="frame-label">{label}</div>
+    {children}
+  </section>
+);
 
+// --- Data ---
+const EXPERIENCE_PREVIEW = [
+  {
+    year: "2024",
+    role: "AI Engineer",
+    company: "Building the Future",
+    tech: ["Python", "LangGraph", "LLMs"],
+  },
+  {
+    year: "2022",
+    role: "Full Stack Dev",
+    company: "Tech Ventures",
+    tech: ["React", "Node.js", "AWS"],
+  },
+];
+
+const SKILLS = [
+  { name: "Python", level: "expert" },
+  { name: "AI/ML", level: "expert" },
+  { name: "LangChain", level: "advanced" },
+  { name: "LangGraph", level: "advanced" },
+  { name: "React", level: "advanced" },
+  { name: "TypeScript", level: "intermediate" },
+  { name: "Node.js", level: "intermediate" },
+  { name: "AWS", level: "intermediate" },
+  { name: "PostgreSQL", level: "intermediate" },
+  { name: "Docker", level: "learning" },
+];
+
+const CURRENT_STATUS = [
+  { prefix: ">", text: "learning rust for systems programming" },
+  { prefix: ">", text: "building ai agent frameworks" },
+  { prefix: ">", text: 'reading "designing data-intensive apps"' },
+];
+
+const SOCIAL_LINKS = [
+  { icon: Github, href: "https://github.com/madanlalit", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/madanlalit", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/lalitmadan", label: "Twitter" },
+  { icon: Mail, href: "mailto:hello@madanlalit.com", label: "Email" },
+];
+
+const INTERESTS = [
+  "Open Source",
+  "AI Ethics",
+  "System Design",
+  "Dev Tools",
+  "Automation",
+  "Philosophy",
+];
+
+// --- Main Component ---
 const About: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<Tab>("OVERVIEW");
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [time, setTime] = useState("");
-
-  // Keyboard Navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      const tabs: Tab[] = [
-        "OVERVIEW",
-        "EXPERIENCE",
-        "STACK",
-        "HARDWARE",
-        "STATUS",
-      ];
-      const currentIndex = tabs.indexOf(activeTab);
-
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") {
-        setActiveTab(tabs[(currentIndex + 1) % tabs.length]);
-      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
-        setActiveTab(tabs[(currentIndex - 1 + tabs.length) % tabs.length]);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeTab]);
-
-  // System Time & Mouse Tracking
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setTime(now.toLocaleTimeString("en-US", { hour12: false }));
-    };
-    const updateMouse = (e: MouseEvent) =>
-      setMousePos({ x: e.clientX, y: e.clientY });
-
-    const interval = setInterval(updateTime, 1000);
-    window.addEventListener("mousemove", updateMouse);
-    updateTime();
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener("mousemove", updateMouse);
-    };
-  }, []);
-
-  const renderContent = () => {
-    switch (activeTab) {
-      case "OVERVIEW":
-        return <Overview />;
-      case "EXPERIENCE":
-        return <Experience />;
-      case "STACK":
-        return <StackTree />;
-      case "HARDWARE":
-        return <Hardware />;
-      case "STATUS":
-        return <Status />;
-      default:
-        return <Overview />;
-    }
-  };
+  const { count: yearsCount, setRef: yearsRef } = useCounter(4, 1500);
+  const { count: projectsCount, setRef: projectsRef } = useCounter(24, 1800);
+  const { count: coffeeCount, setRef: coffeeRef } = useCounter(1247, 2000);
+  const [activeExp, setActiveExp] = useState(0);
 
   return (
-    <div className="sys-container">
-      {/* Background Grid */}
-      <div className="grid-bg"></div>
-
-      {/* Header HUD */}
-      <header className="sys-header">
-        <div className="sys-title">
-          <Terminal size={18} />
-          <span>
-            SYS.ADMIN // <DecryptText text="LALIT_MADAN" />
-          </span>
+    <div className="about-container fade-in">
+      {/* Hero Frame */}
+      <Frame label="PROFILE" className="hero-frame">
+        <div className="hero-grid-bg" />
+        <div className="hero-layout">
+          <div className="hero-main">
+            <div className="hero-badge">ABOUT_ME.md</div>
+            <h1 className="hero-name">
+              <span className="name-line">LALIT</span>
+              <span className="name-line accent">MADAN</span>
+            </h1>
+            <div className="hero-tagline">
+              <TypingText text="Engineer. Builder. AI Enthusiast." delay={500} />
+            </div>
+            <div className="hero-meta">
+              <span className="meta-item">
+                <MapPin size={14} /> India
+              </span>
+              <span className="meta-item">
+                <Briefcase size={14} /> Open to Work
+              </span>
+            </div>
+            <div className="hero-actions">
+              <Link to="/experience" className="hero-btn primary">
+                View Experience <ArrowRight size={14} />
+              </Link>
+              <a href="#" className="hero-btn secondary">
+                <Download size={14} /> Resume
+              </a>
+            </div>
+          </div>
+          <div className="hero-stats">
+            <div className="stat-item" ref={yearsRef}>
+              <span className="stat-number">{yearsCount}+</span>
+              <span className="stat-label">Years</span>
+            </div>
+            <div className="stat-item" ref={projectsRef}>
+              <span className="stat-number">{projectsCount}</span>
+              <span className="stat-label">Projects</span>
+            </div>
+            <div className="stat-item" ref={coffeeRef}>
+              <Zap size={20} className="coffee-icon" />
+              <span className="stat-number small">{coffeeCount}</span>
+              <span className="stat-label">Coffees</span>
+            </div>
+          </div>
         </div>
-        <div className="sys-meta">
-          <span className="blink">●</span> LIVE
-          <span className="divider">|</span>
-          MEM: 64%
-        </div>
-      </header>
+      </Frame>
 
-      <div className="sys-body">
-        {/* Sidebar */}
-        <aside className="sys-sidebar">
-          <div className="sidebar-header">NAV_MODULE [keys: ↑↓]</div>
-          <nav>
-            {(
-              ["OVERVIEW", "EXPERIENCE", "STACK", "HARDWARE", "STATUS"] as Tab[]
-            ).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`nav-btn ${activeTab === tab ? "active" : ""}`}
+      {/* Bio Frame */}
+      <Frame label="BIO" className="bio-frame">
+        <p className="bio-text">
+          I'm a software engineer passionate about building at the intersection of
+          <strong> AI</strong> and <strong>developer experience</strong>. I believe
+          in crafting minimal, reliable systems that just work.
+        </p>
+        <p className="bio-text secondary">
+          When I'm not coding, you'll find me exploring new technologies,
+          contributing to open source, or writing about things I learn.
+        </p>
+        <blockquote className="philosophy-quote">
+          "Complexity is the enemy. Build minimal. Ship fast. Iterate forever."
+        </blockquote>
+      </Frame>
+
+      {/* Two-column Grid */}
+      <div className="about-grid">
+        {/* Left: Skills */}
+        <Frame label="TECH_STACK" className="skills-frame">
+          <div className="skills-cloud">
+            {SKILLS.map((skill, index) => (
+              <span
+                key={skill.name}
+                className={`skill-tag ${skill.level}`}
+                style={{ animationDelay: `${index * 0.05}s` }}
+                title={skill.level}
               >
-                {activeTab === tab && <span className="nav-cursor">▶</span>}
-                <span className="bracket">[</span>
-                <span className="nav-text">{tab}</span>
-                <span className="bracket">]</span>
-                {activeTab === tab && <span className="blink-cursor">█</span>}
-              </button>
+                {skill.name}
+              </span>
             ))}
-          </nav>
-          <div className="hotkey-hint">
-            <Command size={12} /> USE ARROW KEYS
           </div>
-        </aside>
-
-        {/* Content Area */}
-        <main className="sys-content">
-          <div className="content-frame">
-            <div className="frame-corner topleft"></div>
-            <div className="frame-corner topright"></div>
-            <div className="frame-corner bottomleft"></div>
-            <div className="frame-corner bottomright"></div>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-                className="scroll-container"
-              >
-                {renderContent()}
-              </motion.div>
-            </AnimatePresence>
+          <div className="skill-legend">
+            <span className="legend-item"><span className="dot expert" /> Expert</span>
+            <span className="legend-item"><span className="dot advanced" /> Advanced</span>
+            <span className="legend-item"><span className="dot intermediate" /> Intermediate</span>
           </div>
-        </main>
+        </Frame>
+
+        {/* Right: Interests */}
+        <Frame label="INTERESTS" className="interests-frame">
+          <div className="interests-grid">
+            {INTERESTS.map((interest) => (
+              <span key={interest} className="interest-tag">
+                <Heart size={12} className="interest-icon" />
+                {interest}
+              </span>
+            ))}
+          </div>
+        </Frame>
       </div>
 
-      {/* Footer HUD */}
-      <footer className="sys-footer">
-        <div className="coord">
-          X: {mousePos.x.toString().padStart(4, "0")}{" "}
-          <span className="divider">|</span>
-          Y: {mousePos.y.toString().padStart(4, "0")}
+      {/* Experience Preview Frame */}
+      <Frame label="EXECUTION_LOG" className="experience-frame">
+        <div className="exp-header">
+          <span className="exp-count">{EXPERIENCE_PREVIEW.length} of 4 entries</span>
+          <Link to="/experience" className="view-all-link">
+            View Full History <ArrowRight size={14} />
+          </Link>
         </div>
-        <div className="sys-time">{time} UTC+12</div>
-      </footer>
+        <div className="exp-timeline">
+          {EXPERIENCE_PREVIEW.map((exp, index) => (
+            <div
+              key={index}
+              className={`exp-item ${activeExp === index ? "active" : ""}`}
+              onMouseEnter={() => setActiveExp(index)}
+            >
+              <span className="exp-year">{exp.year}</span>
+              <div className="exp-details">
+                <span className="exp-role">{exp.role}</span>
+                <span className="exp-company">@ {exp.company}</span>
+                <div className="exp-tech">
+                  {exp.tech.map((t) => (
+                    <span key={t} className="tech-tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Frame>
+
+      {/* Current Status Frame */}
+      <Frame label="CURRENT_FOCUS" className="status-frame">
+        <div className="terminal-window">
+          <div className="terminal-header">
+            <span className="terminal-dot red" />
+            <span className="terminal-dot yellow" />
+            <span className="terminal-dot green" />
+            <span className="terminal-title">~/current_focus.sh</span>
+          </div>
+          <div className="terminal-body">
+            {CURRENT_STATUS.map((line, index) => (
+              <div key={index} className="terminal-line">
+                <span className="terminal-prefix">{line.prefix}</span>
+                <span className="terminal-text">{line.text}</span>
+              </div>
+            ))}
+            <div className="terminal-line">
+              <span className="terminal-prefix">{">"}</span>
+              <span className="terminal-cursor">_</span>
+            </div>
+          </div>
+        </div>
+      </Frame>
+
+      {/* Education & Connect Grid */}
+      <div className="about-grid">
+        <Frame label="EDUCATION" className="education-frame">
+          <div className="edu-item">
+            <GraduationCap size={24} className="edu-icon" />
+            <div className="edu-content">
+              <span className="edu-degree">B.Tech in Computer Science</span>
+              <span className="edu-school">Your University</span>
+              <span className="edu-year">2016 - 2020</span>
+            </div>
+          </div>
+        </Frame>
+
+        <Frame label="CONNECT" className="connect-frame">
+          <div className="social-grid">
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+              >
+                <link.icon size={18} className="social-icon" />
+                <span className="social-label">{link.label}</span>
+              </a>
+            ))}
+          </div>
+        </Frame>
+      </div>
     </div>
   );
 };
-
-/* --- Sub-Components --- */
-
-const Overview = () => (
-  <div className="panel">
-    <h1 className="glitch-header">
-      <DecryptText text="INITIATING_SEQUENCE..." />
-    </h1>
-    <p className="lead">
-      Hello, I'm <span className="highlight">Name</span>. I build minimal,
-      reliable software for the web and explore the frontiers of Artificial
-      Intelligence.
-    </p>
-    <hr className="dashed" />
-    <div className="stats-grid">
-      <div className="stat-box">
-        <span className="stat-label">PROJECTS</span>
-        <span className="stat-value">24</span>
-      </div>
-      <div className="stat-box">
-        <span className="stat-label">CONTRIBS</span>
-        <span className="stat-value">1.2k</span>
-      </div>
-      <div className="stat-box">
-        <span className="stat-label">COFFEE</span>
-        <span className="stat-value">∞</span>
-      </div>
-    </div>
-    <div className="text-body">
-      <p>
-        My philosophy is simple: <strong>Complexity is the enemy</strong>. In my
-        digital garden, I cultivate thoughts on software architecture, User
-        Experience, and the ethics of AI.
-      </p>
-    </div>
-  </div>
-);
-
-const Experience = () => (
-  <div className="panel">
-    <h3>
-      <Layers size={16} /> EXECUTION_LOG
-    </h3>
-    <ul className="log-list timeline">
-      <li className="log-entry">
-        <span className="log-date">2025 // PRESENT</span>
-        <div className="log-content">
-          <strong>Senior Engineer @ TechCorp</strong>
-          <p>
-            Leading the AI Agents division. Optimized LLM context windows by
-            40%.
-          </p>
-        </div>
-      </li>
-      <li className="log-entry">
-        <span className="log-date">2023 // 2024</span>
-        <div className="log-content">
-          <strong>Full Stack Dev @ StartUp</strong>
-          <p>Shipped v1.0 of the core product using Next.js and PostgreSQL.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-);
-
-const StackTree = () => (
-  <div className="panel">
-    <h3>
-      <Cpu size={16} /> DEPENDENCY_TREE
-    </h3>
-    <div className="tree-view">
-      <div className="tree-item root">root</div>
-      <div className="tree-item branch">├── frontend</div>
-      <div className="tree-item leaf">│ ├── react.js</div>
-      <div className="tree-item leaf">│ ├── typescript</div>
-      <div className="tree-item leaf">│ └── tailwind</div>
-      <div className="tree-item branch">├── backend</div>
-      <div className="tree-item leaf">│ ├── node.js</div>
-      <div className="tree-item leaf">│ └── postgresql</div>
-      <div className="tree-item branch">└── artificial_intelligence</div>
-      <div className="tree-item leaf"> ├── python</div>
-      <div className="tree-item leaf"> ├── openai_api</div>
-      <div className="tree-item leaf"> └── langchain</div>
-    </div>
-  </div>
-);
-
-const Hardware = () => (
-  <div className="panel">
-    <h3>
-      <Box size={16} /> SYSTEM_SPECS
-    </h3>
-    <div className="kv-table">
-      <div className="kv-row">
-        <span className="key">MACHINE_ID</span>
-        <span className="value">MacBook Pro M3</span>
-      </div>
-      <div className="kv-row">
-        <span className="key">MEMORY</span>
-        <span className="value">36GB Unified</span>
-      </div>
-      <div className="kv-row">
-        <span className="key">INTERFACE</span>
-        <span className="value">HHKB Hybrid Type-S</span>
-      </div>
-      <div className="kv-row">
-        <span className="key">EDITOR</span>
-        <span className="value">VS Code (Vim Mode)</span>
-      </div>
-      <div className="kv-row">
-        <span className="key">THEME</span>
-        <span className="value">Gruvbox Dark</span>
-      </div>
-    </div>
-  </div>
-);
-
-const Status = () => (
-  <div className="panel">
-    <h3>
-      <Activity size={16} /> ACTIVE_PROCESSES
-    </h3>
-    <div className="kv-table">
-      <div className="kv-row">
-        <span className="key">CURRENT_FOCUS</span>
-        <span className="value" style={{ color: "var(--arch-accent)" }}>
-          Learning Rust
-        </span>
-      </div>
-      <div className="kv-row">
-        <span className="key">READING</span>
-        <span className="value">"Designing Data-Intensive Applications"</span>
-      </div>
-      <div className="kv-row">
-        <span className="key">FITNESS</span>
-        <span className="value">Marathon Training (Week 4)</span>
-      </div>
-    </div>
-    <br />
-    <div className="progress-bar-container">
-      <span className="key" style={{ fontSize: "0.8rem", opacity: 0.7 }}>
-        PROJECT_COMPLETION: SAAS_APP
-      </span>
-      <div
-        style={{
-          width: "100%",
-          height: "10px",
-          background: "var(--arch-border)",
-          marginTop: "5px",
-        }}
-      >
-        <div
-          style={{
-            width: "65%",
-            height: "100%",
-            background: "var(--arch-accent)",
-          }}
-        ></div>
-      </div>
-    </div>
-  </div>
-);
 
 export default About;

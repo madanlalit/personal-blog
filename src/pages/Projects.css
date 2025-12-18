@@ -1,5 +1,54 @@
 /* src/pages/Projects.css */
 
+/* Container with max-width matching other pages */
+.projects-page {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Background Grid Effect */
+.projects-page .grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Page Header */
+.projects-page .sys-header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: var(--font-size-subtitle);
+}
+
+.projects-page .sys-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.projects-page .sys-meta {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
 .repo-controls {
     display: flex;
     gap: 10px;

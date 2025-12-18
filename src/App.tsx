@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Post from "./pages/Post";
 import TagArchive from "./pages/TagArchive";
 import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
 import "./App.css";
 
 function App() {
@@ -123,6 +124,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/experience" element={<Experience />} />
                 <Route path="/archive" element={<Archive />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Projects />} />

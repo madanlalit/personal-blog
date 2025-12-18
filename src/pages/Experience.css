@@ -1,0 +1,454 @@
+/* src/pages/Experience.css - PostCard-Style Design */
+
+.experience-page {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+    min-height: 100vh;
+}
+
+/* ===========================================
+   PAGE HEADER
+   =========================================== */
+
+.exp-page-header {
+    margin-bottom: var(--space-xl);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-size-small);
+    color: var(--text-tertiary);
+    font-weight: 500;
+    transition: all 0.2s;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    letter-spacing: 0.5px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+    transform: translateX(-4px);
+}
+
+.page-title {
+    font-size: var(--font-size-hero);
+    margin: 0 0 var(--space-sm) 0;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.page-title .accent {
+    color: var(--accent);
+}
+
+.page-title::after {
+    display: none;
+}
+
+.page-subtitle {
+    font-size: var(--font-size-body);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ===========================================
+   SECTION HEADER (Matching Home.css)
+   =========================================== */
+
+.exp-section {
+    margin-bottom: var(--space-xl);
+}
+
+.section-header {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.section-meta {
+    color: var(--accent);
+}
+
+/* ===========================================
+   TIMELINE (Matching Home.css logs-timeline)
+   =========================================== */
+
+.logs-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-entry {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.timeline-entry:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-entry:last-child .t-line {
+    display: none;
+}
+
+.timeline-marker {
+    width: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.t-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    z-index: 2;
+    margin-top: 6px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.t-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    position: absolute;
+    top: 12px;
+    bottom: -6px;
+    left: 7px;
+    z-index: 1;
+}
+
+.timeline-entry:hover .t-dot {
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+/* ===========================================
+   JOB CARD (Matching PostCard.css)
+   =========================================== */
+
+.job-card {
+    display: block;
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 0;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.job-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Pseudo corner for TUI feel */
+.job-card::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+}
+
+.job-card:hover::after {
+    background-color: var(--accent);
+}
+
+/* Meta Row */
+.job-meta-row {
+    font-family: var(--font-primary);
+    display: flex;
+    gap: 12px;
+    font-size: var(--font-size-small);
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 8px;
+    align-items: center;
+}
+
+.job-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.job-type {
+    color: var(--accent);
+    margin-left: auto;
+}
+
+/* Title */
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.job-title::after {
+    display: none;
+}
+
+.job-title .at {
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.timeline-entry:hover .job-title {
+    color: var(--accent);
+}
+
+/* Location */
+.job-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+}
+
+/* Excerpt */
+.job-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Achievements */
+.job-achievements {
+    margin-bottom: 16px;
+}
+
+.achievements-label {
+    font-size: var(--font-size-xxs);
+    color: var(--text-tertiary);
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.job-achievements ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.job-achievements li {
+    margin-bottom: 4px;
+}
+
+.job-achievements li::marker {
+    color: var(--accent);
+}
+
+/* Tags */
+.job-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    color: var(--accent);
+    font-size: 0.7rem;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    transition: all 0.2s;
+}
+
+.tech-tag:hover {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* ===========================================
+   CERTIFICATIONS GRID
+   =========================================== */
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+.cert-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    border: 1px solid var(--border);
+    padding: var(--space-md);
+    transition: all 0.2s;
+    position: relative;
+}
+
+.cert-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.cert-card::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--border);
+}
+
+.cert-card:hover::after {
+    background-color: var(--accent);
+}
+
+.cert-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.cert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cert-name {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.cert-issuer {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.cert-year {
+    font-size: var(--font-size-xxs);
+    color: var(--accent);
+    margin-top: 4px;
+}
+
+/* ===========================================
+   CTA SECTION
+   =========================================== */
+
+.exp-cta {
+    text-align: center;
+    padding: var(--space-lg);
+    border: 1px solid var(--border);
+    margin-top: var(--space-lg);
+    position: relative;
+}
+
+.exp-cta p {
+    font-size: var(--font-size-body);
+    color: var(--text-secondary);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.cta-btn.primary {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+.cta-btn.primary:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+.cta-btn.secondary {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.cta-btn.secondary:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+
+@media (max-width: 768px) {
+    .experience-page {
+        padding: var(--space-md);
+    }
+
+    .page-title {
+        font-size: var(--font-size-title);
+    }
+
+    .timeline-marker {
+        display: none;
+    }
+
+    .timeline-entry {
+        gap: 0;
+    }
+
+    .job-card {
+        padding: 16px;
+    }
+
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+}

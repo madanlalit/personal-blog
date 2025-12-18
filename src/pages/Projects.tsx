@@ -12,7 +12,6 @@ import {
   Layout,
 } from "lucide-react";
 import "./Projects.css";
-import "./About.css"; // Inherit base sys-styles
 
 // --- Data ---
 const projects = [
@@ -71,7 +70,7 @@ const Projects: React.FC = () => {
     filter === "ALL" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <div className="sys-container">
+    <div className="projects-page fade-in">
       <div className="grid-bg"></div>
 
       <header className="sys-header">
