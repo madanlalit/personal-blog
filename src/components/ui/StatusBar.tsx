@@ -67,28 +67,29 @@ const StatusBar: React.FC<StatusBarProps> = ({ muted, onToggleMute }) => {
         <div className="tui-status-bar top">
             <div className="status-left">
                 <span className="status-item mode-indicator" data-mode={mode}>
-                    [{mode}]
+                    {mode}
                 </span>
-                <span className="status-item">
-                    user@blog: {formatPath(location.pathname)}
+                <span className="status-separator">│</span>
+                <span className="status-item status-path">
+                    {formatPath(location.pathname)}
                 </span>
             </div>
 
             <div className="status-right">
-                <span className="status-item">
-                    {scrollPercent === 0 ? 'TOP' : scrollPercent === 100 ? 'BOT' : `${scrollPercent}%`}
+                <span className="status-item status-scroll">
+                    {scrollPercent === 0 ? '⬆ TOP' : scrollPercent === 100 ? '⬇ BOT' : `${scrollPercent}%`}
                 </span>
-                <span className="status-item">
-                    {/* Fixed width to prevent jumping */}
-                    <span style={{ display: 'inline-block', width: '50px', textAlign: 'center' }}>
-                        {time.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' })}
-                    </span>
+                <span className="status-separator">│</span>
+                <span className="status-item status-time">
+                    {time.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' })}
                 </span>
+                <span className="status-separator">│</span>
                 <button
                     onClick={onToggleMute}
-                    className="status-button"
+                    className={`status-button ${muted ? 'muted' : 'active'}`}
+                    title={muted ? 'Unmute audio' : 'Mute audio'}
                 >
-                    [{muted ? 'MUTE' : 'AUD'}]
+                    [{muted ? 'MUTE' : 'AUDIO'}]
                 </button>
             </div>
         </div>

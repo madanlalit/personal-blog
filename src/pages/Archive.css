@@ -380,3 +380,67 @@
     text-align: center;
     letter-spacing: 1px;
 }
+
+/* --- PHASE 2 ANIMATIONS --- */
+
+/* Search status feedback */
+.search-status {
+    font-size: var(--font-size-xs);
+    color: var(--arch-accent);
+    animation: scanPulse 0.6s ease-in-out infinite;
+}
+
+@keyframes scanPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* File row scan-line hover effect */
+.file-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb, 37, 99, 235), 0.05), transparent);
+    transition: width 0.3s ease;
+    pointer-events: none;
+}
+
+.file-row:hover::before {
+    width: 100%;
+}
+
+/* Grid card scan effect */
+.grid-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.grid-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-card:hover::after {
+    left: 100%;
+}
+
+/* Active search glow */
+.search-wrapper:focus-within {
+    box-shadow: 0 0 0 1px var(--arch-accent);
+}

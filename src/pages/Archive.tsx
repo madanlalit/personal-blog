@@ -29,10 +29,13 @@ const Archive: React.FC = () => {
   const allPosts = getAllPosts();
 
   // State
-  const [viewMode, setViewMode] = useState<"LIST" | "GRID">("LIST");
+  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // Derive isSearching from searchQuery
+  const isSearching = searchQuery.length > 0;
 
   // Get all unique tags
   const allTags = Array.from(new Set(allPosts.flatMap((p) => p.tags || [])));
@@ -138,21 +141,26 @@ const Archive: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <Search size={14} className="icon-right" />
+            {isSearching ? (
+              <span className="search-status">SCANNING...</span>
+            ) : (
+              <Search size={14} className="icon-right" />
+            )}
           </div>
 
           <div className="view-toggles">
             <button
-              className={`toggle-btn ${viewMode === "LIST" ? "active" : ""}`}
-              onClick={() => setViewMode("LIST")}
+              className={`toggle-btn ${viewMode === "list" ? "active" : ""}`}
+              onClick={() => setViewMode("list")}
+              title="List View"
             >
-              <List size={14} /> LIST
+              <List size={16} />
             </button>
             <button
-              className={`toggle-btn ${viewMode === "GRID" ? "active" : ""}`}
-              onClick={() => setViewMode("GRID")}
-            >
-              <LayoutGrid size={14} /> GRID
+              className={`toggle-btn ${viewMode === "grid" ? "active" : ""}`}
+              onClick={() => setViewMode("grid")}
+              title="Grid View"
+            >  <LayoutGrid size={14} /> GRID
             </button>
           </div>
         </section>
@@ -171,7 +179,7 @@ const Archive: React.FC = () => {
               className={`tag-chip ${activeTag === tag ? "active" : ""}`}
               onClick={() => setActiveTag(tag)}
             >
-              {tag}
+              [{tag}]
             </button>
           ))}
         </div>
@@ -187,7 +195,7 @@ const Archive: React.FC = () => {
               >
                 [!] ERR_NO_RESULTS_FOUND
               </motion.div>
-            ) : viewMode === "LIST" ? (
+            ) : viewMode === "list" ? (
               // --- LIST VIEW (File System) ---
               <motion.div
                 key="list"

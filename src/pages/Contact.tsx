@@ -32,6 +32,9 @@ const Contact: React.FC = () => {
     new Date().toLocaleTimeString("en-US", { hour12: false }),
   );
   const [copied, setCopied] = useState(false);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState<{ email?: string; message?: string }>({});
 
   // Replace with your info
   const EMAIL = "hello@madanlalit.com";
@@ -52,6 +55,28 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const newErrors: { email?: string; message?: string } = {};
+
+    // Validate email
+    if (!email) {
+      newErrors.email = "ERROR_0x01: SENDER_IDENTITY_REQUIRED";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "ERROR_0x02: INVALID_SENDER_FORMAT";
+    }
+
+    // Validate message
+    if (!message) {
+      newErrors.message = "ERROR_0x03: MESSAGE_PAYLOAD_EMPTY";
+    } else if (message.length < 10) {
+      newErrors.message = "ERROR_0x04: PAYLOAD_TOO_SHORT (MIN: 10 BYTES)";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
     setStatus("SENDING");
     // Fake delay
     setTimeout(() => setStatus("SENT"), 1500);
@@ -186,26 +211,30 @@ const Contact: React.FC = () => {
                     <label className="field-label">01 // SENDER_IDENTITY</label>
                     <input
                       type="email"
-                      required
-                      className="tech-input"
+                      value={email}
+                      onChange={(e) => { setEmail(e.target.value); setErrors({}); }}
+                      className={`tech-input ${errors.email ? 'input-error' : ''}`}
                       placeholder="Enter your email frequency..."
                     />
+                    {errors.email && <div className="validation-error">{errors.email}</div>}
                   </div>
 
                   <div className="input-field-group">
                     <label className="field-label">02 // MESSAGE_PAYLOAD</label>
                     <textarea
-                      required
+                      value={message}
+                      onChange={(e) => { setMessage(e.target.value); setErrors({}); }}
                       rows={5}
-                      className="tech-input"
+                      className={`tech-input ${errors.message ? 'input-error' : ''}`}
                       placeholder="Initialize message sequence..."
                       style={{ resize: "vertical" }}
                     ></textarea>
+                    {errors.message && <div className="validation-error">{errors.message}</div>}
                   </div>
 
                   {status === "SENDING" ? (
-                    <div style={{ marginTop: "20px" }}>
-                      <div className="field-label">UPLINKING...</div>
+                    <div className="transmit-state">
+                      <div className="transmit-text">TRANSMITTING_ENCRYPTED_PACKET...</div>
                       <div className="transmission-bar">
                         <div className="transmission-fill"></div>
                       </div>

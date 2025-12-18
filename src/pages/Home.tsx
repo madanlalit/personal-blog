@@ -48,6 +48,8 @@ const Home: React.FC = () => {
 
   // UI State
   const [time, setTime] = useState(new Date());
+  const [skillsAnimated, setSkillsAnimated] = useState(false);
+  const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
 
   // Data State
   const [activityMap, setActivityMap] = useState<number[]>(Array(30).fill(0));
@@ -60,6 +62,21 @@ const Home: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
+  }, []);
+
+  // --- SKILL BAR ANIMATION ---
+  useEffect(() => {
+    const timer = setTimeout(() => setSkillsAnimated(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // --- LOG TYPING EFFECT ---
+  useEffect(() => {
+    SYSTEM_LOGS.forEach((log, index) => {
+      setTimeout(() => {
+        setVisibleLogs((prev) => [...prev, log.id]);
+      }, 500 + index * 400);
+    });
   }, []);
 
   // --- HELPER: PROCESS HEATMAP ONLY ---
@@ -231,7 +248,7 @@ const Home: React.FC = () => {
                   <div className="skill-track">
                     <div
                       className="skill-fill"
-                      style={{ width: `${skill.level}%` }}
+                      style={{ width: skillsAnimated ? `${skill.level}%` : '0%' }}
                     ></div>
                   </div>
                 </div>
@@ -280,7 +297,10 @@ const Home: React.FC = () => {
             </div>
             <div className="system-log-terminal">
               {SYSTEM_LOGS.map((log) => (
-                <div key={log.id} className="log-row">
+                <div
+                  key={log.id}
+                  className={`log-row ${visibleLogs.includes(log.id) ? 'log-visible' : 'log-hidden'}`}
+                >
                   <span className="log-time">
                     [{new Date().getHours()}:
                     {String(

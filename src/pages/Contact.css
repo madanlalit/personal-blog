@@ -24,7 +24,8 @@
 
 @media (min-width: 768px) {
     .comms-interface {
-        grid-template-columns: 280px 1fr; /* Sidebar | Form */
+        grid-template-columns: 280px 1fr;
+        /* Sidebar | Form */
         min-height: 500px;
     }
 }
@@ -41,6 +42,7 @@
     border-left: 4px solid var(--arch-accent);
     z-index: 5;
 }
+
 .comms-interface::after {
     content: "";
     position: absolute;
@@ -86,7 +88,8 @@
 
 .op-name {
     font-size: var(--font-size-h4);
-    font-weight: 800; /* Bolder */
+    font-weight: 800;
+    /* Bolder */
     letter-spacing: 1px;
     color: var(--arch-text);
     text-transform: uppercase;
@@ -94,7 +97,8 @@
 
 .op-role {
     font-size: var(--font-size-small);
-    color: var(--arch-accent); /* Accent color instead of gray */
+    color: var(--arch-accent);
+    /* Accent color instead of gray */
     font-family: monospace;
     font-weight: bold;
     margin-top: 5px;
@@ -111,7 +115,8 @@
     align-items: center;
     gap: 10px;
     font-size: var(--font-size-small);
-    color: var(--arch-text); /* Black text */
+    color: var(--arch-text);
+    /* Black text */
     text-decoration: none;
     padding: 10px;
     border: 1px solid transparent;
@@ -122,7 +127,8 @@
 .conn-link:hover {
     border-color: var(--arch-text);
     background: var(--arch-text);
-    color: var(--bg-primary); /* Invert colors on hover */
+    color: var(--bg-primary);
+    /* Invert colors on hover */
 }
 
 /* --- Main Area: Input Form --- */
@@ -147,7 +153,8 @@
         linear-gradient(var(--arch-border) 1px, transparent 1px),
         linear-gradient(90deg, var(--arch-border) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.15; /* Low opacity to avoid gray mud */
+    opacity: 0.15;
+    /* Low opacity to avoid gray mud */
     pointer-events: none;
 }
 
@@ -160,7 +167,8 @@
 .field-label {
     display: block;
     font-size: var(--font-size-xs);
-    color: var(--arch-text); /* Black text */
+    color: var(--arch-text);
+    /* Black text */
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -170,8 +178,10 @@
 /* The Tech Input - Stark Lines */
 .tech-input {
     width: 100%;
-    background: transparent; /* No gray fill */
-    border: 2px solid var(--arch-border); /* Thicker border */
+    background: transparent;
+    /* No gray fill */
+    border: 2px solid var(--arch-border);
+    /* Thicker border */
     padding: 15px;
     color: var(--arch-text);
     font-family: monospace;
@@ -234,6 +244,7 @@
     margin-top: 20px;
     padding: 1px;
 }
+
 .transmission-fill {
     height: 100%;
     background: var(--arch-text);
@@ -245,9 +256,11 @@
     0% {
         width: 0%;
     }
+
     40% {
         width: 60%;
     }
+
     100% {
         width: 100%;
     }
@@ -260,4 +273,75 @@
     padding: 30px;
     background: var(--bg-primary);
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* --- PHASE 4 ENHANCEMENTS --- */
+
+/* Validation errors */
+.validation-error {
+    font-size: var(--font-size-xs);
+    color: #ff5555;
+    margin-top: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    animation: errorShake 0.3s ease;
+}
+
+@keyframes errorShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.input-error {
+    border-color: #ff5555 !important;
+    animation: errorPulse 0.5s ease;
+}
+
+@keyframes errorPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 85, 85, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 10px 2px rgba(255, 85, 85, 0.3);
+    }
+}
+
+/* Transmit state styling */
+.transmit-state {
+    margin-top: 20px;
+}
+
+.transmit-text {
+    font-size: var(--font-size-xs);
+    color: var(--arch-accent);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    animation: transmitBlink 0.5s ease-in-out infinite;
+}
+
+@keyframes transmitBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }

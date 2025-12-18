@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom"; // Added useLocation for better active state check
 import { triggerAlert } from "../../utils/systemEvents";
 import type { Post } from "../../types";
@@ -27,6 +27,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [tempInput, setTempInput] = useState("");
+  const [selectedSuggestion, setSelectedSuggestion] = useState(0);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const historyRef = useRef<HTMLDivElement>(null);
@@ -78,37 +79,79 @@ const CommandLine: React.FC<CommandLineProps> = ({
     // Autocomplete
     else if (e.key === "Tab") {
       e.preventDefault();
-      const commands = [
-        "help",
-        "cd",
-        "ls",
-        "theme",
-        "clear",
-        "reboot",
-        "snake",
-        "grep",
-        "neofetch",
-        "amp",
-      ];
-      // UPDATED: Added 'projects' and 'contact' to arguments
-      const args = [
-        "home",
-        "about",
-        "archive",
-        "projects",
-        "contact",
-        ...availableThemes,
-      ];
-      const allOptions = [...commands, ...args];
-
-      const match = allOptions.find((opt) =>
-        opt.startsWith(input.toLowerCase()),
-      );
-      if (match) {
-        setInput(match + " ");
+      if (ghostText) {
+        setInput(ghostText);
+      } else if (suggestions.length > 0) {
+        setInput(suggestions[selectedSuggestion]);
+        setSelectedSuggestion(0);
       }
     }
+    else if (e.key === "ArrowRight" && ghostText) {
+      e.preventDefault();
+      setInput(ghostText);
+    }
   };
+
+  // Compute suggestions and ghost text as derived state
+  const { suggestions, ghostText } = useMemo(() => {
+    if (!input) {
+      return { suggestions: [], ghostText: "" };
+    }
+
+    const commands = [
+      "help",
+      "cd",
+      "ls",
+      "theme",
+      "clear",
+      "reboot",
+      "snake",
+      "grep",
+      "neofetch",
+      "amp",
+    ];
+    const args = [
+      "home",
+      "about",
+      "archive",
+      "projects",
+      "contact",
+      ...availableThemes,
+    ];
+
+    // Check if input has a space (command + argument)
+    const parts = input.toLowerCase().split(" ");
+    const hasSpace = input.includes(" ");
+
+    let matches: string[] = [];
+
+    if (hasSpace && parts.length >= 2) {
+      // Match arguments for commands like "cd home"
+      const command = parts[0];
+      const argPart = parts.slice(1).join(" ");
+
+      if (["cd", "theme"].includes(command)) {
+        const relevantArgs = command === "cd"
+          ? ["home", "about", "archive", "projects", "contact"]
+          : availableThemes;
+
+        matches = relevantArgs
+          .filter((arg) => arg.startsWith(argPart))
+          .map((arg) => `${command} ${arg}`);
+      }
+    } else {
+      // Match commands
+      const allOptions = [...commands, ...args];
+      matches = allOptions.filter((opt) =>
+        opt.startsWith(input.toLowerCase())
+      );
+    }
+
+    return {
+      suggestions: matches.slice(0, 5),
+      ghostText: matches.length > 0 ? matches[0] : ""
+    };
+  }, [input, availableThemes]);
 
   const handleCommand = (cmd: string) => {
     const trimmed = cmd.trim().toLowerCase();
@@ -332,62 +375,96 @@ const CommandLine: React.FC<CommandLineProps> = ({
         )}
         <form onSubmit={handleSubmit} className="cli-form">
           <span className="prompt">user@blog:~$</span>
-          <input
-            ref={inputRef}
-            type="text"
-            className="cli-input"
-            value={input}
-            onChange={(e) => {
-              setInput(e.target.value);
-              if (onKey) onKey();
-            }}
-            onKeyDown={handleInputKeyDown}
-            autoFocus
-            spellCheck="false"
-            autoComplete="off"
-          />
-          <div className="status-right">[ CMD ]</div>
+          <div className="cli-input-wrapper">
+            <input
+              ref={inputRef}
+              type="text"
+              className="cli-input"
+              value={input}
+              onChange={(e) => {
+                setInput(e.target.value);
+                if (onKey) onKey();
+              }}
+              onKeyDown={handleInputKeyDown}
+              autoFocus
+              spellCheck="false"
+              autoComplete="off"
+            />
+            {ghostText && input && ghostText.startsWith(input) && (
+              <span className="cli-ghost-text">
+                {input}
+                <span className="ghost-suggestion">
+                  {ghostText.slice(input.length)}
+                </span>
+              </span>
+            )}
+          </div>
+          <div className="cli-badge">CMD</div>
         </form>
+        {suggestions.length > 0 && (
+          <div className="cli-suggestions">
+            {suggestions.map((suggestion, idx) => (
+              <div
+                key={suggestion}
+                className={`suggestion-item ${idx === selectedSuggestion ? "selected" : ""}`}
+                onClick={() => {
+                  setInput(suggestion);
+                  inputRef.current?.focus();
+                }}
+              >
+                <span className="suggestion-icon">▶</span>
+                <span className="suggestion-text">{suggestion}</span>
+                {idx === 0 && <span className="suggestion-hint">Tab</span>}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* UPDATED: Added Projects and Contact Tabs */}
+      {/* Modern CLI Tabs with Keyboard Shortcuts */}
       <div className="cli-tabs">
         <button
           className={`cli-tab ${location.pathname === "/" ? "active" : ""}`}
           onClick={() => navigate("/")}
+          title="Navigate to Home (Alt+1)"
         >
-          [1: HOME]
+          <span className="tab-key">1</span> HOME
         </button>
         <button
           className={`cli-tab ${location.pathname === "/archive" ? "active" : ""}`}
           onClick={() => navigate("/archive")}
+          title="Navigate to Archive (Alt+2)"
         >
-          [2: ARCHIVE]
+          <span className="tab-key">2</span> ARCHIVE
         </button>
         <button
           className={`cli-tab ${location.pathname === "/about" ? "active" : ""}`}
           onClick={() => navigate("/about")}
+          title="Navigate to About (Alt+3)"
         >
-          [3: ABOUT]
+          <span className="tab-key">3</span> ABOUT
         </button>
         <button
           className={`cli-tab ${location.pathname === "/projects" ? "active" : ""}`}
           onClick={() => navigate("/projects")}
+          title="Navigate to Projects (Alt+4)"
         >
-          [4: PROJECTS]
+          <span className="tab-key">4</span> PROJECTS
         </button>
         <button
           className={`cli-tab ${location.pathname === "/contact" ? "active" : ""}`}
           onClick={() => navigate("/contact")}
+          title="Navigate to Contact (Alt+5)"
         >
-          [5: CONTACT]
+          <span className="tab-key">5</span> CONTACT
         </button>
 
-        <div style={{ flex: 1 }}></div>
+        <div className="tab-spacer"></div>
 
         <button
           className="cli-tab action-tab"
           onClick={() => window.open("https://github.com/madanlalit", "_blank")}
+          title="Open GitHub profile"
         >
           GITHUB
         </button>
@@ -396,13 +473,14 @@ const CommandLine: React.FC<CommandLineProps> = ({
           onClick={() =>
             window.open("https://linkedin.com/in/madanlalit", "_blank")
           }
+          title="Open LinkedIn profile"
         >
           LINKEDIN
         </button>
         <button
           className="cli-tab action-tab"
-          style={{ borderRight: "none" }}
           onClick={() => window.open("https://x.com/lalitmadan", "_blank")}
+          title="Open X (Twitter) profile"
         >
           X
         </button>

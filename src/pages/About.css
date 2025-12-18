@@ -48,8 +48,10 @@
     font-weight: bold;
     letter-spacing: 1px;
     font-size: var(--font-size-subtitle);
-    height: auto; /* Allow auto height like Home */
-    padding-bottom: 1rem; /* Match Home */
+    height: auto;
+    /* Allow auto height like Home */
+    padding-bottom: 1rem;
+    /* Match Home */
 }
 
 .sys-title {
@@ -339,4 +341,71 @@
     50% {
         opacity: 0;
     }
+}
+
+/* --- PHASE 3 ENHANCEMENTS --- */
+
+/* Nav cursor indicator */
+.nav-cursor {
+    font-size: 0.6rem;
+    color: var(--sys-accent);
+    margin-right: 6px;
+    animation: navPulse 1s ease-in-out infinite;
+}
+
+@keyframes navPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Blinking block cursor */
+.blink-cursor {
+    font-size: 0.7rem;
+    color: var(--sys-accent);
+    margin-left: 6px;
+    animation: blink 1s step-end infinite;
+}
+
+/* Timeline connector lines */
+.log-list.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.log-list.timeline::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--sys-border);
+}
+
+.log-list.timeline .log-entry {
+    position: relative;
+}
+
+.log-list.timeline .log-entry::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: var(--sys-bg);
+    border: 2px solid var(--sys-accent);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.log-list.timeline .log-entry:hover::before {
+    background: var(--sys-accent);
 }

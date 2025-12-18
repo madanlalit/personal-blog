@@ -134,9 +134,11 @@ const About: React.FC = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`nav-btn ${activeTab === tab ? "active" : ""}`}
               >
+                {activeTab === tab && <span className="nav-cursor">▶</span>}
                 <span className="bracket">[</span>
                 <span className="nav-text">{tab}</span>
                 <span className="bracket">]</span>
+                {activeTab === tab && <span className="blink-cursor">█</span>}
               </button>
             ))}
           </nav>
@@ -224,7 +226,7 @@ const Experience = () => (
     <h3>
       <Layers size={16} /> EXECUTION_LOG
     </h3>
-    <ul className="log-list">
+    <ul className="log-list timeline">
       <li className="log-entry">
         <span className="log-date">2025 // PRESENT</span>
         <div className="log-content">

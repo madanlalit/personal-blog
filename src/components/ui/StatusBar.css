@@ -2,68 +2,102 @@
     background-color: var(--bg-primary);
     color: var(--text-primary);
     border-bottom: 1px solid var(--border);
-    padding: 8px 12px;
-    /* Match CLI container padding */
+    padding: 7px 16px;
     font-family: var(--font-primary);
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.72rem;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
     user-select: none;
-    text-transform: uppercase;
-    /* height: auto;  Let padding define height like CLI */
+    letter-spacing: 0.4px;
+    transition: border-color 0.2s ease;
 }
 
 .status-left,
 .status-right {
     display: flex;
-    gap: 1.5rem;
+    gap: 14px;
     align-items: center;
 }
 
 .status-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    color: var(--text-primary);
-    /* Default color to match input */
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
 }
 
-.status-right .status-item {
-    color: var(--accent);
-    /* Highlight right side items like time */
+.status-path {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.status-time {
+    font-variant-numeric: tabular-nums;
+    min-width: 42px;
+}
+
+.status-scroll {
+    min-width: 65px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.status-separator {
+    color: var(--border);
+    font-weight: 300;
+    opacity: 0.6;
 }
 
 .status-button {
     background: none;
-    border: none;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
+    border: 1px solid var(--border);
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
     cursor: pointer;
-    padding: 0;
-    text-transform: uppercase;
+    padding: 2px 6px;
+    transition: all 0.2s ease;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
 }
 
 .status-button:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+    background: var(--bg-secondary);
+}
+
+.status-button.active {
     color: var(--accent);
+    border-color: var(--accent);
+}
+
+.status-button.muted {
+    color: var(--text-tertiary);
+    opacity: 0.5;
 }
 
 .mode-indicator {
-    font-weight: bold;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.6px;
+    transition: all 0.2s ease;
 }
 
 .mode-indicator[data-mode="NORMAL"] {
     color: var(--bg-primary);
     background-color: var(--accent);
-    padding: 0 4px;
-    font-weight: 800;
 }
 
 .mode-indicator[data-mode="INSERT"] {
-    color: var(--text-primary);
+    color: var(--accent);
     background-color: var(--bg-secondary);
-    padding: 0 4px;
-    font-weight: 800;
+    border: 1px solid var(--accent);
 }
