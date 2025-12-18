@@ -2,16 +2,6 @@
    Dynamic Syntax Highlighting (Theme Aware)
    ========================================= */
 
-/* Base Code Block */
-.markdown-body pre {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 1rem;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-}
-
 .markdown-body code {
     font-family: var(--font-primary);
     background-color: transparent;

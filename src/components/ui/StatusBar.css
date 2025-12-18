@@ -29,7 +29,7 @@
 }
 
 .status-path {
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-weight: 500;
     color: var(--text-primary);
 }
@@ -55,7 +55,7 @@
     background: none;
     border: 1px solid var(--border);
     color: var(--text-tertiary);
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: 0.7rem;
     font-weight: 700;
     cursor: pointer;

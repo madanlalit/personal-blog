@@ -14,7 +14,6 @@ import {
   BatteryCharging,
 } from "lucide-react";
 import "./Contact.css";
-import "./About.css";
 
 // Helper Component for Status Items
 const StatusItem: React.FC<{ icon: React.ReactNode; text: string }> = ({

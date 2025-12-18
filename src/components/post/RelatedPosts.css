@@ -1,0 +1,84 @@
+/* Related Posts - Bordered Frame Design */
+.related-posts {
+    position: relative;
+    border: 1px solid var(--border);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.related-posts:hover {
+    border-color: var(--text-tertiary);
+}
+
+.related-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.related-card {
+    padding: var(--space-md);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-decoration: none;
+}
+
+.related-card:hover {
+    border-color: var(--accent);
+    background: var(--bg-secondary);
+    transform: translateY(-2px);
+}
+
+.related-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-xxs);
+    color: var(--text-tertiary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.related-category {
+    text-transform: uppercase;
+}
+
+.related-time {
+    opacity: 0.7;
+}
+
+.related-title {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.related-title::after {
+    display: none;
+}
+
+.related-card:hover .related-title {
+    color: var(--accent);
+}
+
+.related-excerpt {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .related-list {
+        grid-template-columns: 1fr;
+    }
+}

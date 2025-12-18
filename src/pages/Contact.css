@@ -1,8 +1,9 @@
-/* src/pages/Contact.css */
+/* src/pages/Contact.css - Terminal Theme Consistent */
 
 .comms-wrapper {
-    max-width: 900px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -10,130 +11,127 @@
 
 /* --- The Main Interface Card --- */
 .comms-interface {
-    /* High contrast borders instead of soft shadows */
-    border: 2px solid var(--arch-text);
+    border: 1px solid var(--border);
     background: var(--bg-primary);
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    margin-top: 20px;
-    /* Retro "Hard" Shadow */
-    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    margin-top: var(--space-lg);
 }
 
 @media (min-width: 768px) {
     .comms-interface {
-        grid-template-columns: 280px 1fr;
-        /* Sidebar | Form */
-        min-height: 500px;
+        grid-template-columns: 260px 1fr;
     }
 }
 
-/* Decorative Corner Brackets - Crisp and Sharp */
+/* Decorative Corner Brackets */
 .comms-interface::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
-    width: 15px;
-    height: 15px;
-    border-top: 4px solid var(--arch-accent);
-    border-left: 4px solid var(--arch-accent);
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
     z-index: 5;
 }
 
 .comms-interface::after {
     content: "";
     position: absolute;
-    bottom: -2px;
-    right: -2px;
-    width: 15px;
-    height: 15px;
-    border-bottom: 4px solid var(--arch-accent);
-    border-right: 4px solid var(--arch-accent);
+    bottom: -1px;
+    right: -1px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
     z-index: 5;
 }
 
 /* --- Sidebar: Operator Data --- */
 .sidebar-info {
-    border-right: 2px solid var(--arch-text);
-    /* Removed gray background */
+    border-right: 1px solid var(--border);
     background: var(--bg-primary);
-    padding: 30px;
+    padding: var(--space-lg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+    .sidebar-info {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
+
 .operator-card {
-    border-bottom: 2px dashed var(--arch-border);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .op-avatar {
-    width: 64px;
-    height: 64px;
-    border: 2px solid var(--arch-text);
-    margin-bottom: 15px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border);
+    margin-bottom: var(--space-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--font-size-title);
-    font-weight: bold;
-    color: var(--arch-text);
+    font-size: var(--font-size-subtitle);
+    font-weight: 700;
+    color: var(--text-primary);
     background: transparent;
 }
 
 .op-name {
-    font-size: var(--font-size-h4);
-    font-weight: 800;
-    /* Bolder */
-    letter-spacing: 1px;
-    color: var(--arch-text);
+    font-size: var(--font-size-subtitle);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
     text-transform: uppercase;
 }
 
 .op-role {
-    font-size: var(--font-size-small);
-    color: var(--arch-accent);
-    /* Accent color instead of gray */
-    font-family: monospace;
-    font-weight: bold;
-    margin-top: 5px;
+    font-size: var(--font-size-xs);
+    color: var(--accent);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    margin-top: var(--space-xs);
 }
 
 .conn-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--space-sm);
 }
 
 .conn-link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: var(--font-size-small);
-    color: var(--arch-text);
-    /* Black text */
+    gap: var(--space-sm);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
     text-decoration: none;
-    padding: 10px;
+    padding: var(--space-sm);
     border: 1px solid transparent;
     transition: all 0.2s;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: var(--font-primary);
 }
 
 .conn-link:hover {
-    border-color: var(--arch-text);
-    background: var(--arch-text);
-    color: var(--bg-primary);
-    /* Invert colors on hover */
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 /* --- Main Area: Input Form --- */
 .form-area {
-    padding: 40px;
+    padding: var(--space-lg);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -141,7 +139,7 @@
     background: var(--bg-primary);
 }
 
-/* Subtle Grid Background (Very Faint) */
+/* Grid Background */
 .form-area::before {
     content: "";
     position: absolute;
@@ -150,104 +148,94 @@
     width: 100%;
     height: 100%;
     background-image:
-        linear-gradient(var(--arch-border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--arch-border) 1px, transparent 1px);
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.15;
-    /* Low opacity to avoid gray mud */
+    opacity: 0.1;
     pointer-events: none;
 }
 
 .input-field-group {
-    margin-bottom: 30px;
+    margin-bottom: var(--space-lg);
     position: relative;
     z-index: 1;
 }
 
 .field-label {
     display: block;
-    font-size: var(--font-size-xs);
-    color: var(--arch-text);
-    /* Black text */
-    margin-bottom: 8px;
+    font-size: var(--font-size-xxs);
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-sm);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
-/* The Tech Input - Stark Lines */
+/* Input Fields */
 .tech-input {
     width: 100%;
     background: transparent;
-    /* No gray fill */
-    border: 2px solid var(--arch-border);
-    /* Thicker border */
-    padding: 15px;
-    color: var(--arch-text);
-    font-family: monospace;
+    border: 1px solid var(--border);
+    padding: var(--space-md);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
     font-size: var(--font-size-body);
     outline: none;
     transition: all 0.2s;
 }
 
 .tech-input:focus {
-    border-color: var(--arch-accent);
-    /* Hard shadow offset instead of glow */
-    box-shadow: 4px 4px 0 var(--arch-border);
-    background: var(--bg-primary);
+    border-color: var(--accent);
 }
 
 .tech-input::placeholder {
-    color: var(--arch-text);
-    opacity: 0.4;
+    color: var(--text-tertiary);
 }
 
-/* Send Button - High Contrast Block */
+/* Submit Button */
 .execute-btn {
     align-self: flex-start;
-    background: var(--arch-text);
-    color: var(--bg-primary);
-    border: 2px solid var(--arch-text);
-    padding: 15px 35px;
-    font-family: inherit;
-    font-weight: 800;
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: var(--space-sm);
     position: relative;
     z-index: 1;
-    /* Angled Cut */
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
     transition: all 0.2s;
 }
 
 .execute-btn:hover {
-    background: var(--arch-accent);
-    border-color: var(--arch-accent);
-    transform: translateX(5px);
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
 }
 
 .execute-btn:disabled {
-    background: var(--arch-border);
+    opacity: 0.5;
     cursor: not-allowed;
 }
 
 /* --- Progress Bar --- */
 .transmission-bar {
-    height: 6px;
+    height: 4px;
     width: 100%;
-    border: 1px solid var(--arch-text);
+    border: 1px solid var(--border);
     background: transparent;
-    margin-top: 20px;
-    padding: 1px;
+    margin-top: var(--space-lg);
 }
 
 .transmission-fill {
     height: 100%;
-    background: var(--arch-text);
+    background: var(--accent);
     width: 0%;
     animation: transmit 1.5s ease-in-out forwards;
 }
@@ -269,21 +257,23 @@
 /* Success State */
 .success-display {
     text-align: center;
-    border: 2px solid var(--arch-accent);
-    padding: 30px;
+    border: 1px solid var(--border);
+    padding: var(--space-xl);
     background: var(--bg-primary);
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
-/* --- PHASE 4 ENHANCEMENTS --- */
+.success-display h3 {
+    font-size: var(--font-size-subtitle);
+    margin-bottom: var(--space-md);
+}
 
 /* Validation errors */
 .validation-error {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-xxs);
     color: #ff5555;
-    margin-top: 8px;
-    font-family: monospace;
-    font-weight: bold;
+    margin-top: var(--space-sm);
+    font-family: var(--font-primary);
+    font-weight: 600;
     animation: errorShake 0.3s ease;
 }
 
@@ -305,32 +295,19 @@
 
 .input-error {
     border-color: #ff5555 !important;
-    animation: errorPulse 0.5s ease;
 }
 
-@keyframes errorPulse {
-
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 85, 85, 0);
-    }
-
-    50% {
-        box-shadow: 0 0 10px 2px rgba(255, 85, 85, 0.3);
-    }
-}
-
-/* Transmit state styling */
+/* Transmit state */
 .transmit-state {
-    margin-top: 20px;
+    margin-top: var(--space-lg);
 }
 
 .transmit-text {
-    font-size: var(--font-size-xs);
-    color: var(--arch-accent);
-    font-weight: bold;
+    font-size: var(--font-size-xxs);
+    color: var(--accent);
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: var(--space-sm);
     animation: transmitBlink 0.5s ease-in-out infinite;
 }
 
@@ -343,5 +320,16 @@
 
     50% {
         opacity: 0.5;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comms-wrapper {
+        padding: var(--space-md);
+    }
+
+    .form-area {
+        padding: var(--space-md);
     }
 }

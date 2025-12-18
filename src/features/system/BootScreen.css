@@ -7,7 +7,7 @@
     background-color: var(--bg-primary);
     color: var(--text-primary);
     /* Always green for boot unless theme overrides, defaulting retro green */
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: 0.9rem;
     padding: 32px;
     z-index: 9999;

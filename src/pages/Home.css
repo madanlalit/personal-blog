@@ -55,7 +55,7 @@
 .hero-btn {
     display: flex;
     align-items: center;
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: var(--font-size-xs);
     font-weight: bold;
     text-decoration: none;
@@ -95,7 +95,7 @@
 
 .hero-telemetry {
     text-align: right;
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: var(--font-size-xs);
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@
 }
 
 .mod-meta {
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
 }
 
 .mod-action {
@@ -309,7 +309,7 @@
     justify-content: space-between;
     font-size: var(--font-size-xxs);
     color: var(--text-secondary);
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
 }
 
 .skill-track {
@@ -363,7 +363,7 @@
 .system-log-terminal {
     border: 1px solid var(--border);
     padding: 1rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: var(--font-size-xs);
     display: flex;
     flex-direction: column;
@@ -526,7 +526,7 @@
     color: var(--text-primary);
     padding: 0.4rem;
     font-size: var(--font-size-xs);
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
 }
 
 .nl-form button {
@@ -547,7 +547,7 @@
     display: flex;
     justify-content: space-between;
     font-size: var(--font-size-xs);
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     color: var(--text-tertiary);
 }
 

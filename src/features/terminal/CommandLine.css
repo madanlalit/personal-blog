@@ -141,7 +141,7 @@
 .prompt {
     color: var(--accent);
     font-weight: 700;
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     user-select: none;
 }
 
@@ -156,7 +156,7 @@
     background: transparent;
     border: none;
     color: var(--text-primary);
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: inherit;
     width: 100%;
     outline: none;
@@ -176,7 +176,7 @@
     left: 0;
     top: 0;
     pointer-events: none;
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     color: transparent;
     user-select: none;
 }
@@ -262,7 +262,7 @@
 
 .suggestion-text {
     flex: 1;
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     font-size: 0.85rem;
 }
 
