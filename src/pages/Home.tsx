@@ -195,12 +195,12 @@ const Home: React.FC = () => {
         <div className="hero-telemetry">
           <div className="tele-row">
             <span className="t-label">LOC</span>
-            <span className="t-val">IND_REGION</span>
+            <span className="t-val">INDIA</span>
           </div>
           <div className="tele-row">
             <span className="t-label">TICK</span>
             <span className="t-val numeric">
-              {time.toLocaleTimeString("en-GB", { hour12: false })}
+              {time.toLocaleTimeString("en-GB", { hour12: false, hour: '2-digit', minute: '2-digit' })}
             </span>
           </div>
           <div className="tele-row">
@@ -227,7 +227,7 @@ const Home: React.FC = () => {
               </div>
               <div className="beacon-text">
                 <span className="status-label">AVAILABLE_FOR_HIRE</span>
-                <span className="status-sub">Open for contracts</span>
+                <span className="status-sub">Open for new roles</span>
               </div>
             </div>
             <Link to="/contact" className="beacon-action">
@@ -391,12 +391,11 @@ const Home: React.FC = () => {
       <footer className="sys-footer">
         <div className="f-left">
           <span className="f-item">SYS_ID: 0x1A4</span>
-          <span className="f-item">REACT_DOM</span>
         </div>
         <div className="f-right">
-          <a href="/rss">RSS</a>
+          <span>v1.0.0</span>
           <span className="sep">/</span>
-          <a href="/sitemap">MAP</a>
+          <span>{new Date().getFullYear()}</span>
         </div>
       </footer>
     </div>
