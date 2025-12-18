@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { usePosts } from "../hooks/usePosts";
 import { groupPostsByYear } from "../utils/postHelpers";
+import { getHeatmapOpacities } from "../utils/activityHelpers";
 import "./Archive.css";
 
 // --- Helper: Generate pseudo-random "System Hash" for posts ---
@@ -82,17 +83,10 @@ const Archive: React.FC = () => {
     return groupPostsByYear(filteredPosts);
   }, [filteredPosts]);
 
-  const [heatmapOpacities, setHeatmapOpacities] = useState<number[]>([]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setHeatmapOpacities(
-        Array.from({ length: 52 }).map(() =>
-          Math.random() > 0.7 ? 1 : 0.15,
-        ),
-      );
-    }, 0);
-  }, []);
+  // Calculate heatmap based on actual post dates
+  const heatmapOpacities = useMemo(() => {
+    return getHeatmapOpacities(allPosts);
+  }, [allPosts]);
 
   return (
     <div className="archive-root">

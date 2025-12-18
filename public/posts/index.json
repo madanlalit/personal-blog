@@ -1,0 +1,19 @@
+[
+  {
+    "id": "context-engineering-for-ai-agents",
+    "slug": "context-engineering-for-ai-agents",
+    "title": "Context Engineering: The Next Evolution in AI Development",
+    "subtitle": "Moving beyond prompt engineering to build truly capable AI agents",
+    "excerpt": "Context is a critical but finite resource for AI agents. As we move from simple prompts to complex agentic systems, mastering context engineering becomes essential for building reliable, effective AI applications.",
+    "date": "2025-12-18",
+    "category": "Technology",
+    "readTime": 18,
+    "tags": [
+      "AI",
+      "LLM",
+      "Context Engineering",
+      "Agents",
+      "Machine Learning"
+    ]
+  }
+]

@@ -1,13 +1,29 @@
 import fs from 'fs';
 import path from 'path';
-import { mockPosts } from '../src/data/mockData';
 
-const SITE_URL = 'https://giant-sagan.vercel.app'; // Replace with actual URL
-const SITE_TITLE = 'Giant Sagan Blog';
+const SITE_URL = ''; // Replace with actual URL
+const SITE_TITLE = 'Lalit M Blog';
 const SITE_DESCRIPTION = 'A minimal, retro-themed personal blog.';
 
+interface PostMeta {
+    id: string;
+    title: string;
+    excerpt: string;
+    date: string;
+}
+
 const generateRSS = () => {
-    const feedItems = mockPosts.map(post => `
+    // Read posts from generated JSON
+    const indexPath = path.resolve('public', 'posts', 'index.json');
+
+    if (!fs.existsSync(indexPath)) {
+        console.log('⚠️ No posts/index.json found. Run generate-posts first.');
+        return;
+    }
+
+    const posts: PostMeta[] = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+
+    const feedItems = posts.map(post => `
     <item>
         <title><![CDATA[${post.title}]]></title>
         <link>${SITE_URL}/post/${post.id}</link>
@@ -29,12 +45,6 @@ const generateRSS = () => {
 </rss>`;
 
     const outputPath = path.resolve('public', 'rss.xml');
-
-    // Ensure public dir exists
-    if (!fs.existsSync(path.resolve('public'))) {
-        fs.mkdirSync(path.resolve('public'));
-    }
-
     fs.writeFileSync(outputPath, rss);
     console.log(`✅ RSS Feed generated at ${outputPath}`);
 };

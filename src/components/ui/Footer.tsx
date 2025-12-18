@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { socialLinks } from '../../data/mockData';
 import './Footer.css';
+
+// Social links configuration
+const socialLinks = [
+    { platform: 'Twitter', url: 'https://x.com/lalitmadan', icon: '𝕏', label: 'Twitter' },
+    { platform: 'GitHub', url: 'https://github.com/madanlalit', icon: '⚡', label: 'GitHub' },
+    { platform: 'LinkedIn', url: 'https://linkedin.com/in/madanlalit', icon: 'in', label: 'LinkedIn' },
+];
 
 const Footer: React.FC = () => {
     const handleSubscribe = (e: React.FormEvent) => {
@@ -20,12 +26,14 @@ const Footer: React.FC = () => {
                             Writing to understand, learn, and share.
                         </p>
                         <div className="social-links">
-                            {socialLinks.map((link: { platform: string; url: string; icon: string; label: string }) => (
+                            {socialLinks.map((link) => (
                                 <a
                                     key={link.platform}
                                     href={link.url}
                                     className="social-link"
                                     aria-label={link.label}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     {link.icon}
                                 </a>

@@ -11,7 +11,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
     title,
     description = "A minimal, retro-themed personal blog.",
-    name = "Giant Sagan",
+    name = "Lalit M",
     type = "article"
 }) => {
     return (

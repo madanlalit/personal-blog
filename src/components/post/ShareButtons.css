@@ -1,6 +1,19 @@
+.share-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.share-label {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
 .share-buttons {
     display: flex;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
 }
 
@@ -8,21 +21,29 @@
     background: none;
     border: 1px solid var(--border);
     color: var(--text-secondary);
-    padding: 6px 12px;
+    padding: 6px;
     border-radius: 0;
     cursor: pointer;
-    font-size: 0.75rem;
-    font-weight: 600;
-    font-family: var(--font-primary);
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
+    width: 36px;
+    height: 36px;
 }
 
 .share-btn:hover {
     background: var(--accent);
     color: var(--bg-primary);
     border-color: var(--accent);
+}
+
+.share-btn.copied {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.share-btn.copied:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
 }

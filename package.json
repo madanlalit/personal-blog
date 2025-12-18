@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && npm run generate-rss",
+    "dev": "tsx scripts/generate-posts.ts && vite",
+    "build": "tsx scripts/generate-posts.ts && tsc -b && vite build && npm run generate-rss",
     "generate-rss": "tsx scripts/generate-rss.ts",
+    "generate-posts": "tsx scripts/generate-posts.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -31,6 +32,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "gray-matter": "^4.0.3",
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",

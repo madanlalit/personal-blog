@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
@@ -12,14 +12,37 @@ import ReadingProgress from '../components/post/ReadingProgress';
 import ScrollToTop from '../components/post/ScrollToTop';
 import CodeBlock from '../components/post/CodeBlock';
 import SEO from '../components/SEO';
-import '../features/terminal/SyntaxTheme.css'; // Dynamic Theme
+import type { Post as PostType } from '../types';
+import '../features/terminal/SyntaxTheme.css';
 import './Post.css';
 
 const Post: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const { getPostById, getAllPosts } = usePosts();
-    const post = getPostById(id || '');
     const allPosts = getAllPosts();
+
+    const [post, setPost] = useState<PostType | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        if (!id) return;
+
+        getPostById(id).then(p => {
+            setPost(p || null);
+            setLoading(false);
+        });
+    }, [id, getPostById]);
+
+    if (loading) {
+        return (
+            <div className="main-layout">
+                <SEO title="Loading..." />
+                <div className="content-area">
+                    <p>Loading...</p>
+                </div>
+            </div>
+        );
+    }
 
     if (!post) {
         return (
@@ -53,13 +76,15 @@ const Post: React.FC = () => {
                     <div className="frame-label">HEADER</div>
 
                     <div className="entry-meta">
-                        <span className="date">{post.date}</span>
-                        <span className="category">[{post.category}]</span>
-                        <span className="read-time">{post.readTime} min read</span>
+                        <span className="entry-date">{post.date}</span>
+                        <span className="entry-category">[{post.category}]</span>
+                        <span className="entry-read-time">{post.readTime} MIN READ</span>
                     </div>
+
                     <h1 className="entry-title">
-                        <Typewriter text={post.title} delay={30} />
+                        <Typewriter text={post.title} />
                     </h1>
+
                     {post.subtitle && <h2 className="entry-subtitle">{post.subtitle}</h2>}
                 </section>
 
@@ -100,7 +125,7 @@ const Post: React.FC = () => {
                     </div>
                 </section>
 
-                {/* FOOTER FRAME */}
+                {/* META FRAME */}
                 {(post.tags && post.tags.length > 0) && (
                     <section className="post-frame post-footer-frame">
                         <div className="frame-corner topleft"></div>
@@ -111,14 +136,9 @@ const Post: React.FC = () => {
                         <div className="frame-label">META</div>
 
                         <div className="footer-content">
-                            <div className="post-tags">
-                                <span className="tags-label">TAGS:</span>
+                            <div className="entry-tags">
                                 {post.tags.map((tag) => (
-                                    <Link
-                                        key={tag}
-                                        to={`/archive?tag=${tag}`}
-                                        className="post-tag"
-                                    >
+                                    <Link key={tag} to={`/archive?tag=${tag}`} className="tag-link">
                                         #{tag}
                                     </Link>
                                 ))}
