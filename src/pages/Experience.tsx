@@ -14,8 +14,8 @@ const EXPERIENCE = [
     {
         id: 1,
         period: "2024 — Present",
-        role: "AI Engineer",
-        company: "Building the Future",
+        role: "Software Engineer",
+        company: "Cisco Systems",
         location: "Remote",
         type: "Full-time",
         description:
@@ -29,68 +29,35 @@ const EXPERIENCE = [
     },
     {
         id: 2,
-        period: "2022 — 2024",
-        role: "Full Stack Developer",
-        company: "Tech Ventures",
-        location: "Bangalore, India",
-        type: "Full-time",
+        period: "Dec 2022 — Mar 2024",
+        role: "Software Test Engineer",
+        company: "Cisco Systems",
+        location: "Bangalore, Karnataka",
+        type: "Apprenticeship",
         description:
-            "Built and maintained scalable web applications serving millions of users. Led frontend architecture decisions and implemented CI/CD pipelines.",
+            "Sole quality owner for Rogue and aWIPS in Catalyst Center (formerly DNA Center). Owned the entire QA lifecycle from test design to automation and release validation.",
         achievements: [
-            "Shipped v1.0 of core product used by 50K+ monthly active users",
-            "Reduced page load time by 60% through performance optimization",
-            "Implemented real-time collaboration features using WebSockets",
+            "Built and maintained Python automation scripts for regression testing",
+            "Set up and managed CI/CD pipelines for automated test execution",
+            "Established code quality standards and coverage metrics (30% to 80% increase in code coverage) for the test suite",
+            "Configured testbeds and simulated network devices for comprehensive testing",
         ],
-        tech: ["React", "TypeScript", "Node.js", "AWS", "Docker"],
-    },
-    {
-        id: 3,
-        period: "2020 — 2022",
-        role: "Software Engineer",
-        company: "StartUp Inc",
-        location: "Delhi, India",
-        type: "Full-time",
-        description:
-            "Developed core product features and contributed to agile development processes. Worked across the full stack from database design to frontend.",
-        achievements: [
-            "Built REST APIs serving 1M+ requests per day",
-            "Designed database schemas for high-throughput applications",
-            "Implemented automated testing reducing bug rate by 35%",
-        ],
-        tech: ["JavaScript", "Python", "PostgreSQL", "Express"],
-    },
-    {
-        id: 4,
-        period: "2019 — 2020",
-        role: "Software Engineering Intern",
-        company: "Tech Corp",
-        location: "Remote",
-        type: "Internship",
-        description:
-            "Gained hands-on experience in software development. Worked on internal tools and contributed to production codebases.",
-        achievements: [
-            "Developed internal dashboard used by 100+ employees",
-            "Automated manual processes saving 10+ hours weekly",
-        ],
-        tech: ["JavaScript", "Python", "Git"],
+        tech: ["Python", "Pytest", "Selenium", "Playwright", "Jenkins", "Git", "SonarQube", "Golang", "Postman", "ESXi",],
     },
 ];
 
 const EDUCATION = [
     {
-        period: "2016 — 2020",
-        degree: "B.Tech in Computer Science",
-        institution: "Your University",
-        location: "India",
-        gpa: "8.5/10",
-        highlights: ["University Hackathon Winner", "ML Research Paper Published"],
+        period: "2017 — 2021",
+        degree: "B.Tech in Electronics Engineering",
+        institution: "RCOEM",
+        location: "Nagpur",
     },
 ];
 
 const CERTIFICATIONS = [
-    { name: "AWS Solutions Architect", issuer: "Amazon Web Services", year: "2023" },
-    { name: "Deep Learning Specialization", issuer: "DeepLearning.AI", year: "2022" },
-    { name: "Professional Scrum Master I", issuer: "Scrum.org", year: "2021" },
+    { name: "AWS Cloud Practioner (CLF-C02)", issuer: "Amazon Web Services", year: "2024" },
+    { name: "CCNA", issuer: "Cisco Systems", year: "2023" },
 ];
 
 const Experience: React.FC = () => {
@@ -190,7 +157,6 @@ const Experience: React.FC = () => {
                                         <span className="job-date">
                                             <GraduationCap size={12} /> {edu.period}
                                         </span>
-                                        <span className="job-type">GPA: {edu.gpa}</span>
                                     </div>
 
                                     <h3 className="job-title">{edu.degree}</h3>
@@ -199,13 +165,6 @@ const Experience: React.FC = () => {
                                         <MapPin size={12} /> {edu.institution}, {edu.location}
                                     </div>
 
-                                    <div className="job-tags" style={{ marginTop: "1rem" }}>
-                                        {edu.highlights.map((h) => (
-                                            <span key={h} className="tech-tag">
-                                                {h}
-                                            </span>
-                                        ))}
-                                    </div>
                                 </article>
                             </div>
                         </div>

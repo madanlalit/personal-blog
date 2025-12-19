@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import {
   Github,
   Linkedin,
-  Twitter,
-  Mail,
+  X,
   ArrowRight,
   MapPin,
   Briefcase,
   GraduationCap,
   Heart,
-  Zap,
   Download,
 } from "lucide-react";
 import "./About.css";
@@ -122,58 +120,56 @@ const Frame: React.FC<{ label: string; children: React.ReactNode; className?: st
 const EXPERIENCE_PREVIEW = [
   {
     year: "2024",
-    role: "AI Engineer",
-    company: "Building the Future",
-    tech: ["Python", "LangGraph", "LLMs"],
+    month: "April",
+    role: "Software Engineer I",
+    company: "Cisco Systems",
+    tech: ["Python", "Langchain", "Langgraph", "Langsmith", "Cypress", "Playwright"],
   },
   {
     year: "2022",
-    role: "Full Stack Dev",
-    company: "Tech Ventures",
-    tech: ["React", "Node.js", "AWS"],
+    month: "Dec",
+    role: "Software Engineer Apprenticeship",
+    company: "Cisco Systems",
+    tech: ["Python", "Pytest", "Selenium"],
   },
 ];
 
 const SKILLS = [
   { name: "Python", level: "expert" },
-  { name: "AI/ML", level: "expert" },
+  { name: "AI", level: "expert" },
   { name: "LangChain", level: "advanced" },
   { name: "LangGraph", level: "advanced" },
   { name: "React", level: "advanced" },
-  { name: "TypeScript", level: "intermediate" },
-  { name: "Node.js", level: "intermediate" },
+  { name: "JavaScript", level: "intermediate" },
   { name: "AWS", level: "intermediate" },
-  { name: "PostgreSQL", level: "intermediate" },
   { name: "Docker", level: "learning" },
 ];
 
 const CURRENT_STATUS = [
-  { prefix: ">", text: "learning rust for systems programming" },
-  { prefix: ">", text: "building ai agent frameworks" },
-  { prefix: ">", text: 'reading "designing data-intensive apps"' },
+  { prefix: ">", text: "learning about llms and context engineering" },
+  { prefix: ">", text: "building reliable ai agents" },
+  { prefix: ">", text: "learning how to create systems with agents as core" },
 ];
 
 const SOCIAL_LINKS = [
   { icon: Github, href: "https://github.com/madanlalit", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com/in/madanlalit", label: "LinkedIn" },
-  { icon: Twitter, href: "https://x.com/lalitmadan", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@madanlalit.com", label: "Email" },
+  { icon: X, href: "https://x.com/lalitmadan", label: "X" },
 ];
 
 const INTERESTS = [
   "Open Source",
-  "AI Ethics",
   "System Design",
   "Dev Tools",
   "Automation",
-  "Philosophy",
+  "UI/UX"
 ];
 
 // --- Main Component ---
 const About: React.FC = () => {
-  const { count: yearsCount, setRef: yearsRef } = useCounter(4, 1500);
-  const { count: projectsCount, setRef: projectsRef } = useCounter(24, 1800);
-  const { count: coffeeCount, setRef: coffeeRef } = useCounter(1247, 2000);
+  const { count: yearsCount, setRef: yearsRef } = useCounter(3, 1500);
+  const { count: projectsCount, setRef: projectsRef } = useCounter(5, 1800);
+  const { count: linesCount, setRef: linesRef } = useCounter(15000, 2000);
   const [activeExp, setActiveExp] = useState(0);
 
   return (
@@ -217,10 +213,9 @@ const About: React.FC = () => {
               <span className="stat-number">{projectsCount}</span>
               <span className="stat-label">Projects</span>
             </div>
-            <div className="stat-item" ref={coffeeRef}>
-              <Zap size={20} className="coffee-icon" />
-              <span className="stat-number small">{coffeeCount}</span>
-              <span className="stat-label">Coffees</span>
+            <div className="stat-item" ref={linesRef}>
+              <span className="stat-number small">{linesCount.toLocaleString()}+</span>
+              <span className="stat-label">Lines of Code</span>
             </div>
           </div>
         </div>
@@ -229,16 +224,17 @@ const About: React.FC = () => {
       {/* Bio Frame */}
       <Frame label="BIO" className="bio-frame">
         <p className="bio-text">
-          I'm a software engineer passionate about building at the intersection of
-          <strong> AI</strong> and <strong>developer experience</strong>. I believe
-          in crafting minimal, reliable systems that just work.
+          I'm a software engineer who builds <strong>AI agents</strong> and tools
+          that make them reliable. Currently obsessed with <strong>context engineering</strong>,
+          <strong>agentic workflows</strong>, and getting LLMs to actually do useful things.
         </p>
         <p className="bio-text secondary">
-          When I'm not coding, you'll find me exploring new technologies,
-          contributing to open source, or writing about things I learn.
+          When I'm not shipping code at Cisco, you'll find me tinkering with new
+          frameworks, breaking things to understand them, or writing about the
+          lessons learned along the way.
         </p>
         <blockquote className="philosophy-quote">
-          "Complexity is the enemy. Build minimal. Ship fast. Iterate forever."
+          "Ship it, learn, iterate, Repeat."
         </blockquote>
       </Frame>
 
@@ -293,7 +289,7 @@ const About: React.FC = () => {
               className={`exp-item ${activeExp === index ? "active" : ""}`}
               onMouseEnter={() => setActiveExp(index)}
             >
-              <span className="exp-year">{exp.year}</span>
+              <span className="exp-year">{exp.month} {exp.year}</span>
               <div className="exp-details">
                 <span className="exp-role">{exp.role}</span>
                 <span className="exp-company">@ {exp.company}</span>
@@ -338,9 +334,9 @@ const About: React.FC = () => {
           <div className="edu-item">
             <GraduationCap size={24} className="edu-icon" />
             <div className="edu-content">
-              <span className="edu-degree">B.Tech in Computer Science</span>
-              <span className="edu-school">Your University</span>
-              <span className="edu-year">2016 - 2020</span>
+              <span className="edu-degree">B.Tech in Electronics</span>
+              <span className="edu-school">RCOEM</span>
+              <span className="edu-year">2017 - 2021</span>
             </div>
           </div>
         </Frame>
