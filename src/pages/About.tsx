@@ -149,6 +149,7 @@ const CURRENT_STATUS = [
   { prefix: ">", text: "learning about llms and context engineering" },
   { prefix: ">", text: "building reliable ai agents" },
   { prefix: ">", text: "learning how to create systems with agents as core" },
+  { prefix: ">", text: "finetuning small language models" },
 ];
 
 const SOCIAL_LINKS = [

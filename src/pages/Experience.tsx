@@ -9,31 +9,31 @@ import {
 } from "lucide-react";
 import "./Experience.css";
 
-// --- Data ---
 const EXPERIENCE = [
     {
         id: 1,
-        period: "2024 — Present",
-        role: "Software Engineer",
+        period: "Apr 2025 — Present",
+        role: "Software Engineer I",
         company: "Cisco Systems",
         location: "Remote",
         type: "Full-time",
         description:
-            "Leading the development of AI-powered applications and agent frameworks. Working extensively with LLMs, prompt engineering, and production ML systems.",
+            "Leading development of a Multi-Agent AI Platform that transforms test plans into automated UI test scripts.",
         achievements: [
-            "Designed and shipped an AI agent platform handling 10K+ daily requests",
-            "Reduced LLM inference costs by 40% through context optimization",
-            "Built custom RAG pipelines for enterprise document processing",
+            "Validated concept through rapid POC demonstrating feasibility",
+            "Designed end-to-end system architecture for multi-agent orchestration",
+            "Built agentic workflows using LangGraph and LangChain for test generation",
+            "Beta launch scheduled for January 2026",
         ],
-        tech: ["Python", "LangGraph", "LangChain", "OpenAI", "FastAPI"],
+        tech: ["Python", "LangGraph", "LangChain", "OpenAI", "CopilotKit", "Langsmith", "AWS Bedrock", "React", "TypeScript", "Docker"],
     },
     {
         id: 2,
-        period: "Dec 2022 — Mar 2024",
-        role: "Software Test Engineer",
+        period: "Dec 2024 — Mar 2025",
+        role: "Software Engineer I",
         company: "Cisco Systems",
         location: "Bangalore, Karnataka",
-        type: "Apprenticeship",
+        type: "Full-time",
         description:
             "Sole quality owner for Rogue and aWIPS in Catalyst Center (formerly DNA Center). Owned the entire QA lifecycle from test design to automation and release validation.",
         achievements: [
@@ -43,6 +43,22 @@ const EXPERIENCE = [
             "Configured testbeds and simulated network devices for comprehensive testing",
         ],
         tech: ["Python", "Pytest", "Selenium", "Playwright", "Jenkins", "Git", "SonarQube", "Golang", "Postman", "ESXi",],
+    },
+    {
+        id: 3,
+        period: "Dec 2022 — Mar 2024",
+        role: "Software Test Engineer",
+        company: "Cisco Systems",
+        location: "Bangalore, Karnataka",
+        type: "Apprenticeship",
+        description:
+            "Manual testing, setting up racks of Cisco devices including controllers, Access Points, and UCS servers.",
+        achievements: [
+            "Fixed regression bugs in automation scripts and debugged Cisco devices",
+            "Wrote new automation scripts for both UI and API testing",
+            "Created and executed test plans for comprehensive product coverage",
+        ],
+        tech: ["Python", "Pytest", "Selenium", "Jenkins", "Git", "SonarQube", "Postman", "ESXi",],
     },
 ];
 
@@ -56,8 +72,8 @@ const EDUCATION = [
 ];
 
 const CERTIFICATIONS = [
-    { name: "AWS Cloud Practioner (CLF-C02)", issuer: "Amazon Web Services", year: "2024" },
-    { name: "CCNA", issuer: "Cisco Systems", year: "2023" },
+    { name: "AWS Cloud Practioner", issuer: "Amazon Web Services", year: "2024" },
+    { name: "Cisco Certified Network Administrator", issuer: "Cisco Systems", year: "2023" },
 ];
 
 const Experience: React.FC = () => {
