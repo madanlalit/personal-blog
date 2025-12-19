@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Commander from "./features/terminal/Commander";
 import BootScreen from "./features/system/BootScreen";
 import CommandLine from "./features/terminal/CommandLine";
@@ -149,6 +150,7 @@ function App() {
               }
             }}
           />
+          <Analytics />
         </div>
       </Router>
     </HelmetProvider>
