@@ -5,7 +5,7 @@
 .post-article {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
 }
 
 /* Back Link */
@@ -31,75 +31,7 @@
    BORDERED FRAME SYSTEM
    =========================================== */
 
-.post-frame {
-    position: relative;
-    border: 1px solid var(--border);
-    padding: var(--space-lg);
-    margin-bottom: var(--space-xl);
-    background: transparent;
-    transition: border-color 0.3s ease;
-}
-
-.post-frame:hover {
-    border-color: var(--text-tertiary);
-}
-
-/* Decorative Corner Accents */
-.frame-corner {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 2px solid var(--accent);
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
-.topleft {
-    top: -1px;
-    left: -1px;
-    border-right: 0;
-    border-bottom: 0;
-}
-
-.topright {
-    top: -1px;
-    right: -1px;
-    border-left: 0;
-    border-bottom: 0;
-}
-
-.bottomleft {
-    bottom: -1px;
-    left: -1px;
-    border-right: 0;
-    border-top: 0;
-}
-
-.bottomright {
-    bottom: -1px;
-    right: -1px;
-    border-left: 0;
-    border-top: 0;
-}
-
-.post-frame:hover .frame-corner {
-    width: 16px;
-    height: 16px;
-}
-
-/* Frame Label */
-.frame-label {
-    position: absolute;
-    top: -0.6rem;
-    left: 1rem;
-    background: var(--bg-primary);
-    padding: 0 0.5rem;
-    font-size: var(--font-size-xxs);
-    font-weight: 700;
-    color: var(--text-tertiary);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+/* Frame styles moved to src/components/ui/Frame.css */
 
 /* ===========================================
    HEADER FRAME
@@ -357,6 +289,150 @@
     }
 
     .frame-label {
-        font-size: 0.6rem;
+        font-size: var(--font-size-xxs);
+    }
+}
+/* ========================================
+   RESPONSIVE - MOBILE (480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .post-article {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .post-frame {
+        padding: var(--space-sm);
+    }
+
+    .post-header-frame {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .entry-title {
+        font-size: var(--font-size-body);
+    }
+
+    .entry-subtitle {
+        font-size: var(--font-size-xxs);
+    }
+
+    .entry-meta {
+        flex-wrap: wrap;
+        font-size: var(--font-size-xxs);
+        gap: 6px;
+    }
+
+    .entry-content {
+        font-size: var(--font-size-xxs);
+    }
+
+    .entry-content h2 {
+        font-size: var(--font-size-xs);
+    }
+
+    .entry-content h3 {
+        font-size: var(--font-size-xxs);
+        font-weight: 700;
+    }
+    
+    /* Code blocks - allow horizontal scroll on mobile */
+    .entry-content pre {
+        overflow-x: auto;
+        max-width: 100%;
+    }
+    
+    /* Tables - make responsive */
+    .entry-content table {
+        font-size: var(--font-size-xxs);
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - ULTRA-SMALL (320px)
+   ======================================== */
+@media (max-width: 320px) {
+    .post-article {
+        padding: var(--space-sm) var(--space-xs);
+    }
+
+    .post-frame {
+        padding: var(--space-xs);
+    }
+
+    .post-header-frame {
+        padding: var(--space-sm);
+    }
+
+    .back-link {
+        font-size: var(--font-size-xxs);
+        margin-bottom: var(--space-sm);
+    }
+
+    .entry-meta {
+        font-size: var(--font-size-xxs);
+        gap: 4px;
+    }
+
+    .entry-title {
+        font-size: var(--font-size-subtitle);
+    }
+
+    .entry-subtitle {
+        font-size: var(--font-size-small);
+    }
+
+    .entry-content {
+        font-size: var(--font-size-small);
+        line-height: 1.7;
+    }
+
+    .entry-content p {
+        margin-bottom: 1rem;
+    }
+
+    .entry-content h2 {
+        font-size: var(--font-size-body);
+        margin-top: var(--space-lg);
+        margin-bottom: var(--space-sm);
+    }
+
+    .entry-content h3 {
+        font-size: var(--font-size-body);
+    }
+
+    .entry-content blockquote {
+        padding: var(--space-sm);
+        font-size: var(--font-size-small);
+    }
+
+    .entry-content table {
+        font-size: var(--font-size-xxs);
+    }
+
+    .entry-content th,
+    .entry-content td {
+        padding: 4px 6px;
+    }
+
+    .post-tag,
+    .entry-tag {
+        font-size: var(--font-size-xxs);
+        padding: 2px 6px;
+    }
+
+    .tags-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .frame-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .frame-corner {
+        width: 6px;
+        height: 6px;
     }
 }

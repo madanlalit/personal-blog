@@ -314,3 +314,264 @@
         transform: translateY(0);
     }
 }
+
+/* ========================================
+   RESPONSIVE CLI TABS
+   ======================================== */
+
+/* Tablets and smaller (768px) */
+@media (max-width: 768px) {
+    .cli-tabs {
+        padding: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .cli-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cli-tab {
+        padding: 6px 12px;
+        font-size: var(--font-size-xs);
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .tab-key {
+        display: none;
+    }
+
+    .cli-tab.action-tab {
+        padding: 6px 10px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .command-line-container {
+        padding: 6px 12px;
+        font-size: var(--font-size-xs);
+    }
+
+    .cli-form {
+        gap: 6px;
+    }
+
+    .prompt {
+        font-size: var(--font-size-xs);
+    }
+
+    .cli-input {
+        font-size: var(--font-size-xs);
+    }
+
+    .cli-badge {
+        font-size: var(--font-size-xxs);
+        padding: 2px 6px;
+    }
+
+    .cli-history {
+        padding: 10px 12px;
+        max-height: 40vh;
+        font-size: var(--font-size-xs);
+    }
+
+    .cli-suggestions {
+        left: 12px;
+        right: 12px;
+    }
+
+    .suggestion-item {
+        padding: 8px 10px;
+    }
+
+    .suggestion-text {
+        font-size: var(--font-size-xs);
+    }
+
+    .suggestion-hint {
+        font-size: var(--font-size-xxs);
+        padding: 1px 5px;
+    }
+}
+
+/* Mobile phones (480px) */
+@media (max-width: 480px) {
+    .cli-wrapper {
+        overflow: hidden;
+    }
+
+    .cli-tabs {
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .cli-tab {
+        padding: 5px 8px;
+        font-size: var(--font-size-xxs);
+        letter-spacing: 0.3px;
+        gap: 4px;
+    }
+
+    .cli-tab.action-tab {
+        padding: 5px 6px;
+        font-size: var(--font-size-xxs);
+    }
+
+    /* Hide all action tabs (GITHUB, LINKEDIN, X) on mobile */
+    .cli-tab.action-tab {
+        display: none;
+    }
+
+    .tab-spacer {
+        flex: 0;
+        width: 4px;
+    }
+
+    .command-line-container {
+        padding: 5px 8px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-form {
+        gap: 4px;
+    }
+
+    .prompt {
+        font-size: var(--font-size-xxs);
+        /* Shorten prompt on mobile */
+        content: "~$";
+        display: none;
+    }
+
+    .cli-form::before {
+        content: "~$";
+        color: var(--accent);
+        font-weight: 700;
+        font-family: var(--font-primary);
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-input {
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-input::placeholder {
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-badge {
+        font-size: var(--font-size-xxs);
+        padding: 1px 3px;
+        letter-spacing: 0;
+    }
+
+    .cli-history {
+        padding: 8px 10px;
+        max-height: 35vh;
+        font-size: var(--font-size-xxs);
+        gap: 4px;
+    }
+
+    .cli-suggestions {
+        left: 6px;
+        right: 6px;
+        margin-bottom: 2px;
+    }
+
+    .suggestion-item {
+        padding: 8px 8px;
+        gap: 6px;
+    }
+
+    .suggestion-text {
+        font-size: var(--font-size-xxs);
+    }
+
+    .suggestion-hint {
+        font-size: var(--font-size-xxs);
+        padding: 1px 4px;
+    }
+
+    .suggestion-icon {
+        font-size: var(--font-size-xxs);
+    }
+
+    /* Ghost text */
+    .cli-ghost-text,
+    .ghost-suggestion {
+        font-size: var(--font-size-xxs);
+    }
+}
+
+/* Very small phones (360px and under) */
+@media (max-width: 360px) {
+    .cli-tabs {
+        gap: 0;
+    }
+
+    .cli-tab {
+        padding: 4px 6px;
+        font-size: var(--font-size-xxs);
+        letter-spacing: 0;
+    }
+
+    /* Show only first 4 navigation tabs */
+    .cli-tab:nth-child(n+5):not(.action-tab) {
+        display: none;
+    }
+
+    .cli-tab.action-tab {
+        display: none;
+    }
+
+    .tab-spacer {
+        display: none;
+    }
+
+    .command-line-container {
+        padding: 4px 6px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-form {
+        gap: 3px;
+    }
+
+    .prompt {
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-input {
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-badge {
+        display: none;
+    }
+
+    .cli-history {
+        padding: 6px 8px;
+        max-height: 30vh;
+        font-size: var(--font-size-xxs);
+    }
+
+    .cli-suggestions {
+        left: 4px;
+        right: 4px;
+    }
+
+    .suggestion-item {
+        padding: 6px;
+    }
+
+    .suggestion-text {
+        font-size: var(--font-size-xxs);
+    }
+
+    .suggestion-hint {
+        display: none;
+    }
+}

@@ -4,7 +4,7 @@
     border-bottom: 1px solid var(--border);
     padding: 7px 16px;
     font-family: var(--font-primary);
-    font-size: 0.72rem;
+    font-size: var(--font-size-xs);
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,7 @@
     border: 1px solid var(--border);
     color: var(--text-tertiary);
     font-family: var(--font-primary);
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     font-weight: 700;
     cursor: pointer;
     padding: 2px 6px;
@@ -86,7 +86,7 @@
     padding: 2px 9px;
     border-radius: 2px;
     text-transform: uppercase;
-    font-size: 0.68rem;
+    font-size: var(--font-size-xxs);
     letter-spacing: 0.6px;
     transition: all 0.2s ease;
 }
@@ -100,4 +100,113 @@
     color: var(--accent);
     background-color: var(--bg-secondary);
     border: 1px solid var(--accent);
+}
+
+/* ========================================
+   RESPONSIVE STATUS BAR
+   ======================================== */
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+    .tui-status-bar {
+        padding: 5px 12px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .status-left,
+    .status-right {
+        gap: 10px;
+    }
+
+    .status-scroll {
+        min-width: 55px;
+    }
+
+    .status-button {
+        font-size: var(--font-size-xxs);
+        padding: 2px 5px;
+    }
+
+    .mode-indicator {
+        font-size: var(--font-size-xxs);
+        padding: 2px 7px;
+    }
+}
+
+/* Mobile phones (480px) */
+@media (max-width: 480px) {
+    .tui-status-bar {
+        padding: 4px 8px;
+        font-size: var(--font-size-xxs);
+        letter-spacing: 0.2px;
+    }
+
+    .status-left,
+    .status-right {
+        gap: 6px;
+    }
+
+    /* Hide less important items */
+    .status-scroll {
+        display: none;
+    }
+
+    .status-separator {
+        display: none;
+    }
+
+    .status-path {
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .status-button {
+        font-size: var(--font-size-xxs);
+        padding: 1px 4px;
+    }
+
+    .mode-indicator {
+        font-size: var(--font-size-xxs);
+        padding: 2px 5px;
+        letter-spacing: 0.3px;
+    }
+
+    .status-time {
+        min-width: 36px;
+    }
+}
+
+/* Very small phones (360px) */
+@media (max-width: 360px) {
+    .tui-status-bar {
+        padding: 3px 6px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .status-left,
+    .status-right {
+        gap: 4px;
+    }
+
+    /* Hide path on very small screens */
+    .status-path {
+        display: none;
+    }
+
+    .status-button {
+        font-size: var(--font-size-xxs);
+        padding: 1px 3px;
+    }
+
+    .mode-indicator {
+        font-size: var(--font-size-xxs);
+        padding: 1px 4px;
+    }
+
+    .status-time {
+        min-width: 30px;
+        font-size: var(--font-size-xxs);
+    }
 }

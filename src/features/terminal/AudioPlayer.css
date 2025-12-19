@@ -3,7 +3,8 @@
     bottom: 80px;
     right: 20px;
     z-index: 1500;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .audio-player-window {
@@ -23,7 +24,7 @@
 }
 
 .player-header h3 {
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     margin: 0;
     color: var(--accent);
 }
@@ -45,7 +46,7 @@
 }
 
 .track-label {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     display: block;
 }
@@ -110,7 +111,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     justify-content: center;
     color: var(--text-secondary);
 }

@@ -8,8 +8,8 @@
     color: var(--text-primary);
     /* Always green for boot unless theme overrides, defaulting retro green */
     font-family: var(--font-primary);
-    font-size: 0.9rem;
-    padding: 32px;
+    font-size: var(--font-size-body);
+    padding: var(--space-lg);
     z-index: 9999;
     overflow: hidden;
     display: flex;
@@ -34,5 +34,12 @@
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .boot-screen {
+        padding: var(--space-sm);
+        font-size: var(--font-size-xs);
     }
 }

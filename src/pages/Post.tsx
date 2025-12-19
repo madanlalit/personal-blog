@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import Typewriter from '../components/ui/Typewriter';
+import Frame from '../components/ui/Frame';
 import { usePosts } from '../hooks/usePosts';
 import PostNavigation from '../components/post/PostNavigation';
 import TableOfContents from '../components/post/TableOfContents';
@@ -67,14 +68,7 @@ const Post: React.FC = () => {
                 <Link to="/" className="back-link">← Back to Terminal</Link>
 
                 {/* HEADER FRAME */}
-                <section className="post-frame post-header-frame">
-                    <div className="frame-corner topleft"></div>
-                    <div className="frame-corner topright"></div>
-                    <div className="frame-corner bottomleft"></div>
-                    <div className="frame-corner bottomright"></div>
-
-                    <div className="frame-label">HEADER</div>
-
+                <Frame label="HEADER" className="post-header-frame">
                     <div className="entry-meta">
                         <span className="entry-date">{post.date}</span>
                         <span className="entry-category">[{post.category}]</span>
@@ -86,17 +80,10 @@ const Post: React.FC = () => {
                     </h1>
 
                     {post.subtitle && <h2 className="entry-subtitle">{post.subtitle}</h2>}
-                </section>
+                </Frame>
 
                 {/* CONTENT FRAME */}
-                <section className="post-frame post-content-frame">
-                    <div className="frame-corner topleft"></div>
-                    <div className="frame-corner topright"></div>
-                    <div className="frame-corner bottomleft"></div>
-                    <div className="frame-corner bottomright"></div>
-
-                    <div className="frame-label">CONTENT</div>
-
+                <Frame label="CONTENT" className="post-content-frame">
                     <TableOfContents />
 
                     <div className="entry-content markdown-body">
@@ -123,18 +110,11 @@ const Post: React.FC = () => {
                             {post.content}
                         </ReactMarkdown>
                     </div>
-                </section>
+                </Frame>
 
                 {/* META FRAME */}
                 {(post.tags && post.tags.length > 0) && (
-                    <section className="post-frame post-footer-frame">
-                        <div className="frame-corner topleft"></div>
-                        <div className="frame-corner topright"></div>
-                        <div className="frame-corner bottomleft"></div>
-                        <div className="frame-corner bottomright"></div>
-
-                        <div className="frame-label">META</div>
-
+                    <Frame label="META" className="post-footer-frame">
                         <div className="footer-content">
                             <div className="entry-tags">
                                 {post.tags.map((tag) => (
@@ -145,7 +125,7 @@ const Post: React.FC = () => {
                             </div>
                             <ShareButtons title={post.title} />
                         </div>
-                    </section>
+                    </Frame>
                 )}
 
                 {/* RELATED POSTS */}

@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
     color: var(--text-tertiary);
-    font-size: 10px;
+    font-size: var(--font-size-xxs);
     line-height: 1;
 }
 
@@ -71,4 +71,25 @@
 
 .game-over-screen button:hover {
     background: var(--accent-hover);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .snake-window {
+        padding: 1rem;
+        border-width: 1px;
+    }
+
+    .cell {
+        width: 15px;
+        height: 15px;
+        font-size: 8px; /* Hardcoded 8px as xxs might be too big for 15px cell */
+    }
+}
+
+@media (max-width: 320px) {
+    .cell {
+        width: 12px;
+        height: 12px;
+    }
 }

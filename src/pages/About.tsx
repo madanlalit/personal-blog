@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Github,
@@ -11,110 +11,10 @@ import {
   Heart,
   Download,
 } from "lucide-react";
+import Frame from "../components/ui/Frame";
+import Typewriter from "../components/ui/Typewriter";
+import { useCounter } from "../hooks/useCounter";
 import "./About.css";
-
-// --- Animated Counter Hook ---
-const useCounter = (target: number, duration: number = 2000) => {
-  const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement | null>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observerRef.current?.disconnect();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (elementRef.current) {
-      observerRef.current.observe(elementRef.current);
-    }
-
-    return () => observerRef.current?.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let start = 0;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [isVisible, target, duration]);
-
-  // Callback ref to set element reference
-  const setRef = (node: HTMLDivElement | null) => {
-    elementRef.current = node;
-    if (node && observerRef.current) {
-      observerRef.current.observe(node);
-    }
-  };
-
-  return { count, setRef };
-};
-
-// --- Typing Effect Component ---
-const TypingText: React.FC<{ text: string; delay?: number }> = ({
-  text,
-  delay = 0,
-}) => {
-  const [displayText, setDisplayText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      let index = 0;
-      const interval = setInterval(() => {
-        setDisplayText(text.slice(0, index + 1));
-        index++;
-        if (index >= text.length) {
-          clearInterval(interval);
-          setTimeout(() => setShowCursor(false), 1000);
-        }
-      }, 50);
-      return () => clearInterval(interval);
-    }, delay);
-
-    return () => clearTimeout(timeout);
-  }, [text, delay]);
-
-  return (
-    <span className="typing-text">
-      {displayText}
-      {showCursor && <span className="cursor">|</span>}
-    </span>
-  );
-};
-
-// --- Frame Component (Reusable) ---
-const Frame: React.FC<{ label: string; children: React.ReactNode; className?: string }> = ({
-  label,
-  children,
-  className = "",
-}) => (
-  <section className={`about-frame ${className}`}>
-    <div className="frame-corner topleft" />
-    <div className="frame-corner topright" />
-    <div className="frame-corner bottomleft" />
-    <div className="frame-corner bottomright" />
-    <div className="frame-label">{label}</div>
-    {children}
-  </section>
-);
 
 // --- Data ---
 const EXPERIENCE_PREVIEW = [
@@ -186,7 +86,7 @@ const About: React.FC = () => {
               <span className="name-line accent">MADAN</span>
             </h1>
             <div className="hero-tagline">
-              <TypingText text="Engineer. Builder. AI Enthusiast." delay={500} />
+              <Typewriter text="Engineer. Builder. AI Enthusiast." delay={500} />
             </div>
             <div className="hero-meta">
               <span className="meta-item">
