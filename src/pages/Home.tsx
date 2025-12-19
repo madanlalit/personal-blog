@@ -186,8 +186,8 @@ const Home: React.FC = () => {
               <span className="bracket">[</span> EXECUTE_PROJECTS{" "}
               <span className="bracket">]</span>
             </Link>
-            <Link to="/contact" className="hero-btn secondary">
-              INIT_COMMS
+            <Link to="/about" className="hero-btn secondary">
+              ABOUT_ME
             </Link>
           </div>
         </div>
@@ -230,8 +230,8 @@ const Home: React.FC = () => {
                 <span className="status-sub">Open for new roles</span>
               </div>
             </div>
-            <Link to="/contact" className="beacon-action">
-              <Mail size={14} /> INITIALIZE_HANDSHAKE
+            <Link to="/about" className="beacon-action">
+              <Mail size={14} /> LEARN_MORE
             </Link>
           </div>
 

@@ -213,8 +213,8 @@ const Experience: React.FC = () => {
             <section className="exp-cta">
                 <p>Interested in working together?</p>
                 <div className="cta-buttons">
-                    <Link to="/contact" className="cta-btn primary">
-                        Get in Touch
+                    <Link to="/about" className="cta-btn primary">
+                        About Me
                     </Link>
                     <a
                         href="https://linkedin.com/in/madanlalit"

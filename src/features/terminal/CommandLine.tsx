@@ -115,7 +115,6 @@ const CommandLine: React.FC<CommandLineProps> = ({
       "about",
       "archive",
       "projects",
-      "contact",
       ...availableThemes,
     ];
 
@@ -132,7 +131,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
 
       if (["cd", "theme"].includes(command)) {
         const relevantArgs = command === "cd"
-          ? ["home", "about", "archive", "projects", "contact"]
+          ? ["home", "about", "archive", "projects"]
           : availableThemes;
 
         matches = relevantArgs
@@ -172,7 +171,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         setDisplayHistory((prev) => [
           ...prev,
           "Available commands:",
-          "  cd [page]   - Navigate (home, about, archive, projects, contact)",
+          "  cd [page]   - Navigate (home, about, archive, projects)",
           "  grep [term] - Search blog posts",
           `  theme [opt] - Set theme (${availableThemes.join(" | ")})`,
           "  amp         - Launch Audio Player",
@@ -290,7 +289,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
       case "cd": {
         if (!arg || arg === "home") navigate("/");
         // UPDATED: Added projects and contact to allowed navigation
-        else if (["about", "archive", "contact", "projects"].includes(arg))
+        else if (["about", "archive", "projects"].includes(arg))
           navigate(`/${arg}`);
         else {
           setDisplayHistory((prev) => [
@@ -305,7 +304,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         // UPDATED: Added projects/ to listing
         setDisplayHistory((prev) => [
           ...prev,
-          "home/  about/  archive/  projects/  contact/",
+          "home/  about/  archive/  projects/",
         ]);
         break;
       }
@@ -451,13 +450,7 @@ const CommandLine: React.FC<CommandLineProps> = ({
         >
           <span className="tab-key">4</span> PROJECTS
         </button>
-        <button
-          className={`cli-tab ${location.pathname === "/contact" ? "active" : ""}`}
-          onClick={() => navigate("/contact")}
-          title="Navigate to Contact (Alt+5)"
-        >
-          <span className="tab-key">5</span> CONTACT
-        </button>
+
 
         <div className="tab-spacer"></div>
 
