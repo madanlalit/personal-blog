@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Code,
@@ -8,66 +8,144 @@ import {
   Circle,
   Filter,
   Folder,
-  Database,
-  Layout,
+  Loader,
+  AlertCircle,
+  ArrowDownAZ,
+  ArrowUpDown,
 } from "lucide-react";
 import "./Projects.css";
 
-// --- Data ---
-const projects = [
-  {
-    id: "PKG-01",
-    title: "Neural_Visualizer",
-    desc: "Real-time backpropagation visualization engine using WebGL.",
-    tech: ["TypeScript", "WebGL", "Math"],
-    stars: 124,
-    forks: 32,
-    status: "online",
-    category: "AI",
-  },
-  {
-    id: "PKG-02",
-    title: "Crypto_Arb_Bot",
-    desc: "High-frequency arbitrage trading bot for decentralized exchanges.",
-    tech: ["Python", "Solidity", "Docker"],
-    stars: 89,
-    forks: 12,
-    status: "offline",
-    category: "Backend",
-  },
-  {
-    id: "PKG-03",
-    title: "System_Portfolio",
-    desc: "The React-based TUI operating system you are currently browsing.",
-    tech: ["React", "Framer Motion", "Vite"],
-    stars: 256,
-    forks: 45,
-    status: "online",
-    category: "Frontend",
-  },
-  {
-    id: "PKG-04",
-    title: "Rust_FS_Driver",
-    desc: "In-memory virtual file system driver written for learning low-level systems.",
-    tech: ["Rust", "Systems"],
-    stars: 42,
-    forks: 8,
-    status: "archived",
-    category: "Systems",
-  },
-];
+// --- Constants ---
+const GITHUB_USERNAME = "madanlalit";
+const MAX_DESCRIPTION_LENGTH = 100;
+
+// --- Types ---
+interface StarredRepo {
+  id: string;
+  name: string;
+  fullName: string;
+  description: string;
+  language: string;
+  stars: number;
+  forks: number;
+  url: string;
+  topics: string[];
+  owner: {
+    login: string;
+    avatarUrl: string;
+  };
+}
+
+interface StarredReposData {
+  lastUpdated: number;
+  repos: StarredRepo[];
+}
+
+type SortOption = "stars" | "forks" | "name";
+
+// --- Helper ---
+const truncateText = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength).trim() + "...";
+};
 
 const Projects: React.FC = () => {
+  const [repos, setRepos] = useState<StarredRepo[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState("ALL");
+  const [sortBy, setSortBy] = useState<SortOption>("stars");
 
-  // Extract unique technologies for filter buttons
-  const filters = [
-    "ALL",
-    ...Array.from(new Set(projects.flatMap((p) => p.category))),
-  ];
+  useEffect(() => {
+    const fetchRepos = async () => {
+      try {
+        const response = await fetch(`/starred-repos.json?t=${Date.now()}`);
+        if (!response.ok) {
+          throw new Error("Failed to load starred repos");
+        }
+        const data: StarredReposData = await response.json();
+        // Filter to only show repos owned by the user
+        const myRepos = data.repos.filter(
+          (repo) => repo.owner.login === GITHUB_USERNAME
+        );
+        setRepos(myRepos);
+      } catch (err) {
+        console.error("Failed to load starred repos:", err);
+        setError("Failed to load projects");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const filtered =
-    filter === "ALL" ? projects : projects.filter((p) => p.category === filter);
+    fetchRepos();
+  }, []);
+
+  // Extract unique languages for filter buttons
+  const languages = useMemo(
+    () => ["ALL", ...Array.from(new Set(repos.map((r) => r.language)))],
+    [repos]
+  );
+
+  // Filter and sort repos
+  const processedRepos = useMemo(() => {
+    let result = filter === "ALL" ? repos : repos.filter((r) => r.language === filter);
+
+    // Sort
+    result = [...result].sort((a, b) => {
+      switch (sortBy) {
+        case "stars":
+          return b.stars - a.stars;
+        case "forks":
+          return b.forks - a.forks;
+        case "name":
+          return a.name.localeCompare(b.name);
+        default:
+          return 0;
+      }
+    });
+
+    return result;
+  }, [repos, filter, sortBy]);
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="projects-page fade-in">
+        <div className="grid-bg"></div>
+        <header className="sys-header">
+          <div className="sys-title">
+            <Folder size={18} />
+            <span>./REPOSITORIES // MY_PROJECTS</span>
+          </div>
+          <div className="sys-meta">LOADING...</div>
+        </header>
+        <main className="sys-content projects-loading">
+          <Loader className="spin" size={24} />
+          <span>Fetching repositories...</span>
+        </main>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="projects-page fade-in">
+        <div className="grid-bg"></div>
+        <header className="sys-header">
+          <div className="sys-title">
+            <Folder size={18} />
+            <span>./REPOSITORIES // MY_PROJECTS</span>
+          </div>
+          <div className="sys-meta">ERROR</div>
+        </header>
+        <main className="sys-content projects-error">
+          <AlertCircle size={24} />
+          <span>{error}</span>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="projects-page fade-in">
@@ -76,9 +154,9 @@ const Projects: React.FC = () => {
       <header className="sys-header">
         <div className="sys-title">
           <Folder size={18} />
-          <span>./REPOSITORIES // PUBLIC</span>
+          <span>./REPOSITORIES // MY_PROJECTS</span>
         </div>
-        <div className="sys-meta">INDEXED: {filtered.length}</div>
+        <div className="sys-meta">INDEXED: {processedRepos.length}</div>
       </header>
 
       <main
@@ -88,38 +166,57 @@ const Projects: React.FC = () => {
           flexDirection: "column",
         }}
       >
-        {/* Filter Controls */}
+        {/* Controls Row */}
         <div className="repo-controls">
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "5px",
-              fontSize: "0.75rem",
-              color: "var(--arch-muted)",
-              marginRight: "10px",
-            }}
-          >
-            <Filter size={14} /> FILTER_BY:
+          {/* Filter */}
+          <div className="control-group">
+            <div className="control-label">
+              <Filter size={14} /> FILTER:
+            </div>
+            {languages.map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setFilter(lang)}
+                className={`filter-btn ${filter === lang ? "active" : ""}`}
+              >
+                {lang}
+              </button>
+            ))}
           </div>
-          {filters.map((f) => (
+
+          {/* Sort */}
+          <div className="control-group">
+            <div className="control-label">
+              <ArrowUpDown size={14} /> SORT:
+            </div>
             <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={`filter-btn ${filter === f ? "active" : ""}`}
+              onClick={() => setSortBy("stars")}
+              className={`filter-btn ${sortBy === "stars" ? "active" : ""}`}
             >
-              {f}
+              <Star size={12} /> Stars
             </button>
-          ))}
+            <button
+              onClick={() => setSortBy("forks")}
+              className={`filter-btn ${sortBy === "forks" ? "active" : ""}`}
+            >
+              <GitBranch size={12} /> Forks
+            </button>
+            <button
+              onClick={() => setSortBy("name")}
+              className={`filter-btn ${sortBy === "name" ? "active" : ""}`}
+            >
+              <ArrowDownAZ size={12} /> Name
+            </button>
+          </div>
         </div>
 
         {/* Grid */}
         <div className="repo-grid">
           <AnimatePresence mode="popLayout">
-            {filtered.map((p) => (
+            {processedRepos.map((repo) => (
               <motion.div
                 layout
-                key={p.id}
+                key={repo.id}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
@@ -128,14 +225,8 @@ const Projects: React.FC = () => {
               >
                 <div className="repo-header">
                   <span className="repo-title">
-                    {p.category === "Frontend" ? (
-                      <Layout size={16} />
-                    ) : p.category === "Backend" ? (
-                      <Database size={16} />
-                    ) : (
-                      <Code size={16} />
-                    )}
-                    {p.title}
+                    <Code size={16} />
+                    {repo.name}
                   </span>
                   <div
                     style={{
@@ -146,25 +237,20 @@ const Projects: React.FC = () => {
                       color: "var(--arch-muted)",
                     }}
                   >
-                    <span>{p.id}</span>
-                    <Circle
-                      size={8}
-                      fill={
-                        p.status === "online"
-                          ? "var(--arch-accent)"
-                          : "transparent"
-                      }
-                      stroke={p.status === "online" ? "none" : "currentColor"}
-                    />
+                    <span>{repo.id}</span>
+                    <Circle size={8} fill="var(--arch-accent)" stroke="none" />
                   </div>
                 </div>
 
                 <div className="repo-body">
-                  {p.desc}
+                  <p className="repo-description">
+                    {truncateText(repo.description, MAX_DESCRIPTION_LENGTH)}
+                  </p>
                   <div className="repo-tags">
-                    {p.tech.map((t) => (
-                      <span key={t} className="tech-tag">
-                        #{t}
+                    <span className="tech-tag lang-tag">#{repo.language}</span>
+                    {repo.topics.slice(0, 2).map((topic) => (
+                      <span key={topic} className="tech-tag">
+                        #{topic}
                       </span>
                     ))}
                   </div>
@@ -173,13 +259,18 @@ const Projects: React.FC = () => {
                 <div className="repo-footer">
                   <div className="stat-group">
                     <span className="stat-item">
-                      <Star size={12} /> {p.stars}
+                      <Star size={12} /> {repo.stars.toLocaleString()}
                     </span>
                     <span className="stat-item">
-                      <GitBranch size={12} /> {p.forks}
+                      <GitBranch size={12} /> {repo.forks.toLocaleString()}
                     </span>
                   </div>
-                  <a href="#" className="repo-link">
+                  <a
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="repo-link"
+                  >
                     SOURCE <ExternalLink size={12} />
                   </a>
                 </div>

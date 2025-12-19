@@ -49,13 +49,30 @@
     color: var(--text-secondary);
 }
 
+/* Controls Row */
 .repo-controls {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 0 0 20px 0;
     margin-bottom: 20px;
     border-bottom: 1px dashed var(--arch-border);
-    overflow-x: auto;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.control-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    color: var(--arch-muted);
+    text-transform: uppercase;
 }
 
 .filter-btn {
@@ -69,6 +86,9 @@
     transition: all 0.2s;
     text-transform: uppercase;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .filter-btn:hover,
@@ -78,6 +98,7 @@
     background: rgba(0, 0, 0, 0.1);
 }
 
+/* Grid with uniform card sizes */
 .repo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -90,7 +111,7 @@
     border: 1px solid var(--arch-border);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 220px;
     position: relative;
     transition:
         transform 0.2s,
@@ -120,6 +141,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
 }
 
 .repo-body {
@@ -131,6 +156,15 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.repo-description {
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .repo-tags {
@@ -182,4 +216,41 @@
 
 .repo-link:hover {
     text-decoration: underline;
+}
+
+/* Loading and Error States */
+.projects-loading,
+.projects-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    min-height: 300px;
+    color: var(--text-secondary);
+    font-size: var(--font-size-body);
+}
+
+.projects-error {
+    color: var(--text-primary);
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Language tag highlight */
+.lang-tag {
+    border-color: var(--arch-accent);
+    color: var(--arch-accent);
 }
