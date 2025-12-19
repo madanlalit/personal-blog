@@ -1,10 +1,11 @@
 /* src/pages/Projects.css */
 
 /* Container with max-width matching other pages */
+/* Container with max-width matching other pages */
 .projects-page {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
     min-height: 100vh;
     position: relative;
 }
@@ -104,6 +105,30 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding-bottom: 40px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .projects-page {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .repo-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .projects-page .sys-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .repo-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .repo-card {
@@ -253,4 +278,117 @@
 .lang-tag {
     border-color: var(--arch-accent);
     color: var(--arch-accent);
+}
+/* ========================================
+   RESPONSIVE - MOBILE (480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .projects-page {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .repo-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .repo-card {
+        min-height: 180px;
+    }
+
+    .repo-header {
+        padding: 12px;
+    }
+
+    .repo-title {
+        font-size: var(--font-size-xs);
+    }
+
+    .repo-body {
+        padding: 12px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .repo-controls {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .filter-btn {
+        font-size: var(--font-size-xxs);
+        padding: 4px 8px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - ULTRA-SMALL (320px)
+   ======================================== */
+@media (max-width: 320px) {
+    .projects-page {
+        padding: var(--space-sm) var(--space-xs);
+    }
+
+    .projects-page .sys-header {
+        font-size: var(--font-size-body);
+        padding: var(--space-sm) 0;
+    }
+
+    .projects-page .sys-meta {
+        font-size: 0.6rem;
+    }
+
+    .repo-grid {
+        gap: 8px;
+    }
+
+    .repo-card {
+        min-height: 160px;
+    }
+
+    .repo-header {
+        padding: 8px;
+    }
+
+    .repo-title {
+        font-size: 0.85rem;
+        max-width: 150px;
+    }
+
+    .repo-body {
+        padding: 8px;
+        font-size: 0.75rem;
+        gap: 10px;
+    }
+
+    .repo-description {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+
+    .tech-tag {
+        font-size: 0.6rem;
+        padding: 1px 4px;
+    }
+
+    .repo-footer {
+        padding: 8px;
+        font-size: 0.65rem;
+    }
+
+    .stat-group {
+        gap: 8px;
+    }
+
+    .repo-link {
+        font-size: 0.6rem;
+    }
+
+    .filter-btn {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+
+    .control-label {
+        font-size: 0.6rem;
+    }
 }

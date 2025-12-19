@@ -82,3 +82,17 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 480px) {
+    .related-posts {
+        padding: var(--space-sm);
+    }
+
+    .related-title {
+        font-size: var(--font-size-xs);
+    }
+
+    .related-excerpt {
+        font-size: var(--font-size-xxs);
+    }
+}

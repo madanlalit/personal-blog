@@ -54,8 +54,40 @@
 
   .content-area {
     width: 100%;
-    /* max-width removed to keep scrollbar at edge */
-    /* margin: 0 auto; removed */
+    max-width: var(--content-max-width);
+    /* Enforce max-width for readability */
+    margin: 0 auto;
     padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 1023px) {
+  .content-area {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+/* Mobile devices - reduce padding further */
+@media (max-width: 480px) {
+  .content-area {
+    padding: var(--space-md) var(--space-sm);
+  }
+}
+
+/* Ultra-small devices - minimal padding */
+@media (max-width: 360px) {
+  .content-area {
+    padding: var(--space-sm) var(--space-xs);
+  }
+}
+
+@media (max-width: 320px) {
+  .content-area {
+    padding: var(--space-xs);
+  }
+
+  .main-layout {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }

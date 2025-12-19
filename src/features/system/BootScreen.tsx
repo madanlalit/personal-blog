@@ -40,12 +40,12 @@ const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
         const interval = setInterval(() => {
             if (currentIndex >= biosLines.length) {
                 clearInterval(interval);
-                setTimeout(onComplete, 500);
+                setTimeout(onComplete, 200);
                 return;
             }
             setLines(prev => [...prev, biosLines[currentIndex]]);
             currentIndex++;
-        }, 100); // Faster boot sequence
+        }, 40); // Even faster boot sequence
 
         return () => clearInterval(interval);
     }, [onComplete]);

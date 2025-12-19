@@ -34,7 +34,7 @@
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--space-md);
     padding: var(--space-md);
     border: 1px solid var(--border);
     border-radius: 0;
@@ -75,7 +75,7 @@
 
 .nav-separator {
     color: var(--border);
-    font-size: 1.2rem;
+    font-size: var(--font-size-h4);
     display: flex;
     align-items: center;
     padding: 0 var(--space-lg);
@@ -102,5 +102,20 @@
 
     .nav-item.next {
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-navigation {
+        padding: var(--space-sm);
+    }
+
+    .nav-link {
+        padding: var(--space-sm);
+        gap: var(--space-sm);
+    }
+
+    .nav-title {
+        font-size: var(--font-size-xs);
     }
 }

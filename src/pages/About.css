@@ -4,83 +4,8 @@
 .about-container {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
     min-height: 100vh;
-}
-
-/* ===========================================
-   FRAME SYSTEM (Matching Post.css)
-   =========================================== */
-
-.about-frame {
-    position: relative;
-    border: 1px solid var(--border);
-    padding: var(--space-lg);
-    margin-bottom: var(--space-lg);
-    background: transparent;
-    transition: border-color 0.3s ease;
-}
-
-.about-frame:hover {
-    border-color: var(--text-tertiary);
-}
-
-/* Decorative Corner Accents */
-.frame-corner {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 2px solid var(--accent);
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
-.topleft {
-    top: -1px;
-    left: -1px;
-    border-right: 0;
-    border-bottom: 0;
-}
-
-.topright {
-    top: -1px;
-    right: -1px;
-    border-left: 0;
-    border-bottom: 0;
-}
-
-.bottomleft {
-    bottom: -1px;
-    left: -1px;
-    border-right: 0;
-    border-top: 0;
-}
-
-.bottomright {
-    bottom: -1px;
-    right: -1px;
-    border-left: 0;
-    border-top: 0;
-}
-
-.about-frame:hover .frame-corner {
-    width: 16px;
-    height: 16px;
-}
-
-/* Frame Label */
-.frame-label {
-    position: absolute;
-    top: -0.6rem;
-    left: 1rem;
-    background: var(--bg-primary);
-    padding: 0 0.5rem;
-    font-size: var(--font-size-xxs);
-    font-weight: 700;
-    color: var(--text-tertiary);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    z-index: 10;
 }
 
 /* ===========================================
@@ -142,7 +67,7 @@
 .hero-name {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -207,13 +132,17 @@
     display: flex;
     gap: var(--space-md);
     margin-top: var(--space-md);
+    flex-wrap: wrap;
+    /* Safety for small screens */
 }
 
 .hero-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-md);
+    padding: 0.75rem 1.25rem;
+    /* Larger touch target */
     font-size: var(--font-size-xs);
     font-weight: 700;
     text-decoration: none;
@@ -260,6 +189,8 @@
         border-left: none;
         border-top: 1px solid var(--border);
         padding-top: var(--space-lg);
+        justify-content: space-around;
+        /* Better distribution on mobile */
     }
 }
 
@@ -741,5 +672,143 @@
 
     .frame-label {
         font-size: 0.6rem;
+    }
+}
+/* ========================================
+   RESPONSIVE - MOBILE (480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .about-container {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .about-frame {
+        padding: var(--space-sm);
+    }
+
+    .hero-frame {
+        padding: var(--space-md);
+    }
+
+    .hero-name {
+        font-size: var(--font-size-subtitle);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        font-size: var(--font-size-xxs);
+    }
+
+    .bio-text {
+        font-size: var(--font-size-xxs);
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - ULTRA-SMALL (320px)
+   ======================================== */
+@media (max-width: 320px) {
+    .about-container {
+        padding: var(--space-sm) var(--space-xs);
+    }
+
+    .about-frame {
+        padding: var(--space-xs);
+    }
+
+    .hero-frame {
+        padding: var(--space-sm);
+    }
+
+    .hero-badge {
+        font-size: 0.5rem;
+        padding: 2px 4px;
+    }
+
+    .hero-name {
+        font-size: 1.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem;
+    }
+
+    .hero-meta {
+        flex-direction: column;
+        gap: var(--space-xs);
+        font-size: 0.6rem;
+    }
+
+    .hero-btn {
+        font-size: 0.65rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .hero-stats {
+        gap: var(--space-sm);
+    }
+
+    .stat-number {
+        font-size: var(--font-size-subtitle);
+    }
+
+    .stat-number.small {
+        font-size: var(--font-size-body);
+    }
+
+    .stat-label {
+        font-size: 0.5rem;
+    }
+
+    .bio-text {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .skill-tag {
+        font-size: 0.6rem;
+        padding: 2px 4px;
+    }
+
+    .skill-legend {
+        font-size: 0.55rem;
+    }
+
+    .interest-tag {
+        font-size: 0.6rem;
+        padding: 2px 4px;
+    }
+
+    .exp-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-item {
+        padding: var(--space-sm);
+    }
+
+    .social-link {
+        padding: var(--space-xs);
+        font-size: 0.65rem;
+    }
+
+    .frame-label {
+        font-size: 0.55rem;
+    }
+
+    .terminal-body {
+        font-size: 0.65rem;
+        padding: var(--space-sm);
     }
 }

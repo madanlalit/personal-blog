@@ -47,3 +47,16 @@
     background: var(--accent);
     color: var(--bg-primary);
 }
+
+@media (max-width: 480px) {
+    .share-buttons-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+
+    .share-btn {
+        width: 32px;
+        height: 32px;
+    }
+}

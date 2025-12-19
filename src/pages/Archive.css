@@ -13,7 +13,7 @@
     font-family: var(--arch-font);
     color: var(--arch-text);
     height: 100%;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -239,11 +239,36 @@
     gap: var(--space-md-sm);
 }
 
-.file-row:hover,
-.file-row.selected {
+.file-row:hover {
     background: rgba(0, 0, 0, 0.03);
-    border-left-color: var(--arch-accent);
+    border-left-color: var(--arch-border);
 }
+
+.file-row.selected {
+    background: color-mix(in srgb, var(--arch-accent), transparent 85%);
+    border-left-color: var(--arch-accent);
+    border-left-width: 3px;
+    padding-left: calc(var(--space-sm) - 1px);
+}
+
+.file-row.selected .col-title {
+    color: var(--arch-accent);
+    font-weight: 700;
+}
+
+.file-row.selected .col-meta .date {
+    color: var(--text-primary);
+}
+
+/* Keyboard focus distinct from mouse hover */
+.file-row:focus-visible {
+    outline: none;
+    background: color-mix(in srgb, var(--arch-accent), transparent 80%);
+    border-left-color: var(--arch-accent);
+    box-shadow: inset 0 0 0 1px var(--arch-accent);
+}
+
+
 
 .col-meta {
     display: flex;
@@ -285,8 +310,13 @@
 
 .cursor-indicator {
     position: absolute;
-    left: -18px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--arch-accent);
+    font-weight: bold;
+    font-family: monospace;
+    pointer-events: none;
 }
 
 /* --- 6. Grid View (Data Cards) --- */
@@ -307,6 +337,8 @@
     height: 180px;
     transition: all 0.2s;
     background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
 }
 
 .grid-card:hover {
@@ -431,16 +463,314 @@
     transition: left 0.5s ease;
 }
 
-.grid-card {
-    position: relative;
-    overflow: hidden;
-}
-
 .grid-card:hover::after {
     left: 100%;
+}
+
+/* ========================================
+   TABLET RANGE (481px - 768px)
+   ======================================== */
+@media (max-width: 768px) {
+    .archive-root {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    /* HUD - Stack vertically */
+    .archive-hud {
+        flex-direction: column;
+        gap: var(--space-md);
+        align-items: flex-start;
+    }
+
+    .hud-stats {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .stat-pill {
+        align-items: flex-start;
+    }
+
+    /* Heatmap - Fewer columns */
+    .heatmap-grid {
+        grid-template-columns: repeat(26, 1fr);
+        height: 10px;
+    }
+
+    /* Control module */
+    .control-module {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+
+    .view-toggles {
+        width: 100%;
+    }
+
+    .toggle-btn {
+        flex: 1;
+        justify-content: center;
+        padding: var(--space-sm) var(--space-md-sm);
+    }
+
+    /* Tag rail */
+    .tag-rail {
+        gap: var(--space-xxs);
+    }
+
+    .tag-chip {
+        font-size: var(--font-size-xxs);
+        padding: var(--space-xxs) var(--space-xs);
+    }
+
+    /* File rows - 2 column layout */
+    .file-row {
+        grid-template-columns: 100px 1fr;
+        gap: var(--space-xs);
+    }
+
+    .col-meta .hash {
+        display: none;
+    }
+
+    /* Grid cards */
+    .view-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: var(--space-sm);
+    }
+
+    .grid-card {
+        height: 160px;
+        padding: var(--space-sm);
+    }
+
+    .card-body h3 {
+        font-size: var(--font-size-body);
+    }
+
+    /* Footer */
+    .sys-footer {
+        font-size: var(--font-size-xxs);
+        margin-top: var(--space-lg);
+    }
+}
+
+/* ========================================
+   SMALL PHONES (480px and below)
+   ======================================== */
+@media (max-width: 480px) {
+    .archive-root {
+        padding: var(--space-sm) var(--space-xs);
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Hide decorative overlay */
+    .grid-overlay {
+        display: none;
+    }
+
+    /* HUD - Compact horizontal stats */
+    .archive-hud {
+        font-size: var(--font-size-xxs);
+        padding: var(--space-sm) 0;
+        margin-bottom: var(--space-md);
+    }
+
+    .hud-title {
+        font-size: var(--font-size-xxs);
+        gap: var(--space-xs);
+    }
+
+    .hud-title svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .hud-stats {
+        flex-direction: row;
+        gap: var(--space-md);
+    }
+
+    .stat-pill {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    .stat-pill .label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .stat-pill .value {
+        font-size: var(--font-size-xs);
+    }
+
+    /* Heatmap - Compact 6 columns */
+    .activity-section {
+        margin-bottom: var(--space-md);
+    }
+
+    .section-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .heatmap-grid {
+        grid-template-columns: repeat(12, 1fr);
+        height: 8px;
+        gap: 1px;
+    }
+
+    /* Control module */
+    .control-module {
+        margin-bottom: var(--space-md);
+    }
+
+    .search-wrapper {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--font-size-xs);
+    }
+
+    .search-wrapper .prompt {
+        font-size: var(--font-size-xxs);
+        margin-right: var(--space-xs);
+    }
+
+    .toggle-btn {
+        font-size: var(--font-size-xxs);
+        padding: var(--space-xs) var(--space-sm);
+    }
+
+    /* Tag rail - wrap aggressively */
+    .tag-rail {
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-md);
+    }
+
+    .tag-chip {
+        font-size: var(--font-size-xxs);
+        padding: 2px 6px;
+    }
+
+    /* File rows - Single column, title only */
+    .file-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: var(--space-xs);
+    }
+
+    .col-meta {
+        font-size: var(--font-size-xxs);
+        margin-bottom: 2px;
+    }
+
+    .col-meta .hash {
+        display: none;
+    }
+
+    .col-title {
+        font-size: var(--font-size-xxs);
+    }
+
+    .col-title .ext {
+        display: none;
+    }
+
+    .cursor-indicator {
+        display: none;
+    }
+
+    /* Year blocks */
+    .year-block {
+        margin-bottom: var(--space-md);
+    }
+
+    .year-marker {
+        font-size: var(--font-size-small);
+        margin-bottom: var(--space-sm);
+    }
+
+    /* Grid cards - Smaller */
+    .view-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xs);
+    }
+
+    .grid-card {
+        height: auto;
+        min-height: 120px;
+        padding: var(--space-sm);
+    }
+
+    .card-header .hash {
+        font-size: var(--font-size-xxs);
+    }
+
+    .card-body h3 {
+        font-size: var(--font-size-xs);
+        max-height: none;
+    }
+
+    .meta-row {
+        font-size: var(--font-size-xxs);
+        gap: var(--space-sm);
+    }
+
+    .card-footer {
+        font-size: var(--font-size-xxs);
+        padding-top: var(--space-sm);
+    }
+
+    /* Empty state */
+    .empty-buffer {
+        font-size: var(--font-size-xs);
+        padding: var(--space-lg);
+    }
+
+    /* Footer */
+    .sys-footer {
+        font-size: var(--font-size-xxs);
+        margin-top: var(--space-md);
+        padding-top: var(--space-sm);
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & FOCUS STATES
+   ======================================== */
+
+/* Focus-visible outlines */
+.toggle-btn:focus-visible,
+.tag-chip:focus-visible,
+.file-row:focus-visible,
+.grid-card:focus-visible {
+    outline: 2px solid var(--arch-accent);
+    outline-offset: 2px;
+}
+
+/* Search input focus */
+.search-wrapper input:focus {
+    outline: none;
 }
 
 /* Active search glow */
 .search-wrapper:focus-within {
     box-shadow: 0 0 0 1px var(--arch-accent);
+}
+
+/* Screen reader only utility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

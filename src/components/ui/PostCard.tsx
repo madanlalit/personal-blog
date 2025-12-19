@@ -26,22 +26,9 @@ const PostCard: React.FC<PostCardProps> = ({ post, index = 0 }) => {
       <p className="post-excerpt">{post.excerpt}</p>
 
       {post.tags && (
-        <div
-          className="post-tags"
-          style={{ display: "flex", gap: "8px", margin: "1rem 0 1rem 0" }}
-        >
+        <div className="post-tags-container">
           {post.tags.map((tag) => (
-            <Link
-              key={tag}
-              to={`/tags/${tag}`}
-              style={{
-                color: "var(--accent)",
-                fontSize: "0.7rem",
-                textDecoration: "none",
-                border: "1px solid var(--border)",
-                padding: "2px 8px",
-              }}
-            >
+            <Link key={tag} to={`/tags/${tag}`} className="post-tag-link">
               #{tag}
             </Link>
           ))}

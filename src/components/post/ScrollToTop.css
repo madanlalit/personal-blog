@@ -43,7 +43,7 @@
 }
 
 .scroll-icon {
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     line-height: 1;
 }
 
@@ -56,5 +56,17 @@
         bottom: 4rem;
         right: 1rem;
         padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top-btn {
+        bottom: 3rem;
+        right: 0.5rem;
+        padding: 6px;
+    }
+
+    .scroll-label {
+        display: none;
     }
 }

@@ -333,3 +333,117 @@
         padding: var(--space-md);
     }
 }
+/* ========================================
+   RESPONSIVE - MOBILE (480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .comms-wrapper {
+        padding: var(--space-sm);
+    }
+
+    .form-area {
+        padding: var(--space-sm);
+    }
+
+    .sidebar-info {
+        padding: var(--space-sm);
+    }
+
+    .op-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-body);
+    }
+
+    .op-name {
+        font-size: var(--font-size-body);
+    }
+
+    .op-role {
+        font-size: var(--font-size-xs);
+    }
+
+    .field-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .tech-input {
+        padding: var(--space-sm);
+        font-size: var(--font-size-small);
+    }
+
+    .execute-btn {
+        padding: var(--space-sm);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* ========================================
+   RESPONSIVE - ULTRA-SMALL (320px)
+   ======================================== */
+@media (max-width: 320px) {
+    .comms-wrapper {
+        padding: var(--space-xs);
+    }
+
+    .comms-interface::before,
+    .comms-interface::after {
+        width: 8px;
+        height: 8px;
+    }
+
+    .form-area {
+        padding: var(--space-xs);
+    }
+
+    .sidebar-info {
+        padding: var(--space-xs);
+    }
+
+    .operator-card {
+        padding-bottom: var(--space-sm);
+        margin-bottom: var(--space-sm);
+    }
+
+    .op-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-body);
+    }
+
+    .op-name {
+        font-size: var(--font-size-body);
+    }
+
+    .op-role {
+        font-size: var(--font-size-xxs);
+    }
+
+    .conn-link {
+        font-size: var(--font-size-xxs);
+        padding: 4px;
+    }
+
+    .field-label {
+        font-size: var(--font-size-xxs);
+        margin-bottom: 4px;
+    }
+
+    .tech-input {
+        padding: 8px;
+        font-size: var(--font-size-xs);
+    }
+
+    .execute-btn {
+        padding: 8px 12px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .validation-error {
+        font-size: var(--font-size-xxs);
+    }
+
+    .transmit-text {
+        font-size: var(--font-size-xxs);
+    }
+}

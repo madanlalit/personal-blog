@@ -9,19 +9,23 @@ import {
   Calendar,
   Clock,
   FileText,
-  ChevronRight,
 } from "lucide-react";
 import { usePosts } from "../hooks/usePosts";
 import { groupPostsByYear } from "../utils/postHelpers";
 import { getHeatmapOpacities } from "../utils/activityHelpers";
+import SEO from "../components/SEO";
 import "./Archive.css";
 
-// --- Helper: Generate pseudo-random "System Hash" for posts ---
-const generateHash = (str: string) => {
+// --- Helper: Generate pseudo-random "System Hash" for posts (memoized) ---
+const hashCache = new Map<string, string>();
+const generateHash = (str: string): string => {
+  if (hashCache.has(str)) return hashCache.get(str)!;
   let hash = 0;
   for (let i = 0; i < str.length; i++)
     hash = (hash << 5) - hash + str.charCodeAt(i);
-  return "0x" + Math.abs(hash).toString(16).substring(0, 6).toUpperCase();
+  const result = "0x" + Math.abs(hash).toString(16).substring(0, 6).toUpperCase();
+  hashCache.set(str, result);
+  return result;
 };
 
 const Archive: React.FC = () => {
@@ -90,7 +94,11 @@ const Archive: React.FC = () => {
 
   return (
     <div className="archive-root">
-      <div className="grid-overlay"></div>
+      <SEO
+        title="Archive"
+        description="Browse all blog posts organized by date. Search, filter by tags, and explore the complete archive."
+      />
+      <div className="grid-overlay" aria-hidden="true"></div>
 
       {/* --- 1. Dashboard HUD --- */}
       <header className="archive-hud">
@@ -126,44 +134,57 @@ const Archive: React.FC = () => {
         </section>
 
         {/* --- 3. Control Module --- */}
-        <section className="control-module">
+        <section className="control-module" role="search" aria-label="Search and filter posts">
           <div className="search-wrapper">
-            <span className="prompt">root@blog:~$</span>
+            <span className="prompt" aria-hidden="true">root@blog:~$</span>
             <input
               type="text"
               placeholder="query_database..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search posts"
+              aria-describedby="search-results-count"
             />
             {isSearching ? (
-              <span className="search-status">SCANNING...</span>
+              <span className="search-status" aria-live="polite">SCANNING...</span>
             ) : (
-              <Search size={14} className="icon-right" />
+              <Search size={14} className="icon-right" aria-hidden="true" />
             )}
           </div>
 
-          <div className="view-toggles">
+          <div className="view-toggles" role="group" aria-label="View mode">
             <button
               className={`toggle-btn ${viewMode === "list" ? "active" : ""}`}
               onClick={() => setViewMode("list")}
               title="List View"
+              aria-pressed={viewMode === "list"}
+              aria-label="List view"
             >
-              <List size={16} />
+              <List size={16} aria-hidden="true" /> LIST
             </button>
             <button
               className={`toggle-btn ${viewMode === "grid" ? "active" : ""}`}
               onClick={() => setViewMode("grid")}
               title="Grid View"
-            >  <LayoutGrid size={14} /> GRID
+              aria-pressed={viewMode === "grid"}
+              aria-label="Grid view"
+            >
+              <LayoutGrid size={14} aria-hidden="true" /> GRID
             </button>
           </div>
         </section>
 
+        {/* Screen reader announcement for filter results */}
+        <div id="search-results-count" className="visually-hidden" aria-live="polite">
+          {filteredPosts.length} posts found
+        </div>
+
         {/* --- 4. Tag Filter Rail --- */}
-        <div className="tag-rail">
+        <nav className="tag-rail" role="group" aria-label="Filter by tag">
           <button
             className={`tag-chip ${!activeTag ? "active" : ""}`}
             onClick={() => setActiveTag(null)}
+            aria-pressed={!activeTag}
           >
             [*] ALL
           </button>
@@ -172,11 +193,12 @@ const Archive: React.FC = () => {
               key={tag}
               className={`tag-chip ${activeTag === tag ? "active" : ""}`}
               onClick={() => setActiveTag(tag)}
+              aria-pressed={activeTag === tag}
             >
               [{tag}]
             </button>
           ))}
-        </div>
+        </nav>
 
         {/* --- 5. Main Content Area --- */}
         <main className="content-viewport">
@@ -217,6 +239,19 @@ const Archive: React.FC = () => {
                               key={post.id}
                               className={`file-row ${isSelected ? "selected" : ""}`}
                             >
+                              {isSelected && (
+                                <motion.span
+                                  layoutId="row-cursor"
+                                  className="cursor-indicator"
+                                  transition={{
+                                    type: "spring",
+                                    stiffness: 500,
+                                    damping: 30,
+                                  }}
+                                >
+                                  {">"}
+                                </motion.span>
+                              )}
                               <div className="col-meta">
                                 <span className="hash">
                                   {generateHash(post.title)}
@@ -235,12 +270,6 @@ const Archive: React.FC = () => {
                               <div className="col-tags">
                                 {post.tags?.slice(0, 2).map((t) => `#${t} `)}
                               </div>
-                              {isSelected && (
-                                <ChevronRight
-                                  size={14}
-                                  className="cursor-indicator"
-                                />
-                              )}
                             </Link>
                           );
                         })}

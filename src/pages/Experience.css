@@ -3,7 +3,7 @@
 .experience-page {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
     min-height: 100vh;
 }
 
@@ -149,7 +149,7 @@
 .job-card {
     display: block;
     border: 1px solid var(--border);
-    padding: 16px;
+    padding: var(--space-md);
     margin-bottom: 0;
     position: relative;
     transition: all 0.2s;
@@ -203,7 +203,7 @@
 
 /* Title */
 .job-title {
-    font-size: 1.25rem;
+    font-size: var(--font-size-subtitle);
     font-weight: 700;
     line-height: 1.25;
     margin: 0 0 8px 0;
@@ -237,7 +237,7 @@
 
 /* Excerpt */
 .job-excerpt {
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 16px;
@@ -282,7 +282,7 @@
 
 .tech-tag {
     color: var(--accent);
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     text-decoration: none;
     border: 1px solid var(--border);
     padding: 2px 8px;
@@ -392,7 +392,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     font-weight: 700;
     text-transform: uppercase;
     border: 1px solid var(--border);
@@ -450,5 +450,124 @@
 
     .certs-grid {
         grid-template-columns: 1fr;
+    }
+}
+/* ========================================
+   RESPONSIVE - MOBILE (480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .experience-page {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .page-title {
+        font-size: var(--font-size-title);
+    }
+
+    .job-card {
+        padding: 12px;
+    }
+
+    .job-title {
+        font-size: var(--font-size-body);
+    }
+
+    .job-meta-row {
+        flex-wrap: wrap;
+        font-size: var(--font-size-xxs);
+    }
+
+    .job-excerpt {
+        font-size: var(--font-size-small);
+    }
+
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+        padding: var(--space-sm);
+    }
+}
+
+/* ========================================
+   RESPONSIVE - ULTRA-SMALL (320px)
+   ======================================== */
+@media (max-width: 320px) {
+    .experience-page {
+        padding: var(--space-sm) var(--space-xs);
+    }
+
+    .page-title {
+        font-size: var(--font-size-subtitle);
+    }
+
+    .page-subtitle {
+        font-size: var(--font-size-small);
+    }
+
+    .back-link {
+        font-size: var(--font-size-xxs);
+    }
+
+    .section-header {
+        font-size: var(--font-size-xxs);
+    }
+
+    .job-card {
+        padding: 8px;
+    }
+
+    .job-meta-row {
+        font-size: var(--font-size-xxs);
+        gap: 6px;
+    }
+
+    .job-title {
+        font-size: var(--font-size-small);
+    }
+
+    .job-location {
+        font-size: var(--font-size-xxs);
+    }
+
+    .job-excerpt {
+        font-size: var(--font-size-xs);
+    }
+
+    .job-achievements ul {
+        font-size: var(--font-size-xs);
+        padding-left: 16px;
+    }
+
+    .achievements-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .tech-tag {
+        font-size: var(--font-size-xxs);
+        padding: 2px 6px;
+    }
+
+    .cert-card {
+        padding: var(--space-xs);
+        gap: var(--space-sm);
+    }
+
+    .cert-name {
+        font-size: var(--font-size-xs);
+    }
+
+    .cert-issuer {
+        font-size: var(--font-size-xxs);
+    }
+
+    .cert-year {
+        font-size: var(--font-size-xxs);
+    }
+
+    .cta-btn {
+        font-size: var(--font-size-xs);
+        padding: 6px 12px;
     }
 }
