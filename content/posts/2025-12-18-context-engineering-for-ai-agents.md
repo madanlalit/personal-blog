@@ -23,15 +23,6 @@ Unlike prompt engineering, which is often a discrete, one-shot exercise, context
 
 > Effectively wrangling LLMs requires thinking in context — considering the holistic state available to the model at any given time and how that state shapes the probability space of its next response.
 
-### The Shift in Focus
-
-| Aspect | Prompt Engineering | Context Engineering |
-|--------|-------------------|---------------------|
-| **Primary Goal** | Directing a single response | Maintaining long-term agent state |
-| **Logic** | Intuitive/Linguistic | Structured/Algorithmic |
-| **Data Source** | Hardcoded text | Vector DBs, APIs, User logs |
-| **Complexity** | Linear | Power-law / Non-linear |
-
 ## The Physics of Attention: Why Context Matters
 
 Despite the hype around "infinite context" windows (reaching 1M+ tokens), LLMs are still bound by the physics of the **Transformer architecture**.

@@ -1,4 +1,4 @@
-/* Maintain strict adherence to your theme variables */
+/* Archive Theme Variables */
 :root {
     --arch-font: var(--font-primary);
     --arch-border: var(--border, #e5e5e5);
@@ -7,29 +7,26 @@
     --arch-muted: var(--text-tertiary, #888);
 }
 
+/* Layout */
 .archive-root {
     max-width: var(--content-max-width);
     margin: 0 auto;
+    padding: var(--space-lg);
     font-family: var(--arch-font);
     color: var(--arch-text);
     height: 100%;
-    padding: var(--space-xl) var(--space-lg);
-    position: relative;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .archive-body {
     flex: 1;
 }
 
-/* Background Grid Overlay */
 .grid-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: linear-gradient(var(--arch-border) 1px, transparent 1px);
     background-size: 100% 40px;
     opacity: 0.1;
@@ -37,27 +34,25 @@
     pointer-events: none;
 }
 
-/* --- 1. Dashboard HUD --- */
+/* HUD Header */
 .archive-hud {
     display: flex;
     justify-content: space-between;
-    padding: var(--space-md) 0;
+    padding: var(--space-md) 0 1rem;
     border-bottom: 1px solid var(--arch-border);
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: var(--font-size-subtitle);
-    padding-bottom: 1rem;
 }
 
 .page-header {
     display: flex;
     flex-direction: column;
-    padding: var(--space-md) 0;
+    padding: var(--space-md) 0 1rem;
     border-bottom: 1px solid var(--arch-border);
     margin-bottom: var(--space-lg);
-    padding-bottom: 1rem;
 }
 
 .hud-title {
@@ -90,7 +85,7 @@
     line-height: 1;
 }
 
-/* --- 2. Heatmap --- */
+/* Heatmap */
 .activity-section {
     margin-bottom: var(--space-lg);
 }
@@ -113,12 +108,12 @@
     border-radius: 1px;
 }
 
-/* --- 3. Control Module --- */
+/* Control Module */
 .control-module {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-md);
     margin-bottom: var(--space-lg);
-    flex-wrap: wrap;
 }
 
 .search-wrapper {
@@ -130,7 +125,6 @@
     padding: var(--space-sm) var(--space-md-sm);
     font-size: var(--font-size-body);
     position: relative;
-    /* Added for relative positioning if needed later */
 }
 
 .search-wrapper .prompt {
@@ -181,7 +175,7 @@
     color: var(--bg-primary, #fff);
 }
 
-/* --- 4. Tag Rail --- */
+/* Tag Rail */
 .tag-rail {
     display: flex;
     flex-wrap: wrap;
@@ -199,8 +193,8 @@
     font-size: var(--font-size-xs);
     cursor: pointer;
     text-transform: uppercase;
-    transition: all 0.2s;
     color: var(--arch-muted);
+    transition: all 0.2s;
 }
 
 .tag-chip:hover,
@@ -210,7 +204,7 @@
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-/* --- 5. List View (File System) --- */
+/* List View */
 .year-block {
     margin-bottom: var(--space-lg);
 }
@@ -234,9 +228,9 @@
     border-left: 2px solid transparent;
     text-decoration: none;
     color: var(--arch-text);
-    transition: all 0.1s;
-    position: relative;
     gap: var(--space-md-sm);
+    position: relative;
+    transition: all 0.1s;
 }
 
 .file-row:hover {
@@ -246,8 +240,7 @@
 
 .file-row.selected {
     background: color-mix(in srgb, var(--arch-accent), transparent 85%);
-    border-left-color: var(--arch-accent);
-    border-left-width: 3px;
+    border-left: 3px solid var(--arch-accent);
     padding-left: calc(var(--space-sm) - 1px);
 }
 
@@ -260,15 +253,12 @@
     color: var(--text-primary);
 }
 
-/* Keyboard focus distinct from mouse hover */
 .file-row:focus-visible {
     outline: none;
     background: color-mix(in srgb, var(--arch-accent), transparent 80%);
     border-left-color: var(--arch-accent);
     box-shadow: inset 0 0 0 1px var(--arch-accent);
 }
-
-
 
 .col-meta {
     display: flex;
@@ -302,24 +292,13 @@
     display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .col-tags {
         display: block;
     }
 }
 
-.cursor-indicator {
-    position: absolute;
-    left: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--arch-accent);
-    font-weight: bold;
-    font-family: monospace;
-    pointer-events: none;
-}
-
-/* --- 6. Grid View (Data Cards) --- */
+/* Grid View */
 .view-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -335,10 +314,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: 180px;
-    transition: all 0.2s;
     background: var(--bg-primary);
     position: relative;
     overflow: hidden;
+    transition: all 0.2s;
 }
 
 .grid-card:hover {
@@ -370,7 +349,7 @@
 }
 
 .card-body h3 {
-    margin: 0 0 var(--space-sm) 0;
+    margin: 0 0 var(--space-sm);
     font-size: var(--font-size-h3);
     line-height: 1.4;
     overflow: hidden;
@@ -402,7 +381,7 @@
     font-weight: bold;
 }
 
-/* --- Footer --- */
+/* Footer */
 .sys-footer {
     margin-top: var(--space-2xl);
     padding-top: var(--space-md);
@@ -413,9 +392,7 @@
     letter-spacing: 1px;
 }
 
-/* --- PHASE 2 ANIMATIONS --- */
-
-/* Search status feedback */
+/* Animations */
 .search-status {
     font-size: var(--font-size-xs);
     color: var(--arch-accent);
@@ -434,14 +411,11 @@
     }
 }
 
-/* File row scan-line hover effect */
 .file-row::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 0;
-    height: 100%;
     background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb, 37, 99, 235), 0.05), transparent);
     transition: width 0.3s ease;
     pointer-events: none;
@@ -451,7 +425,6 @@
     width: 100%;
 }
 
-/* Grid card scan effect */
 .grid-card::after {
     content: "";
     position: absolute;
@@ -467,19 +440,21 @@
     left: 100%;
 }
 
-/* ========================================
-   TABLET RANGE (481px - 768px)
-   ======================================== */
+/* Tablet (max-width: 768px) */
 @media (max-width: 768px) {
     .archive-root {
         padding: var(--space-md) var(--space-sm);
     }
 
-    /* HUD - Stack vertically */
     .archive-hud {
         flex-direction: column;
         gap: var(--space-md);
         align-items: flex-start;
+        margin-bottom: var(--space-md);
+    }
+
+    .hud-title {
+        font-size: var(--font-size-sm);
     }
 
     .hud-stats {
@@ -491,22 +466,22 @@
         align-items: flex-start;
     }
 
-    /* Heatmap - Fewer columns */
-    .heatmap-grid {
-        grid-template-columns: repeat(26, 1fr);
-        height: 10px;
+    .activity-section {
+        margin-bottom: var(--space-md);
     }
 
-    /* Control module */
+    .heatmap-grid {
+        grid-template-columns: repeat(26, 1fr);
+        height: 30px;
+    }
+
     .control-module {
         flex-direction: column;
         gap: var(--space-sm);
+        margin-bottom: var(--space-md);
     }
 
-    .search-wrapper {
-        width: 100%;
-    }
-
+    .search-wrapper,
     .view-toggles {
         width: 100%;
     }
@@ -517,9 +492,10 @@
         padding: var(--space-sm) var(--space-md-sm);
     }
 
-    /* Tag rail */
     .tag-rail {
         gap: var(--space-xxs);
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-md);
     }
 
     .tag-chip {
@@ -527,17 +503,21 @@
         padding: var(--space-xxs) var(--space-xs);
     }
 
-    /* File rows - 2 column layout */
     .file-row {
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 40px 1fr;
         gap: var(--space-xs);
+    }
+
+    .col-meta,
+    .col-title,
+    .col-title .ext {
+        font-size: var(--font-size-xs);
     }
 
     .col-meta .hash {
         display: none;
     }
 
-    /* Grid cards */
     .view-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: var(--space-sm);
@@ -552,37 +532,33 @@
         font-size: var(--font-size-body);
     }
 
-    /* Footer */
     .sys-footer {
         font-size: var(--font-size-xxs);
         margin-top: var(--space-lg);
     }
 }
 
-/* ========================================
-   SMALL PHONES (480px and below)
-   ======================================== */
+/* Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
     .archive-root {
-        padding: var(--space-sm) var(--space-xs);
+        padding: var(--space-xs);
         max-width: 100%;
         overflow-x: hidden;
     }
 
-    /* Hide decorative overlay */
     .grid-overlay {
         display: none;
     }
 
-    /* HUD - Compact horizontal stats */
     .archive-hud {
         font-size: var(--font-size-xxs);
         padding: var(--space-sm) 0;
-        margin-bottom: var(--space-md);
+        margin-bottom: var(--space-sm);
+        gap: var(--space-sm);
     }
 
     .hud-title {
-        font-size: var(--font-size-xxs);
+        font-size: var(--font-size-xs);
         gap: var(--space-xs);
     }
 
@@ -610,29 +586,19 @@
         font-size: var(--font-size-xs);
     }
 
-    /* Heatmap - Compact 6 columns */
-    .activity-section {
-        margin-bottom: var(--space-md);
-    }
-
     .section-label {
         font-size: var(--font-size-xxs);
     }
 
     .heatmap-grid {
-        grid-template-columns: repeat(12, 1fr);
-        height: 8px;
+        grid-template-columns: repeat(26, 1fr);
+        height: 30px;
         gap: 1px;
     }
 
-    /* Control module */
-    .control-module {
-        margin-bottom: var(--space-md);
-    }
-
     .search-wrapper {
-        padding: var(--space-xs) var(--space-sm);
-        font-size: var(--font-size-xs);
+        padding: var(--space-xs);
+        font-size: var(--font-size-xxs);
     }
 
     .search-wrapper .prompt {
@@ -645,18 +611,11 @@
         padding: var(--space-xs) var(--space-sm);
     }
 
-    /* Tag rail - wrap aggressively */
-    .tag-rail {
-        margin-bottom: var(--space-md);
-        padding-bottom: var(--space-md);
-    }
-
     .tag-chip {
         font-size: var(--font-size-xxs);
         padding: 2px 6px;
     }
 
-    /* File rows - Single column, title only */
     .file-row {
         grid-template-columns: 1fr;
         gap: 0;
@@ -668,23 +627,15 @@
         margin-bottom: 2px;
     }
 
-    .col-meta .hash {
-        display: none;
-    }
-
     .col-title {
         font-size: var(--font-size-xxs);
     }
 
+    .col-meta .hash,
     .col-title .ext {
         display: none;
     }
 
-    .cursor-indicator {
-        display: none;
-    }
-
-    /* Year blocks */
     .year-block {
         margin-bottom: var(--space-md);
     }
@@ -694,7 +645,6 @@
         margin-bottom: var(--space-sm);
     }
 
-    /* Grid cards - Smaller */
     .view-grid {
         grid-template-columns: 1fr;
         gap: var(--space-xs);
@@ -725,13 +675,11 @@
         padding-top: var(--space-sm);
     }
 
-    /* Empty state */
     .empty-buffer {
         font-size: var(--font-size-xs);
         padding: var(--space-lg);
     }
 
-    /* Footer */
     .sys-footer {
         font-size: var(--font-size-xxs);
         margin-top: var(--space-md);
@@ -739,11 +687,7 @@
     }
 }
 
-/* ========================================
-   ACCESSIBILITY & FOCUS STATES
-   ======================================== */
-
-/* Focus-visible outlines */
+/* Accessibility */
 .toggle-btn:focus-visible,
 .tag-chip:focus-visible,
 .file-row:focus-visible,
@@ -752,17 +696,14 @@
     outline-offset: 2px;
 }
 
-/* Search input focus */
 .search-wrapper input:focus {
     outline: none;
 }
 
-/* Active search glow */
 .search-wrapper:focus-within {
     box-shadow: 0 0 0 1px var(--arch-accent);
 }
 
-/* Screen reader only utility */
 .visually-hidden {
     position: absolute;
     width: 1px;

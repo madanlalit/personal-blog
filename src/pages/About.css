@@ -1,6 +1,6 @@
-/* src/pages/About.css - Polished Frame-Based Design */
+/* About Page Styles */
 
-/* --- Container --- */
+/* Container */
 .about-container {
     max-width: var(--content-max-width);
     margin: 0 auto;
@@ -8,10 +8,7 @@
     min-height: 100vh;
 }
 
-/* ===========================================
-   HERO FRAME
-   =========================================== */
-
+/* Hero Frame */
 .hero-frame {
     padding: var(--space-xl);
     position: relative;
@@ -20,13 +17,8 @@
 
 .hero-grid-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 40px 40px;
     opacity: 0.2;
     pointer-events: none;
@@ -39,13 +31,6 @@
     grid-template-columns: 1fr auto;
     gap: var(--space-xl);
     align-items: center;
-}
-
-@media (max-width: 768px) {
-    .hero-layout {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
 }
 
 .hero-main {
@@ -130,10 +115,9 @@
 
 .hero-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-md);
     margin-top: var(--space-md);
-    flex-wrap: wrap;
-    /* Safety for small screens */
 }
 
 .hero-btn {
@@ -142,7 +126,6 @@
     justify-content: center;
     gap: var(--space-sm);
     padding: 0.75rem 1.25rem;
-    /* Larger touch target */
     font-size: var(--font-size-xs);
     font-weight: 700;
     text-decoration: none;
@@ -182,18 +165,6 @@
     border-left: 1px solid var(--border);
 }
 
-@media (max-width: 768px) {
-    .hero-stats {
-        flex-direction: row;
-        padding-left: 0;
-        border-left: none;
-        border-top: 1px solid var(--border);
-        padding-top: var(--space-lg);
-        justify-content: space-around;
-        /* Better distribution on mobile */
-    }
-}
-
 .stat-item {
     display: flex;
     flex-direction: column;
@@ -226,10 +197,7 @@
     margin-bottom: var(--space-xs);
 }
 
-/* ===========================================
-   BIO FRAME
-   =========================================== */
-
+/* Bio Frame */
 .bio-frame {
     padding: var(--space-xl);
 }
@@ -238,7 +206,7 @@
     font-size: var(--font-size-body);
     color: var(--text-secondary);
     line-height: 1.8;
-    margin: 0 0 var(--space-md) 0;
+    margin: 0 0 var(--space-md);
     max-width: 700px;
 }
 
@@ -262,28 +230,18 @@
     font-size: var(--font-size-body);
     color: var(--text-secondary);
     background: var(--bg-secondary);
+    line-height: 1.7;
+    word-wrap: break-word;
 }
 
-/* ===========================================
-   TWO-COLUMN GRID
-   =========================================== */
-
+/* Two-Column Grid */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
 }
 
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===========================================
-   SKILLS FRAME
-   =========================================== */
-
+/* Skills */
 .skills-cloud {
     display: flex;
     flex-wrap: wrap;
@@ -336,10 +294,10 @@
 
 .skill-legend {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-md);
     padding-top: var(--space-sm);
     border-top: 1px dashed var(--border);
-    flex-wrap: wrap;
 }
 
 .legend-item {
@@ -369,10 +327,7 @@
     border-color: var(--border);
 }
 
-/* ===========================================
-   INTERESTS FRAME
-   =========================================== */
-
+/* Interests */
 .interests-grid {
     display: flex;
     flex-wrap: wrap;
@@ -404,10 +359,7 @@
     color: var(--accent);
 }
 
-/* ===========================================
-   EXPERIENCE FRAME
-   =========================================== */
-
+/* Experience */
 .exp-header {
     display: flex;
     justify-content: space-between;
@@ -495,10 +447,7 @@
     background: var(--bg-primary);
 }
 
-/* ===========================================
-   STATUS FRAME
-   =========================================== */
-
+/* Terminal */
 .terminal-window {
     border: 1px solid var(--border);
     overflow: hidden;
@@ -520,15 +469,15 @@
 }
 
 .terminal-dot.red {
-    background: #000;
+    background: var(--color-error);
 }
 
 .terminal-dot.yellow {
-    background: #000;
+    background: var(--color-warn);
 }
 
 .terminal-dot.green {
-    background: #000;
+    background: var(--accent);
 }
 
 .terminal-title {
@@ -565,10 +514,7 @@
     animation: cursorBlink 1s step-end infinite;
 }
 
-/* ===========================================
-   EDUCATION FRAME
-   =========================================== */
-
+/* Education */
 .edu-item {
     display: flex;
     align-items: flex-start;
@@ -603,10 +549,7 @@
     color: var(--text-tertiary);
 }
 
-/* ===========================================
-   CONNECT FRAME
-   =========================================== */
-
+/* Connect */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -645,21 +588,24 @@
     transform: scale(1.1);
 }
 
-/* ===========================================
-   RESPONSIVE
-   =========================================== */
-
+/* Tablet (768px) */
 @media (max-width: 768px) {
     .about-container {
         padding: var(--space-md);
     }
 
-    .about-frame {
+    .about-frame,
+    .bio-frame {
         padding: var(--space-md);
     }
 
     .hero-frame {
         padding: var(--space-lg);
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 
     .hero-actions {
@@ -670,19 +616,37 @@
         justify-content: center;
     }
 
+    .hero-stats {
+        flex-direction: row;
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-top: var(--space-lg);
+        justify-content: space-around;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-quote {
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--font-size-small);
+    }
+
     .frame-label {
         font-size: 0.6rem;
     }
 }
-/* ========================================
-   RESPONSIVE - MOBILE (480px)
-   ======================================== */
+
+/* Mobile (480px) */
 @media (max-width: 480px) {
     .about-container {
         padding: var(--space-md) var(--space-sm);
     }
 
-    .about-frame {
+    .about-frame,
+    .bio-frame {
         padding: var(--space-sm);
     }
 
@@ -695,13 +659,11 @@
     }
 
     .hero-actions {
-        flex-direction: column;
         gap: var(--space-sm);
     }
 
     .hero-btn {
         width: 100%;
-        justify-content: center;
         padding: 0.6rem 1rem;
         font-size: var(--font-size-xxs);
     }
@@ -710,20 +672,25 @@
         font-size: var(--font-size-xxs);
     }
 
+    .philosophy-quote {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--font-size-xs);
+        border-left-width: 2px;
+    }
+
     .social-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* ========================================
-   RESPONSIVE - ULTRA-SMALL (320px)
-   ======================================== */
+/* Ultra-small (320px) */
 @media (max-width: 320px) {
     .about-container {
         padding: var(--space-sm) var(--space-xs);
     }
 
-    .about-frame {
+    .about-frame,
+    .bio-frame {
         padding: var(--space-xs);
     }
 
@@ -776,18 +743,20 @@
         line-height: 1.6;
     }
 
-    .skill-tag {
+    .philosophy-quote {
+        padding: var(--space-xxs) var(--space-xs);
+        font-size: var(--font-size-xxs);
+        line-height: 1.5;
+    }
+
+    .skill-tag,
+    .interest-tag {
         font-size: 0.6rem;
         padding: 2px 4px;
     }
 
     .skill-legend {
         font-size: 0.55rem;
-    }
-
-    .interest-tag {
-        font-size: 0.6rem;
-        padding: 2px 4px;
     }
 
     .exp-timeline {

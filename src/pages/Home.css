@@ -1,4 +1,3 @@
-/* --- CONTAINER SETUP --- */
 .home-container {
     max-width: var(--content-max-width);
     margin: 0 auto;
@@ -8,13 +7,25 @@
     flex-direction: column;
 }
 
-/* --- HERO SECTION --- */
+.sys-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    flex: 1;
+}
+
+.grid-sidebar,
+.grid-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .hero-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: var(--space-xl);
-    /* More breathing room */
     padding-bottom: var(--space-lg);
     border-bottom: 1px solid var(--border);
 }
@@ -25,7 +36,6 @@
 
 .hero-title {
     font-size: var(--font-size-hero);
-    /* Use global hero size */
     line-height: 1.1;
     margin: 0 0 0.75rem 0;
     letter-spacing: -0.03em;
@@ -41,13 +51,10 @@
     color: var(--text-secondary);
     margin: 0;
     max-width: 550px;
-    /* Slightly wider for modern screens */
     height: 1.5em;
-    /* Prevent layout shift on type */
     line-height: 1.5;
 }
 
-/* New: Hero Actions */
 .hero-actions {
     display: flex;
     gap: 1rem;
@@ -71,12 +78,12 @@
     border-color: var(--accent);
     color: var(--accent);
     background: rgba(168, 185, 168, 0.05);
-    /* Very subtle tint */
 }
 
 .hero-btn.primary:hover {
     background: var(--accent);
     color: var(--bg-primary);
+    animation: btnGlitch 0.3s ease;
 }
 
 .hero-btn.secondary {
@@ -133,564 +140,6 @@
     color: var(--accent);
 }
 
-/* --- MAIN GRID (250px Sidebar / Rest Main) --- */
-.sys-grid {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 2rem;
-    flex: 1;
-}
-
-/* ========================================
-   TABLET RANGE (480px - 960px)
-   ======================================== */
-@media (max-width: 960px) and (min-width: 769px) {
-    .home-container {
-        padding: var(--space-md);
-    }
-
-    .sys-grid {
-        grid-template-columns: 200px 1fr;
-        gap: 1.5rem;
-    }
-
-    /* Hero adjustments for tablets */
-    .hero-section {
-        margin-bottom: 2rem;
-    }
-
-    .hero-title {
-        font-size: clamp(1.75rem, 5vw, 2.5rem);
-    }
-
-    .hero-telemetry {
-        font-size: 0.7rem;
-    }
-
-    .tele-row {
-        gap: 0.75rem;
-    }
-
-    /* Sidebar adjustments */
-    .grid-sidebar {
-        gap: 1.5rem;
-    }
-
-    .availability-beacon {
-        padding: 0.75rem;
-    }
-
-    .status-label {
-        font-size: 0.65rem;
-    }
-
-    .skill-info {
-        font-size: 0.7rem;
-    }
-
-    .comm-link {
-        font-size: 0.65rem;
-        padding: 0.5rem 0.25rem;
-    }
-
-    /* Main content adjustments */
-    .mod-header {
-        font-size: 0.7rem;
-    }
-
-    .system-log-terminal {
-        font-size: 0.75rem;
-        padding: 0.75rem;
-    }
-
-    .heatmap-strip {
-        gap: 3px;
-    }
-
-    .heat-bit {
-        height: 14px;
-    }
-
-    /* Timeline/Posts */
-    .clean-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .clean-card p {
-        font-size: 0.8rem;
-    }
-
-    /* Footer */
-    .sys-footer {
-        font-size: 0.7rem;
-    }
-}
-
-/* On Tablet/Mobile -> Stack */
-@media (max-width: 768px) {
-    .home-container {
-        padding: var(--space-md) var(--space-sm);
-        overflow-x: hidden;
-    }
-
-    .sys-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    /* Reorder: Show main content FIRST, then sidebar */
-    .grid-main {
-        order: 1;
-    }
-
-    .grid-sidebar {
-        order: 2;
-    }
-
-    /* --- HERO MOBILE --- */
-    .hero-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .hero-title {
-        font-size: clamp(2rem, 10vw, 3rem);
-        /* Larger punchy mobile title */
-        letter-spacing: -0.03em;
-        line-height: 1.1;
-    }
-
-    .hero-subtitle {
-        font-size: var(--font-size-body);
-        max-width: 100%;
-        line-height: 1.4;
-    }
-
-    .hero-actions {
-        flex-direction: row;
-        width: 100%;
-        gap: 0.75rem;
-        margin-top: 1rem;
-    }
-
-    .hero-btn {
-        flex: 1;
-        justify-content: center;
-        padding: 0.75rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    .hero-telemetry {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* Grid layout for neatness */
-        text-align: center;
-        padding: 0.75rem;
-        border: 1px solid var(--border);
-        /* Subtle background */
-        gap: 0;
-        margin-top: 0.5rem;
-    }
-
-    .tele-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        font-size: 0.7rem;
-        justify-content: center;
-        border-right: 1px solid var(--border);
-        /* Dividers */
-    }
-
-    .tele-row:last-child {
-        border-right: none;
-    }
-
-    /* --- SIDEBAR MOBILE --- */
-    .grid-sidebar {
-        gap: 1rem;
-    }
-
-    .availability-beacon {
-        padding: 0.6rem;
-    }
-
-    .status-label {
-        font-size: 0.65rem;
-    }
-
-    .status-sub {
-        font-size: 0.55rem;
-    }
-
-    .skill-row {
-        gap: 4px;
-    }
-
-    .skill-track {
-        height: 5px;
-    }
-
-    .skill-info {
-        font-size: 0.65rem;
-    }
-
-    .comm-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.25rem;
-    }
-
-    .comm-link {
-        padding: 0.5rem 0.25rem;
-        font-size: 0.6rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    /* --- MAIN CONTENT MOBILE --- */
-    .grid-main {
-        gap: 1rem;
-    }
-
-    .sys-module {
-        overflow: hidden;
-    }
-
-    .system-log-terminal {
-        padding: 0.6rem;
-        font-size: 0.65rem;
-        overflow-x: hidden;
-    }
-
-    .log-row {
-        flex-wrap: wrap;
-        gap: 0.25rem;
-    }
-
-    .log-time {
-        font-size: 0.6rem;
-    }
-
-    .log-type {
-        min-width: 40px;
-        font-size: 0.6rem;
-    }
-
-    .log-msg {
-        width: 100%;
-        word-break: break-word;
-        font-size: 0.65rem;
-    }
-
-    /* --- HEATMAP MOBILE --- */
-    .heatmap-strip {
-        grid-template-columns: repeat(10, 1fr);
-        gap: 2px;
-    }
-
-    .heat-bit {
-        width: 100%;
-        height: 14px;
-        aspect-ratio: 1;
-    }
-
-    /* --- TIMELINE / BLOG POSTS MOBILE --- */
-    .timeline-entry {
-        padding-bottom: 1rem;
-    }
-
-    .timeline-marker {
-        display: none;
-    }
-
-    .timeline-content {
-        width: 100%;
-    }
-
-    .clean-card h3 {
-        font-size: 1rem;
-        word-break: break-word;
-    }
-
-    .clean-card p {
-        font-size: 0.8rem;
-    }
-
-    /* --- FOOTER MOBILE --- */
-    .sys-footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 1.5rem;
-        text-align: center;
-        font-size: 0.65rem;
-    }
-
-    .f-left,
-    .f-right {
-        justify-content: center;
-    }
-
-    /* --- NEWSLETTER MOBILE --- */
-    .nl-form {
-        flex-direction: column;
-    }
-
-    .nl-form input,
-    .nl-form button {
-        width: 100%;
-        padding: 0.6rem;
-    }
-
-    /* --- MODULE HEADERS MOBILE --- */
-    .mod-header {
-        font-size: 0.6rem;
-        flex-wrap: wrap;
-        gap: 0.25rem;
-        overflow: hidden;
-    }
-
-    .mod-meta {
-        font-size: 0.55rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        max-width: 100px;
-    }
-
-    .hero-main {
-        width: 100%;
-    }
-}
-
-/* Small phones (under 480px) - STRICT NO HORIZONTAL SCROLL */
-
-@media (max-width: 480px) {
-    /* Global overflow prevention */
-
-    html,
-    body {
-        overflow-x: hidden !important;
-
-        max-width: 100vw !important;
-    }
-
-    .home-container {
-        padding: var(--space-xs);
-
-        overflow-x: hidden;
-
-        max-width: 100%;
-
-        width: 100%;
-    }
-
-    /* Strict sys-grid constraints */
-
-    .sys-grid {
-        max-width: 100%;
-
-        width: 100%;
-
-        overflow-x: hidden;
-    }
-
-    .grid-main,
-    .grid-sidebar {
-        max-width: 100%;
-
-        overflow-x: hidden;
-    }
-
-    .sys-module {
-        max-width: 100%;
-
-        overflow-x: hidden;
-    }
-
-    /* Hero optimizations */
-
-    .hero-section {
-        gap: 0.75rem;
-
-        margin-bottom: 1rem;
-
-        max-width: 100%;
-    }
-
-    .hero-title {
-        font-size: var(--font-size-title);
-
-        word-break: break-word;
-
-        overflow-wrap: break-word;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .hero-btn {
-        width: 100%;
-
-        font-size: var(--font-size-xxs);
-
-        padding: 0.5rem;
-    }
-
-    .hero-telemetry {
-        padding: 0.4rem;
-
-        gap: 0.25rem;
-
-        max-width: 100%;
-    }
-
-    .tele-row {
-        font-size: var(--font-size-xxs);
-    }
-
-    .t-label {
-        font-size: var(--font-size-xxs);
-    }
-
-    /* Hide decorative elements */
-
-    .beacon-ring {
-        display: none;
-    }
-
-    /* Heatmap - 6 columns to fit small screens */
-
-    .heatmap-strip {
-        grid-template-columns: repeat(6, 1fr);
-
-        max-width: 100%;
-    }
-
-    .heat-bit {
-        height: 12px;
-    }
-
-    /* Comm links */
-
-    .comm-link {
-        font-size: var(--font-size-xxs);
-
-        padding: 0.4rem 0.1rem;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-    }
-
-    /* System log */
-
-    .system-log-terminal {
-        font-size: var(--font-size-xxs);
-
-        padding: 0.5rem;
-
-        max-width: 100%;
-
-        overflow-x: hidden;
-    }
-
-    .log-time {
-        display: none;
-    }
-
-    .log-row {
-        max-width: 100%;
-    }
-
-    .log-type {
-        min-width: 35px;
-    }
-
-    .log-msg {
-        word-break: break-word;
-
-        overflow-wrap: break-word;
-    }
-
-    /* Headers */
-
-    .mod-header {
-        font-size: var(--font-size-xxs);
-
-        max-width: 100%;
-
-        overflow: hidden;
-    }
-
-    .mod-meta {
-        display: none;
-    }
-
-    /* Cards and timeline */
-
-    .clean-card h3 {
-        font-size: var(--font-size-small);
-
-        word-break: break-word;
-    }
-
-    .timeline-content {
-        max-width: 100%;
-
-        overflow: hidden;
-    }
-
-    /* Skills */
-
-    .skill-info {
-        font-size: var(--font-size-xxs);
-    }
-
-    /* Post cards */
-
-    .post-card {
-        max-width: 100%;
-
-        overflow: hidden;
-    }
-
-    .post-title {
-        word-break: break-word;
-
-        overflow-wrap: break-word;
-    }
-
-    .post-excerpt {
-        word-break: break-word;
-    }
-
-    .post-tags {
-        flex-wrap: wrap !important;
-
-        max-width: 100%;
-    }
-}
-
-.grid-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.grid-main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-/* --- GENERIC MODULE STYLES --- */
 .sys-module {
     display: flex;
     flex-direction: column;
@@ -725,9 +174,6 @@
     margin-bottom: 1rem;
 }
 
-/* --- SIDEBAR MODULES --- */
-
-/* 1. Availability Beacon */
 .availability-beacon {
     display: flex;
     align-items: center;
@@ -749,9 +195,12 @@
     width: 8px;
     height: 8px;
     background: var(--accent);
-    /* Green */
     border-radius: 50%;
     z-index: 2;
+}
+
+.beacon-dot.pulse {
+    animation: beaconGlow 2s ease-in-out infinite;
 }
 
 .beacon-ring {
@@ -762,14 +211,6 @@
     border-radius: 50%;
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
     opacity: 0.5;
-}
-
-@keyframes ping {
-    75%,
-    100% {
-        transform: scale(2);
-        opacity: 0;
-    }
 }
 
 .beacon-text {
@@ -799,7 +240,6 @@
     background: transparent;
     border: 1px solid var(--border);
     border-top: none;
-    /* Connect to box above */
     color: var(--text-secondary);
     font-size: var(--font-size-xxs);
     font-weight: bold;
@@ -812,7 +252,6 @@
     color: var(--accent);
 }
 
-/* 2. Skill Monitor */
 .skill-monitor {
     display: flex;
     flex-direction: column;
@@ -845,20 +284,16 @@
 .skill-fill {
     height: 100%;
     background: var(--text-tertiary);
-    /* Default subtle fill */
-    transition: width 1s ease-out;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Make top skills accented */
-.skill-row:nth-child(1) .skill-fill,
-.skill-row:nth-child(2) .skill-fill {
+.skill-row:nth-child(-n+2) .skill-fill {
     background: var(--accent);
 }
 
-/* 3. Comm Ports */
 .comm-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
 }
 
@@ -878,9 +313,6 @@
     background: var(--bg-secondary);
 }
 
-/* --- MAIN MODULES --- */
-
-/* 4. Live System Log */
 .system-log-terminal {
     border: 1px solid var(--border);
     padding: 1rem;
@@ -889,7 +321,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* Optional: Fixed height or auto */
 }
 
 .log-row {
@@ -917,15 +348,12 @@
 }
 
 .log-type.WARN {
-    color: #000;
+    color: var(--color-warn);
 }
 
-/* Amber */
 .log-type.ERROR {
-    color: #ff5555;
+    color: var(--color-error);
 }
-
-/* Red */
 
 .log-msg {
     color: var(--text-primary);
@@ -936,15 +364,44 @@
     margin-top: 0.25rem;
 }
 
-/* 5. Activity Heatmap */
+.log-hidden {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.log-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.activity-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
 .heatmap-strip {
     display: grid;
-    /* This forces exactly 30 columns to fill 100% of the width */
     grid-template-columns: repeat(30, 1fr);
     gap: 3px;
 }
 
-/* 6. Logs Timeline */
+.heat-bit {
+    background: var(--text-tertiary);
+    transition: opacity 0.3s;
+    width: 16px;
+    height: 16px;
+}
+
+.loading-text {
+    color: var(--text-tertiary);
+    font-size: var(--font-size-xs);
+    padding: 1rem 0;
+    text-align: center;
+    animation: blink 1.5s infinite;
+}
+
 .timeline-entry {
     display: flex;
     gap: 1rem;
@@ -995,16 +452,16 @@
     background: var(--accent);
 }
 
+.timeline-entry:hover .clean-card h3 {
+    color: var(--accent);
+}
+
 .clean-card h3,
 .clean-card h2 {
     font-size: var(--font-size-subtitle);
     margin: 0 0 0.25rem 0;
     font-weight: 600;
     color: var(--text-primary);
-}
-
-.timeline-entry:hover .clean-card h3 {
-    color: var(--accent);
 }
 
 .clean-card .date {
@@ -1014,7 +471,23 @@
     margin-bottom: 2px;
 }
 
-/* 7. Newsletter */
+.clean-card p {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clean-card .post-card {
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 .newsletter-box {
     background: var(--bg-secondary);
     border: 1px dashed var(--border);
@@ -1091,35 +564,370 @@
     color: var(--border);
 }
 
-.heat-bit {
-    background: var(--text-tertiary);
-    transition: opacity 0.3s;
-    width: 16px;
-    height: 16px;
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
-.loading-text {
-    color: var(--text-tertiary);
-    font-size: var(--font-size-xs);
-    padding: 1rem 0;
-    text-align: center;
-    animation: blink 1.5s infinite;
+@keyframes beaconGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(168, 185, 168, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 8px 4px rgba(168, 185, 168, 0.2);
+    }
 }
 
-/* --- Updates to previous classes for fit --- */
-.activity-wrapper {
-    /* Ensure it stands out as the dynamic part */
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+@keyframes btnGlitch {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-1px, 1px);
+    }
+
+    50% {
+        transform: translate(1px, -1px);
+    }
+
+    75% {
+        transform: translate(-1px, -1px);
+    }
 }
 
-/* ========================================
-   ACTIVITY WRAPPER RESPONSIVE
-   ======================================== */
+@keyframes cursorBlink {
 
-/* Tablets (768px) */
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: cursorBlink 1s step-end infinite;
+}
+
+@media (max-width: 960px) and (min-width: 769px) {
+    .home-container {
+        padding: var(--space-md);
+    }
+
+    .sys-grid {
+        grid-template-columns: 150px 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-section {
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    .hero-telemetry {
+        font-size: 0.7rem;
+    }
+
+    .tele-row {
+        gap: 0.75rem;
+    }
+
+    .grid-sidebar {
+        gap: 1.5rem;
+    }
+
+    .availability-beacon {
+        padding: 0.75rem !important;
+        gap: 0.5rem !important;
+        font-size: var(--font-size-xxs) !important;
+    }
+
+    .status-label {
+        font-size: var(--font-size-xxs) !important;
+    }
+
+    .skill-info {
+        font-size: 0.7rem;
+    }
+
+    .comm-link {
+        font-size: 0.65rem;
+    }
+
+    .mod-header {
+        font-size: 0.7rem;
+    }
+
+    .system-log-terminal {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .heatmap-strip {
+        gap: 3px;
+    }
+
+    .heat-bit {
+        height: 14px;
+    }
+
+    .clean-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .clean-card p {
+        font-size: 0.8rem;
+    }
+
+    .sys-footer {
+        font-size: 0.7rem;
+    }
+}
+
+/* ===========================================
+   RESPONSIVE - TABLET/MOBILE (≤768px)
+   =========================================== */
 @media (max-width: 768px) {
+    .home-container {
+        padding: var(--space-md) var(--space-sm);
+        overflow-x: hidden;
+    }
+
+    .sys-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .grid-main {
+        order: 1;
+    }
+
+    .grid-sidebar {
+        order: 2;
+        gap: 1rem;
+    }
+
+    /* Hero */
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-main {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-body);
+        max-width: 100%;
+        line-height: 1.4;
+    }
+
+    .hero-actions {
+        width: 100%;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .hero-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-telemetry {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        padding: 0.75rem;
+        border: 1px solid var(--border);
+        gap: 0;
+        margin-top: 0.5rem;
+    }
+
+    .tele-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.7rem;
+        justify-content: center;
+        border-right: 1px solid var(--border);
+    }
+
+    .tele-row:last-child {
+        border-right: none;
+    }
+
+    /* Sidebar */
+    .availability-beacon {
+        padding: 0.6rem;
+    }
+
+    .status-label {
+        font-size: 0.65rem;
+    }
+
+    .status-sub {
+        font-size: 0.55rem;
+    }
+
+    .skill-row {
+        gap: 4px;
+    }
+
+    .skill-track {
+        height: 5px;
+    }
+
+    .skill-info {
+        font-size: 0.65rem;
+    }
+
+    .comm-grid {
+        gap: 0.25rem;
+    }
+
+    .comm-link {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Main Content */
+    .grid-main {
+        gap: 1rem;
+    }
+
+    .sys-module {
+        overflow: hidden;
+    }
+
+    .system-log-terminal {
+        padding: 0.6rem;
+        font-size: 0.65rem;
+        overflow-x: hidden;
+    }
+
+    .log-row {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .log-time {
+        font-size: 0.6rem;
+    }
+
+    .log-type {
+        min-width: 40px;
+        font-size: 0.6rem;
+    }
+
+    .log-msg {
+        width: 100%;
+        word-break: break-word;
+        font-size: 0.65rem;
+    }
+
+    .heatmap-strip {
+        grid-template-columns: repeat(15, 1fr);
+        gap: 3px;
+    }
+
+    .heat-bit {
+        width: 100%;
+        height: 14px;
+        aspect-ratio: 1;
+    }
+
+    .timeline-entry {
+        padding-bottom: 1rem;
+    }
+
+    .timeline-marker {
+        display: none;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .clean-card h3 {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .clean-card p {
+        font-size: 0.8rem;
+    }
+
+    /* Footer & Newsletter */
+    .sys-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: 0.65rem;
+    }
+
+    .f-left,
+    .f-right {
+        justify-content: center;
+    }
+
+    .nl-form {
+        flex-direction: column;
+    }
+
+    .nl-form input,
+    .nl-form button {
+        width: 100%;
+        padding: 0.6rem;
+    }
+
+    /* Module Headers */
+    .mod-header {
+        font-size: 0.6rem;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        overflow: hidden;
+    }
+
+    .mod-meta {
+        font-size: 0.55rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100px;
+    }
+
+    /* Activity Wrapper */
     .activity-wrapper {
         padding: 0;
     }
@@ -1127,14 +935,143 @@
     .activity-wrapper .mod-header {
         margin-bottom: 0.75rem;
     }
-
-    .activity-wrapper .heatmap-strip {
-        gap: 3px;
-    }
 }
 
-/* Mobile phones (480px) */
+/* ===========================================
+   RESPONSIVE - SMALL PHONES (≤480px)
+   =========================================== */
 @media (max-width: 480px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    .home-container {
+        padding: var(--space-xs);
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sys-grid,
+    .grid-main,
+    .grid-sidebar,
+    .sys-module {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Hero */
+    .hero-section {
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-title);
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+        font-size: var(--font-size-xxs);
+        padding: 0.5rem;
+    }
+
+    .hero-telemetry {
+        padding: 0.4rem;
+        gap: 0.25rem;
+    }
+
+    .tele-row,
+    .t-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    /* Elements */
+    .beacon-ring {
+        display: none;
+    }
+
+    .heatmap-strip {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .heat-bit {
+        height: 12px;
+    }
+
+    .comm-link {
+        font-size: var(--font-size-xxs);
+        padding: 0.4rem 0.1rem;
+    }
+
+    .system-log-terminal {
+        font-size: var(--font-size-xxs);
+        padding: 0.5rem;
+    }
+
+    .log-time {
+        display: none;
+    }
+
+    .log-row {
+        max-width: 100%;
+    }
+
+    .log-type {
+        min-width: 35px;
+    }
+
+    .log-msg {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .mod-header {
+        font-size: var(--font-size-xxs);
+    }
+
+    .mod-meta {
+        display: none;
+    }
+
+    .clean-card h3 {
+        font-size: var(--font-size-small);
+    }
+
+    .timeline-content {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .skill-info {
+        font-size: var(--font-size-xxs);
+    }
+
+    .post-card {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .post-title,
+    .post-excerpt {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .post-tags {
+        flex-wrap: wrap !important;
+        max-width: 100%;
+    }
+
+    /* Activity Wrapper */
     .activity-wrapper {
         margin-bottom: 0.5rem;
     }
@@ -1149,8 +1086,8 @@
     }
 
     .activity-wrapper .heatmap-strip {
-        grid-template-columns: repeat(10, 1fr);
-        gap: 2px;
+        grid-template-columns: repeat(15, 1fr);
+        gap: 1px;
     }
 
     .activity-wrapper .heat-bit {
@@ -1159,15 +1096,21 @@
     }
 }
 
-/* Very small phones (360px) */
+/* ===========================================
+   RESPONSIVE - VERY SMALL PHONES (≤360px)
+   =========================================== */
 @media (max-width: 360px) {
+    .hero-btn.primary {
+        margin-top: var(--space-xs);
+    }
+
     .activity-wrapper .mod-header {
         font-size: 0.5rem;
     }
 
     .activity-wrapper .heatmap-strip {
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1px;
+        grid-template-columns: repeat(15, 1fr);
+        gap: 2px;
     }
 
     .activity-wrapper .heat-bit {
@@ -1175,117 +1118,9 @@
     }
 }
 
-/* Ensure PostCard is minimal (same as before) */
-.clean-card .post-card {
-    margin: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-.clean-card h3 {
-    font-size: var(--font-size-subtitle);
-    margin: 0 0 0.25rem 0;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.clean-card p {
-    font-size: var(--font-size-small);
-    color: var(--text-secondary);
-    line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* --- PHASE 1 ANIMATIONS --- */
-
-/* Skill bar animation */
-.skill-fill {
-    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* Log typing effect */
-.log-hidden {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.log-visible {
-    opacity: 1;
-    transform: translateX(0);
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-/* Enhanced beacon pulse */
-.beacon-dot.pulse {
-    animation: beaconGlow 2s ease-in-out infinite;
-}
-
-@keyframes beaconGlow {
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 rgba(168, 185, 168, 0.4);
-    }
-
-    50% {
-        box-shadow: 0 0 8px 4px rgba(168, 185, 168, 0.2);
-    }
-}
-
-/* Hero button hover scramble */
-.hero-btn.primary:hover {
-    animation: btnGlitch 0.3s ease;
-}
-
-@keyframes btnGlitch {
-    0% {
-        transform: translate(0);
-    }
-
-    20% {
-        transform: translate(-1px, 1px);
-    }
-
-    40% {
-        transform: translate(1px, -1px);
-    }
-
-    60% {
-        transform: translate(-1px, -1px);
-    }
-
-    80% {
-        transform: translate(1px, 1px);
-    }
-
-    100% {
-        transform: translate(0);
-    }
-}
-
-/* Blinking cursor */
-.blink {
-    animation: cursorBlink 1s step-end infinite;
-}
-
-@keyframes cursorBlink {
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-/* ========================================
-   ULTRA-SMALL DEVICES (320px) - iPhone SE
-   ======================================== */
+/* ===========================================
+   RESPONSIVE - ULTRA-SMALL (≤320px)
+   =========================================== */
 @media (max-width: 320px) {
     .home-container {
         padding: 2px;

@@ -129,11 +129,11 @@ function App() {
           {/* Main Content - No Sidebar here! */}
           <div
             className="main-layout"
-            style={{ flex: 1, overflow: "hidden", display: "flex" }}
+            style={{ flex: 1, display: "flex" }}
           >
             <main
               className="content-area"
-              style={{ flex: 1, padding: "20px", overflowY: "auto" }}
+              style={{ flex: 1, padding: "20px" }}
             >
               <Suspense fallback={<PageLoader />}>
                 <Routes>

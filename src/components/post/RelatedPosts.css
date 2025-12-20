@@ -1,4 +1,4 @@
-/* Related Posts - Bordered Frame Design */
+/* Related Posts */
 .related-posts {
     position: relative;
     border: 1px solid var(--border);
@@ -21,12 +21,11 @@
 .related-card {
     padding: var(--space-md);
     border: 1px solid var(--border);
-    border-radius: 0;
-    transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .related-card:hover {
@@ -77,12 +76,14 @@
     margin: 0;
 }
 
+/* Tablet (768px) */
 @media (max-width: 768px) {
     .related-list {
         grid-template-columns: 1fr;
     }
 }
 
+/* Mobile (480px) */
 @media (max-width: 480px) {
     .related-posts {
         padding: var(--space-sm);
@@ -94,5 +95,30 @@
 
     .related-excerpt {
         font-size: var(--font-size-xxs);
+    }
+}
+
+/* Ultra-small (320px) */
+@media (max-width: 320px) {
+    .related-posts {
+        padding: var(--space-xs);
+    }
+
+    .related-card {
+        padding: var(--space-sm);
+        gap: var(--space-xs);
+    }
+
+    .related-meta {
+        font-size: var(--font-size-xxs);
+    }
+
+    .related-title {
+        font-size: var(--font-size-xxs);
+    }
+
+    .related-excerpt {
+        font-size: var(--font-size-xxs);
+        line-height: 1.4;
     }
 }

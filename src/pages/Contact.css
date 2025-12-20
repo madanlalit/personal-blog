@@ -270,7 +270,7 @@
 /* Validation errors */
 .validation-error {
     font-size: var(--font-size-xxs);
-    color: #ff5555;
+    color: var(--color-error);
     margin-top: var(--space-sm);
     font-family: var(--font-primary);
     font-weight: 600;
@@ -294,7 +294,7 @@
 }
 
 .input-error {
-    border-color: #ff5555 !important;
+    border-color: var(--color-error) !important;
 }
 
 /* Transmit state */
@@ -333,6 +333,7 @@
         padding: var(--space-md);
     }
 }
+
 /* ========================================
    RESPONSIVE - MOBILE (480px)
    ======================================== */

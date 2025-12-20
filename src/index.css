@@ -28,6 +28,12 @@
   --selection-bg: #3E4451;
   --selection-text: #FFFFFF;
 
+  /* Status Colors */
+  --color-success: var(--accent);
+  --color-warn: #FFA500;
+  --color-error: #FF5555;
+  --color-info: var(--text-secondary);
+
   /* Typography - Monospace */
   --font-primary: 'JetBrains Mono', monospace;
   --font-serif: 'JetBrains Mono', monospace;
@@ -246,11 +252,6 @@ body {
   body {
     scrollbar-width: none;
     -ms-overflow-style: none;
-  }
-
-  /* Prevent iOS zoom on inputs */
-  input, select, textarea {
-    font-size: 16px !important;
   }
 }
 

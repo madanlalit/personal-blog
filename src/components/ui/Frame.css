@@ -80,7 +80,7 @@
 
 @media (max-width: 480px) {
     .sys-frame {
-        padding: var(--space-sm);
+        padding: var(--space-md) !important;
     }
 }
 
@@ -88,11 +88,12 @@
     .sys-frame {
         padding: var(--space-xs);
     }
-    
+
     .frame-label {
-        font-size: 0.55rem; /* Or xxs if we standardized */
+        font-size: 0.55rem;
+        /* Or xxs if we standardized */
     }
-    
+
     .frame-corner {
         width: 6px;
         height: 6px;

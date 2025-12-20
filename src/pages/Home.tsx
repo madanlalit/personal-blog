@@ -281,7 +281,7 @@ const Home: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                X / TW
+                X
               </a>
             </div>
           </div>

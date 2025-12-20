@@ -1,4 +1,4 @@
-/* Post Navigation - Bordered Frame Design */
+/* Post Navigation */
 .post-navigation {
     position: relative;
     border: 1px solid var(--border);
@@ -37,10 +37,9 @@
     gap: var(--space-md);
     padding: var(--space-md);
     border: 1px solid var(--border);
-    border-radius: 0;
-    transition: all 0.2s ease;
     max-width: 320px;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .nav-link:hover {
@@ -86,6 +85,7 @@
     min-width: 100px;
 }
 
+/* Tablet (768px) */
 @media (max-width: 768px) {
     .nav-inner {
         flex-direction: column;
@@ -105,6 +105,7 @@
     }
 }
 
+/* Mobile (480px) */
 @media (max-width: 480px) {
     .post-navigation {
         padding: var(--space-sm);
@@ -117,5 +118,25 @@
 
     .nav-title {
         font-size: var(--font-size-xs);
+    }
+}
+
+/* Ultra-small (320px) */
+@media (max-width: 320px) {
+    .post-navigation {
+        padding: var(--space-xs);
+    }
+
+    .nav-link {
+        padding: var(--space-xs);
+        gap: var(--space-xs);
+    }
+
+    .nav-label {
+        font-size: var(--font-size-xxs);
+    }
+
+    .nav-title {
+        font-size: var(--font-size-xxs);
     }
 }

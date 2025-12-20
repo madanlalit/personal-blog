@@ -16,35 +16,37 @@
   flex-direction: column;
   /* Mobile first */
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
-.content-area {
-  flex: 1;
-  width: 100%;
-  padding: var(--space-lg);
-  overflow-y: scroll;
-}
 
-.content-area::-webkit-scrollbar {
+.main-layout::-webkit-scrollbar {
   width: 14px;
   background: var(--bg-primary);
   border-left: 1px solid var(--border);
 }
 
-.content-area::-webkit-scrollbar-track {
+.main-layout::-webkit-scrollbar-track {
   background: var(--bg-primary);
   border-radius: 0;
 }
 
-.content-area::-webkit-scrollbar-thumb {
+.main-layout::-webkit-scrollbar-thumb {
   background-color: var(--text-primary);
   border: none;
   border-radius: 0;
 }
 
-.content-area::-webkit-scrollbar-thumb:hover {
+.main-layout::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-primary);
+}
+
+.content-area {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-lg);
 }
 
 @media (min-width: 1024px) {

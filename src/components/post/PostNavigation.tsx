@@ -4,10 +4,18 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { Post } from '../../types';
 import './PostNavigation.css';
 
-interface PostNavigationProps {
-    currentPost: Post;
-    allPosts: Post[];
-}
+interface PostNavigationProps { currentPost: Post; allPosts: Post[]; }
+
+const NavLink = ({ post, direction }: { post: Post; direction: 'prev' | 'next' }) => (
+    <Link to={`/post/${post.id}`} className="nav-link">
+        {direction === 'prev' && <ChevronLeft size={16} />}
+        <div className="nav-content">
+            <span className="nav-label">{direction === 'prev' ? '← PREVIOUS' : 'NEXT →'}</span>
+            <span className="nav-title">{post.title}</span>
+        </div>
+        {direction === 'next' && <ChevronRight size={16} />}
+    </Link>
+);
 
 const PostNavigation: React.FC<PostNavigationProps> = ({ currentPost, allPosts }) => {
     const currentIndex = allPosts.findIndex(p => p.id === currentPost.id);
@@ -16,43 +24,13 @@ const PostNavigation: React.FC<PostNavigationProps> = ({ currentPost, allPosts }
 
     return (
         <nav className="post-navigation post-frame">
-            <div className="frame-corner topleft"></div>
-            <div className="frame-corner topright"></div>
-            <div className="frame-corner bottomleft"></div>
-            <div className="frame-corner bottomright"></div>
-
+            <div className="frame-corner topleft" /><div className="frame-corner topright" />
+            <div className="frame-corner bottomleft" /><div className="frame-corner bottomright" />
             <div className="frame-label">NAVIGATION</div>
-
             <div className="nav-inner">
-                <div className="nav-item prev">
-                    {prevPost ? (
-                        <Link to={`/post/${prevPost.id}`} className="nav-link">
-                            <ChevronLeft size={16} />
-                            <div className="nav-content">
-                                <span className="nav-label">← PREVIOUS</span>
-                                <span className="nav-title">{prevPost.title}</span>
-                            </div>
-                        </Link>
-                    ) : (
-                        <div className="nav-placeholder" />
-                    )}
-                </div>
-
+                <div className="nav-item prev">{prevPost ? <NavLink post={prevPost} direction="prev" /> : <div className="nav-placeholder" />}</div>
                 <div className="nav-separator">│</div>
-
-                <div className="nav-item next">
-                    {nextPost ? (
-                        <Link to={`/post/${nextPost.id}`} className="nav-link">
-                            <div className="nav-content">
-                                <span className="nav-label">NEXT →</span>
-                                <span className="nav-title">{nextPost.title}</span>
-                            </div>
-                            <ChevronRight size={16} />
-                        </Link>
-                    ) : (
-                        <div className="nav-placeholder" />
-                    )}
-                </div>
+                <div className="nav-item next">{nextPost ? <NavLink post={nextPost} direction="next" /> : <div className="nav-placeholder" />}</div>
             </div>
         </nav>
     );
