@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import Commander from "./features/terminal/Commander";
@@ -15,16 +15,29 @@ import useKonamiCode from "./hooks/useKonamiCode";
 import { useTheme } from "./hooks/useTheme";
 import { usePosts } from "./hooks/usePosts";
 import { HelmetProvider } from "react-helmet-async";
-
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Archive from "./pages/Archive";
-
-import Post from "./pages/Post";
-import TagArchive from "./pages/TagArchive";
-import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
 import "./App.css";
+
+// Lazy load pages for code splitting
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Archive = lazy(() => import("./pages/Archive"));
+const Post = lazy(() => import("./pages/Post"));
+const TagArchive = lazy(() => import("./pages/TagArchive"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Experience = lazy(() => import("./pages/Experience"));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    color: 'var(--text-secondary)'
+  }}>
+    Loading...
+  </div>
+);
 
 function App() {
   const [booted, setBooted] = useState(() => {
@@ -122,16 +135,18 @@ function App() {
               className="content-area"
               style={{ flex: 1, padding: "20px", overflowY: "auto" }}
             >
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/experience" element={<Experience />} />
-                <Route path="/archive" element={<Archive />} />
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/experience" element={<Experience />} />
+                  <Route path="/archive" element={<Archive />} />
 
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/post/:id" element={<Post />} />
-                <Route path="/tags/:tag" element={<TagArchive />} />
-              </Routes>
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/post/:id" element={<Post />} />
+                  <Route path="/tags/:tag" element={<TagArchive />} />
+                </Routes>
+              </Suspense>
             </main>
           </div>
 
