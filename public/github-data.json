@@ -1,6 +1,33 @@
 {
-  "lastUpdated": 1766262435216,
+  "lastUpdated": 1766306028043,
   "events": [
+    {
+      "id": "6895011406",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1120420025,
+        "name": "madanlalit/iscrape",
+        "url": "https://api.github.com/repos/madanlalit/iscrape"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": "iscrape is a powerful Python-based web scraper and dataset generator. It recursively crawls websites (handling redirects and subdomains), extracts content using crawl4ai and modern browser tooling, and distills the raw data into fine-tuning ready datasets (JSONL, Markdown, JSON) using LLM providers like Gemini or OpenAI.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2025-12-21T07:12:10Z"
+    },
     {
       "id": "6887608181",
       "type": "PushEvent",
@@ -452,7 +479,7 @@
               "state": "uploaded",
               "size": 1689509,
               "digest": "sha256:8c3448cf33159b2ab8e6e32f6f1629c5a90de1cb110e11709a25fc483d073618",
-              "download_count": 1,
+              "download_count": 2,
               "created_at": "2025-12-20T18:09:36Z",
               "updated_at": "2025-12-20T18:09:42Z",
               "browser_download_url": "https://github.com/madanlalit/no-mouse/releases/download/v1.1.0/NoMouse-1.1.0.zip"
