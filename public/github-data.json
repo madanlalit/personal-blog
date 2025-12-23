@@ -1,6 +1,61 @@
 {
-  "lastUpdated": 1766479068761,
+  "lastUpdated": 1766521787402,
   "events": [
+    {
+      "id": "6951289732",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "repository_id": 1115612558,
+        "push_id": 29245335064,
+        "ref": "refs/heads/main",
+        "head": "7b7316652df32c18a9d02beffdfa152f39ecdab7",
+        "before": "e45d1c95392078e800184fcec407d6a73ff6244e"
+      },
+      "public": true,
+      "created_at": "2025-12-23T16:40:33Z"
+    },
+    {
+      "id": "5469095345",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 942312530,
+        "name": "cocoindex-io/cocoindex",
+        "url": "https://api.github.com/repos/cocoindex-io/cocoindex"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2025-12-23T13:34:14Z",
+      "org": {
+        "id": 190812870,
+        "login": "cocoindex-io",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/cocoindex-io",
+        "avatar_url": "https://avatars.githubusercontent.com/u/190812870?"
+      }
+    },
     {
       "id": "5460967926",
       "type": "ForkEvent",

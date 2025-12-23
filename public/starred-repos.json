@@ -1,8 +1,44 @@
 {
-  "lastUpdated": 1766479069082,
+  "lastUpdated": 1766521787706,
   "repos": [
     {
       "id": "STARRED-01",
+      "name": "cocoindex",
+      "fullName": "cocoindex-io/cocoindex",
+      "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
+      "language": "Rust",
+      "stars": 4931,
+      "forks": 369,
+      "url": "https://github.com/cocoindex-io/cocoindex",
+      "topics": [
+        "ai",
+        "change-data-capture",
+        "context-engineering",
+        "data",
+        "data-engineering",
+        "data-indexing",
+        "data-infrastructure",
+        "data-processing",
+        "etl",
+        "hacktoberfest",
+        "help-wanted",
+        "indexing",
+        "knowledge-graph",
+        "llm",
+        "pipeline",
+        "python",
+        "rag",
+        "real-time",
+        "rust",
+        "semantic-search"
+      ],
+      "owner": {
+        "login": "cocoindex-io",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/190812870?v=4"
+      }
+    },
+    {
+      "id": "STARRED-02",
       "name": "no-mouse",
       "fullName": "madanlalit/no-mouse",
       "description": "NoMouse lets you control your Mac cursor entirely with your keyboard. Jump anywhere on screen by typing two letters, or use arrow keys for precise movement.",
@@ -17,7 +53,7 @@
       }
     },
     {
-      "id": "STARRED-02",
+      "id": "STARRED-03",
       "name": "Bootstrap-Portfolio",
       "fullName": "madanlalit/Bootstrap-Portfolio",
       "description": "No description available",
@@ -32,7 +68,7 @@
       }
     },
     {
-      "id": "STARRED-03",
+      "id": "STARRED-04",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -47,7 +83,7 @@
       }
     },
     {
-      "id": "STARRED-04",
+      "id": "STARRED-05",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
       "description": "This project is a Personal Blog built with React, Vite, and TypeScript, featuring a unique retro-terminal aesthetic and interactive   user experience. It serves as a \"digital garden\" to share thoughts and learnings, while offering engaging elements like a command-line   interface (CLI) for navigation and interaction (Commander), a retro boot screen",
@@ -62,13 +98,13 @@
       }
     },
     {
-      "id": "STARRED-05",
+      "id": "STARRED-06",
       "name": "system-prompts-and-models-of-ai-tools",
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 101602,
-      "forks": 27088,
+      "stars": 101750,
+      "forks": 27118,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
