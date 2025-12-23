@@ -7,6 +7,14 @@
     <language>en-us</language>
     
     <item>
+        <title><![CDATA[What Are AI Agents?]]></title>
+        <link>/post/what-are-agents</link>
+        <guid>/post/what-are-agents</guid>
+        <description><![CDATA[AI agents are more than fancy chatbots they're autonomous systems that can reason, plan, and take action. Here's what makes them different and why they matter.]]></description>
+        <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[Context Engineering: The Next Evolution in AI Development]]></title>
         <link>/post/context-engineering-for-ai-agents</link>
         <guid>/post/context-engineering-for-ai-agents</guid>

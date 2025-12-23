@@ -1,5 +1,21 @@
 [
   {
+    "id": "what-are-agents",
+    "slug": "what-are-agents",
+    "title": "What Are AI Agents?",
+    "subtitle": "Understanding the autonomous systems reshaping how we build software",
+    "excerpt": "AI agents are more than fancy chatbots they're autonomous systems that can reason, plan, and take action. Here's what makes them different and why they matter.",
+    "date": "2025-12-23",
+    "category": "AI",
+    "readTime": 10,
+    "tags": [
+      "AI",
+      "Agents",
+      "LLM",
+      "Automation"
+    ]
+  },
+  {
     "id": "context-engineering-for-ai-agents",
     "slug": "context-engineering-for-ai-agents",
     "title": "Context Engineering: The Next Evolution in AI Development",
