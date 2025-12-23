@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Typewriter from '../components/ui/Typewriter';
 import Frame from '../components/ui/Frame';
@@ -54,6 +55,7 @@ const Post: React.FC = () => {
                     <TableOfContents />
                     <div className="entry-content markdown-body">
                         <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeHighlight]}
                             components={{
                                 code({ inline, className, children, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) {
