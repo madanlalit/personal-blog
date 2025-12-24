@@ -1,6 +1,287 @@
 {
-  "lastUpdated": 1766521787402,
+  "lastUpdated": 1766565447545,
   "events": [
+    {
+      "id": "5480529956",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2025-12-24T06:02:44Z"
+    },
+    {
+      "id": "6963201803",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": null,
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2025-12-24T06:02:24Z"
+    },
+    {
+      "id": "6961627437",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1121495867,
+        "name": "madanlalit/exo",
+        "url": "https://api.github.com/repos/madanlalit/exo"
+      },
+      "payload": {
+        "repository_id": 1121495867,
+        "push_id": 29255683575,
+        "ref": "refs/heads/main",
+        "head": "9afc1043ef93f28322646621a1dffb99893b12e4",
+        "before": "0a7fe5d9439f4be37f9212df5bf31aa1f55b2a8a"
+      },
+      "public": true,
+      "created_at": "2025-12-24T04:07:23Z"
+    },
+    {
+      "id": "5479468463",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 819554665,
+        "name": "exo-explore/exo",
+        "url": "https://api.github.com/repos/exo-explore/exo"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/exo-explore/exo/issues/971",
+          "repository_url": "https://api.github.com/repos/exo-explore/exo",
+          "labels_url": "https://api.github.com/repos/exo-explore/exo/issues/971/labels{/name}",
+          "comments_url": "https://api.github.com/repos/exo-explore/exo/issues/971/comments",
+          "events_url": "https://api.github.com/repos/exo-explore/exo/issues/971/events",
+          "html_url": "https://github.com/exo-explore/exo/issues/971",
+          "id": 3753951633,
+          "node_id": "I_kwDOMNlpac7fwMGR",
+          "number": 971,
+          "title": "[EASY] Add UI option to pass through custom `EXO_LIBP2P_NAMESPACE` from Swift",
+          "user": {
+            "login": "JakeHillion",
+            "id": 5712856,
+            "node_id": "MDQ6VXNlcjU3MTI4NTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5712856?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JakeHillion",
+            "html_url": "https://github.com/JakeHillion",
+            "followers_url": "https://api.github.com/users/JakeHillion/followers",
+            "following_url": "https://api.github.com/users/JakeHillion/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JakeHillion/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JakeHillion/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JakeHillion/subscriptions",
+            "organizations_url": "https://api.github.com/users/JakeHillion/orgs",
+            "repos_url": "https://api.github.com/users/JakeHillion/repos",
+            "events_url": "https://api.github.com/users/JakeHillion/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JakeHillion/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 7121625393,
+              "node_id": "LA_kwDOMNlpac8AAAABqHthMQ",
+              "url": "https://api.github.com/repos/exo-explore/exo/labels/enhancement",
+              "name": "enhancement",
+              "color": "a2eeef",
+              "default": true,
+              "description": "New feature or request"
+            },
+            {
+              "id": 7121625396,
+              "node_id": "LA_kwDOMNlpac8AAAABqHthNA",
+              "url": "https://api.github.com/repos/exo-explore/exo/labels/good%20first%20issue",
+              "name": "good first issue",
+              "color": "7057ff",
+              "default": true,
+              "description": "Good for newcomers"
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "madanlalit",
+              "id": 116655920,
+              "node_id": "U_kgDOBvQHMA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/madanlalit",
+              "html_url": "https://github.com/madanlalit",
+              "followers_url": "https://api.github.com/users/madanlalit/followers",
+              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+              "repos_url": "https://api.github.com/users/madanlalit/repos",
+              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 4,
+          "created_at": "2025-12-22T14:14:41Z",
+          "updated_at": "2025-12-24T04:03:49Z",
+          "closed_at": null,
+          "type": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "EXO supports multiple p2p namespaces to split up clusters. This is usable when building from source by providing the `EXO_LIBP2P_NAMESPACE` environment variable when running from source, but when using the macOS app this is hardcoded to the application version.\n\nAdd an option in the macOS UI to extend this variable with a custom parameter. This will allow splitting machines that can see each other into multiple clusters.",
+          "reactions": {
+            "url": "https://api.github.com/repos/exo-explore/exo/issues/971/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/exo-explore/exo/issues/971/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3688591551",
+          "html_url": "https://github.com/exo-explore/exo/issues/971#issuecomment-3688591551",
+          "issue_url": "https://api.github.com/repos/exo-explore/exo/issues/971",
+          "id": 3688591551,
+          "node_id": "IC_kwDOMNlpac7b23C_",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2025-12-24T04:03:49Z",
+          "updated_at": "2025-12-24T04:03:49Z",
+          "body": "Sure, I’ll take a look thanks! If I have any questions about the implementation, I’ll ask here.",
+          "reactions": {
+            "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3688591551/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2025-12-24T04:03:49Z",
+      "org": {
+        "id": 162823259,
+        "login": "exo-explore",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/exo-explore",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162823259?"
+      }
+    },
     {
       "id": "6951289732",
       "type": "PushEvent",
@@ -142,17 +423,17 @@
           "releases_url": "https://api.github.com/repos/madanlalit/exo/releases{/id}",
           "deployments_url": "https://api.github.com/repos/madanlalit/exo/deployments",
           "created_at": "2025-12-23T04:58:26Z",
-          "updated_at": "2025-12-23T04:58:26Z",
-          "pushed_at": "2025-12-23T00:10:13Z",
+          "updated_at": "2025-12-24T04:07:27Z",
+          "pushed_at": "2025-12-24T04:07:22Z",
           "git_url": "git://github.com/madanlalit/exo.git",
           "ssh_url": "git@github.com:madanlalit/exo.git",
           "clone_url": "https://github.com/madanlalit/exo.git",
           "svn_url": "https://github.com/madanlalit/exo",
           "homepage": "",
-          "size": 15062,
+          "size": 14790,
           "stargazers_count": 0,
           "watchers_count": 0,
-          "language": null,
+          "language": "Python",
           "has_issues": false,
           "has_projects": true,
           "has_downloads": true,
@@ -264,12 +545,54 @@
           ],
           "state": "open",
           "locked": false,
-          "assignee": null,
-          "assignees": [],
+          "assignee": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "madanlalit",
+              "id": 116655920,
+              "node_id": "U_kgDOBvQHMA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/madanlalit",
+              "html_url": "https://github.com/madanlalit",
+              "followers_url": "https://api.github.com/users/madanlalit/followers",
+              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+              "repos_url": "https://api.github.com/users/madanlalit/repos",
+              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
           "milestone": null,
-          "comments": 2,
+          "comments": 4,
           "created_at": "2025-12-22T14:14:41Z",
-          "updated_at": "2025-12-23T04:58:10Z",
+          "updated_at": "2025-12-24T04:03:49Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
