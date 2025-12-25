@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1766651767610,
+  "lastUpdated": 1766694614255,
   "repos": [
     {
       "id": "STARRED-01",
@@ -22,7 +22,7 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5084,
+      "stars": 5129,
       "forks": 388,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
@@ -118,8 +118,8 @@
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 102109,
-      "forks": 27176,
+      "stars": 102182,
+      "forks": 27187,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
