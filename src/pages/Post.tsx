@@ -14,7 +14,9 @@ import ReadingProgress from '../components/post/ReadingProgress';
 import ScrollToTop from '../components/post/ScrollToTop';
 import CodeBlock from '../components/post/CodeBlock';
 import SEO from '../components/SEO';
+import { BlogPostSchema } from '../components/StructuredData';
 import type { Post as PostType } from '../types';
+import { SITE_CONFIG } from '../config';
 import '../features/terminal/SyntaxTheme.css';
 import './Post.css';
 
@@ -38,11 +40,17 @@ const Post: React.FC = () => {
             <ReadingProgress />
             <ScrollToTop />
             <article className="post-article fade-in">
-                <SEO 
-                    title={post.title} 
-                    description={post.excerpt} 
-                    type="article" 
+                <SEO
+                    title={post.title}
+                    description={post.excerpt}
+                    type="article"
                     publishedTime={post.date}
+                />
+                <BlogPostSchema
+                    title={post.title}
+                    description={post.excerpt}
+                    url={`${SITE_CONFIG.url}/post/${id}`}
+                    datePublished={post.date}
                 />
                 <Link to="/" className="back-link">← Back to Terminal</Link>
 
