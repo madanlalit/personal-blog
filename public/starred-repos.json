@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1766694614255,
+  "lastUpdated": 1766738162584,
   "repos": [
     {
       "id": "STARRED-01",
@@ -22,8 +22,8 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5129,
-      "forks": 388,
+      "stars": 5179,
+      "forks": 392,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -69,21 +69,6 @@
     },
     {
       "id": "STARRED-04",
-      "name": "Bootstrap-Portfolio",
-      "fullName": "madanlalit/Bootstrap-Portfolio",
-      "description": "No description available",
-      "language": "HTML",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/Bootstrap-Portfolio",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      }
-    },
-    {
-      "id": "STARRED-05",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -98,7 +83,7 @@
       }
     },
     {
-      "id": "STARRED-06",
+      "id": "STARRED-05",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
       "description": "This project is a Personal Blog built with React, Vite, and TypeScript, featuring a unique retro-terminal aesthetic and interactive   user experience. It serves as a \"digital garden\" to share thoughts and learnings, while offering engaging elements like a command-line   interface (CLI) for navigation and interaction (Commander), a retro boot screen",
@@ -113,13 +98,13 @@
       }
     },
     {
-      "id": "STARRED-07",
+      "id": "STARRED-06",
       "name": "system-prompts-and-models-of-ai-tools",
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 102182,
-      "forks": 27187,
+      "stars": 102269,
+      "forks": 27199,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
