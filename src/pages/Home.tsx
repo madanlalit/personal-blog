@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PostCard from "../components/ui/PostCard";
 import Typewriter from "../components/ui/Typewriter";
 import SEO from "../components/SEO";
+import { WebsiteSchema } from "../components/StructuredData";
 import { Mail } from "lucide-react";
 import { usePosts } from "../hooks/usePosts";
 import "./Home.css";
@@ -169,6 +170,7 @@ const Home: React.FC = () => {
   return (
     <div className="home-container fade-in">
       <SEO title="Home" type="website" />
+      <WebsiteSchema />
       {/* --- HERO SECTION --- */}
       <header className="hero-section">
         <div className="hero-main">

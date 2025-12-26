@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "tsx scripts/generate-posts.ts && vite",
-    "build": "tsx scripts/generate-posts.ts && tsc -b && vite build && npm run generate-rss",
+    "build": "tsx scripts/generate-posts.ts && tsc -b && vite build && npm run generate-rss && npm run generate-sitemap",
     "generate-rss": "tsx scripts/generate-rss.ts",
+    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "generate-posts": "tsx scripts/generate-posts.ts",
     "lint": "eslint .",
     "preview": "vite preview"
