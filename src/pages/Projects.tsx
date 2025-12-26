@@ -13,6 +13,7 @@ import {
   ArrowDownAZ,
   ArrowUpDown,
 } from "lucide-react";
+import SEO from "../components/SEO";
 import "./Projects.css";
 
 // --- Constants ---
@@ -111,6 +112,7 @@ const Projects: React.FC = () => {
   if (loading) {
     return (
       <div className="projects-page fade-in">
+        <SEO title="Loading Projects..." />
         <div className="grid-bg"></div>
         <header className="sys-header">
           <div className="sys-title">
@@ -149,6 +151,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="projects-page fade-in">
+      <SEO title="Projects" description="Explore the personal projects and open-source contributions of Lalit Madan, ranging from AI agents to automation tools." />
       <div className="grid-bg"></div>
 
       <header className="sys-header">

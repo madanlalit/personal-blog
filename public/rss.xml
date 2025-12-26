@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-    <title>Lalit M Blog</title>
-    <link></link>
-    <description>A minimal, retro-themed personal blog.</description>
+    <title>Lalit Madan | Blog</title>
+    <link>https://lalitmadan.com</link>
+    <description>Software engineer exploring AI, automation, and building things. Minimal, retro-themed personal blog.</description>
     <language>en-us</language>
     
     <item>
         <title><![CDATA[What Are AI Agents?]]></title>
-        <link>/post/what-are-agents</link>
-        <guid>/post/what-are-agents</guid>
+        <link>https://lalitmadan.com/post/what-are-agents</link>
+        <guid>https://lalitmadan.com/post/what-are-agents</guid>
         <description><![CDATA[AI agents are more than fancy chatbots they're autonomous systems that can reason, plan, and take action. Here's what makes them different and why they matter.]]></description>
         <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
     </item>
     
     <item>
         <title><![CDATA[Context Engineering: The Next Evolution in AI Development]]></title>
-        <link>/post/context-engineering-for-ai-agents</link>
-        <guid>/post/context-engineering-for-ai-agents</guid>
+        <link>https://lalitmadan.com/post/context-engineering-for-ai-agents</link>
+        <guid>https://lalitmadan.com/post/context-engineering-for-ai-agents</guid>
         <description><![CDATA[Context is a critical but finite resource for AI agents. As we move from simple prompts to complex agentic systems, mastering context engineering becomes essential for building reliable, effective AI applications.]]></description>
         <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
     </item>

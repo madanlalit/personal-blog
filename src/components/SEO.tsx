@@ -1,52 +1,59 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import { SITE_CONFIG } from '../config';
 
 interface SEOProps {
     title: string;
     description?: string;
-    name?: string;
+    author?: string;
     type?: string;
     url?: string;
     image?: string;
     publishedTime?: string;
 }
 
-const SITE_NAME = "Lalit Madan | Blog";
-const DEFAULT_IMAGE = "/lm.svg";
-
 const SEO: React.FC<SEOProps> = ({
     title,
-    description = "Software engineer exploring AI, automation, and building things. Minimal, retro-themed personal blog.",
-    name = "Lalit Madan",
+    description = SITE_CONFIG.description,
+    author = SITE_CONFIG.author,
     type = "article",
     url,
-    image = DEFAULT_IMAGE,
+    image = SITE_CONFIG.defaultImage,
     publishedTime
 }) => {
+    const location = useLocation();
+    
+    // Ensure absolute URLs for SEO metadata
+    const siteUrl = SITE_CONFIG.url.endsWith('/') ? SITE_CONFIG.url.slice(0, -1) : SITE_CONFIG.url;
+    const absoluteUrl = url ? `${siteUrl}${url.startsWith('/') ? url : `/${url}`}` : `${siteUrl}${location.pathname}`;
+    const absoluteImage = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
+
+    const fullTitle = `${title} | ${author}`;
+
     return (
         <Helmet>
             {/* Standard metadata tags */}
-            <title>{title} | {name}</title>
+            <title>{fullTitle}</title>
             <meta name='description' content={description} />
-
-            {/* Canonical URL */}
-            {url && <link rel="canonical" href={url} />}
+            <link rel="canonical" href={absoluteUrl} />
 
             {/* Open Graph tags (Facebook, LinkedIn, etc.) */}
             <meta property="og:type" content={type} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:site_name" content={SITE_NAME} />
-            {url && <meta property="og:url" content={url} />}
-            {image && <meta property="og:image" content={image} />}
+            <meta property="og:site_name" content={SITE_CONFIG.title} />
+            <meta property="og:url" content={absoluteUrl} />
+            <meta property="og:image" content={absoluteImage} />
+            <meta property="og:locale" content={SITE_CONFIG.locale} />
             {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
             {/* Twitter tags */}
-            <meta name="twitter:creator" content={name} />
+            <meta name="twitter:creator" content={SITE_CONFIG.twitterHandle || author} />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            {image && <meta name="twitter:image" content={image} />}
+            <meta name="twitter:image" content={absoluteImage} />
         </Helmet>
     );
 };

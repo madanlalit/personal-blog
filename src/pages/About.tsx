@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Github, Linkedin, X, ArrowRight, MapPin, Briefcase, GraduationCap, Heart, Download } from "lucide-react";
 import Frame from "../components/ui/Frame";
 import Typewriter from "../components/ui/Typewriter";
+import SEO from "../components/SEO";
 import { useCounter } from "../hooks/useCounter";
 import "./About.css";
 
@@ -60,6 +61,7 @@ const About: React.FC = () => {
 
   return (
     <div className="about-container fade-in">
+      <SEO title="About" description="Learn more about Lalit Madan, a software engineer specializing in AI agents, context engineering, and reliable agentic workflows." />
       {/* Hero */}
       <Frame label="PROFILE" className="hero-frame">
         <div className="hero-grid-bg" />
