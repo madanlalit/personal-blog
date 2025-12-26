@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import {
     Calendar,
     MapPin,
@@ -79,6 +80,7 @@ const CERTIFICATIONS = [
 const Experience: React.FC = () => {
     return (
         <div className="experience-page fade-in">
+            <SEO title="Experience" description="Detailed professional journey of Lalit Madan, including roles at Cisco Systems and expertise in Python, AI, and test automation." />
             {/* Header */}
             <header className="exp-page-header">
                 <Link to="/about" className="back-link">

@@ -38,7 +38,12 @@ const Post: React.FC = () => {
             <ReadingProgress />
             <ScrollToTop />
             <article className="post-article fade-in">
-                <SEO title={post.title} description={post.excerpt} type="article" />
+                <SEO 
+                    title={post.title} 
+                    description={post.excerpt} 
+                    type="article" 
+                    publishedTime={post.date}
+                />
                 <Link to="/" className="back-link">← Back to Terminal</Link>
 
                 <Frame label="HEADER" className="post-header-frame">

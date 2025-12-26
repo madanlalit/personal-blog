@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { SITE_CONFIG } from '../src/config';
 
-const SITE_URL = ''; // Replace with actual URL
-const SITE_TITLE = 'Lalit M Blog';
-const SITE_DESCRIPTION = 'A minimal, retro-themed personal blog.';
+const SITE_URL = SITE_CONFIG.url;
+const SITE_TITLE = SITE_CONFIG.title;
+const SITE_DESCRIPTION = SITE_CONFIG.description;
 
 interface PostMeta {
     id: string;
