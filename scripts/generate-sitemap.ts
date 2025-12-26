@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
+import { SITE_CONFIG } from "../src/config";
 
-const SITE_URL = "https://lalitmadan.com";
+const SITE_URL = SITE_CONFIG.url;
 const OUTPUT_FILE = path.join(process.cwd(), "public", "sitemap.xml");
 const POSTS_DIR = path.join(process.cwd(), "public", "posts");
 

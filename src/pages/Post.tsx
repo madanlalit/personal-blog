@@ -16,6 +16,7 @@ import CodeBlock from '../components/post/CodeBlock';
 import SEO from '../components/SEO';
 import { BlogPostSchema } from '../components/StructuredData';
 import type { Post as PostType } from '../types';
+import { SITE_CONFIG } from '../config';
 import '../features/terminal/SyntaxTheme.css';
 import './Post.css';
 
@@ -48,7 +49,7 @@ const Post: React.FC = () => {
                 <BlogPostSchema
                     title={post.title}
                     description={post.excerpt}
-                    url={`/post/${id}`}
+                    url={`${SITE_CONFIG.url}/post/${id}`}
                     datePublished={post.date}
                 />
                 <Link to="/" className="back-link">← Back to Terminal</Link>
