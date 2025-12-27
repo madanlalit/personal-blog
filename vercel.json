@@ -1,4 +1,17 @@
 {
+    "redirects": [
+        {
+            "source": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "personal-blog-.*\\.vercel\\.app"
+                }
+            ],
+            "destination": "https://lalitmadan.com/$1",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/((?!api|public|_next|sitemap\\.xml|robots\\.txt|rss\\.xml|.*\\..*).*)",
