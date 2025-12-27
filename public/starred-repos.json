@@ -1,8 +1,23 @@
 {
-  "lastUpdated": 1766824471420,
+  "lastUpdated": 1766867354419,
   "repos": [
     {
       "id": "STARRED-01",
+      "name": "wifi-densepose",
+      "fullName": "ruvnet/wifi-densepose",
+      "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
+      "language": "Python",
+      "stars": 3900,
+      "forks": 313,
+      "url": "https://github.com/ruvnet/wifi-densepose",
+      "topics": [],
+      "owner": {
+        "login": "ruvnet",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2934394?v=4"
+      }
+    },
+    {
+      "id": "STARRED-02",
       "name": "heimdall",
       "fullName": "madanlalit/heimdall",
       "description": "The all-seeing agent for web automation.",
@@ -29,13 +44,13 @@
       }
     },
     {
-      "id": "STARRED-02",
+      "id": "STARRED-03",
       "name": "cocoindex",
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5277,
-      "forks": 397,
+      "stars": 5315,
+      "forks": 398,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -65,7 +80,7 @@
       }
     },
     {
-      "id": "STARRED-03",
+      "id": "STARRED-04",
       "name": "no-mouse",
       "fullName": "madanlalit/no-mouse",
       "description": "NoMouse lets you control your Mac cursor entirely with your keyboard. Jump anywhere on screen by typing two letters, or use arrow keys for precise movement.",
@@ -86,7 +101,7 @@
       }
     },
     {
-      "id": "STARRED-04",
+      "id": "STARRED-05",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -101,7 +116,7 @@
       }
     },
     {
-      "id": "STARRED-05",
+      "id": "STARRED-06",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
       "description": "This project is a Personal Blog built with React, Vite, and TypeScript, featuring a unique retro-terminal aesthetic and interactive   user experience. It serves as a \"digital garden\" to share thoughts and learnings, while offering engaging elements like a command-line   interface (CLI) for navigation and interaction (Commander), a retro boot screen",
@@ -116,13 +131,13 @@
       }
     },
     {
-      "id": "STARRED-06",
+      "id": "STARRED-07",
       "name": "system-prompts-and-models-of-ai-tools",
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 102458,
-      "forks": 27230,
+      "stars": 102603,
+      "forks": 27255,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
