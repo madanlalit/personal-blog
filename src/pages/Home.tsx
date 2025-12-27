@@ -180,7 +180,7 @@ const Home: React.FC = () => {
           </h1>
           <div className="hero-subtitle">
             <Typewriter
-              text="Engineering Reality. Architecting Intelligence."
+              text={`Engineering Reality. Architecting Intelligence.`}
               speed={30}
               delay={500}
             />
