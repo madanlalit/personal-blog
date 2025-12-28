@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1766867354419,
+  "lastUpdated": 1766910887560,
   "repos": [
     {
       "id": "STARRED-01",
@@ -7,8 +7,8 @@
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 3900,
-      "forks": 313,
+      "stars": 4329,
+      "forks": 344,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -49,8 +49,8 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5315,
-      "forks": 398,
+      "stars": 5342,
+      "forks": 401,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -136,8 +136,8 @@
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 102603,
-      "forks": 27255,
+      "stars": 102733,
+      "forks": 27279,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
