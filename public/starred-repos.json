@@ -1,14 +1,38 @@
 {
-  "lastUpdated": 1766910887560,
+  "lastUpdated": 1766953789690,
   "repos": [
     {
       "id": "STARRED-01",
+      "name": "scira",
+      "fullName": "zaidmukaddam/scira",
+      "description": "Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!",
+      "language": "TypeScript",
+      "stars": 11234,
+      "forks": 1427,
+      "url": "https://github.com/zaidmukaddam/scira",
+      "topics": [
+        "ai-search-engine",
+        "minimalistic-ai-search-engine",
+        "open-source-perplexity-ai",
+        "perplexity-ai",
+        "perplexity-alternative",
+        "scira",
+        "scira-ai",
+        "search-engine"
+      ],
+      "owner": {
+        "login": "zaidmukaddam",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/76097144?v=4"
+      }
+    },
+    {
+      "id": "STARRED-02",
       "name": "wifi-densepose",
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 4329,
-      "forks": 344,
+      "stars": 4564,
+      "forks": 366,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -17,7 +41,7 @@
       }
     },
     {
-      "id": "STARRED-02",
+      "id": "STARRED-03",
       "name": "heimdall",
       "fullName": "madanlalit/heimdall",
       "description": "The all-seeing agent for web automation.",
@@ -44,13 +68,13 @@
       }
     },
     {
-      "id": "STARRED-03",
+      "id": "STARRED-04",
       "name": "cocoindex",
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5342,
-      "forks": 401,
+      "stars": 5388,
+      "forks": 406,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -80,10 +104,10 @@
       }
     },
     {
-      "id": "STARRED-04",
+      "id": "STARRED-05",
       "name": "no-mouse",
       "fullName": "madanlalit/no-mouse",
-      "description": "NoMouse lets you control your Mac cursor entirely with your keyboard. Jump anywhere on screen by typing two letters, or use arrow keys for precise movement.",
+      "description": "NoMouse lets you control your Mac cursor entirely with your keyboard",
       "language": "Swift",
       "stars": 1,
       "forks": 0,
@@ -101,7 +125,7 @@
       }
     },
     {
-      "id": "STARRED-05",
+      "id": "STARRED-06",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -116,10 +140,10 @@
       }
     },
     {
-      "id": "STARRED-06",
+      "id": "STARRED-07",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
-      "description": "This project is a Personal Blog built with React, Vite, and TypeScript, featuring a unique retro-terminal aesthetic and interactive   user experience. It serves as a \"digital garden\" to share thoughts and learnings, while offering engaging elements like a command-line   interface (CLI) for navigation and interaction (Commander), a retro boot screen",
+      "description": "A retro-style personal blog with an interactive terminal interface, built with React, Vite, and TypeScript.",
       "language": "TypeScript",
       "stars": 1,
       "forks": 0,
@@ -131,13 +155,13 @@
       }
     },
     {
-      "id": "STARRED-07",
+      "id": "STARRED-08",
       "name": "system-prompts-and-models-of-ai-tools",
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 102733,
-      "forks": 27279,
+      "stars": 102923,
+      "forks": 27342,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",

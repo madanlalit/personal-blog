@@ -1,6 +1,211 @@
 {
-  "lastUpdated": 1766910887169,
+  "lastUpdated": 1766953789335,
   "events": [
+    {
+      "id": "7039507604",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "repository_id": 1124192564,
+        "push_id": 29333865474,
+        "ref": "refs/heads/main",
+        "head": "be760a54bd78164018275421668ae9ffbbc0ebe8",
+        "before": "e5932d4067df05ae3120998db717a2c86dedc597"
+      },
+      "public": true,
+      "created_at": "2025-12-28T16:59:07Z"
+    },
+    {
+      "id": "7039494480",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "repository_id": 1124192564,
+        "push_id": 29333852275,
+        "ref": "refs/heads/main",
+        "head": "e5932d4067df05ae3120998db717a2c86dedc597",
+        "before": "06c44b45b5baa76c5d799770010a5a26c15f8132"
+      },
+      "public": true,
+      "created_at": "2025-12-28T16:58:01Z"
+    },
+    {
+      "id": "7039434667",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "repository_id": 1124192564,
+        "push_id": 29333792176,
+        "ref": "refs/heads/main",
+        "head": "06c44b45b5baa76c5d799770010a5a26c15f8132",
+        "before": "c4ba84c876b7bf7241c4a60e7f86b012285ec64e"
+      },
+      "public": true,
+      "created_at": "2025-12-28T16:53:05Z"
+    },
+    {
+      "id": "7039240830",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "repository_id": 1124192564,
+        "push_id": 29333597276,
+        "ref": "refs/heads/main",
+        "head": "c4ba84c876b7bf7241c4a60e7f86b012285ec64e",
+        "before": "f20a048c2b4aa7751e9d0976b53c4b176e68e0e3"
+      },
+      "public": true,
+      "created_at": "2025-12-28T16:36:34Z"
+    },
+    {
+      "id": "7037903086",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "repository_id": 1124192564,
+        "push_id": 29332251848,
+        "ref": "refs/heads/main",
+        "head": "f20a048c2b4aa7751e9d0976b53c4b176e68e0e3",
+        "before": "af647704a228255307f45b43d395f630f3fec45a"
+      },
+      "public": true,
+      "created_at": "2025-12-28T14:48:54Z"
+    },
+    {
+      "id": "7037728225",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "repository_id": 1124192564,
+        "push_id": 29332076191,
+        "ref": "refs/heads/main",
+        "head": "af647704a228255307f45b43d395f630f3fec45a",
+        "before": "5f40dea6af9d166e9dbf8f67bbfa80e4ee142cc7"
+      },
+      "public": true,
+      "created_at": "2025-12-28T14:34:37Z"
+    },
+    {
+      "id": "7037716227",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1124192564,
+        "name": "madanlalit/madanlalit",
+        "url": "https://api.github.com/repos/madanlalit/madanlalit"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": null,
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2025-12-28T14:33:42Z"
+    },
+    {
+      "id": "5516031279",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 839372398,
+        "name": "zaidmukaddam/scira",
+        "url": "https://api.github.com/repos/zaidmukaddam/scira"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2025-12-28T10:27:42Z"
+    },
     {
       "id": "5512130968",
       "type": "WatchEvent",
@@ -3154,7 +3359,7 @@
         "ref_type": "branch",
         "full_ref": "refs/heads/feature/seo-improvements",
         "master_branch": "main",
-        "description": "This project is a Personal Blog built with React, Vite, and TypeScript, featuring a unique retro-terminal aesthetic and interactive   user experience. It serves as a \"digital garden\" to share thoughts and learnings, while offering engaging elements like a command-line   interface (CLI) for navigation and interaction (Commander), a retro boot screen",
+        "description": "A retro-style personal blog with an interactive terminal interface, built with React, Vite, and TypeScript.",
         "pusher_type": "user"
       },
       "public": true,
@@ -5801,288 +6006,6 @@
       },
       "public": true,
       "created_at": "2025-12-20T15:52:33Z"
-    },
-    {
-      "id": "5425445604",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120034326,
-        "name": "madanlalit/no-mouse",
-        "url": "https://api.github.com/repos/madanlalit/no-mouse"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:34:38Z"
-    },
-    {
-      "id": "6883045273",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120034326,
-        "name": "madanlalit/no-mouse",
-        "url": "https://api.github.com/repos/madanlalit/no-mouse"
-      },
-      "payload": {
-        "repository_id": 1120034326,
-        "push_id": 29177003605,
-        "ref": "refs/heads/main",
-        "head": "4537680ad66adc5efb8584f74591bfaeab7309a5",
-        "before": "3d64777ac5b4551a0a60444803d03675aeff2a6d"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:33:23Z"
-    },
-    {
-      "id": "6882878973",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120034326,
-        "name": "madanlalit/no-mouse",
-        "url": "https://api.github.com/repos/madanlalit/no-mouse"
-      },
-      "payload": {
-        "repository_id": 1120034326,
-        "push_id": 29176837075,
-        "ref": "refs/heads/main",
-        "head": "3d64777ac5b4551a0a60444803d03675aeff2a6d",
-        "before": "92aa92c5cbbd8486c44ecb2cc38c47b1ab72c683"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:17:11Z"
-    },
-    {
-      "id": "6882869469",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120037664,
-        "name": "madanlalit/homebrew-tap",
-        "url": "https://api.github.com/repos/madanlalit/homebrew-tap"
-      },
-      "payload": {
-        "repository_id": 1120037664,
-        "push_id": 29176827590,
-        "ref": "refs/heads/main",
-        "head": "aa94c012245582d3700c60176d2c56e076e605de",
-        "before": "21c9f35bbfc4ab340c492a6b9604331fea0f3d96"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:16:14Z"
-    },
-    {
-      "id": "6882777543",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120037664,
-        "name": "madanlalit/homebrew-tap",
-        "url": "https://api.github.com/repos/madanlalit/homebrew-tap"
-      },
-      "payload": {
-        "repository_id": 1120037664,
-        "push_id": 29176735506,
-        "ref": "refs/heads/main",
-        "head": "21c9f35bbfc4ab340c492a6b9604331fea0f3d96",
-        "before": "c88b760573bca03b8ecd1e5abe1cdf1adbfeaa8d"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:07:34Z"
-    },
-    {
-      "id": "6882771669",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120034326,
-        "name": "madanlalit/no-mouse",
-        "url": "https://api.github.com/repos/madanlalit/no-mouse"
-      },
-      "payload": {
-        "repository_id": 1120034326,
-        "push_id": 29176729609,
-        "ref": "refs/heads/main",
-        "head": "92aa92c5cbbd8486c44ecb2cc38c47b1ab72c683",
-        "before": "6bf88036a12eac86c53a177a58aa9139932c0ac0"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:07:00Z"
-    },
-    {
-      "id": "6882732600",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120037664,
-        "name": "madanlalit/homebrew-tap",
-        "url": "https://api.github.com/repos/madanlalit/homebrew-tap"
-      },
-      "payload": {
-        "ref": "main",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/main",
-        "master_branch": "main",
-        "description": null,
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2025-12-20T11:03:11Z"
-    },
-    {
-      "id": "5425285953",
-      "type": "ReleaseEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120034326,
-        "name": "madanlalit/no-mouse",
-        "url": "https://api.github.com/repos/madanlalit/no-mouse"
-      },
-      "payload": {
-        "action": "published",
-        "release": {
-          "url": "https://api.github.com/repos/madanlalit/no-mouse/releases/271937217",
-          "assets_url": "https://api.github.com/repos/madanlalit/no-mouse/releases/271937217/assets",
-          "upload_url": "https://uploads.github.com/repos/madanlalit/no-mouse/releases/271937217/assets{?name,label}",
-          "html_url": "https://github.com/madanlalit/no-mouse/releases/tag/v1.0.0",
-          "id": 271937217,
-          "author": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "node_id": "RE_kwDOQsJeFs4QNW7B",
-          "tag_name": "v1.0.0",
-          "target_commitish": "main",
-          "name": "v1.0.0",
-          "draft": false,
-          "immutable": false,
-          "prerelease": false,
-          "created_at": "2025-12-20T10:51:16Z",
-          "updated_at": "2025-12-20T10:57:08Z",
-          "published_at": "2025-12-20T10:57:08Z",
-          "assets": [
-            {
-              "url": "https://api.github.com/repos/madanlalit/no-mouse/releases/assets/331017666",
-              "id": 331017666,
-              "node_id": "RA_kwDOQsJeFs4Tuu3C",
-              "name": "NoMouse.dmg",
-              "label": null,
-              "uploader": {
-                "login": "madanlalit",
-                "id": 116655920,
-                "node_id": "U_kgDOBvQHMA",
-                "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/madanlalit",
-                "html_url": "https://github.com/madanlalit",
-                "followers_url": "https://api.github.com/users/madanlalit/followers",
-                "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-                "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-                "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-                "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-                "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-                "repos_url": "https://api.github.com/users/madanlalit/repos",
-                "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-                "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-                "type": "User",
-                "user_view_type": "public",
-                "site_admin": false
-              },
-              "content_type": "application/x-diskcopy",
-              "state": "uploaded",
-              "size": 131184,
-              "digest": "sha256:c7cfa651e94d0ad5120e6432f114365cb361049da969d234c1981f6d2c884f67",
-              "download_count": 2,
-              "created_at": "2025-12-20T10:56:47Z",
-              "updated_at": "2025-12-20T10:56:51Z",
-              "browser_download_url": "https://github.com/madanlalit/no-mouse/releases/download/v1.0.0/NoMouse.dmg"
-            }
-          ],
-          "tarball_url": "https://api.github.com/repos/madanlalit/no-mouse/tarball/v1.0.0",
-          "zipball_url": "https://api.github.com/repos/madanlalit/no-mouse/zipball/v1.0.0",
-          "body": "# NoMouse v1.0.0\r\n\r\n🎉 **First release!** Keyboard-driven mouse control for macOS.\r\n\r\n## Features\r\n- **Grid Navigation** — Type 2 letters to jump anywhere on screen\r\n- **Precision Mode** — Single-letter refinement for pixel-perfect positioning\r\n- **All Mouse Actions** — Left, right, middle click + drag\r\n- **Scroll Support** — ⌘ + Arrow keys\r\n- **Movement Acceleration** — Hold arrow keys to speed up\r\n- **Multi-Monitor** — Works across all displays\r\n- **Menu Bar App** — Minimal footprint, no Dock icon\r\n\r\n## Requirements\r\n- macOS 13.0 (Ventura) or later\r\n- Accessibility + Input Monitoring permissions\r\n\r\n## Installation\r\n1. Download `NoMouse.dmg`\r\n2. Drag to Applications\r\n3. Grant permissions when prompted\r\n4. Press **⌃ Space** to activate\r\n\r\n## Keyboard Shortcuts\r\n| Key | Action |\r\n|-----|--------|\r\n| ⌃ Space | Activate |\r\n| A-Z + A-Z | Jump to cell |\r\n| Return | Click |\r\n| ⇧ Return | Right-click |\r\n| Arrow keys | Move cursor |\r\n| ⌘ + Arrows | Scroll |\r\n| D | Toggle drag |\r\n| Escape | Exit |",
-          "short_description_html": "<h1>NoMouse v1.0.0</h1>\n<p>🎉 <strong>First release!</strong> Keyboard-driven mouse control for macOS.</p>\n<h2>Features</h2>\n<ul>\n<li>\n<strong>Grid Navigation</strong> — Type 2 letters to jump anywhere on screen</li>\n<li>\n<strong>Precision Mode</strong> — Single-letter refinement for pixel-pe…</li>\n</ul>",
-          "is_short_description_html_truncated": true
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-20T10:57:08Z"
     }
   ]
 }
