@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1767040273375,
+  "lastUpdated": 1767083831397,
   "repos": [
     {
       "id": "STARRED-01",
@@ -7,8 +7,8 @@
       "fullName": "TheAlgorithms/Python",
       "description": "All Algorithms implemented in Python",
       "language": "Python",
-      "stars": 216084,
-      "forks": 49791,
+      "stars": 216195,
+      "forks": 49802,
       "url": "https://github.com/TheAlgorithms/Python",
       "topics": [
         "algorithm",
@@ -37,8 +37,8 @@
       "fullName": "antiwork/gumroad",
       "description": "Sell stuff and see what sticks",
       "language": "Ruby",
-      "stars": 7920,
-      "forks": 1526,
+      "stars": 7992,
+      "forks": 1532,
       "url": "https://github.com/antiwork/gumroad",
       "topics": [],
       "owner": {
@@ -53,7 +53,7 @@
       "description": "Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!",
       "language": "TypeScript",
       "stars": 11247,
-      "forks": 1429,
+      "forks": 1430,
       "url": "https://github.com/zaidmukaddam/scira",
       "topics": [
         "ai-search-engine",
@@ -76,8 +76,8 @@
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 4705,
-      "forks": 381,
+      "stars": 4726,
+      "forks": 382,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -118,7 +118,7 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5451,
+      "stars": 5481,
       "forks": 410,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
@@ -205,8 +205,8 @@
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 103287,
-      "forks": 27449,
+      "stars": 103687,
+      "forks": 27540,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
