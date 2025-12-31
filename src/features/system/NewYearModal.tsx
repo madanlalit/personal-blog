@@ -27,7 +27,7 @@ const NewYearModal: React.FC<NewYearModalProps> = ({ onClose }) => {
 
     // Keyboard close
     useEffect(() => {
-        const handleKey = (e: KeyboardEvent) => {
+        const handleKey = () => {
             if (phase >= 3) handleClose();
         };
         window.addEventListener('keydown', handleKey);
