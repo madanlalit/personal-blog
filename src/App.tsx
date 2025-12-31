@@ -5,6 +5,7 @@ import Commander from "./features/terminal/Commander";
 import BootScreen from "./features/system/BootScreen";
 import CommandLine from "./features/terminal/CommandLine";
 import SystemAlert from "./features/system/SystemAlert";
+import NewYearModal from "./features/system/NewYearModal";
 import { triggerAlert } from "./utils/systemEvents";
 import Screensaver from "./features/system/Screensaver";
 import StatusBar from "./components/ui/StatusBar";
@@ -46,6 +47,21 @@ function App() {
   const [commanderOpen, setCommanderOpen] = useState(false); // Modal state
   const [snakeGameOpen, setSnakeGameOpen] = useState(false);
   const [ampOpen, setAmpOpen] = useState(false); // Amp state
+  const [newYearOpen, setNewYearOpen] = useState(() => {
+    // Show modal only in January and only once per year
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth(); // 0 = January
+    const lastShown = localStorage.getItem("newYearModalShown");
+
+    // Show if it's January (month 0) and we haven't shown it for this year
+    return currentMonth === 0 && lastShown !== String(currentYear);
+  });
+
+  const handleCloseNewYear = () => {
+    setNewYearOpen(false);
+    localStorage.setItem("newYearModalShown", String(new Date().getFullYear()));
+  };
 
   const { playHoverSound, playKeySound, toggleMute, muted } = useSound();
   const { setTheme, availableThemes } = useTheme();
@@ -107,6 +123,9 @@ function App() {
         >
           <SystemAlert />
           <Screensaver />
+
+          {/* Happy New Year Modal */}
+          {newYearOpen && <NewYearModal onClose={handleCloseNewYear} />}
 
           {snakeGameOpen && (
             <SnakeGame onExit={() => setSnakeGameOpen(false)} />

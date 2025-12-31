@@ -1,0 +1,168 @@
+/* ================================
+   New Year Modal - Elegant
+   ================================ */
+
+.ny-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-primary);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.ny-overlay.exit {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+/* Container */
+.ny-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* Year */
+.ny-year {
+    font-family: var(--font-primary);
+    font-size: clamp(6rem, 22vw, 14rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ny-year.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Remove the default h1 cursor animation */
+.ny-year::after {
+    display: none;
+}
+
+/* Subtle glow on hover */
+.ny-year:hover {
+    text-shadow: 0 0 120px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+/* Divider Line */
+.ny-line {
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    margin: 32px 0;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ny-line.visible {
+    width: 80px;
+}
+
+/* Message */
+.ny-message {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ny-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hint */
+.ny-hint {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    letter-spacing: 0.15em;
+    margin-top: 64px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.ny-hint.visible {
+    animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 600px) {
+    .ny-line.visible {
+        width: 60px;
+    }
+
+    .ny-message {
+        font-size: var(--font-size-small);
+        letter-spacing: 0.15em;
+    }
+
+    .ny-hint {
+        margin-top: 48px;
+    }
+}
+
+@media (max-width: 400px) {
+    .ny-line {
+        margin: 24px 0;
+    }
+
+    .ny-line.visible {
+        width: 48px;
+    }
+
+    .ny-message {
+        letter-spacing: 0.1em;
+    }
+
+    .ny-hint {
+        margin-top: 40px;
+    }
+}
