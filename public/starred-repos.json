@@ -1,14 +1,44 @@
 {
-  "lastUpdated": 1767299454567,
+  "lastUpdated": 1767343025508,
   "repos": [
     {
       "id": "STARRED-01",
+      "name": "witr",
+      "fullName": "pranshuparmar/witr",
+      "description": "Why is this running?",
+      "language": "Go",
+      "stars": 8742,
+      "forks": 181,
+      "url": "https://github.com/pranshuparmar/witr",
+      "topics": [],
+      "owner": {
+        "login": "pranshuparmar",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/4262592?v=4"
+      }
+    },
+    {
+      "id": "STARRED-02",
+      "name": "awesome-agentic-patterns",
+      "fullName": "nibzard/awesome-agentic-patterns",
+      "description": "A curated catalogue of awesome agentic AI patterns",
+      "language": "Python",
+      "stars": 413,
+      "forks": 39,
+      "url": "https://github.com/nibzard/awesome-agentic-patterns",
+      "topics": [],
+      "owner": {
+        "login": "nibzard",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6250945?v=4"
+      }
+    },
+    {
+      "id": "STARRED-03",
       "name": "Python",
       "fullName": "TheAlgorithms/Python",
       "description": "All Algorithms implemented in Python",
       "language": "Python",
-      "stars": 216367,
-      "forks": 49846,
+      "stars": 216389,
+      "forks": 49850,
       "url": "https://github.com/TheAlgorithms/Python",
       "topics": [
         "algorithm",
@@ -32,13 +62,13 @@
       }
     },
     {
-      "id": "STARRED-02",
+      "id": "STARRED-04",
       "name": "gumroad",
       "fullName": "antiwork/gumroad",
       "description": "Sell stuff and see what sticks",
       "language": "Ruby",
-      "stars": 8037,
-      "forks": 1550,
+      "stars": 8055,
+      "forks": 1552,
       "url": "https://github.com/antiwork/gumroad",
       "topics": [],
       "owner": {
@@ -47,12 +77,12 @@
       }
     },
     {
-      "id": "STARRED-03",
+      "id": "STARRED-05",
       "name": "scira",
       "fullName": "zaidmukaddam/scira",
       "description": "Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!",
       "language": "TypeScript",
-      "stars": 11266,
+      "stars": 11267,
       "forks": 1433,
       "url": "https://github.com/zaidmukaddam/scira",
       "topics": [
@@ -71,13 +101,13 @@
       }
     },
     {
-      "id": "STARRED-04",
+      "id": "STARRED-06",
       "name": "wifi-densepose",
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 4841,
-      "forks": 400,
+      "stars": 4853,
+      "forks": 401,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -86,7 +116,7 @@
       }
     },
     {
-      "id": "STARRED-05",
+      "id": "STARRED-07",
       "name": "heimdall",
       "fullName": "madanlalit/heimdall",
       "description": "The all-seeing agent for web automation.",
@@ -113,13 +143,13 @@
       }
     },
     {
-      "id": "STARRED-06",
+      "id": "STARRED-08",
       "name": "cocoindex",
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5569,
-      "forks": 411,
+      "stars": 5588,
+      "forks": 412,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -149,7 +179,7 @@
       }
     },
     {
-      "id": "STARRED-07",
+      "id": "STARRED-09",
       "name": "no-mouse",
       "fullName": "madanlalit/no-mouse",
       "description": "NoMouse lets you control your Mac cursor entirely with your keyboard",
@@ -170,7 +200,7 @@
       }
     },
     {
-      "id": "STARRED-08",
+      "id": "STARRED-10",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -185,7 +215,7 @@
       }
     },
     {
-      "id": "STARRED-09",
+      "id": "STARRED-11",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
       "description": "A retro-style personal blog with an interactive terminal interface, built with React, Vite, and TypeScript.",
@@ -200,13 +230,13 @@
       }
     },
     {
-      "id": "STARRED-10",
+      "id": "STARRED-12",
       "name": "system-prompts-and-models-of-ai-tools",
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 104663,
-      "forks": 27729,
+      "stars": 104778,
+      "forks": 27752,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
