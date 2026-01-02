@@ -14,7 +14,7 @@ import ReadingProgress from '../components/post/ReadingProgress';
 import ScrollToTop from '../components/post/ScrollToTop';
 import CodeBlock from '../components/post/CodeBlock';
 import SEO from '../components/SEO';
-import { BlogPostSchema } from '../components/StructuredData';
+import { BlogPostSchema, BreadcrumbSchema } from '../components/StructuredData';
 import type { Post as PostType } from '../types';
 import { SITE_CONFIG } from '../config';
 import '../features/terminal/SyntaxTheme.css';
@@ -51,6 +51,13 @@ const Post: React.FC = () => {
                     description={post.excerpt}
                     url={`${SITE_CONFIG.url}/post/${id}`}
                     datePublished={post.date}
+                />
+                <BreadcrumbSchema 
+                    items={[
+                        { name: "Home", item: SITE_CONFIG.url },
+                        { name: "Archive", item: `${SITE_CONFIG.url}/archive` },
+                        { name: post.title, item: `${SITE_CONFIG.url}/post/${id}` }
+                    ]}
                 />
                 <Link to="/" className="back-link">← Back to Terminal</Link>
 

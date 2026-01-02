@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface WebsiteSchemaProps {
@@ -20,6 +21,10 @@ interface PersonSchemaProps {
     url?: string;
     jobTitle?: string;
     location?: string;
+}
+
+interface BreadcrumbSchemaProps {
+    items: { name: string; item: string }[];
 }
 
 // Website schema for the homepage
@@ -61,6 +66,10 @@ export const BlogPostSchema: React.FC<BlogPostSchemaProps> = ({
         description,
         url,
         datePublished,
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": url
+        },
         author: {
             "@type": "Person",
             name: author
@@ -94,6 +103,28 @@ export const PersonSchema: React.FC<PersonSchemaProps> = ({
             "@type": "PostalAddress",
             addressCountry: location
         }
+    };
+
+    return (
+        <Helmet>
+            <script type="application/ld+json">
+                {JSON.stringify(schema)}
+            </script>
+        </Helmet>
+    );
+};
+
+// Breadcrumb schema
+export const BreadcrumbSchema: React.FC<BreadcrumbSchemaProps> = ({ items }) => {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            item: item.item,
+        })),
     };
 
     return (

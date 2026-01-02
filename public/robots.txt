@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /posts/*.json
 
 Sitemap: https://lalitmadan.com/sitemap.xml
