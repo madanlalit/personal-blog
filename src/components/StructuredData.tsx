@@ -21,6 +21,10 @@ interface PersonSchemaProps {
     url?: string;
     jobTitle?: string;
     location?: string;
+    sameAs?: string[];
+    skills?: string[];
+    description?: string;
+    seekingWork?: boolean;
 }
 
 interface BreadcrumbSchemaProps {
@@ -29,8 +33,8 @@ interface BreadcrumbSchemaProps {
 
 // Website schema for the homepage
 export const WebsiteSchema: React.FC<WebsiteSchemaProps> = ({
-    name = "Lalit Madan | Blog",
-    description = "Software engineer exploring AI, automation, and building things.",
+    name = "Lalit Madan - AI Engineer | Building Intelligent Systems",
+    description = "Software engineer specializing in AI agents, automation, and intelligent systems. Explore technical projects, experiments, and insights. Open for hire.",
     url
 }) => {
     const schema = {
@@ -90,8 +94,12 @@ export const BlogPostSchema: React.FC<BlogPostSchemaProps> = ({
 export const PersonSchema: React.FC<PersonSchemaProps> = ({
     name,
     url,
-    jobTitle = "Software Engineer",
-    location = "India"
+    jobTitle = "AI Engineer",
+    location = "India",
+    sameAs = [],
+    skills = [],
+    description,
+    seekingWork = true
 }) => {
     const schema = {
         "@context": "https://schema.org",
@@ -99,6 +107,13 @@ export const PersonSchema: React.FC<PersonSchemaProps> = ({
         name,
         url,
         jobTitle,
+        ...(description && { description }),
+        ...(skills.length > 0 && { knowsAbout: skills }),
+        ...(sameAs.length > 0 && { sameAs }),
+        ...(seekingWork && {
+            jobTitle: `${jobTitle} (Open for Hire)`,
+            "seeks": "Job opportunities in AI and automation"
+        }),
         address: {
             "@type": "PostalAddress",
             addressCountry: location

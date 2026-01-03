@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PostCard from "../components/ui/PostCard";
 import Typewriter from "../components/ui/Typewriter";
 import SEO from "../components/SEO";
-import { WebsiteSchema } from "../components/StructuredData";
+import { WebsiteSchema, PersonSchema } from "../components/StructuredData";
 import { Mail } from "lucide-react";
 import { usePosts } from "../hooks/usePosts";
 import { SITE_CONFIG } from "../config";
@@ -170,8 +170,22 @@ const Home: React.FC = () => {
 
   return (
     <div className="home-container fade-in">
-      <SEO title="Home" type="website" />
+      <SEO title={SITE_CONFIG.title.split(' | ')[0]} type="website" />
       <WebsiteSchema url={SITE_CONFIG.url} />
+      <PersonSchema
+        name={SITE_CONFIG.author}
+        url={SITE_CONFIG.url}
+        jobTitle="AI Engineer"
+        location="India"
+        description={SITE_CONFIG.description}
+        sameAs={[
+          "https://github.com/madanlalit",
+          "https://linkedin.com/in/madanlalit",
+          "https://x.com/lalitmadan"
+        ]}
+        skills={["AI Agents", "Automation", "Python", "JavaScript", "Machine Learning", "Intelligent Systems"]}
+        seekingWork={true}
+      />
       {/* --- HERO SECTION --- */}
       <header className="hero-section">
         <div className="hero-main">

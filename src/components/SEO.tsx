@@ -11,6 +11,7 @@ interface SEOProps {
     url?: string;
     image?: string;
     publishedTime?: string;
+    keywords?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -20,10 +21,11 @@ const SEO: React.FC<SEOProps> = ({
     type = "article",
     url,
     image = SITE_CONFIG.defaultImage,
-    publishedTime
+    publishedTime,
+    keywords = SITE_CONFIG.keywords
 }) => {
     const location = useLocation();
-    
+
     // Ensure absolute URLs for SEO metadata
     const siteUrl = SITE_CONFIG.url.endsWith('/') ? SITE_CONFIG.url.slice(0, -1) : SITE_CONFIG.url;
     const absoluteUrl = url ? `${siteUrl}${url.startsWith('/') ? url : `/${url}`}` : `${siteUrl}${location.pathname}`;
@@ -36,7 +38,10 @@ const SEO: React.FC<SEOProps> = ({
             {/* Standard metadata tags */}
             <title>{fullTitle}</title>
             <meta name='description' content={description} />
+            <meta name='keywords' content={keywords} />
+            <meta name='author' content={author} />
             <link rel="canonical" href={absoluteUrl} />
+            <link rel="icon" type="image/svg+xml" href={SITE_CONFIG.favicon} />
 
             {/* Open Graph tags (Facebook, LinkedIn, etc.) */}
             <meta property="og:type" content={type} />
