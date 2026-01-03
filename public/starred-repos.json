@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1767429286946,
+  "lastUpdated": 1767472160493,
   "repos": [
     {
       "id": "STARRED-01",
@@ -7,8 +7,8 @@
       "fullName": "browseros-ai/BrowserOS",
       "description": "🌐 The open-source Agentic browser; privacy-first alternative to ChatGPT Atlas, Perplexity Comet, Dia.",
       "language": "C++",
-      "stars": 8489,
-      "forks": 823,
+      "stars": 8501,
+      "forks": 824,
       "url": "https://github.com/browseros-ai/BrowserOS",
       "topics": [
         "agent",
@@ -34,8 +34,8 @@
       "fullName": "GitHubDaily/GitHubDaily",
       "description": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
       "language": "Unknown",
-      "stars": 43932,
-      "forks": 4422,
+      "stars": 43975,
+      "forks": 4425,
       "url": "https://github.com/GitHubDaily/GitHubDaily",
       "topics": [
         "ai",
@@ -66,8 +66,8 @@
       "fullName": "pranshuparmar/witr",
       "description": "Why is this running?",
       "language": "Go",
-      "stars": 9375,
-      "forks": 191,
+      "stars": 9527,
+      "forks": 194,
       "url": "https://github.com/pranshuparmar/witr",
       "topics": [],
       "owner": {
@@ -81,8 +81,8 @@
       "fullName": "nibzard/awesome-agentic-patterns",
       "description": "A curated catalogue of awesome agentic AI patterns",
       "language": "Python",
-      "stars": 479,
-      "forks": 46,
+      "stars": 507,
+      "forks": 48,
       "url": "https://github.com/nibzard/awesome-agentic-patterns",
       "topics": [],
       "owner": {
@@ -96,8 +96,8 @@
       "fullName": "TheAlgorithms/Python",
       "description": "All Algorithms implemented in Python",
       "language": "Python",
-      "stars": 216424,
-      "forks": 49857,
+      "stars": 216440,
+      "forks": 49860,
       "url": "https://github.com/TheAlgorithms/Python",
       "topics": [
         "algorithm",
@@ -126,8 +126,8 @@
       "fullName": "antiwork/gumroad",
       "description": "Sell stuff and see what sticks",
       "language": "Ruby",
-      "stars": 8084,
-      "forks": 1558,
+      "stars": 8099,
+      "forks": 1559,
       "url": "https://github.com/antiwork/gumroad",
       "topics": [],
       "owner": {
@@ -141,8 +141,8 @@
       "fullName": "zaidmukaddam/scira",
       "description": "Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!",
       "language": "TypeScript",
-      "stars": 11267,
-      "forks": 1433,
+      "stars": 11268,
+      "forks": 1436,
       "url": "https://github.com/zaidmukaddam/scira",
       "topics": [
         "ai-search-engine",
@@ -165,8 +165,8 @@
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 4890,
-      "forks": 407,
+      "stars": 4901,
+      "forks": 408,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -207,8 +207,8 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5613,
-      "forks": 412,
+      "stars": 5633,
+      "forks": 414,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -294,8 +294,8 @@
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 104999,
-      "forks": 27817,
+      "stars": 105102,
+      "forks": 27843,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
