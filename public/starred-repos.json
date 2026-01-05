@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1767602532278,
+  "lastUpdated": 1767645180340,
   "repos": [
     {
       "id": "STARRED-01",
@@ -7,8 +7,8 @@
       "fullName": "anomalyco/opencode",
       "description": "The open source coding agent.",
       "language": "TypeScript",
-      "stars": 48552,
-      "forks": 4135,
+      "stars": 49483,
+      "forks": 4198,
       "url": "https://github.com/anomalyco/opencode",
       "topics": [],
       "owner": {
@@ -22,8 +22,8 @@
       "fullName": "openprose/prose",
       "description": "No description available",
       "language": "Unknown",
-      "stars": 264,
-      "forks": 24,
+      "stars": 317,
+      "forks": 26,
       "url": "https://github.com/openprose/prose",
       "topics": [],
       "owner": {
@@ -37,8 +37,8 @@
       "fullName": "browseros-ai/BrowserOS",
       "description": "🌐 The open-source Agentic browser; privacy-first alternative to ChatGPT Atlas, Perplexity Comet, Dia.",
       "language": "C++",
-      "stars": 8522,
-      "forks": 824,
+      "stars": 8525,
+      "forks": 825,
       "url": "https://github.com/browseros-ai/BrowserOS",
       "topics": [
         "agent",
@@ -64,8 +64,8 @@
       "fullName": "GitHubDaily/GitHubDaily",
       "description": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
       "language": "Unknown",
-      "stars": 44111,
-      "forks": 4440,
+      "stars": 44147,
+      "forks": 4445,
       "url": "https://github.com/GitHubDaily/GitHubDaily",
       "topics": [
         "ai",
@@ -96,8 +96,8 @@
       "fullName": "pranshuparmar/witr",
       "description": "Why is this running?",
       "language": "Go",
-      "stars": 9889,
-      "forks": 205,
+      "stars": 10040,
+      "forks": 207,
       "url": "https://github.com/pranshuparmar/witr",
       "topics": [],
       "owner": {
@@ -111,8 +111,8 @@
       "fullName": "nibzard/awesome-agentic-patterns",
       "description": "A curated catalogue of awesome agentic AI patterns",
       "language": "Python",
-      "stars": 1150,
-      "forks": 84,
+      "stars": 1586,
+      "forks": 98,
       "url": "https://github.com/nibzard/awesome-agentic-patterns",
       "topics": [],
       "owner": {
@@ -126,8 +126,8 @@
       "fullName": "TheAlgorithms/Python",
       "description": "All Algorithms implemented in Python",
       "language": "Python",
-      "stars": 216489,
-      "forks": 49875,
+      "stars": 216512,
+      "forks": 49876,
       "url": "https://github.com/TheAlgorithms/Python",
       "topics": [
         "algorithm",
@@ -156,8 +156,8 @@
       "fullName": "antiwork/gumroad",
       "description": "Sell stuff and see what sticks",
       "language": "Ruby",
-      "stars": 8147,
-      "forks": 1574,
+      "stars": 8152,
+      "forks": 1577,
       "url": "https://github.com/antiwork/gumroad",
       "topics": [],
       "owner": {
@@ -171,7 +171,7 @@
       "fullName": "zaidmukaddam/scira",
       "description": "Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!",
       "language": "TypeScript",
-      "stars": 11279,
+      "stars": 11287,
       "forks": 1436,
       "url": "https://github.com/zaidmukaddam/scira",
       "topics": [
@@ -195,8 +195,8 @@
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 4924,
-      "forks": 410,
+      "stars": 4938,
+      "forks": 412,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -237,8 +237,8 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5681,
-      "forks": 417,
+      "stars": 5705,
+      "forks": 418,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -324,8 +324,8 @@
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 105677,
-      "forks": 27942,
+      "stars": 105860,
+      "forks": 27969,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
