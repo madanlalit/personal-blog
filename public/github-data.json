@@ -1,6 +1,32 @@
 {
-  "lastUpdated": 1767645179719,
+  "lastUpdated": 1767688798004,
   "events": [
+    {
+      "id": "7220880501",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "repository_id": 1122114096,
+        "push_id": 29515768476,
+        "ref": "refs/heads/main",
+        "head": "f8c039141e1c721eecd8889f6eba9561a0597c5b",
+        "before": "3f360081b0298eb76fc6667ccb77c0e4a192a728"
+      },
+      "public": true,
+      "created_at": "2026-01-06T07:50:02Z"
+    },
     {
       "id": "7205342420",
       "type": "PushEvent",
@@ -5648,99 +5674,6 @@
       },
       "public": true,
       "created_at": "2025-12-26T06:52:38Z"
-    },
-    {
-      "id": "5500939831",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/5",
-          "repository_url": "https://api.github.com/repos/madanlalit/personal-blog",
-          "labels_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/5/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/5/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/5/events",
-          "html_url": "https://github.com/madanlalit/personal-blog/issues/5",
-          "id": 3762869832,
-          "node_id": "I_kwDOQn7ljs7gSNZI",
-          "number": 5,
-          "title": "Improve SEO and Google search result display (add robots.txt, sitemap.xml)",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-26T06:52:15Z",
-          "updated_at": "2025-12-26T09:36:38Z",
-          "closed_at": "2025-12-26T09:36:38Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Google search shows incorrect metadata (title: \"my_blog\", description: random UI text).\n\nFixes poor search engine visibility and social sharing previews.",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/5/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/5/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-26T06:52:15Z"
     }
   ]
 }
