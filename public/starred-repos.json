@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1767775166632,
+  "lastUpdated": 1767817976717,
   "repos": [
     {
       "id": "STARRED-01",
@@ -7,8 +7,8 @@
       "fullName": "jarrodwatts/claude-hud",
       "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
       "language": "JavaScript",
-      "stars": 1476,
-      "forks": 79,
+      "stars": 1640,
+      "forks": 84,
       "url": "https://github.com/jarrodwatts/claude-hud",
       "topics": [
         "anthropic",
@@ -30,7 +30,7 @@
       "fullName": "Nutlope/turboseek",
       "description": "An AI search engine inspired by Perplexity",
       "language": "TypeScript",
-      "stars": 1594,
+      "stars": 1596,
       "forks": 255,
       "url": "https://github.com/Nutlope/turboseek",
       "topics": [],
@@ -45,8 +45,8 @@
       "fullName": "OthmanAdi/planning-with-files",
       "description": "Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition.",
       "language": "Unknown",
-      "stars": 2921,
-      "forks": 264,
+      "stars": 3847,
+      "forks": 330,
       "url": "https://github.com/OthmanAdi/planning-with-files",
       "topics": [],
       "owner": {
@@ -60,8 +60,8 @@
       "fullName": "anomalyco/opencode",
       "description": "The open source coding agent.",
       "language": "TypeScript",
-      "stars": 52355,
-      "forks": 4432,
+      "stars": 53226,
+      "forks": 4511,
       "url": "https://github.com/anomalyco/opencode",
       "topics": [],
       "owner": {
@@ -75,8 +75,8 @@
       "fullName": "openprose/prose",
       "description": "No description available",
       "language": "Unknown",
-      "stars": 360,
-      "forks": 32,
+      "stars": 375,
+      "forks": 34,
       "url": "https://github.com/openprose/prose",
       "topics": [],
       "owner": {
@@ -90,7 +90,7 @@
       "fullName": "browseros-ai/BrowserOS",
       "description": "🌐 The open-source Agentic browser; privacy-first alternative to ChatGPT Atlas, Perplexity Comet, Dia.",
       "language": "C++",
-      "stars": 8543,
+      "stars": 8546,
       "forks": 827,
       "url": "https://github.com/browseros-ai/BrowserOS",
       "topics": [
@@ -117,8 +117,8 @@
       "fullName": "GitHubDaily/GitHubDaily",
       "description": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
       "language": "Unknown",
-      "stars": 44241,
-      "forks": 4459,
+      "stars": 44256,
+      "forks": 4462,
       "url": "https://github.com/GitHubDaily/GitHubDaily",
       "topics": [
         "ai",
@@ -149,8 +149,8 @@
       "fullName": "pranshuparmar/witr",
       "description": "Why is this running?",
       "language": "Go",
-      "stars": 10398,
-      "forks": 222,
+      "stars": 10469,
+      "forks": 226,
       "url": "https://github.com/pranshuparmar/witr",
       "topics": [],
       "owner": {
@@ -164,8 +164,8 @@
       "fullName": "nibzard/awesome-agentic-patterns",
       "description": "A curated catalogue of awesome agentic AI patterns",
       "language": "Python",
-      "stars": 1901,
-      "forks": 112,
+      "stars": 1983,
+      "forks": 115,
       "url": "https://github.com/nibzard/awesome-agentic-patterns",
       "topics": [],
       "owner": {
@@ -179,8 +179,8 @@
       "fullName": "TheAlgorithms/Python",
       "description": "All Algorithms implemented in Python",
       "language": "Python",
-      "stars": 216558,
-      "forks": 49887,
+      "stars": 216595,
+      "forks": 49890,
       "url": "https://github.com/TheAlgorithms/Python",
       "topics": [
         "algorithm",
@@ -209,8 +209,8 @@
       "fullName": "antiwork/gumroad",
       "description": "Sell stuff and see what sticks",
       "language": "Ruby",
-      "stars": 8160,
-      "forks": 1583,
+      "stars": 8167,
+      "forks": 1588,
       "url": "https://github.com/antiwork/gumroad",
       "topics": [],
       "owner": {
@@ -224,7 +224,7 @@
       "fullName": "zaidmukaddam/scira",
       "description": "Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!",
       "language": "TypeScript",
-      "stars": 11294,
+      "stars": 11298,
       "forks": 1439,
       "url": "https://github.com/zaidmukaddam/scira",
       "topics": [
@@ -248,8 +248,8 @@
       "fullName": "ruvnet/wifi-densepose",
       "description": "Production-ready implementation of InvisPose - a revolutionary WiFi-based dense human pose estimation system that enables real-time full-body tracking through walls using commodity mesh routers ",
       "language": "Python",
-      "stars": 5007,
-      "forks": 426,
+      "stars": 5015,
+      "forks": 427,
       "url": "https://github.com/ruvnet/wifi-densepose",
       "topics": [],
       "owner": {
@@ -290,8 +290,8 @@
       "fullName": "cocoindex-io/cocoindex",
       "description": "Data transformation framework for AI. Ultra performant, with incremental processing.  🌟 Star if you like it!",
       "language": "Rust",
-      "stars": 5743,
-      "forks": 420,
+      "stars": 5751,
+      "forks": 421,
       "url": "https://github.com/cocoindex-io/cocoindex",
       "topics": [
         "ai",
@@ -377,8 +377,8 @@
       "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
       "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
       "language": "Unknown",
-      "stars": 106350,
-      "forks": 28058,
+      "stars": 106509,
+      "forks": 28084,
       "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "topics": [
         "ai",
