@@ -1,6 +1,466 @@
 {
-  "lastUpdated": 1767861557892,
+  "lastUpdated": 1767904346025,
   "events": [
+    {
+      "id": "5688389782",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 819554665,
+        "name": "exo-explore/exo",
+        "url": "https://api.github.com/repos/exo-explore/exo"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/exo-explore/exo/issues/1107",
+          "repository_url": "https://api.github.com/repos/exo-explore/exo",
+          "labels_url": "https://api.github.com/repos/exo-explore/exo/issues/1107/labels{/name}",
+          "comments_url": "https://api.github.com/repos/exo-explore/exo/issues/1107/comments",
+          "events_url": "https://api.github.com/repos/exo-explore/exo/issues/1107/events",
+          "html_url": "https://github.com/exo-explore/exo/issues/1107",
+          "id": 3792892351,
+          "node_id": "I_kwDOMNlpac7iEvG_",
+          "number": 1107,
+          "title": "[BUG] Rendering of multiple instances is bad in the dashboard",
+          "user": {
+            "login": "JakeHillion",
+            "id": 5712856,
+            "node_id": "MDQ6VXNlcjU3MTI4NTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5712856?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JakeHillion",
+            "html_url": "https://github.com/JakeHillion",
+            "followers_url": "https://api.github.com/users/JakeHillion/followers",
+            "following_url": "https://api.github.com/users/JakeHillion/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JakeHillion/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JakeHillion/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JakeHillion/subscriptions",
+            "organizations_url": "https://api.github.com/users/JakeHillion/orgs",
+            "repos_url": "https://api.github.com/users/JakeHillion/repos",
+            "events_url": "https://api.github.com/users/JakeHillion/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JakeHillion/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 7121625379,
+              "node_id": "LA_kwDOMNlpac8AAAABqHthIw",
+              "url": "https://api.github.com/repos/exo-explore/exo/labels/bug",
+              "name": "bug",
+              "color": "d73a4a",
+              "default": true,
+              "description": "Something isn't working"
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": {
+            "login": "samiamjidkhan",
+            "id": 98742866,
+            "node_id": "U_kgDOBeKyUg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/98742866?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/samiamjidkhan",
+            "html_url": "https://github.com/samiamjidkhan",
+            "followers_url": "https://api.github.com/users/samiamjidkhan/followers",
+            "following_url": "https://api.github.com/users/samiamjidkhan/following{/other_user}",
+            "gists_url": "https://api.github.com/users/samiamjidkhan/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/samiamjidkhan/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/samiamjidkhan/subscriptions",
+            "organizations_url": "https://api.github.com/users/samiamjidkhan/orgs",
+            "repos_url": "https://api.github.com/users/samiamjidkhan/repos",
+            "events_url": "https://api.github.com/users/samiamjidkhan/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/samiamjidkhan/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "samiamjidkhan",
+              "id": 98742866,
+              "node_id": "U_kgDOBeKyUg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/98742866?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/samiamjidkhan",
+              "html_url": "https://github.com/samiamjidkhan",
+              "followers_url": "https://api.github.com/users/samiamjidkhan/followers",
+              "following_url": "https://api.github.com/users/samiamjidkhan/following{/other_user}",
+              "gists_url": "https://api.github.com/users/samiamjidkhan/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/samiamjidkhan/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/samiamjidkhan/subscriptions",
+              "organizations_url": "https://api.github.com/users/samiamjidkhan/orgs",
+              "repos_url": "https://api.github.com/users/samiamjidkhan/repos",
+              "events_url": "https://api.github.com/users/samiamjidkhan/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/samiamjidkhan/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2026-01-08T13:24:06Z",
+          "updated_at": "2026-01-08T18:41:51Z",
+          "closed_at": null,
+          "type": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "## Describe the bug\n\nTwo separate bugs:\n- A horizontal scrollbar appears however big my window is on the instances section.\n- A vertical scrollbar appears very soon with two instances. It would be good if two instances could render fully without the scrollbar.\n\n## To Reproduce\n\nSteps to reproduce the behavior:\n1. Start two instances.\n2. See scrolling.\n\n## Expected behavior\n\nTwo instances can render without any scrollbars.\n\n## Actual behavior\n\nScrollbars appear.\n\n## Environment\n\n- macOS Version: n/a\n- EXO Version: 1.0.61-alpha.2 (latest main)\n- Hardware:\n  - n/a\n- Interconnection:\n  - n/a\n\n## Additional context\n\n### Firefox screenshot\n\n<img width=\"1894\" height=\"1323\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/099aa557-9d15-42de-9466-1bfc5619d3a7\" />\n\n### Chrome screenshot\n<img width=\"1713\" height=\"942\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/27caaee8-2337-4271-b5a1-8c9c405b5ed0\" />",
+          "reactions": {
+            "url": "https://api.github.com/repos/exo-explore/exo/issues/1107/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/exo-explore/exo/issues/1107/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3725174289",
+          "html_url": "https://github.com/exo-explore/exo/issues/1107#issuecomment-3725174289",
+          "issue_url": "https://api.github.com/repos/exo-explore/exo/issues/1107",
+          "id": 3725174289,
+          "node_id": "IC_kwDOMNlpac7eCaYR",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-01-08T18:41:51Z",
+          "updated_at": "2026-01-08T18:41:51Z",
+          "body": "@JakeHillion @samiamjidkhan can i pick this up ?",
+          "reactions": {
+            "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3725174289/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-08T18:41:51Z",
+      "org": {
+        "id": 162823259,
+        "login": "exo-explore",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/exo-explore",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162823259?"
+      }
+    },
+    {
+      "id": "7289936325",
+      "type": "DeleteEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "ref": "feature/state-persistence-pause-resume",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature/state-persistence-pause-resume",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-08T11:40:31Z"
+    },
+    {
+      "id": "5678938917",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 22,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/22",
+          "id": 3155840036,
+          "number": 22,
+          "head": {
+            "ref": "feature/state-persistence-pause-resume",
+            "sha": "245a7a78b1b10585491c06f7e2d6b78688a0748a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "ac77e46d4e3abe77d8442a73c08ca5e38cb9b6ff",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-08T11:40:27Z"
+    },
+    {
+      "id": "7289935218",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "repository_id": 1122114096,
+        "push_id": 29584893562,
+        "ref": "refs/heads/main",
+        "head": "f63ffda749266a2654777937f17df5974020f0f6",
+        "before": "ac77e46d4e3abe77d8442a73c08ca5e38cb9b6ff"
+      },
+      "public": true,
+      "created_at": "2026-01-08T11:40:28Z"
+    },
+    {
+      "id": "5678938295",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/4",
+          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
+          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/labels{/name}",
+          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/comments",
+          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/events",
+          "html_url": "https://github.com/madanlalit/heimdall/issues/4",
+          "id": 3764452039,
+          "node_id": "I_kwDOQuIaMM7gYPrH",
+          "number": 4,
+          "title": "Integrate State Persistence for Task Resumption",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignee": null,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2025-12-27T06:13:20Z",
+          "updated_at": "2026-01-08T11:40:28Z",
+          "closed_at": "2026-01-08T11:40:28Z",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "Enable task resumption via state persistence.\n\n**Location:** `src/heimdall/persistence/`\n\n**Tasks:**\n- Add `--resume` flag to CLI\n- Save/restore agent state between sessions\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed"
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-08T11:40:29Z"
+    },
+    {
+      "id": "5678932924",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 22,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/22",
+          "id": 3155840036,
+          "number": 22,
+          "head": {
+            "ref": "feature/state-persistence-pause-resume",
+            "sha": "245a7a78b1b10585491c06f7e2d6b78688a0748a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "ac77e46d4e3abe77d8442a73c08ca5e38cb9b6ff",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-08T11:40:13Z"
+    },
+    {
+      "id": "7289918153",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "ref": "feature/state-persistence-pause-resume",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature/state-persistence-pause-resume",
+        "master_branch": "main",
+        "description": "The all-seeing agent for web automation.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-08T11:39:48Z"
+    },
     {
       "id": "5674812219",
       "type": "WatchEvent",
@@ -4812,639 +5272,6 @@
       },
       "public": true,
       "created_at": "2025-12-27T06:13:55Z"
-    },
-    {
-      "id": "5509806237",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/5",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/5",
-          "id": 3764452282,
-          "node_id": "I_kwDOQuIaMM7gYPu6",
-          "number": 5,
-          "title": "Add Google Gemini LLM Provider Support",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:13:37Z",
-          "updated_at": "2025-12-27T06:13:37Z",
-          "closed_at": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Add support for Google Gemini as an LLM provider.\n\n**Location:** `src/heimdall/agent/llm/`\n\n**Tasks:**\n- Create `google.py` with `GoogleClient`\n- Register in provider registry\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-27T06:13:38Z"
-    },
-    {
-      "id": "5509805136",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/4",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/4",
-          "id": 3764452039,
-          "node_id": "I_kwDOQuIaMM7gYPrH",
-          "number": 4,
-          "title": "Integrate State Persistence for Task Resumption",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:13:20Z",
-          "updated_at": "2025-12-27T06:13:20Z",
-          "closed_at": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Enable task resumption via state persistence.\n\n**Location:** `src/heimdall/persistence/`\n\n**Tasks:**\n- Add `--resume` flag to CLI\n- Save/restore agent state between sessions\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/4/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-27T06:13:22Z"
-    },
-    {
-      "id": "5509804122",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/3",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/3",
-          "id": 3764451853,
-          "node_id": "I_kwDOQuIaMM7gYPoN",
-          "number": 3,
-          "title": "Implement Functional Demo Mode",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:13:03Z",
-          "updated_at": "2026-01-05T12:01:53Z",
-          "closed_at": "2026-01-05T12:01:53Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Make the demo mode flag functional with visual feedback.\n\n**Location:** `src/heimdall/browser/demo.py`\n\n**Tasks:**\n- Pass `demo_mode` flag through CLI to Agent\n- Call highlight/tooltip methods before actions",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-27T06:13:04Z"
-    },
-    {
-      "id": "5509802901",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/2",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/2",
-          "id": 3764451553,
-          "node_id": "I_kwDOQuIaMM7gYPjh",
-          "number": 2,
-          "title": "Wire Collector/Export System into Agent Execution",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:12:42Z",
-          "updated_at": "2026-01-05T15:31:31Z",
-          "closed_at": "2026-01-05T15:31:31Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Integrate the collector module into agent execution for step capture and export.\n\n**Location:** `src/heimdall/collector/` → `src/heimdall/cli.py`\n\n**Tasks:**\n- Hook collector into agent loop for before/after step capture\n- Export results at task completion\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-27T06:12:44Z"
-    },
-    {
-      "id": "5509801663",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/1",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/1/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/1/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/1/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/1",
-          "id": 3764451126,
-          "node_id": "I_kwDOQuIaMM7gYPc2",
-          "number": 1,
-          "title": "Integrate Watchdogs into Agent Loop",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:12:21Z",
-          "updated_at": "2026-01-03T18:32:16Z",
-          "closed_at": "2026-01-03T18:32:16Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "\nWire existing watchdog implementations into the agent execution loop.\n\n**Location:** `src/heimdall/watchdogs/` → `src/heimdall/agent/loop.py`\n\n**Tasks:**\n- Start watchdogs in `Agent.run()`\n- Subscribe agent loop to watchdog events\n- Use navigation/network events for smarter waiting",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/1/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/1/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-27T06:12:23Z"
-    },
-    {
-      "id": "7016362319",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29310578539,
-        "ref": "refs/heads/main",
-        "head": "b39c3f2753e25c7cdc64619c9ecbe3f78a661f32",
-        "before": "081e25cda2094f0d53228df1581292075600e048"
-      },
-      "public": true,
-      "created_at": "2025-12-27T04:56:13Z"
-    },
-    {
-      "id": "5506875385",
-      "type": "IssueCommentEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 819554665,
-        "name": "exo-explore/exo",
-        "url": "https://api.github.com/repos/exo-explore/exo"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/exo-explore/exo/issues/1003",
-          "repository_url": "https://api.github.com/repos/exo-explore/exo",
-          "labels_url": "https://api.github.com/repos/exo-explore/exo/issues/1003/labels{/name}",
-          "comments_url": "https://api.github.com/repos/exo-explore/exo/issues/1003/comments",
-          "events_url": "https://api.github.com/repos/exo-explore/exo/issues/1003/events",
-          "html_url": "https://github.com/exo-explore/exo/pull/1003",
-          "id": 3760737657,
-          "node_id": "PR_kwDOMNlpac66gGk7",
-          "number": 1003,
-          "title": "feat(macos-app): add custom namespace UI for cluster isolation",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 5,
-          "created_at": "2025-12-24T17:14:13Z",
-          "updated_at": "2026-01-05T14:25:01Z",
-          "closed_at": "2026-01-05T14:25:00Z",
-          "type": null,
-          "active_lock_reason": null,
-          "draft": false,
-          "pull_request": {
-            "url": "https://api.github.com/repos/exo-explore/exo/pulls/1003",
-            "html_url": "https://github.com/exo-explore/exo/pull/1003",
-            "diff_url": "https://github.com/exo-explore/exo/pull/1003.diff",
-            "patch_url": "https://github.com/exo-explore/exo/pull/1003.patch",
-            "merged_at": "2026-01-05T14:25:00Z"
-          },
-          "body": "## Overview\r\n\r\nAdd Advanced Options section with custom namespace field that allows users to override EXO_LIBP2P_NAMESPACE environment variable. This enables splitting machines that can see each other into separate clusters.\r\n\r\n- Added customNamespace property with UserDefaults persistence\r\n- Added Advanced Options collapsible section with text field\r\n- Added Save & Restart button that auto-restarts exo process\r\n- Namespace replaces buildTag when custom value is set\r\n- Falls back to buildTag (version) when namespace is empty\r\n\r\n## Motivation\r\n\r\nEXO supports multiple p2p namespaces to split up clusters via the `EXO_LIBP2P_NAMESPACE` environment variable when building from source. However, when using the macOS app, this was hardcoded to the application version, making it impossible for users to isolate machines into separate clusters without rebuilding the app.\r\n\r\nThis PR adds a UI option in the macOS app to set a custom namespace, allowing users to split machines that can see each other into multiple logical clusters.\r\n\r\n## Changes\r\n\r\n- Added `customNamespace` property to [ExoProcessController.swift](cci:7://file:///exo/app/EXO/EXO/ExoProcessController.swift:0:0-0:0) with UserDefaults persistence\r\n- Added \"Advanced Options\" collapsible section to [ContentView.swift](cci:7://file:///exo/app/EXO/EXO/ContentView.swift:0:0-0:0) (similar to existing Debug Info section)\r\n- Added text field for entering custom namespace with \"Save & Restart\" button\r\n- Modified `computeNamespace()` to use custom namespace when set, falling back to buildTag (app version) when empty\r\n- Button is disabled when no changes are pending\r\n- Automatically restarts exo process when namespace is saved (if running)\r\n\r\n## Why It Works\r\n\r\nThe implementation modifies the `makeEnvironment()` function to set `EXO_LIBP2P_NAMESPACE` using the custom value from UserDefaults. When the namespace is changed and saved:\r\n\r\n1. User enters namespace in text field (value stored in local state)\r\n2. Clicking \"Save & Restart\" writes to UserDefaults and calls `controller.restart()`\r\n3. On next launch, `computeNamespace()` returns the custom value instead of buildTag\r\n4. This namespace is used when creating the exo process, isolating it from other clusters\r\n\r\n## Test Plan\r\n\r\n### Manual Testing\r\n**Hardware:** MacBook Air M1 8GB (macOS 26.02)\r\n\r\n**What I tested:**\r\n- Verified namespace field appears in Advanced Options section\r\n- Tested entering custom namespace (e.g., \"my-cluster\")\r\n- Confirmed \"Save & Restart\" button restarts exo process\r\n- Verified namespace persists across app restarts (UserDefaults)\r\n- Tested empty namespace falls back to buildTag (app version)\r\n- Confirmed button is disabled when no changes pending\r\n\r\n### Automated Testing\r\nNo automated tests added.\r\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/exo-explore/exo/issues/1003/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/exo-explore/exo/issues/1003/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3693254026",
-          "html_url": "https://github.com/exo-explore/exo/pull/1003#issuecomment-3693254026",
-          "issue_url": "https://api.github.com/repos/exo-explore/exo/issues/1003",
-          "id": 3693254026,
-          "node_id": "IC_kwDOMNlpac7cIpWK",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2025-12-26T19:09:32Z",
-          "updated_at": "2025-12-26T19:09:32Z",
-          "body": "yeah no worries !\ncurrently I am going through the repo trying to understand intricate details so I can contribute more.",
-          "reactions": {
-            "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3693254026/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-26T19:09:32Z",
-      "org": {
-        "id": 162823259,
-        "login": "exo-explore",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/exo-explore",
-        "avatar_url": "https://avatars.githubusercontent.com/u/162823259?"
-      }
     }
   ]
 }
