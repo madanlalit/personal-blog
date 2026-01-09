@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Typewriter.css';
 
 interface TypewriterContentProps {
     content: string;
@@ -83,7 +84,7 @@ const TypewriterContent: React.FC<TypewriterContentProps> = ({ content, speed = 
         return (
             <Tag key={index} className={className}>
                 {contentText}
-                {isTyping && <span className="cursor-block">█</span>}
+                {isTyping && <span className="typewriter-cursor"></span>}
             </Tag>
         );
     };

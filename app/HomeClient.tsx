@@ -6,6 +6,7 @@ import { Mail } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
 import PostCard from '@/components/ui/PostCard';
 import './home.css';
+import '@/components/ui/Typewriter.css';
 
 // --- TYPES ---
 import type { GitHubEvent } from '@/lib/github';
@@ -40,7 +41,9 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
     const [time, setTime] = useState<Date | null>(null);
     const [skillsAnimated, setSkillsAnimated] = useState(false);
     const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
-    const [activityMap, setActivityMap] = useState<number[]>(Array(30).fill(0));
+    const [activityMap, setActivityMap] = useState<Array<{ count: number; date: string }>>(
+        Array(30).fill({ count: 0, date: '' })
+    );
     const [ghStatus, setGhStatus] = useState<'LOADING' | 'ONLINE' | 'OFFLINE'>('LOADING');
     const [dataTimestamp, setDataTimestamp] = useState<number | null>(null);
 
@@ -71,29 +74,47 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        const thirtyDaysAgo = new Date(today);
-        thirtyDaysAgo.setDate(today.getDate() - 30);
-
-        const pushEvents = events.filter((e) => {
-            return e.type === 'PushEvent' && new Date(e.created_at) >= thirtyDaysAgo;
+        // Initialize last 30 days with dates
+        const dailyData = Array(30).fill(null).map((_, i) => {
+            const d = new Date(today);
+            d.setDate(d.getDate() - (29 - i));
+            return {
+                count: 0,
+                date: d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }),
+                iso: d.toISOString().split('T')[0]
+            };
         });
 
-        const dailyCounts = Array(30).fill(0);
+        const dateMap = new Map();
+        dailyData.forEach((d, i) => dateMap.set(d.iso, i));
 
-        pushEvents.forEach((e) => {
+        const contributionEvents = events.filter((e) => {
+            if (e.type === 'PushEvent') return true;
+            if (e.type === 'PullRequestEvent' && e.payload.action === 'opened') return true;
+            if (e.type === 'IssuesEvent' && e.payload.action === 'opened') return true;
+            if (e.type === 'CreateEvent') return true;
+            return false;
+        });
+
+        contributionEvents.forEach((e) => {
             const eventDate = new Date(e.created_at);
-            eventDate.setHours(0, 0, 0, 0);
+            const isoDate = eventDate.toISOString().split('T')[0];
 
-            const diffTime = today.getTime() - eventDate.getTime();
-            const dayDiff = Math.floor(diffTime / (1000 * 3600 * 24));
+            if (dateMap.has(isoDate)) {
+                const idx = dateMap.get(isoDate);
+                let count = 0;
 
-            if (dayDiff >= 0 && dayDiff < 30) {
-                const count = e.payload.commits ? e.payload.commits.length : 1;
-                dailyCounts[29 - dayDiff] += count;
+                if (e.type === 'PushEvent') {
+                    count = e.payload.commits ? e.payload.commits.length : 1;
+                } else {
+                    count = 1;
+                }
+
+                dailyData[idx].count += count;
             }
         });
 
-        return dailyCounts;
+        return dailyData;
     };
 
     // --- DATA PROCESSING ---
@@ -121,7 +142,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
             <header className="hero-section">
                 <div className="hero-main">
                     <h1 className="hero-title">
-                        LALIT<span className="accent">_</span>MADAN
+                        LALIT<span className="accent">_</span>MADAN<span className="typewriter-cursor"></span>
                     </h1>
                     <div className="hero-subtitle">
                         Engineering Reality. Architecting Intelligence.
@@ -279,15 +300,15 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                         </div>
 
                         <div className="heatmap-strip">
-                            {activityMap.map((count, i) => (
+                            {activityMap.map((item, i) => (
                                 <div
                                     key={i}
                                     className="heat-bit"
                                     style={{
-                                        opacity: getIntensity(count),
-                                        backgroundColor: count > 0 ? 'var(--accent)' : 'var(--text-tertiary)',
+                                        opacity: getIntensity(item.count),
+                                        backgroundColor: item.count > 0 ? 'var(--accent)' : 'var(--text-tertiary)',
                                     }}
-                                    title={`${count} commits (${30 - i - 1} days ago)`}
+                                    title={`${item.count} contributions on ${item.date}`}
                                 />
                             ))}
                         </div>

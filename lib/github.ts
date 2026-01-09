@@ -18,6 +18,9 @@ export interface GitHubEvent {
             sha: string;
             message: string;
         }>;
+        action?: string;
+        issue?: any;
+        pull_request?: any;
     };
     created_at: string;
 }

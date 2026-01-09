@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 
+import './Typewriter.css';
+
 interface TypewriterProps {
     text: string;
     speed?: number;
@@ -35,7 +37,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 5, delay = 0, onC
     return (
         <span className="typewriter-text">
             {displayedText}
-            {displayedText.length < text.length && <span className="cursor-block">█</span>}
+            {displayedText.length < text.length && <span className="typewriter-cursor"></span>}
         </span>
     );
 };
