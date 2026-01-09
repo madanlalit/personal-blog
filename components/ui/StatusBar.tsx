@@ -11,11 +11,12 @@ interface StatusBarProps {
 
 const StatusBar = ({ muted, onToggleMute }: StatusBarProps) => {
     const pathname = usePathname();
-    const [time, setTime] = useState(new Date());
+    const [time, setTime] = useState<Date | null>(null);
     const [mode, setMode] = useState('NORMAL');
     const [scrollPercent, setScrollPercent] = useState(0);
 
     useEffect(() => {
+        setTime(new Date());
         const timer = setInterval(() => setTime(new Date()), 1000);
         return () => clearInterval(timer);
     }, []);
@@ -80,7 +81,7 @@ const StatusBar = ({ muted, onToggleMute }: StatusBarProps) => {
                 </span>
                 <span className="status-separator">│</span>
                 <span className="status-item status-time">
-                    {time.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' })}
+                    {time ? time.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' }) : '--:--'}
                 </span>
                 <span className="status-separator">│</span>
                 <button

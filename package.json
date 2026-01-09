@@ -8,12 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:vite": "tsx scripts/generate-posts.ts && vite",
-    "build:vite": "tsx scripts/generate-posts.ts && tsc -b && vite build && npm run generate-rss && npm run generate-sitemap",
     "generate-rss": "tsx scripts/generate-rss.ts",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
-    "generate-posts": "tsx scripts/generate-posts.ts",
-    "preview": "vite preview"
+    "generate-posts": "tsx scripts/generate-posts.ts"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
@@ -35,7 +32,6 @@
     "@types/node": "^24.10.4",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.1.1",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -44,7 +40,6 @@
     "gray-matter": "^4.0.3",
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "typescript-eslint": "^8.46.4"
   }
 }

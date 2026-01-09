@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { SITE_CONFIG } from '../src/config';
+import { SITE_CONFIG } from '../lib/config';
 
 const SITE_URL = SITE_CONFIG.url;
 const SITE_TITLE = SITE_CONFIG.title;

@@ -47,7 +47,7 @@ interface HomeClientProps {
 }
 
 export default function HomeClient({ initialPosts }: HomeClientProps) {
-    const [time, setTime] = useState(new Date());
+    const [time, setTime] = useState<Date | null>(null);
     const [skillsAnimated, setSkillsAnimated] = useState(false);
     const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
     const [activityMap, setActivityMap] = useState<number[]>(Array(30).fill(0));
@@ -56,6 +56,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
 
     // --- LIVE CLOCK ---
     useEffect(() => {
+        setTime(new Date());
         const timer = setInterval(() => setTime(new Date()), 1000);
         return () => clearInterval(timer);
     }, []);
@@ -186,7 +187,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                     <div className="tele-row">
                         <span className="t-label">TICK</span>
                         <span className="t-val numeric">
-                            {time.toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' })}
+                            {time ? time.toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' }) : '--:--'}
                         </span>
                     </div>
                     <div className="tele-row">
