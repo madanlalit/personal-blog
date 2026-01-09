@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+'use client';
+
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import './StatusBar.css';
 
 interface StatusBarProps {
@@ -7,17 +9,18 @@ interface StatusBarProps {
     onToggleMute: () => void;
 }
 
-const StatusBar: React.FC<StatusBarProps> = ({ muted, onToggleMute }) => {
-    const location = useLocation();
+const StatusBar = ({ muted, onToggleMute }: StatusBarProps) => {
+    const pathname = usePathname();
     const [time, setTime] = useState(new Date());
     const [mode, setMode] = useState('NORMAL');
+    const [scrollPercent, setScrollPercent] = useState(0);
 
     useEffect(() => {
         const timer = setInterval(() => setTime(new Date()), 1000);
         return () => clearInterval(timer);
     }, []);
 
-    // Simple heuristic for "INSERT" mode (focusing inputs) vs "NORMAL"
+    // INSERT mode when focusing inputs
     useEffect(() => {
         const handleFocus = (e: FocusEvent) => {
             if ((e.target as HTMLElement).tagName === 'INPUT' || (e.target as HTMLElement).tagName === 'TEXTAREA') {
@@ -34,10 +37,7 @@ const StatusBar: React.FC<StatusBarProps> = ({ muted, onToggleMute }) => {
         };
     }, []);
 
-    const [scrollPercent, setScrollPercent] = useState(0);
-
     useEffect(() => {
-        // Find the scrollable content area
         const contentArea = document.querySelector('.content-area');
         if (!contentArea) return;
 
@@ -52,11 +52,10 @@ const StatusBar: React.FC<StatusBarProps> = ({ muted, onToggleMute }) => {
         };
 
         contentArea.addEventListener('scroll', handleScroll);
-        // Trigger once to set initial state
         handleScroll();
 
         return () => contentArea.removeEventListener('scroll', handleScroll);
-    }, [location.pathname]); // Re-attach/reset on route change
+    }, [pathname]);
 
     const formatPath = (path: string) => {
         if (path === '/') return '~';
@@ -71,7 +70,7 @@ const StatusBar: React.FC<StatusBarProps> = ({ muted, onToggleMute }) => {
                 </span>
                 <span className="status-separator">│</span>
                 <span className="status-item status-path">
-                    {formatPath(location.pathname)}
+                    {formatPath(pathname)}
                 </span>
             </div>
 

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useCallback } from 'react';
 
 const THEMES = ['sage', 'light', 'amber', 'dracula', 'cyan', 'matrix', 'openai'] as const;
@@ -5,19 +7,25 @@ export type Theme = typeof THEMES[number];
 const THEME_STORAGE_KEY = 'app-theme';
 
 export const useTheme = () => {
-    const [theme, setThemeState] = useState<Theme>(() => {
+    const [theme, setThemeState] = useState<Theme>('openai');
+    const [mounted, setMounted] = useState(false);
+
+    // Load theme from localStorage after mount (SSR-safe)
+    useEffect(() => {
+        setMounted(true);
         const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-        // Check if storedTheme is a valid Theme
         const isValidTheme = THEMES.includes(storedTheme as Theme);
-        return isValidTheme ? (storedTheme as Theme) : 'openai';
-    });
+        if (isValidTheme) {
+            setThemeState(storedTheme as Theme);
+        }
+    }, []);
 
     useEffect(() => {
-        // Apply the theme to the root element
-        document.documentElement.setAttribute('data-theme', theme);
-        // Persist the theme in localStorage
-        localStorage.setItem(THEME_STORAGE_KEY, theme);
-    }, [theme]);
+        if (mounted) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem(THEME_STORAGE_KEY, theme);
+        }
+    }, [theme, mounted]);
 
     const setTheme = useCallback((newTheme: Theme) => {
         if (THEMES.includes(newTheme)) {

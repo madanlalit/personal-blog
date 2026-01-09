@@ -1,0 +1,256 @@
+/* Mobile Drawer Default */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background-color: var(--bg-secondary);
+    border-right: 3px double var(--border);
+    /* Double border TUI style */
+    padding: 0;
+    /* Remove padding for raw text feel */
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s steps(15);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        position: relative;
+        transform: translateX(0);
+        height: 100%;
+        box-shadow: none;
+    }
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    position: fixed;
+    top: 50px;
+    right: 16px;
+    z-index: 200;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .mobile-toggle {
+        display: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 40;
+}
+
+@media (min-width: 1024px) {
+    .overlay {
+        display: none;
+    }
+}
+
+/* Commander Modal Overlay */
+.commander-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Commander Window itself */
+.commander-window {
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    max-height: 600px;
+    background-color: var(--bg-secondary);
+    border: 3px double var(--accent);
+    /* Retro double border */
+    box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.5);
+    /* Deep shadow */
+    display: flex;
+    flex-direction: column;
+    animation: popIn 0.1s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ASCII Frames */
+.sidebar-frame-top,
+.sidebar-frame-bottom {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--bg-primary);
+    color: var(--accent);
+    padding: 8px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-frame-top {
+    border-bottom: 1px dashed var(--border);
+}
+
+.sidebar-frame-bottom {
+    border-top: 1px dashed var(--border);
+}
+
+.commander-output-area {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+}
+
+.commander-input-area {
+    padding: 8px 16px;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-primary);
+}
+
+.commander-input-area form {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: var(--accent);
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.commander-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+}
+
+.commander-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 16px;
+}
+
+.commander-list li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.commander-list li a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVE COMMANDER MODAL
+   ======================================== */
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .commander-window {
+        width: 95%;
+        max-width: none;
+        height: 90vh;
+        max-height: none;
+        border-width: 2px;
+        box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .commander-output-area {
+        padding: 12px;
+        font-size: var(--font-size-small);
+    }
+
+    .commander-input-area {
+        padding: 6px 12px;
+    }
+
+    .commander-input {
+        font-size: var(--font-size-small);
+    }
+
+    .sidebar-frame-top,
+    .sidebar-frame-bottom {
+        padding: 6px 0;
+        font-size: var(--font-size-xs);
+    }
+
+    .commander-list {
+        margin: 6px 0 0 12px;
+        font-size: var(--font-size-small);
+    }
+}
+
+/* Ultra-small devices (320px) */
+@media (max-width: 320px) {
+    .commander-window {
+        width: 98%;
+        height: 95vh;
+        border-width: 1px;
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .commander-output-area {
+        padding: 8px;
+        font-size: var(--font-size-xs);
+        line-height: 1.5;
+    }
+
+    .commander-input-area {
+        padding: 4px 8px;
+    }
+
+    .commander-input {
+        font-size: var(--font-size-xs);
+    }
+
+    .prompt {
+        margin-right: 4px;
+        font-size: var(--font-size-xs);
+    }
+
+    .sidebar-frame-top,
+    .sidebar-frame-bottom {
+        padding: 4px 0;
+        font-size: var(--font-size-xxs);
+    }
+
+    .commander-list {
+        margin: 4px 0 0 8px;
+        font-size: var(--font-size-xs);
+    }
+}

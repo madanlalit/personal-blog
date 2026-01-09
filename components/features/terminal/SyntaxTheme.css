@@ -1,0 +1,75 @@
+/* =========================================
+   Dynamic Syntax Highlighting (Theme Aware)
+   ========================================= */
+
+.markdown-body code {
+    font-family: var(--font-primary);
+    background-color: transparent;
+    /* Override markdown default */
+}
+
+/* Inline Code */
+.markdown-body :not(pre)>code {
+    background-color: var(--bg-secondary);
+    color: var(--accent);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Syntax Tokens Mapping */
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: transparent;
+    color: var(--text-primary);
+}
+
+/* Strong Accent (Keywords, Types, Important) */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link,
+.hljs-type,
+.hljs-attribute {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Secondary/Alternative (Strings, Values) */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-number,
+.hljs-built_in {
+    color: var(--accent-hover);
+}
+
+/* Dimmed (Comments, Meta) */
+.hljs-comment,
+.hljs-quote,
+.hljs-meta,
+.hljs-deletion {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Neural/Structure (Functions, Titles) */
+.hljs-title,
+.hljs-function,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+/* Punctuation / Operators usually inherit color, but we can force them */
+.hljs-operator,
+.hljs-punctuation {
+    color: var(--text-tertiary);
+}

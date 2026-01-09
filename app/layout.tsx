@@ -4,6 +4,8 @@ import { JetBrains_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { SITE_CONFIG } from '@/lib/config';
+import { getAllPostsMeta } from '@/lib/posts';
+import ClientShell from '@/components/ClientShell';
 import './globals.css';
 import './app.css';
 
@@ -54,10 +56,15 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    // Fetch posts at build time for the Commander
+    const posts = getAllPostsMeta();
+
     return (
         <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
             <body>
-                {children}
+                <ClientShell posts={posts}>
+                    {children}
+                </ClientShell>
                 <Analytics />
                 <SpeedInsights />
             </body>
