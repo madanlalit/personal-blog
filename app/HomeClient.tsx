@@ -1,0 +1,381 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Mail } from 'lucide-react';
+import type { PostMeta } from '@/lib/types';
+
+// Placeholder - will be migrated
+const PostCard = ({ post, index }: { post: PostMeta; index: number }) => (
+    <Link href={`/post/${post.slug}`} className="post-card">
+        <span className="post-date">{post.date}</span>
+        <h3>{post.title}</h3>
+        <p>{post.excerpt}</p>
+    </Link>
+);
+
+// --- TYPES ---
+interface GitHubEvent {
+    id: string;
+    type: string;
+    created_at: string;
+    repo: { name: string };
+    payload: {
+        ref?: string;
+        commits?: Array<{
+            sha: string;
+            message: string;
+        }>;
+    };
+}
+
+interface StaticDataResponse {
+    lastUpdated: number;
+    events: GitHubEvent[];
+}
+
+const SKILLS = [
+    { name: 'Python / AI', level: 75 },
+    { name: 'Javascript', level: 60 },
+    { name: 'AWS / Cloud', level: 50 },
+    { name: 'LangGraph / AI', level: 60 },
+    { name: 'Langchain / AI', level: 50 },
+];
+
+const SYSTEM_LOGS = [
+    { id: 1, type: 'INFO', msg: 'Initializing system interface...' },
+    { id: 2, type: 'SUCCESS', msg: 'Connected to GitHub API (Status: 200)' },
+    { id: 3, type: 'WARN', msg: 'Coffee levels low (15%) - Refill advised' },
+    { id: 4, type: 'INFO', msg: 'Loading latest project modules...' },
+];
+
+interface HomeClientProps {
+    initialPosts: PostMeta[];
+}
+
+export default function HomeClient({ initialPosts }: HomeClientProps) {
+    const [time, setTime] = useState(new Date());
+    const [skillsAnimated, setSkillsAnimated] = useState(false);
+    const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
+    const [activityMap, setActivityMap] = useState<number[]>(Array(30).fill(0));
+    const [ghStatus, setGhStatus] = useState<'LOADING' | 'ONLINE' | 'OFFLINE'>('LOADING');
+    const [dataTimestamp, setDataTimestamp] = useState<number | null>(null);
+
+    // --- LIVE CLOCK ---
+    useEffect(() => {
+        const timer = setInterval(() => setTime(new Date()), 1000);
+        return () => clearInterval(timer);
+    }, []);
+
+    // --- SKILL BAR ANIMATION ---
+    useEffect(() => {
+        const timer = setTimeout(() => setSkillsAnimated(true), 300);
+        return () => clearTimeout(timer);
+    }, []);
+
+    // --- LOG TYPING EFFECT ---
+    useEffect(() => {
+        SYSTEM_LOGS.forEach((log, index) => {
+            setTimeout(() => {
+                setVisibleLogs((prev) => [...prev, log.id]);
+            }, 500 + index * 400);
+        });
+    }, []);
+
+    // --- HELPER: PROCESS HEATMAP ---
+    const processHeatmap = (events: GitHubEvent[]) => {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const thirtyDaysAgo = new Date(today);
+        thirtyDaysAgo.setDate(today.getDate() - 30);
+
+        const pushEvents = events.filter((e) => {
+            return e.type === 'PushEvent' && new Date(e.created_at) >= thirtyDaysAgo;
+        });
+
+        const dailyCounts = Array(30).fill(0);
+
+        pushEvents.forEach((e) => {
+            const eventDate = new Date(e.created_at);
+            eventDate.setHours(0, 0, 0, 0);
+
+            const diffTime = today.getTime() - eventDate.getTime();
+            const dayDiff = Math.floor(diffTime / (1000 * 3600 * 24));
+
+            if (dayDiff >= 0 && dayDiff < 30) {
+                const count = e.payload.commits ? e.payload.commits.length : 1;
+                dailyCounts[29 - dayDiff] += count;
+            }
+        });
+
+        return dailyCounts;
+    };
+
+    // --- DATA FETCHING ---
+    useEffect(() => {
+        let isMounted = true;
+
+        const fetchStaticData = async () => {
+            try {
+                const response = await fetch(`/github-data.json?t=${Date.now()}`);
+
+                if (!response.ok) {
+                    throw new Error('Local data not found (404)');
+                }
+
+                const data: StaticDataResponse | GitHubEvent[] = await response.json();
+
+                let events: GitHubEvent[] = [];
+                let timestamp = Date.now();
+
+                if (Array.isArray(data)) {
+                    events = data;
+                } else {
+                    events = data.events;
+                    timestamp = data.lastUpdated;
+                }
+
+                if (isMounted) {
+                    const dailyCounts = processHeatmap(events);
+                    setActivityMap(dailyCounts);
+                    setDataTimestamp(timestamp);
+                    setGhStatus('ONLINE');
+                }
+            } catch (error) {
+                console.error('Failed to load static GitHub data:', error);
+                if (isMounted) setGhStatus('OFFLINE');
+            }
+        };
+
+        fetchStaticData();
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
+
+    const getIntensity = (count: number) => {
+        if (count === 0) return 0.1;
+        if (count <= 2) return 0.4;
+        if (count <= 5) return 0.7;
+        return 1;
+    };
+
+    return (
+        <div className="home-container fade-in">
+            {/* --- HERO SECTION --- */}
+            <header className="hero-section">
+                <div className="hero-main">
+                    <h1 className="hero-title">
+                        LALIT<span className="accent">_</span>MADAN
+                    </h1>
+                    <div className="hero-subtitle">
+                        Engineering Reality. Architecting Intelligence.
+                    </div>
+
+                    <div className="hero-actions">
+                        <Link href="/projects" className="hero-btn primary">
+                            <span className="bracket">[</span> EXECUTE_PROJECTS{' '}
+                            <span className="bracket">]</span>
+                        </Link>
+                        <Link href="/about" className="hero-btn secondary">
+                            ABOUT_ME
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="hero-telemetry">
+                    <div className="tele-row">
+                        <span className="t-label">LOC</span>
+                        <span className="t-val">INDIA</span>
+                    </div>
+                    <div className="tele-row">
+                        <span className="t-label">TICK</span>
+                        <span className="t-val numeric">
+                            {time.toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' })}
+                        </span>
+                    </div>
+                    <div className="tele-row">
+                        <span className="t-label">NET</span>
+                        <span className={`t-val ${ghStatus === 'ONLINE' ? 'active' : 'offline'}`}>
+                            {ghStatus}
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <main className="sys-grid">
+                {/* [LEFT COL] CONTEXT */}
+                <aside className="grid-sidebar">
+                    {/* 1. AVAILABILITY BEACON */}
+                    <div className="sys-module">
+                        <div className="mod-header">/// SYSTEM_STATUS</div>
+                        <div className="availability-beacon">
+                            <div className="beacon-signal">
+                                <span className="beacon-dot pulse"></span>
+                                <span className="beacon-ring"></span>
+                            </div>
+                            <div className="beacon-text">
+                                <span className="status-label">AVAILABLE_FOR_HIRE</span>
+                                <span className="status-sub">Open for new roles</span>
+                            </div>
+                        </div>
+                        <Link href="/about" className="beacon-action">
+                            <Mail size={14} /> LEARN_MORE
+                        </Link>
+                    </div>
+
+                    {/* 2. SKILL MONITOR */}
+                    <div className="sys-module">
+                        <div className="mod-header">/// SYSTEM_RESOURCES</div>
+                        <div className="skill-monitor">
+                            {SKILLS.map((skill) => (
+                                <div key={skill.name} className="skill-row">
+                                    <div className="skill-info">
+                                        <span className="skill-name">{skill.name}</span>
+                                        <span className="skill-val">{skill.level}%</span>
+                                    </div>
+                                    <div className="skill-track">
+                                        <div
+                                            className="skill-fill"
+                                            style={{ width: skillsAnimated ? `${skill.level}%` : '0%' }}
+                                        ></div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="sys-module">
+                        <div className="mod-header">/// COMM_PORTS</div>
+                        <div className="comm-grid">
+                            <a
+                                href="https://github.com/madanlalit/"
+                                className="comm-link"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                GITHUB
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/madanlalit/"
+                                className="comm-link"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                LINKEDIN
+                            </a>
+                            <a
+                                href="https://x.com/lalitmadan/"
+                                className="comm-link"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                X
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                {/* [RIGHT COL] DATA STREAMS */}
+                <section className="grid-main">
+                    {/* 4. LIVE SYSTEM LOG */}
+                    <div className="sys-module">
+                        <div className="mod-header">
+                            <span>/// KERNEL_LOG</span>
+                            <span className="mod-meta">TAIL -F</span>
+                        </div>
+                        <div className="system-log-terminal">
+                            {SYSTEM_LOGS.map((log) => (
+                                <div
+                                    key={log.id}
+                                    className={`log-row ${visibleLogs.includes(log.id) ? 'log-visible' : 'log-hidden'}`}
+                                >
+                                    <span className="log-time">
+                                        [{new Date().getHours()}:
+                                        {String(new Date().getMinutes() - (SYSTEM_LOGS.length - log.id)).padStart(2, '0')}]
+                                    </span>
+                                    <span className={`log-type ${log.type}`}>{log.type}</span>
+                                    <span className="log-msg">{log.msg}</span>
+                                </div>
+                            ))}
+                            <div className="log-cursor">
+                                <span className="blink">_</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 5. GITHUB HEATMAP MODULE */}
+                    <div className="sys-module activity-wrapper">
+                        <div className="mod-header">
+                            <span>/// COMMIT_HISTORY</span>
+                            {ghStatus === 'ONLINE' && dataTimestamp && (
+                                <span className="mod-meta" style={{ color: 'var(--text-secondary)' }}>
+                                    DATA_SYNCED:{' '}
+                                    {new Date(dataTimestamp).toLocaleTimeString([], {
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                    })}
+                                </span>
+                            )}
+                            {ghStatus === 'OFFLINE' && (
+                                <span className="mod-meta error-text">DATA_Unavailable</span>
+                            )}
+                            {ghStatus === 'LOADING' && <span className="mod-meta">INITIALIZING...</span>}
+                        </div>
+
+                        <div className="heatmap-strip">
+                            {activityMap.map((count, i) => (
+                                <div
+                                    key={i}
+                                    className="heat-bit"
+                                    style={{
+                                        opacity: getIntensity(count),
+                                        backgroundColor: count > 0 ? 'var(--accent)' : 'var(--text-tertiary)',
+                                    }}
+                                    title={`${count} commits (${30 - i - 1} days ago)`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* 6. LATEST BLOG POSTS */}
+                    <div className="sys-module">
+                        <div className="mod-header">
+                            <span>/// SYSTEM_[B]LOGS</span>
+                            <span className="mod-meta">[{initialPosts.length}]</span>
+                        </div>
+
+                        <div className="logs-timeline">
+                            {initialPosts.map((post, index) => (
+                                <div key={post.id} className="timeline-entry">
+                                    <div className="timeline-marker">
+                                        <div className="t-dot"></div>
+                                        <div className="t-line"></div>
+                                    </div>
+                                    <div className="timeline-content">
+                                        <div className="clean-card">
+                                            <PostCard post={post} index={index} />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer className="sys-footer">
+                <div className="f-left">
+                    <span className="f-item">SYS_ID: 0x1A4</span>
+                </div>
+                <div className="f-right">
+                    <span>v1.0.0</span>
+                    <span className="sep">/</span>
+                    <span>{new Date().getFullYear()}</span>
+                </div>
+            </footer>
+        </div>
+    );
+}
