@@ -96,7 +96,7 @@ export default function CommandLine({
     const { suggestions, ghostText } = useMemo(() => {
         if (!input) return { suggestions: [], ghostText: '' };
 
-        const commands = ['help', 'cd', 'ls', 'theme', 'clear', 'reboot', 'snake', 'grep', 'neofetch'];
+        const commands = ['help', 'cd', 'ls', 'theme', 'clear', 'reboot', 'snake', 'grep', 'neofetch', 'amp'];
         const args = ['home', 'about', 'archive', 'projects', 'experience', ...availableThemes];
 
         const parts = input.toLowerCase().split(' ');
@@ -150,6 +150,7 @@ export default function CommandLine({
                     '  cd [page]   - Navigate (home, about, archive, projects, experience)',
                     '  grep [term] - Search blog posts',
                     `  theme [opt] - Set theme (${availableThemes.join(' | ')})`,
+                    '  amp         - Launch Audio Player',
                     '  neofetch    - System Information',
                     '  snake       - Play Snake',
                     '  ls          - List directories',
@@ -250,9 +251,14 @@ export default function CommandLine({
                 if (onCommand) onCommand('snake');
                 break;
             }
+            case 'amp': {
+                if (onCommand) onCommand('amp');
+                else setDisplayHistory((prev) => [...prev, 'Amp Audio Player starting...']);
+                break;
+            }
             default: {
                 if (onCommand) onCommand(command);
-                if (command !== 'snake') {
+                if (command !== 'snake' && command !== 'amp') {
                     if (trimmed !== '') setDisplayHistory((prev) => [...prev, `Command not found: ${command}`]);
                 }
             }

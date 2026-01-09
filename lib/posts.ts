@@ -53,7 +53,8 @@ export const getAllPosts = cache((): Post[] => {
 });
 
 export function getAllPostsMeta(): PostMeta[] {
-    return getAllPosts().map(({ content, ...meta }) => meta);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    return getAllPosts().map(({ content: _, ...meta }) => meta);
 }
 
 export function getPostBySlug(slug: string): Post | undefined {

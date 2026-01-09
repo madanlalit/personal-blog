@@ -8,6 +8,9 @@ import Commander from '@/components/features/terminal/Commander';
 import CommandLine from '@/components/features/terminal/CommandLine';
 import BootScreen from '@/components/features/system/BootScreen';
 import SnakeGame from '@/components/features/terminal/SnakeGame';
+import AudioPlayer from '@/components/features/terminal/AudioPlayer';
+import SystemAlert from '@/components/features/system/SystemAlert';
+import Screensaver from '@/components/features/system/Screensaver';
 import StatusBar from '@/components/ui/StatusBar';
 import type { PostMeta } from '@/lib/types';
 import '@/app/app.css';
@@ -23,6 +26,7 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
     const [booted, setBooted] = useState(true); // Default to true for SSR
     const [commanderOpen, setCommanderOpen] = useState(false);
     const [snakeGameOpen, setSnakeGameOpen] = useState(false);
+    const [ampOpen, setAmpOpen] = useState(false);
     const { playHoverSound, playKeySound, toggleMute, muted } = useSound();
     const { setTheme, availableThemes } = useTheme();
 
@@ -76,45 +80,69 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
         if (cmd === 'snake') {
             setSnakeGameOpen(true);
         }
+        if (cmd === 'amp') {
+            setAmpOpen(true);
+        }
     };
 
-    // Show boot screen on first visit
-    if (!booted) {
-        return <BootScreen onComplete={handleBootComplete} />;
-    }
-
     return (
-        <div className="app tui-window fade-in" style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-            {/* Commander Modal */}
-            <Commander
-                isOpen={commanderOpen}
-                onClose={() => setCommanderOpen(false)}
-                setTheme={setTheme}
-                availableThemes={availableThemes}
-                posts={posts}
-            />
+        <>
+            {/* Boot Screen Overlay */}
+            {!booted && (
+                <div style={{ position: 'fixed', inset: 0, zIndex: 99999 }}>
+                    <BootScreen onComplete={handleBootComplete} />
+                </div>
+            )}
 
-            {/* Snake Game Modal */}
-            {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}
+            {/* Main Application */}
+            <div 
+                className="app tui-window fade-in" 
+                style={{ 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    height: '100vh', 
+                    overflow: 'hidden',
+                    opacity: booted ? 1 : 0,
+                    transition: 'opacity 0.5s ease-in'
+                }}
+            >
+                <SystemAlert />
+                <Screensaver />
 
-            {/* Status Bar */}
-            <StatusBar muted={muted} onToggleMute={toggleMute} />
+                {/* Commander Modal */}
+                <Commander
+                    isOpen={commanderOpen}
+                    onClose={() => setCommanderOpen(false)}
+                    setTheme={setTheme}
+                    availableThemes={availableThemes}
+                    posts={posts}
+                />
 
-            {/* Main Content */}
-            <div className="main-layout" style={{ flex: 1, display: 'flex', overflow: 'auto' }}>
-                <main className="content-area" style={{ flex: 1, padding: '20px' }}>
-                    {children}
-                </main>
+                {/* Snake Game Modal */}
+                {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}
+
+                {/* Audio Player */}
+                {ampOpen && <AudioPlayer onExit={() => setAmpOpen(false)} />}
+
+                {/* Status Bar */}
+                <StatusBar muted={muted} onToggleMute={toggleMute} />
+
+                {/* Main Content */}
+                <div className="main-layout" style={{ flex: 1, display: 'flex', overflow: 'auto' }}>
+                    <main className="content-area" style={{ flex: 1, padding: '20px' }}>
+                        {children}
+                    </main>
+                </div>
+
+                {/* Command Line Bar */}
+                <CommandLine
+                    onKey={playKeySound}
+                    onCommand={handleCommand}
+                    setTheme={setTheme}
+                    availableThemes={availableThemes}
+                    posts={posts}
+                />
             </div>
-
-            {/* Command Line Bar */}
-            <CommandLine
-                onKey={playKeySound}
-                onCommand={handleCommand}
-                setTheme={setTheme}
-                availableThemes={availableThemes}
-                posts={posts}
-            />
-        </div>
+        </>
     );
 }

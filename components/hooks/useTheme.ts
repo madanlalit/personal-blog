@@ -12,6 +12,7 @@ export const useTheme = () => {
 
     // Load theme from localStorage after mount (SSR-safe)
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
         const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
         const isValidTheme = THEMES.includes(storedTheme as Theme);

@@ -16,6 +16,7 @@ const StatusBar = ({ muted, onToggleMute }: StatusBarProps) => {
     const [scrollPercent, setScrollPercent] = useState(0);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setTime(new Date());
         const timer = setInterval(() => setTime(new Date()), 1000);
         return () => clearInterval(timer);

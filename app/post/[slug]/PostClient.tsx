@@ -27,7 +27,7 @@ interface PostClientProps {
 export default function PostClient({ post, prevPost, nextPost, relatedPosts }: PostClientProps) {
     // Custom renderer for code blocks
     const components = {
-        code({ inline, className, children, ...props }: any) {
+        code({ inline, className, children, ...props }: React.HTMLAttributes<HTMLElement> & { inline?: boolean }) {
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
                 <CodeBlock language={match[1]} value={String(children).replace(/\n$/, '')}>

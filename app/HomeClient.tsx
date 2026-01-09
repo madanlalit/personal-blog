@@ -8,7 +8,7 @@ import PostCard from '@/components/ui/PostCard';
 import './home.css';
 
 // --- TYPES ---
-interface GitHubEvent {
+export interface GitHubEvent {
     id: string;
     type: string;
     created_at: string;
@@ -20,11 +20,6 @@ interface GitHubEvent {
             message: string;
         }>;
     };
-}
-
-interface StaticDataResponse {
-    lastUpdated: number;
-    events: GitHubEvent[];
 }
 
 const SKILLS = [
@@ -44,9 +39,13 @@ const SYSTEM_LOGS = [
 
 interface HomeClientProps {
     initialPosts: PostMeta[];
+    githubData: {
+        events: GitHubEvent[];
+        lastUpdated: number;
+    } | null;
 }
 
-export default function HomeClient({ initialPosts }: HomeClientProps) {
+export default function HomeClient({ initialPosts, githubData }: HomeClientProps) {
     const [time, setTime] = useState<Date | null>(null);
     const [skillsAnimated, setSkillsAnimated] = useState(false);
     const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
@@ -106,48 +105,17 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
         return dailyCounts;
     };
 
-    // --- DATA FETCHING ---
+    // --- DATA PROCESSING ---
     useEffect(() => {
-        let isMounted = true;
-
-        const fetchStaticData = async () => {
-            try {
-                const response = await fetch(`/github-data.json?t=${Date.now()}`);
-
-                if (!response.ok) {
-                    throw new Error('Local data not found (404)');
-                }
-
-                const data: StaticDataResponse | GitHubEvent[] = await response.json();
-
-                let events: GitHubEvent[] = [];
-                let timestamp = Date.now();
-
-                if (Array.isArray(data)) {
-                    events = data;
-                } else {
-                    events = data.events;
-                    timestamp = data.lastUpdated;
-                }
-
-                if (isMounted) {
-                    const dailyCounts = processHeatmap(events);
-                    setActivityMap(dailyCounts);
-                    setDataTimestamp(timestamp);
-                    setGhStatus('ONLINE');
-                }
-            } catch (error) {
-                console.error('Failed to load static GitHub data:', error);
-                if (isMounted) setGhStatus('OFFLINE');
-            }
-        };
-
-        fetchStaticData();
-
-        return () => {
-            isMounted = false;
-        };
-    }, []);
+        if (githubData) {
+            const dailyCounts = processHeatmap(githubData.events);
+            setActivityMap(dailyCounts);
+            setDataTimestamp(githubData.lastUpdated);
+            setGhStatus('ONLINE');
+        } else {
+            setGhStatus('OFFLINE');
+        }
+    }, [githubData]);
 
     const getIntensity = (count: number) => {
         if (count === 0) return 0.1;

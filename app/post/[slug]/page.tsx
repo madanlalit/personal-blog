@@ -67,7 +67,7 @@ export default async function PostPage({ params }: Props) {
         .filter(({ score }) => score > 0)
         .sort((a, b) => b.score - a.score)
         .slice(0, 3)
-        .map(({ post }) => post);
+        .map(({ post }) => ({ ...post, content: '' }));
 
     return (
         <PostClient
