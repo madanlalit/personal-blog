@@ -110,6 +110,7 @@ export default function ArchiveClient({ initialPosts, allTags }: ArchiveClientPr
     const heatmapOpacities = useMemo(() => getHeatmapOpacities(initialPosts), [initialPosts]);
 
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
+        if (filteredPosts.length === 0) return;
         if (e.key === 'ArrowDown') { e.preventDefault(); setSelectedIndex((prev) => (prev + 1) % filteredPosts.length); }
         else if (e.key === 'ArrowUp') { e.preventDefault(); setSelectedIndex((prev) => (prev - 1 + filteredPosts.length) % filteredPosts.length); }
         else if (e.key === 'Enter' && filteredPosts[selectedIndex]) router.push(`/post/${filteredPosts[selectedIndex].slug}`);

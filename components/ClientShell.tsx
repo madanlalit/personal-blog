@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { useTheme } from '@/components/hooks/useTheme';
 import useSound from '@/components/hooks/useSound';
 import useKonamiCode from '@/components/hooks/useKonamiCode';
@@ -11,6 +11,8 @@ import SnakeGame from '@/components/features/terminal/SnakeGame';
 import StatusBar from '@/components/ui/StatusBar';
 import type { PostMeta } from '@/lib/types';
 import '@/app/app.css';
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 interface ClientShellProps {
     children: React.ReactNode;
@@ -25,7 +27,7 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
     const { setTheme, availableThemes } = useTheme();
 
     // Check boot state on mount (client-side only)
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         const hasBooted = sessionStorage.getItem('hasBooted');
         if (!hasBooted) {
             setBooted(false);

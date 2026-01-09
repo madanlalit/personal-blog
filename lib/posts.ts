@@ -14,12 +14,17 @@ function generateId(filename: string): string {
     return generateSlug(filename);
 }
 
-export function getAllPosts(): Post[] {
+import { cache } from 'react';
+
+// Memoize to prevent duplicate reads during the same page generation
+export const getAllPosts = cache((): Post[] => {
     const files = fs.readdirSync(postsDirectory)
         .filter(f => f.endsWith('.md') && !f.startsWith('_'));
 
     const posts = files.map(filename => {
         const fullPath = path.join(postsDirectory, filename);
+        // Optimization: In a real "meta only" scenario, we'd avoid reading the whole file if content isn't needed.
+        // But for SIMPLICITY and because matter() parses everything anyway, we just cache the result.
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data, content } = matter(fileContents);
 
@@ -45,7 +50,7 @@ export function getAllPosts(): Post[] {
     return posts.sort((a, b) =>
         new Date(b.date).getTime() - new Date(a.date).getTime()
     );
-}
+});
 
 export function getAllPostsMeta(): PostMeta[] {
     return getAllPosts().map(({ content, ...meta }) => meta);
