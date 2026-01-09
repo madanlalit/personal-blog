@@ -4,42 +4,33 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx scripts/generate-posts.ts && vite",
-    "build": "tsx scripts/generate-posts.ts && tsc -b && vite build && npm run generate-rss && npm run generate-sitemap",
-    "generate-rss": "tsx scripts/generate-rss.ts",
-    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
-    "generate-posts": "tsx scripts/generate-posts.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "update-data": "node scripts/update-github-data.js && node scripts/update-starred-repos.js"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.2.8",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.3.1",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.561.0",
+    "next": "^16.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-helmet-async": "^2.0.5",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.10.1",
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.1",
+    "@eslint/eslintrc": "^3.3.3",
+    "@types/node": "^24.10.4",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.1",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
     "gray-matter": "^4.0.3",
-    "tsx": "^4.21.0",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "typescript": "~5.9.3"
   }
 }
