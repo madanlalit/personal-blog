@@ -1,6 +1,170 @@
 {
-  "lastUpdated": 1767904346025,
+  "lastUpdated": 1767947956493,
   "events": [
+    {
+      "id": "5700325648",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953",
+          "repository_url": "https://api.github.com/repos/pydantic/pydantic-ai",
+          "labels_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953/labels{/name}",
+          "comments_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953/comments",
+          "events_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953/events",
+          "html_url": "https://github.com/pydantic/pydantic-ai/issues/3953",
+          "id": 3791111524,
+          "node_id": "I_kwDOMMa-Ps7h98Vk",
+          "number": 3953,
+          "title": "Web Chat UI download URL cannot be overridden",
+          "user": {
+            "login": "gaby",
+            "id": 835733,
+            "node_id": "MDQ6VXNlcjgzNTczMw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835733?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gaby",
+            "html_url": "https://github.com/gaby",
+            "followers_url": "https://api.github.com/users/gaby/followers",
+            "following_url": "https://api.github.com/users/gaby/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gaby/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gaby/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gaby/subscriptions",
+            "organizations_url": "https://api.github.com/users/gaby/orgs",
+            "repos_url": "https://api.github.com/users/gaby/repos",
+            "events_url": "https://api.github.com/users/gaby/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gaby/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 7110547176,
+              "node_id": "LA_kwDOMMa-Ps8AAAABp9JW6A",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/bug",
+              "name": "bug",
+              "color": "d73a4a",
+              "default": true,
+              "description": "Report that something isn't working, or PR implementing a fix"
+            },
+            {
+              "id": 9958929600,
+              "node_id": "LA_kwDOMMa-Ps8AAAACUZk0wA",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/web-ui",
+              "name": "web-ui",
+              "color": "aaaaaa",
+              "default": false,
+              "description": null
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": null,
+          "assignees": [],
+          "milestone": null,
+          "comments": 3,
+          "created_at": "2026-01-08T03:49:11Z",
+          "updated_at": "2026-01-09T07:51:28Z",
+          "closed_at": null,
+          "type": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "### Initial Checks\n\n- [x] I'm using the [latest version](https://github.com/pydantic/pydantic-ai/releases/latest) of Pydantic AI\n- [x] I've searched for my issue in [the issue tracker](https://github.com/pydantic/pydantic-ai/issues) before opening this issue\n\n### Description\n\nThe current implementation relies on `cdn.jsdelivr.net` sources for https://github.com/pydantic/ai-chat-ui while this works well in a home / cloud environment, it's problematic in enterprise environments which usually are behind a corporate proxy or have no internet access at all.\n\nAffecting line: https://github.com/pydantic/pydantic-ai/blob/main/pydantic_ai_slim/pydantic_ai/ui/_web/app.py#L29\n\n### Minimal, Reproducible Example\n\n```Python\nN/a\n```\n\n### Logfire Trace\n\n_No response_\n\n### Python, Pydantic AI & LLM client version\n\n- Python: 3.12.x\n- Pydantic AI: 1.40.x\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3727601197",
+          "html_url": "https://github.com/pydantic/pydantic-ai/issues/3953#issuecomment-3727601197",
+          "issue_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3953",
+          "id": 3727601197,
+          "node_id": "IC_kwDOMMa-Ps7eLq4t",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-01-09T07:51:28Z",
+          "updated_at": "2026-01-09T07:51:28Z",
+          "body": "Hi @DouweM can i pick this up ?",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3727601197/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T07:51:28Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
     {
       "id": "5688389782",
       "type": "IssueCommentEvent",
@@ -5179,99 +5343,6 @@
       },
       "public": true,
       "created_at": "2025-12-27T06:14:14Z"
-    },
-    {
-      "id": "5509807297",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/6",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/6/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/6/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/6/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/6",
-          "id": 3764452462,
-          "node_id": "I_kwDOQuIaMM7gYPxu",
-          "number": 6,
-          "title": "Add Groq LLM Provider Support",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:13:55Z",
-          "updated_at": "2025-12-27T06:13:55Z",
-          "closed_at": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Add support for Groq as an LLM provider.\n\n**Location:** `src/heimdall/agent/llm/`\n\n**Tasks:**\n- Create `groq.py` with `GroqClient`\n- Register in provider registry",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/6/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/6/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-27T06:13:55Z"
     }
   ]
 }
