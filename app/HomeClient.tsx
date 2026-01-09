@@ -8,19 +8,10 @@ import PostCard from '@/components/ui/PostCard';
 import './home.css';
 
 // --- TYPES ---
-export interface GitHubEvent {
-    id: string;
-    type: string;
-    created_at: string;
-    repo: { name: string };
-    payload: {
-        ref?: string;
-        commits?: Array<{
-            sha: string;
-            message: string;
-        }>;
-    };
-}
+import type { GitHubEvent } from '@/lib/github';
+
+// --- TYPES ---
+
 
 const SKILLS = [
     { name: 'Python / AI', level: 75 },

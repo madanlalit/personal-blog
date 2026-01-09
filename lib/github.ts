@@ -12,7 +12,13 @@ export interface GitHubEvent {
         name: string;
         url: string;
     };
-    payload: unknown;
+    payload: {
+        ref?: string;
+        commits?: Array<{
+            sha: string;
+            message: string;
+        }>;
+    };
     created_at: string;
 }
 

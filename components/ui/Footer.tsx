@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './Footer.css';
 
 // Social links configuration
@@ -44,9 +44,9 @@ const Footer: React.FC = () => {
                     <div className="footer-section">
                         <h4>Quick Links</h4>
                         <ul className="footer-links">
-                            <li><Link to="/" className="footer-link">Home</Link></li>
-                            <li><Link to="/about" className="footer-link">About</Link></li>
-                            <li><Link to="/archive" className="footer-link">Archive</Link></li>
+                            <li><Link href="/" className="footer-link">Home</Link></li>
+                            <li><Link href="/about" className="footer-link">About</Link></li>
+                            <li><Link href="/archive" className="footer-link">Archive</Link></li>
                         </ul>
                     </div>
 
