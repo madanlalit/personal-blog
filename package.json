@@ -7,10 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "generate-rss": "tsx scripts/generate-rss.ts",
-    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
-    "generate-posts": "tsx scripts/generate-posts.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
