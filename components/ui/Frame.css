@@ -1,0 +1,101 @@
+/* Shared Frame Design System */
+
+.sys-frame {
+    position: relative;
+    border: 1px solid var(--border);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.sys-frame:hover {
+    border-color: var(--text-tertiary);
+}
+
+/* Decorative Corner Accents */
+.frame-corner {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--accent);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.frame-corner.topleft {
+    top: -1px;
+    left: -1px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.frame-corner.topright {
+    top: -1px;
+    right: -1px;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.frame-corner.bottomleft {
+    bottom: -1px;
+    left: -1px;
+    border-right: 0;
+    border-top: 0;
+}
+
+.frame-corner.bottomright {
+    bottom: -1px;
+    right: -1px;
+    border-left: 0;
+    border-top: 0;
+}
+
+.sys-frame:hover .frame-corner {
+    width: 16px;
+    height: 16px;
+}
+
+/* Frame Label */
+.frame-label {
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+    background: var(--bg-primary);
+    padding: 0 0.5rem;
+    font-size: var(--font-size-xxs);
+    font-weight: 700;
+    color: var(--text-tertiary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sys-frame {
+        padding: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .sys-frame {
+        padding: var(--space-md) !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .sys-frame {
+        padding: var(--space-xs);
+    }
+
+    .frame-label {
+        font-size: 0.55rem;
+        /* Or xxs if we standardized */
+    }
+
+    .frame-corner {
+        width: 6px;
+        height: 6px;
+    }
+}
