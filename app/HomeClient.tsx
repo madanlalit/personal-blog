@@ -4,16 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
+import PostCard from '@/components/ui/PostCard';
 import './home.css';
-
-// Placeholder - will be migrated
-const PostCard = ({ post, index }: { post: PostMeta; index: number }) => (
-    <Link href={`/post/${post.slug}`} className="post-card">
-        <span className="post-date">{post.date}</span>
-        <h3>{post.title}</h3>
-        <p>{post.excerpt}</p>
-    </Link>
-);
 
 // --- TYPES ---
 interface GitHubEvent {
