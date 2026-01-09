@@ -1,0 +1,95 @@
+.snake-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.snake-window {
+    background: var(--bg-primary);
+    border: 2px solid var(--accent);
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.snake-header {
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.snake-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-tertiary);
+    font-size: var(--font-size-xxs);
+    line-height: 1;
+}
+
+.snake-body {
+    color: var(--accent);
+    text-shadow: 0 0 4px var(--accent);
+}
+
+.snake-food {
+    color: var(--text-primary);
+    animation: blink 0.5s infinite;
+}
+
+.game-over-screen button {
+    margin-top: 1rem;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.game-over-screen button:hover {
+    background: var(--accent-hover);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .snake-window {
+        padding: 1rem;
+        border-width: 1px;
+    }
+
+    .cell {
+        width: 15px;
+        height: 15px;
+        font-size: 8px; /* Hardcoded 8px as xxs might be too big for 15px cell */
+    }
+}
+
+@media (max-width: 320px) {
+    .cell {
+        width: 12px;
+        height: 12px;
+    }
+}

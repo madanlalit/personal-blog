@@ -5,6 +5,9 @@ import { useTheme } from '@/components/hooks/useTheme';
 import useSound from '@/components/hooks/useSound';
 import useKonamiCode from '@/components/hooks/useKonamiCode';
 import Commander from '@/components/features/terminal/Commander';
+import CommandLine from '@/components/features/terminal/CommandLine';
+import BootScreen from '@/components/features/system/BootScreen';
+import SnakeGame from '@/components/features/terminal/SnakeGame';
 import StatusBar from '@/components/ui/StatusBar';
 import type { PostMeta } from '@/lib/types';
 import '@/app/app.css';
@@ -15,9 +18,19 @@ interface ClientShellProps {
 }
 
 export default function ClientShell({ children, posts }: ClientShellProps) {
+    const [booted, setBooted] = useState(true); // Default to true for SSR
     const [commanderOpen, setCommanderOpen] = useState(false);
-    const { playHoverSound, toggleMute, muted } = useSound();
+    const [snakeGameOpen, setSnakeGameOpen] = useState(false);
+    const { playHoverSound, playKeySound, toggleMute, muted } = useSound();
     const { setTheme, availableThemes } = useTheme();
+
+    // Check boot state on mount (client-side only)
+    useEffect(() => {
+        const hasBooted = sessionStorage.getItem('hasBooted');
+        if (!hasBooted) {
+            setBooted(false);
+        }
+    }, []);
 
     // Konami code easter egg
     useKonamiCode(() => {
@@ -52,6 +65,22 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
         return () => window.removeEventListener('keydown', handleKey);
     }, []);
 
+    const handleBootComplete = () => {
+        setBooted(true);
+        sessionStorage.setItem('hasBooted', 'true');
+    };
+
+    const handleCommand = (cmd: string) => {
+        if (cmd === 'snake') {
+            setSnakeGameOpen(true);
+        }
+    };
+
+    // Show boot screen on first visit
+    if (!booted) {
+        return <BootScreen onComplete={handleBootComplete} />;
+    }
+
     return (
         <div className="app tui-window fade-in" style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
             {/* Commander Modal */}
@@ -63,6 +92,9 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
                 posts={posts}
             />
 
+            {/* Snake Game Modal */}
+            {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}
+
             {/* Status Bar */}
             <StatusBar muted={muted} onToggleMute={toggleMute} />
 
@@ -72,6 +104,15 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
                     {children}
                 </main>
             </div>
+
+            {/* Command Line Bar */}
+            <CommandLine
+                onKey={playKeySound}
+                onCommand={handleCommand}
+                setTheme={setTheme}
+                availableThemes={availableThemes}
+                posts={posts}
+            />
         </div>
     );
 }
