@@ -6,6 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { SITE_CONFIG } from '@/lib/config';
 import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
+import JsonLd from '@/components/JsonLd';
 import './globals.css';
 import './app.css';
 
@@ -62,6 +63,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
             <body>
+                <JsonLd />
                 <ClientShell posts={posts}>
                     {children}
                 </ClientShell>

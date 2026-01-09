@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
@@ -37,6 +38,23 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts }: P
                 <code className={className} {...props}>
                     {children}
                 </code>
+            );
+        },
+        img: ({ src, alt, title }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+            if (!src) return null;
+            return (
+                <span className="post-image-wrapper">
+                    <Image
+                        src={src as string}
+                        alt={alt || ''}
+                        title={title}
+                        width={800}
+                        height={450}
+                        className="post-image"
+                        style={{ width: '100%', height: 'auto' }}
+                    />
+                    {title && <span className="image-caption">{title}</span>}
+                </span>
             );
         }
     };

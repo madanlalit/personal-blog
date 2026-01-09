@@ -186,7 +186,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                 <aside className="grid-sidebar">
                     {/* 1. AVAILABILITY BEACON */}
                     <div className="sys-module">
-                        <div className="mod-header">{'/// SYSTEM_STATUS'}</div>
+                        <h2 className="mod-header">{'/// SYSTEM_STATUS'}</h2>
                         <div className="availability-beacon">
                             <div className="beacon-signal">
                                 <span className="beacon-dot pulse"></span>
@@ -204,7 +204,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
 
                     {/* 2. SKILL MONITOR */}
                     <div className="sys-module">
-                        <div className="mod-header">{'/// SYSTEM_RESOURCES'}</div>
+                        <h2 className="mod-header">{'/// SYSTEM_RESOURCES'}</h2>
                         <div className="skill-monitor">
                             {SKILLS.map((skill) => (
                                 <div key={skill.name} className="skill-row">
@@ -224,7 +224,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                     </div>
 
                     <div className="sys-module">
-                        <div className="mod-header">{'/// COMM_PORTS'}</div>
+                        <h2 className="mod-header">{'/// COMM_PORTS'}</h2>
                         <div className="comm-grid">
                             <a
                                 href="https://github.com/madanlalit/"
@@ -258,10 +258,10 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                 <section className="grid-main">
                     {/* 4. LIVE SYSTEM LOG */}
                     <div className="sys-module">
-                        <div className="mod-header">
+                        <h2 className="mod-header">
                             <span>{'/// KERNEL_LOG'}</span>
                             <span className="mod-meta">TAIL -F</span>
-                        </div>
+                        </h2>
                         <div className="system-log-terminal">
                             {SYSTEM_LOGS.map((log) => (
                                 <div
@@ -284,7 +284,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
 
                     {/* 5. GITHUB HEATMAP MODULE */}
                     <div className="sys-module activity-wrapper">
-                        <div className="mod-header">
+                        <h2 className="mod-header">
                             <span>{'/// COMMIT_HISTORY'}</span>
                             {ghStatus === 'ONLINE' && dataTimestamp && (
                                 <span className="mod-meta" style={{ color: 'var(--text-secondary)' }}>
@@ -299,7 +299,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                                 <span className="mod-meta error-text">DATA_Unavailable</span>
                             )}
 
-                        </div>
+                        </h2>
 
                         <div className="heatmap-strip">
                             {activityMap.map((item, i) => (
@@ -318,10 +318,10 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
 
                     {/* 6. LATEST BLOG POSTS */}
                     <div className="sys-module">
-                        <div className="mod-header">
+                        <h2 className="mod-header">
                             <span>{'/// SYSTEM_[B]LOGS'}</span>
                             <span className="mod-meta">[{initialPosts.length}]</span>
-                        </div>
+                        </h2>
 
                         <div className="logs-timeline">
                             {initialPosts.map((post, index) => (

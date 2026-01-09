@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { SITE_CONFIG } from '@/lib/config';
 import PostClient from './PostClient';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -70,11 +71,14 @@ export default async function PostPage({ params }: Props) {
         .map(({ post }) => ({ ...post, content: '' }));
 
     return (
-        <PostClient
-            post={post}
-            prevPost={prevPost}
-            nextPost={nextPost}
-            relatedPosts={relatedPosts}
-        />
+        <>
+            <ArticleJsonLd post={post} />
+            <PostClient
+                post={post}
+                prevPost={prevPost}
+                nextPost={nextPost}
+                relatedPosts={relatedPosts}
+            />
+        </>
     );
 }
