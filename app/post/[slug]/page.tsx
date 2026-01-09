@@ -52,5 +52,29 @@ export default async function PostPage({ params }: Props) {
         notFound();
     }
 
-    return <PostClient post={post} />;
+    const allPosts = getAllPosts();
+    const currentIndex = allPosts.findIndex(p => p.id === post.id);
+    const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+    const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+
+    // Related posts logic
+    const relatedPosts = allPosts
+        .filter(p => p.id !== post.id)
+        .map(p => ({
+            post: p,
+            score: (post.tags?.filter(tag => p.tags?.includes(tag)).length || 0) * 3 + (p.category === post.category ? 2 : 0)
+        }))
+        .filter(({ score }) => score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3)
+        .map(({ post }) => post);
+
+    return (
+        <PostClient
+            post={post}
+            prevPost={prevPost}
+            nextPost={nextPost}
+            relatedPosts={relatedPosts}
+        />
+    );
 }
