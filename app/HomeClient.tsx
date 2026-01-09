@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
+import './home.css';
 
 // Placeholder - will be migrated
 const PostCard = ({ post, index }: { post: PostMeta; index: number }) => (
