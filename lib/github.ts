@@ -19,8 +19,8 @@ export interface GitHubEvent {
             message: string;
         }>;
         action?: string;
-        issue?: any;
-        pull_request?: any;
+        issue?: unknown;
+        pull_request?: unknown;
     };
     created_at: string;
 }

@@ -28,7 +28,7 @@
 
   /* Status Colors */
   --color-success: var(--accent);
-  --color-warn: #FFA500;
+  --color-warn: #505050;
   --color-error: #FF5555;
   --color-info: var(--text-secondary);
 
@@ -301,25 +301,7 @@ h6 {
   text-transform: uppercase;
 }
 
-h1::after {
-  content: ' █';
-  /* Block cursor */
-  animation: blink 1.2s step-end infinite;
-  opacity: 0.5;
-  font-size: 0.8em;
-}
 
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
 
 a {
   color: inherit;

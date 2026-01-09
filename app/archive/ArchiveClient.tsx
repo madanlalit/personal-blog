@@ -20,18 +20,25 @@ const groupPostsByYear = (posts: PostMeta[]) => {
 
 const getHeatmapOpacities = (posts: PostMeta[]) => {
     const now = new Date();
-    const monthCounts = Array(12).fill(0);
+    now.setHours(0, 0, 0, 0); // Reset time for accurate day diff
+
+    const weekCounts = Array(52).fill(0);
+    const MS_PER_WEEK = 1000 * 60 * 60 * 24 * 7;
 
     posts.forEach(post => {
         const postDate = new Date(post.date);
-        const monthsAgo = (now.getFullYear() - postDate.getFullYear()) * 12 + (now.getMonth() - postDate.getMonth());
-        if (monthsAgo >= 0 && monthsAgo < 12) {
-            monthCounts[11 - monthsAgo]++;
+        postDate.setHours(0, 0, 0, 0);
+
+        const diffTime = now.getTime() - postDate.getTime();
+        const weeksAgo = Math.floor(diffTime / MS_PER_WEEK);
+
+        if (weeksAgo >= 0 && weeksAgo < 52) {
+            weekCounts[51 - weeksAgo]++;
         }
     });
 
-    const max = Math.max(...monthCounts, 1);
-    return monthCounts.map(count => 0.2 + (count / max) * 0.8);
+    const max = Math.max(...weekCounts, 1);
+    return weekCounts.map(count => count === 0 ? 0.2 : 0.4 + (count / max) * 0.6);
 };
 
 // Hash generator
@@ -136,7 +143,7 @@ export default function ArchiveClient({ initialPosts, allTags }: ArchiveClientPr
 
             <div className="archive-body">
                 <section className="activity-section">
-                    <div className="section-label">ACTIVITY_LOG [LAST_12_MONTHS]</div>
+                    <div className="section-label">ACTIVITY_LOG [LAST_52_WEEKS]</div>
                     <div className="heatmap-grid">
                         {heatmapOpacities.map((opacity, i) => <div key={i} className="heat-cell" style={{ opacity }} />)}
                     </div>

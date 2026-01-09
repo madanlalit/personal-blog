@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
@@ -37,18 +37,80 @@ interface HomeClientProps {
     } | null;
 }
 
+
+
+// --- HELPER: PROCESS HEATMAP ---
+const processHeatmap = (events: GitHubEvent[]) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Initialize last 30 days with dates
+    const dailyData = Array(30).fill(null).map((_, i) => {
+        const d = new Date(today);
+        d.setDate(d.getDate() - (29 - i));
+        return {
+            count: 0,
+            date: d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+            iso: d.toISOString().split('T')[0]
+        };
+    });
+
+    const dateMap = new Map();
+    dailyData.forEach((d, i) => dateMap.set(d.iso, i));
+
+    const contributionEvents = events.filter((e) => {
+        if (e.type === 'PushEvent') return true;
+        if (e.type === 'PullRequestEvent' && e.payload.action === 'opened') return true;
+        if (e.type === 'IssuesEvent' && e.payload.action === 'opened') return true;
+        if (e.type === 'CreateEvent') return true;
+        return false;
+    });
+
+    contributionEvents.forEach((e) => {
+        const eventDate = new Date(e.created_at);
+        const isoDate = eventDate.toISOString().split('T')[0];
+
+        if (dateMap.has(isoDate)) {
+            const idx = dateMap.get(isoDate);
+            let count = 0;
+
+            if (e.type === 'PushEvent') {
+                count = e.payload.commits ? e.payload.commits.length : 1;
+            } else {
+                count = 1;
+            }
+
+            dailyData[idx].count += count;
+        }
+    });
+
+    return dailyData;
+};
+
 export default function HomeClient({ initialPosts, githubData }: HomeClientProps) {
     const [time, setTime] = useState<Date | null>(null);
     const [skillsAnimated, setSkillsAnimated] = useState(false);
     const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
-    const [activityMap, setActivityMap] = useState<Array<{ count: number; date: string }>>(
-        Array(30).fill({ count: 0, date: '' })
-    );
-    const [ghStatus, setGhStatus] = useState<'LOADING' | 'ONLINE' | 'OFFLINE'>('LOADING');
-    const [dataTimestamp, setDataTimestamp] = useState<number | null>(null);
+
+    // Derive state from props using useMemo
+    const { activityMap, ghStatus, dataTimestamp } = useMemo(() => {
+        if (githubData) {
+            return {
+                activityMap: processHeatmap(githubData.events),
+                ghStatus: 'ONLINE' as const,
+                dataTimestamp: githubData.lastUpdated
+            };
+        }
+        return {
+            activityMap: Array(30).fill({ count: 0, date: '' }),
+            ghStatus: 'OFFLINE' as const,
+            dataTimestamp: null
+        };
+    }, [githubData]);
 
     // --- LIVE CLOCK ---
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setTime(new Date());
         const timer = setInterval(() => setTime(new Date()), 1000);
         return () => clearInterval(timer);
@@ -68,66 +130,6 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
             }, 500 + index * 400);
         });
     }, []);
-
-    // --- HELPER: PROCESS HEATMAP ---
-    const processHeatmap = (events: GitHubEvent[]) => {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-
-        // Initialize last 30 days with dates
-        const dailyData = Array(30).fill(null).map((_, i) => {
-            const d = new Date(today);
-            d.setDate(d.getDate() - (29 - i));
-            return {
-                count: 0,
-                date: d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }),
-                iso: d.toISOString().split('T')[0]
-            };
-        });
-
-        const dateMap = new Map();
-        dailyData.forEach((d, i) => dateMap.set(d.iso, i));
-
-        const contributionEvents = events.filter((e) => {
-            if (e.type === 'PushEvent') return true;
-            if (e.type === 'PullRequestEvent' && e.payload.action === 'opened') return true;
-            if (e.type === 'IssuesEvent' && e.payload.action === 'opened') return true;
-            if (e.type === 'CreateEvent') return true;
-            return false;
-        });
-
-        contributionEvents.forEach((e) => {
-            const eventDate = new Date(e.created_at);
-            const isoDate = eventDate.toISOString().split('T')[0];
-
-            if (dateMap.has(isoDate)) {
-                const idx = dateMap.get(isoDate);
-                let count = 0;
-
-                if (e.type === 'PushEvent') {
-                    count = e.payload.commits ? e.payload.commits.length : 1;
-                } else {
-                    count = 1;
-                }
-
-                dailyData[idx].count += count;
-            }
-        });
-
-        return dailyData;
-    };
-
-    // --- DATA PROCESSING ---
-    useEffect(() => {
-        if (githubData) {
-            const dailyCounts = processHeatmap(githubData.events);
-            setActivityMap(dailyCounts);
-            setDataTimestamp(githubData.lastUpdated);
-            setGhStatus('ONLINE');
-        } else {
-            setGhStatus('OFFLINE');
-        }
-    }, [githubData]);
 
     const getIntensity = (count: number) => {
         if (count === 0) return 0.1;
@@ -184,7 +186,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                 <aside className="grid-sidebar">
                     {/* 1. AVAILABILITY BEACON */}
                     <div className="sys-module">
-                        <div className="mod-header">/// SYSTEM_STATUS</div>
+                        <div className="mod-header">{'/// SYSTEM_STATUS'}</div>
                         <div className="availability-beacon">
                             <div className="beacon-signal">
                                 <span className="beacon-dot pulse"></span>
@@ -202,7 +204,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
 
                     {/* 2. SKILL MONITOR */}
                     <div className="sys-module">
-                        <div className="mod-header">/// SYSTEM_RESOURCES</div>
+                        <div className="mod-header">{'/// SYSTEM_RESOURCES'}</div>
                         <div className="skill-monitor">
                             {SKILLS.map((skill) => (
                                 <div key={skill.name} className="skill-row">
@@ -222,7 +224,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                     </div>
 
                     <div className="sys-module">
-                        <div className="mod-header">/// COMM_PORTS</div>
+                        <div className="mod-header">{'/// COMM_PORTS'}</div>
                         <div className="comm-grid">
                             <a
                                 href="https://github.com/madanlalit/"
@@ -257,7 +259,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                     {/* 4. LIVE SYSTEM LOG */}
                     <div className="sys-module">
                         <div className="mod-header">
-                            <span>/// KERNEL_LOG</span>
+                            <span>{'/// KERNEL_LOG'}</span>
                             <span className="mod-meta">TAIL -F</span>
                         </div>
                         <div className="system-log-terminal">
@@ -283,11 +285,11 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                     {/* 5. GITHUB HEATMAP MODULE */}
                     <div className="sys-module activity-wrapper">
                         <div className="mod-header">
-                            <span>/// COMMIT_HISTORY</span>
+                            <span>{'/// COMMIT_HISTORY'}</span>
                             {ghStatus === 'ONLINE' && dataTimestamp && (
                                 <span className="mod-meta" style={{ color: 'var(--text-secondary)' }}>
                                     DATA_SYNCED:{' '}
-                                    {new Date(dataTimestamp).toLocaleTimeString([], {
+                                    {new Date(dataTimestamp).toLocaleTimeString('en-US', {
                                         hour: '2-digit',
                                         minute: '2-digit',
                                     })}
@@ -296,7 +298,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                             {ghStatus === 'OFFLINE' && (
                                 <span className="mod-meta error-text">DATA_Unavailable</span>
                             )}
-                            {ghStatus === 'LOADING' && <span className="mod-meta">INITIALIZING...</span>}
+
                         </div>
 
                         <div className="heatmap-strip">
@@ -317,7 +319,7 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                     {/* 6. LATEST BLOG POSTS */}
                     <div className="sys-module">
                         <div className="mod-header">
-                            <span>/// SYSTEM_[B]LOGS</span>
+                            <span>{'/// SYSTEM_[B]LOGS'}</span>
                             <span className="mod-meta">[{initialPosts.length}]</span>
                         </div>
 

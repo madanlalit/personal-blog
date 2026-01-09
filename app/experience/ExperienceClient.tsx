@@ -96,7 +96,7 @@ export default function ExperienceClient() {
             {/* Work Experience Section */}
             <section className="exp-section">
                 <div className="section-header">
-                    <span>/// WORK_EXPERIENCE</span>
+                    <span>{'/// WORK_EXPERIENCE'}</span>
                     <span className="section-meta">[{EXPERIENCE.length}]</span>
                 </div>
 
@@ -152,7 +152,7 @@ export default function ExperienceClient() {
             {/* Education Section */}
             <section className="exp-section">
                 <div className="section-header">
-                    <span>/// EDUCATION</span>
+                    <span>{'/// EDUCATION'}</span>
                 </div>
 
                 <div className="logs-timeline">
@@ -185,7 +185,7 @@ export default function ExperienceClient() {
             {/* Certifications Section */}
             <section className="exp-section">
                 <div className="section-header">
-                    <span>/// CERTIFICATIONS</span>
+                    <span>{'/// CERTIFICATIONS'}</span>
                     <span className="section-meta">[{CERTIFICATIONS.length}]</span>
                 </div>
 

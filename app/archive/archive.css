@@ -99,13 +99,12 @@
 .heatmap-grid {
     display: grid;
     grid-template-columns: repeat(52, 1fr);
-    gap: var(--space-xxs);
+    gap: 2px;
     height: 12px;
 }
 
 .heat-cell {
     background-color: var(--arch-accent);
-    border-radius: 1px;
 }
 
 /* Control Module */
