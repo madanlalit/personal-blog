@@ -1,6 +1,601 @@
 {
-  "lastUpdated": 1767974771519,
+  "lastUpdated": 1767990725312,
   "events": [
+    {
+      "id": "5714148738",
+      "type": "ForkEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "forked",
+        "forkee": {
+          "id": 1131286423,
+          "node_id": "R_kgDOQ24Plw",
+          "name": "pydantic-ai",
+          "full_name": "madanlalit/pydantic-ai",
+          "private": false,
+          "owner": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/madanlalit/pydantic-ai",
+          "description": "GenAI Agent Framework, the Pydantic way",
+          "fork": true,
+          "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+          "forks_url": "https://api.github.com/repos/madanlalit/pydantic-ai/forks",
+          "keys_url": "https://api.github.com/repos/madanlalit/pydantic-ai/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/madanlalit/pydantic-ai/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/madanlalit/pydantic-ai/teams",
+          "hooks_url": "https://api.github.com/repos/madanlalit/pydantic-ai/hooks",
+          "issue_events_url": "https://api.github.com/repos/madanlalit/pydantic-ai/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/madanlalit/pydantic-ai/events",
+          "assignees_url": "https://api.github.com/repos/madanlalit/pydantic-ai/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/madanlalit/pydantic-ai/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/madanlalit/pydantic-ai/tags",
+          "blobs_url": "https://api.github.com/repos/madanlalit/pydantic-ai/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/madanlalit/pydantic-ai/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/madanlalit/pydantic-ai/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/madanlalit/pydantic-ai/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/madanlalit/pydantic-ai/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/madanlalit/pydantic-ai/languages",
+          "stargazers_url": "https://api.github.com/repos/madanlalit/pydantic-ai/stargazers",
+          "contributors_url": "https://api.github.com/repos/madanlalit/pydantic-ai/contributors",
+          "subscribers_url": "https://api.github.com/repos/madanlalit/pydantic-ai/subscribers",
+          "subscription_url": "https://api.github.com/repos/madanlalit/pydantic-ai/subscription",
+          "commits_url": "https://api.github.com/repos/madanlalit/pydantic-ai/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/madanlalit/pydantic-ai/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/madanlalit/pydantic-ai/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/madanlalit/pydantic-ai/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/madanlalit/pydantic-ai/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/madanlalit/pydantic-ai/merges",
+          "archive_url": "https://api.github.com/repos/madanlalit/pydantic-ai/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/madanlalit/pydantic-ai/downloads",
+          "issues_url": "https://api.github.com/repos/madanlalit/pydantic-ai/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/madanlalit/pydantic-ai/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/madanlalit/pydantic-ai/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/madanlalit/pydantic-ai/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/madanlalit/pydantic-ai/labels{/name}",
+          "releases_url": "https://api.github.com/repos/madanlalit/pydantic-ai/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
+          "created_at": "2026-01-09T18:58:30Z",
+          "updated_at": "2026-01-09T18:58:31Z",
+          "pushed_at": "2026-01-09T18:57:52Z",
+          "git_url": "git://github.com/madanlalit/pydantic-ai.git",
+          "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
+          "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
+          "svn_url": "https://github.com/madanlalit/pydantic-ai",
+          "homepage": "https://ai.pydantic.dev",
+          "size": 150668,
+          "stargazers_count": 0,
+          "watchers_count": 0,
+          "language": null,
+          "has_issues": false,
+          "has_projects": true,
+          "has_downloads": true,
+          "has_wiki": false,
+          "has_pages": false,
+          "has_discussions": false,
+          "forks_count": 0,
+          "mirror_url": null,
+          "archived": false,
+          "disabled": false,
+          "open_issues_count": 0,
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "allow_forking": true,
+          "is_template": false,
+          "web_commit_signoff_required": false,
+          "topics": [],
+          "visibility": "public",
+          "forks": 0,
+          "open_issues": 0,
+          "watchers": 0,
+          "default_branch": "main"
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T18:58:30Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "5711990557",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9",
+          "repository_url": "https://api.github.com/repos/madanlalit/personal-blog",
+          "labels_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/labels{/name}",
+          "comments_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/comments",
+          "events_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/events",
+          "html_url": "https://github.com/madanlalit/personal-blog/issues/9",
+          "id": 3777858462,
+          "node_id": "I_kwDOQn7ljs7hLYue",
+          "number": 9,
+          "title": "Migrate from SPA to SSG architecture",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignee": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "madanlalit",
+              "id": 116655920,
+              "node_id": "U_kgDOBvQHMA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/madanlalit",
+              "html_url": "https://github.com/madanlalit",
+              "followers_url": "https://api.github.com/users/madanlalit/followers",
+              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+              "repos_url": "https://api.github.com/users/madanlalit/repos",
+              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2026-01-03T08:39:41Z",
+          "updated_at": "2026-01-09T17:02:52Z",
+          "closed_at": "2026-01-09T17:02:52Z",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "## Overview\nCurrently, the blog is built as a Single Page Application (SPA), which has limitations for SEO and social media sharing. Meta tags and structured data are not correctly rendered in the static HTML, requiring migration to Static Site Generation (SSG).\n\n## Goals\n- Migrate the application from SPA to SSG architecture\n- Ensure all blog posts are pre-rendered as static HTML files\n- Properly render meta tags (Open Graph, Twitter Cards) in static HTML\n- Improve SEO and social media sharing capabilities\n- Maintain fast page load times and user experience\n\n## Potential Approaches\n1. **Full migration to vite-plugin-ssr or vite-react-ssg**: Complete framework-level SSG support\n2. **Custom build script**: Generate static HTML files for each route during build time\n3. **Hybrid approach**: Use SSG for blog posts and keep SPA for interactive sections\n\n## Benefits\n- Better SEO with pre-rendered content\n- Proper meta tags for social media sharing\n- Faster initial page load\n- Improved Core Web Vitals scores\n\n## Considerations\n- Impact on existing routing and navigation\n- Build process changes\n- Deployment workflow updates\n- Client-side interactivity preservation",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed"
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T17:02:54Z"
+    },
+    {
+      "id": "5711968029",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9",
+          "repository_url": "https://api.github.com/repos/madanlalit/personal-blog",
+          "labels_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/labels{/name}",
+          "comments_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/comments",
+          "events_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/events",
+          "html_url": "https://github.com/madanlalit/personal-blog/issues/9",
+          "id": 3777858462,
+          "node_id": "I_kwDOQn7ljs7hLYue",
+          "number": 9,
+          "title": "Migrate from SPA to SSG architecture",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignee": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "madanlalit",
+              "id": 116655920,
+              "node_id": "U_kgDOBvQHMA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/madanlalit",
+              "html_url": "https://github.com/madanlalit",
+              "followers_url": "https://api.github.com/users/madanlalit/followers",
+              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+              "repos_url": "https://api.github.com/users/madanlalit/repos",
+              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2026-01-03T08:39:41Z",
+          "updated_at": "2026-01-09T17:02:52Z",
+          "closed_at": "2026-01-09T17:02:52Z",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "## Overview\nCurrently, the blog is built as a Single Page Application (SPA), which has limitations for SEO and social media sharing. Meta tags and structured data are not correctly rendered in the static HTML, requiring migration to Static Site Generation (SSG).\n\n## Goals\n- Migrate the application from SPA to SSG architecture\n- Ensure all blog posts are pre-rendered as static HTML files\n- Properly render meta tags (Open Graph, Twitter Cards) in static HTML\n- Improve SEO and social media sharing capabilities\n- Maintain fast page load times and user experience\n\n## Potential Approaches\n1. **Full migration to vite-plugin-ssr or vite-react-ssg**: Complete framework-level SSG support\n2. **Custom build script**: Generate static HTML files for each route during build time\n3. **Hybrid approach**: Use SSG for blog posts and keep SPA for interactive sections\n\n## Benefits\n- Better SEO with pre-rendered content\n- Proper meta tags for social media sharing\n- Faster initial page load\n- Improved Core Web Vitals scores\n\n## Considerations\n- Impact on existing routing and navigation\n- Build process changes\n- Deployment workflow updates\n- Client-side interactivity preservation",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed"
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/comments/3729815692",
+          "html_url": "https://github.com/madanlalit/personal-blog/issues/9#issuecomment-3729815692",
+          "issue_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9",
+          "id": 3729815692,
+          "node_id": "IC_kwDOQn7ljs7eUHiM",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-01-09T17:01:43Z",
+          "updated_at": "2026-01-09T17:01:43Z",
+          "body": "Used NextJS",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/comments/3729815692/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T17:01:43Z"
+    },
+    {
+      "id": "5711947028",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 18,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/personal-blog/pulls/18",
+          "id": 3160293190,
+          "number": 18,
+          "head": {
+            "ref": "feature/nextjs-migration",
+            "sha": "dec3cebf0123af5d404f212d03d258c342a7a5c7",
+            "repo": {
+              "id": 1115612558,
+              "url": "https://api.github.com/repos/madanlalit/personal-blog",
+              "name": "personal-blog"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "2b35693d6b9e899a82f18840176e40991e7e4807",
+            "repo": {
+              "id": 1115612558,
+              "url": "https://api.github.com/repos/madanlalit/personal-blog",
+              "name": "personal-blog"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T17:00:39Z"
+    },
+    {
+      "id": "7330685787",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "repository_id": 1115612558,
+        "push_id": 29625680075,
+        "ref": "refs/heads/main",
+        "head": "6cfbaaedd23d936d717bfc791888d0cf6f7e3f07",
+        "before": "2b35693d6b9e899a82f18840176e40991e7e4807"
+      },
+      "public": true,
+      "created_at": "2026-01-09T17:00:40Z"
+    },
+    {
+      "id": "5711880073",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 18,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/personal-blog/pulls/18",
+          "id": 3160293190,
+          "number": 18,
+          "head": {
+            "ref": "feature/nextjs-migration",
+            "sha": "dec3cebf0123af5d404f212d03d258c342a7a5c7",
+            "repo": {
+              "id": 1115612558,
+              "url": "https://api.github.com/repos/madanlalit/personal-blog",
+              "name": "personal-blog"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "2b35693d6b9e899a82f18840176e40991e7e4807",
+            "repo": {
+              "id": 1115612558,
+              "url": "https://api.github.com/repos/madanlalit/personal-blog",
+              "name": "personal-blog"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T16:57:28Z"
+    },
+    {
+      "id": "7330488581",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1115612558,
+        "name": "madanlalit/personal-blog",
+        "url": "https://api.github.com/repos/madanlalit/personal-blog"
+      },
+      "payload": {
+        "ref": "feature/nextjs-migration",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature/nextjs-migration",
+        "master_branch": "main",
+        "description": "A retro-style personal blog with an interactive terminal interface.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-09T16:52:50Z"
+    },
     {
       "id": "5705555424",
       "type": "IssueCommentEvent",
@@ -3001,7 +3596,7 @@
             "site_admin": false
           },
           "labels": [],
-          "state": "open",
+          "state": "closed",
           "locked": false,
           "assignee": {
             "login": "madanlalit",
@@ -3048,10 +3643,10 @@
             }
           ],
           "milestone": null,
-          "comments": 0,
+          "comments": 1,
           "created_at": "2026-01-03T08:39:41Z",
-          "updated_at": "2026-01-03T08:39:55Z",
-          "closed_at": null,
+          "updated_at": "2026-01-09T17:02:52Z",
+          "closed_at": "2026-01-09T17:02:52Z",
           "active_lock_reason": null,
           "sub_issues_summary": {
             "total": 0,
@@ -3079,7 +3674,7 @@
           },
           "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/timeline",
           "performed_via_github_app": null,
-          "state_reason": null
+          "state_reason": "completed"
         },
         "assignee": {
           "login": "madanlalit",
@@ -3180,7 +3775,7 @@
             "site_admin": false
           },
           "labels": [],
-          "state": "open",
+          "state": "closed",
           "locked": false,
           "assignee": {
             "login": "madanlalit",
@@ -3227,10 +3822,10 @@
             }
           ],
           "milestone": null,
-          "comments": 0,
+          "comments": 1,
           "created_at": "2026-01-03T08:39:41Z",
-          "updated_at": "2026-01-03T08:39:55Z",
-          "closed_at": null,
+          "updated_at": "2026-01-09T17:02:52Z",
+          "closed_at": "2026-01-09T17:02:52Z",
           "active_lock_reason": null,
           "sub_issues_summary": {
             "total": 0,
@@ -3258,7 +3853,7 @@
           },
           "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/timeline",
           "performed_via_github_app": null,
-          "state_reason": null
+          "state_reason": "completed"
         }
       },
       "public": true,
@@ -7359,7 +7954,7 @@
         "ref_type": "branch",
         "full_ref": "refs/heads/feature/seo-improvements",
         "master_branch": "main",
-        "description": "A retro-style personal blog with an interactive terminal interface, built with React, Vite, and TypeScript.",
+        "description": "A retro-style personal blog with an interactive terminal interface.",
         "pusher_type": "user"
       },
       "public": true,
@@ -10708,7 +11303,7 @@
         "ref_type": "branch",
         "full_ref": "refs/heads/feature/responsive-media-edits",
         "master_branch": "main",
-        "description": "A retro-style personal blog with an interactive terminal interface, built with React, Vite, and TypeScript.",
+        "description": "A retro-style personal blog with an interactive terminal interface.",
         "pusher_type": "user"
       },
       "public": true,
@@ -11425,7 +12020,7 @@
         "ref_type": "branch",
         "full_ref": "refs/heads/main",
         "master_branch": "main",
-        "description": "A retro-style personal blog with an interactive terminal interface, built with React, Vite, and TypeScript.",
+        "description": "A retro-style personal blog with an interactive terminal interface.",
         "pusher_type": "user"
       },
       "public": true,
