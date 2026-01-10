@@ -1,6 +1,254 @@
 {
-  "lastUpdated": 1767990725312,
+  "lastUpdated": 1768034055005,
   "events": [
+    {
+      "id": "7336975115",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 29631976288,
+        "ref": "refs/heads/feat/custom-cdn-url",
+        "head": "70b21438240318d606fcc8493d9b9c657d7070ec",
+        "before": "d24478a576ed7fb9ac7fc401ec9a208af7c5c365"
+      },
+      "public": true,
+      "created_at": "2026-01-09T21:45:45Z"
+    },
+    {
+      "id": "5716093424",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974",
+          "repository_url": "https://api.github.com/repos/pydantic/pydantic-ai",
+          "labels_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974/labels{/name}",
+          "comments_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974/comments",
+          "events_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974/events",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974",
+          "id": 3798319157,
+          "node_id": "PR_kwDOMMa-Ps68ZvWM",
+          "number": 3974,
+          "title": "feat(ui): add custom_cdn_url to override Web Chat UI source",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "open",
+          "locked": false,
+          "assignee": null,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2026-01-09T20:51:39Z",
+          "updated_at": "2026-01-09T21:45:46Z",
+          "closed_at": null,
+          "type": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+            "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974",
+            "diff_url": "https://github.com/pydantic/pydantic-ai/pull/3974.diff",
+            "patch_url": "https://github.com/pydantic/pydantic-ai/pull/3974.patch",
+            "merged_at": null
+          },
+          "body": "## Description\n\nAdds a `custom_cdn_url` parameter to the Web Chat UI to allow users to override the default CDN URL. This supports:\n1.  **Custom CDNs**: For enterprise environments where the default CDN is blocked.\n2.  **Static URLs**: For pre-deployed versions of the UI.\n3.  **Local File Paths**: For working offline or with local development builds of the UI.\n\nFixes #3953\n\n## Changes\n\n- Modified `pydantic_ai/ui/_web/app.py` to accept `custom_cdn_url` and handle local file paths.\n- Updated `pydantic_ai/agent/__init__.py` to expose the parameter in `Agent.to_web()`.\n- Updated `pydantic_ai/_cli/web.py` and `pydantic_ai/_cli/__init__.py` to add the `--custom-cdn-url` CLI argument.\n- Added comprehensive tests in `tests/test_ui_web.py` covering all new scenarios.\n- Updated documentation in `docs/web.md` and `docs/cli.md`.\n\n## Checklist\n\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\n- [x] No **breaking changes** (parameter is optional and defaults to `None`).\n- [x] **Linting and type checking** pass.\n- [x] **PR title** is fit for the release changelog.\n- [x] New **tests** added, maintaining 100% coverage.\n- [x] Updated **documentation** for new features.",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3730535886",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#issuecomment-3730535886",
+          "issue_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/3974",
+          "id": 3730535886,
+          "node_id": "IC_kwDOMMa-Ps7eW3XO",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-01-09T20:53:30Z",
+          "updated_at": "2026-01-09T20:53:30Z",
+          "body": "Hi @DouweM,\r\ncould you please review this PR?",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3730535886/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T20:53:30Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "5716066729",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 3974,
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "70b21438240318d606fcc8493d9b9c657d7070ec",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "73d3929b7307e8a5ffde9ccbf1eb442b13df584c",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-09T20:51:39Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "7335874271",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "ref": "feat/custom-cdn-url",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feat/custom-cdn-url",
+        "master_branch": "main",
+        "description": "GenAI Agent Framework, the Pydantic way",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-09T20:50:25Z"
+    },
     {
       "id": "5714148738",
       "type": "ForkEvent",
@@ -88,13 +336,13 @@
           "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
           "created_at": "2026-01-09T18:58:30Z",
           "updated_at": "2026-01-09T18:58:31Z",
-          "pushed_at": "2026-01-09T18:57:52Z",
+          "pushed_at": "2026-01-09T21:45:45Z",
           "git_url": "git://github.com/madanlalit/pydantic-ai.git",
           "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
           "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
           "svn_url": "https://github.com/madanlalit/pydantic-ai",
           "homepage": "https://ai.pydantic.dev",
-          "size": 150668,
+          "size": 116735,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": null,
@@ -868,9 +1116,9 @@
           "assignee": null,
           "assignees": [],
           "milestone": null,
-          "comments": 5,
+          "comments": 7,
           "created_at": "2026-01-08T03:49:11Z",
-          "updated_at": "2026-01-09T14:44:00Z",
+          "updated_at": "2026-01-10T02:18:37Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -9422,7 +9670,7 @@
           "id": 3753178664,
           "node_id": "PR_kwDOIPDwls66G-vf",
           "number": 34448,
-          "title": "fix(openai): cache httpx clients in AzureChatOpenAI",
+          "title": "fix(openai): cache httpx clients in `AzureChatOpenAI`",
           "user": {
             "login": "madanlalit",
             "id": 116655920,
@@ -9480,7 +9728,7 @@
           "milestone": null,
           "comments": 2,
           "created_at": "2025-12-22T10:10:59Z",
-          "updated_at": "2025-12-23T04:57:45Z",
+          "updated_at": "2026-01-10T07:36:53Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
