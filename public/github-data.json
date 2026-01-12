@@ -1,6 +1,332 @@
 {
-  "lastUpdated": 1768163395362,
+  "lastUpdated": 1768207289638,
   "events": [
+    {
+      "id": "5742776812",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "assigned",
+        "issue": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/5",
+          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
+          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/labels{/name}",
+          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/comments",
+          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/events",
+          "html_url": "https://github.com/madanlalit/heimdall/issues/5",
+          "id": 3764452282,
+          "node_id": "I_kwDOQuIaMM7gYPu6",
+          "number": 5,
+          "title": "Add Google Gemini LLM Provider Support",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "open",
+          "locked": false,
+          "assignee": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "madanlalit",
+              "id": 116655920,
+              "node_id": "U_kgDOBvQHMA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/madanlalit",
+              "html_url": "https://github.com/madanlalit",
+              "followers_url": "https://api.github.com/users/madanlalit/followers",
+              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+              "repos_url": "https://api.github.com/users/madanlalit/repos",
+              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2025-12-27T06:13:37Z",
+          "updated_at": "2026-01-12T07:35:05Z",
+          "closed_at": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "Add support for Google Gemini as an LLM provider.\n\n**Location:** `src/heimdall/agent/llm/`\n\n**Tasks:**\n- Create `google.py` with `GoogleClient`\n- Register in provider registry\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/5/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "assignee": {
+          "login": "madanlalit",
+          "id": 116655920,
+          "node_id": "U_kgDOBvQHMA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/madanlalit",
+          "html_url": "https://github.com/madanlalit",
+          "followers_url": "https://api.github.com/users/madanlalit/followers",
+          "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+          "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+          "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+          "repos_url": "https://api.github.com/users/madanlalit/repos",
+          "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "assignees": [
+          {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          }
+        ]
+      },
+      "public": true,
+      "created_at": "2026-01-12T07:35:06Z"
+    },
+    {
+      "id": "5742772547",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 23,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/23",
+          "id": 3164799604,
+          "number": 23,
+          "head": {
+            "ref": "feature/google-gemini-provider",
+            "sha": "5e08e0a6d3b0c7cb642866b19a97b6619ceb8193",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "f63ffda749266a2654777937f17df5974020f0f6",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-12T07:34:51Z"
+    },
+    {
+      "id": "7383798201",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "ref": "feature/google-gemini-provider",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature/google-gemini-provider",
+        "master_branch": "main",
+        "description": "The all-seeing agent for web automation.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-12T07:34:28Z"
+    },
+    {
+      "id": "5742686522",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1132046564,
+        "name": "Dimillian/CodexMonitor",
+        "url": "https://api.github.com/repos/Dimillian/CodexMonitor"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-01-12T07:30:05Z"
+    },
+    {
+      "id": "7383367629",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1121495867,
+        "name": "madanlalit/exo",
+        "url": "https://api.github.com/repos/madanlalit/exo"
+      },
+      "payload": {
+        "repository_id": 1121495867,
+        "push_id": 29678438489,
+        "ref": "refs/heads/main",
+        "head": "b74a61053711db043e0ce32aee0ab977c2b45bc2",
+        "before": "1c1792f5e85eaeebe6d9eb8bde654474b5d27271"
+      },
+      "public": true,
+      "created_at": "2026-01-12T07:13:39Z"
+    },
+    {
+      "id": "7383357804",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1120983781,
+        "name": "madanlalit/langchain",
+        "url": "https://api.github.com/repos/madanlalit/langchain"
+      },
+      "payload": {
+        "repository_id": 1120983781,
+        "push_id": 29678428607,
+        "ref": "refs/heads/master",
+        "head": "2ef23882d236a4b03d5d14c57b07dce4ca90640f",
+        "before": "6a416c618655102847a59cae280348c0712cf45c"
+      },
+      "public": true,
+      "created_at": "2026-01-12T07:13:08Z"
+    },
     {
       "id": "5732821328",
       "type": "WatchEvent",
@@ -6835,12 +7161,54 @@
           "labels": [],
           "state": "open",
           "locked": false,
-          "assignee": null,
-          "assignees": [],
+          "assignee": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "madanlalit",
+              "id": 116655920,
+              "node_id": "U_kgDOBvQHMA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/madanlalit",
+              "html_url": "https://github.com/madanlalit",
+              "followers_url": "https://api.github.com/users/madanlalit/followers",
+              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+              "repos_url": "https://api.github.com/users/madanlalit/repos",
+              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
           "milestone": null,
           "comments": 0,
           "created_at": "2025-12-27T06:13:37Z",
-          "updated_at": "2025-12-27T06:13:37Z",
+          "updated_at": "2026-01-12T07:35:05Z",
           "closed_at": null,
           "active_lock_reason": null,
           "sub_issues_summary": {
@@ -9691,14 +10059,14 @@
           "releases_url": "https://api.github.com/repos/madanlalit/exo/releases{/id}",
           "deployments_url": "https://api.github.com/repos/madanlalit/exo/deployments",
           "created_at": "2025-12-23T04:58:26Z",
-          "updated_at": "2025-12-24T17:02:04Z",
-          "pushed_at": "2026-01-05T14:17:59Z",
+          "updated_at": "2026-01-12T07:13:49Z",
+          "pushed_at": "2026-01-12T07:13:38Z",
           "git_url": "git://github.com/madanlalit/exo.git",
           "ssh_url": "git@github.com:madanlalit/exo.git",
           "clone_url": "https://github.com/madanlalit/exo.git",
           "svn_url": "https://github.com/madanlalit/exo",
           "homepage": "",
-          "size": 14921,
+          "size": 15036,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": "Python",
@@ -10506,17 +10874,17 @@
           "releases_url": "https://api.github.com/repos/madanlalit/langchain/releases{/id}",
           "deployments_url": "https://api.github.com/repos/madanlalit/langchain/deployments",
           "created_at": "2025-12-22T08:54:57Z",
-          "updated_at": "2025-12-22T08:54:57Z",
-          "pushed_at": "2025-12-23T04:52:02Z",
+          "updated_at": "2026-01-12T07:13:31Z",
+          "pushed_at": "2026-01-12T07:13:07Z",
           "git_url": "git://github.com/madanlalit/langchain.git",
           "ssh_url": "git@github.com:madanlalit/langchain.git",
           "clone_url": "https://github.com/madanlalit/langchain.git",
           "svn_url": "https://github.com/madanlalit/langchain",
           "homepage": "https://docs.langchain.com/oss/python/langchain/",
-          "size": 423641,
+          "size": 426071,
           "stargazers_count": 0,
           "watchers_count": 0,
-          "language": null,
+          "language": "Python",
           "has_issues": false,
           "has_projects": true,
           "has_downloads": true,
