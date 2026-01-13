@@ -16,10 +16,9 @@ import type { GitHubEvent } from '@/lib/github';
 
 const SKILLS = [
     { name: 'Python / AI', level: 75 },
-    { name: 'Javascript', level: 60 },
+    { name: 'Typescript', level: 60 },
     { name: 'AWS / Cloud', level: 50 },
-    { name: 'LangGraph / AI', level: 60 },
-    { name: 'Langchain / AI', level: 50 },
+    { name: 'Next.js', level: 35 },
 ];
 
 const SYSTEM_LOGS = [

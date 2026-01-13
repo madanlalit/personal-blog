@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
-    title: "Lalit Madan - AI Engineer",
-    description: "Software engineer specializing in AI agents, automation, and intelligent systems. Explore technical projects, experiments, and insights. Open for hire.",
+    title: "Lalit Madan",
+    description: "Software engineer building AI agents and intelligent systems. Sharing experiments, technical insights, and open source work. Open for hire.",
     author: "Lalit Madan",
     url: "https://lalitmadan.com",
     twitterHandle: "@lalitmadan",
