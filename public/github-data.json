@@ -1,6 +1,208 @@
 {
-  "lastUpdated": 1768552698315,
+  "lastUpdated": 1768595311864,
   "events": [
+    {
+      "id": "7540105192",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 29835318050,
+        "ref": "refs/heads/main",
+        "head": "a401b6787159df6cdfa966f544a892e5f9040123",
+        "before": "6dfd3a59058161703c5a1e65b110f7445bf334cc"
+      },
+      "public": true,
+      "created_at": "2026-01-16T15:43:00Z"
+    },
+    {
+      "id": "5859485673",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1134640384,
+        "name": "openresponses/openresponses",
+        "url": "https://api.github.com/repos/openresponses/openresponses"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-01-16T13:00:35Z",
+      "org": {
+        "id": 240075138,
+        "login": "openresponses",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/openresponses",
+        "avatar_url": "https://avatars.githubusercontent.com/u/240075138?"
+      }
+    },
+    {
+      "id": "5859320732",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 713419018,
+        "name": "microsoft/sarathi-serve",
+        "url": "https://api.github.com/repos/microsoft/sarathi-serve"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-01-16T12:52:45Z",
+      "org": {
+        "id": 6154722,
+        "login": "microsoft",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/microsoft",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6154722?"
+      }
+    },
+    {
+      "id": "7532795410",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1135125873,
+        "name": "madanlalit/progress",
+        "url": "https://api.github.com/repos/madanlalit/progress"
+      },
+      "payload": {
+        "repository_id": 1135125873,
+        "push_id": 29828003863,
+        "ref": "refs/heads/main",
+        "head": "6ccb12df82b92ca9e24eab88a5b363c4d8c3d484",
+        "before": "749ab30843ebf10ebf418a816b55cd3e1a93d11e"
+      },
+      "public": true,
+      "created_at": "2026-01-16T11:39:14Z"
+    },
+    {
+      "id": "7532787379",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1120037664,
+        "name": "madanlalit/homebrew-tap",
+        "url": "https://api.github.com/repos/madanlalit/homebrew-tap"
+      },
+      "payload": {
+        "repository_id": 1120037664,
+        "push_id": 29827995969,
+        "ref": "refs/heads/main",
+        "head": "5149ba043d6834ee304935987874d1dd8e85d8ef",
+        "before": "8759c004142db6f0f247aa69b59ab728821cb181"
+      },
+      "public": true,
+      "created_at": "2026-01-16T11:38:54Z"
+    },
+    {
+      "id": "5857849849",
+      "type": "ReleaseEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1135125873,
+        "name": "madanlalit/progress",
+        "url": "https://api.github.com/repos/madanlalit/progress"
+      },
+      "payload": {
+        "action": "published",
+        "release": {
+          "url": "https://api.github.com/repos/madanlalit/progress/releases/277369727",
+          "assets_url": "https://api.github.com/repos/madanlalit/progress/releases/277369727/assets",
+          "upload_url": "https://uploads.github.com/repos/madanlalit/progress/releases/277369727/assets{?name,label}",
+          "html_url": "https://github.com/madanlalit/progress/releases/tag/v1.0.0",
+          "id": 277369727,
+          "author": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "node_id": "RE_kwDOQ6ilcc4QiFN_",
+          "tag_name": "v1.0.0",
+          "target_commitish": "main",
+          "name": "v1.0.0",
+          "draft": false,
+          "immutable": false,
+          "prerelease": false,
+          "created_at": "2026-01-16T06:33:18Z",
+          "updated_at": "2026-01-16T11:37:02Z",
+          "published_at": "2026-01-16T11:37:02Z",
+          "assets": [],
+          "tarball_url": "https://api.github.com/repos/madanlalit/progress/tarball/v1.0.0",
+          "zipball_url": "https://api.github.com/repos/madanlalit/progress/zipball/v1.0.0",
+          "body": "Initial release of Progress - Beautiful year calendar wallpapers showing your yearly progress.\n\n## Features\n- Generate beautiful year calendar wallpapers\n- Day, week, and month tracking modes  \n- Automatic wallpaper setting on macOS\n- Customizable colors and themes",
+          "short_description_html": "<p>Initial release of Progress - Beautiful year calendar wallpapers showing your yearly progress.</p>\n<h2>Features</h2>\n<ul>\n<li>Generate beautiful year calendar wallpapers</li>\n<li>Day, week, and month tracking modes</li>\n<li>Automatic wa…</li>\n</ul>",
+          "is_short_description_html_truncated": true
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-16T11:37:02Z"
+    },
     {
       "id": "7527272230",
       "type": "PushEvent",
@@ -129,7 +331,7 @@
         "ref_type": "branch",
         "full_ref": "refs/heads/main",
         "master_branch": "main",
-        "description": "Python CLI for generating Retina-ready macOS wallpapers that visualize yearly progress with custom themes and automatic daily updates.",
+        "description": "Python CLI for generating wallpapers that visualize yearly progress with custom themes and automatic daily updates.",
         "pusher_type": "user"
       },
       "public": true,
@@ -5804,14 +6006,14 @@
           "releases_url": "https://api.github.com/repos/madanlalit/pydantic-ai/releases{/id}",
           "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
           "created_at": "2026-01-09T18:58:30Z",
-          "updated_at": "2026-01-15T10:41:32Z",
-          "pushed_at": "2026-01-15T10:41:27Z",
+          "updated_at": "2026-01-16T15:43:06Z",
+          "pushed_at": "2026-01-16T15:42:59Z",
           "git_url": "git://github.com/madanlalit/pydantic-ai.git",
           "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
           "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
           "svn_url": "https://github.com/madanlalit/pydantic-ai",
           "homepage": "https://ai.pydantic.dev",
-          "size": 116908,
+          "size": 117018,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": "Python",
@@ -17497,84 +17699,6 @@
       },
       "public": true,
       "created_at": "2025-12-17T14:17:12Z"
-    },
-    {
-      "id": "6800385180",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29094266579,
-        "ref": "refs/heads/main",
-        "head": "a12335ba32890e20e49bea59356b8a77afb8dbf0",
-        "before": "23d3577782f0ad9626f755e28d2caf209811bcd4"
-      },
-      "public": true,
-      "created_at": "2025-12-17T11:13:56Z"
-    },
-    {
-      "id": "6798158020",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29092042600,
-        "ref": "refs/heads/main",
-        "head": "23d3577782f0ad9626f755e28d2caf209811bcd4",
-        "before": "c5175ba446539ac750b4ab01c73590abb0f9a602"
-      },
-      "public": true,
-      "created_at": "2025-12-17T09:50:35Z"
-    },
-    {
-      "id": "6798034132",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29091913757,
-        "ref": "refs/heads/main",
-        "head": "c5175ba446539ac750b4ab01c73590abb0f9a602",
-        "before": "dde53a5ca74644cf51f57c02279df7542c003ac3"
-      },
-      "public": true,
-      "created_at": "2025-12-17T09:45:44Z"
     }
   ]
 }
