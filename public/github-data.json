@@ -1,6 +1,288 @@
 {
-  "lastUpdated": 1768854705787,
+  "lastUpdated": 1768898486449,
   "events": [
+    {
+      "id": "7636591513",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1138098401,
+        "name": "madanlalit/python-checklist",
+        "url": "https://api.github.com/repos/madanlalit/python-checklist"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": null,
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-20T08:41:00Z"
+    },
+    {
+      "id": "5920357666",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1137846174,
+        "name": "xai-org/x-algorithm",
+        "url": "https://api.github.com/repos/xai-org/x-algorithm"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-01-20T06:01:26Z",
+      "org": {
+        "id": 130314967,
+        "login": "xai-org",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/xai-org",
+        "avatar_url": "https://avatars.githubusercontent.com/u/130314967?"
+      }
+    },
+    {
+      "id": "5919454163",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "labeled",
+        "issue": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/24",
+          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
+          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/labels{/name}",
+          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/comments",
+          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/events",
+          "html_url": "https://github.com/madanlalit/heimdall/issues/24",
+          "id": 3832038877,
+          "node_id": "I_kwDOQuIaMM7kaEXd",
+          "number": 24,
+          "title": "Bug: Agent Incorrectly Resumes Session for Fresh Executions",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 9881271147,
+              "node_id": "LA_kwDOQuIaMM8AAAACTPg7aw",
+              "url": "https://api.github.com/repos/madanlalit/heimdall/labels/bug",
+              "name": "bug",
+              "color": "d73a4a",
+              "default": true,
+              "description": "Something isn't working"
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": null,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-01-20T04:51:10Z",
+          "updated_at": "2026-01-20T04:51:10Z",
+          "closed_at": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "# Bug: Agent Incorrectly Resumes Session for Fresh Executions\n\n## Description\n\nWhen running Heimdall with a fresh session, the agent incorrectly reports \"Resumed session\" and loads state from a previous execution, even though the user did not request to resume.\n\n## Reproduction Steps\n\n1. Run Heimdall with persistence enabled (default when using `--output`):\n   ```bash\n   python -m heimdall.cli run instructions.txt --demo\n   ```\n\n2. Observe the log output shows:\n   ```\n   INFO     Resumed session 21fefa8e at step 71\n   ```\n\n3. This occurs even though:\n   - No explicit resume flag was provided\n   - This is a fresh execution (not a continuation)\n   - The previous session was from a different run\n\n## Expected Behavior\n\n- Fresh executions should start from step 0 with a new session ID\n- \"Resumed session\" should only appear when:\n  - The user explicitly chooses to resume after a `Ctrl+C` pause\n  - A clear resume flag/option is provided\n  - The saved state is from a very recent session (e.g., within the last hour)\n\n## Actual Behavior\n\n- Agent loads state from any previous execution with the same task string\n- Session continues from the saved step count\n- No way to start fresh without manually deleting `.heimdall_state.json`\n\n## Root Cause Analysis\n\nThe bug is in [`src/heimdall/agent/loop.py:203-233`](file:///Users/black/Documents/repo/heimdall/src/heimdall/agent/loop.py#L203-L233):\n\n```python\n# Try to resume from state if available\nrestored = False\nif (\n    self._config.enable_persistence\n    and self._state_manager\n    and self._state_manager.has_saved_state\n):\n    try:\n        persisted = await self._state_manager.load_state()\n        if persisted and persisted.task == task and not persisted.done:  # ← ISSUE HERE\n            self._session_id = persisted.session_id\n            # ... restore state ...\n            restored = True\n            logger.info(\n                f\"Resumed session {self._session_id} at step {self._state.step_count}\"\n            )\n```\n\n### Problems\n\n1. **Overly permissive matching**: The condition `persisted.task == task and not persisted.done` will match ANY previous execution with the same task string, regardless of:\n   - When it was run (could be from days ago)\n   - Whether it was paused intentionally or crashed\n   - Whether the user intends to resume\n\n2. **No explicit resume intent**: There's no mechanism for the user to indicate they want to resume vs. start fresh\n\n3. **Missing staleness check**: Old saved states should be ignored or require explicit confirmation\n\n4. **Paused state ignored**: The saved state has `paused: true`, but this field is not checked. Only intentionally paused sessions should be auto-resumed.\n\n## Evidence\n\nSaved state file content (`output/.heimdall_state.json`):\n```json\n{\n  \"session_id\": \"21fefa8e\",\n  \"task\": \"Start replying until you reply to 10 different posts and only post replies nothing else\",\n  \"step_count\": 75,\n  \"done\": false,\n  \"success\": false,\n  \"paused\": true,\n  \"started_at\": \"2026-01-20T10:16:21.977943\",\n  \"paused_at\": \"2026-01-20T10:16:21.977833\"\n}\n```\n\nThis state from a previous run is being restored even though it's from a different execution.\n\n## Proposed Solutions\n\n### Option 1: Add Explicit Resume Flag (Recommended)\n\nAdd a `--resume` CLI flag that must be explicitly set to resume from saved state:\n\n**CLI changes** (`src/heimdall/cli.py`):\n```python\n@app.command()\ndef run(\n    # ... existing args ...\n    resume: bool = typer.Option(False, \"--resume\", help=\"Resume from saved state if available\"),\n)\n```\n\n**Agent config** (`src/heimdall/agent/loop.py:AgentConfig`):\n```python\nclass AgentConfig(BaseModel):\n    # ... existing fields ...\n    allow_resume: bool = False  # Only resume if explicitly allowed\n```\n\n**Resume logic** (`src/heimdall/agent/loop.py:203-233`):\n```python\n# Try to resume from state if available\nrestored = False\nif (\n    self._config.enable_persistence\n    and self._config.allow_resume  # ← NEW: Require explicit opt-in\n    and self._state_manager\n    and self._state_manager.has_saved_state\n):\n    try:\n        persisted = await self._state_manager.load_state()\n        if persisted and persisted.task == task and not persisted.done and persisted.paused:\n            # ... restore state ...\n```\n\n### Option 2: Time-Based Auto-Resume\n\nOnly auto-resume if the saved state is very recent (e.g., within last hour):\n\n```python\nfrom datetime import datetime, timedelta\n\npersisted = await self._state_manager.load_state()\nif persisted and persisted.task == task and not persisted.done and persisted.paused:\n    # Check if state is recent\n    paused_time = datetime.fromisoformat(persisted.paused_at)\n    time_since_pause = datetime.now() - paused_time\n    \n    if time_since_pause < timedelta(hours=1):\n        # Auto-resume recent paused sessions\n        restored = True\n    else:\n        # Ask user or start fresh\n        logger.info(f\"Found paused session from {time_since_pause.total_seconds()/3600:.1f} hours ago\")\n        logger.info(\"Use --resume flag to continue from saved state\")\n```\n\n### Option 3: Interactive Prompt\n\nPrompt the user when saved state is found:\n\n```python\nif persisted and persisted.task == task and not persisted.done:\n    from rich.console import Console\n    console = Console()\n    \n    resume = console.input(\n        f\"Found saved session at step {persisted.step_count}. Resume? [y/N]: \"\n    )\n    \n    if resume.lower() == 'y':\n        restored = True\n```\n\n## Recommended Fix\n\nImplement **Option 1** (explicit `--resume` flag) because:\n- Most predictable behavior for users\n- Allows both workflows (fresh start vs. resume) to coexist\n- No surprising auto-resume behavior\n- Still supports pause/resume within a single execution via `Ctrl+C`\n\nAdditionally, add a check for `persisted.paused` to ensure only intentionally paused sessions are eligible for resume:\n\n```python\nif persisted and persisted.task == task and not persisted.done and persisted.paused:\n    # Only resume paused sessions, not crashed/failed ones\n```\n\n## Additional Context\n\n- Persistence is currently always enabled when using `--output` (line 228 in `cli.py`)\n- The pause/resume feature using `Ctrl+C` works correctly within a single execution\n- The issue only affects cross-execution state restoration\n\n## Related Files\n\n- [`src/heimdall/agent/loop.py`](file:///Users/black/Documents/repo/heimdall/src/heimdall/agent/loop.py) - Agent execution loop with resume logic\n- [`src/heimdall/persistence/state.py`](file:///Users/black/Documents/repo/heimdall/src/heimdall/persistence/state.py) - State management\n- [`src/heimdall/cli.py`](file:///Users/black/Documents/repo/heimdall/src/heimdall/cli.py) - CLI interface\n\n## Environment\n\n- OS: macOS\n- Heimdall version: Latest (from repo)\n- Python version: 3.12\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "label": {
+          "id": 9881271147,
+          "node_id": "LA_kwDOQuIaMM8AAAACTPg7aw",
+          "url": "https://api.github.com/repos/madanlalit/heimdall/labels/bug",
+          "name": "bug",
+          "color": "d73a4a",
+          "default": true,
+          "description": "Something isn't working"
+        },
+        "labels": [
+          {
+            "id": 9881271147,
+            "node_id": "LA_kwDOQuIaMM8AAAACTPg7aw",
+            "url": "https://api.github.com/repos/madanlalit/heimdall/labels/bug",
+            "name": "bug",
+            "color": "d73a4a",
+            "default": true,
+            "description": "Something isn't working"
+          }
+        ]
+      },
+      "public": true,
+      "created_at": "2026-01-20T04:51:11Z"
+    },
+    {
+      "id": "5919454109",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "opened",
+        "issue": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/24",
+          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
+          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/labels{/name}",
+          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/comments",
+          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/events",
+          "html_url": "https://github.com/madanlalit/heimdall/issues/24",
+          "id": 3832038877,
+          "node_id": "I_kwDOQuIaMM7kaEXd",
+          "number": 24,
+          "title": "Bug: Agent Incorrectly Resumes Session for Fresh Executions",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 9881271147,
+              "node_id": "LA_kwDOQuIaMM8AAAACTPg7aw",
+              "url": "https://api.github.com/repos/madanlalit/heimdall/labels/bug",
+              "name": "bug",
+              "color": "d73a4a",
+              "default": true,
+              "description": "Something isn't working"
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": null,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-01-20T04:51:10Z",
+          "updated_at": "2026-01-20T04:51:10Z",
+          "closed_at": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "# Bug: Agent Incorrectly Resumes Session for Fresh Executions\n\n## Description\n\nWhen running Heimdall with a fresh session, the agent incorrectly reports \"Resumed session\" and loads state from a previous execution, even though the user did not request to resume.\n\n## Reproduction Steps\n\n1. Run Heimdall with persistence enabled (default when using `--output`):\n   ```bash\n   python -m heimdall.cli run instructions.txt --demo\n   ```\n\n2. Observe the log output shows:\n   ```\n   INFO     Resumed session 21fefa8e at step 71\n   ```\n\n3. This occurs even though:\n   - No explicit resume flag was provided\n   - This is a fresh execution (not a continuation)\n   - The previous session was from a different run\n\n## Expected Behavior\n\n- Fresh executions should start from step 0 with a new session ID\n- \"Resumed session\" should only appear when:\n  - The user explicitly chooses to resume after a `Ctrl+C` pause\n  - A clear resume flag/option is provided\n  - The saved state is from a very recent session (e.g., within the last hour)\n\n## Actual Behavior\n\n- Agent loads state from any previous execution with the same task string\n- Session continues from the saved step count\n- No way to start fresh without manually deleting `.heimdall_state.json`\n\n## Root Cause Analysis\n\nThe bug is in [`src/heimdall/agent/loop.py:203-233`](file:///Users/black/Documents/repo/heimdall/src/heimdall/agent/loop.py#L203-L233):\n\n```python\n# Try to resume from state if available\nrestored = False\nif (\n    self._config.enable_persistence\n    and self._state_manager\n    and self._state_manager.has_saved_state\n):\n    try:\n        persisted = await self._state_manager.load_state()\n        if persisted and persisted.task == task and not persisted.done:  # ← ISSUE HERE\n            self._session_id = persisted.session_id\n            # ... restore state ...\n            restored = True\n            logger.info(\n                f\"Resumed session {self._session_id} at step {self._state.step_count}\"\n            )\n```\n\n### Problems\n\n1. **Overly permissive matching**: The condition `persisted.task == task and not persisted.done` will match ANY previous execution with the same task string, regardless of:\n   - When it was run (could be from days ago)\n   - Whether it was paused intentionally or crashed\n   - Whether the user intends to resume\n\n2. **No explicit resume intent**: There's no mechanism for the user to indicate they want to resume vs. start fresh\n\n3. **Missing staleness check**: Old saved states should be ignored or require explicit confirmation\n\n4. **Paused state ignored**: The saved state has `paused: true`, but this field is not checked. Only intentionally paused sessions should be auto-resumed.\n\n## Evidence\n\nSaved state file content (`output/.heimdall_state.json`):\n```json\n{\n  \"session_id\": \"21fefa8e\",\n  \"task\": \"Start replying until you reply to 10 different posts and only post replies nothing else\",\n  \"step_count\": 75,\n  \"done\": false,\n  \"success\": false,\n  \"paused\": true,\n  \"started_at\": \"2026-01-20T10:16:21.977943\",\n  \"paused_at\": \"2026-01-20T10:16:21.977833\"\n}\n```\n\nThis state from a previous run is being restored even though it's from a different execution.\n\n## Proposed Solutions\n\n### Option 1: Add Explicit Resume Flag (Recommended)\n\nAdd a `--resume` CLI flag that must be explicitly set to resume from saved state:\n\n**CLI changes** (`src/heimdall/cli.py`):\n```python\n@app.command()\ndef run(\n    # ... existing args ...\n    resume: bool = typer.Option(False, \"--resume\", help=\"Resume from saved state if available\"),\n)\n```\n\n**Agent config** (`src/heimdall/agent/loop.py:AgentConfig`):\n```python\nclass AgentConfig(BaseModel):\n    # ... existing fields ...\n    allow_resume: bool = False  # Only resume if explicitly allowed\n```\n\n**Resume logic** (`src/heimdall/agent/loop.py:203-233`):\n```python\n# Try to resume from state if available\nrestored = False\nif (\n    self._config.enable_persistence\n    and self._config.allow_resume  # ← NEW: Require explicit opt-in\n    and self._state_manager\n    and self._state_manager.has_saved_state\n):\n    try:\n        persisted = await self._state_manager.load_state()\n        if persisted and persisted.task == task and not persisted.done and persisted.paused:\n            # ... restore state ...\n```\n\n### Option 2: Time-Based Auto-Resume\n\nOnly auto-resume if the saved state is very recent (e.g., within last hour):\n\n```python\nfrom datetime import datetime, timedelta\n\npersisted = await self._state_manager.load_state()\nif persisted and persisted.task == task and not persisted.done and persisted.paused:\n    # Check if state is recent\n    paused_time = datetime.fromisoformat(persisted.paused_at)\n    time_since_pause = datetime.now() - paused_time\n    \n    if time_since_pause < timedelta(hours=1):\n        # Auto-resume recent paused sessions\n        restored = True\n    else:\n        # Ask user or start fresh\n        logger.info(f\"Found paused session from {time_since_pause.total_seconds()/3600:.1f} hours ago\")\n        logger.info(\"Use --resume flag to continue from saved state\")\n```\n\n### Option 3: Interactive Prompt\n\nPrompt the user when saved state is found:\n\n```python\nif persisted and persisted.task == task and not persisted.done:\n    from rich.console import Console\n    console = Console()\n    \n    resume = console.input(\n        f\"Found saved session at step {persisted.step_count}. Resume? [y/N]: \"\n    )\n    \n    if resume.lower() == 'y':\n        restored = True\n```\n\n## Recommended Fix\n\nImplement **Option 1** (explicit `--resume` flag) because:\n- Most predictable behavior for users\n- Allows both workflows (fresh start vs. resume) to coexist\n- No surprising auto-resume behavior\n- Still supports pause/resume within a single execution via `Ctrl+C`\n\nAdditionally, add a check for `persisted.paused` to ensure only intentionally paused sessions are eligible for resume:\n\n```python\nif persisted and persisted.task == task and not persisted.done and persisted.paused:\n    # Only resume paused sessions, not crashed/failed ones\n```\n\n## Additional Context\n\n- Persistence is currently always enabled when using `--output` (line 228 in `cli.py`)\n- The pause/resume feature using `Ctrl+C` works correctly within a single execution\n- The issue only affects cross-execution state restoration\n\n## Related Files\n\n- [`src/heimdall/agent/loop.py`](file:///Users/black/Documents/repo/heimdall/src/heimdall/agent/loop.py) - Agent execution loop with resume logic\n- [`src/heimdall/persistence/state.py`](file:///Users/black/Documents/repo/heimdall/src/heimdall/persistence/state.py) - State management\n- [`src/heimdall/cli.py`](file:///Users/black/Documents/repo/heimdall/src/heimdall/cli.py) - CLI interface\n\n## Environment\n\n- OS: macOS\n- Heimdall version: Latest (from repo)\n- Python version: 3.12\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/24/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-20T04:51:11Z"
+    },
     {
       "id": "5909553255",
       "type": "WatchEvent",
@@ -19124,138 +19406,6 @@
         "url": "https://api.github.com/orgs/lmstudio-ai",
         "avatar_url": "https://avatars.githubusercontent.com/u/133744619?"
       }
-    },
-    {
-      "id": "6923703573",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120983781,
-        "name": "madanlalit/langchain",
-        "url": "https://api.github.com/repos/madanlalit/langchain"
-      },
-      "payload": {
-        "repository_id": 1120983781,
-        "push_id": 29217718209,
-        "ref": "refs/heads/fix/azure-chat-openai-httpx-client-caching",
-        "head": "4879c725c34ec86644651e93aae736af8a0cdd56",
-        "before": "fa4e5dafdf3967ee4901c6dca0457022f68d7fad"
-      },
-      "public": true,
-      "created_at": "2025-12-22T15:45:33Z"
-    },
-    {
-      "id": "6920231648",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120034326,
-        "name": "madanlalit/no-mouse",
-        "url": "https://api.github.com/repos/madanlalit/no-mouse"
-      },
-      "payload": {
-        "repository_id": 1120034326,
-        "push_id": 29214243477,
-        "ref": "refs/heads/main",
-        "head": "05e2608a824e69be0113c5adecf497b93843b312",
-        "before": "850ce2caea38233b5725254a7250d8c49a6b6f32"
-      },
-      "public": true,
-      "created_at": "2025-12-22T13:18:59Z"
-    },
-    {
-      "id": "5443755629",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 552661142,
-        "name": "langchain-ai/langchain",
-        "url": "https://api.github.com/repos/langchain-ai/langchain"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 34448,
-        "pull_request": {
-          "url": "https://api.github.com/repos/langchain-ai/langchain/pulls/34448",
-          "id": 3122392031,
-          "number": 34448,
-          "head": {
-            "ref": "fix/azure-chat-openai-httpx-client-caching",
-            "sha": "a02b2debb488c2de4e301e540e342b2b321f7b6f",
-            "repo": {
-              "id": 1120983781,
-              "url": "https://api.github.com/repos/madanlalit/langchain",
-              "name": "langchain"
-            }
-          },
-          "base": {
-            "ref": "master",
-            "sha": "75b07b3d4edc995f54d4c1cc9b3bdc833335c836",
-            "repo": {
-              "id": 552661142,
-              "url": "https://api.github.com/repos/langchain-ai/langchain",
-              "name": "langchain"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-22T10:10:59Z",
-      "org": {
-        "id": 126733545,
-        "login": "langchain-ai",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/langchain-ai",
-        "avatar_url": "https://avatars.githubusercontent.com/u/126733545?"
-      }
-    },
-    {
-      "id": "6915811049",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120983781,
-        "name": "madanlalit/langchain",
-        "url": "https://api.github.com/repos/madanlalit/langchain"
-      },
-      "payload": {
-        "ref": "fix/azure-chat-openai-httpx-client-caching",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/fix/azure-chat-openai-httpx-client-caching",
-        "master_branch": "master",
-        "description": "🦜🔗 The platform for reliable agents.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2025-12-22T10:02:43Z"
     }
   ]
 }
