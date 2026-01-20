@@ -1,6 +1,61 @@
 {
-  "lastUpdated": 1768898486449,
+  "lastUpdated": 1768941877460,
   "events": [
+    {
+      "id": "5938345776",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 28457823,
+        "name": "freeCodeCamp/freeCodeCamp",
+        "url": "https://api.github.com/repos/freeCodeCamp/freeCodeCamp"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-01-20T18:46:51Z",
+      "org": {
+        "id": 9892522,
+        "login": "freeCodeCamp",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/freeCodeCamp",
+        "avatar_url": "https://avatars.githubusercontent.com/u/9892522?"
+      }
+    },
+    {
+      "id": "7637628870",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1138098401,
+        "name": "madanlalit/python-checklist",
+        "url": "https://api.github.com/repos/madanlalit/python-checklist"
+      },
+      "payload": {
+        "repository_id": 1138098401,
+        "push_id": 29932938902,
+        "ref": "refs/heads/main",
+        "head": "8958f6f0c786e2024ae18c6db8378b932c6954ba",
+        "before": "5b268d64b12fda1b5c792c796fc1ea1ed3efd412"
+      },
+      "public": true,
+      "created_at": "2026-01-20T09:17:29Z"
+    },
     {
       "id": "7636591513",
       "type": "CreateEvent",
@@ -19234,177 +19289,6 @@
         "gravatar_id": "",
         "url": "https://api.github.com/orgs/langchain-ai",
         "avatar_url": "https://avatars.githubusercontent.com/u/126733545?"
-      }
-    },
-    {
-      "id": "6936834858",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120983781,
-        "name": "madanlalit/langchain",
-        "url": "https://api.github.com/repos/madanlalit/langchain"
-      },
-      "payload": {
-        "repository_id": 1120983781,
-        "push_id": 29230865048,
-        "ref": "refs/heads/fix/azure-chat-openai-httpx-client-caching",
-        "head": "a02b2debb488c2de4e301e540e342b2b321f7b6f",
-        "before": "4879c725c34ec86644651e93aae736af8a0cdd56"
-      },
-      "public": true,
-      "created_at": "2025-12-23T04:52:02Z"
-    },
-    {
-      "id": "5454990479",
-      "type": "IssueCommentEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 786925690,
-        "name": "lmstudio-ai/lms",
-        "url": "https://api.github.com/repos/lmstudio-ai/lms"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404",
-          "repository_url": "https://api.github.com/repos/lmstudio-ai/lms",
-          "labels_url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404/labels{/name}",
-          "comments_url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404/comments",
-          "events_url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404/events",
-          "html_url": "https://github.com/lmstudio-ai/lms/issues/404",
-          "id": 3749842006,
-          "node_id": "I_kwDOLueIes7fggxW",
-          "number": 404,
-          "title": "Embedding models not showing up in \"My Models\" until an LLM is downloaded",
-          "user": {
-            "login": "Alessi0X",
-            "id": 58035692,
-            "node_id": "MDQ6VXNlcjU4MDM1Njky",
-            "avatar_url": "https://avatars.githubusercontent.com/u/58035692?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Alessi0X",
-            "html_url": "https://github.com/Alessi0X",
-            "followers_url": "https://api.github.com/users/Alessi0X/followers",
-            "following_url": "https://api.github.com/users/Alessi0X/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Alessi0X/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Alessi0X/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Alessi0X/subscriptions",
-            "organizations_url": "https://api.github.com/users/Alessi0X/orgs",
-            "repos_url": "https://api.github.com/users/Alessi0X/repos",
-            "events_url": "https://api.github.com/users/Alessi0X/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Alessi0X/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 1,
-          "created_at": "2025-12-20T09:22:58Z",
-          "updated_at": "2025-12-22T19:46:09Z",
-          "closed_at": null,
-          "type": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Hi there!\nI would like to point out an apparently inconsistent behaviour on LM Studio (macOS, v. 0.3.36 build 1).\n\nI have downloaded an embedding model (`Qwen/Qwen3-Embedding-4B-GGUF`). Everything's fine, download is fine, the model is currently visible in the `.lmstudio/models` folder but the GUI shows the following:\n\n<img width=\"1312\" height=\"872\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1066c429-5a10-45c3-8d69-927359445778\" />\n\nso there is 1 local model (see the bottom of the GUI) but I don't see it in the list.\n\nHowever, if I download a proper language model (say, `mistral-7b-v0.3`) the GUI shows both:\n\n<img width=\"1312\" height=\"872\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f651596d-5bd1-4dd0-94c0-5cf4854403ba\" />\n\nIs this intended or is it a bug?\n\nBest,\nAlessio",
-          "reactions": {
-            "url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404/reactions",
-            "total_count": 1,
-            "+1": 1,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/lmstudio-ai/lms/issues/comments/3683919281",
-          "html_url": "https://github.com/lmstudio-ai/lms/issues/404#issuecomment-3683919281",
-          "issue_url": "https://api.github.com/repos/lmstudio-ai/lms/issues/404",
-          "id": 3683919281,
-          "node_id": "IC_kwDOLueIes7blCWx",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2025-12-22T19:46:09Z",
-          "updated_at": "2025-12-22T19:46:09Z",
-          "body": "Seems like a valid bug though \nthe filter options dont show up unless you download a large language model\n\n<img width=\"1991\" height=\"1190\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7096159f-0f94-4a1d-8124-d079a65000d8\" />\n\nthis is after downloading an embedding model\n\n<img width=\"1934\" height=\"1178\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e144361d-8efe-447f-b4c0-b5d069acec87\" />\n\nthis is after downloading a large language model",
-          "reactions": {
-            "url": "https://api.github.com/repos/lmstudio-ai/lms/issues/comments/3683919281/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-22T19:46:09Z",
-      "org": {
-        "id": 133744619,
-        "login": "lmstudio-ai",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/lmstudio-ai",
-        "avatar_url": "https://avatars.githubusercontent.com/u/133744619?"
       }
     }
   ]
