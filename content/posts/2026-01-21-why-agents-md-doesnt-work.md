@@ -109,25 +109,20 @@ But agents don't learn; they reset. They are stateless execution engines, not ju
 
 ## The Post-AGENTS.md Era
 
-If `AGENTS.md` is dead, what replaces it? Interactive, verifiable context.
+So, is `AGENTS.md` dead? Not exactly. It just needs a demotion.
 
-- **Don't write:** "Please lint your code."
-  **Do:** meaningful errors from `eslint` that the agent can read and fix.
+Think of `AGENTS.md` as the "Executive Summary" for your agent, not the employee handbook. It should be concise, high-level, and focused on context that is basic and should be infered from the start.
 
-- **Don't write:** "We use Feature-Sliced Design."
-  **Do:** A directory structure that enforces it, and a linter that screams when imports cross boundaries.
+**Cover what matters.** Add sections that help an agent work effectively with your project. Popular choices:
 
-- **Don't write:** "Architecture overview."
-  **Do:** A `map_codebase` tool that returns the exact dependency graph relevant to the *current* task.
-
-The future isn't about teaching agents to read our docs. It's about building systems where "doing the right thing" is the path of least resistance.
+- **Project Overview:** A high-level description of the project's goals and architecture.
+- **Build and Test Commands:** Exact commands to setup, build, and test the project.
+- **Code Style Guidelines:** Brief, high-level patterns not enforceable by linters.
+- **Testing Instructions:** How to run specific tests and where to add new ones.
+- **Security Considerations:** Critical boundaries and data handling rules.
 
 ---
 
-If you've built an `AGENTS.md` and felt frustrated that it doesn't seem to work, you're not alone. It's not your fault. The format is well designed for what it is, a centralized, human readable guide for agent behavior.
+If you've built an `AGENTS.md` and felt frustrated that it doesn't seem to work, you're not alone. The format is well designed for what it is: a centralized, agent-agnostic guide. But for how agents actually work, it's often the wrong abstraction.
 
-The problem is that centralized, human readable guides are the wrong abstraction for how agents actually work.
-
-AGENTS.md will continue to have its place, project overviews, build commands, high level conventions. But the heavy lifting of guiding agent behavior? That belongs in your linters, your tests, your type system, and your CI pipeline.
-
-**Stop documenting for agents. Start building systems that constrain them.**
+Use `AGENTS.md` for the high-level map, but not to enforce a persona for your agents.
