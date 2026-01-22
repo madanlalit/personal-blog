@@ -1,6 +1,28 @@
 {
-  "lastUpdated": 1769071296088,
+  "lastUpdated": 1769114163187,
   "events": [
+    {
+      "id": "5999918800",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1139459824,
+        "name": "junaid-mahmood/nlsh",
+        "url": "https://api.github.com/repos/junaid-mahmood/nlsh"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-01-22T20:21:08Z"
+    },
     {
       "id": "5968630103",
       "type": "WatchEvent",
@@ -212,9 +234,9 @@
             }
           ],
           "milestone": null,
-          "comments": 1,
+          "comments": 2,
           "created_at": "2026-01-21T00:58:06Z",
-          "updated_at": "2026-01-22T00:14:34Z",
+          "updated_at": "2026-01-22T20:05:45Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -232,13 +254,13 @@
           "body": "Hey Pydantic AI community!\n\nAs you may have noticed, we/I haven't been as quick to respond to issues, review PRs, or release new versions since the holidays, compared to the same-day response/review and one-release-a-day cadence we got used to during 2025.\n\n## Prioritization\n\nPart of the story is that inevitably, as the popularity of an open source project grows, so do the number of notifications that land in its maintainers' GitHub inboxes every day, meaning that last year's \"treat every contributor like a colleague and every issue/PR notification like a top priority\" approach was never going to be sustainable forever.\n\nWe were able to mostly maintain that through the first year of Pydantic AI's existence, and I know that our \"extension of your team\"-level responsiveness has been much appreciated and (not unimportantly considering that we are a business) a significant factor in converting Pydantic AI users to [Pydantic Logfire](https://pydantic.dev/logfire) customers.\n\nBut already by the last few months of the year, it was becoming clear that this user-interrupt-driven approach to prioritization was starting to get in the way of working on more significant improvements and new capabilities that will benefit everyone building agents using Pydantic AI (like [Code Mode](https://github.com/pydantic/pydantic-ai/issues/4050) (aka Programmatic Tool Calling), [Progressive Tool Disclosure](https://github.com/pydantic/pydantic-ai/issues/3590) (aka Deferred Tool Loading), [Sub-Agents](https://github.com/pydantic/pydantic-ai/issues/1978), and [Guardrails](https://github.com/pydantic/pydantic-ai/issues/1197)), whereas users' issues and PRs typically focus on improving existing features around the edges: the faster horse as opposed to the car.\n\nThankfully, the community has done an awesome job stepping in to fill the gap with packages like [pydantic-deep](https://github.com/vstorm-co/pydantic-deepagents) and more listed on <https://github.com/vstorm-co/awesome-pydantic-ai> (in line with our preference for providing strong foundations and abstractions like `AbstractToolset` and `AbstractAgent` that people can build on, as opposed to coming with every battery included), but we agree that some of those features should just be in the core framework. (I'm happy to share that we expect to ship Code Mode and Progressive Tool Disclosure in the next week or two!)\n\nThis means that we're going to need to implement an (AI-assisted!) process for prioritizing issues and PRs for response and review, more explicitly taking into account factors like the number of users who would benefit, alignment with our vision for the project in project and AI engineering in general, the amount of effort that was put in by the contributor, and the time it will take us to aid them in getting it to the point where we'd be confident merging it and maintaining it indefinitely.\n\nThe bottom line is that we're dropping the expectation that every single issue/PR will get human attention, quickly or at all, while making it clear what motivated contributors can do to get their favorite items up the queue. \n\nI have some ideas on how we can do this that I will share later this week, and I'd love to hear your suggestions as well.\n\n## Impact of AI-assisted coding on open source contributions\n\n\"More usage means more issues and PRs\" is only half of the story, though, as eloquently pointed out by a user on [an issue](https://github.com/pydantic/pydantic-ai/issues/3885) created during the holidays that took me much longer to get to than I would've liked:\n\n> \"**Is AI actually making y'all slower rather than faster?**\"\n\nAs someone who's [been working full time on open source developer tools](https://douwe.me/) for the past 10 years, the answer has in recent months unfortunately become \"**yes**\".\n\nIt used to be that it took significantly more effort for a contributor to create a PR or address a round of feedback than it took for a maintainer to review a PR, creating some natural back-pressure on the number of PRs that are requesting a new round of review each day. Similarly, the ratio between new issues and PRs would typically favor the former, at least when it came to new features, as it's much easier to share an idea than to go through the effort of building it -- and most people wouldn't anyway until they'd validated that the maintainer would accept a particular solution.\n\nA single maintainer could arrive to 20 new issues and 10 new PRs on Monday morning, review them all over the course of a few hours, and then expect to have code trickle in throughout the week as contributors found time to incorporate the feedback or start on an issue, plus some amount of new items each day, at a similar rate to other issues/PRs being closed/merged. \n\nEspecially large PRs adding significant new functionality and public APIs, that consume the most time and mental energy to review, would typically be spread out over multiple weeks this way, ensuring both contributor and maintainer spent enough time with it in mind to be confident in the design and implications, and allowing maintainers to juggle them along with (much more numerous) smaller PRs (that would get more frequent updates and reviews) and work they want to prioritize themselves.\n\nMaintainers would also be able to assume that any big PR whose code looked good had significant mental effort put into it by another competent engineer who themselves needed the feature and thus had the necessary context to make design decisions about it, allowing the maintainer to offload some of the mental load on the contributor and juggle more PRs and context switches at the same time. \n\nObviously none of that is the case anymore today, meaning that on top of the community of users and contributors growing, the amount of work any given community member can create for the maintainer has been growing quickly as well. (To give you an idea, after the holidays I came back to about 150 new GitHub notifications, more than half of which were PRs in want of review, and most mornings I arrive to 40+ new notifications of which at least 2/3rds are PRs.)\n\nOf course, maintainers can and should also use AI to reduce their review workload by automating (parts of) the code review process and moving various types of project-specific rules and \"things only the maintainer knows\" from review time to development time through things like `AGENTS.md` and specialized sub-agents, and I'm excited to start implementing those for Pydantic AI as well. \n\nBut at the end of the day, the maintainer remains responsible for every line of code, behavior, and public API that makes it into the project (in a sense, a maintainer owes its users that in return for the trust that they have placed in them by choosing the project as part of their stack), and thus their eyes and brain will remain a bottleneck until that expectation changes (which it very well might in coming years, if all open source code converges to \"by AI, for AI\").\n\nSo in addition to changes we need to make around triage and prioritization in general, I think we need to look into ways to _increase_ the barrier for contribution, in order to:\n- ensure that the mental load and sense of responsibility for the changes (especially the behavior and public API) are appropriately shared between the contributor and maintainer,\n\t- meaning, among other things, that the maintainer can never be the first human to critically read a PR line-by-line -- the contributor has to be the \"first line of defense\" between the AI and the maintainer, and understand why every line is there in that particular way,\n- discourage going straight-to-code on big changes in a well-meaning attempt to be helpful, when:\n    - the feature really should've spent some more time in the planning stage (as in: hashing out the details in the issue, likely with help from e.g. Claude Code's plan mode), or when\n    - the user was not well suited to implement it as they did not themselves experience the problem or have a need for the solution -- they just wanted to be helpful and/or boost their GitHub numbers.\n\nI have some ideas on that front as well that I will share later this week -- and I'd love to hear your thoughts too.\n\nPS. If you're interested in reading what other open source maintainers have written on the subject, Claude found me these recent discussions on Hacker News:\n- [\"We need a clearer framework for AI-assisted contributions to open source\"](https://news.ycombinator.com/item?id=45731321)\n- [\"Are open source maintainers going to be the main sufferers from LLM\"](https://news.ycombinator.com/item?id=46637295 )\n- [\"AI and Open Source: A Maintainer's Take\"](https://news.ycombinator.com/item?id=46453713  )\n- [\"AI tooling must be disclosed for contributions\"](https://github.com/ghostty-org/ghostty/pull/8289)",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/reactions",
-            "total_count": 7,
+            "total_count": 9,
             "+1": 0,
             "-1": 0,
             "laugh": 0,
             "hooray": 0,
             "confused": 0,
-            "heart": 7,
+            "heart": 9,
             "rocket": 0,
             "eyes": 0
           },
@@ -18817,212 +18839,6 @@
       },
       "public": true,
       "created_at": "2025-12-24T04:07:23Z"
-    },
-    {
-      "id": "5479468463",
-      "type": "IssueCommentEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 819554665,
-        "name": "exo-explore/exo",
-        "url": "https://api.github.com/repos/exo-explore/exo"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/exo-explore/exo/issues/971",
-          "repository_url": "https://api.github.com/repos/exo-explore/exo",
-          "labels_url": "https://api.github.com/repos/exo-explore/exo/issues/971/labels{/name}",
-          "comments_url": "https://api.github.com/repos/exo-explore/exo/issues/971/comments",
-          "events_url": "https://api.github.com/repos/exo-explore/exo/issues/971/events",
-          "html_url": "https://github.com/exo-explore/exo/issues/971",
-          "id": 3753951633,
-          "node_id": "I_kwDOMNlpac7fwMGR",
-          "number": 971,
-          "title": "[EASY] Add UI option to pass through custom `EXO_LIBP2P_NAMESPACE` from Swift",
-          "user": {
-            "login": "JakeHillion",
-            "id": 5712856,
-            "node_id": "MDQ6VXNlcjU3MTI4NTY=",
-            "avatar_url": "https://avatars.githubusercontent.com/u/5712856?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/JakeHillion",
-            "html_url": "https://github.com/JakeHillion",
-            "followers_url": "https://api.github.com/users/JakeHillion/followers",
-            "following_url": "https://api.github.com/users/JakeHillion/following{/other_user}",
-            "gists_url": "https://api.github.com/users/JakeHillion/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/JakeHillion/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/JakeHillion/subscriptions",
-            "organizations_url": "https://api.github.com/users/JakeHillion/orgs",
-            "repos_url": "https://api.github.com/users/JakeHillion/repos",
-            "events_url": "https://api.github.com/users/JakeHillion/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/JakeHillion/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "id": 7121625393,
-              "node_id": "LA_kwDOMNlpac8AAAABqHthMQ",
-              "url": "https://api.github.com/repos/exo-explore/exo/labels/enhancement",
-              "name": "enhancement",
-              "color": "a2eeef",
-              "default": true,
-              "description": "New feature or request"
-            },
-            {
-              "id": 7121625396,
-              "node_id": "LA_kwDOMNlpac8AAAABqHthNA",
-              "url": "https://api.github.com/repos/exo-explore/exo/labels/good%20first%20issue",
-              "name": "good first issue",
-              "color": "7057ff",
-              "default": true,
-              "description": "Good for newcomers"
-            }
-          ],
-          "state": "closed",
-          "locked": false,
-          "assignee": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "assignees": [
-            {
-              "login": "madanlalit",
-              "id": 116655920,
-              "node_id": "U_kgDOBvQHMA",
-              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/madanlalit",
-              "html_url": "https://github.com/madanlalit",
-              "followers_url": "https://api.github.com/users/madanlalit/followers",
-              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-              "repos_url": "https://api.github.com/users/madanlalit/repos",
-              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 5,
-          "created_at": "2025-12-22T14:14:41Z",
-          "updated_at": "2026-01-05T14:25:01Z",
-          "closed_at": "2026-01-05T14:25:01Z",
-          "type": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "EXO supports multiple p2p namespaces to split up clusters. This is usable when building from source by providing the `EXO_LIBP2P_NAMESPACE` environment variable when running from source, but when using the macOS app this is hardcoded to the application version.\n\nAdd an option in the macOS UI to extend this variable with a custom parameter. This will allow splitting machines that can see each other into multiple clusters.",
-          "reactions": {
-            "url": "https://api.github.com/repos/exo-explore/exo/issues/971/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/exo-explore/exo/issues/971/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3688591551",
-          "html_url": "https://github.com/exo-explore/exo/issues/971#issuecomment-3688591551",
-          "issue_url": "https://api.github.com/repos/exo-explore/exo/issues/971",
-          "id": 3688591551,
-          "node_id": "IC_kwDOMNlpac7b23C_",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2025-12-24T04:03:49Z",
-          "updated_at": "2025-12-24T04:03:49Z",
-          "body": "Sure, I’ll take a look thanks! If I have any questions about the implementation, I’ll ask here.",
-          "reactions": {
-            "url": "https://api.github.com/repos/exo-explore/exo/issues/comments/3688591551/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "public": true,
-      "created_at": "2025-12-24T04:03:49Z",
-      "org": {
-        "id": 162823259,
-        "login": "exo-explore",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/exo-explore",
-        "avatar_url": "https://avatars.githubusercontent.com/u/162823259?"
-      }
     }
   ]
 }
