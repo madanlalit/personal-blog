@@ -1,6 +1,451 @@
 {
-  "lastUpdated": 1769545847097,
+  "lastUpdated": 1769589692682,
   "events": [
+    {
+      "id": "6107165327",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086",
+          "repository_url": "https://api.github.com/repos/pydantic/pydantic-ai",
+          "labels_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/labels{/name}",
+          "comments_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/comments",
+          "events_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/events",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086",
+          "id": 3853337578,
+          "node_id": "PR_kwDOMMa-Ps6_PHbr",
+          "number": 4086,
+          "title": "fix: Identify new messages by `run_id` instead of index",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 7110547176,
+              "node_id": "LA_kwDOMMa-Ps8AAAABp9JW6A",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/bug",
+              "name": "bug",
+              "color": "d73a4a",
+              "default": true,
+              "description": "Report that something isn't working, or PR implementing a fix"
+            },
+            {
+              "id": 8039999985,
+              "node_id": "LA_kwDOMMa-Ps8AAAAB3zip8Q",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/awaiting%20author%20revision",
+              "name": "awaiting author revision",
+              "color": "295DD7",
+              "default": false,
+              "description": ""
+            },
+            {
+              "id": 9959584364,
+              "node_id": "LA_kwDOMMa-Ps8AAAACUaMybA",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/message%20history",
+              "name": "message history",
+              "color": "aaaaaa",
+              "default": false,
+              "description": null
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": {
+            "login": "DouweM",
+            "id": 159434,
+            "node_id": "MDQ6VXNlcjE1OTQzNA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/DouweM",
+            "html_url": "https://github.com/DouweM",
+            "followers_url": "https://api.github.com/users/DouweM/followers",
+            "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
+            "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
+            "organizations_url": "https://api.github.com/users/DouweM/orgs",
+            "repos_url": "https://api.github.com/users/DouweM/repos",
+            "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/DouweM/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "DouweM",
+              "id": 159434,
+              "node_id": "MDQ6VXNlcjE1OTQzNA==",
+              "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/DouweM",
+              "html_url": "https://github.com/DouweM",
+              "followers_url": "https://api.github.com/users/DouweM/followers",
+              "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
+              "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
+              "organizations_url": "https://api.github.com/users/DouweM/orgs",
+              "repos_url": "https://api.github.com/users/DouweM/repos",
+              "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/DouweM/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 3,
+          "created_at": "2026-01-25T14:34:10Z",
+          "updated_at": "2026-01-27T21:12:36Z",
+          "closed_at": null,
+          "type": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
+            "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086",
+            "diff_url": "https://github.com/pydantic/pydantic-ai/pull/4086.diff",
+            "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
+            "merged_at": null
+          },
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3807557475",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086#issuecomment-3807557475",
+          "issue_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086",
+          "id": 3807557475,
+          "node_id": "IC_kwDOMMa-Ps7i8rdj",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-01-27T21:12:18Z",
+          "updated_at": "2026-01-27T21:12:18Z",
+          "body": "@DouweM \r\nI've addressed all the comments and made the necessary changes wherever applicable.\r\nPlease let me know if I've missed any tests or if you have additional ones in mind. \r\nI've also added the test flow as a docstring to make it easier to understand and avoid any confusion about test expectation\r\nI'll get started on the fix once the tests are qualified.",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3807557475/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-27T21:12:18Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "7880120176",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30174962543,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
+        "before": "611dba045c043d1762ee154f2b4501429335cff9"
+      },
+      "public": true,
+      "created_at": "2026-01-27T21:07:26Z"
+    },
+    {
+      "id": "6107014709",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3713454864,
+          "node_id": "PRR_kwDOMMa-Ps7dVtMQ",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "611dba045c043d1762ee154f2b4501429335cff9",
+          "submitted_at": "2026-01-27T21:05:31Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086#pullrequestreview-3713454864",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/4086#pullrequestreview-3713454864"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086"
+            }
+          },
+          "updated_at": "2026-01-27T21:05:31Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
+          "id": 3208410859,
+          "number": 4086,
+          "head": {
+            "ref": "fix/issue-3983-new-message-index",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-27T21:05:34Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6107013839",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2733824454",
+          "pull_request_review_id": 3713454864,
+          "id": 2733824454,
+          "node_id": "PRRC_kwDOMMa-Ps6i8tnG",
+          "diff_hunk": "@@ -879,3 +880,133 @@ def __call__(self, _: RunContext, messages: list[ModelMessage]) -> list[ModelMes\n         ]\n     )\n     assert result.new_messages() == result.all_messages()[-2:]\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning():\n+    def keep_last_2(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return messages[-2:] if len(messages) > 2 else messages\n+\n+    agent = Agent(model=TestModel(custom_output_text='done'), history_processors=[keep_last_2])\n+\n+    @agent.tool\n+    async def my_tool(ctx: RunContext[None]) -> str:\n+        return 'tool executed'\n+\n+    async with agent.iter('start') as run:\n+        async for node in run:\n+            idx = run.ctx.deps.new_message_index\n+            assert idx >= 0, (\n+                f'BUG: new_message_index became negative: {idx}. all_messages count: {len(run.all_messages())}'\n+            )\n+\n+    result = run.result\n+    assert result is not None\n+\n+    new_msgs = result.new_messages()\n+    all_msgs = result.all_messages()\n+\n+    assert len(new_msgs) == len(all_msgs), (\n+        f'Fresh run: new_messages ({len(new_msgs)}) should equal all_messages ({len(all_msgs)}). '\n+        f'This failure indicates the negative index bug is present.'\n+    )\n+\n+\n+async def test_history_processor_reorder_old_new(function_model: FunctionModel, received_messages: list[ModelMessage]):\n+    def swap_last_two(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        if len(messages) >= 2:\n+            return messages[:-2] + [messages[-1], messages[-2]]\n+        return messages\n+\n+    agent = Agent(function_model, history_processors=[swap_last_two])\n+\n+    message_history = [\n+        ModelRequest(parts=[UserPromptPart(content='Old question')]),\n+    ]\n+\n+    result = await agent.run('New question', message_history=message_history)\n+    assert received_messages == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),\n+                    UserPromptPart(content='Old question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+            )\n+        ]\n+    )\n+    new_msgs = result.new_messages()\n+    # Expected behavior: Only messages from THIS run should be in new_messages()\n+    # The 'New question' request and response are from this run\n+    # 'Old question' was reordered by the processor but is from a previous run\n+    assert new_msgs == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),",
+          "path": "tests/test_history_processor.py",
+          "commit_id": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
+          "original_commit_id": "0c7387259a910f9f376e21e3d66ef96eb9448bdb",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "ideally yes the expectation comment was wrong changed it and update the test",
+          "created_at": "2026-01-27T21:05:31Z",
+          "updated_at": "2026-01-27T21:05:31Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086#discussion_r2733824454",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2733824454"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/4086#discussion_r2733824454"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2733824454/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2729160527,
+          "original_position": 75,
+          "position": 221,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
+          "id": 3208410859,
+          "number": 4086,
+          "head": {
+            "ref": "fix/issue-3983-new-message-index",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-27T21:05:31Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
     {
       "id": "6103951586",
       "type": "PullRequestReviewEvent",
@@ -64,7 +509,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -118,7 +563,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6i7Bt_",
           "diff_hunk": "@@ -879,3 +880,133 @@ def __call__(self, _: RunContext, messages: list[ModelMessage]) -> list[ModelMes\n         ]\n     )\n     assert result.new_messages() == result.all_messages()[-2:]\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning():\n+    def keep_last_2(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return messages[-2:] if len(messages) > 2 else messages\n+\n+    agent = Agent(model=TestModel(custom_output_text='done'), history_processors=[keep_last_2])\n+\n+    @agent.tool\n+    async def my_tool(ctx: RunContext[None]) -> str:\n+        return 'tool executed'\n+\n+    async with agent.iter('start') as run:\n+        async for node in run:\n+            idx = run.ctx.deps.new_message_index\n+            assert idx >= 0, (\n+                f'BUG: new_message_index became negative: {idx}. all_messages count: {len(run.all_messages())}'\n+            )\n+\n+    result = run.result\n+    assert result is not None\n+\n+    new_msgs = result.new_messages()\n+    all_msgs = result.all_messages()\n+\n+    assert len(new_msgs) == len(all_msgs), (\n+        f'Fresh run: new_messages ({len(new_msgs)}) should equal all_messages ({len(all_msgs)}). '\n+        f'This failure indicates the negative index bug is present.'\n+    )\n+\n+\n+async def test_history_processor_reorder_old_new(function_model: FunctionModel, received_messages: list[ModelMessage]):\n+    def swap_last_two(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        if len(messages) >= 2:\n+            return messages[:-2] + [messages[-1], messages[-2]]\n+        return messages\n+\n+    agent = Agent(function_model, history_processors=[swap_last_two])\n+\n+    message_history = [\n+        ModelRequest(parts=[UserPromptPart(content='Old question')]),\n+    ]\n+\n+    result = await agent.run('New question', message_history=message_history)\n+    assert received_messages == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),\n+                    UserPromptPart(content='Old question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+            )\n+        ]\n+    )\n+    new_msgs = result.new_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "611dba045c043d1762ee154f2b4501429335cff9",
+          "commit_id": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
           "original_commit_id": "0c7387259a910f9f376e21e3d66ef96eb9448bdb",
           "user": {
             "login": "madanlalit",
@@ -171,7 +616,7 @@
           },
           "in_reply_to_id": 2729156360,
           "original_position": 67,
-          "position": 67,
+          "position": 215,
           "subject_type": "line"
         },
         "pull_request": {
@@ -180,7 +625,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -271,7 +716,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -378,7 +823,7 @@
           },
           "in_reply_to_id": 2729153180,
           "original_position": 35,
-          "position": 35,
+          "position": 1,
           "subject_type": "line"
         },
         "pull_request": {
@@ -387,7 +832,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -478,7 +923,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -585,7 +1030,7 @@
           },
           "in_reply_to_id": 2729150926,
           "original_position": 37,
-          "position": 37,
+          "position": 1,
           "subject_type": "line"
         },
         "pull_request": {
@@ -594,7 +1039,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -904,13 +1349,13 @@
             }
           ],
           "milestone": null,
-          "comments": 2,
+          "comments": 3,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-01-27T18:50:29Z",
+          "updated_at": "2026-01-27T21:12:36Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
-          "draft": true,
+          "draft": false,
           "pull_request": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
             "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086",
@@ -1079,7 +1524,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1195,7 +1640,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1286,7 +1731,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1402,7 +1847,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1685,7 +2130,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "611dba045c043d1762ee154f2b4501429335cff9",
+            "sha": "6f734a97612d5b809c3adae3d8b5df27bd697cfb",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3336,7 +3781,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-21T00:58:06Z",
-          "updated_at": "2026-01-26T12:50:29Z",
+          "updated_at": "2026-01-27T20:46:04Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -3354,13 +3799,13 @@
           "body": "Hey Pydantic AI community!\n\nAs you may have noticed, we/I haven't been as quick to respond to issues, review PRs, or release new versions since the holidays, compared to the same-day response/review and one-release-a-day cadence we got used to during 2025.\n\n## Prioritization\n\nPart of the story is that inevitably, as the popularity of an open source project grows, so do the number of notifications that land in its maintainers' GitHub inboxes every day, meaning that last year's \"treat every contributor like a colleague and every issue/PR notification like a top priority\" approach was never going to be sustainable forever.\n\nWe were able to mostly maintain that through the first year of Pydantic AI's existence, and I know that our \"extension of your team\"-level responsiveness has been much appreciated and (not unimportantly considering that we are a business) a significant factor in converting Pydantic AI users to [Pydantic Logfire](https://pydantic.dev/logfire) customers.\n\nBut already by the last few months of the year, it was becoming clear that this user-interrupt-driven approach to prioritization was starting to get in the way of working on more significant improvements and new capabilities that will benefit everyone building agents using Pydantic AI (like [Code Mode](https://github.com/pydantic/pydantic-ai/issues/4050) (aka Programmatic Tool Calling), [Progressive Tool Disclosure](https://github.com/pydantic/pydantic-ai/issues/3590) (aka Deferred Tool Loading), [Sub-Agents](https://github.com/pydantic/pydantic-ai/issues/1978), and [Guardrails](https://github.com/pydantic/pydantic-ai/issues/1197)), whereas users' issues and PRs typically focus on improving existing features around the edges: the faster horse as opposed to the car.\n\nThankfully, the community has done an awesome job stepping in to fill the gap with packages like [pydantic-deep](https://github.com/vstorm-co/pydantic-deepagents) and more listed on <https://github.com/vstorm-co/awesome-pydantic-ai> (in line with our preference for providing strong foundations and abstractions like `AbstractToolset` and `AbstractAgent` that people can build on, as opposed to coming with every battery included), but we agree that some of those features should just be in the core framework. (I'm happy to share that we expect to ship Code Mode and Progressive Tool Disclosure in the next week or two!)\n\nThis means that we're going to need to implement an (AI-assisted!) process for prioritizing issues and PRs for response and review, more explicitly taking into account factors like the number of users who would benefit, alignment with our vision for the project in project and AI engineering in general, the amount of effort that was put in by the contributor, and the time it will take us to aid them in getting it to the point where we'd be confident merging it and maintaining it indefinitely.\n\nThe bottom line is that we're dropping the expectation that every single issue/PR will get human attention, quickly or at all, while making it clear what motivated contributors can do to get their favorite items up the queue. \n\nI have some ideas on how we can do this that I will share later this week, and I'd love to hear your suggestions as well.\n\n## Impact of AI-assisted coding on open source contributions\n\n\"More usage means more issues and PRs\" is only half of the story, though, as eloquently pointed out by a user on [an issue](https://github.com/pydantic/pydantic-ai/issues/3885) created during the holidays that took me much longer to get to than I would've liked:\n\n> \"**Is AI actually making y'all slower rather than faster?**\"\n\nAs someone who's [been working full time on open source developer tools](https://douwe.me/) for the past 10 years, the answer has in recent months unfortunately become \"**yes**\".\n\nIt used to be that it took significantly more effort for a contributor to create a PR or address a round of feedback than it took for a maintainer to review a PR, creating some natural back-pressure on the number of PRs that are requesting a new round of review each day. Similarly, the ratio between new issues and PRs would typically favor the former, at least when it came to new features, as it's much easier to share an idea than to go through the effort of building it -- and most people wouldn't anyway until they'd validated that the maintainer would accept a particular solution.\n\nA single maintainer could arrive to 20 new issues and 10 new PRs on Monday morning, review them all over the course of a few hours, and then expect to have code trickle in throughout the week as contributors found time to incorporate the feedback or start on an issue, plus some amount of new items each day, at a similar rate to other issues/PRs being closed/merged. \n\nEspecially large PRs adding significant new functionality and public APIs, that consume the most time and mental energy to review, would typically be spread out over multiple weeks this way, ensuring both contributor and maintainer spent enough time with it in mind to be confident in the design and implications, and allowing maintainers to juggle them along with (much more numerous) smaller PRs (that would get more frequent updates and reviews) and work they want to prioritize themselves.\n\nMaintainers would also be able to assume that any big PR whose code looked good had significant mental effort put into it by another competent engineer who themselves needed the feature and thus had the necessary context to make design decisions about it, allowing the maintainer to offload some of the mental load on the contributor and juggle more PRs and context switches at the same time. \n\nObviously none of that is the case anymore today, meaning that on top of the community of users and contributors growing, the amount of work any given community member can create for the maintainer has been growing quickly as well. (To give you an idea, after the holidays I came back to about 150 new GitHub notifications, more than half of which were PRs in want of review, and most mornings I arrive to 40+ new notifications of which at least 2/3rds are PRs.)\n\nOf course, maintainers can and should also use AI to reduce their review workload by automating (parts of) the code review process and moving various types of project-specific rules and \"things only the maintainer knows\" from review time to development time through things like `AGENTS.md` and specialized sub-agents, and I'm excited to start implementing those for Pydantic AI as well. \n\nBut at the end of the day, the maintainer remains responsible for every line of code, behavior, and public API that makes it into the project (in a sense, a maintainer owes its users that in return for the trust that they have placed in them by choosing the project as part of their stack), and thus their eyes and brain will remain a bottleneck until that expectation changes (which it very well might in coming years, if all open source code converges to \"by AI, for AI\").\n\nSo in addition to changes we need to make around triage and prioritization in general, I think we need to look into ways to _increase_ the barrier for contribution, in order to:\n- ensure that the mental load and sense of responsibility for the changes (especially the behavior and public API) are appropriately shared between the contributor and maintainer,\n\t- meaning, among other things, that the maintainer can never be the first human to critically read a PR line-by-line -- the contributor has to be the \"first line of defense\" between the AI and the maintainer, and understand why every line is there in that particular way,\n- discourage going straight-to-code on big changes in a well-meaning attempt to be helpful, when:\n    - the feature really should've spent some more time in the planning stage (as in: hashing out the details in the issue, likely with help from e.g. Claude Code's plan mode), or when\n    - the user was not well suited to implement it as they did not themselves experience the problem or have a need for the solution -- they just wanted to be helpful and/or boost their GitHub numbers.\n\nI have some ideas on that front as well that I will share later this week -- and I'd love to hear your thoughts too.\n\nPS. If you're interested in reading what other open source maintainers have written on the subject, Claude found me these recent discussions on Hacker News:\n- [\"We need a clearer framework for AI-assisted contributions to open source\"](https://news.ycombinator.com/item?id=45731321)\n- [\"Are open source maintainers going to be the main sufferers from LLM\"](https://news.ycombinator.com/item?id=46637295 )\n- [\"AI and Open Source: A Maintainer's Take\"](https://news.ycombinator.com/item?id=46453713  )\n- [\"AI tooling must be disclosed for contributions\"](https://github.com/ghostty-org/ghostty/pull/8289)\n- [\"Agent Psychosis: Are We Going Insane?\"](https://news.ycombinator.com/item?id=46666777)\n- [\"Ghostty: AI Usage Policy\"](https://news.ycombinator.com/item?id=46730504)",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/reactions",
-            "total_count": 11,
+            "total_count": 12,
             "+1": 0,
             "-1": 0,
             "laugh": 0,
             "hooray": 0,
             "confused": 0,
-            "heart": 11,
+            "heart": 12,
             "rocket": 0,
             "eyes": 0
           },
@@ -12953,7 +13398,7 @@
           "milestone": null,
           "comments": 3,
           "created_at": "2026-01-09T20:51:39Z",
-          "updated_at": "2026-01-27T04:02:31Z",
+          "updated_at": "2026-01-27T22:43:24Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -13204,13 +13649,13 @@
           "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
           "created_at": "2026-01-09T18:58:30Z",
           "updated_at": "2026-01-25T09:20:37Z",
-          "pushed_at": "2026-01-27T04:02:30Z",
+          "pushed_at": "2026-01-27T21:07:25Z",
           "git_url": "git://github.com/madanlalit/pydantic-ai.git",
           "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
           "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
           "svn_url": "https://github.com/madanlalit/pydantic-ai",
           "homepage": "https://ai.pydantic.dev",
-          "size": 120913,
+          "size": 121000,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": "Python",
@@ -17711,189 +18156,6 @@
         "url": "https://api.github.com/orgs/antiwork",
         "avatar_url": "https://avatars.githubusercontent.com/u/1178890?"
       }
-    },
-    {
-      "id": "7039507604",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "repository_id": 1124192564,
-        "push_id": 29333865474,
-        "ref": "refs/heads/main",
-        "head": "be760a54bd78164018275421668ae9ffbbc0ebe8",
-        "before": "e5932d4067df05ae3120998db717a2c86dedc597"
-      },
-      "public": true,
-      "created_at": "2025-12-28T16:59:07Z"
-    },
-    {
-      "id": "7039494480",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "repository_id": 1124192564,
-        "push_id": 29333852275,
-        "ref": "refs/heads/main",
-        "head": "e5932d4067df05ae3120998db717a2c86dedc597",
-        "before": "06c44b45b5baa76c5d799770010a5a26c15f8132"
-      },
-      "public": true,
-      "created_at": "2025-12-28T16:58:01Z"
-    },
-    {
-      "id": "7039434667",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "repository_id": 1124192564,
-        "push_id": 29333792176,
-        "ref": "refs/heads/main",
-        "head": "06c44b45b5baa76c5d799770010a5a26c15f8132",
-        "before": "c4ba84c876b7bf7241c4a60e7f86b012285ec64e"
-      },
-      "public": true,
-      "created_at": "2025-12-28T16:53:05Z"
-    },
-    {
-      "id": "7039240830",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "repository_id": 1124192564,
-        "push_id": 29333597276,
-        "ref": "refs/heads/main",
-        "head": "c4ba84c876b7bf7241c4a60e7f86b012285ec64e",
-        "before": "f20a048c2b4aa7751e9d0976b53c4b176e68e0e3"
-      },
-      "public": true,
-      "created_at": "2025-12-28T16:36:34Z"
-    },
-    {
-      "id": "7037903086",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "repository_id": 1124192564,
-        "push_id": 29332251848,
-        "ref": "refs/heads/main",
-        "head": "f20a048c2b4aa7751e9d0976b53c4b176e68e0e3",
-        "before": "af647704a228255307f45b43d395f630f3fec45a"
-      },
-      "public": true,
-      "created_at": "2025-12-28T14:48:54Z"
-    },
-    {
-      "id": "7037728225",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "repository_id": 1124192564,
-        "push_id": 29332076191,
-        "ref": "refs/heads/main",
-        "head": "af647704a228255307f45b43d395f630f3fec45a",
-        "before": "5f40dea6af9d166e9dbf8f67bbfa80e4ee142cc7"
-      },
-      "public": true,
-      "created_at": "2025-12-28T14:34:37Z"
-    },
-    {
-      "id": "7037716227",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1124192564,
-        "name": "madanlalit/madanlalit",
-        "url": "https://api.github.com/repos/madanlalit/madanlalit"
-      },
-      "payload": {
-        "ref": "main",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/main",
-        "master_branch": "main",
-        "description": null,
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2025-12-28T14:33:42Z"
     }
   ]
 }
