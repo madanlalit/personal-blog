@@ -1,6 +1,2341 @@
 {
-  "lastUpdated": 1769676675006,
+  "lastUpdated": 1769719099479,
   "events": [
+    {
+      "id": "6169656944",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "assigned",
+        "number": 26,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "id": 3224548109,
+          "number": 26,
+          "head": {
+            "ref": "feat/add-groq-support",
+            "sha": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "b0e33009a2f516ae36b7815028de3bc6f4bf2b3a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        },
+        "assignee": {
+          "login": "madanlalit",
+          "id": 116655920,
+          "node_id": "U_kgDOBvQHMA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/madanlalit",
+          "html_url": "https://github.com/madanlalit",
+          "followers_url": "https://api.github.com/users/madanlalit/followers",
+          "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+          "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+          "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+          "repos_url": "https://api.github.com/users/madanlalit/repos",
+          "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "assignees": [
+          {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          }
+        ]
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:07:05Z"
+    },
+    {
+      "id": "7953469601",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30248178520,
+        "ref": "refs/heads/feat/custom-cdn-url",
+        "head": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+        "before": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b"
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:10:54Z"
+    },
+    {
+      "id": "6169507377",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3724774998,
+          "node_id": "PRR_kwDOMMa-Ps7eA45W",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "submitted_at": "2026-01-29T20:07:13Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724774998",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724774998"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T20:07:13Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:07:14Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169507089",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743320294",
+          "pull_request_review_id": 3724774998,
+          "id": 2743320294,
+          "node_id": "PRRC_kwDOMMa-Ps6jg77m",
+          "diff_hunk": "@@ -188,6 +188,7 @@ clai web --agent my_module:my_agent -i 'Always respond in Spanish'\n | `--instructions`, `-i` | System instructions. When `--agent` is specified, these are additional to the agent's existing instructions. |\n | `--host` | Host to bind server (default: 127.0.0.1) |\n | `--port` | Port to bind server (default: 7932) |\n+| `--ui-source` | URL or file path for the chat UI HTML. |",
+          "path": "docs/cli.md",
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "original_commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "sorry my bad missed this",
+          "created_at": "2026-01-29T20:07:13Z",
+          "updated_at": "2026-01-29T20:07:14Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743320294",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743320294"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743320294"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743320294/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2743250122,
+          "original_position": 4,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:07:13Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169504032",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3724774306,
+          "node_id": "PRR_kwDOMMa-Ps7eA4ui",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "submitted_at": "2026-01-29T20:07:03Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724774306",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724774306"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T20:07:03Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:07:05Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169503247",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743319605",
+          "pull_request_review_id": 3724774306,
+          "id": 2743319605,
+          "node_id": "PRRC_kwDOMMa-Ps6jg7w1",
+          "diff_hunk": "@@ -101,3 +100,37 @@ The web UI app uses the following routes which should not be overwritten:\n - `/api/health` - Health check (GET)\n \n The app cannot currently be mounted at a subpath (e.g., `/chat`) because the UI expects these routes at the root. You can add additional routes to the app, but avoid conflicts with these reserved paths.\n+\n+## Custom HTML Path\n+\n+By default, the web UI is fetched from a CDN and cached locally. You can provide `html_path` to override this for offline usage or enterprise environments.\n+\n+For offline usage, download the CHAT UI HTML file once while you have internet access:",
+          "path": "docs/web.md",
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "original_commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "will change this ",
+          "created_at": "2026-01-29T20:07:03Z",
+          "updated_at": "2026-01-29T20:07:04Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743319605",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743319605"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743319605"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743319605/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2743254251,
+          "original_position": 17,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:07:03Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169500609",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3724773661,
+          "node_id": "PRR_kwDOMMa-Ps7eA4kd",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "submitted_at": "2026-01-29T20:06:55Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724773661",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724773661"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T20:06:55Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:06:56Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169500283",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743319143",
+          "pull_request_review_id": 3724773661,
+          "id": 2743319143,
+          "node_id": "PRRC_kwDOMMa-Ps6jg7pn",
+          "diff_hunk": "@@ -101,3 +100,37 @@ The web UI app uses the following routes which should not be overwritten:\n - `/api/health` - Health check (GET)\n \n The app cannot currently be mounted at a subpath (e.g., `/chat`) because the UI expects these routes at the root. You can add additional routes to the app, but avoid conflicts with these reserved paths.\n+\n+## Custom HTML Path\n+\n+By default, the web UI is fetched from a CDN and cached locally. You can provide `html_path` to override this for offline usage or enterprise environments.\n+\n+For offline usage, download the CHAT UI HTML file once while you have internet access:\n+\n+```python\n+from pydantic_ai.ui import CHAT_UI_URL_TEMPLATE, CHAT_UI_VERSION\n+\n+chat_ui_url = CHAT_UI_URL_TEMPLATE.format(version=CHAT_UI_VERSION)\n+\n+print(chat_ui_url)  # Use this URL to download the UI HTML file\n+#> https://cdn.jsdelivr.net/npm/@pydantic/ai-chat-ui@1.0.0/dist/index.html\n+",
+          "path": "docs/web.md",
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "original_commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "will remove the line",
+          "created_at": "2026-01-29T20:06:55Z",
+          "updated_at": "2026-01-29T20:06:55Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743319143",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743319143"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743319143"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743319143/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2743255957,
+          "original_position": 26,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:06:55Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169499050",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3724773284,
+          "node_id": "PRR_kwDOMMa-Ps7eA4ek",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "submitted_at": "2026-01-29T20:06:49Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724773284",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3724773284"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T20:06:49Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:06:52Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6169498299",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743318811",
+          "pull_request_review_id": 3724773284,
+          "id": 2743318811,
+          "node_id": "PRRC_kwDOMMa-Ps6jg7kb",
+          "diff_hunk": "@@ -101,3 +100,37 @@ The web UI app uses the following routes which should not be overwritten:\n - `/api/health` - Health check (GET)\n \n The app cannot currently be mounted at a subpath (e.g., `/chat`) because the UI expects these routes at the root. You can add additional routes to the app, but avoid conflicts with these reserved paths.\n+\n+## Custom HTML Path\n+\n+By default, the web UI is fetched from a CDN and cached locally. You can provide `html_path` to override this for offline usage or enterprise environments.\n+\n+For offline usage, download the CHAT UI HTML file once while you have internet access:\n+\n+```python\n+from pydantic_ai.ui import CHAT_UI_URL_TEMPLATE, CHAT_UI_VERSION\n+\n+chat_ui_url = CHAT_UI_URL_TEMPLATE.format(version=CHAT_UI_VERSION)\n+\n+print(chat_ui_url)  # Use this URL to download the UI HTML file\n+#> https://cdn.jsdelivr.net/npm/@pydantic/ai-chat-ui@1.0.0/dist/index.html\n+\n+```\n+\n+```bash\n+curl -o ~/pydantic-ai-ui.html <chat_ui_url>\n+```",
+          "path": "docs/web.md",
+          "commit_id": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+          "original_commit_id": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "sure will add a text",
+          "created_at": "2026-01-29T20:06:49Z",
+          "updated_at": "2026-01-29T20:06:49Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743318811",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743318811"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2743318811"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2743318811/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2743257624,
+          "original_position": 31,
+          "position": 32,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T20:06:49Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6166933784",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "review": {
+          "id": 3724322585,
+          "node_id": "PRR_kwDOQuIaMM7d_KcZ",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "46acc5afbea724d1e7f2cd200c18732995053e51",
+          "submitted_at": "2026-01-29T18:19:10Z",
+          "state": "commented",
+          "html_url": "https://github.com/madanlalit/heimdall/pull/26#pullrequestreview-3724322585",
+          "pull_request_url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "_links": {
+            "html": {
+              "href": "https://github.com/madanlalit/heimdall/pull/26#pullrequestreview-3724322585"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/madanlalit/heimdall/pulls/26"
+            }
+          },
+          "updated_at": "2026-01-29T18:19:10Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "id": 3224548109,
+          "number": 26,
+          "head": {
+            "ref": "feat/add-groq-support",
+            "sha": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "b0e33009a2f516ae36b7815028de3bc6f4bf2b3a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:19:12Z"
+    },
+    {
+      "id": "6166933322",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/comments/2742937439",
+          "pull_request_review_id": 3724322585,
+          "id": 2742937439,
+          "node_id": "PRRC_kwDOQuIaMM6jfedf",
+          "diff_hunk": "@@ -0,0 +1,83 @@\n+\"\"\"\n+Groq LLM Client - Groq API integration for Heimdall.\n+\n+Groq provides high-speed inference using their LPU hardware.\n+Uses OpenAI-compatible API.\n+\"\"\"\n+\n+import logging\n+from typing import Any\n+\n+from heimdall.agent.llm.base import BaseLLM\n+\n+logger = logging.getLogger(__name__)\n+\n+\n+class GroqLLM(BaseLLM):\n+    \"\"\"Groq API client for chat completions with tool calling.\"\"\"\n+\n+    def __init__(\n+        self,\n+        api_key: str | None = None,\n+        model: str = \"llama-3.3-70b-versatile\",\n+        temperature: float = 0.0,\n+        max_tokens: int = 4096,\n+    ):\n+        import os\n+\n+        from groq import AsyncGroq\n+\n+        self._client = AsyncGroq(\n+            api_key=api_key or os.getenv(\"GROQ_API_KEY\"),\n+        )\n+        self._model = model\n+        self._temperature = temperature\n+        self._max_tokens = max_tokens\n+\n+    async def chat_completion(\n+        self,\n+        messages: list[dict],\n+        tools: list[dict] | None = None,\n+        tool_choice: str = \"auto\",\n+        **kwargs,\n+    ) -> dict:\n+        \"\"\"Generate chat completion with optional tool calling.\"\"\"\n+        params: dict[str, Any] = {\n+            \"model\": self._model,\n+            \"messages\": messages,\n+            \"temperature\": self._temperature,\n+            \"max_tokens\": self._max_tokens,\n+        }\n+\n+        if tools:\n+            params[\"tools\"] = tools\n+            params[\"tool_choice\"] = tool_choice\n+\n+        params.update(kwargs)\n+\n+        response = await self._client.chat.completions.create(**params)\n+\n+        message = response.choices[0].message",
+          "path": "src/heimdall/agent/llm/groq.py",
+          "commit_id": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+          "original_commit_id": "46acc5afbea724d1e7f2cd200c18732995053e51",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "@paragon-run",
+          "created_at": "2026-01-29T18:19:10Z",
+          "updated_at": "2026-01-29T18:19:11Z",
+          "html_url": "https://github.com/madanlalit/heimdall/pull/26#discussion_r2742937439",
+          "pull_request_url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/madanlalit/heimdall/pulls/comments/2742937439"
+            },
+            "html": {
+              "href": "https://github.com/madanlalit/heimdall/pull/26#discussion_r2742937439"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/madanlalit/heimdall/pulls/26"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/comments/2742937439/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2742902242,
+          "original_position": 60,
+          "position": 60,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "id": 3224548109,
+          "number": 26,
+          "head": {
+            "ref": "feat/add-groq-support",
+            "sha": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "b0e33009a2f516ae36b7815028de3bc6f4bf2b3a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:19:10Z"
+    },
+    {
+      "id": "6166932754",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "review": {
+          "id": 3724322382,
+          "node_id": "PRR_kwDOQuIaMM7d_KZO",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "46acc5afbea724d1e7f2cd200c18732995053e51",
+          "submitted_at": "2026-01-29T18:19:07Z",
+          "state": "commented",
+          "html_url": "https://github.com/madanlalit/heimdall/pull/26#pullrequestreview-3724322382",
+          "pull_request_url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "_links": {
+            "html": {
+              "href": "https://github.com/madanlalit/heimdall/pull/26#pullrequestreview-3724322382"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/madanlalit/heimdall/pulls/26"
+            }
+          },
+          "updated_at": "2026-01-29T18:19:07Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "id": 3224548109,
+          "number": 26,
+          "head": {
+            "ref": "feat/add-groq-support",
+            "sha": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "b0e33009a2f516ae36b7815028de3bc6f4bf2b3a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:19:09Z"
+    },
+    {
+      "id": "6166932190",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/comments/2742937229",
+          "pull_request_review_id": 3724322382,
+          "id": 2742937229,
+          "node_id": "PRRC_kwDOQuIaMM6jfeaN",
+          "diff_hunk": "@@ -0,0 +1,83 @@\n+\"\"\"\n+Groq LLM Client - Groq API integration for Heimdall.\n+\n+Groq provides high-speed inference using their LPU hardware.\n+Uses OpenAI-compatible API.\n+\"\"\"\n+\n+import logging\n+from typing import Any\n+\n+from heimdall.agent.llm.base import BaseLLM\n+\n+logger = logging.getLogger(__name__)\n+\n+\n+class GroqLLM(BaseLLM):\n+    \"\"\"Groq API client for chat completions with tool calling.\"\"\"\n+\n+    def __init__(\n+        self,\n+        api_key: str | None = None,\n+        model: str = \"llama-3.3-70b-versatile\",\n+        temperature: float = 0.0,\n+        max_tokens: int = 4096,\n+    ):\n+        import os\n+\n+        from groq import AsyncGroq\n+\n+        self._client = AsyncGroq(\n+            api_key=api_key or os.getenv(\"GROQ_API_KEY\"),\n+        )\n+        self._model = model\n+        self._temperature = temperature\n+        self._max_tokens = max_tokens\n+\n+    async def chat_completion(\n+        self,\n+        messages: list[dict],\n+        tools: list[dict] | None = None,\n+        tool_choice: str = \"auto\",\n+        **kwargs,\n+    ) -> dict:\n+        \"\"\"Generate chat completion with optional tool calling.\"\"\"\n+        params: dict[str, Any] = {\n+            \"model\": self._model,\n+            \"messages\": messages,\n+            \"temperature\": self._temperature,\n+            \"max_tokens\": self._max_tokens,\n+        }\n+\n+        if tools:\n+            params[\"tools\"] = tools\n+            params[\"tool_choice\"] = tool_choice\n+\n+        params.update(kwargs)\n+\n+        response = await self._client.chat.completions.create(**params)\n+\n+        message = response.choices[0].message\n+\n+        result: dict[str, Any] = {\n+            \"content\": message.content or \"\",\n+        }\n+\n+        if message.tool_calls:\n+            result[\"tool_calls\"] = [\n+                {\n+                    \"id\": tc.id,\n+                    \"type\": tc.type,\n+                    \"function\": {\n+                        \"name\": tc.function.name,\n+                        \"arguments\": tc.function.arguments,",
+          "path": "src/heimdall/agent/llm/groq.py",
+          "commit_id": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+          "original_commit_id": "46acc5afbea724d1e7f2cd200c18732995053e51",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "@paragon-run",
+          "created_at": "2026-01-29T18:19:07Z",
+          "updated_at": "2026-01-29T18:19:08Z",
+          "html_url": "https://github.com/madanlalit/heimdall/pull/26#discussion_r2742937229",
+          "pull_request_url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/madanlalit/heimdall/pulls/comments/2742937229"
+            },
+            "html": {
+              "href": "https://github.com/madanlalit/heimdall/pull/26#discussion_r2742937229"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/madanlalit/heimdall/pulls/26"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/comments/2742937229/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2742902246,
+          "original_position": 73,
+          "position": 73,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "id": 3224548109,
+          "number": 26,
+          "head": {
+            "ref": "feat/add-groq-support",
+            "sha": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "b0e33009a2f516ae36b7815028de3bc6f4bf2b3a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:19:07Z"
+    },
+    {
+      "id": "7950478871",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "repository_id": 1122114096,
+        "push_id": 30245190369,
+        "ref": "refs/heads/feat/add-groq-support",
+        "head": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+        "before": "f9976cb00db66fb85d65fad303f228b1cba82b2d"
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:18:07Z"
+    },
+    {
+      "id": "7950395640",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "repository_id": 1122114096,
+        "push_id": 30245107496,
+        "ref": "refs/heads/feat/add-groq-support",
+        "head": "f9976cb00db66fb85d65fad303f228b1cba82b2d",
+        "before": "46acc5afbea724d1e7f2cd200c18732995053e51"
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:15:00Z"
+    },
+    {
+      "id": "6166644825",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 26,
+        "pull_request": {
+          "url": "https://api.github.com/repos/madanlalit/heimdall/pulls/26",
+          "id": 3224548109,
+          "number": 26,
+          "head": {
+            "ref": "feat/add-groq-support",
+            "sha": "88b41f9aff22be56a52ad042a65d3d8950c95407",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "b0e33009a2f516ae36b7815028de3bc6f4bf2b3a",
+            "repo": {
+              "id": 1122114096,
+              "url": "https://api.github.com/repos/madanlalit/heimdall",
+              "name": "heimdall"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:07:05Z"
+    },
+    {
+      "id": "7950170013",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1122114096,
+        "name": "madanlalit/heimdall",
+        "url": "https://api.github.com/repos/madanlalit/heimdall"
+      },
+      "payload": {
+        "ref": "feat/add-groq-support",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feat/add-groq-support",
+        "master_branch": "main",
+        "description": "The all-seeing agent for web automation.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:06:37Z"
+    },
+    {
+      "id": "7950036429",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30244748426,
+        "ref": "refs/heads/feat/custom-cdn-url",
+        "head": "ef6e405434a5bf38b481574dd94ee6a2fc075f6b",
+        "before": "1a7b1354b4236029c2bf2380174836b09407f6a1"
+      },
+      "public": true,
+      "created_at": "2026-01-29T18:01:52Z"
+    },
+    {
+      "id": "7949605497",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30244318546,
+        "ref": "refs/heads/feat/custom-cdn-url",
+        "head": "1a7b1354b4236029c2bf2380174836b09407f6a1",
+        "before": "8ac84ac781fe19db71ac18612e3afea6db843e0a"
+      },
+      "public": true,
+      "created_at": "2026-01-29T17:47:23Z"
+    },
+    {
+      "id": "6164555023",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3723876102,
+          "node_id": "PRR_kwDOMMa-Ps7d9dcG",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "submitted_at": "2026-01-29T16:45:57Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723876102",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723876102"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T16:45:57Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T16:46:00Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6164554049",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742576278",
+          "pull_request_review_id": 3723876102,
+          "id": 2742576278,
+          "node_id": "PRRC_kwDOMMa-Ps6jeGSW",
+          "diff_hunk": "@@ -110,16 +146,18 @@ def create_web_app(\n \n     async def index(request: Request) -> Response:\n         \"\"\"Serve the chat UI from filesystem cache or CDN.\"\"\"\n-        version = request.query_params.get('version')\n-        ui_version = version or DEFAULT_UI_VERSION\n-\n         try:\n-            content = await _get_ui_html(ui_version)\n+            content = await _get_ui_html(ui_source)\n         except httpx.HTTPStatusError as e:\n             return HTMLResponse(\n-                content=f'Failed to fetch UI version \"{ui_version}\": {e.response.status_code}',\n+                content=f'Failed to fetch UI: {e.response.status_code}',\n                 status_code=502,\n             )\n+        except FileNotFoundError as e:\n+            return HTMLResponse(\n+                content=str(e),\n+                status_code=404,\n+            )",
+          "path": "pydantic_ai_slim/pydantic_ai/ui/_web/app.py",
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "original_commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "will let the error propagate",
+          "created_at": "2026-01-29T16:45:57Z",
+          "updated_at": "2026-01-29T16:46:12Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742576278",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742576278"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742576278"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742576278/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2742149928,
+          "original_position": 129,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T16:45:57Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6164547214",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3723874362,
+          "node_id": "PRR_kwDOMMa-Ps7d9dA6",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "submitted_at": "2026-01-29T16:45:40Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723874362",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723874362"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T16:45:40Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T16:45:43Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6164546365",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742575061",
+          "pull_request_review_id": 3723874362,
+          "id": 2742575061,
+          "node_id": "PRRC_kwDOMMa-Ps6jeF_V",
+          "diff_hunk": "@@ -1618,12 +1619,13 @@ def to_web(\n         deps: AgentDepsT = None,\n         model_settings: ModelSettings | None = None,\n         instructions: str | None = None,\n+        ui_source: str | Path | None = None,",
+          "path": "pydantic_ai_slim/pydantic_ai/agent/__init__.py",
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "original_commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "sure will change it",
+          "created_at": "2026-01-29T16:45:40Z",
+          "updated_at": "2026-01-29T16:45:40Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742575061",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742575061"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742575061"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742575061/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2742175551,
+          "original_position": 12,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T16:45:40Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6164540530",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3723873058,
+          "node_id": "PRR_kwDOMMa-Ps7d9csi",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "submitted_at": "2026-01-29T16:45:27Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723873058",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723873058"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T16:45:27Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T16:45:29Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6164539870",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742574232",
+          "pull_request_review_id": 3723873058,
+          "id": 2742574232,
+          "node_id": "PRRC_kwDOMMa-Ps6jeFyY",
+          "diff_hunk": "@@ -110,16 +146,18 @@ def create_web_app(\n \n     async def index(request: Request) -> Response:\n         \"\"\"Serve the chat UI from filesystem cache or CDN.\"\"\"\n-        version = request.query_params.get('version')\n-        ui_version = version or DEFAULT_UI_VERSION\n-\n         try:\n-            content = await _get_ui_html(ui_version)\n+            content = await _get_ui_html(ui_source)",
+          "path": "pydantic_ai_slim/pydantic_ai/ui/_web/app.py",
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "original_commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "will cache the url in filesystem",
+          "created_at": "2026-01-29T16:45:27Z",
+          "updated_at": "2026-01-29T16:45:27Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742574232",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742574232"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742574232"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742574232/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2742154274,
+          "original_position": 118,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T16:45:27Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6163035647",
+      "type": "PullRequestReviewEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "review": {
+          "id": 3723587717,
+          "node_id": "PRR_kwDOMMa-Ps7d8XCF",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": null,
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "submitted_at": "2026-01-29T15:55:46Z",
+          "state": "commented",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723587717",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#pullrequestreview-3723587717"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "updated_at": "2026-01-29T15:55:46Z"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        },
+        "action": "created"
+      },
+      "public": true,
+      "created_at": "2026-01-29T15:55:47Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "6163035219",
+      "type": "PullRequestReviewCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742353039",
+          "pull_request_review_id": 3723587717,
+          "id": 2742353039,
+          "node_id": "PRRC_kwDOMMa-Ps6jdPyP",
+          "diff_hunk": "@@ -101,3 +101,27 @@ The web UI app uses the following routes which should not be overwritten:\n - `/api/health` - Health check (GET)\n \n The app cannot currently be mounted at a subpath (e.g., `/chat`) because the UI expects these routes at the root. You can add additional routes to the app, but avoid conflicts with these reserved paths.\n+\n+## Custom UI Source\n+\n+By default, the web UI is fetched from a CDN and cached locally. You can provide a `ui_source` to override this for offline usage or enterprise environments.\n+\n+For offline usage, download the UI HTML file once while you have internet access:\n+\n+```bash\n+curl -o ~/pydantic-ai-ui.html https://cdn.jsdelivr.net/npm/@pydantic/ai-chat-ui@1.0.0/dist/index.html",
+          "path": "docs/web.md",
+          "commit_id": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+          "original_commit_id": "5462cd5529069b1c5644f4b3abeda825167ce4b8",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "got it \nthe only issue with that is we would need to make expose 2 public constants \nand the naming is not that end user friendly. Otherwise its fine ",
+          "created_at": "2026-01-29T15:55:46Z",
+          "updated_at": "2026-01-29T15:55:46Z",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742353039",
+          "pull_request_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742353039"
+            },
+            "html": {
+              "href": "https://github.com/pydantic/pydantic-ai/pull/3974#discussion_r2742353039"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974"
+            }
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/comments/2742353039/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "in_reply_to_id": 2734106372,
+          "original_position": 12,
+          "position": 1,
+          "subject_type": "line"
+        },
+        "pull_request": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/3974",
+          "id": 3160864140,
+          "number": 3974,
+          "head": {
+            "ref": "feat/custom-cdn-url",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
+            "repo": {
+              "id": 1131286423,
+              "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
+            "repo": {
+              "id": 818331198,
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+              "name": "pydantic-ai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-01-29T15:55:46Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
     {
       "id": "6140239548",
       "type": "WatchEvent",
@@ -160,7 +2495,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -169,7 +2504,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -276,7 +2611,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -285,7 +2620,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -367,7 +2702,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -376,7 +2711,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -474,7 +2809,7 @@
           },
           "in_reply_to_id": 2734106372,
           "original_position": 12,
-          "position": 12,
+          "position": 1,
           "subject_type": "line"
         },
         "pull_request": {
@@ -483,7 +2818,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -492,7 +2827,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -574,7 +2909,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -583,7 +2918,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -690,7 +3025,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -699,7 +3034,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -781,7 +3116,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -790,7 +3125,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -888,7 +3223,7 @@
           },
           "in_reply_to_id": 2734106372,
           "original_position": 12,
-          "position": 12,
+          "position": 1,
           "subject_type": "line"
         },
         "pull_request": {
@@ -897,7 +3232,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -906,7 +3241,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6085,7 +8420,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6094,7 +8429,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6201,7 +8536,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6210,7 +8545,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6292,7 +8627,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6301,7 +8636,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6399,7 +8734,7 @@
           },
           "in_reply_to_id": 2699959250,
           "original_position": 40,
-          "position": 26,
+          "position": 1,
           "subject_type": "line"
         },
         "pull_request": {
@@ -6408,7 +8743,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6417,7 +8752,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6499,7 +8834,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6508,7 +8843,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6615,7 +8950,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6624,7 +8959,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6706,7 +9041,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6715,7 +9050,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6822,7 +9157,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6831,7 +9166,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6913,7 +9248,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6922,7 +9257,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7029,7 +9364,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7038,7 +9373,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7120,7 +9455,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7129,7 +9464,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7236,7 +9571,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7245,7 +9580,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7327,7 +9662,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7336,7 +9671,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7443,7 +9778,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7452,7 +9787,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7534,7 +9869,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7543,7 +9878,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7650,7 +9985,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7659,7 +9994,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7793,7 +10128,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7802,7 +10137,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7900,7 +10235,7 @@
           },
           "in_reply_to_id": 2699959250,
           "original_position": 40,
-          "position": 26,
+          "position": 1,
           "subject_type": "line"
         },
         "pull_request": {
@@ -7909,7 +10244,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7918,7 +10253,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -8000,7 +10335,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8009,7 +10344,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -8116,7 +10451,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8125,7 +10460,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -8207,7 +10542,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8216,7 +10551,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -8323,7 +10658,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8332,7 +10667,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -8414,7 +10749,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8423,7 +10758,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -8530,7 +10865,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8539,7 +10874,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -9452,7 +11787,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9461,7 +11796,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -9568,7 +11903,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9577,7 +11912,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -9659,7 +11994,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9668,7 +12003,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -9775,7 +12110,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9784,7 +12119,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -9866,7 +12201,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9875,7 +12210,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -9982,7 +12317,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9991,7 +12326,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10151,7 +12486,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10160,7 +12495,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10267,7 +12602,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10276,7 +12611,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10358,7 +12693,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10367,7 +12702,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10474,7 +12809,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10483,7 +12818,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10565,7 +12900,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10574,7 +12909,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10681,7 +13016,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10690,7 +13025,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10772,7 +13107,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10781,7 +13116,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10888,7 +13223,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10897,7 +13232,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -10979,7 +13314,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -10988,7 +13323,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11095,7 +13430,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11104,7 +13439,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11186,7 +13521,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11195,7 +13530,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11302,7 +13637,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11311,7 +13646,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11443,7 +13778,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11452,7 +13787,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11534,7 +13869,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11543,7 +13878,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11650,7 +13985,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11659,7 +13994,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -11741,7 +14076,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -11750,7 +14085,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -14222,7 +16557,7 @@
           "id": 3798319157,
           "node_id": "PR_kwDOMMa-Ps68ZvWM",
           "number": 3974,
-          "title": "feat(ui): Add `ui_source` parameter to customize Chat UI source",
+          "title": "feat(ui): Add `html_path` parameter to customize Chat UI source",
           "user": {
             "login": "madanlalit",
             "id": 116655920,
@@ -14322,7 +16657,7 @@
           "milestone": null,
           "comments": 3,
           "created_at": "2026-01-09T20:51:39Z",
-          "updated_at": "2026-01-28T15:31:19Z",
+          "updated_at": "2026-01-29T20:10:55Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -14431,7 +16766,7 @@
           "number": 3974,
           "head": {
             "ref": "feat/custom-cdn-url",
-            "sha": "8ac84ac781fe19db71ac18612e3afea6db843e0a",
+            "sha": "8b1c74d845031fc1f45fe486d16596933fd46b2b",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -14440,7 +16775,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "6132179cca92985f7f5262b8f9e5965f6ee3b2a0",
+            "sha": "3cd52974fd2b4c0a5938d017712e92842144676e",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -14573,13 +16908,13 @@
           "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
           "created_at": "2026-01-09T18:58:30Z",
           "updated_at": "2026-01-25T09:20:37Z",
-          "pushed_at": "2026-01-28T15:31:17Z",
+          "pushed_at": "2026-01-29T20:10:54Z",
           "git_url": "git://github.com/madanlalit/pydantic-ai.git",
           "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
           "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
           "svn_url": "https://github.com/madanlalit/pydantic-ai",
           "homepage": "https://ai.pydantic.dev",
-          "size": 121004,
+          "size": 121011,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": "Python",
@@ -17936,782 +20271,6 @@
       },
       "public": true,
       "created_at": "2026-01-03T08:51:53Z"
-    },
-    {
-      "id": "5585946448",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/10",
-          "repository_url": "https://api.github.com/repos/madanlalit/personal-blog",
-          "labels_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/10/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/10/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/10/events",
-          "html_url": "https://github.com/madanlalit/personal-blog/issues/10",
-          "id": 3777866104,
-          "node_id": "I_kwDOQn7ljs7hLal4",
-          "number": 10,
-          "title": "Add CI/CD Pipeline with GitHub Actions",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "open",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-01-03T08:51:15Z",
-          "updated_at": "2026-01-03T08:51:15Z",
-          "closed_at": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "## Description\nCurrently, there are no GitHub Actions workflows defined. This means no automated linting on PRs, no build verification before deployment, and no automated dependency updates.\n\n## Recommended Workflows\n\n### 1. CI Workflow\n- Trigger on PRs and pushes to main\n- Run npm run lint\n- Run npm run build to verify builds\n- Check TypeScript compilation\n\n### 2. Dependency Updates\n- Use Dependabot or Renovate\n- Automatically create PRs for dependency updates\n\n## Benefits\n- Catch issues before they reach production\n- Automated code quality checks\n- Easier dependency management\n\n## Priority\nHigh - Quick win for better code quality",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/10/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/10/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-01-03T08:51:16Z"
-    },
-    {
-      "id": "5585904662",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "action": "assigned",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9",
-          "repository_url": "https://api.github.com/repos/madanlalit/personal-blog",
-          "labels_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/events",
-          "html_url": "https://github.com/madanlalit/personal-blog/issues/9",
-          "id": 3777858462,
-          "node_id": "I_kwDOQn7ljs7hLYue",
-          "number": 9,
-          "title": "Migrate from SPA to SSG architecture",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "assignees": [
-            {
-              "login": "madanlalit",
-              "id": 116655920,
-              "node_id": "U_kgDOBvQHMA",
-              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/madanlalit",
-              "html_url": "https://github.com/madanlalit",
-              "followers_url": "https://api.github.com/users/madanlalit/followers",
-              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-              "repos_url": "https://api.github.com/users/madanlalit/repos",
-              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 1,
-          "created_at": "2026-01-03T08:39:41Z",
-          "updated_at": "2026-01-09T17:02:52Z",
-          "closed_at": "2026-01-09T17:02:52Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "## Overview\nCurrently, the blog is built as a Single Page Application (SPA), which has limitations for SEO and social media sharing. Meta tags and structured data are not correctly rendered in the static HTML, requiring migration to Static Site Generation (SSG).\n\n## Goals\n- Migrate the application from SPA to SSG architecture\n- Ensure all blog posts are pre-rendered as static HTML files\n- Properly render meta tags (Open Graph, Twitter Cards) in static HTML\n- Improve SEO and social media sharing capabilities\n- Maintain fast page load times and user experience\n\n## Potential Approaches\n1. **Full migration to vite-plugin-ssr or vite-react-ssg**: Complete framework-level SSG support\n2. **Custom build script**: Generate static HTML files for each route during build time\n3. **Hybrid approach**: Use SSG for blog posts and keep SPA for interactive sections\n\n## Benefits\n- Better SEO with pre-rendered content\n- Proper meta tags for social media sharing\n- Faster initial page load\n- Improved Core Web Vitals scores\n\n## Considerations\n- Impact on existing routing and navigation\n- Build process changes\n- Deployment workflow updates\n- Client-side interactivity preservation",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        },
-        "assignee": {
-          "login": "madanlalit",
-          "id": 116655920,
-          "node_id": "U_kgDOBvQHMA",
-          "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/madanlalit",
-          "html_url": "https://github.com/madanlalit",
-          "followers_url": "https://api.github.com/users/madanlalit/followers",
-          "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-          "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-          "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-          "repos_url": "https://api.github.com/users/madanlalit/repos",
-          "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "assignees": [
-          {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          }
-        ]
-      },
-      "public": true,
-      "created_at": "2026-01-03T08:39:56Z"
-    },
-    {
-      "id": "5585903776",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9",
-          "repository_url": "https://api.github.com/repos/madanlalit/personal-blog",
-          "labels_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/events",
-          "html_url": "https://github.com/madanlalit/personal-blog/issues/9",
-          "id": 3777858462,
-          "node_id": "I_kwDOQn7ljs7hLYue",
-          "number": 9,
-          "title": "Migrate from SPA to SSG architecture",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "assignees": [
-            {
-              "login": "madanlalit",
-              "id": 116655920,
-              "node_id": "U_kgDOBvQHMA",
-              "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/madanlalit",
-              "html_url": "https://github.com/madanlalit",
-              "followers_url": "https://api.github.com/users/madanlalit/followers",
-              "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-              "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-              "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-              "repos_url": "https://api.github.com/users/madanlalit/repos",
-              "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 1,
-          "created_at": "2026-01-03T08:39:41Z",
-          "updated_at": "2026-01-09T17:02:52Z",
-          "closed_at": "2026-01-09T17:02:52Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "## Overview\nCurrently, the blog is built as a Single Page Application (SPA), which has limitations for SEO and social media sharing. Meta tags and structured data are not correctly rendered in the static HTML, requiring migration to Static Site Generation (SSG).\n\n## Goals\n- Migrate the application from SPA to SSG architecture\n- Ensure all blog posts are pre-rendered as static HTML files\n- Properly render meta tags (Open Graph, Twitter Cards) in static HTML\n- Improve SEO and social media sharing capabilities\n- Maintain fast page load times and user experience\n\n## Potential Approaches\n1. **Full migration to vite-plugin-ssr or vite-react-ssg**: Complete framework-level SSG support\n2. **Custom build script**: Generate static HTML files for each route during build time\n3. **Hybrid approach**: Use SSG for blog posts and keep SPA for interactive sections\n\n## Benefits\n- Better SEO with pre-rendered content\n- Proper meta tags for social media sharing\n- Faster initial page load\n- Improved Core Web Vitals scores\n\n## Considerations\n- Impact on existing routing and navigation\n- Build process changes\n- Deployment workflow updates\n- Client-side interactivity preservation",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/personal-blog/issues/9/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2026-01-03T08:39:42Z"
-    },
-    {
-      "id": "5585569857",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 985839104,
-        "name": "browseros-ai/BrowserOS",
-        "url": "https://api.github.com/repos/browseros-ai/BrowserOS"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-01-03T07:16:02Z",
-      "org": {
-        "id": 218857586,
-        "login": "browseros-ai",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/browseros-ai",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218857586?"
-      }
-    },
-    {
-      "id": "7152834867",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29447639438,
-        "ref": "refs/heads/main",
-        "head": "a356ab0ac44317a8e8e954acf82d29c965f6c862",
-        "before": "9bd45b0d1fd2f2bcccc1e764e38bab18524ed9aa"
-      },
-      "public": true,
-      "created_at": "2026-01-03T06:11:35Z"
-    },
-    {
-      "id": "5577626090",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 163591278,
-        "name": "GitHubDaily/GitHubDaily",
-        "url": "https://api.github.com/repos/GitHubDaily/GitHubDaily"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-01-02T13:38:10Z",
-      "org": {
-        "id": 46262515,
-        "login": "GitHubDaily",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/GitHubDaily",
-        "avatar_url": "https://avatars.githubusercontent.com/u/46262515?"
-      }
-    },
-    {
-      "id": "7136153944",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29430938891,
-        "ref": "refs/heads/main",
-        "head": "9bd45b0d1fd2f2bcccc1e764e38bab18524ed9aa",
-        "before": "bad52d76798a6b07368e748f47cd880c20f27c09"
-      },
-      "public": true,
-      "created_at": "2026-01-02T11:20:53Z"
-    },
-    {
-      "id": "7135376756",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29430160939,
-        "ref": "refs/heads/main",
-        "head": "bad52d76798a6b07368e748f47cd880c20f27c09",
-        "before": "840fa6a00abf80c609aacee26c747f2f1fb1ac6a"
-      },
-      "public": true,
-      "created_at": "2026-01-02T10:34:15Z"
-    },
-    {
-      "id": "5573776026",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1120195677,
-        "name": "pranshuparmar/witr",
-        "url": "https://api.github.com/repos/pranshuparmar/witr"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-01-02T07:44:06Z"
-    },
-    {
-      "id": "5573236065",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 993717808,
-        "name": "nibzard/awesome-agentic-patterns",
-        "url": "https://api.github.com/repos/nibzard/awesome-agentic-patterns"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-01-02T06:31:30Z"
-    },
-    {
-      "id": "7130715117",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29425492608,
-        "ref": "refs/heads/main",
-        "head": "dc9070d0075c11fcae958f4ac42ff8169e0d96f7",
-        "before": "cf7640206b2003ab832794ab9497c1db394ea116"
-      },
-      "public": true,
-      "created_at": "2026-01-02T05:15:54Z"
-    },
-    {
-      "id": "7130437027",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29425214117,
-        "ref": "refs/heads/main",
-        "head": "cf7640206b2003ab832794ab9497c1db394ea116",
-        "before": "2fca73311f1b29da97dd21ddb52d02d24f97f9de"
-      },
-      "public": true,
-      "created_at": "2026-01-02T04:54:03Z"
-    },
-    {
-      "id": "5572512413",
-      "type": "PullRequestReviewEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "review": {
-          "id": 3622207730,
-          "node_id": "PRR_kwDOQn7ljs7X5oDy",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "body": null,
-          "commit_id": "c854839e3c665568ed4187df375c49f296d40396",
-          "submitted_at": "2026-01-02T04:53:47Z",
-          "state": "approved",
-          "html_url": "https://github.com/madanlalit/personal-blog/pull/8#pullrequestreview-3622207730",
-          "pull_request_url": "https://api.github.com/repos/madanlalit/personal-blog/pulls/8",
-          "_links": {
-            "html": {
-              "href": "https://github.com/madanlalit/personal-blog/pull/8#pullrequestreview-3622207730"
-            },
-            "pull_request": {
-              "href": "https://api.github.com/repos/madanlalit/personal-blog/pulls/8"
-            }
-          },
-          "updated_at": "2026-01-02T04:53:47Z"
-        },
-        "pull_request": {
-          "url": "https://api.github.com/repos/madanlalit/personal-blog/pulls/8",
-          "id": 3141470592,
-          "number": 8,
-          "head": {
-            "ref": "vercel/enable-vercel-speed-insights-s-4hvj1l",
-            "sha": "c854839e3c665568ed4187df375c49f296d40396",
-            "repo": {
-              "id": 1115612558,
-              "url": "https://api.github.com/repos/madanlalit/personal-blog",
-              "name": "personal-blog"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "2fca73311f1b29da97dd21ddb52d02d24f97f9de",
-            "repo": {
-              "id": 1115612558,
-              "url": "https://api.github.com/repos/madanlalit/personal-blog",
-              "name": "personal-blog"
-            }
-          }
-        },
-        "action": "created"
-      },
-      "public": true,
-      "created_at": "2026-01-02T04:53:49Z"
-    },
-    {
-      "id": "7107857622",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29402504910,
-        "ref": "refs/heads/main",
-        "head": "e3c416de5bef4f7c657b765c8df96383c0ab8159",
-        "before": "6acdd0690c4ba9268300bfbdf364a5d18811284c"
-      },
-      "public": true,
-      "created_at": "2025-12-31T19:08:37Z"
-    },
-    {
-      "id": "7107709891",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1115612558,
-        "name": "madanlalit/personal-blog",
-        "url": "https://api.github.com/repos/madanlalit/personal-blog"
-      },
-      "payload": {
-        "repository_id": 1115612558,
-        "push_id": 29402356282,
-        "ref": "refs/heads/main",
-        "head": "6acdd0690c4ba9268300bfbdf364a5d18811284c",
-        "before": "838a048544cd266e053b1730c39ebde9931c7b81"
-      },
-      "public": true,
-      "created_at": "2025-12-31T18:58:28Z"
     }
   ]
 }
