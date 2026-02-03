@@ -1,6 +1,61 @@
 {
-  "lastUpdated": 1770108587952,
+  "lastUpdated": 1770151595281,
   "events": [
+    {
+      "id": "6283167917",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1000945946,
+        "name": "cnoe-io/ai-platform-engineering",
+        "url": "https://api.github.com/repos/cnoe-io/ai-platform-engineering"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-02-03T18:06:06Z",
+      "org": {
+        "id": 119980131,
+        "login": "cnoe-io",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/cnoe-io",
+        "avatar_url": "https://avatars.githubusercontent.com/u/119980131?"
+      }
+    },
+    {
+      "id": "8085978154",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30380848161,
+        "ref": "refs/heads/main",
+        "head": "d0d24ec44ddbefa68bc228d48d788797c1b23376",
+        "before": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc"
+      },
+      "public": true,
+      "created_at": "2026-02-03T11:54:47Z"
+    },
     {
       "id": "6240079445",
       "type": "WatchEvent",
@@ -9222,13 +9277,13 @@
           "body": "Hey Pydantic AI community!\n\nAs you may have noticed, we/I haven't been as quick to respond to issues, review PRs, or release new versions since the holidays, compared to the same-day response/review and one-release-a-day cadence we got used to during 2025.\n\n## Prioritization\n\nPart of the story is that inevitably, as the popularity of an open source project grows, so do the number of notifications that land in its maintainers' GitHub inboxes every day, meaning that last year's \"treat every contributor like a colleague and every issue/PR notification like a top priority\" approach was never going to be sustainable forever.\n\nWe were able to mostly maintain that through the first year of Pydantic AI's existence, and I know that our \"extension of your team\"-level responsiveness has been much appreciated and (not unimportantly considering that we are a business) a significant factor in converting Pydantic AI users to [Pydantic Logfire](https://pydantic.dev/logfire) customers.\n\nBut already by the last few months of the year, it was becoming clear that this user-interrupt-driven approach to prioritization was starting to get in the way of working on more significant improvements and new capabilities that will benefit everyone building agents using Pydantic AI (like [Code Mode](https://github.com/pydantic/pydantic-ai/issues/4050) (aka Programmatic Tool Calling), [Progressive Tool Disclosure](https://github.com/pydantic/pydantic-ai/issues/3590) (aka Deferred Tool Loading), [Sub-Agents](https://github.com/pydantic/pydantic-ai/issues/1978), and [Guardrails](https://github.com/pydantic/pydantic-ai/issues/1197)), whereas users' issues and PRs typically focus on improving existing features around the edges: the faster horse as opposed to the car.\n\nThankfully, the community has done an awesome job stepping in to fill the gap with packages like [pydantic-deep](https://github.com/vstorm-co/pydantic-deepagents) and more listed on <https://github.com/vstorm-co/awesome-pydantic-ai> (in line with our preference for providing strong foundations and abstractions like `AbstractToolset` and `AbstractAgent` that people can build on, as opposed to coming with every battery included), but we agree that some of those features should just be in the core framework. (I'm happy to share that we expect to ship Code Mode and Progressive Tool Disclosure in the next week or two!)\n\nThis means that we're going to need to implement an (AI-assisted!) process for prioritizing issues and PRs for response and review, more explicitly taking into account factors like the number of users who would benefit, alignment with our vision for the project in project and AI engineering in general, the amount of effort that was put in by the contributor, and the time it will take us to aid them in getting it to the point where we'd be confident merging it and maintaining it indefinitely.\n\nThe bottom line is that we're dropping the expectation that every single issue/PR will get human attention, quickly or at all, while making it clear what motivated contributors can do to get their favorite items up the queue. \n\nI have some ideas on how we can do this that I will share later this week, and I'd love to hear your suggestions as well.\n\n## Impact of AI-assisted coding on open source contributions\n\n\"More usage means more issues and PRs\" is only half of the story, though, as eloquently pointed out by a user on [an issue](https://github.com/pydantic/pydantic-ai/issues/3885) created during the holidays that took me much longer to get to than I would've liked:\n\n> \"**Is AI actually making y'all slower rather than faster?**\"\n\nAs someone who's [been working full time on open source developer tools](https://douwe.me/) for the past 10 years, the answer has in recent months unfortunately become \"**yes**\".\n\nIt used to be that it took significantly more effort for a contributor to create a PR or address a round of feedback than it took for a maintainer to review a PR, creating some natural back-pressure on the number of PRs that are requesting a new round of review each day. Similarly, the ratio between new issues and PRs would typically favor the former, at least when it came to new features, as it's much easier to share an idea than to go through the effort of building it -- and most people wouldn't anyway until they'd validated that the maintainer would accept a particular solution.\n\nA single maintainer could arrive to 20 new issues and 10 new PRs on Monday morning, review them all over the course of a few hours, and then expect to have code trickle in throughout the week as contributors found time to incorporate the feedback or start on an issue, plus some amount of new items each day, at a similar rate to other issues/PRs being closed/merged. \n\nEspecially large PRs adding significant new functionality and public APIs, that consume the most time and mental energy to review, would typically be spread out over multiple weeks this way, ensuring both contributor and maintainer spent enough time with it in mind to be confident in the design and implications, and allowing maintainers to juggle them along with (much more numerous) smaller PRs (that would get more frequent updates and reviews) and work they want to prioritize themselves.\n\nMaintainers would also be able to assume that any big PR whose code looked good had significant mental effort put into it by another competent engineer who themselves needed the feature and thus had the necessary context to make design decisions about it, allowing the maintainer to offload some of the mental load on the contributor and juggle more PRs and context switches at the same time. \n\nObviously none of that is the case anymore today, meaning that on top of the community of users and contributors growing, the amount of work any given community member can create for the maintainer has been growing quickly as well. (To give you an idea, after the holidays I came back to about 150 new GitHub notifications, more than half of which were PRs in want of review, and most mornings I arrive to 40+ new notifications of which at least 2/3rds are PRs.)\n\nOf course, maintainers can and should also use AI to reduce their review workload by automating (parts of) the code review process and moving various types of project-specific rules and \"things only the maintainer knows\" from review time to development time through things like `AGENTS.md` and specialized sub-agents, and I'm excited to start implementing those for Pydantic AI as well. \n\nBut at the end of the day, the maintainer remains responsible for every line of code, behavior, and public API that makes it into the project (in a sense, a maintainer owes its users that in return for the trust that they have placed in them by choosing the project as part of their stack), and thus their eyes and brain will remain a bottleneck until that expectation changes (which it very well might in coming years, if all open source code converges to \"by AI, for AI\").\n\nSo in addition to changes we need to make around triage and prioritization in general, I think we need to look into ways to _increase_ the barrier for contribution, in order to:\n- ensure that the mental load and sense of responsibility for the changes (especially the behavior and public API) are appropriately shared between the contributor and maintainer,\n\t- meaning, among other things, that the maintainer can never be the first human to critically read a PR line-by-line -- the contributor has to be the \"first line of defense\" between the AI and the maintainer, and understand why every line is there in that particular way,\n- discourage going straight-to-code on big changes in a well-meaning attempt to be helpful, when:\n    - the feature really should've spent some more time in the planning stage (as in: hashing out the details in the issue, likely with help from e.g. Claude Code's plan mode), or when\n    - the user was not well suited to implement it as they did not themselves experience the problem or have a need for the solution -- they just wanted to be helpful and/or boost their GitHub numbers.\n\nI have some ideas on that front as well that I will share later this week -- and I'd love to hear your thoughts too.\n\nPS. If you're interested in reading what other open source maintainers have written on the subject, Claude found me these recent discussions on Hacker News:\n- [\"We need a clearer framework for AI-assisted contributions to open source\"](https://news.ycombinator.com/item?id=45731321)\n- [\"Are open source maintainers going to be the main sufferers from LLM\"](https://news.ycombinator.com/item?id=46637295 )\n- [\"AI and Open Source: A Maintainer's Take\"](https://news.ycombinator.com/item?id=46453713  )\n- [\"AI tooling must be disclosed for contributions\"](https://github.com/ghostty-org/ghostty/pull/8289)\n- [\"Agent Psychosis: Are We Going Insane?\"](https://news.ycombinator.com/item?id=46666777)\n- [\"Ghostty: AI Usage Policy\"](https://news.ycombinator.com/item?id=46730504)",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/reactions",
-            "total_count": 13,
+            "total_count": 15,
             "+1": 0,
             "-1": 0,
             "laugh": 0,
             "hooray": 0,
             "confused": 0,
-            "heart": 13,
+            "heart": 15,
             "rocket": 0,
             "eyes": 0
           },
@@ -19428,14 +19483,14 @@
           "releases_url": "https://api.github.com/repos/madanlalit/pydantic-ai/releases{/id}",
           "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
           "created_at": "2026-01-09T18:58:30Z",
-          "updated_at": "2026-02-01T17:13:15Z",
-          "pushed_at": "2026-02-01T17:13:28Z",
+          "updated_at": "2026-02-03T11:54:52Z",
+          "pushed_at": "2026-02-03T11:54:47Z",
           "git_url": "git://github.com/madanlalit/pydantic-ai.git",
           "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
           "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
           "svn_url": "https://github.com/madanlalit/pydantic-ai",
           "homepage": "https://ai.pydantic.dev",
-          "size": 121888,
+          "size": 121958,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": "Python",
@@ -21414,58 +21469,6 @@
       },
       "public": true,
       "created_at": "2026-01-05T12:01:54Z"
-    },
-    {
-      "id": "7196445923",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29491310725,
-        "ref": "refs/heads/main",
-        "head": "84c9b41ab025a067a8406c751d742911368e7208",
-        "before": "51b8088d757290478c5981ecc25aa63f1b20e45a"
-      },
-      "public": true,
-      "created_at": "2026-01-05T12:01:53Z"
-    },
-    {
-      "id": "7192657187",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29487518398,
-        "ref": "refs/heads/main",
-        "head": "51b8088d757290478c5981ecc25aa63f1b20e45a",
-        "before": "0f853c44a2ebb9950ed3a071b640ce1ff8291b5f"
-      },
-      "public": true,
-      "created_at": "2026-01-05T09:24:06Z"
     }
   ]
 }
