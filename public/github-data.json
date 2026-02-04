@@ -1,6 +1,188 @@
 {
-  "lastUpdated": 1770195196538,
+  "lastUpdated": 1770237737263,
   "events": [
+    {
+      "id": "8139343192",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30434224716,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "8bd574bea9c495a725ddb9a760319a8198addfda",
+        "before": "577d008633047bcbc86f22995308965d25eb7089"
+      },
+      "public": true,
+      "created_at": "2026-02-04T20:13:59Z"
+    },
+    {
+      "id": "8138756315",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30433636211,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "577d008633047bcbc86f22995308965d25eb7089",
+        "before": "897be0b95643a792b9e58aea087483a4f2d5cb45"
+      },
+      "public": true,
+      "created_at": "2026-02-04T19:51:45Z"
+    },
+    {
+      "id": "8136513571",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30431389766,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "897be0b95643a792b9e58aea087483a4f2d5cb45",
+        "before": "fe4399dc995c252a4abe2062457226700bb5c3cc"
+      },
+      "public": true,
+      "created_at": "2026-02-04T18:29:25Z"
+    },
+    {
+      "id": "8136134513",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30431009847,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "fe4399dc995c252a4abe2062457226700bb5c3cc",
+        "before": "0a232763b2b11ba5fb23b46fe6aa4229df263ca5"
+      },
+      "public": true,
+      "created_at": "2026-02-04T18:15:32Z"
+    },
+    {
+      "id": "8135816965",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30430690742,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "0a232763b2b11ba5fb23b46fe6aa4229df263ca5",
+        "before": "22d94733cef0474a024825a5659bc6d355dd8cc7"
+      },
+      "public": true,
+      "created_at": "2026-02-04T18:03:59Z"
+    },
+    {
+      "id": "8134638153",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30429518505,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "22d94733cef0474a024825a5659bc6d355dd8cc7",
+        "before": "260030777e29e752a0ebb7650761385d46458477"
+      },
+      "public": true,
+      "created_at": "2026-02-04T17:23:00Z"
+    },
+    {
+      "id": "8132994636",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30427893126,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "260030777e29e752a0ebb7650761385d46458477",
+        "before": "b139a6cacae6624f61ca69a7d18ed086029b4a17"
+      },
+      "public": true,
+      "created_at": "2026-02-04T16:29:37Z"
+    },
     {
       "id": "6283167917",
       "type": "WatchEvent",
@@ -271,7 +453,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-02T23:48:06Z",
+          "updated_at": "2026-02-04T20:18:57Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -283,7 +465,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -636,7 +818,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-02T23:48:06Z",
+          "updated_at": "2026-02-04T20:18:57Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -648,7 +830,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -874,7 +1056,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-02T23:48:06Z",
+          "updated_at": "2026-02-04T20:18:57Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -886,7 +1068,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -1086,7 +1268,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-02T23:48:06Z",
+          "updated_at": "2026-02-04T20:18:57Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -1098,7 +1280,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -5505,7 +5687,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-02T23:48:06Z",
+          "updated_at": "2026-02-04T20:18:57Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -5517,7 +5699,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -5678,7 +5860,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -5687,7 +5869,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -5732,7 +5914,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6i8tnG",
           "diff_hunk": "@@ -879,3 +880,133 @@ def __call__(self, _: RunContext, messages: list[ModelMessage]) -> list[ModelMes\n         ]\n     )\n     assert result.new_messages() == result.all_messages()[-2:]\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning():\n+    def keep_last_2(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return messages[-2:] if len(messages) > 2 else messages\n+\n+    agent = Agent(model=TestModel(custom_output_text='done'), history_processors=[keep_last_2])\n+\n+    @agent.tool\n+    async def my_tool(ctx: RunContext[None]) -> str:\n+        return 'tool executed'\n+\n+    async with agent.iter('start') as run:\n+        async for node in run:\n+            idx = run.ctx.deps.new_message_index\n+            assert idx >= 0, (\n+                f'BUG: new_message_index became negative: {idx}. all_messages count: {len(run.all_messages())}'\n+            )\n+\n+    result = run.result\n+    assert result is not None\n+\n+    new_msgs = result.new_messages()\n+    all_msgs = result.all_messages()\n+\n+    assert len(new_msgs) == len(all_msgs), (\n+        f'Fresh run: new_messages ({len(new_msgs)}) should equal all_messages ({len(all_msgs)}). '\n+        f'This failure indicates the negative index bug is present.'\n+    )\n+\n+\n+async def test_history_processor_reorder_old_new(function_model: FunctionModel, received_messages: list[ModelMessage]):\n+    def swap_last_two(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        if len(messages) >= 2:\n+            return messages[:-2] + [messages[-1], messages[-2]]\n+        return messages\n+\n+    agent = Agent(function_model, history_processors=[swap_last_two])\n+\n+    message_history = [\n+        ModelRequest(parts=[UserPromptPart(content='Old question')]),\n+    ]\n+\n+    result = await agent.run('New question', message_history=message_history)\n+    assert received_messages == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),\n+                    UserPromptPart(content='Old question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+            )\n+        ]\n+    )\n+    new_msgs = result.new_messages()\n+    # Expected behavior: Only messages from THIS run should be in new_messages()\n+    # The 'New question' request and response are from this run\n+    # 'Old question' was reordered by the processor but is from a previous run\n+    assert new_msgs == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),",
           "path": "tests/test_history_processor.py",
-          "commit_id": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+          "commit_id": "8bd574bea9c495a725ddb9a760319a8198addfda",
           "original_commit_id": "0c7387259a910f9f376e21e3d66ef96eb9448bdb",
           "user": {
             "login": "madanlalit",
@@ -5785,7 +5967,7 @@
           },
           "in_reply_to_id": 2729160527,
           "original_position": 75,
-          "position": 224,
+          "position": 330,
           "subject_type": "line"
         },
         "pull_request": {
@@ -5794,7 +5976,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -5803,7 +5985,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -5885,7 +6067,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -5894,7 +6076,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -5939,7 +6121,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6i7Bt_",
           "diff_hunk": "@@ -879,3 +880,133 @@ def __call__(self, _: RunContext, messages: list[ModelMessage]) -> list[ModelMes\n         ]\n     )\n     assert result.new_messages() == result.all_messages()[-2:]\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning():\n+    def keep_last_2(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return messages[-2:] if len(messages) > 2 else messages\n+\n+    agent = Agent(model=TestModel(custom_output_text='done'), history_processors=[keep_last_2])\n+\n+    @agent.tool\n+    async def my_tool(ctx: RunContext[None]) -> str:\n+        return 'tool executed'\n+\n+    async with agent.iter('start') as run:\n+        async for node in run:\n+            idx = run.ctx.deps.new_message_index\n+            assert idx >= 0, (\n+                f'BUG: new_message_index became negative: {idx}. all_messages count: {len(run.all_messages())}'\n+            )\n+\n+    result = run.result\n+    assert result is not None\n+\n+    new_msgs = result.new_messages()\n+    all_msgs = result.all_messages()\n+\n+    assert len(new_msgs) == len(all_msgs), (\n+        f'Fresh run: new_messages ({len(new_msgs)}) should equal all_messages ({len(all_msgs)}). '\n+        f'This failure indicates the negative index bug is present.'\n+    )\n+\n+\n+async def test_history_processor_reorder_old_new(function_model: FunctionModel, received_messages: list[ModelMessage]):\n+    def swap_last_two(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        if len(messages) >= 2:\n+            return messages[:-2] + [messages[-1], messages[-2]]\n+        return messages\n+\n+    agent = Agent(function_model, history_processors=[swap_last_two])\n+\n+    message_history = [\n+        ModelRequest(parts=[UserPromptPart(content='Old question')]),\n+    ]\n+\n+    result = await agent.run('New question', message_history=message_history)\n+    assert received_messages == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),\n+                    UserPromptPart(content='Old question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+            )\n+        ]\n+    )\n+    new_msgs = result.new_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+          "commit_id": "8bd574bea9c495a725ddb9a760319a8198addfda",
           "original_commit_id": "0c7387259a910f9f376e21e3d66ef96eb9448bdb",
           "user": {
             "login": "madanlalit",
@@ -5992,7 +6174,7 @@
           },
           "in_reply_to_id": 2729156360,
           "original_position": 67,
-          "position": 218,
+          "position": 324,
           "subject_type": "line"
         },
         "pull_request": {
@@ -6001,7 +6183,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6010,7 +6192,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6092,7 +6274,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6101,7 +6283,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6208,7 +6390,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6217,7 +6399,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6299,7 +6481,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6308,7 +6490,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6415,7 +6597,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6424,7 +6606,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -6727,7 +6909,7 @@
           "milestone": null,
           "comments": 10,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-02T23:48:06Z",
+          "updated_at": "2026-02-04T20:18:57Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -6739,7 +6921,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [ ] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [ ] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [ ] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [ ] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [ ] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [ ] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -6900,7 +7082,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6909,7 +7091,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7016,7 +7198,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7025,7 +7207,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7107,7 +7289,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7116,7 +7298,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7223,7 +7405,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7232,7 +7414,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -7557,7 +7739,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "b139a6cacae6624f61ca69a7d18ed086029b4a17",
+            "sha": "8bd574bea9c495a725ddb9a760319a8198addfda",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7566,7 +7748,7 @@
           },
           "base": {
             "ref": "main",
-            "sha": "5ab6940f7f0231dc1fc62ab16dea35de018ceebc",
+            "sha": "dab3d727d5c56d362dac853357ff7c4ffd7c2481",
             "repo": {
               "id": 818331198,
               "url": "https://api.github.com/repos/pydantic/pydantic-ai",
@@ -19484,13 +19666,13 @@
           "deployments_url": "https://api.github.com/repos/madanlalit/pydantic-ai/deployments",
           "created_at": "2026-01-09T18:58:30Z",
           "updated_at": "2026-02-03T11:54:52Z",
-          "pushed_at": "2026-02-03T11:54:47Z",
+          "pushed_at": "2026-02-04T20:13:59Z",
           "git_url": "git://github.com/madanlalit/pydantic-ai.git",
           "ssh_url": "git@github.com:madanlalit/pydantic-ai.git",
           "clone_url": "https://github.com/madanlalit/pydantic-ai.git",
           "svn_url": "https://github.com/madanlalit/pydantic-ai",
           "homepage": "https://ai.pydantic.dev",
-          "size": 121958,
+          "size": 122019,
           "stargazers_count": 0,
           "watchers_count": 0,
           "language": "Python",
@@ -21126,349 +21308,6 @@
       },
       "public": true,
       "created_at": "2026-01-06T15:11:45Z"
-    },
-    {
-      "id": "7220880501",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29515768476,
-        "ref": "refs/heads/main",
-        "head": "f8c039141e1c721eecd8889f6eba9561a0597c5b",
-        "before": "3f360081b0298eb76fc6667ccb77c0e4a192a728"
-      },
-      "public": true,
-      "created_at": "2026-01-06T07:50:02Z"
-    },
-    {
-      "id": "7205342420",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29500214720,
-        "ref": "refs/heads/main",
-        "head": "3f360081b0298eb76fc6667ccb77c0e4a192a728",
-        "before": "533d79bea2f8d281e0a6836e1991954de35fbf8e"
-      },
-      "public": true,
-      "created_at": "2026-01-05T17:46:36Z"
-    },
-    {
-      "id": "7202724270",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29497594141,
-        "ref": "refs/heads/main",
-        "head": "533d79bea2f8d281e0a6836e1991954de35fbf8e",
-        "before": "a0e80913b70a28302998ca1fafdb72fc032baed6"
-      },
-      "public": true,
-      "created_at": "2026-01-05T16:01:08Z"
-    },
-    {
-      "id": "7201973010",
-      "type": "PushEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "repository_id": 1122114096,
-        "push_id": 29496842402,
-        "ref": "refs/heads/main",
-        "head": "a0e80913b70a28302998ca1fafdb72fc032baed6",
-        "before": "84c9b41ab025a067a8406c751d742911368e7208"
-      },
-      "public": true,
-      "created_at": "2026-01-05T15:32:37Z"
-    },
-    {
-      "id": "5610655860",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "closed",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/2",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/2",
-          "id": 3764451553,
-          "node_id": "I_kwDOQuIaMM7gYPjh",
-          "number": 2,
-          "title": "Wire Collector/Export System into Agent Execution",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:12:42Z",
-          "updated_at": "2026-01-05T15:31:31Z",
-          "closed_at": "2026-01-05T15:31:31Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Integrate the collector module into agent execution for step capture and export.\n\n**Location:** `src/heimdall/collector/` → `src/heimdall/cli.py`\n\n**Tasks:**\n- Hook collector into agent loop for before/after step capture\n- Export results at task completion\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/2/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2026-01-05T15:31:33Z"
-    },
-    {
-      "id": "5609146837",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 819554665,
-        "name": "exo-explore/exo",
-        "url": "https://api.github.com/repos/exo-explore/exo"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 1003,
-        "pull_request": {
-          "url": "https://api.github.com/repos/exo-explore/exo/pulls/1003",
-          "id": 3128977723,
-          "number": 1003,
-          "head": {
-            "ref": "feature/custom-namespace-ui",
-            "sha": "75665e910ec3cdd37ed64f0cc445044f30c89352",
-            "repo": {
-              "id": 1121495867,
-              "url": "https://api.github.com/repos/madanlalit/exo",
-              "name": "exo"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "839b67f318b6b5422b119b1a74e38883ca6f9ce1",
-            "repo": {
-              "id": 819554665,
-              "url": "https://api.github.com/repos/exo-explore/exo",
-              "name": "exo"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-01-05T14:25:00Z",
-      "org": {
-        "id": 162823259,
-        "login": "exo-explore",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/exo-explore",
-        "avatar_url": "https://avatars.githubusercontent.com/u/162823259?"
-      }
-    },
-    {
-      "id": "5606250867",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 1122114096,
-        "name": "madanlalit/heimdall",
-        "url": "https://api.github.com/repos/madanlalit/heimdall"
-      },
-      "payload": {
-        "action": "closed",
-        "issue": {
-          "url": "https://api.github.com/repos/madanlalit/heimdall/issues/3",
-          "repository_url": "https://api.github.com/repos/madanlalit/heimdall",
-          "labels_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/labels{/name}",
-          "comments_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/comments",
-          "events_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/events",
-          "html_url": "https://github.com/madanlalit/heimdall/issues/3",
-          "id": 3764451853,
-          "node_id": "I_kwDOQuIaMM7gYPoN",
-          "number": 3,
-          "title": "Implement Functional Demo Mode",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignee": null,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2025-12-27T06:13:03Z",
-          "updated_at": "2026-01-05T12:01:53Z",
-          "closed_at": "2026-01-05T12:01:53Z",
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Make the demo mode flag functional with visual feedback.\n\n**Location:** `src/heimdall/browser/demo.py`\n\n**Tasks:**\n- Pass `demo_mode` flag through CLI to Agent\n- Call highlight/tooltip methods before actions",
-          "reactions": {
-            "url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/madanlalit/heimdall/issues/3/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed"
-        }
-      },
-      "public": true,
-      "created_at": "2026-01-05T12:01:54Z"
     }
   ]
 }
