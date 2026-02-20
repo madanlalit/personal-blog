@@ -1,6 +1,254 @@
 {
-  "lastUpdated": 1771577483048,
+  "lastUpdated": 1771609504631,
   "events": [
+    {
+      "id": "6749311782",
+      "type": "IssueCommentEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 818331198,
+        "name": "pydantic/pydantic-ai",
+        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086",
+          "repository_url": "https://api.github.com/repos/pydantic/pydantic-ai",
+          "labels_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/labels{/name}",
+          "comments_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/comments",
+          "events_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/events",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086",
+          "id": 3853337578,
+          "node_id": "PR_kwDOMMa-Ps6_PHbr",
+          "number": 4086,
+          "title": "fix: Identify new messages by `run_id` instead of index",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 7110547176,
+              "node_id": "LA_kwDOMMa-Ps8AAAABp9JW6A",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/bug",
+              "name": "bug",
+              "color": "d73a4a",
+              "default": true,
+              "description": "Report that something isn't working, or PR implementing a fix"
+            },
+            {
+              "id": 8039999985,
+              "node_id": "LA_kwDOMMa-Ps8AAAAB3zip8Q",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/awaiting%20author%20revision",
+              "name": "awaiting author revision",
+              "color": "295DD7",
+              "default": false,
+              "description": ""
+            },
+            {
+              "id": 9947550467,
+              "node_id": "LA_kwDOMMa-Ps8AAAACUOuTAw",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/size:%20M",
+              "name": "size: M",
+              "color": "7cb342",
+              "default": false,
+              "description": "Medium PR (101-500 weighted lines)"
+            },
+            {
+              "id": 9959584364,
+              "node_id": "LA_kwDOMMa-Ps8AAAACUaMybA",
+              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/message%20history",
+              "name": "message history",
+              "color": "aaaaaa",
+              "default": false,
+              "description": null
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "assignee": {
+            "login": "DouweM",
+            "id": 159434,
+            "node_id": "MDQ6VXNlcjE1OTQzNA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/DouweM",
+            "html_url": "https://github.com/DouweM",
+            "followers_url": "https://api.github.com/users/DouweM/followers",
+            "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
+            "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
+            "organizations_url": "https://api.github.com/users/DouweM/orgs",
+            "repos_url": "https://api.github.com/users/DouweM/repos",
+            "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/DouweM/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "assignees": [
+            {
+              "login": "DouweM",
+              "id": 159434,
+              "node_id": "MDQ6VXNlcjE1OTQzNA==",
+              "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/DouweM",
+              "html_url": "https://github.com/DouweM",
+              "followers_url": "https://api.github.com/users/DouweM/followers",
+              "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
+              "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
+              "organizations_url": "https://api.github.com/users/DouweM/orgs",
+              "repos_url": "https://api.github.com/users/DouweM/repos",
+              "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/DouweM/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 17,
+          "created_at": "2026-01-25T14:34:10Z",
+          "updated_at": "2026-02-20T16:50:51Z",
+          "closed_at": null,
+          "type": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/4086",
+            "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086",
+            "diff_url": "https://github.com/pydantic/pydantic-ai/pull/4086.diff",
+            "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
+            "merged_at": null
+          },
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3935988629",
+          "html_url": "https://github.com/pydantic/pydantic-ai/pull/4086#issuecomment-3935988629",
+          "issue_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086",
+          "id": 3935988629,
+          "node_id": "IC_kwDOMMa-Ps7qmmuV",
+          "user": {
+            "login": "madanlalit",
+            "id": 116655920,
+            "node_id": "U_kgDOBvQHMA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/madanlalit",
+            "html_url": "https://github.com/madanlalit",
+            "followers_url": "https://api.github.com/users/madanlalit/followers",
+            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
+            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
+            "repos_url": "https://api.github.com/users/madanlalit/repos",
+            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-02-20T16:50:51Z",
+          "updated_at": "2026-02-20T16:50:51Z",
+          "body": "@DouweM I have updated the PR description",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3935988629/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-02-20T16:50:51Z",
+      "org": {
+        "id": 110818415,
+        "login": "pydantic",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/pydantic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
+      }
+    },
+    {
+      "id": "8633786413",
+      "type": "PushEvent",
+      "actor": {
+        "id": 116655920,
+        "login": "madanlalit",
+        "display_login": "madanlalit",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/madanlalit",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
+      },
+      "repo": {
+        "id": 1131286423,
+        "name": "madanlalit/pydantic-ai",
+        "url": "https://api.github.com/repos/madanlalit/pydantic-ai"
+      },
+      "payload": {
+        "repository_id": 1131286423,
+        "push_id": 30928690642,
+        "ref": "refs/heads/fix/issue-3983-new-message-index",
+        "head": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
+        "before": "e36fb3be376262a7d8f7bb1df80a3e74379652c4"
+      },
+      "public": true,
+      "created_at": "2026-02-20T12:01:04Z"
+    },
     {
       "id": "6730560237",
       "type": "WatchEvent",
@@ -278,9 +526,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -292,7 +540,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -480,7 +728,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -534,7 +782,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6n3LrI",
           "diff_hunk": "@@ -438,6 +443,7 @@ class ModelRequestNode(AgentNode[DepsT, NodeRunEndT]):\n     \"\"\"The node that makes a request to the model using the last message in state.message_history.\"\"\"\n \n     request: _messages.ModelRequest\n+    is_resuming_without_prompt: bool = False",
           "path": "pydantic_ai_slim/pydantic_ai/_agent_graph.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "728a39d8fe0b102575039aec151170591c8dfea9",
           "user": {
             "login": "madanlalit",
@@ -596,7 +844,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -687,7 +935,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -803,7 +1051,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -894,7 +1142,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1010,7 +1258,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1101,7 +1349,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1155,7 +1403,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6n3FW0",
           "diff_hunk": "@@ -1402,6 +1419,45 @@ async def _process_message_history(\n     return messages\n \n \n+def _first_run_id_index(messages: list[_messages.ModelMessage], run_id: str) -> int:\n+    \"\"\"Return the index of the first message for the current run, or len(messages) if none are found.\"\"\"\n+    for index, message in enumerate(messages):\n+        if message.run_id == run_id:\n+            return index\n+    return len(messages)\n+\n+\n+def _first_new_message_index(\n+    messages: list[_messages.ModelMessage],\n+    run_id: str,\n+    *,\n+    resumed_request: _messages.ModelRequest | None,\n+) -> int:\n+    \"\"\"Return the first index that should be included in `new_messages()`.\"\"\"\n+    if resumed_request is not None:\n+        for index, message in enumerate(messages):\n+            if message is resumed_request:\n+                return index + 1\n+\n+        for index in range(len(messages) - 1, -1, -1):\n+            if _is_same_request(messages[index], resumed_request):\n+                return index + 1\n+    return _first_run_id_index(messages, run_id)\n+\n+\n+def _is_same_request(message: _messages.ModelMessage, request: _messages.ModelRequest) -> bool:\n+    if not isinstance(message, _messages.ModelRequest):\n+        return False\n+    if message is request:\n+        return True\n+    return (\n+        message.parts == request.parts\n+        and message.timestamp == request.timestamp\n+        and message.instructions == request.instructions\n+        and message.metadata == request.metadata\n+    )",
           "path": "pydantic_ai_slim/pydantic_ai/_agent_graph.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "728a39d8fe0b102575039aec151170591c8dfea9",
           "user": {
             "login": "madanlalit",
@@ -1217,7 +1465,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1483,9 +1731,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -1497,7 +1745,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -1818,7 +2066,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -1934,7 +2182,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2025,7 +2273,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2079,7 +2327,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6nUQJ6",
           "diff_hunk": "@@ -879,3 +890,458 @@ def __call__(self, _: RunContext, messages: list[ModelMessage]) -> list[ModelMes\n         ]\n     )\n     assert result.new_messages() == result.all_messages()[-2:]\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning():",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "08c983f41e85c6a53e43dc4450fe5d7e8a1950b9",
           "user": {
             "login": "madanlalit",
@@ -2141,7 +2389,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2232,7 +2480,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2348,7 +2596,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2439,7 +2687,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2555,7 +2803,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2646,7 +2894,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2762,7 +3010,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2853,7 +3101,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -2969,7 +3217,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3060,7 +3308,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3176,7 +3424,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3391,9 +3639,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -3405,7 +3653,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -3619,7 +3867,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3735,7 +3983,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3826,7 +4074,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -3880,7 +4128,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6myw0A",
           "diff_hunk": "@@ -142,6 +144,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ModelRequest(\n                 parts=[SystemPromptPart(content='Processed answer', timestamp=IsDatetime())],\n                 timestamp=IsDatetime(),\n+                run_id=IsStr(),",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "8044048eee30d048fdba3689d2e775353aa98c31",
           "user": {
             "login": "madanlalit",
@@ -3942,7 +4190,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4033,7 +4281,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4087,7 +4335,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6myp3E",
           "diff_hunk": "@@ -879,3 +890,385 @@ def __call__(self, _: RunContext, messages: list[ModelMessage]) -> list[ModelMes\n         ]\n     )\n     assert result.new_messages() == result.all_messages()[-2:]\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning():\n+    \"\"\"\n+    Test flow:\n+    1. Start with [UserPrompt('start')] (Length 1)\n+    2. Model calls tool -> History: [UserPrompt('start'), ModelResponse(ToolCall), ModelRequest(ToolReturn)] (Length 3)\n+    3. Pruning (keep_last_2) removes UserPrompt('start') -> History: [ModelResponse(ToolCall), ModelRequest(ToolReturn)]\n+    4. Model returns 'done' -> Final: [ModelResponse(ToolCall), ModelRequest(ToolReturn), ModelResponse('done')]\n+    \"\"\"\n+\n+    def keep_last_2(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return messages[-2:] if len(messages) > 2 else messages\n+\n+    call_count = 0\n+\n+    def model_function(messages: list[ModelMessage], _info: AgentInfo) -> ModelResponse:\n+        nonlocal call_count\n+        call_count += 1\n+        if call_count == 1:\n+            return ModelResponse(\n+                parts=[ToolCallPart(tool_name='my_tool', args={}, tool_call_id='tool_call_1')],\n+            )\n+        return ModelResponse(parts=[TextPart(content='done')])\n+\n+    agent = Agent(model=FunctionModel(model_function, model_name='test'), history_processors=[keep_last_2])\n+\n+    @agent.tool\n+    async def my_tool(ctx: RunContext[None]) -> str:\n+        return 'tool executed'\n+\n+    with capture_run_messages() as captured_messages:\n+        async with agent.iter('start') as run:\n+            async for _ in run:\n+                pass\n+\n+    result = run.result\n+    assert result is not None\n+\n+    assert captured_messages == result.all_messages()\n+    assert result.all_messages() == snapshot(\n+        [\n+            ModelResponse(\n+                parts=[ToolCallPart(tool_name='my_tool', args={}, tool_call_id=IsStr())],\n+                usage=RequestUsage(input_tokens=51, output_tokens=2),\n+                model_name='test',\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+            ModelRequest(\n+                parts=[\n+                    ToolReturnPart(\n+                        tool_name='my_tool',\n+                        content='tool executed',\n+                        tool_call_id=IsStr(),\n+                        timestamp=IsDatetime(),\n+                    )\n+                ],\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+            ModelResponse(\n+                parts=[TextPart(content='done')],\n+                usage=RequestUsage(input_tokens=52, output_tokens=3),\n+                model_name='test',\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+        ]\n+    )\n+    assert result.new_messages() == result.all_messages()\n+\n+\n+async def test_new_messages_index_during_iter_with_pruning_and_history():\n+    \"\"\"\n+    Test flow with history:\n+    1. Start with [OldMsg1, OldResp1, UserPrompt('start')] (Length 3)\n+    2. Pruning (keep_last_2) removes OldMsg1 -> History: [OldResp1, UserPrompt('start')]\n+    3. Model calls tool -> History: [OldResp1, UserPrompt('start'), ModelResponse(ToolCall), ModelRequest(ToolReturn)] (Length 4)\n+    4. Pruning removes OldResp1 and UserPrompt('start') -> History: [ModelResponse(ToolCall), ModelRequest(ToolReturn)]\n+    5. Model returns 'done' -> Final: [ModelResponse(ToolCall), ModelRequest(ToolReturn), ModelResponse('done')]\n+    \"\"\"\n+\n+    def keep_last_2(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return messages[-2:] if len(messages) > 2 else messages\n+\n+    call_count = 0\n+\n+    def model_function(messages: list[ModelMessage], _info: AgentInfo) -> ModelResponse:\n+        nonlocal call_count\n+        call_count += 1\n+        if call_count == 1:\n+            return ModelResponse(\n+                parts=[ToolCallPart(tool_name='my_tool', args={}, tool_call_id='tool_call_1')],\n+            )\n+        return ModelResponse(parts=[TextPart(content='done')])\n+\n+    agent = Agent(model=FunctionModel(model_function, model_name='test'), history_processors=[keep_last_2])\n+\n+    @agent.tool\n+    async def my_tool(ctx: RunContext[None]) -> str:\n+        return 'tool executed'\n+\n+    history = [\n+        ModelRequest(parts=[UserPromptPart(content='Old message 1')]),\n+        ModelResponse(parts=[TextPart(content='Old response 1')]),\n+    ]\n+\n+    with capture_run_messages() as captured_messages:\n+        async with agent.iter('start', message_history=history) as run:\n+            async for _ in run:\n+                pass\n+\n+    result = run.result\n+    assert result is not None\n+\n+    assert captured_messages == result.all_messages()\n+    assert result.all_messages() == snapshot(\n+        [\n+            ModelResponse(\n+                parts=[ToolCallPart(tool_name='my_tool', args={}, tool_call_id=IsStr())],\n+                usage=RequestUsage(input_tokens=51, output_tokens=5),\n+                model_name='test',\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+            ModelRequest(\n+                parts=[\n+                    ToolReturnPart(\n+                        tool_name='my_tool',\n+                        content='tool executed',\n+                        tool_call_id=IsStr(),\n+                        timestamp=IsDatetime(),\n+                    )\n+                ],\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+            ModelResponse(\n+                parts=[TextPart(content='done')],\n+                usage=RequestUsage(input_tokens=52, output_tokens=3),\n+                model_name='test',\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+        ]\n+    )\n+    assert result.new_messages() == result.all_messages()\n+\n+\n+async def test_history_processor_reorder_old_new(function_model: FunctionModel, received_messages: list[ModelMessage]):\n+    \"\"\"\n+    Test flow:\n+    1. Start with history: [ModelRequest('Old question')]\n+    2. User adds: 'New question' -> Internal history: [ModelRequest('Old'), ModelRequest('New')]\n+    3. Processor `swap_last_two` swaps them -> Internal history: [ModelRequest('New'), ModelRequest('Old')]\n+    4. Model generates response -> Final history: [ModelRequest('New'), ModelRequest('Old'), ModelResponse('Provider response')]\n+    5. `new_messages()` should only return messages from this run: [ModelRequest('New'), ModelRequest('Old'), ModelResponse('Provider response')]\n+    \"\"\"\n+\n+    def swap_last_two(messages: list[ModelMessage]) -> list[ModelMessage]:\n+        if len(messages) >= 2:\n+            return messages[:-2] + [messages[-1], messages[-2]]\n+        return messages\n+\n+    assert swap_last_two([]) == []\n+\n+    agent = Agent(function_model, history_processors=[swap_last_two])\n+\n+    message_history = [\n+        ModelRequest(parts=[UserPromptPart(content='Old question')]),\n+    ]\n+\n+    with capture_run_messages() as captured_messages:\n+        result = await agent.run('New question', message_history=message_history)\n+\n+    assert received_messages == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),\n+                    UserPromptPart(content='Old question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+            )\n+        ]\n+    )\n+\n+    assert captured_messages == result.all_messages()\n+    assert result.all_messages() == snapshot(\n+        [\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='New question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+            ModelRequest(\n+                parts=[\n+                    UserPromptPart(content='Old question', timestamp=IsDatetime()),\n+                ],\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+            ModelResponse(\n+                parts=[TextPart(content='Provider response')],\n+                usage=RequestUsage(input_tokens=54, output_tokens=2),\n+                model_name='function:capture_model_function:capture_model_stream_function',\n+                timestamp=IsDatetime(),\n+                run_id=IsStr(),\n+            ),\n+        ]\n+    )\n+\n+    new_msgs = result.new_messages()\n+\n+    assert new_msgs == result.all_messages()\n+\n+\n+async def test_history_processor_injects_into_new_stream(\n+    function_model: FunctionModel, received_messages: list[ModelMessage]\n+):\n+    \"\"\"\n+    Test flow:\n+    1. Start with history: [ModelRequest('Old')]\n+    2. User adds: 'New question' -> Internal history: [ModelRequest('Old'), ModelRequest('New')]\n+    3. Processor `inject_middle` inserts 'Inserted' before the last message(which is the first message of current run) -> Internal history: [ModelRequest('Old'), ModelRequest('Inserted'), ModelRequest('New')]\n+    4. Model generates response -> Final history: [ModelRequest('Old'), ModelRequest('Inserted'), ModelRequest('New'), ModelResponse('Provider response')]\n+    5. `new_messages()` should return messages from this run. [ModelRequest('Inserted'), ModelRequest('New'), ModelResponse('Provider response')]\n+    \"\"\"\n+\n+    def inject_middle(ctx: RunContext[Any], messages: list[ModelMessage]) -> list[ModelMessage]:\n+        return (\n+            messages[:-1]\n+            + [ModelRequest(parts=[UserPromptPart(content='Inserted')], run_id=ctx.run_id)]",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "8044048eee30d048fdba3689d2e775353aa98c31",
           "user": {
             "login": "madanlalit",
@@ -4149,7 +4397,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4240,7 +4488,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4356,7 +4604,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4447,7 +4695,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4563,7 +4811,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4654,7 +4902,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4770,7 +5018,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4861,7 +5109,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -4977,7 +5225,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -5584,9 +5832,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -5598,7 +5846,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -5786,7 +6034,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -5840,7 +6088,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6meH6F",
           "diff_hunk": "@@ -216,7 +220,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ),\n         ]\n     )\n-    assert result.new_messages() == result.all_messages()[-2:]\n+    assert result.new_messages() == result.all_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "733e2ef80b85e7ccd8945fe237c6524cb4bce177",
           "user": {
             "login": "madanlalit",
@@ -5902,7 +6150,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -5993,7 +6241,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6047,7 +6295,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6meHUv",
           "diff_hunk": "@@ -152,7 +155,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ),\n         ]\n     )\n-    assert result.new_messages() == result.all_messages()[-2:]\n+    assert result.new_messages() == result.all_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "733e2ef80b85e7ccd8945fe237c6524cb4bce177",
           "user": {
             "login": "madanlalit",
@@ -6109,7 +6357,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6200,7 +6448,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6316,7 +6564,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6407,7 +6655,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6523,7 +6771,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6781,7 +7029,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6943,7 +7191,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -6997,7 +7245,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6mKPa0",
           "diff_hunk": "@@ -216,7 +220,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ),\n         ]\n     )\n-    assert result.new_messages() == result.all_messages()[-2:]\n+    assert result.new_messages() == result.all_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "733e2ef80b85e7ccd8945fe237c6524cb4bce177",
           "user": {
             "login": "madanlalit",
@@ -7059,7 +7307,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7150,7 +7398,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7204,7 +7452,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6mKOqM",
           "diff_hunk": "@@ -152,7 +155,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ),\n         ]\n     )\n-    assert result.new_messages() == result.all_messages()[-2:]\n+    assert result.new_messages() == result.all_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "733e2ef80b85e7ccd8945fe237c6524cb4bce177",
           "user": {
             "login": "madanlalit",
@@ -7266,7 +7514,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7381,7 +7629,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7498,7 +7746,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7614,7 +7862,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7705,7 +7953,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -7821,7 +8069,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8247,7 +8495,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8363,7 +8611,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8454,7 +8702,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8508,7 +8756,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6liRB2",
           "diff_hunk": "@@ -216,7 +220,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ),\n         ]\n     )\n-    assert result.new_messages() == result.all_messages()[-2:]\n+    assert result.new_messages() == result.all_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "8bd574bea9c495a725ddb9a760319a8198addfda",
           "user": {
             "login": "madanlalit",
@@ -8570,7 +8818,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8687,7 +8935,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8803,7 +9051,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -8856,7 +9104,7 @@
           "node_id": "PRRC_kwDOMMa-Ps6liGa8",
           "diff_hunk": "@@ -216,7 +220,7 @@ def process_previous_answers(messages: list[ModelMessage]) -> list[ModelMessage]\n             ),\n         ]\n     )\n-    assert result.new_messages() == result.all_messages()[-2:]\n+    assert result.new_messages() == result.all_messages()",
           "path": "tests/test_history_processor.py",
-          "commit_id": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+          "commit_id": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
           "original_commit_id": "8bd574bea9c495a725ddb9a760319a8198addfda",
           "user": {
             "login": "madanlalit",
@@ -8918,7 +9166,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9009,7 +9257,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9125,7 +9373,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9216,7 +9464,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9332,7 +9580,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9423,7 +9671,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -9893,9 +10141,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -9907,7 +10155,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -10468,9 +10716,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -10482,7 +10730,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -10843,9 +11091,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -10857,7 +11105,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -11091,9 +11339,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -11105,7 +11353,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -11313,9 +11561,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -11327,7 +11575,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -15744,9 +15992,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -15758,7 +16006,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -15920,7 +16168,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16036,7 +16284,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16127,7 +16375,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16243,7 +16491,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16334,7 +16582,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16450,7 +16698,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16541,7 +16789,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16657,7 +16905,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -16978,9 +17226,9 @@
             }
           ],
           "milestone": null,
-          "comments": 16,
+          "comments": 17,
           "created_at": "2026-01-25T14:34:10Z",
-          "updated_at": "2026-02-19T21:07:16Z",
+          "updated_at": "2026-02-20T16:50:51Z",
           "closed_at": null,
           "type": null,
           "active_lock_reason": null,
@@ -16992,7 +17240,7 @@
             "patch_url": "https://github.com/pydantic/pydantic-ai/pull/4086.patch",
             "merged_at": null
           },
-          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Explanation behind the fix\r\n- `new_messages()` now finds the first message with `run_id == state.run_id` and uses that as the start index.\r\n- After history processing, if the last message (the current `ModelRequest`) has no `run_id`, it’s set to the current run’s `run_id`.\r\n- If no message in the processed history has the current `run_id`, the index falls back to `len(messages)` (so only the new response is considered “new”).\r\n- When the request is reused from history, we explicitly set `new_message_index = len(message_history)` to avoid counting previous history as new.\r\n\r\n### Known pitfalls / Edge Cases\r\n- **Injected Messages**: Messages injected by the History Processor *before* the first message marked with `run_id` will be dropped.\r\n- **Reordering Messages**: Moving messages from history to a position *after* the first current run message will result in them being included in `new_messages()`.\r\n\r\n### Test updates\r\n- Updated the assertions for 2 tests: `test_history_processor_streaming_replaces_message_history` and `test_history_processor_run_replaces_message_history`. \r\n- Added `run_id` to remaining tests which were expecting run IDs.",
+          "body": "- Closes #3983 \r\n\r\n### Pre-Review Checklist\r\n\r\n- [x] Any **AI generated code** has been reviewed line-by-line by the human PR author, who stands by it.\r\n- [x] No **breaking changes** in accordance with the [version policy](https://github.com/pydantic/pydantic-ai/blob/main/docs/version-policy.md).\r\n- [x] **Linting and type checking** pass per `make format` and `make typecheck`.\r\n- [x] **PR title** is fit for the [release changelog](https://github.com/pydantic/pydantic-ai/releases).\r\n\r\n### Pre-Merge Checklist\r\n\r\n- [x] New **tests** for any fix or new behavior, maintaining 100% coverage.\r\n- [x] Updated **documentation** for new features and behaviors, including docstrings for API docs.\r\n\r\n### Summary\r\n- Boundary detection now relies on (`run_id`) instead of list-length deltas.\r\n\r\n### Behavior Changes\r\n\r\n- `new_messages()` starts at the first message where `run_id == state.run_id`.\r\n- For resume-without-prompt runs, boundary detection prefers the reused request:\r\n  - object identity match first,\r\n  - structural match second (`parts`, `timestamp`, `instructions`, `metadata`; intentionally excludes `run_id`),\r\n  - run_id-based detection fallback last.\r\n- After history processing, if the final `ModelRequest` has no `run_id`, we set it to the current run’s `run_id` (except the resumed-tail path where existing semantics are preserved).\r\n- If no current-run `run_id` is found, boundary falls back to `len(messages)` (so only messages appended afterward are considered new).\r\n\r\n### Known Edge Cases\r\n\r\n- Messages injected before the first current-run `run_id` and without `run_id` are excluded from `new_messages()`.\r\n- Reordered historical messages moved after the computed boundary are treated as new.\r\n- If a processor rewrites all `run_id`s away from the current run, `new_messages()` may effectively include only messages appended after processing (for example, only the response).\r\n",
           "reactions": {
             "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4086/reactions",
             "total_count": 0,
@@ -17154,7 +17402,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -17270,7 +17518,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -17361,7 +17609,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -17477,7 +17725,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -17813,7 +18061,7 @@
           "number": 4086,
           "head": {
             "ref": "fix/issue-3983-new-message-index",
-            "sha": "e36fb3be376262a7d8f7bb1df80a3e74379652c4",
+            "sha": "af44e0de01f1f3864135bbb8f111b67e80e83e26",
             "repo": {
               "id": 1131286423,
               "url": "https://api.github.com/repos/madanlalit/pydantic-ai",
@@ -19409,205 +19657,6 @@
       },
       "public": true,
       "created_at": "2026-01-21T11:48:39Z"
-    },
-    {
-      "id": "5949847150",
-      "type": "IssueCommentEvent",
-      "actor": {
-        "id": 116655920,
-        "login": "madanlalit",
-        "display_login": "madanlalit",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/madanlalit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116655920?"
-      },
-      "repo": {
-        "id": 818331198,
-        "name": "pydantic/pydantic-ai",
-        "url": "https://api.github.com/repos/pydantic/pydantic-ai"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052",
-          "repository_url": "https://api.github.com/repos/pydantic/pydantic-ai",
-          "labels_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/labels{/name}",
-          "comments_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/comments",
-          "events_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/events",
-          "html_url": "https://github.com/pydantic/pydantic-ai/issues/4052",
-          "id": 3836082252,
-          "node_id": "I_kwDOMMa-Ps7kpfhM",
-          "number": 4052,
-          "title": "Meta: Issue & PR Prioritization in the age of AI-assisted coding",
-          "user": {
-            "login": "DouweM",
-            "id": 159434,
-            "node_id": "MDQ6VXNlcjE1OTQzNA==",
-            "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/DouweM",
-            "html_url": "https://github.com/DouweM",
-            "followers_url": "https://api.github.com/users/DouweM/followers",
-            "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
-            "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
-            "organizations_url": "https://api.github.com/users/DouweM/orgs",
-            "repos_url": "https://api.github.com/users/DouweM/repos",
-            "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/DouweM/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "id": 7905065900,
-              "node_id": "LA_kwDOMMa-Ps8AAAAB1y27rA",
-              "url": "https://api.github.com/repos/pydantic/pydantic-ai/labels/meta",
-              "name": "meta",
-              "color": "8762F9",
-              "default": false,
-              "description": "high level, conceptual"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignee": {
-            "login": "DouweM",
-            "id": 159434,
-            "node_id": "MDQ6VXNlcjE1OTQzNA==",
-            "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/DouweM",
-            "html_url": "https://github.com/DouweM",
-            "followers_url": "https://api.github.com/users/DouweM/followers",
-            "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
-            "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
-            "organizations_url": "https://api.github.com/users/DouweM/orgs",
-            "repos_url": "https://api.github.com/users/DouweM/repos",
-            "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/DouweM/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "assignees": [
-            {
-              "login": "DouweM",
-              "id": 159434,
-              "node_id": "MDQ6VXNlcjE1OTQzNA==",
-              "avatar_url": "https://avatars.githubusercontent.com/u/159434?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/DouweM",
-              "html_url": "https://github.com/DouweM",
-              "followers_url": "https://api.github.com/users/DouweM/followers",
-              "following_url": "https://api.github.com/users/DouweM/following{/other_user}",
-              "gists_url": "https://api.github.com/users/DouweM/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/DouweM/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/DouweM/subscriptions",
-              "organizations_url": "https://api.github.com/users/DouweM/orgs",
-              "repos_url": "https://api.github.com/users/DouweM/repos",
-              "events_url": "https://api.github.com/users/DouweM/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/DouweM/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 10,
-          "created_at": "2026-01-21T00:58:06Z",
-          "updated_at": "2026-01-27T20:46:04Z",
-          "closed_at": null,
-          "type": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Hey Pydantic AI community!\n\nAs you may have noticed, we/I haven't been as quick to respond to issues, review PRs, or release new versions since the holidays, compared to the same-day response/review and one-release-a-day cadence we got used to during 2025.\n\n## Prioritization\n\nPart of the story is that inevitably, as the popularity of an open source project grows, so do the number of notifications that land in its maintainers' GitHub inboxes every day, meaning that last year's \"treat every contributor like a colleague and every issue/PR notification like a top priority\" approach was never going to be sustainable forever.\n\nWe were able to mostly maintain that through the first year of Pydantic AI's existence, and I know that our \"extension of your team\"-level responsiveness has been much appreciated and (not unimportantly considering that we are a business) a significant factor in converting Pydantic AI users to [Pydantic Logfire](https://pydantic.dev/logfire) customers.\n\nBut already by the last few months of the year, it was becoming clear that this user-interrupt-driven approach to prioritization was starting to get in the way of working on more significant improvements and new capabilities that will benefit everyone building agents using Pydantic AI (like [Code Mode](https://github.com/pydantic/pydantic-ai/issues/4050) (aka Programmatic Tool Calling), [Progressive Tool Disclosure](https://github.com/pydantic/pydantic-ai/issues/3590) (aka Deferred Tool Loading), [Sub-Agents](https://github.com/pydantic/pydantic-ai/issues/1978), and [Guardrails](https://github.com/pydantic/pydantic-ai/issues/1197)), whereas users' issues and PRs typically focus on improving existing features around the edges: the faster horse as opposed to the car.\n\nThankfully, the community has done an awesome job stepping in to fill the gap with packages like [pydantic-deep](https://github.com/vstorm-co/pydantic-deepagents) and more listed on <https://github.com/vstorm-co/awesome-pydantic-ai> (in line with our preference for providing strong foundations and abstractions like `AbstractToolset` and `AbstractAgent` that people can build on, as opposed to coming with every battery included), but we agree that some of those features should just be in the core framework. (I'm happy to share that we expect to ship Code Mode and Progressive Tool Disclosure in the next week or two!)\n\nThis means that we're going to need to implement an (AI-assisted!) process for prioritizing issues and PRs for response and review, more explicitly taking into account factors like the number of users who would benefit, alignment with our vision for the project in project and AI engineering in general, the amount of effort that was put in by the contributor, and the time it will take us to aid them in getting it to the point where we'd be confident merging it and maintaining it indefinitely.\n\nThe bottom line is that we're dropping the expectation that every single issue/PR will get human attention, quickly or at all, while making it clear what motivated contributors can do to get their favorite items up the queue. \n\nI have some ideas on how we can do this that I will share later this week, and I'd love to hear your suggestions as well.\n\n## Impact of AI-assisted coding on open source contributions\n\n\"More usage means more issues and PRs\" is only half of the story, though, as eloquently pointed out by a user on [an issue](https://github.com/pydantic/pydantic-ai/issues/3885) created during the holidays that took me much longer to get to than I would've liked:\n\n> \"**Is AI actually making y'all slower rather than faster?**\"\n\nAs someone who's [been working full time on open source developer tools](https://douwe.me/) for the past 10 years, the answer has in recent months unfortunately become \"**yes**\".\n\nIt used to be that it took significantly more effort for a contributor to create a PR or address a round of feedback than it took for a maintainer to review a PR, creating some natural back-pressure on the number of PRs that are requesting a new round of review each day. Similarly, the ratio between new issues and PRs would typically favor the former, at least when it came to new features, as it's much easier to share an idea than to go through the effort of building it -- and most people wouldn't anyway until they'd validated that the maintainer would accept a particular solution.\n\nA single maintainer could arrive to 20 new issues and 10 new PRs on Monday morning, review them all over the course of a few hours, and then expect to have code trickle in throughout the week as contributors found time to incorporate the feedback or start on an issue, plus some amount of new items each day, at a similar rate to other issues/PRs being closed/merged. \n\nEspecially large PRs adding significant new functionality and public APIs, that consume the most time and mental energy to review, would typically be spread out over multiple weeks this way, ensuring both contributor and maintainer spent enough time with it in mind to be confident in the design and implications, and allowing maintainers to juggle them along with (much more numerous) smaller PRs (that would get more frequent updates and reviews) and work they want to prioritize themselves.\n\nMaintainers would also be able to assume that any big PR whose code looked good had significant mental effort put into it by another competent engineer who themselves needed the feature and thus had the necessary context to make design decisions about it, allowing the maintainer to offload some of the mental load on the contributor and juggle more PRs and context switches at the same time. \n\nObviously none of that is the case anymore today, meaning that on top of the community of users and contributors growing, the amount of work any given community member can create for the maintainer has been growing quickly as well. (To give you an idea, after the holidays I came back to about 150 new GitHub notifications, more than half of which were PRs in want of review, and most mornings I arrive to 40+ new notifications of which at least 2/3rds are PRs.)\n\nOf course, maintainers can and should also use AI to reduce their review workload by automating (parts of) the code review process and moving various types of project-specific rules and \"things only the maintainer knows\" from review time to development time through things like `AGENTS.md` and specialized sub-agents, and I'm excited to start implementing those for Pydantic AI as well. \n\nBut at the end of the day, the maintainer remains responsible for every line of code, behavior, and public API that makes it into the project (in a sense, a maintainer owes its users that in return for the trust that they have placed in them by choosing the project as part of their stack), and thus their eyes and brain will remain a bottleneck until that expectation changes (which it very well might in coming years, if all open source code converges to \"by AI, for AI\").\n\nSo in addition to changes we need to make around triage and prioritization in general, I think we need to look into ways to _increase_ the barrier for contribution, in order to:\n- ensure that the mental load and sense of responsibility for the changes (especially the behavior and public API) are appropriately shared between the contributor and maintainer,\n\t- meaning, among other things, that the maintainer can never be the first human to critically read a PR line-by-line -- the contributor has to be the \"first line of defense\" between the AI and the maintainer, and understand why every line is there in that particular way,\n- discourage going straight-to-code on big changes in a well-meaning attempt to be helpful, when:\n    - the feature really should've spent some more time in the planning stage (as in: hashing out the details in the issue, likely with help from e.g. Claude Code's plan mode), or when\n    - the user was not well suited to implement it as they did not themselves experience the problem or have a need for the solution -- they just wanted to be helpful and/or boost their GitHub numbers.\n\nI have some ideas on that front as well that I will share later this week -- and I'd love to hear your thoughts too.\n\nPS. If you're interested in reading what other open source maintainers have written on the subject, Claude found me these recent discussions on Hacker News:\n- [\"We need a clearer framework for AI-assisted contributions to open source\"](https://news.ycombinator.com/item?id=45731321)\n- [\"Are open source maintainers going to be the main sufferers from LLM\"](https://news.ycombinator.com/item?id=46637295 )\n- [\"AI and Open Source: A Maintainer's Take\"](https://news.ycombinator.com/item?id=46453713  )\n- [\"AI tooling must be disclosed for contributions\"](https://github.com/ghostty-org/ghostty/pull/8289)\n- [\"Agent Psychosis: Are We Going Insane?\"](https://news.ycombinator.com/item?id=46666777)\n- [\"Ghostty: AI Usage Policy\"](https://news.ycombinator.com/item?id=46730504)",
-          "reactions": {
-            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/reactions",
-            "total_count": 17,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 17,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null,
-          "pinned_comment": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3776506296",
-          "html_url": "https://github.com/pydantic/pydantic-ai/issues/4052#issuecomment-3776506296",
-          "issue_url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/4052",
-          "id": 3776506296,
-          "node_id": "IC_kwDOMMa-Ps7hGOm4",
-          "user": {
-            "login": "madanlalit",
-            "id": 116655920,
-            "node_id": "U_kgDOBvQHMA",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116655920?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/madanlalit",
-            "html_url": "https://github.com/madanlalit",
-            "followers_url": "https://api.github.com/users/madanlalit/followers",
-            "following_url": "https://api.github.com/users/madanlalit/following{/other_user}",
-            "gists_url": "https://api.github.com/users/madanlalit/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/madanlalit/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/madanlalit/subscriptions",
-            "organizations_url": "https://api.github.com/users/madanlalit/orgs",
-            "repos_url": "https://api.github.com/users/madanlalit/repos",
-            "events_url": "https://api.github.com/users/madanlalit/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/madanlalit/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2026-01-21T07:04:55Z",
-          "updated_at": "2026-01-21T07:04:55Z",
-          "body": "@DouweM I hope this doesn't restrict people who genuinely want to make valuable contributions.",
-          "pin": null,
-          "reactions": {
-            "url": "https://api.github.com/repos/pydantic/pydantic-ai/issues/comments/3776506296/reactions",
-            "total_count": 1,
-            "+1": 1,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-01-21T07:04:55Z",
-      "org": {
-        "id": 110818415,
-        "login": "pydantic",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/pydantic",
-        "avatar_url": "https://avatars.githubusercontent.com/u/110818415?"
-      }
     }
   ]
 }
