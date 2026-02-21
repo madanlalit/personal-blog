@@ -101,7 +101,7 @@
 
 
 [data-theme="light"] {
-  /* OpenAI Playground - Minimalist */
+  /* Minimalist Light */
   --bg-primary: #FFFFFF;
   --bg-secondary: #F7F7F8;
   --text-primary: #000000;
@@ -111,6 +111,34 @@
   --accent-hover: #333333;
   --border: #E5E5E5;
   --selection-bg: #000000;
+  --selection-text: #FFFFFF;
+}
+
+[data-theme="dark"] {
+  /* Minimalist Dark — exact inverse of light */
+  --bg-primary: #000000;
+  --bg-secondary: #080807;
+  --text-primary: #FFFFFF;
+  --text-secondary: #BFBEB0;
+  --text-tertiary: #71715F;
+  --accent: #FFFFFF;
+  --accent-hover: #CCCCCC;
+  --border: #1A1A1A;
+  --selection-bg: #FFFFFF;
+  --selection-text: #000000;
+}
+
+[data-theme="blue"] {
+  /* Light with Blue accent */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F7FA;
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A4A6A;
+  --text-tertiary: #9090B0;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --border: #E0E4EB;
+  --selection-bg: #2563EB;
   --selection-text: #FFFFFF;
 }
 

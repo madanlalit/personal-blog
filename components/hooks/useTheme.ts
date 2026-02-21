@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-const THEMES = ['dracula', 'light'] as const;
+const THEMES = ['dracula', 'light', 'dark', 'blue'] as const;
 export type Theme = typeof THEMES[number];
 const THEME_STORAGE_KEY = 'app-theme';
 
