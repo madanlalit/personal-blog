@@ -468,6 +468,48 @@
     margin-top: 1rem;
 }
 
+/* --- NOW WORKING ON --- */
+.now-working {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nw-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.nw-indicator {
+    font-size: 0.5rem;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.nw-indicator.pulse {
+    color: var(--accent);
+    animation: nwPulse 2s ease-in-out infinite;
+}
+
+.nw-text {
+    font-family: var(--font-primary);
+}
+
+@keyframes nwPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
 .nl-head {
     font-size: var(--font-size-small);
     color: var(--accent);

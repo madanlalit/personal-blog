@@ -157,13 +157,32 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                                 LINKEDIN
                             </a>
                             <a
-                                href="https://x.com/lalitmadan/"
+                                href="https://x.com/madanlalit68/"
                                 className="comm-link"
                                 target="_blank"
                                 rel="noreferrer"
                             >
                                 X
                             </a>
+                        </div>
+                    </div>
+
+                    {/* 4. NOW WORKING ON */}
+                    <div className="sys-module">
+                        <h2 className="mod-header">{'/// NOW_WORKING_ON'}</h2>
+                        <div className="now-working">
+                            <div className="nw-item">
+                                <span className="nw-indicator pulse">●</span>
+                                <span className="nw-text">Building AI agents</span>
+                            </div>
+                            <div className="nw-item">
+                                <span className="nw-indicator">○</span>
+                                <span className="nw-text">OSS contributions</span>
+                            </div>
+                            <div className="nw-item">
+                                <span className="nw-indicator">○</span>
+                                <span className="nw-text">Writing blogs</span>
+                            </div>
                         </div>
                     </div>
                 </aside>
