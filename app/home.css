@@ -375,80 +375,6 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.now-protocol-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.protocol-row {
-    display: grid;
-    grid-template-columns: 92px 1fr auto;
-    align-items: center;
-    gap: 0;
-    padding: 0.5rem 0.6rem;
-    border: 1px solid var(--border);
-}
-
-.protocol-key {
-    color: var(--text-tertiary);
-    font-size: var(--font-size-xxs);
-    letter-spacing: 0.08em;
-}
-
-.protocol-detail {
-    color: var(--text-primary);
-    font-size: var(--font-size-xs);
-    line-height: 1.35;
-    word-break: break-word;
-}
-
-.protocol-state {
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    font-size: var(--font-size-xxs);
-    font-family: var(--font-primary);
-    letter-spacing: 0.05em;
-    padding: 0.2rem 0.4rem;
-}
-
-.protocol-state.active {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(168, 185, 168, 0.08);
-}
-
-.protocol-state.passive {
-    color: var(--text-tertiary);
-}
-
-.protocol-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 0.6rem;
-    padding-top: 0.5rem;
-    border-top: 1px dashed var(--border);
-}
-
-.protocol-sync {
-    color: var(--text-tertiary);
-    font-size: var(--font-size-xxs);
-    font-family: var(--font-primary);
-}
-
-.protocol-link {
-    color: var(--accent);
-    font-size: var(--font-size-xs);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-}
-
-.protocol-link:hover {
-    text-decoration: underline;
-}
-
 .timeline-entry {
     display: flex;
     gap: 1rem;
@@ -725,15 +651,6 @@
         padding: 0.75rem;
     }
 
-    .protocol-row {
-        grid-template-columns: 84px 1fr auto;
-        padding: 0.45rem 0.5rem;
-    }
-
-    .protocol-detail {
-        font-size: var(--font-size-xxs);
-    }
-
     .clean-card h3 {
         font-size: 1.1rem;
     }
@@ -902,22 +819,6 @@
         font-size: 0.65rem;
     }
 
-    .protocol-row {
-        grid-template-columns: 76px 1fr;
-        gap: 0;
-        padding: 0.45rem 0.5rem;
-    }
-
-    .protocol-state {
-        justify-self: start;
-    }
-
-    .protocol-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
-    }
-
     .timeline-entry {
         padding-bottom: 1rem;
     }
@@ -980,9 +881,6 @@
         max-width: 100px;
     }
 
-    .now-protocol-module .mod-header {
-        margin-bottom: 0.75rem;
-    }
 }
 
 /* ===========================================
@@ -1045,15 +943,6 @@
     /* Elements */
     .beacon-ring {
         display: none;
-    }
-
-    .protocol-row {
-        grid-template-columns: 68px 1fr;
-        padding: 0.4rem 0.45rem;
-    }
-
-    .protocol-detail {
-        font-size: 0.65rem;
     }
 
     .comm-link {
@@ -1120,14 +1009,6 @@
         max-width: 100%;
     }
 
-    .now-protocol-module .mod-header {
-        margin-bottom: 0.5rem;
-        font-size: 0.55rem;
-    }
-
-    .now-protocol-module .mod-header .mod-meta {
-        display: none;
-    }
 }
 
 /* ===========================================
@@ -1138,9 +1019,6 @@
         margin-top: var(--space-xs);
     }
 
-    .now-protocol-module .mod-header {
-        font-size: 0.5rem;
-    }
 }
 
 /* ===========================================
@@ -1166,22 +1044,6 @@
 
     .tele-row {
         font-size: 0.5rem;
-    }
-
-    .protocol-row {
-        grid-template-columns: 62px 1fr;
-        padding: 0.35rem 0.4rem;
-    }
-
-    .protocol-key,
-    .protocol-state,
-    .protocol-sync {
-        font-size: 0.55rem;
-    }
-
-    .protocol-detail,
-    .protocol-link {
-        font-size: 0.62rem;
     }
 
     .comm-link {

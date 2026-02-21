@@ -22,24 +22,6 @@ const SYSTEM_LOGS = [
     { id: 4, type: 'INFO', msg: 'Loading latest project modules...' },
 ];
 
-const NOW_PROTOCOL = [
-    {
-        key: 'BUILDING',
-        detail: 'Agent-ready product experiences with clean UX flows',
-        state: 'ACTIVE',
-    },
-    {
-        key: 'LEARNING',
-        detail: 'Context engineering patterns for reliable AI systems',
-        state: 'TRACKING',
-    },
-    {
-        key: 'WRITING',
-        detail: 'Field notes from real-world experiments and launches',
-        state: 'QUEUED',
-    },
-];
-
 interface HomeClientProps {
     initialPosts: PostMeta[];
 }
@@ -214,44 +196,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                         </div>
                     </div>
 
-                    {/* 5. NOW PROTOCOL */}
-                    <div className="sys-module now-protocol-module">
-                        <h2 className="mod-header">
-                            <span>{'/// NOW_PROTOCOL'}</span>
-                            <span className="mod-meta">LOCAL_FOCUS</span>
-                        </h2>
-
-                        <div className="now-protocol-list">
-                            {NOW_PROTOCOL.map((item) => (
-                                <div key={item.key} className="protocol-row">
-                                    <span className="protocol-key">{item.key}</span>
-                                    <span className="protocol-detail">{item.detail}</span>
-                                    <span
-                                        className={`protocol-state ${item.state === 'ACTIVE' ? 'active' : 'passive'}`}
-                                    >
-                                        {item.state}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="protocol-footer">
-                            <span className="protocol-sync">
-                                SYNC:
-                                {time
-                                    ? time.toLocaleTimeString('en-GB', {
-                                        hour12: false,
-                                        hour: '2-digit',
-                                        minute: '2-digit',
-                                    })
-                                    : '--:--'}
-                            </span>
-                            <Link href="/projects" className="protocol-link">
-                                OPEN_WORKBENCH
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* 6. LATEST BLOG POSTS */}
+                    {/* 5. LATEST BLOG POSTS */}
                     <div className="sys-module">
                         <h2 className="mod-header">
                             <span>{'/// SYSTEM_[B]LOGS'}</span>
