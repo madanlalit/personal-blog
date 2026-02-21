@@ -3,6 +3,11 @@
 /* Container with max-width matching other pages */
 /* Container with max-width matching other pages */
 .projects-page {
+    --arch-font: var(--font-primary);
+    --arch-border: var(--border, #e5e5e5);
+    --arch-accent: var(--accent, #2563eb);
+    --arch-text: var(--text-primary, #111);
+    --arch-muted: var(--text-tertiary, #888);
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: var(--space-xl) var(--space-lg);

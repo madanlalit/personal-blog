@@ -1,18 +1,12 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
 import PostCard from '@/components/ui/PostCard';
 import './home.css';
 import '@/components/ui/Typewriter.css';
-
-// --- TYPES ---
-import type { GitHubEvent } from '@/lib/github';
-
-// --- TYPES ---
-
 
 const SKILLS = [
     { name: 'Python / AI', level: 75 },
@@ -23,89 +17,37 @@ const SKILLS = [
 
 const SYSTEM_LOGS = [
     { id: 1, type: 'INFO', msg: 'Initializing system interface...' },
-    { id: 2, type: 'SUCCESS', msg: 'Connected to GitHub API (Status: 200)' },
+    { id: 2, type: 'SUCCESS', msg: 'Loaded local content index (Status: OK)' },
     { id: 3, type: 'WARN', msg: 'Coffee levels low (15%) - Refill advised' },
     { id: 4, type: 'INFO', msg: 'Loading latest project modules...' },
 ];
 
+const NOW_PROTOCOL = [
+    {
+        key: 'BUILDING',
+        detail: 'Agent-ready product experiences with clean UX flows',
+        state: 'ACTIVE',
+    },
+    {
+        key: 'LEARNING',
+        detail: 'Context engineering patterns for reliable AI systems',
+        state: 'TRACKING',
+    },
+    {
+        key: 'WRITING',
+        detail: 'Field notes from real-world experiments and launches',
+        state: 'QUEUED',
+    },
+];
+
 interface HomeClientProps {
     initialPosts: PostMeta[];
-    githubData: {
-        events: GitHubEvent[];
-        lastUpdated: number;
-    } | null;
 }
 
-
-
-// --- HELPER: PROCESS HEATMAP ---
-const processHeatmap = (events: GitHubEvent[]) => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    // Initialize last 30 days with dates
-    const dailyData = Array(30).fill(null).map((_, i) => {
-        const d = new Date(today);
-        d.setDate(d.getDate() - (29 - i));
-        return {
-            count: 0,
-            date: d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-            iso: d.toISOString().split('T')[0]
-        };
-    });
-
-    const dateMap = new Map();
-    dailyData.forEach((d, i) => dateMap.set(d.iso, i));
-
-    const contributionEvents = events.filter((e) => {
-        if (e.type === 'PushEvent') return true;
-        if (e.type === 'PullRequestEvent' && e.payload.action === 'opened') return true;
-        if (e.type === 'IssuesEvent' && e.payload.action === 'opened') return true;
-        if (e.type === 'CreateEvent') return true;
-        return false;
-    });
-
-    contributionEvents.forEach((e) => {
-        const eventDate = new Date(e.created_at);
-        const isoDate = eventDate.toISOString().split('T')[0];
-
-        if (dateMap.has(isoDate)) {
-            const idx = dateMap.get(isoDate);
-            let count = 0;
-
-            if (e.type === 'PushEvent') {
-                count = e.payload.commits ? e.payload.commits.length : 1;
-            } else {
-                count = 1;
-            }
-
-            dailyData[idx].count += count;
-        }
-    });
-
-    return dailyData;
-};
-
-export default function HomeClient({ initialPosts, githubData }: HomeClientProps) {
+export default function HomeClient({ initialPosts }: HomeClientProps) {
     const [time, setTime] = useState<Date | null>(null);
     const [skillsAnimated, setSkillsAnimated] = useState(false);
     const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
-
-    // Derive state from props using useMemo
-    const { activityMap, ghStatus, dataTimestamp } = useMemo(() => {
-        if (githubData) {
-            return {
-                activityMap: processHeatmap(githubData.events),
-                ghStatus: 'ONLINE' as const,
-                dataTimestamp: githubData.lastUpdated
-            };
-        }
-        return {
-            activityMap: Array(30).fill({ count: 0, date: '' }),
-            ghStatus: 'OFFLINE' as const,
-            dataTimestamp: null
-        };
-    }, [githubData]);
 
     // --- LIVE CLOCK ---
     useEffect(() => {
@@ -129,13 +71,6 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
             }, 500 + index * 400);
         });
     }, []);
-
-    const getIntensity = (count: number) => {
-        if (count === 0) return 0.1;
-        if (count <= 2) return 0.4;
-        if (count <= 5) return 0.7;
-        return 1;
-    };
 
     return (
         <div className="home-container fade-in">
@@ -172,10 +107,8 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                         </span>
                     </div>
                     <div className="tele-row">
-                        <span className="t-label">NET</span>
-                        <span className={`t-val ${ghStatus === 'ONLINE' ? 'active' : 'offline'}`}>
-                            {ghStatus}
-                        </span>
+                        <span className="t-label">MODE</span>
+                        <span className="t-val active">BUILD</span>
                     </div>
                 </div>
             </header>
@@ -281,37 +214,40 @@ export default function HomeClient({ initialPosts, githubData }: HomeClientProps
                         </div>
                     </div>
 
-                    {/* 5. GITHUB HEATMAP MODULE */}
-                    <div className="sys-module activity-wrapper">
+                    {/* 5. NOW PROTOCOL */}
+                    <div className="sys-module now-protocol-module">
                         <h2 className="mod-header">
-                            <span>{'/// COMMIT_HISTORY'}</span>
-                            {ghStatus === 'ONLINE' && dataTimestamp && (
-                                <span className="mod-meta" style={{ color: 'var(--text-secondary)' }}>
-                                    DATA_SYNCED:{' '}
-                                    {new Date(dataTimestamp).toLocaleTimeString('en-US', {
-                                        hour: '2-digit',
-                                        minute: '2-digit',
-                                    })}
-                                </span>
-                            )}
-                            {ghStatus === 'OFFLINE' && (
-                                <span className="mod-meta error-text">DATA_Unavailable</span>
-                            )}
-
+                            <span>{'/// NOW_PROTOCOL'}</span>
+                            <span className="mod-meta">LOCAL_FOCUS</span>
                         </h2>
 
-                        <div className="heatmap-strip">
-                            {activityMap.map((item, i) => (
-                                <div
-                                    key={i}
-                                    className="heat-bit"
-                                    style={{
-                                        opacity: getIntensity(item.count),
-                                        backgroundColor: item.count > 0 ? 'var(--accent)' : 'var(--text-tertiary)',
-                                    }}
-                                    title={`${item.count} contributions on ${item.date}`}
-                                />
+                        <div className="now-protocol-list">
+                            {NOW_PROTOCOL.map((item) => (
+                                <div key={item.key} className="protocol-row">
+                                    <span className="protocol-key">{item.key}</span>
+                                    <span className="protocol-detail">{item.detail}</span>
+                                    <span
+                                        className={`protocol-state ${item.state === 'ACTIVE' ? 'active' : 'passive'}`}
+                                    >
+                                        {item.state}
+                                    </span>
+                                </div>
                             ))}
+                        </div>
+                        <div className="protocol-footer">
+                            <span className="protocol-sync">
+                                SYNC:
+                                {time
+                                    ? time.toLocaleTimeString('en-GB', {
+                                        hour12: false,
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                    })
+                                    : '--:--'}
+                            </span>
+                            <Link href="/projects" className="protocol-link">
+                                OPEN_WORKBENCH
+                            </Link>
                         </div>
                     </div>
 
