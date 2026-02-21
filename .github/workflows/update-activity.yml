@@ -20,14 +20,11 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Fetch Activity Data
-        run: node scripts/update-github-data.js
-
       - name: Fetch Starred Repos
         run: node scripts/update-starred-repos.js
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update github data [skip ci]"
-          file_pattern: public/github-data.json public/starred-repos.json
+          commit_message: "chore: update starred repos [skip ci]"
+          file_pattern: public/starred-repos.json
