@@ -73,35 +73,9 @@
 }
 
 /* Force Dark Mode defaults */
-[data-theme="light"] {
-  /* "Paper Terminal" mode if forced */
-  --bg-primary: #F0F2F5;
-  --bg-secondary: #FFFFFF;
-  --text-primary: #2D3138;
-  --text-secondary: #6B7685;
-  --text-tertiary: #A0AAB8;
-  --accent: #4F6F52;
-  /* Darker Sage */
-  --border: #D1D5DB;
-  --selection-bg: #D1D5DB;
-  --selection-text: #2D3138;
-}
 
-[data-theme="amber"] {
-  /* Retro CRT Amber */
-  --bg-primary: #181000;
-  /* Deepest Amber Black */
-  --bg-secondary: #2B1D00;
-  --text-primary: #FFB000;
-  /* Amber Glow */
-  --text-secondary: #CC8F00;
-  --text-tertiary: #664800;
-  --accent: #FFB000;
-  --accent-hover: #FFD574;
-  --border: #664800;
-  --selection-bg: #FFB000;
-  --selection-text: #181000;
-}
+
+
 
 [data-theme="dracula"] {
   /* Dracula Theme */
@@ -120,55 +94,13 @@
   --selection-text: #282A36;
 }
 
-[data-theme="sage"] {
-  /* Default Sage/Nord (Explicit) */
-  --bg-primary: #18191A;
-  --bg-secondary: #202224;
-  --text-primary: #D4D4D4;
-  --text-secondary: #8B949E;
-  --text-tertiary: #5C6370;
-  --accent: #A8B9A8;
-  --accent-hover: #C5D4C5;
-  --border: #3E4451;
-  --selection-bg: #3E4451;
-  --selection-text: #FFFFFF;
-}
 
-[data-theme="cyan"] {
-  /* Cyber Blue/Cyan */
-  --bg-primary: #051923;
-  --bg-secondary: #003554;
-  --text-primary: #00F0FF;
-  /* Bright Cyan */
-  --text-secondary: #00A6FB;
-  --text-tertiary: #0582CA;
-  --accent: #00F0FF;
-  --accent-hover: #50F7FF;
-  --border: #006494;
-  --selection-bg: #00F0FF;
-  --selection-text: #051923;
-}
 
-[data-theme="matrix"] {
-  /* God Mode - Cyberpunk/Matrix */
-  --bg-primary: #0D0208;
-  /* Deep Void */
-  --bg-secondary: #001f0f;
-  --text-primary: #00FF41;
-  /* CRT Green */
-  --text-secondary: #008F11;
-  --text-tertiary: #003B00;
-  --accent: #D00000;
-  /* Error Red Accent */
-  --accent-hover: #FF0000;
-  --border: #003B00;
-  --selection-bg: #00FF41;
-  --selection-text: #000000;
-  --font-primary: 'Courier New', monospace;
-  /* Harsh retro font */
-}
 
-[data-theme="openai"] {
+
+
+
+[data-theme="light"] {
   /* OpenAI Playground - Minimalist */
   --bg-primary: #FFFFFF;
   --bg-secondary: #F7F7F8;

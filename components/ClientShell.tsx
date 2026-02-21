@@ -3,7 +3,6 @@
 import { useState, useEffect, useLayoutEffect } from 'react';
 import { useTheme } from '@/components/hooks/useTheme';
 import useSound from '@/components/hooks/useSound';
-import useKonamiCode from '@/components/hooks/useKonamiCode';
 import Commander from '@/components/features/terminal/Commander';
 import CommandLine from '@/components/features/terminal/CommandLine';
 import BootScreen from '@/components/features/system/BootScreen';
@@ -38,10 +37,6 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
         }
     }, []);
 
-    // Konami code easter egg
-    useKonamiCode(() => {
-        setTheme('matrix');
-    });
 
     // Global hover sounds
     useEffect(() => {
@@ -95,12 +90,12 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
             )}
 
             {/* Main Application */}
-            <div 
-                className="app tui-window fade-in" 
-                style={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    height: '100vh', 
+            <div
+                className="app tui-window fade-in"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100vh',
                     overflow: 'hidden',
                     opacity: booted ? 1 : 0,
                     transition: 'opacity 0.5s ease-in'

@@ -2,12 +2,12 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-const THEMES = ['sage', 'light', 'amber', 'dracula', 'cyan', 'matrix', 'openai'] as const;
+const THEMES = ['dracula', 'light'] as const;
 export type Theme = typeof THEMES[number];
 const THEME_STORAGE_KEY = 'app-theme';
 
 export const useTheme = () => {
-    const [theme, setThemeState] = useState<Theme>('openai');
+    const [theme, setThemeState] = useState<Theme>('light');
     const [mounted, setMounted] = useState(false);
 
     // Load theme from localStorage after mount (SSR-safe)
