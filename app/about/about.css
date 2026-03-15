@@ -588,6 +588,71 @@
     transform: scale(1.1);
 }
 
+/* Contact Form (WebMCP declarative tool) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px dashed var(--border);
+}
+
+.contact-input {
+    width: 100%;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    padding: var(--space-sm) var(--space-md);
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.contact-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.contact-input:focus {
+    border-color: var(--accent);
+}
+
+.contact-textarea {
+    min-height: 72px;
+}
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    transition: all 0.2s;
+    align-self: flex-start;
+}
+
+.contact-submit:hover:not(:disabled) {
+    background: transparent;
+    color: var(--accent);
+}
+
+.contact-submit:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
 /* Tablet (768px) */
 @media (max-width: 768px) {
     .about-container {

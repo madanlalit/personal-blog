@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, X, ArrowRight, MapPin, Briefcase, GraduationCap, Heart, Download } from 'lucide-react';
+import { Github, Linkedin, X, ArrowRight, MapPin, Briefcase, GraduationCap, Heart, Download, Send } from 'lucide-react';
 import Frame from '@/components/ui/Frame';
 import Typewriter from '@/components/ui/Typewriter';
 import { useCounter } from '@/components/hooks/useCounter';
@@ -59,6 +59,19 @@ export default function AboutClient() {
     const { count: projectsCount, setRef: projectsRef } = useCounter(5, 1800);
     const { count: linesCount, setRef: linesRef } = useCounter(15000, 2000);
     const [activeExp, setActiveExp] = useState(0);
+    const [contactStatus, setContactStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleContact = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setContactStatus('sending');
+        // Simulate sending — replace with your preferred email/API integration
+        setTimeout(() => {
+            setContactStatus('sent');
+            formRef.current?.reset();
+            setTimeout(() => setContactStatus('idle'), 3000);
+        }, 800);
+    };
 
     return (
         <div className="about-container fade-in">
@@ -157,6 +170,52 @@ export default function AboutClient() {
                     <div className="social-grid">
                         {SOCIAL_LINKS.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="social-link"><link.icon size={18} className="social-icon" /><span className="social-label">{link.label}</span></a>)}
                     </div>
+
+                    {/* WebMCP declarative tool — AI agents auto-discover this form as "contact_me" */}
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                    <form
+                        ref={formRef}
+                        onSubmit={handleContact}
+                        className="contact-form"
+                        {...({ 'tool-name': 'contact_me', 'tool-description': 'Send Lalit a message or collaboration request' } as any)}
+                    >
+                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                        <input
+                            name="name"
+                            type="text"
+                            placeholder="Your name"
+                            required
+                            className="contact-input"
+                            {...({ 'tool-param-description': 'Your name' } as any)}
+                        />
+                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                        <input
+                            name="email"
+                            type="email"
+                            placeholder="Your email"
+                            required
+                            className="contact-input"
+                            {...({ 'tool-param-description': 'Your email address' } as any)}
+                        />
+                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                        <textarea
+                            name="message"
+                            placeholder="Your message or collaboration idea"
+                            required
+                            rows={3}
+                            className="contact-input contact-textarea"
+                            {...({ 'tool-param-description': 'Your message or inquiry' } as any)}
+                        />
+                        <button
+                            type="submit"
+                            className="contact-submit"
+                            disabled={contactStatus !== 'idle'}
+                        >
+                            {contactStatus === 'idle' && <><Send size={13} /> SEND_MESSAGE</>}
+                            {contactStatus === 'sending' && 'TRANSMITTING...'}
+                            {contactStatus === 'sent' && '✓ MESSAGE_SENT'}
+                        </button>
+                    </form>
                 </Frame>
             </div>
         </div>
