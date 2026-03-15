@@ -7,8 +7,10 @@ import type { PostMeta } from '@/lib/types';
 // Extend the Navigator interface to include WebMCP methods
 declare global {
     interface Navigator {
-        registerTool?: (tool: WebMCPTool) => void;
-        unregisterTool?: (name: string) => void;
+        modelContext?: {
+            registerTool: (tool: WebMCPTool) => void;
+            unregisterTool: (name: string) => void;
+        };
     }
 }
 
@@ -30,10 +32,10 @@ export default function WebMCPProvider() {
         // Only register if the browser has native WebMCP support
         // (Chrome behind chrome://flags/#web-mcp, expected stable H2 2026).
         // No polyfill — once a stable one is published it can be added here.
-        if (typeof navigator.registerTool !== 'function') return;
+        if (!navigator.modelContext?.registerTool) return;
 
         // Tool 1: Get all posts
-        navigator.registerTool({
+        navigator.modelContext.registerTool({
             name: 'get_all_posts',
             description: 'Returns a list of all blog posts with their title, slug, date, excerpt, tags, and category.',
             inputSchema: {
@@ -48,7 +50,7 @@ export default function WebMCPProvider() {
         });
 
         // Tool 2: Search posts
-        navigator.registerTool({
+        navigator.modelContext.registerTool({
             name: 'search_posts',
             description: 'Search blog posts by a keyword. Matches against title, excerpt, tags, and category.',
             inputSchema: {
@@ -74,7 +76,7 @@ export default function WebMCPProvider() {
         });
 
         // Tool 3: Get full post by slug
-        navigator.registerTool({
+        navigator.modelContext.registerTool({
             name: 'get_post',
             description: 'Retrieve the full content of a blog post by its slug.',
             inputSchema: {
@@ -93,7 +95,7 @@ export default function WebMCPProvider() {
         });
 
         // Tool 4: Navigate to a page
-        navigator.registerTool({
+        navigator.modelContext.registerTool({
             name: 'navigate_to',
             description: 'Navigate the browser to a path on this site, e.g. "/about" or "/post/what-are-agents".',
             inputSchema: {
@@ -114,7 +116,7 @@ export default function WebMCPProvider() {
 
         return () => {
             ['get_all_posts', 'search_posts', 'get_post', 'navigate_to'].forEach((name) => {
-                navigator.unregisterTool?.(name);
+                navigator.modelContext?.unregisterTool(name);
             });
         };
     }, [router]);
