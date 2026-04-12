@@ -13,7 +13,7 @@ import './experience.css';
 const EXPERIENCE = [
     {
         id: 1,
-        period: 'Apr 2025 — Present',
+        period: 'Apr 2025 — Jun 2026',
         role: 'Software Engineer I',
         company: 'Cisco Systems',
         location: 'Remote',
