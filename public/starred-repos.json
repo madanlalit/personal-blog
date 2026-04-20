@@ -1,14 +1,56 @@
 {
-  "lastUpdated": 1776679271930,
+  "lastUpdated": 1776688997493,
   "repos": [
     {
       "id": "STARRED-01",
+      "name": "heimdall",
+      "fullName": "madanlalit/heimdall",
+      "description": "The all-seeing agent for web automation.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/heimdall",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "browser-automation",
+        "generative-ai",
+        "llm",
+        "open-source",
+        "openai",
+        "python",
+        "self-hosted"
+      ],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      }
+    },
+    {
+      "id": "STARRED-02",
+      "name": "personal-blog",
+      "fullName": "madanlalit/personal-blog",
+      "description": "A retro-style personal blog with an interactive terminal interface.",
+      "language": "TypeScript",
+      "stars": 4,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/personal-blog",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      }
+    },
+    {
+      "id": "STARRED-03",
       "name": "langgraph",
       "fullName": "langchain-ai/langgraph",
       "description": "Build resilient language agents as graphs.",
       "language": "Python",
-      "stars": 29714,
-      "forks": 5075,
+      "stars": 29736,
+      "forks": 5076,
       "url": "https://github.com/langchain-ai/langgraph",
       "topics": [
         "agents",
@@ -36,13 +78,13 @@
       }
     },
     {
-      "id": "STARRED-02",
+      "id": "STARRED-04",
       "name": "hyperframes",
       "fullName": "heygen-com/hyperframes",
       "description": "Write HTML. Render video. Built for agents.",
       "language": "TypeScript",
-      "stars": 7484,
-      "forks": 575,
+      "stars": 7618,
+      "forks": 584,
       "url": "https://github.com/heygen-com/hyperframes",
       "topics": [
         "ai",
@@ -63,13 +105,13 @@
       }
     },
     {
-      "id": "STARRED-03",
+      "id": "STARRED-05",
       "name": "browser-harness",
       "fullName": "browser-use/browser-harness",
       "description": "Self-healing browser harness that enables LLMs to complete any task.",
       "language": "Python",
-      "stars": 2848,
-      "forks": 220,
+      "stars": 2981,
+      "forks": 224,
       "url": "https://github.com/browser-use/browser-harness",
       "topics": [],
       "owner": {
@@ -78,13 +120,13 @@
       }
     },
     {
-      "id": "STARRED-04",
+      "id": "STARRED-06",
       "name": "wterm",
       "fullName": "vercel-labs/wterm",
       "description": "A terminal emulator for the web",
       "language": "TypeScript",
-      "stars": 2156,
-      "forks": 80,
+      "stars": 2172,
+      "forks": 81,
       "url": "https://github.com/vercel-labs/wterm",
       "topics": [],
       "owner": {
@@ -93,12 +135,12 @@
       }
     },
     {
-      "id": "STARRED-05",
+      "id": "STARRED-07",
       "name": "system-design-101",
       "fullName": "ByteByteGoHq/system-design-101",
       "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
       "language": "Unknown",
-      "stars": 82009,
+      "stars": 82014,
       "forks": 9038,
       "url": "https://github.com/ByteByteGoHq/system-design-101",
       "topics": [
@@ -119,13 +161,13 @@
       }
     },
     {
-      "id": "STARRED-06",
+      "id": "STARRED-08",
       "name": "andrej-karpathy-skills",
       "fullName": "forrestchang/andrej-karpathy-skills",
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "language": "Unknown",
-      "stars": 63777,
-      "forks": 5560,
+      "stars": 64441,
+      "forks": 5631,
       "url": "https://github.com/forrestchang/andrej-karpathy-skills",
       "topics": [],
       "owner": {
@@ -134,13 +176,13 @@
       }
     },
     {
-      "id": "STARRED-07",
+      "id": "STARRED-09",
       "name": "fastapi",
       "fullName": "fastapi/fastapi",
       "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
       "language": "Python",
-      "stars": 97420,
-      "forks": 9099,
+      "stars": 97427,
+      "forks": 9100,
       "url": "https://github.com/fastapi/fastapi",
       "topics": [
         "api",
@@ -170,7 +212,7 @@
       }
     },
     {
-      "id": "STARRED-08",
+      "id": "STARRED-10",
       "name": "opentelemetry-python",
       "fullName": "open-telemetry/opentelemetry-python",
       "description": "OpenTelemetry Python API and SDK ",
@@ -194,12 +236,12 @@
       }
     },
     {
-      "id": "STARRED-09",
+      "id": "STARRED-11",
       "name": "skillful-mcp",
       "fullName": "kurtisvg/skillful-mcp",
       "description": "No description available",
       "language": "Go",
-      "stars": 54,
+      "stars": 55,
       "forks": 4,
       "url": "https://github.com/kurtisvg/skillful-mcp",
       "topics": [],
@@ -209,7 +251,7 @@
       }
     },
     {
-      "id": "STARRED-10",
+      "id": "STARRED-12",
       "name": "clawbench",
       "fullName": "scoootscooob/clawbench",
       "description": "The agent benchmark that scores the full stack — harness, config, and model — not just the LLM. Trace-based scoring, reliability metrics, configuration diagnostics.",
@@ -224,7 +266,7 @@
       }
     },
     {
-      "id": "STARRED-11",
+      "id": "STARRED-13",
       "name": "langsmith-sdk",
       "fullName": "langchain-ai/langsmith-sdk",
       "description": "LangSmith Client SDK Implementations",
@@ -243,13 +285,13 @@
       }
     },
     {
-      "id": "STARRED-12",
+      "id": "STARRED-14",
       "name": "Archon",
       "fullName": "coleam00/Archon",
       "description": "The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.",
       "language": "TypeScript",
-      "stars": 19000,
-      "forks": 2938,
+      "stars": 19011,
+      "forks": 2941,
       "url": "https://github.com/coleam00/Archon",
       "topics": [
         "ai",
@@ -269,13 +311,13 @@
       }
     },
     {
-      "id": "STARRED-13",
+      "id": "STARRED-15",
       "name": "markitdown",
       "fullName": "microsoft/markitdown",
       "description": "Python tool for converting files and office documents to Markdown.",
       "language": "Python",
-      "stars": 113058,
-      "forks": 7328,
+      "stars": 113131,
+      "forks": 7336,
       "url": "https://github.com/microsoft/markitdown",
       "topics": [
         "autogen",
@@ -292,7 +334,7 @@
       }
     },
     {
-      "id": "STARRED-14",
+      "id": "STARRED-16",
       "name": "claude-proxy",
       "fullName": "John-Rood/claude-proxy",
       "description": "Lightweight proxy that routes Anthropic API billing through Claude Code subscriptions. Zero dependencies, ~150 lines.",
@@ -307,13 +349,13 @@
       }
     },
     {
-      "id": "STARRED-15",
+      "id": "STARRED-17",
       "name": "mempalace",
       "fullName": "MemPalace/mempalace",
       "description": "The best-benchmarked open-source AI memory system. And it's free.",
       "language": "Python",
-      "stars": 48312,
-      "forks": 6322,
+      "stars": 48354,
+      "forks": 6326,
       "url": "https://github.com/MemPalace/mempalace",
       "topics": [
         "ai",
@@ -329,13 +371,13 @@
       }
     },
     {
-      "id": "STARRED-16",
+      "id": "STARRED-18",
       "name": "graphify",
       "fullName": "safishamsi/graphify",
       "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, GitHub Copilot CLI, OpenClaw, Factory Droid, Trae, Google Antigravity). Turn any folder of code, docs, papers, images, or videos into a queryable knowledge graph",
       "language": "Python",
-      "stars": 30972,
-      "forks": 3420,
+      "stars": 31061,
+      "forks": 3431,
       "url": "https://github.com/safishamsi/graphify",
       "topics": [
         "antigravity",
@@ -353,13 +395,13 @@
       }
     },
     {
-      "id": "STARRED-17",
+      "id": "STARRED-19",
       "name": "career-ops",
       "fullName": "santifer/career-ops",
       "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
       "language": "JavaScript",
-      "stars": 36681,
-      "forks": 7430,
+      "stars": 36731,
+      "forks": 7448,
       "url": "https://github.com/santifer/career-ops",
       "topics": [
         "ai-agent",
@@ -381,13 +423,13 @@
       }
     },
     {
-      "id": "STARRED-18",
+      "id": "STARRED-20",
       "name": "agent-skills",
       "fullName": "addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
       "language": "Shell",
-      "stars": 18125,
-      "forks": 2256,
+      "stars": 18158,
+      "forks": 2266,
       "url": "https://github.com/addyosmani/agent-skills",
       "topics": [
         "agent-skills",
@@ -403,13 +445,13 @@
       }
     },
     {
-      "id": "STARRED-19",
+      "id": "STARRED-21",
       "name": "claude-code",
       "fullName": "claude-code-best/claude-code",
       "description": "原汁原昧 Claude Code 可运行,可构建, 可调试版; Typescript 类型全修复; 企业级可靠性; 安全无毒, lock 文件保真, 可直接 bun i; bun run dev 启动",
       "language": "TypeScript",
-      "stars": 16448,
-      "forks": 15276,
+      "stars": 16460,
+      "forks": 15278,
       "url": "https://github.com/claude-code-best/claude-code",
       "topics": [],
       "owner": {
@@ -418,12 +460,12 @@
       }
     },
     {
-      "id": "STARRED-20",
+      "id": "STARRED-22",
       "name": "codex-plugin-cc",
       "fullName": "openai/codex-plugin-cc",
       "description": "Use Codex from Claude Code to review code or delegate tasks.",
       "language": "JavaScript",
-      "stars": 15235,
+      "stars": 15261,
       "forks": 868,
       "url": "https://github.com/openai/codex-plugin-cc",
       "topics": [],
@@ -433,13 +475,13 @@
       }
     },
     {
-      "id": "STARRED-21",
+      "id": "STARRED-23",
       "name": "pretext",
       "fullName": "chenglou/pretext",
       "description": "Fast, accurate & comprehensive text measurement & layout",
       "language": "TypeScript",
-      "stars": 44751,
-      "forks": 2462,
+      "stars": 44771,
+      "forks": 2463,
       "url": "https://github.com/chenglou/pretext",
       "topics": [],
       "owner": {
@@ -448,13 +490,13 @@
       }
     },
     {
-      "id": "STARRED-22",
+      "id": "STARRED-24",
       "name": "claw-code",
       "fullName": "ultraworkers/claw-code",
       "description": "The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars ⭐. Join Discord: https://discord.gg/5TUQKqFWd Built in Rust using oh-my-codex.",
       "language": "Rust",
-      "stars": 186499,
-      "forks": 108868,
+      "stars": 186556,
+      "forks": 108884,
       "url": "https://github.com/ultraworkers/claw-code",
       "topics": [],
       "owner": {
@@ -463,7 +505,7 @@
       }
     },
     {
-      "id": "STARRED-23",
+      "id": "STARRED-25",
       "name": "pruna",
       "fullName": "PrunaAI/pruna",
       "description": "Pruna is a model optimization framework built for developers, enabling you to deliver faster, more efficient models with minimal overhead.",
@@ -490,7 +532,7 @@
       }
     },
     {
-      "id": "STARRED-24",
+      "id": "STARRED-26",
       "name": "ai-efficiency-courses",
       "fullName": "PrunaAI/ai-efficiency-courses",
       "description": "Courses on building, compressing, evaluating, and deploying efficient AI models.",
@@ -505,13 +547,13 @@
       }
     },
     {
-      "id": "STARRED-25",
+      "id": "STARRED-27",
       "name": "coding-interview-university",
       "fullName": "jwasham/coding-interview-university",
       "description": "A complete computer science study plan to become a software engineer.",
       "language": "Unknown",
-      "stars": 341246,
-      "forks": 81943,
+      "stars": 341262,
+      "forks": 81944,
       "url": "https://github.com/jwasham/coding-interview-university",
       "topics": [
         "algorithm",
@@ -533,13 +575,13 @@
       }
     },
     {
-      "id": "STARRED-26",
+      "id": "STARRED-28",
       "name": "interview-company-wise-problems",
       "fullName": "liquidslr/interview-company-wise-problems",
       "description": "Lists of company wise questions. Every csv file in the companies directory corresponds to a list of questions on leetcode for a specific company based on the leetcode company tags. Updated as of 20 June, 2025",
       "language": "Unknown",
       "stars": 23011,
-      "forks": 4570,
+      "forks": 4571,
       "url": "https://github.com/liquidslr/interview-company-wise-problems",
       "topics": [
         "amazon-interview",
@@ -555,7 +597,7 @@
       }
     },
     {
-      "id": "STARRED-27",
+      "id": "STARRED-29",
       "name": "visualization-tool",
       "fullName": "csvistool/visualization-tool",
       "description": "No description available",
@@ -570,13 +612,13 @@
       }
     },
     {
-      "id": "STARRED-28",
+      "id": "STARRED-30",
       "name": "last30days-skill",
       "fullName": "mvanhorn/last30days-skill",
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "language": "Python",
-      "stars": 22881,
-      "forks": 1882,
+      "stars": 22906,
+      "forks": 1885,
       "url": "https://github.com/mvanhorn/last30days-skill",
       "topics": [
         "ai-prompts",
@@ -606,13 +648,13 @@
       }
     },
     {
-      "id": "STARRED-29",
+      "id": "STARRED-31",
       "name": "RustTraining",
       "fullName": "microsoft/RustTraining",
       "description": "Beginner, advanced, expert level Rust training material",
       "language": "Rust",
-      "stars": 13922,
-      "forks": 1054,
+      "stars": 13925,
+      "forks": 1055,
       "url": "https://github.com/microsoft/RustTraining",
       "topics": [],
       "owner": {
@@ -621,13 +663,13 @@
       }
     },
     {
-      "id": "STARRED-30",
+      "id": "STARRED-32",
       "name": "hermes-agent",
       "fullName": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 103868,
-      "forks": 14803,
+      "stars": 104219,
+      "forks": 14861,
       "url": "https://github.com/NousResearch/hermes-agent",
       "topics": [
         "ai",
@@ -653,7 +695,7 @@
       }
     },
     {
-      "id": "STARRED-31",
+      "id": "STARRED-33",
       "name": "MSA",
       "fullName": "EverMind-AI/MSA",
       "description": "Memory Sparse Attention -  A scalable, end-to-end trainable latent-memory framework for 100M-token contexts.",
@@ -668,13 +710,13 @@
       }
     },
     {
-      "id": "STARRED-32",
+      "id": "STARRED-34",
       "name": "Understand-Anything",
       "fullName": "Lum1104/Understand-Anything",
       "description": "Graphs that teach > graphs that impress. Turn any code, or knowledge base (Karpathy LLM wiki), into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
       "language": "TypeScript",
-      "stars": 8594,
-      "forks": 714,
+      "stars": 8604,
+      "forks": 716,
       "url": "https://github.com/Lum1104/Understand-Anything",
       "topics": [
         "antigravity-skills",
@@ -698,13 +740,13 @@
       }
     },
     {
-      "id": "STARRED-33",
+      "id": "STARRED-35",
       "name": "MoneyPrinterV2",
       "fullName": "FujiwaraChoki/MoneyPrinterV2",
       "description": "Automate the process of making money online.",
       "language": "Python",
-      "stars": 30150,
-      "forks": 3213,
+      "stars": 30155,
+      "forks": 3214,
       "url": "https://github.com/FujiwaraChoki/MoneyPrinterV2",
       "topics": [
         "automation",
@@ -722,7 +764,7 @@
       }
     },
     {
-      "id": "STARRED-34",
+      "id": "STARRED-36",
       "name": "opencode-anthropic-user-agent-plugin",
       "fullName": "dotCipher/opencode-anthropic-user-agent-plugin",
       "description": "No description available",
@@ -737,13 +779,13 @@
       }
     },
     {
-      "id": "STARRED-35",
+      "id": "STARRED-37",
       "name": "parameter-golf",
       "fullName": "openai/parameter-golf",
       "description": "Train the smallest LM you can that fits in 16MB. Best model wins!",
       "language": "Python",
-      "stars": 4903,
-      "forks": 3231,
+      "stars": 4907,
+      "forks": 3232,
       "url": "https://github.com/openai/parameter-golf",
       "topics": [],
       "owner": {
@@ -752,12 +794,12 @@
       }
     },
     {
-      "id": "STARRED-36",
+      "id": "STARRED-38",
       "name": "turboAPI",
       "fullName": "justrach/turboAPI",
       "description": "FastAPI-compatible Python framework with Zig HTTP core; 7x faster, free-threading native",
       "language": "Zig",
-      "stars": 937,
+      "stars": 938,
       "forks": 27,
       "url": "https://github.com/justrach/turboAPI",
       "topics": [
@@ -771,12 +813,12 @@
       }
     },
     {
-      "id": "STARRED-37",
+      "id": "STARRED-39",
       "name": "maths-cs-ai-compendium",
       "fullName": "HenryNdubuaku/maths-cs-ai-compendium",
       "description": "Become a cracked AI/ML Research Engineer",
       "language": "TypeScript",
-      "stars": 3060,
+      "stars": 3062,
       "forks": 442,
       "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
       "topics": [
@@ -806,12 +848,12 @@
       }
     },
     {
-      "id": "STARRED-38",
+      "id": "STARRED-40",
       "name": "DefinitelyTyped",
       "fullName": "DefinitelyTyped/DefinitelyTyped",
       "description": "The repository for high quality TypeScript type definitions.",
       "language": "TypeScript",
-      "stars": 51184,
+      "stars": 51185,
       "forks": 30521,
       "url": "https://github.com/DefinitelyTyped/DefinitelyTyped",
       "topics": [
@@ -829,7 +871,7 @@
       }
     },
     {
-      "id": "STARRED-39",
+      "id": "STARRED-41",
       "name": "agent-sdk",
       "fullName": "browser-use/agent-sdk",
       "description": "No description available",
@@ -844,7 +886,7 @@
       }
     },
     {
-      "id": "STARRED-40",
+      "id": "STARRED-42",
       "name": "tandem-browser",
       "fullName": "hydro13/tandem-browser",
       "description": "AI-Human symbiotic browser — browse the web as one entity",
@@ -868,13 +910,13 @@
       }
     },
     {
-      "id": "STARRED-41",
+      "id": "STARRED-43",
       "name": "CLI-Anything",
       "fullName": "HKUDS/CLI-Anything",
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "language": "Python",
-      "stars": 31764,
-      "forks": 3080,
+      "stars": 31800,
+      "forks": 3086,
       "url": "https://github.com/HKUDS/CLI-Anything",
       "topics": [],
       "owner": {
@@ -883,13 +925,13 @@
       }
     },
     {
-      "id": "STARRED-42",
+      "id": "STARRED-44",
       "name": "playwright",
       "fullName": "microsoft/playwright",
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "language": "TypeScript",
-      "stars": 86857,
-      "forks": 5533,
+      "stars": 86870,
+      "forks": 5535,
       "url": "https://github.com/microsoft/playwright",
       "topics": [
         "automation",
@@ -914,13 +956,13 @@
       }
     },
     {
-      "id": "STARRED-43",
+      "id": "STARRED-45",
       "name": "autoresearch",
       "fullName": "karpathy/autoresearch",
       "description": "AI agents running research on single-GPU nanochat training automatically",
       "language": "Python",
-      "stars": 74740,
-      "forks": 10887,
+      "stars": 74791,
+      "forks": 10892,
       "url": "https://github.com/karpathy/autoresearch",
       "topics": [],
       "owner": {
@@ -929,13 +971,13 @@
       }
     },
     {
-      "id": "STARRED-44",
+      "id": "STARRED-46",
       "name": "t3code",
       "fullName": "pingdotgg/t3code",
       "description": "No description available",
       "language": "TypeScript",
-      "stars": 10066,
-      "forks": 1858,
+      "stars": 10097,
+      "forks": 1860,
       "url": "https://github.com/pingdotgg/t3code",
       "topics": [],
       "owner": {
@@ -944,7 +986,7 @@
       }
     },
     {
-      "id": "STARRED-45",
+      "id": "STARRED-47",
       "name": "fasta2a",
       "fullName": "pydantic/fasta2a",
       "description": "Convert an AI Agent into a A2A server! ✨",
@@ -959,12 +1001,12 @@
       }
     },
     {
-      "id": "STARRED-46",
+      "id": "STARRED-48",
       "name": "react-grab",
       "fullName": "aidenybai/react-grab",
       "description": "Select context for coding agents directly from your website",
       "language": "TypeScript",
-      "stars": 7014,
+      "stars": 7015,
       "forks": 317,
       "url": "https://github.com/aidenybai/react-grab",
       "topics": [
@@ -979,13 +1021,13 @@
       }
     },
     {
-      "id": "STARRED-47",
+      "id": "STARRED-49",
       "name": "AReaL",
       "fullName": "inclusionAI/AReaL",
       "description": "The RL Bridge for LLM-based Agent Applications. Made Simple & Flexible.",
       "language": "Python",
-      "stars": 5067,
-      "forks": 470,
+      "stars": 5069,
+      "forks": 471,
       "url": "https://github.com/inclusionAI/AReaL",
       "topics": [
         "agent",
@@ -1003,7 +1045,7 @@
       }
     },
     {
-      "id": "STARRED-48",
+      "id": "STARRED-50",
       "name": "pydantic-extra-types",
       "fullName": "pydantic/pydantic-extra-types",
       "description": "Extra Pydantic types.",
@@ -1024,13 +1066,13 @@
       }
     },
     {
-      "id": "STARRED-49",
+      "id": "STARRED-51",
       "name": "claude-code-best-practice",
       "fullName": "shanraisshan/claude-code-best-practice",
       "description": "from vibe coding to agentic engineering - practice makes claude perfect",
       "language": "HTML",
-      "stars": 46760,
-      "forks": 4590,
+      "stars": 46802,
+      "forks": 4598,
       "url": "https://github.com/shanraisshan/claude-code-best-practice",
       "topics": [
         "agentic-ai",
@@ -1060,7 +1102,7 @@
       }
     },
     {
-      "id": "STARRED-50",
+      "id": "STARRED-52",
       "name": "tokio",
       "fullName": "tokio-rs/tokio",
       "description": "A runtime for writing reliable asynchronous applications with Rust. Provides I/O, networking, scheduling, timers, ...",
@@ -1079,12 +1121,12 @@
       }
     },
     {
-      "id": "STARRED-51",
+      "id": "STARRED-53",
       "name": "pydantic",
       "fullName": "pydantic/pydantic",
       "description": "Data validation using Python type hints",
       "language": "Python",
-      "stars": 27533,
+      "stars": 27534,
       "forks": 2554,
       "url": "https://github.com/pydantic/pydantic",
       "topics": [
@@ -1106,7 +1148,7 @@
       }
     },
     {
-      "id": "STARRED-52",
+      "id": "STARRED-54",
       "name": "braindump",
       "fullName": "pydantic/braindump",
       "description": "Extract coding rules from PR review comments and generate AGENTS.md files for any GitHub repository.",
@@ -1121,12 +1163,12 @@
       }
     },
     {
-      "id": "STARRED-53",
+      "id": "STARRED-55",
       "name": "ANE",
       "fullName": "maderix/ANE",
       "description": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
       "language": "Objective-C",
-      "stars": 6597,
+      "stars": 6596,
       "forks": 920,
       "url": "https://github.com/maderix/ANE",
       "topics": [],
@@ -1136,12 +1178,12 @@
       }
     },
     {
-      "id": "STARRED-54",
+      "id": "STARRED-56",
       "name": "LMCache",
       "fullName": "LMCache/LMCache",
       "description": "Supercharge Your LLM with the Fastest KV Cache Layer",
       "language": "Python",
-      "stars": 8025,
+      "stars": 8026,
       "forks": 1108,
       "url": "https://github.com/LMCache/LMCache",
       "topics": [
@@ -1162,13 +1204,13 @@
       }
     },
     {
-      "id": "STARRED-55",
+      "id": "STARRED-57",
       "name": "openfang",
       "fullName": "RightNow-AI/openfang",
       "description": "Open-source Agent Operating System",
       "language": "Rust",
-      "stars": 16821,
-      "forks": 2126,
+      "stars": 16824,
+      "forks": 2128,
       "url": "https://github.com/RightNow-AI/openfang",
       "topics": [
         "agent-framework",
@@ -1186,13 +1228,13 @@
       }
     },
     {
-      "id": "STARRED-56",
+      "id": "STARRED-58",
       "name": "deer-flow",
       "fullName": "bytedance/deer-flow",
       "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
       "language": "Python",
-      "stars": 62868,
-      "forks": 8140,
+      "stars": 62899,
+      "forks": 8144,
       "url": "https://github.com/bytedance/deer-flow",
       "topics": [
         "agent",
@@ -1220,12 +1262,12 @@
       }
     },
     {
-      "id": "STARRED-57",
+      "id": "STARRED-59",
       "name": "financial-services-plugins",
       "fullName": "anthropics/financial-services-plugins",
       "description": "No description available",
       "language": "Python",
-      "stars": 7671,
+      "stars": 7677,
       "forks": 969,
       "url": "https://github.com/anthropics/financial-services-plugins",
       "topics": [],
@@ -1235,7 +1277,7 @@
       }
     },
     {
-      "id": "STARRED-58",
+      "id": "STARRED-60",
       "name": "python-apple-fm-sdk",
       "fullName": "apple/python-apple-fm-sdk",
       "description": "Python bindings for access to the on-device model at the core of Apple Intelligence through the Foundation Models framework",
@@ -1250,13 +1292,13 @@
       }
     },
     {
-      "id": "STARRED-59",
+      "id": "STARRED-61",
       "name": "frontend-slides",
       "fullName": "zarazhangrui/frontend-slides",
       "description": "Create beautiful slides on the web using Claude's frontend skills",
       "language": "Shell",
-      "stars": 14995,
-      "forks": 1190,
+      "stars": 15004,
+      "forks": 1191,
       "url": "https://github.com/zarazhangrui/frontend-slides",
       "topics": [],
       "owner": {
@@ -1265,12 +1307,12 @@
       }
     },
     {
-      "id": "STARRED-60",
+      "id": "STARRED-62",
       "name": "skills",
       "fullName": "huggingface/skills",
       "description": "Give your agents the power of the Hugging Face ecosystem",
       "language": "Python",
-      "stars": 10237,
+      "stars": 10246,
       "forks": 639,
       "url": "https://github.com/huggingface/skills",
       "topics": [],
@@ -1280,12 +1322,12 @@
       }
     },
     {
-      "id": "STARRED-61",
+      "id": "STARRED-63",
       "name": "visual-explainer",
       "fullName": "nicobailon/visual-explainer",
       "description": "Agent skill that generates rich HTML pages or slide decks for diagrams, diff reviews, plan audits, data tables, and project recaps",
       "language": "HTML",
-      "stars": 7623,
+      "stars": 7624,
       "forks": 522,
       "url": "https://github.com/nicobailon/visual-explainer",
       "topics": [],
@@ -1295,13 +1337,13 @@
       }
     },
     {
-      "id": "STARRED-62",
+      "id": "STARRED-64",
       "name": "fastmcp",
       "fullName": "PrefectHQ/fastmcp",
       "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
       "language": "Python",
-      "stars": 24674,
-      "forks": 1935,
+      "stars": 24680,
+      "forks": 1936,
       "url": "https://github.com/PrefectHQ/fastmcp",
       "topics": [
         "agents",
@@ -1320,7 +1362,7 @@
       }
     },
     {
-      "id": "STARRED-63",
+      "id": "STARRED-65",
       "name": "pyrite64",
       "fullName": "HailToDodongo/pyrite64",
       "description": "N64 Game-Engine and Editor using libdragon & tiny3d",
@@ -1335,12 +1377,12 @@
       }
     },
     {
-      "id": "STARRED-64",
+      "id": "STARRED-66",
       "name": "kumo",
       "fullName": "cloudflare/kumo",
       "description": "Cloudflare's component library for building modern web applications.",
       "language": "TypeScript",
-      "stars": 1031,
+      "stars": 1032,
       "forks": 91,
       "url": "https://github.com/cloudflare/kumo",
       "topics": [],
@@ -1350,13 +1392,13 @@
       }
     },
     {
-      "id": "STARRED-65",
+      "id": "STARRED-67",
       "name": "gemini-cli",
       "fullName": "google-gemini/gemini-cli",
       "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "language": "TypeScript",
-      "stars": 101861,
-      "forks": 13229,
+      "stars": 101871,
+      "forks": 13230,
       "url": "https://github.com/google-gemini/gemini-cli",
       "topics": [
         "ai",
@@ -1373,12 +1415,12 @@
       }
     },
     {
-      "id": "STARRED-66",
+      "id": "STARRED-68",
       "name": "agent-framework",
       "fullName": "microsoft/agent-framework",
       "description": "A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.",
       "language": "Python",
-      "stars": 9617,
+      "stars": 9621,
       "forks": 1580,
       "url": "https://github.com/microsoft/agent-framework",
       "topics": [
@@ -1399,7 +1441,7 @@
       }
     },
     {
-      "id": "STARRED-67",
+      "id": "STARRED-69",
       "name": "InferenceX",
       "fullName": "SemiAnalysisAI/InferenceX",
       "description": "Open Source Continuous Inference Benchmarking Qwen3.5, DeepSeek, GPTOSS - GB200 NVL72 vs MI355X vs B200 vs GB300 NVL72 vs H100 & soon™ TPUv6e/v7/Trainium2/3",
@@ -1426,7 +1468,7 @@
       }
     },
     {
-      "id": "STARRED-68",
+      "id": "STARRED-70",
       "name": "blog-proposal",
       "fullName": "cocoindex-io/blog-proposal",
       "description": "If you'd like to submit a blog for cocoindex, please contribute here!",
@@ -1441,13 +1483,13 @@
       }
     },
     {
-      "id": "STARRED-69",
+      "id": "STARRED-71",
       "name": "tambo",
       "fullName": "tambo-ai/tambo",
       "description": "Generative UI SDK for React",
       "language": "TypeScript",
-      "stars": 11124,
-      "forks": 559,
+      "stars": 11123,
+      "forks": 560,
       "url": "https://github.com/tambo-ai/tambo",
       "topics": [
         "agent",
@@ -1468,12 +1510,12 @@
       }
     },
     {
-      "id": "STARRED-70",
+      "id": "STARRED-72",
       "name": "nicegui",
       "fullName": "zauberzeug/nicegui",
       "description": "Create web-based user interfaces with Python. The nice way.",
       "language": "Python",
-      "stars": 15687,
+      "stars": 15688,
       "forks": 911,
       "url": "https://github.com/zauberzeug/nicegui",
       "topics": [
@@ -1495,7 +1537,7 @@
       }
     },
     {
-      "id": "STARRED-71",
+      "id": "STARRED-73",
       "name": "context-engineering-intro",
       "fullName": "coleam00/context-engineering-intro",
       "description": "Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!",
@@ -1510,13 +1552,13 @@
       }
     },
     {
-      "id": "STARRED-72",
+      "id": "STARRED-74",
       "name": "free-llm-api-resources",
       "fullName": "cheahjs/free-llm-api-resources",
       "description": "A list of free LLM inference resources accessible via API.",
       "language": "Python",
-      "stars": 19118,
-      "forks": 1909,
+      "stars": 19124,
+      "forks": 1913,
       "url": "https://github.com/cheahjs/free-llm-api-resources",
       "topics": [
         "ai",
@@ -1532,13 +1574,13 @@
       }
     },
     {
-      "id": "STARRED-73",
+      "id": "STARRED-75",
       "name": "ai-engineering-hub",
       "fullName": "patchy631/ai-engineering-hub",
       "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
       "language": "Jupyter Notebook",
-      "stars": 33825,
-      "forks": 5595,
+      "stars": 33832,
+      "forks": 5599,
       "url": "https://github.com/patchy631/ai-engineering-hub",
       "topics": [
         "agents",
@@ -1554,13 +1596,13 @@
       }
     },
     {
-      "id": "STARRED-74",
+      "id": "STARRED-76",
       "name": "gh-aw",
       "fullName": "github/gh-aw",
       "description": "GitHub Agentic Workflows",
       "language": "Go",
-      "stars": 4333,
-      "forks": 353,
+      "stars": 4334,
+      "forks": 354,
       "url": "https://github.com/github/gh-aw",
       "topics": [
         "actions",
@@ -1578,13 +1620,13 @@
       }
     },
     {
-      "id": "STARRED-75",
+      "id": "STARRED-77",
       "name": "chrome-devtools-mcp",
       "fullName": "ChromeDevTools/chrome-devtools-mcp",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
-      "stars": 36323,
-      "forks": 2237,
+      "stars": 36340,
+      "forks": 2239,
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "topics": [
         "browser",
@@ -1602,13 +1644,13 @@
       }
     },
     {
-      "id": "STARRED-76",
+      "id": "STARRED-78",
       "name": "picoclaw",
       "fullName": "sipeed/picoclaw",
       "description": "Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity",
       "language": "Go",
-      "stars": 28344,
-      "forks": 4045,
+      "stars": 28348,
+      "forks": 4047,
       "url": "https://github.com/sipeed/picoclaw",
       "topics": [],
       "owner": {
@@ -1617,7 +1659,7 @@
       }
     },
     {
-      "id": "STARRED-77",
+      "id": "STARRED-79",
       "name": "cli",
       "fullName": "entireio/cli",
       "description": "Entire CLI hooks into your Git workflow to capture AI agent sessions as you work. Sessions are indexed alongside commits, creating a searchable record of how code was written in your repo.",
@@ -1639,7 +1681,7 @@
       }
     },
     {
-      "id": "STARRED-78",
+      "id": "STARRED-80",
       "name": "sanyuan-skills",
       "fullName": "sanyuan0704/sanyuan-skills",
       "description": "Expert code review skill: SOLID, security, performance, error handling, boundary conditions",
@@ -1654,12 +1696,12 @@
       }
     },
     {
-      "id": "STARRED-79",
+      "id": "STARRED-81",
       "name": "Backlog.md",
       "fullName": "MrLesk/Backlog.md",
       "description": "Backlog.md - A tool for managing project collaboration between humans and AI Agents in a git ecosystem",
       "language": "TypeScript",
-      "stars": 5369,
+      "stars": 5370,
       "forks": 289,
       "url": "https://github.com/MrLesk/Backlog.md",
       "topics": [
@@ -1677,12 +1719,12 @@
       }
     },
     {
-      "id": "STARRED-80",
+      "id": "STARRED-82",
       "name": "cognee",
       "fullName": "topoteretes/cognee",
       "description": "Knowledge Engine for AI Agent Memory in 6 lines of code",
       "language": "Python",
-      "stars": 16520,
+      "stars": 16523,
       "forks": 1705,
       "url": "https://github.com/topoteretes/cognee",
       "topics": [
@@ -1713,13 +1755,13 @@
       }
     },
     {
-      "id": "STARRED-81",
+      "id": "STARRED-83",
       "name": "skills",
       "fullName": "anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 120794,
-      "forks": 14020,
+      "stars": 120861,
+      "forks": 14031,
       "url": "https://github.com/anthropics/skills",
       "topics": [
         "agent-skills"
@@ -1730,12 +1772,12 @@
       }
     },
     {
-      "id": "STARRED-82",
+      "id": "STARRED-84",
       "name": "mem0",
       "fullName": "mem0ai/mem0",
       "description": "Universal memory layer for AI Agents",
       "language": "Python",
-      "stars": 53580,
+      "stars": 53589,
       "forks": 6008,
       "url": "https://github.com/mem0ai/mem0",
       "topics": [
@@ -1760,13 +1802,13 @@
       }
     },
     {
-      "id": "STARRED-83",
+      "id": "STARRED-85",
       "name": "awesome-claude-skills",
       "fullName": "ComposioHQ/awesome-claude-skills",
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "language": "Python",
-      "stars": 55059,
-      "forks": 5907,
+      "stars": 55091,
+      "forks": 5910,
       "url": "https://github.com/ComposioHQ/awesome-claude-skills",
       "topics": [
         "agent-skills",
@@ -1791,13 +1833,13 @@
       }
     },
     {
-      "id": "STARRED-84",
+      "id": "STARRED-86",
       "name": "shannon",
       "fullName": "KeygraphHQ/shannon",
       "description": "Shannon Lite is an autonomous, white-box AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
       "language": "TypeScript",
-      "stars": 38616,
-      "forks": 4179,
+      "stars": 38623,
+      "forks": 4181,
       "url": "https://github.com/KeygraphHQ/shannon",
       "topics": [
         "penetration-testing",
@@ -1812,12 +1854,12 @@
       }
     },
     {
-      "id": "STARRED-85",
+      "id": "STARRED-87",
       "name": "tauri",
       "fullName": "tauri-apps/tauri",
       "description": "Build smaller, faster, and more secure desktop and mobile applications with a web frontend.",
       "language": "Rust",
-      "stars": 105657,
+      "stars": 105669,
       "forks": 3543,
       "url": "https://github.com/tauri-apps/tauri",
       "topics": [
@@ -1835,12 +1877,12 @@
       }
     },
     {
-      "id": "STARRED-86",
+      "id": "STARRED-88",
       "name": "cli",
       "fullName": "cli/cli",
       "description": "GitHub’s official command line tool",
       "language": "Go",
-      "stars": 43935,
+      "stars": 43938,
       "forks": 8297,
       "url": "https://github.com/cli/cli",
       "topics": [
@@ -1855,12 +1897,12 @@
       }
     },
     {
-      "id": "STARRED-87",
+      "id": "STARRED-89",
       "name": "refined-github",
       "fullName": "refined-github/refined-github",
       "description": ":octocat: Browser extension that simplifies the GitHub interface and adds useful features",
       "language": "TypeScript",
-      "stars": 31119,
+      "stars": 31121,
       "forks": 1722,
       "url": "https://github.com/refined-github/refined-github",
       "topics": [
@@ -1878,13 +1920,13 @@
       }
     },
     {
-      "id": "STARRED-88",
+      "id": "STARRED-90",
       "name": "vouch",
       "fullName": "mitchellh/vouch",
       "description": "A community trust management system based on explicit vouches to participate.",
       "language": "Nushell",
-      "stars": 4206,
-      "forks": 74,
+      "stars": 4209,
+      "forks": 75,
       "url": "https://github.com/mitchellh/vouch",
       "topics": [],
       "owner": {
@@ -1893,12 +1935,12 @@
       }
     },
     {
-      "id": "STARRED-89",
+      "id": "STARRED-91",
       "name": "skills",
       "fullName": "openai/skills",
       "description": "Skills Catalog for Codex",
       "language": "Python",
-      "stars": 17127,
+      "stars": 17134,
       "forks": 1072,
       "url": "https://github.com/openai/skills",
       "topics": [],
@@ -1908,7 +1950,7 @@
       }
     },
     {
-      "id": "STARRED-90",
+      "id": "STARRED-92",
       "name": "agentskills",
       "fullName": "madanlalit/agentskills",
       "description": "A simple, focused repository of reusable skills for AI agents.",
@@ -1931,7 +1973,7 @@
       }
     },
     {
-      "id": "STARRED-91",
+      "id": "STARRED-93",
       "name": "progress",
       "fullName": "madanlalit/progress",
       "description": "Python CLI for generating wallpapers that visualize yearly progress with custom themes and automatic daily updates.",
@@ -1951,7 +1993,7 @@
       }
     },
     {
-      "id": "STARRED-92",
+      "id": "STARRED-94",
       "name": "odin",
       "fullName": "madanlalit/odin",
       "description": "Odin is an AI Agent that can see your screen and click, type, and scroll to help do computer tasks for you.",
@@ -1970,13 +2012,13 @@
       }
     },
     {
-      "id": "STARRED-93",
+      "id": "STARRED-95",
       "name": "nanobot",
       "fullName": "HKUDS/nanobot",
       "description": "\"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
       "language": "Python",
-      "stars": 40162,
-      "forks": 7066,
+      "stars": 40177,
+      "forks": 7069,
       "url": "https://github.com/HKUDS/nanobot",
       "topics": [
         "ai",
@@ -1998,13 +2040,13 @@
       }
     },
     {
-      "id": "STARRED-94",
+      "id": "STARRED-96",
       "name": "monty",
       "fullName": "pydantic/monty",
       "description": "A minimal, secure Python interpreter written in Rust for use by AI",
       "language": "Rust",
-      "stars": 6866,
-      "forks": 289,
+      "stars": 6871,
+      "forks": 290,
       "url": "https://github.com/pydantic/monty",
       "topics": [],
       "owner": {
@@ -2013,13 +2055,13 @@
       }
     },
     {
-      "id": "STARRED-95",
+      "id": "STARRED-97",
       "name": "mastra",
       "fullName": "mastra-ai/mastra",
       "description": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "language": "TypeScript",
-      "stars": 23164,
-      "forks": 1922,
+      "stars": 23166,
+      "forks": 1924,
       "url": "https://github.com/mastra-ai/mastra",
       "topics": [
         "agents",
@@ -2042,7 +2084,7 @@
       }
     },
     {
-      "id": "STARRED-96",
+      "id": "STARRED-98",
       "name": "ai-platform-engineering",
       "fullName": "cnoe-io/ai-platform-engineering",
       "description": "CAIPE: Community AI Platform Engineering Multi-Agent Systems",
@@ -2063,7 +2105,7 @@
       }
     },
     {
-      "id": "STARRED-97",
+      "id": "STARRED-99",
       "name": "together-typescript",
       "fullName": "togethercomputer/together-typescript",
       "description": "The official Together AI TypeScript library.",
@@ -2078,12 +2120,12 @@
       }
     },
     {
-      "id": "STARRED-98",
+      "id": "STARRED-100",
       "name": "moltworker",
       "fullName": "cloudflare/moltworker",
       "description": "Run OpenClaw, (formerly Moltbot, formerly Clawdbot) on Cloudflare Workers",
       "language": "TypeScript",
-      "stars": 9843,
+      "stars": 9844,
       "forks": 1785,
       "url": "https://github.com/cloudflare/moltworker",
       "topics": [
@@ -2093,36 +2135,6 @@
       "owner": {
         "login": "cloudflare",
         "avatarUrl": "https://avatars.githubusercontent.com/u/314135?v=4"
-      }
-    },
-    {
-      "id": "STARRED-99",
-      "name": "knowledge-work-plugins",
-      "fullName": "anthropics/knowledge-work-plugins",
-      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "language": "Python",
-      "stars": 11381,
-      "forks": 1305,
-      "url": "https://github.com/anthropics/knowledge-work-plugins",
-      "topics": [],
-      "owner": {
-        "login": "anthropics",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/76263028?v=4"
-      }
-    },
-    {
-      "id": "STARRED-100",
-      "name": "pyautogui",
-      "fullName": "asweigart/pyautogui",
-      "description": "A cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard.",
-      "language": "Python",
-      "stars": 12440,
-      "forks": 1407,
-      "url": "https://github.com/asweigart/pyautogui",
-      "topics": [],
-      "owner": {
-        "login": "asweigart",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/52220?v=4"
       }
     }
   ]
