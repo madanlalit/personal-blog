@@ -8,6 +8,16 @@ import Typewriter from '@/components/ui/Typewriter';
 import { useCounter } from '@/components/hooks/useCounter';
 import './about.css';
 
+type ToolFormAttributes = React.FormHTMLAttributes<HTMLFormElement> & {
+    'tool-name': string;
+    'tool-description': string;
+};
+
+type ToolFieldAttributes<T extends HTMLInputElement | HTMLTextAreaElement> =
+    React.HTMLAttributes<T> & {
+        'tool-param-description': string;
+    };
+
 // Data
 const EXPERIENCE_PREVIEW = [
     { year: '2024', month: 'April', role: 'Software Engineer I', company: 'Cisco Systems', tech: ['Python', 'Langchain', 'Langgraph', 'Langsmith', 'Cypress', 'Playwright'] },
@@ -35,6 +45,23 @@ const SOCIAL_LINKS = [
 ];
 
 const INTERESTS = ['Open Source', 'System Design', 'Dev Tools', 'Automation', 'UI/UX'];
+
+const contactToolAttributes: ToolFormAttributes = {
+    'tool-name': 'contact_me',
+    'tool-description': 'Send Lalit a message or collaboration request',
+};
+
+const nameFieldAttributes: ToolFieldAttributes<HTMLInputElement> = {
+    'tool-param-description': 'Your name',
+};
+
+const emailFieldAttributes: ToolFieldAttributes<HTMLInputElement> = {
+    'tool-param-description': 'Your email address',
+};
+
+const messageFieldAttributes: ToolFieldAttributes<HTMLTextAreaElement> = {
+    'tool-param-description': 'Your message or inquiry',
+};
 
 // Components
 const StatItem = ({ value, label, small, refProp }: { value: string | number; label: string; small?: boolean; refProp?: React.Ref<HTMLDivElement> }) => (
@@ -172,39 +199,35 @@ export default function AboutClient() {
                     </div>
 
                     {/* WebMCP declarative tool — AI agents auto-discover this form as "contact_me" */}
-                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                     <form
                         ref={formRef}
                         onSubmit={handleContact}
                         className="contact-form"
-                        {...({ 'tool-name': 'contact_me', 'tool-description': 'Send Lalit a message or collaboration request' } as any)}
+                        {...contactToolAttributes}
                     >
-                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                         <input
                             name="name"
                             type="text"
                             placeholder="Your name"
                             required
                             className="contact-input"
-                            {...({ 'tool-param-description': 'Your name' } as any)}
+                            {...nameFieldAttributes}
                         />
-                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                         <input
                             name="email"
                             type="email"
                             placeholder="Your email"
                             required
                             className="contact-input"
-                            {...({ 'tool-param-description': 'Your email address' } as any)}
+                            {...emailFieldAttributes}
                         />
-                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                         <textarea
                             name="message"
                             placeholder="Your message or collaboration idea"
                             required
                             rows={3}
                             className="contact-input contact-textarea"
-                            {...({ 'tool-param-description': 'Your message or inquiry' } as any)}
+                            {...messageFieldAttributes}
                         />
                         <button
                             type="submit"

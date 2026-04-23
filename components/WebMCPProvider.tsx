@@ -42,7 +42,7 @@ export default function WebMCPProvider() {
                 type: 'object',
                 properties: {},
             },
-            execute: async (_input: Record<string, unknown>) => {
+            execute: async () => {
                 const res = await fetch('/api/posts');
                 const posts: PostMeta[] = await res.json();
                 return posts;
