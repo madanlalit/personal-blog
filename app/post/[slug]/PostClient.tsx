@@ -30,7 +30,10 @@ interface PostClientProps {
 function getNodeText(node: React.ReactNode): string {
     if (typeof node === 'string' || typeof node === 'number') return String(node);
     if (Array.isArray(node)) return node.map(getNodeText).join('');
-    if (React.isValidElement(node)) return getNodeText(node.props.children);
+    if (React.isValidElement(node)) {
+        const element = node as React.ReactElement<any>;
+        return getNodeText(element.props.children);
+    }
     return '';
 }
 
@@ -54,9 +57,10 @@ function stripLeadingMarker(node: React.ReactNode, marker: string, hasStripped =
     }
 
     if (React.isValidElement(node)) {
-        return React.cloneElement(node, {
-            ...node.props,
-            children: stripLeadingMarker(node.props.children, marker, hasStripped),
+        const element = node as React.ReactElement<any>;
+        return React.cloneElement(element, {
+            ...element.props,
+            children: stripLeadingMarker(element.props.children, marker, hasStripped),
         });
     }
 
