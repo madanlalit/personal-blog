@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
@@ -24,6 +25,42 @@ interface PostClientProps {
     nextPost: Post | null;
     relatedPosts: Post[];
     shareUrl: string;
+}
+
+function getNodeText(node: React.ReactNode): string {
+    if (typeof node === 'string' || typeof node === 'number') return String(node);
+    if (Array.isArray(node)) return node.map(getNodeText).join('');
+    if (React.isValidElement(node)) return getNodeText(node.props.children);
+    return '';
+}
+
+function stripLeadingMarker(node: React.ReactNode, marker: string, hasStripped = { value: false }): React.ReactNode {
+    if (typeof node === 'string') {
+        if (!hasStripped.value) {
+            hasStripped.value = true;
+            return node.replace(marker, '').trimStart();
+        }
+        return node;
+    }
+
+    if (typeof node === 'number' || node == null) return node;
+
+    if (Array.isArray(node)) {
+        return node.map((child, index) => (
+            <React.Fragment key={index}>
+                {stripLeadingMarker(child, marker, hasStripped)}
+            </React.Fragment>
+        ));
+    }
+
+    if (React.isValidElement(node)) {
+        return React.cloneElement(node, {
+            ...node.props,
+            children: stripLeadingMarker(node.props.children, marker, hasStripped),
+        });
+    }
+
+    return node;
 }
 
 export default function PostClient({ post, prevPost, nextPost, relatedPosts, shareUrl }: PostClientProps) {
@@ -57,6 +94,37 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts, sha
                     {title && <span className="image-caption">{title}</span>}
                 </span>
             );
+        },
+        blockquote: ({ children }: React.HTMLAttributes<HTMLElement>) => {
+            const childArray = React.Children.toArray(children);
+            const firstChild = childArray[0];
+
+            if (React.isValidElement(firstChild) && firstChild.type === 'p') {
+                const firstText = getNodeText(firstChild).trim();
+
+                const calloutMap: Record<string, { className: string; label: string }> = {
+                    '[!SUMMARY]': { className: 'summary-callout', label: 'In Short' },
+                    '[!QUOTE]': { className: 'pull-quote', label: 'Key Line' },
+                    '[!NOTE]': { className: 'note-callout', label: 'Author Note' },
+                };
+
+                const marker = Object.keys(calloutMap).find((key) => firstText.startsWith(key));
+                if (marker) {
+                    const config = calloutMap[marker];
+                    const cleanedFirstChild = stripLeadingMarker(firstChild, marker);
+
+                    return (
+                        <aside className={`post-callout ${config.className}`}>
+                            <div className="post-callout-label">{config.label}</div>
+                            <div className="post-callout-body">
+                                {[cleanedFirstChild, ...childArray.slice(1)]}
+                            </div>
+                        </aside>
+                    );
+                }
+            }
+
+            return <blockquote>{children}</blockquote>;
         }
     };
 

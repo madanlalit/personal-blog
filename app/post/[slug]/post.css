@@ -119,6 +119,81 @@
     background: var(--bg-secondary);
 }
 
+.post-callout {
+    margin: var(--space-xl) 0;
+    padding: var(--space-lg);
+    border: 1px solid var(--border);
+    background:
+        linear-gradient(180deg, color-mix(in srgb, var(--bg-secondary) 92%, var(--accent) 8%) 0%, var(--bg-secondary) 100%);
+    position: relative;
+}
+
+.post-callout-label {
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-xxs);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 700;
+    font-family: var(--font-primary);
+}
+
+.post-callout-body>*:last-child {
+    margin-bottom: 0;
+}
+
+.summary-callout {
+    border-left: 4px solid var(--accent);
+}
+
+.summary-callout .post-callout-body p {
+    color: var(--text-primary);
+    font-style: normal;
+}
+
+.summary-callout .post-callout-body ul {
+    margin-top: var(--space-sm);
+}
+
+.pull-quote {
+    padding: calc(var(--space-xl) + 4px) var(--space-xl) var(--space-xl);
+    background:
+        radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 35%),
+        var(--bg-secondary);
+    border-left: 0;
+}
+
+.pull-quote::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-size: 3rem;
+    line-height: 1;
+    color: color-mix(in srgb, var(--accent) 70%, var(--text-secondary) 30%);
+    font-family: Georgia, serif;
+    opacity: 0.9;
+}
+
+.pull-quote .post-callout-body p {
+    margin: 0;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.6;
+    font-style: normal;
+    color: var(--text-primary);
+}
+
+.note-callout {
+    background: transparent;
+    border-style: dashed;
+}
+
+.note-callout .post-callout-body p {
+    font-style: normal;
+    color: var(--text-secondary);
+}
+
 .entry-content ul,
 .entry-content ol {
     margin: var(--space-md) 0;
@@ -158,6 +233,8 @@
     margin: var(--space-lg) 0;
     font-size: var(--font-size-small);
     border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg-secondary) 85%, transparent);
+    overflow: hidden;
 }
 
 .entry-content th,
@@ -173,6 +250,10 @@
     text-transform: uppercase;
     font-size: var(--font-size-xs);
     letter-spacing: 0.5px;
+}
+
+.entry-content tr:nth-child(even) td {
+    background: color-mix(in srgb, var(--bg-secondary) 55%, transparent);
 }
 
 /* Footer Frame */
