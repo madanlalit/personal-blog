@@ -6,11 +6,11 @@ import './ShareButtons.css';
 
 interface ShareButtonsProps {
     title: string;
+    url: string;
 }
 
-const ShareButtons: React.FC<ShareButtonsProps> = ({ title }) => {
+const ShareButtons: React.FC<ShareButtonsProps> = ({ title, url }) => {
     const [copied, setCopied] = React.useState(false);
-    const url = typeof window !== 'undefined' ? window.location.href : '';
 
     const handleCopy = () => {
         navigator.clipboard.writeText(url);

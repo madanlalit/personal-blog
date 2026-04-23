@@ -70,6 +70,8 @@ export default async function PostPage({ params }: Props) {
         .slice(0, 3)
         .map(({ post }) => ({ ...post, content: '' }));
 
+    const shareUrl = `${SITE_CONFIG.url}/post/${post.slug}`;
+
     return (
         <>
             <ArticleJsonLd post={post} />
@@ -78,6 +80,7 @@ export default async function PostPage({ params }: Props) {
                 prevPost={prevPost}
                 nextPost={nextPost}
                 relatedPosts={relatedPosts}
+                shareUrl={shareUrl}
             />
         </>
     );

@@ -23,9 +23,10 @@ interface PostClientProps {
     prevPost: Post | null;
     nextPost: Post | null;
     relatedPosts: Post[];
+    shareUrl: string;
 }
 
-export default function PostClient({ post, prevPost, nextPost, relatedPosts }: PostClientProps) {
+export default function PostClient({ post, prevPost, nextPost, relatedPosts, shareUrl }: PostClientProps) {
     // Custom renderer for code blocks
     const components = {
         code({ inline, className, children, ...props }: React.HTMLAttributes<HTMLElement> & { inline?: boolean }) {
@@ -100,7 +101,7 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts }: P
                                     </Link>
                                 ))}
                             </div>
-                            <ShareButtons title={post.title} />
+                            <ShareButtons title={post.title} url={shareUrl} />
                         </div>
                     </Frame>
                 )}
