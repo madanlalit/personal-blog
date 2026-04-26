@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { JetBrains_Mono } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SITE_CONFIG } from '@/lib/config';
 import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
@@ -69,8 +67,6 @@ export default function RootLayout({
                 <ClientShell posts={posts}>
                     {children}
                 </ClientShell>
-                <Analytics />
-                <SpeedInsights />
             </body>
         </html>
     );
