@@ -63,7 +63,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                         LALIT<span className="accent">_</span>MADAN<span className="typewriter-cursor"></span>
                     </h1>
                     <div className="hero-subtitle">
-                        Engineering Reality. Architecting Intelligence.
+                        AI Engineer. Context Engineering. Python OSS.
                     </div>
 
                     <div className="hero-actions">

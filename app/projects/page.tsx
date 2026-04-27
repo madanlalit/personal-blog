@@ -4,9 +4,9 @@ import ProjectsClient from './ProjectsClient';
 
 export const metadata: Metadata = createPageMetadata({
     title: 'Projects',
-    description: 'Explore the personal projects and open-source contributions of Lalit Madan, ranging from AI agents to automation tools.',
+    description: 'Explore Lalit Madan\'s AI engineering, Python, and open-source projects, including experiments with agents, automation, and developer tools.',
     path: '/projects',
-    keywords: ['AI agent projects', 'open source', 'automation tools', 'Lalit Madan projects'],
+    keywords: ['AI Agent Projects', 'Python OSS Projects', 'LLM Developer Tools', 'Open Source AI Tools', 'Automation Projects'],
 });
 
 export default function ProjectsPage() {

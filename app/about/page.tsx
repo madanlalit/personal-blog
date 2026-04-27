@@ -3,10 +3,10 @@ import { createPageMetadata } from '@/lib/seo';
 import AboutClient from './AboutClient';
 
 export const metadata: Metadata = createPageMetadata({
-    title: 'About',
-    description: 'Learn more about Lalit Madan, a software engineer specializing in AI agents, context engineering, and reliable agentic workflows.',
+    title: 'About Lalit Madan',
+    description: 'Learn more about Lalit Madan, an AI engineer focused on context engineering, Python, open source, and reliable agentic workflows.',
     path: '/about',
-    keywords: ['Lalit Madan', 'AI agents', 'context engineering', 'software engineer'],
+    keywords: ['Lalit Madan', 'AI Engineer India', 'Context Engineering Practitioner', 'Python Developer', 'Open Source Contributor'],
 });
 
 export default function AboutPage() {

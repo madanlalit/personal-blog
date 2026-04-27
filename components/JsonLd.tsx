@@ -20,11 +20,21 @@ export default function JsonLd() {
                 '@id': `${SITE_CONFIG.url}/#person`,
                 name: SITE_CONFIG.author,
                 url: SITE_CONFIG.url,
+                jobTitle: 'AI Engineer',
                 image: {
                     '@type': 'ImageObject',
                     url: `${SITE_CONFIG.url}${SITE_CONFIG.defaultImage}`,
                 },
                 description: SITE_CONFIG.description,
+                knowsAbout: [
+                    'AI engineering',
+                    'Context engineering',
+                    'Python',
+                    'Open source software',
+                    'AI agents',
+                    'Agentic workflows',
+                    'LLM systems',
+                ],
                 sameAs: [
                     'https://github.com/madanlalit',
                     'https://linkedin.com/in/madanlalit',

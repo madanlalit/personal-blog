@@ -4,9 +4,9 @@ import ExperienceClient from './ExperienceClient';
 
 export const metadata: Metadata = createPageMetadata({
     title: 'Experience',
-    description: 'Detailed professional journey of Lalit Madan, including roles at Cisco Systems and expertise in Python, AI, and test automation.',
+    description: 'Professional experience for Lalit Madan, an AI engineer working with Python, context engineering, agentic workflows, and reliable software systems.',
     path: '/experience',
-    keywords: ['Lalit Madan experience', 'Software Engineer', 'Python', 'AI engineer'],
+    keywords: ['AI Engineer Experience', 'Software Engineer', 'Python Engineering', 'Agentic Workflows', 'LLM Systems'],
 });
 
 export default function ExperiencePage() {

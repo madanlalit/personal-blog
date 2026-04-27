@@ -5,9 +5,9 @@ import ArchiveClient from './ArchiveClient';
 
 export const metadata: Metadata = createPageMetadata({
     title: 'Archive',
-    description: 'Browse Lalit Madan\'s complete archive of posts about AI agents, context engineering, automation, and software engineering.',
+    description: 'Browse Lalit Madan\'s complete archive of posts about AI engineering, context engineering, Python, open source, and AI agents.',
     path: '/archive',
-    keywords: ['AI agents blog', 'context engineering blog', 'software engineering articles', 'automation'],
+    keywords: ['AI Engineering Blog', 'Context Engineering Blog', 'Python Blog', 'LLM Notes', 'Agentic Engineering Articles'],
 });
 
 export default function ArchivePage() {
