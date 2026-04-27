@@ -95,6 +95,19 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                 </div>
             </header>
 
+            <section className="signal-module" aria-labelledby="signal-title">
+                <div className="signal-kicker">{'/// SIGNAL'}</div>
+                <div className="signal-content">
+                    <h2 id="signal-title">AI engineering notes from the build loop.</h2>
+                    <p>
+                        I write about AI engineering, context engineering, Python, and open-source tools for building reliable agentic systems.
+                    </p>
+                    <p>
+                        This site is a public notebook of experiments, implementation notes, and lessons from working with LLMs, agents, automation, and developer workflows.
+                    </p>
+                </div>
+            </section>
+
             <main className="sys-grid">
                 {/* [LEFT COL] CONTEXT */}
                 <aside className="grid-sidebar">
