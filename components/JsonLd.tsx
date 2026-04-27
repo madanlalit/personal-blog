@@ -13,7 +13,7 @@ export default function JsonLd() {
                 publisher: {
                     '@id': `${SITE_CONFIG.url}/#person`,
                 },
-                inLanguage: SITE_CONFIG.locale,
+                inLanguage: SITE_CONFIG.language,
             },
             {
                 '@type': 'Person',

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { SITE_CONFIG } from '@/lib/config';
+import { absoluteUrl } from '@/lib/seo';
 import PostClient from './PostClient';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 
@@ -29,18 +30,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: post.title,
         description: post.excerpt,
+        keywords: post.tags,
+        authors: [{ name: SITE_CONFIG.author, url: SITE_CONFIG.url }],
+        alternates: {
+            canonical: absoluteUrl(`/post/${post.slug}`),
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
+            url: absoluteUrl(`/post/${post.slug}`),
             type: 'article',
             publishedTime: post.date,
+            modifiedTime: post.date,
             authors: [SITE_CONFIG.author],
             tags: post.tags,
+            siteName: SITE_CONFIG.title,
+            locale: SITE_CONFIG.locale,
+            images: [{ url: absoluteUrl(SITE_CONFIG.defaultImage) }],
         },
         twitter: {
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt,
+            creator: SITE_CONFIG.twitterHandle,
+            images: [absoluteUrl(SITE_CONFIG.defaultImage)],
         },
     };
 }

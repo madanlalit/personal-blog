@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllTags, getPostsByTag } from '@/lib/posts';
+import { getAllTags, getPostsByTagSlug, getTagBySlug } from '@/lib/posts';
+import { createPageMetadata } from '@/lib/seo';
+import { slugifyTag } from '@/lib/slug';
 import { Tag } from 'lucide-react';
 
 interface Props {
@@ -11,23 +13,38 @@ interface Props {
 export async function generateStaticParams() {
     const tags = getAllTags();
     return tags.map((tag) => ({
-        tag: tag.toLowerCase(),
+        tag: slugifyTag(tag),
     }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { tag } = await params;
+    const { tag: tagSlug } = await params;
+    const tag = getTagBySlug(tagSlug);
+
+    if (!tag) {
+        return { title: 'Tag Not Found' };
+    }
+
     return {
-        title: `Posts tagged "${tag}"`,
-        description: `All posts tagged with ${tag}`,
+        ...createPageMetadata({
+            title: `Posts tagged "${tag}"`,
+            description: `Read posts by Lalit Madan about ${tag}, including practical notes on AI agents, software engineering, automation, and developer workflows.`,
+            path: `/tags/${tagSlug}`,
+            keywords: [tag, `${tag} blog`, 'Lalit Madan'],
+        }),
+        robots: {
+            index: false,
+            follow: true,
+        },
     };
 }
 
 export default async function TagPage({ params }: Props) {
-    const { tag } = await params;
-    const posts = getPostsByTag(tag);
+    const { tag: tagSlug } = await params;
+    const tag = getTagBySlug(tagSlug);
+    const posts = getPostsByTagSlug(tagSlug);
 
-    if (posts.length === 0) {
+    if (!tag || posts.length === 0) {
         notFound();
     }
 

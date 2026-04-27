@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts, getAllTags } from '@/lib/posts';
+import { getAllPosts } from '@/lib/posts';
 import { SITE_CONFIG } from '@/lib/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getAllPosts();
-    const tags = getAllTags();
+    const latestPostDate = posts[0]?.date ? new Date(posts[0].date) : new Date();
 
     const blogEntries = posts.map((post) => ({
         url: `${SITE_CONFIG.url}/post/${post.slug}`,
@@ -13,17 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    const tagEntries = tags.map((tag) => ({
-        url: `${SITE_CONFIG.url}/tags/${tag.toLowerCase()}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.5,
-    }));
-
     return [
         {
             url: SITE_CONFIG.url,
-            lastModified: new Date(),
+            lastModified: latestPostDate,
             changeFrequency: 'weekly',
             priority: 1.0,
         },
@@ -47,11 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${SITE_CONFIG.url}/archive`,
-            lastModified: new Date(),
+            lastModified: latestPostDate,
             changeFrequency: 'weekly',
             priority: 0.7,
         },
         ...blogEntries,
-        ...tagEntries,
     ];
 }

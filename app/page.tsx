@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { getAllPostsMeta } from '@/lib/posts';
 import { SITE_CONFIG } from '@/lib/config';
+import { createPageMetadata } from '@/lib/seo';
 import HomeClient from './HomeClient';
 
-export const metadata: Metadata = {
-    title: SITE_CONFIG.title.split(' | ')[0],
+export const metadata: Metadata = createPageMetadata({
+    title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
-};
+    path: '/',
+    keywords: SITE_CONFIG.keywords.split(', '),
+});
 
 export default async function HomePage() {
     // Server-side: Fetch posts at build time

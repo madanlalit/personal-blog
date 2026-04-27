@@ -33,7 +33,7 @@ export default function ArticleJsonLd({ post }: ArticleJsonLdProps) {
             url: `${SITE_CONFIG.url}${SITE_CONFIG.defaultImage}`, // Default image if post has no specific image
         },
         keywords: post.tags?.join(', '),
-        inLanguage: SITE_CONFIG.locale,
+        inLanguage: SITE_CONFIG.language,
     };
 
     return (

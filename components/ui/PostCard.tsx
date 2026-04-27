@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import type { PostMeta } from '@/lib/types';
+import { slugifyTag } from '@/lib/slug';
 import './PostCard.css';
 
 interface PostCardProps {
@@ -19,7 +20,7 @@ const PostCard = ({ post, index = 0 }: PostCardProps) => (
     <p className="post-excerpt">{post.excerpt}</p>
     {post.tags && (
       <div className="post-tags-container">
-        {post.tags.map((tag) => <Link key={tag} href={`/tags/${tag.toLowerCase()}`} className="post-tag-link">#{tag}</Link>)}
+        {post.tags.map((tag) => <Link key={tag} href={`/tags/${slugifyTag(tag)}`} className="post-tag-link">#{tag}</Link>)}
       </div>
     )}
     <Link href={`/post/${post.slug}`} className="read-link">Read entry <span>→</span></Link>

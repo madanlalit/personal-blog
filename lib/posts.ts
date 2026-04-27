@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import type { Post, PostMeta } from './types';
+import { slugifyTag } from './slug';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
@@ -65,6 +66,15 @@ export function getPostsByTag(tag: string): PostMeta[] {
     return getAllPostsMeta().filter(post =>
         post.tags.map(t => t.toLowerCase()).includes(tag.toLowerCase())
     );
+}
+
+export function getTagBySlug(slug: string): string | undefined {
+    return getAllTags().find(tag => slugifyTag(tag) === slug);
+}
+
+export function getPostsByTagSlug(slug: string): PostMeta[] {
+    const tag = getTagBySlug(slug);
+    return tag ? getPostsByTag(tag) : [];
 }
 
 export function getAllTags(): string[] {

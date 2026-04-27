@@ -16,6 +16,7 @@ import ReadingProgress from '@/components/features/post/ReadingProgress';
 import ScrollToTop from '@/components/features/post/ScrollToTop';
 import CodeBlock from '@/components/features/post/CodeBlock';
 import type { Post } from '@/lib/types';
+import { slugifyTag } from '@/lib/slug';
 import '@/components/features/terminal/SyntaxTheme.css';
 import './post.css';
 
@@ -31,7 +32,7 @@ function getNodeText(node: React.ReactNode): string {
     if (typeof node === 'string' || typeof node === 'number') return String(node);
     if (Array.isArray(node)) return node.map(getNodeText).join('');
     if (React.isValidElement(node)) {
-        const element = node as React.ReactElement<any>;
+        const element = node as React.ReactElement<{ children?: React.ReactNode }>;
         return getNodeText(element.props.children);
     }
     return '';
@@ -57,7 +58,7 @@ function stripLeadingMarker(node: React.ReactNode, marker: string, hasStripped =
     }
 
     if (React.isValidElement(node)) {
-        const element = node as React.ReactElement<any>;
+        const element = node as React.ReactElement<{ children?: React.ReactNode }>;
         return React.cloneElement(element, {
             ...element.props,
             children: stripLeadingMarker(element.props.children, marker, hasStripped),
@@ -168,7 +169,7 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts, sha
                         <div className="footer-content">
                             <div className="entry-tags">
                                 {post.tags.map((tag) => (
-                                    <Link key={tag} href={`/tags/${tag.toLowerCase()}`} className="tag-link">
+                                    <Link key={tag} href={`/tags/${slugifyTag(tag)}`} className="tag-link">
                                         #{tag}
                                     </Link>
                                 ))}
