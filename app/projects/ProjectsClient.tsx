@@ -22,7 +22,7 @@ const GITHUB_USERNAME = 'madanlalit';
 const MAX_DESCRIPTION_LENGTH = 100;
 
 // --- Types ---
-interface StarredRepo {
+interface PublicRepo {
     id: string;
     name: string;
     fullName: string;
@@ -38,9 +38,9 @@ interface StarredRepo {
     };
 }
 
-interface StarredReposData {
+interface PublicReposData {
     lastUpdated: number;
-    repos: StarredRepo[];
+    repos: PublicRepo[];
 }
 
 type SortOption = 'stars' | 'forks' | 'name';
@@ -53,7 +53,7 @@ const truncateText = (text: string, maxLength: number): string => {
 };
 
 export default function ProjectsClient() {
-    const [repos, setRepos] = useState<StarredRepo[]>([]);
+    const [repos, setRepos] = useState<PublicRepo[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [filter, setFilter] = useState('ALL');
@@ -62,17 +62,17 @@ export default function ProjectsClient() {
     useEffect(() => {
         const fetchRepos = async () => {
             try {
-                const response = await fetch(`/starred-repos.json?t=${Date.now()}`);
+                const response = await fetch(`/public-repos.json?t=${Date.now()}`);
                 if (!response.ok) {
-                    throw new Error('Failed to load starred repos');
+                    throw new Error('Failed to load public repos');
                 }
-                const data: StarredReposData = await response.json();
+                const data: PublicReposData = await response.json();
                 const myRepos = data.repos.filter(
                     (repo) => repo.owner.login === GITHUB_USERNAME
                 );
                 setRepos(myRepos);
             } catch (err) {
-                console.error('Failed to load starred repos:', err);
+                console.error('Failed to load public repos:', err);
                 setError('Failed to load projects');
             } finally {
                 setLoading(false);

@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "update-data": "node scripts/update-github-data.js && node scripts/update-starred-repos.js"
+    "update-data": "node scripts/update-github-data.js && node scripts/update-public-repos.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
