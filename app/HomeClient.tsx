@@ -202,8 +202,9 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                                     className={`log-row ${visibleLogs.includes(log.id) ? 'log-visible' : 'log-hidden'}`}
                                 >
                                     <span className="log-time">
-                                        [{new Date().getHours()}:
-                                        {String(new Date().getMinutes() - (SYSTEM_LOGS.length - log.id)).padStart(2, '0')}]
+                                        {time
+                                            ? `[${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes() - (SYSTEM_LOGS.length - log.id)).padStart(2, '0')}]`
+                                            : '[--:--]'}
                                     </span>
                                     <span className={`log-type ${log.type}`}>{log.type}</span>
                                     <span className="log-msg">{log.msg}</span>
@@ -248,7 +249,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                 <div className="f-right">
                     <span>v1.0.0</span>
                     <span className="sep">/</span>
-                    <span>{new Date().getFullYear()}</span>
+                    <span>{time ? time.getFullYear() : '----'}</span>
                 </div>
             </footer>
         </div>

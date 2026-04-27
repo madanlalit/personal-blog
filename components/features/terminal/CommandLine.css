@@ -17,7 +17,7 @@
 .cli-tab {
     background: transparent;
     border: none;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     padding: 6px 16px;
     font-family: var(--font-primary);
     font-size: 0.75rem;
@@ -96,9 +96,9 @@
 }
 
 .cli-tab.action-tab {
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     font-weight: 400;
-    opacity: 0.6;
+    opacity: 1;
     font-size: 0.7rem;
     letter-spacing: 0.6px;
     padding: 8px 16px;
@@ -188,7 +188,7 @@
 
 /* CMD badge */
 .cli-badge {
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     font-weight: 600;
     font-size: 0.68rem;
     padding: 3px 8px;

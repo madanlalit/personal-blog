@@ -295,6 +295,7 @@ export default function CommandLine({
                             type="text"
                             className="cli-input"
                             value={input}
+                            aria-label="Command line input"
                             onChange={(e) => {
                                 setInput(e.target.value);
                                 if (onKey) onKey();
