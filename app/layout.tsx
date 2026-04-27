@@ -6,6 +6,8 @@ import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
 import JsonLd from '@/components/JsonLd';
 import WebMCPProvider from '@/components/WebMCPProvider';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import './app.css';
 
@@ -67,6 +69,8 @@ export default function RootLayout({
                 <ClientShell posts={posts}>
                     {children}
                 </ClientShell>
+                <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
