@@ -8,6 +8,7 @@ import JsonLd from '@/components/JsonLd';
 import WebMCPProvider from '@/components/WebMCPProvider';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Script from 'next/script';
 import './globals.css';
 import './app.css';
 
@@ -82,6 +83,11 @@ export default function RootLayout({
                 </ClientShell>
                 <Analytics />
                 <SpeedInsights />
+                <Script
+                    src="https://analytics.ahrefs.com/analytics.js"
+                    data-key="Zm58yQloJlVyThuZ87XYGQ"
+                    strategy="afterInteractive"
+                />
             </body>
         </html>
     );
