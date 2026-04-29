@@ -15,6 +15,7 @@ import ShareButtons from '@/components/features/post/ShareButtons';
 import ReadingProgress from '@/components/features/post/ReadingProgress';
 import ScrollToTop from '@/components/features/post/ScrollToTop';
 import CodeBlock from '@/components/features/post/CodeBlock';
+import Mermaid from '@/components/features/post/Mermaid';
 import type { Post } from '@/lib/types';
 import { slugifyTag } from '@/lib/slug';
 import '@/components/features/terminal/SyntaxTheme.css';
@@ -73,6 +74,9 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts, sha
     const components = {
         code({ inline, className, children, ...props }: React.HTMLAttributes<HTMLElement> & { inline?: boolean }) {
             const match = /language-(\w+)/.exec(className || '');
+            if (!inline && match && match[1] === 'mermaid') {
+                return <Mermaid chart={String(children).replace(/\n$/, '')} />;
+            }
             return !inline && match ? (
                 <CodeBlock language={match[1]} value={String(children).replace(/\n$/, '')}>
                     {children}
