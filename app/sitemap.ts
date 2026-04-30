@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: `${SITE_CONFIG.url}/archive`,
             lastModified: latestPostDate,
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.7,
         },
         ...blogEntries,
