@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import Link from 'next/link';
 import { getAllTags, getPostsByTagSlug, getTagBySlug } from '@/lib/posts';
 import { createPageMetadata } from '@/lib/seo';
@@ -41,10 +41,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TagPage({ params }: Props) {
     const { tag: tagSlug } = await params;
+
+    // If the slug doesn't match any tag directly, try to find a tag whose
+    // slugified form matches — or whose raw name matches (for old raw URLs).
+    // This handles stale Google-cached URLs like /tags/context engineering.
     const tag = getTagBySlug(tagSlug);
+
+    if (!tag) {
+        // Try matching by slugifying the raw param (handles URL-decoded raw names)
+        const decodedParam = decodeURIComponent(tagSlug);
+        const matchedTag = getAllTags().find(
+            (t) => t.toLowerCase() === decodedParam.toLowerCase() || slugifyTag(t) === slugifyTag(decodedParam)
+        );
+        if (matchedTag) {
+            redirect(`/tags/${slugifyTag(matchedTag)}`);
+        }
+        notFound();
+    }
+
+    // If the URL slug doesn't match the canonical slug, redirect
+    const canonicalSlug = slugifyTag(tag);
+    if (tagSlug !== canonicalSlug) {
+        redirect(`/tags/${canonicalSlug}`);
+    }
+
+
     const posts = getPostsByTagSlug(tagSlug);
 
-    if (!tag || posts.length === 0) {
+    if (posts.length === 0) {
         notFound();
     }
 

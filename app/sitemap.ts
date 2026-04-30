@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/lib/posts';
+import { getAllPosts, getAllTags } from '@/lib/posts';
 import { SITE_CONFIG } from '@/lib/config';
+import { slugifyTag } from '@/lib/slug';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getAllPosts();
@@ -45,5 +46,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         },
         ...blogEntries,
+        ...getAllTags().map((tag) => ({
+            url: `${SITE_CONFIG.url}/tags/${slugifyTag(tag)}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.5,
+        })),
     ];
 }
