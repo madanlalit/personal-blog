@@ -1,6 +1,8 @@
-# Personal Blog
+# Lalit Madan
 
-This is a personal blog application built with React, Vite, and TypeScript, featuring a unique, retro-style terminal interface.
+![Lalit Madan personal blog preview](public/lm.png)
+
+Personal blog built with Next.js, React, and TypeScript, featuring a retro terminal-inspired interface for posts, projects, experience, and interactive commands.
 
 ## Features
 
@@ -9,17 +11,19 @@ This is a personal blog application built with React, Vite, and TypeScript, feat
 - **Terminal Commands**: Interactive command-line interface to navigate the blog.
 - **Games**: Includes a classic Snake game.
 - **Easter Eggs**: Discover hidden secrets like the Konami code.
-- **SEO Optimized**: Uses `react-helmet-async` for better search engine visibility.
+- **SEO Optimized**: Includes metadata, canonical URLs, structured data, robots.txt, and a dynamic sitemap.
 - **RSS Feed**: Automatically generates an `rss.xml` file for content syndication.
 - **Syntax Highlighting**: Code blocks in posts are highlighted for readability.
+- **Analytics**: Includes Vercel Analytics, Speed Insights, Ahrefs Analytics, and Google Analytics.
 
 ## Tech Stack
 
+- [Next.js](https://nextjs.org/)
 - [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [React Router](https://reactrouter.com/) for routing
 - [React Markdown](https://github.com/remarkjs/react-markdown) for rendering Markdown content
+- [Mermaid](https://mermaid.js.org/) for diagrams
+- [Framer Motion](https://www.framer.com/motion/) for animations
 - [ESLint](https://eslint.org/) for code linting
 
 ## Getting Started
@@ -37,7 +41,7 @@ You need to have Node.js and npm installed on your machine.
 
 1.  Clone the repo:
     ```sh
-    git clone https://github.com/your_username/personal-blog.git
+    git clone https://github.com/madanlalit/personal-blog.git
     ```
 2.  Navigate to the project directory:
     ```sh
@@ -56,14 +60,15 @@ To start the development server, run:
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
+The application will be available at `http://localhost:3000` unless Next.js selects another port.
 
 ## Available Scripts
 
-- `npm run dev`: Runs the app in the development mode.
-- `npm run build`: Builds the app for production to the `dist` folder.
+- `npm run dev`: Runs the Next.js development server.
+- `npm run build`: Builds the app for production.
+- `npm run start`: Starts the production server after a build.
 - `npm run lint`: Lints the code using ESLint.
-- `npm run preview`: Serves the production build locally.
+- `npm run update-data`: Refreshes GitHub repository data in `public/`.
 
 ## License
 
