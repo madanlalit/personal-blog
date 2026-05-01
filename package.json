@@ -11,6 +11,7 @@
     "update-data": "node scripts/update-github-data.js && node scripts/update-public-repos.js"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.4",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.23.26",

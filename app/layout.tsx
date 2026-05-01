@@ -8,6 +8,7 @@ import JsonLd from '@/components/JsonLd';
 import WebMCPProvider from '@/components/WebMCPProvider';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 import './globals.css';
 import './app.css';
@@ -85,18 +86,7 @@ export default function RootLayout({
                 </ClientShell>
                 <Analytics />
                 <SpeedInsights />
-                <Script
-                    src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', '${GOOGLE_ANALYTICS_ID}');
-                    `}
-                </Script>
+                <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
                 <Script
                     src="https://analytics.ahrefs.com/analytics.js"
                     data-key="Zm58yQloJlVyThuZ87XYGQ"
