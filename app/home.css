@@ -34,31 +34,36 @@
     flex: 1;
 }
 
-.hero-title {
-    font-size: var(--font-size-hero);
-    line-height: 1.1;
-    margin: 0 0 0.75rem 0;
-    letter-spacing: -0.03em;
-    font-weight: 700;
-}
-
-.hero-title .accent {
-    color: var(--accent);
-}
-
-.hero-subtitle {
-    font-size: var(--font-size-subtitle);
-    color: var(--text-secondary);
+.hero-identity {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+    width: fit-content;
     margin: 0;
-    max-width: 650px;
-    height: 2em;
+    color: var(--text-tertiary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
     line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.identity-separator {
+    color: var(--border);
+    font-weight: 400;
+}
+
+.identity-role {
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.04em;
 }
 
 .hero-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .hero-btn {
@@ -142,36 +147,39 @@
 
 .signal-module {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 0;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 1rem;
     margin-bottom: var(--space-lg);
-    padding: 1.25rem;
-    border: 1px solid var(--border);
+    padding: 0 0 var(--space-lg);
+    border-bottom: 1px solid var(--border);
 }
 
 .signal-kicker {
-    color: var(--accent);
+    color: var(--text-tertiary);
     font-size: var(--font-size-xs);
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
 }
 
 .signal-content h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.55rem;
     color: var(--text-primary);
-    font-size: var(--font-size-subtitle);
-    line-height: 1.3;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
 }
 
 .signal-content p {
     margin: 0;
     color: var(--text-secondary);
-    font-size: var(--font-size-body);
-    line-height: 1.65;
+    font-size: var(--font-size-small);
+    line-height: 1.7;
+    max-width: 68ch;
 }
 
 .signal-content p + p {
-    margin-top: 0.65rem;
+    margin-top: 0.45rem;
 }
 
 .sys-module {
@@ -685,12 +693,8 @@
     }
 
     .signal-module {
-        grid-template-columns: 120px 1fr;
-        gap: 0;
-    }
-
-    .hero-title {
-        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 0.75rem;
     }
 
     .hero-telemetry {
@@ -781,16 +785,6 @@
         width: 100%;
     }
 
-    .hero-title {
-        font-size: clamp(2rem, 10vw, 3rem);
-    }
-
-    .hero-subtitle {
-        font-size: var(--font-size-body);
-        max-width: 100%;
-        line-height: 1.4;
-    }
-
     .hero-actions {
         width: 100%;
         gap: 0.75rem;
@@ -829,18 +823,19 @@
     }
 
     .signal-module {
-        gap: 0;
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
         margin-bottom: 1.5rem;
-        padding: 1rem;
+        padding-bottom: 1.25rem;
     }
 
     .signal-content h2 {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .signal-content p {
-        font-size: 0.85rem;
-        line-height: 1.55;
+        font-size: 0.82rem;
+        line-height: 1.6;
     }
 
     /* Sidebar */
@@ -1010,12 +1005,6 @@
         margin-bottom: 1rem;
     }
 
-    .hero-title {
-        font-size: var(--font-size-title);
-        word-break: break-word;
-        overflow-wrap: break-word;
-    }
-
     .hero-actions {
         flex-direction: column;
     }
@@ -1123,14 +1112,6 @@
 @media (max-width: 320px) {
     .home-container {
         padding: 2px;
-    }
-
-    .hero-title {
-        font-size: 1.15rem !important;
-    }
-
-    .hero-subtitle {
-        font-size: 0.7rem;
     }
 
     .hero-btn {

@@ -41,7 +41,7 @@ const CURRENT_STATUS = [
 const SOCIAL_LINKS = [
     { icon: Github, href: 'https://github.com/madanlalit', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/madanlalit', label: 'LinkedIn' },
-    { icon: X, href: 'https://x.com/lalitmadan', label: 'X' },
+    { icon: X, href: 'https://x.com/madanlalit68', label: 'X' },
 ];
 
 const INTERESTS = ['Open Source', 'System Design', 'Dev Tools', 'Automation', 'UI/UX'];

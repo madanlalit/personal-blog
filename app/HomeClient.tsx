@@ -59,12 +59,11 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
             {/* --- HERO SECTION --- */}
             <header className="hero-section">
                 <div className="hero-main">
-                    <h1 className="hero-title">
-                        LALIT<span className="accent">_</span>MADAN<span className="typewriter-cursor"></span>
+                    <h1 className="hero-identity">
+                        <span>LALIT_MADAN</span>
+                        <span className="identity-separator">/</span>
+                        <span className="identity-role">AI Engineer. Python OSS.</span>
                     </h1>
-                    <div className="hero-subtitle">
-                        AI Engineer. Context Engineering. Python OSS.
-                    </div>
 
                     <div className="hero-actions">
                         <Link href="/projects" className="hero-btn primary">

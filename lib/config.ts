@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
     description: "AI engineer writing about context engineering, Python, open source, and reliable AI agents. Building practical systems and sharing technical notes in public.",
     author: "Lalit Madan",
     url: "https://lalitmadan.com",
-    twitterHandle: "@lalitmadan",
+    twitterHandle: "@madanlalit68",
     defaultImage: "/lm.png",
     favicon: "/lm.svg",
     locale: "en_US",

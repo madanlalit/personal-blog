@@ -4,7 +4,7 @@ import './Footer.css';
 
 // Social links configuration
 const socialLinks = [
-    { platform: 'Twitter', url: 'https://x.com/lalitmadan', icon: '𝕏', label: 'Twitter' },
+    { platform: 'Twitter', url: 'https://x.com/madanlalit68', icon: '𝕏', label: 'Twitter' },
     { platform: 'GitHub', url: 'https://github.com/madanlalit', icon: '⚡', label: 'GitHub' },
     { platform: 'LinkedIn', url: 'https://linkedin.com/in/madanlalit', icon: 'in', label: 'LinkedIn' },
 ];

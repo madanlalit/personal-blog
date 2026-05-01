@@ -154,7 +154,7 @@ export default function CommandLine({
                     '  neofetch    - System Information',
                     '  snake       - Play Snake',
                     '  ls          - List directories',
-                    '  reboot      - Reboot system',
+                    '  reboot      - Reload interface',
                     '  clear       - Clear screen',
                 ]);
                 break;
@@ -164,9 +164,6 @@ export default function CommandLine({
                 break;
             }
             case 'reboot': {
-                if (typeof sessionStorage !== 'undefined') {
-                    sessionStorage.removeItem('hasBooted');
-                }
                 window.location.reload();
                 break;
             }
@@ -355,7 +352,7 @@ export default function CommandLine({
                 <button className="cli-tab action-tab" onClick={() => window.open('https://linkedin.com/in/madanlalit', '_blank')} title="Open LinkedIn profile">
                     LINKEDIN
                 </button>
-                <button className="cli-tab action-tab" onClick={() => window.open('https://x.com/lalitmadan', '_blank')} title="Open X (Twitter) profile">
+                <button className="cli-tab action-tab" onClick={() => window.open('https://x.com/madanlalit68', '_blank')} title="Open X (Twitter) profile">
                     X
                 </button>
             </div>

@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '@/components/hooks/useTheme';
 import useSound from '@/components/hooks/useSound';
 import Commander from '@/components/features/terminal/Commander';
 import CommandLine from '@/components/features/terminal/CommandLine';
-import BootScreen from '@/components/features/system/BootScreen';
 import SnakeGame from '@/components/features/terminal/SnakeGame';
 import AudioPlayer from '@/components/features/terminal/AudioPlayer';
 import SystemAlert from '@/components/features/system/SystemAlert';
@@ -14,29 +13,17 @@ import StatusBar from '@/components/ui/StatusBar';
 import type { PostMeta } from '@/lib/types';
 import '@/app/app.css';
 
-const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
-
 interface ClientShellProps {
     children: React.ReactNode;
     posts: PostMeta[];
 }
 
 export default function ClientShell({ children, posts }: ClientShellProps) {
-    const [booted, setBooted] = useState(true); // Default to true for SSR
     const [commanderOpen, setCommanderOpen] = useState(false);
     const [snakeGameOpen, setSnakeGameOpen] = useState(false);
     const [ampOpen, setAmpOpen] = useState(false);
     const { playHoverSound, playKeySound, toggleMute, muted } = useSound();
     const { setTheme, availableThemes } = useTheme();
-
-    // Check boot state on mount (client-side only)
-    useIsomorphicLayoutEffect(() => {
-        const hasBooted = sessionStorage.getItem('hasBooted');
-        if (!hasBooted) {
-            setBooted(false);
-        }
-    }, []);
-
 
     // Global hover sounds
     useEffect(() => {
@@ -66,11 +53,6 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
         return () => window.removeEventListener('keydown', handleKey);
     }, []);
 
-    const handleBootComplete = () => {
-        setBooted(true);
-        sessionStorage.setItem('hasBooted', 'true');
-    };
-
     const handleCommand = (cmd: string) => {
         if (cmd === 'snake') {
             setSnakeGameOpen(true);
@@ -82,14 +64,6 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
 
     return (
         <>
-            {/* Boot Screen Overlay */}
-            {!booted && (
-                <div style={{ position: 'fixed', inset: 0, zIndex: 99999 }}>
-                    <BootScreen onComplete={handleBootComplete} />
-                </div>
-            )}
-
-            {/* Main Application */}
             <div
                 className="app tui-window fade-in"
                 style={{
@@ -97,8 +71,6 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
                     flexDirection: 'column',
                     height: '100vh',
                     overflow: 'hidden',
-                    opacity: booted ? 1 : 0,
-                    transition: 'opacity 0.5s ease-in'
                 }}
             >
                 <SystemAlert />
