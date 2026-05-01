@@ -24,6 +24,8 @@ const jetbrainsMono = JetBrains_Mono({
     variable: '--font-mono',
 });
 
+const GOOGLE_ANALYTICS_ID = 'G-25B25C48S4';
+
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_CONFIG.url),
     title: {
@@ -83,6 +85,18 @@ export default function RootLayout({
                 </ClientShell>
                 <Analytics />
                 <SpeedInsights />
+                <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '${GOOGLE_ANALYTICS_ID}');
+                    `}
+                </Script>
                 <Script
                     src="https://analytics.ahrefs.com/analytics.js"
                     data-key="Zm58yQloJlVyThuZ87XYGQ"
