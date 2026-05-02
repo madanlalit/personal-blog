@@ -1,0 +1,28 @@
+# Lalit Madan
+> AI engineer writing about context engineering, Python, open source, and reliable AI agents. This site collects practical notes on LLM systems, agent workflows, open source, and developer tooling.
+
+## Core Pages
+- [Home](https://lalitmadan.com): AI engineering notes from Lalit Madan.
+- [About](https://lalitmadan.com/about): Background, focus areas, and contact links for Lalit Madan.
+- [Projects](https://lalitmadan.com/projects): AI engineering, Python, open source, and developer tooling projects.
+- [Archive](https://lalitmadan.com/archive): Complete blog archive.
+- [RSS](https://lalitmadan.com/rss.xml): RSS feed for new posts.
+
+## Featured Writing
+- [The SKILL.md Playbook: Write Agent Skills That Actually Work](https://lalitmadan.com/post/the-skill-md-guide): Practical guide to writing high-signal agent skills with triggerable descriptions, progressive disclosure, references, scripts, testing, and iteration.
+- [Why Most Orgs Don't Need Specialized Agentic Tools](https://lalitmadan.com/post/why-most-orgs-dont-need-specialized-agentic-tools): Argument for starting with SKILLS.md before building custom agent platforms.
+- [Why AGENTS.md Doesn't Work](https://lalitmadan.com/post/why-agents-md-doesnt-work): Analysis of why centralized agent documentation often fails in practice.
+- [Context Engineering: The Next Evolution in AI Development](https://lalitmadan.com/post/context-engineering-for-ai-agents): Long-form explanation of context engineering for AI agents and LLM systems.
+- [What Are AI Agents?](https://lalitmadan.com/post/what-are-agents): Introduction to AI agents, autonomy, planning, and action.
+
+## Topics
+- [AI](https://lalitmadan.com/tags/ai): Posts about AI systems, agents, and engineering practice.
+- [Agents](https://lalitmadan.com/tags/agents): Posts focused on AI agents and agentic workflows.
+- [Context Engineering](https://lalitmadan.com/tags/context-engineering): Posts about context design for LLM systems.
+- [Developer Experience](https://lalitmadan.com/tags/developer-experience): Posts about tools, workflows, and engineering ergonomics.
+- [SKILL.md](https://lalitmadan.com/tags/skill-md): Posts about agent skill design.
+
+## Author
+- [GitHub](https://github.com/madanlalit)
+- [LinkedIn](https://linkedin.com/in/madanlalit)
+- [X](https://x.com/madanlalit68)
