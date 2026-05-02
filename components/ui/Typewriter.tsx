@@ -34,10 +34,13 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 5, delay = 0, onC
         return () => clearInterval(interval);
     }, [started, displayedText, text, speed, onComplete]);
 
+    const hiddenText = text.slice(displayedText.length);
+
     return (
-        <span className="typewriter-text">
-            {displayedText}
-            {displayedText.length < text.length && <span className="typewriter-cursor"></span>}
+        <span className="typewriter-text" aria-label={text}>
+            <span aria-hidden="true">{displayedText}</span>
+            {displayedText.length < text.length && <span className="typewriter-cursor" aria-hidden="true"></span>}
+            <span className="typewriter-hidden" aria-hidden="true">{hiddenText}</span>
         </span>
     );
 };

@@ -1,3 +1,7 @@
+.typewriter-hidden {
+    color: transparent;
+}
+
 .typewriter-cursor {
     display: inline-block;
     width: 0.5em;
