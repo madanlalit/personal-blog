@@ -1,11 +1,14 @@
 ---
 title: "Why Most Orgs Don't Need Specialized Agentic Tools"
+seoTitle: "Specialized Agentic Tools vs SKILLS.md"
 subtitle: "SKILLS.md is usually enough"
 excerpt: "Most teams reach for custom agentic platforms too early. In practice, a well-written SKILLS.md often delivers more value with less cost, less friction, and less organizational overhead."
 date: "2026-04-23"
+modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 7
 tags: ["AI", "Agents", "Developer Experience", "SKILLS.md", "Context Engineering"]
+keywords: ["specialized agentic tools", "SKILLS.md", "AI agent platforms", "agentic tools for organizations", "AI agent workflows"]
 ---
 
 *This view comes from building these systems directly and learning how quickly the cost, complexity, and adoption burden add up.*
@@ -191,3 +194,7 @@ It is easier to adopt.
 And it forces the organization to learn what actually works.
 
 For most teams, the next step in agent adoption is not a platform. It is a clearer skill.
+
+## Related Reading
+
+For the implementation side, read [The SKILL.md Playbook](/post/the-skill-md-guide). For the underlying context problem, read [Context Engineering for AI Agents](/post/context-engineering-for-ai-agents).

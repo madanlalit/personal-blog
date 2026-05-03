@@ -1,11 +1,14 @@
 ---
 title: "The SKILL.md Playbook: Write Agent Skills That Actually Work"
+seoTitle: "SKILL.md Guide for AI Agent Skills"
 subtitle: "A practical end-to-end guide to building high-signal skills"
 excerpt: "How to write SKILL.md files that actually improve agent behavior. Covers triggerable descriptions, progressive disclosure, flat-text references, testing, and iteration with a real case study that cut token usage from 1,500 to 80."
 date: "2026-04-30"
+modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 28
 tags: ["AI", "Agents", "SKILL.md", "Developer Experience", "Context Engineering"]
+keywords: ["SKILL.md", "skill.md guide", "AI agent skills", "agent skills file", "coding agent instructions", "skills for AI agents"]
 ---
 
 *This guide comes from building agent workflows, watching them fail in boring ways, and learning that most of the quality comes from the shape of the instructions, not the volume of them.*
@@ -827,3 +830,7 @@ The best skill files feel almost too small when you read them. Then you run them
 That is the standard to aim for: not exhaustive, not clever, not decorative.
 
 Just enough context to make the agent better at the task than it was without the skill. No more. No less.
+
+## Related Reading
+
+This post is the practical companion to [Why AGENTS.md Doesn't Work](/post/why-agents-md-doesnt-work). If you are deciding whether to build a platform around this, read [Why Most Orgs Don't Need Specialized Agentic Tools](/post/why-most-orgs-dont-need-specialized-agentic-tools).

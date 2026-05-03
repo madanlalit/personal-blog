@@ -1,11 +1,14 @@
 ---
 title: "What Are AI Agents?"
+seoTitle: "What Are AI Agents? A Developer Guide"
 subtitle: "Understanding the autonomous systems reshaping how we build software"
 excerpt: "AI agents are more than fancy chatbots they're autonomous systems that can reason, plan, and take action. Here's what makes them different and why they matter."
 date: "2025-12-23"
+modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 10
 tags: ["AI", "Agents", "LLM", "Automation"]
+keywords: ["what are AI agents", "AI agents explained", "LLM agents", "agentic workflows", "AI agents for developers"]
 ---
 
 ## What is an AI Agent?
@@ -15,6 +18,9 @@ You've probably heard the term "AI agent" thrown around a lot lately. Every star
 At its core, an AI agent is a system that can **perceive its environment, reason about it, and take autonomous action** to achieve a goal. Unlike a simple chatbot that responds to prompts, an agent can plan multi-step tasks, use tools, and adapt its approach based on feedback.
 
 Think of it this way: ChatGPT is like a brilliant consultant who can answer any question you ask. An AI agent is like hiring that consultant full-time and giving them access to your codebase, your terminal, and the authority to actually *do* things.
+
+> [!SUMMARY]
+> An AI agent is a goal-directed system that uses an LLM, context, memory, and tools to plan and take actions. The important shift is from asking a model for an answer to giving a system enough authority and feedback to complete a task.
 
 ### What Makes an Agent Different from a Chatbot?
 
@@ -112,6 +118,10 @@ If you want to experience agents firsthand:
 1. **Try a coding agent** — Install Cursor or use Claude Code in your terminal
 2. **Build a simple agent** — Use a framework like LangGraph to create a tool-using agent
 3. **Experiment with prompts** — The "system prompt" is the agent's operating manual
+
+## Related Reading
+
+For the next layer down, read [Context Engineering for AI Agents](/post/context-engineering-for-ai-agents). If you are using agents in a codebase, [Why AGENTS.md Doesn't Work](/post/why-agents-md-doesnt-work) explains where repo-level instructions break down.
 
 ---
 

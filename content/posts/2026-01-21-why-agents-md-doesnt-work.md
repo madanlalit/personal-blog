@@ -1,11 +1,14 @@
 ---
 title: "Why AGENTS.md Doesn't Work"
+seoTitle: "Why AGENTS.md Fails for AI Agents"
 subtitle: "The uncomfortable truth about centralized agent documentation"
 excerpt: "Over 60,000 projects use AGENTS.md. It's backed by OpenAI, Google, and the Linux Foundation. And yet it consistently fails in practice. Here's why."
 date: "2026-01-21"
+modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 8
 tags: ["AI", "Agents", "AGENTS.md", "Developer Experience"]
+keywords: ["AGENTS.md", "agents.md doesn't work", "AI agent instructions", "coding agent instructions", "agent documentation"]
 ---
 
 ## The Promise of AGENTS.md
@@ -15,6 +18,9 @@ It seems so elegant at first. You create a markdown file `AGENTS.md` documenting
 The concept has serious momentum. Over **60,000 open-source projects** now use AGENTS.md. It's backed by OpenAI, Google, Cursor, and Factory, and is now an official open format stewarded by the **Agentic AI Foundation** under the Linux Foundation. Tools like GitHub Copilot, VS Code, Gemini CLI, and Windsurf all support it natively.
 
 And yet, I've tried this approach. I've seen countless teams try it. **It doesn't work, at least not reliably.**
+
+> [!SUMMARY]
+> `AGENTS.md` fails when it becomes a catch-all handbook. AI agents need concise, relevant, task-specific context; large centralized instruction files often add noise, ambiguity, and token cost before the agent has enough information to know what matters.
 
 ## The Six Ways AGENTS.md Breaks Down
 
@@ -126,3 +132,7 @@ Think of `AGENTS.md` as the "Executive Summary" for your agent, not the employee
 If you've built an `AGENTS.md` and felt frustrated that it doesn't seem to work, you're not alone. The format is well designed for what it is: a centralized, agent-agnostic guide. But for how agents actually work, it's often the wrong abstraction.
 
 Use `AGENTS.md` for the high-level map, but not to enforce a persona for your agents.
+
+## Related Reading
+
+If you want a better way to package task-specific guidance, read [The SKILL.md Playbook](/post/the-skill-md-guide). For the broader reason this matters, see [Context Engineering for AI Agents](/post/context-engineering-for-ai-agents).
