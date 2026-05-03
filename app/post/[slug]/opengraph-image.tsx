@@ -39,7 +39,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
                 {/* Top bar */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ color: '#A8B9A8', fontSize: '18px', letterSpacing: '0.08em' }}>
-                        // LALIT MADAN
+                        {'// LALIT MADAN'}
                     </span>
                     <span style={{ color: '#8B949E', fontSize: '16px', letterSpacing: '0.05em' }}>
                         lalitmadan.com

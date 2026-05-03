@@ -19,7 +19,6 @@ const Mermaid = ({ chart }: MermaidProps) => {
         const bgSecondary = style.getPropertyValue('--bg-secondary').trim() || '#202224';
         const textPrimary = style.getPropertyValue('--text-primary').trim() || '#D4D4D4';
         const textSecondary = style.getPropertyValue('--text-secondary').trim() || '#8B949E';
-        const accent = style.getPropertyValue('--accent').trim() || '#A8B9A8';
         const border = style.getPropertyValue('--border').trim() || '#3E4451';
 
         // theme: 'base' gives us full control over all colors
@@ -79,7 +78,7 @@ const Mermaid = ({ chart }: MermaidProps) => {
     }, [chart]);
 
     useEffect(() => {
-        renderChart();
+        void Promise.resolve().then(renderChart);
 
         // Re-render when theme changes
         const observer = new MutationObserver((mutations) => {
