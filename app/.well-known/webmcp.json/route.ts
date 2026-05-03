@@ -9,7 +9,7 @@ export async function GET() {
         tools: [
             {
                 name: 'get_all_posts',
-                description: 'Returns a list of all blog posts with their title, slug, date, excerpt, tags, and category.',
+                description: 'Returns a list of all blog posts with their title, SEO title, slug, date, excerpt, keywords, tags, and category.',
                 inputSchema: {
                     type: 'object',
                     properties: {},
@@ -18,7 +18,7 @@ export async function GET() {
             },
             {
                 name: 'search_posts',
-                description: 'Search blog posts by a keyword. Matches against title, excerpt, tags, and category.',
+                description: 'Search blog posts by a keyword. Matches against title, SEO title, excerpt, keywords, tags, and category.',
                 inputSchema: {
                     type: 'object',
                     properties: {

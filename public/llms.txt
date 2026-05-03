@@ -9,11 +9,11 @@
 - [RSS](https://lalitmadan.com/rss.xml): RSS feed for new posts.
 
 ## Featured Writing
-- [The SKILL.md Playbook: Write Agent Skills That Actually Work](https://lalitmadan.com/post/the-skill-md-guide): Practical guide to writing high-signal agent skills with triggerable descriptions, progressive disclosure, references, scripts, testing, and iteration.
-- [Why Most Orgs Don't Need Specialized Agentic Tools](https://lalitmadan.com/post/why-most-orgs-dont-need-specialized-agentic-tools): Argument for starting with SKILLS.md before building custom agent platforms.
-- [Why AGENTS.md Doesn't Work](https://lalitmadan.com/post/why-agents-md-doesnt-work): Analysis of why centralized agent documentation often fails in practice.
-- [Context Engineering: The Next Evolution in AI Development](https://lalitmadan.com/post/context-engineering-for-ai-agents): Long-form explanation of context engineering for AI agents and LLM systems.
-- [What Are AI Agents?](https://lalitmadan.com/post/what-are-agents): Introduction to AI agents, autonomy, planning, and action.
+- [SKILL.md Guide for AI Agent Skills](https://lalitmadan.com/post/the-skill-md-guide): Practical guide to writing high-signal SKILL.md files with triggerable descriptions, progressive disclosure, references, scripts, testing, and iteration.
+- [Specialized Agentic Tools vs SKILLS.md](https://lalitmadan.com/post/why-most-orgs-dont-need-specialized-agentic-tools): Argument for starting with SKILLS.md before building custom AI agent platforms.
+- [Why AGENTS.md Fails for AI Agents](https://lalitmadan.com/post/why-agents-md-doesnt-work): Analysis of why centralized agent documentation often fails in practice.
+- [Context Engineering for AI Agents](https://lalitmadan.com/post/context-engineering-for-ai-agents): Long-form explanation of context engineering for AI agents, context windows, retrieval, tools, and memory.
+- [What Are AI Agents? A Developer Guide](https://lalitmadan.com/post/what-are-agents): Introduction to AI agents, autonomy, planning, tools, memory, and action.
 
 ## Topics
 - [AI](https://lalitmadan.com/tags/ai): Posts about AI systems, agents, and engineering practice.

@@ -16,12 +16,15 @@ export async function GET(_request: Request, { params }: Props) {
         notFound();
     }
 
-    return markdownResponse(`---
+return markdownResponse(`---
 title: ${JSON.stringify(post.title)}
+seoTitle: ${JSON.stringify(post.seoTitle || post.title)}
 description: ${JSON.stringify(post.excerpt)}
 date: ${JSON.stringify(post.date)}
+modifiedDate: ${JSON.stringify(post.modifiedDate || post.date)}
 category: ${JSON.stringify(post.category)}
 tags: ${JSON.stringify(post.tags)}
+keywords: ${JSON.stringify(post.keywords || [])}
 canonical: ${JSON.stringify(`${SITE_CONFIG.url}/post/${post.slug}`)}
 ---
 

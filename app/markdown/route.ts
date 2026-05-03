@@ -6,14 +6,17 @@ export async function GET() {
     const latestPosts = getAllPostsMeta().slice(0, 3);
     const postsMarkdown = latestPosts
         .map((post) => [
-            `### [${post.title}](${SITE_CONFIG.url}/post/${post.slug})`,
+            `### [${post.seoTitle || post.title}](${SITE_CONFIG.url}/post/${post.slug})`,
+            post.seoTitle ? `Display title: ${post.title}` : '',
             post.subtitle ? `_${post.subtitle}_` : '',
             `Published: ${post.date}`,
+            post.modifiedDate ? `Updated: ${post.modifiedDate}` : '',
             `Category: ${post.category}`,
             `Read time: ${post.readTime} min`,
             '',
             post.excerpt,
             '',
+            post.keywords?.length ? `Keywords: ${post.keywords.join(', ')}` : '',
             post.tags.length ? `Tags: ${post.tags.join(', ')}` : '',
         ].filter(Boolean).join('\n'))
         .join('\n\n');
