@@ -12,7 +12,9 @@
 
 # REQUIRED FIELDS
 title: "Your Post Title Here"
+seoTitle: "Primary Search Query: Helpful Specific Angle"
 date: "2025-12-18"                    # Format: YYYY-MM-DD
+modifiedDate: "2025-12-18"            # Update only when content meaningfully changes
 category: "Technology"                # Examples: Technology, Life, Ideas, Journal
 excerpt: "A brief 1-2 sentence summary that appears in post listings and SEO meta tags."
 
@@ -20,6 +22,8 @@ excerpt: "A brief 1-2 sentence summary that appears in post listings and SEO met
 subtitle: "An optional subtitle shown below the title"
 readTime: 5                           # Minutes to read (auto-calculated if omitted)
 tags: ["Tag1", "Tag2", "Tag3"]        # Array of tags for filtering
+keywords: ["Primary query", "Secondary query", "Related topic"]
+image: "/lm.png"
 
 ---
 

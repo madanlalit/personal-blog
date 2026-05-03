@@ -27,33 +27,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         return { title: 'Post Not Found' };
     }
 
+    const title = post.seoTitle || post.title;
+    const image = absoluteUrl(post.image || SITE_CONFIG.defaultImage);
+    const keywords = [...(post.keywords || []), ...(post.tags || [])];
+
     return {
-        title: post.title,
+        title,
         description: post.excerpt,
-        keywords: post.tags,
+        keywords,
         authors: [{ name: SITE_CONFIG.author, url: SITE_CONFIG.url }],
         alternates: {
             canonical: absoluteUrl(`/post/${post.slug}`),
         },
         openGraph: {
-            title: post.title,
+            title,
             description: post.excerpt,
             url: absoluteUrl(`/post/${post.slug}`),
             type: 'article',
             publishedTime: post.date,
-            modifiedTime: post.date,
+            modifiedTime: post.modifiedDate || post.date,
             authors: [SITE_CONFIG.author],
             tags: post.tags,
             siteName: SITE_CONFIG.title,
             locale: SITE_CONFIG.locale,
-            images: [{ url: absoluteUrl(SITE_CONFIG.defaultImage) }],
+            images: [{ url: image, alt: post.title }],
         },
         twitter: {
             card: 'summary_large_image',
-            title: post.title,
+            title,
             description: post.excerpt,
             creator: SITE_CONFIG.twitterHandle,
-            images: [absoluteUrl(SITE_CONFIG.defaultImage)],
+            images: [image],
         },
     };
 }

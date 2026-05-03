@@ -37,13 +37,17 @@ export const getAllPosts = cache((): Post[] => {
             id,
             slug,
             title: data.title || 'Untitled',
+            seoTitle: data.seoTitle,
             subtitle: data.subtitle,
             excerpt: data.excerpt || content.slice(0, 200) + '...',
             content,
             date: data.date || new Date().toISOString().split('T')[0],
+            modifiedDate: data.modifiedDate,
             category: data.category || 'Uncategorized',
             readTime: data.readTime || Math.ceil(wordCount / 200),
             tags: data.tags || [],
+            keywords: data.keywords,
+            image: data.image,
         } as Post;
     });
 
