@@ -17,6 +17,21 @@ const apiCatalog = {
                     type: 'application/json',
                     title: 'Blog post by slug',
                 },
+                {
+                    href: `${SITE_CONFIG.url}/mcp`,
+                    type: 'application/json',
+                    title: 'Public MCP endpoint',
+                },
+                {
+                    href: `${SITE_CONFIG.url}/.well-known/mcp/server-card.json`,
+                    type: 'application/json',
+                    title: 'MCP server card',
+                },
+                {
+                    href: `${SITE_CONFIG.url}/.well-known/agent-skills/index.json`,
+                    type: 'application/json',
+                    title: 'Agent skills discovery index',
+                },
             ],
         },
     ],
