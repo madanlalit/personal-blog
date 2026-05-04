@@ -1,6 +1,6 @@
 ---
-title: "The SKILL.md Playbook: Write Agent Skills That Actually Work"
-seoTitle: "SKILL.md Guide for AI Agent Skills"
+title: "Agent Skills Guide: The Complete SKILL.md Playbook"
+seoTitle: "SKILL.md Guide: Writing Claude & Codex Agent Skills"
 subtitle: "A practical end-to-end guide to building high-signal skills"
 excerpt: "How to write SKILL.md files that actually improve agent behavior. Covers triggerable descriptions, progressive disclosure, flat-text references, testing, and iteration with a real case study that cut token usage from 1,500 to 80."
 date: "2026-04-30"
@@ -8,7 +8,7 @@ modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 28
 tags: ["AI", "Agents", "Developer Experience"]
-keywords: ["SKILL.md", "skill.md guide", "AI agent skills", "agent skills file", "coding agent instructions", "skills for AI agents"]
+keywords: ["SKILL.md", "skill.md guide", "AI agent skills", "agent skills format", "codex skills", "skills for AI agents", "claude skills", "agent skills"]
 ---
 
 *This guide comes from building agent workflows, watching them fail in boring ways, and learning that most of the quality comes from the shape of the instructions, not the volume of them.*
