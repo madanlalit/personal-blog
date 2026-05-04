@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { JetBrains_Mono } from 'next/font/google';
 import { SITE_CONFIG } from '@/lib/config';
 import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
@@ -11,18 +9,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import './app.css';
-
-const inter = Inter({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-inter',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-mono',
-});
 
 const GOOGLE_ANALYTICS_ID = 'G-25B25C48S4';
 
@@ -76,7 +62,7 @@ export default function RootLayout({
     const posts = getAllPostsMeta();
 
     return (
-        <html lang={SITE_CONFIG.language} className={`${inter.variable} ${jetbrainsMono.variable}`}>
+        <html lang={SITE_CONFIG.language}>
             <body>
                 <JsonLd />
                 <WebMCPProvider />
