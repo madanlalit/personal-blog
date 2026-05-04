@@ -9,7 +9,6 @@ import WebMCPProvider from '@/components/WebMCPProvider';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import Script from 'next/script';
 import './globals.css';
 import './app.css';
 
@@ -87,11 +86,6 @@ export default function RootLayout({
                 <Analytics />
                 <SpeedInsights />
                 <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
-                <Script
-                    src="https://analytics.ahrefs.com/analytics.js"
-                    data-key="Zm58yQloJlVyThuZ87XYGQ"
-                    strategy="afterInteractive"
-                />
             </body>
         </html>
     );
