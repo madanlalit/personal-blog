@@ -4,6 +4,7 @@ node_modules
 npm-debug.log*
 dist
 .next
+next-env.d.ts
 
 # TypeScript incremental build info
 *.tsbuildinfo
