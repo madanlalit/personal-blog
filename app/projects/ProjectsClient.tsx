@@ -111,10 +111,10 @@ export default function ProjectsClient() {
             <div className="projects-page fade-in">
                 <div className="grid-bg"></div>
                 <header className="sys-header">
-                    <div className="sys-title">
+                    <h1 className="sys-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>
                         <Folder size={18} />
                         <span>./REPOSITORIES // MY_PROJECTS</span>
-                    </div>
+                    </h1>
                     <div className="sys-meta">LOADING...</div>
                 </header>
                 <main className="sys-content projects-loading">
@@ -130,10 +130,10 @@ export default function ProjectsClient() {
             <div className="projects-page fade-in">
                 <div className="grid-bg"></div>
                 <header className="sys-header">
-                    <div className="sys-title">
+                    <h1 className="sys-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>
                         <Folder size={18} />
                         <span>./REPOSITORIES // MY_PROJECTS</span>
-                    </div>
+                    </h1>
                     <div className="sys-meta">ERROR</div>
                 </header>
                 <main className="sys-content projects-error">
@@ -149,10 +149,10 @@ export default function ProjectsClient() {
             <div className="grid-bg"></div>
 
             <header className="sys-header">
-                <div className="sys-title">
+                <h1 className="sys-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>
                     <Folder size={18} />
                     <span>./REPOSITORIES // MY_PROJECTS</span>
-                </div>
+                </h1>
                 <div className="sys-meta">INDEXED: {processedRepos.length}</div>
             </header>
 
