@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                         <ul className="footer-links">
                             <li><Link href="/" className="footer-link">Home</Link></li>
                             <li><Link href="/about" className="footer-link">About</Link></li>
-                            <li><Link href="/archive" className="footer-link">Archive</Link></li>
+                            <li><Link href="/posts" className="footer-link">Posts</Link></li>
                         </ul>
                     </div>
 

@@ -7,7 +7,7 @@ date: "2025-12-23"
 modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 10
-tags: ["AI", "Agents", "LLM", "Automation"]
+tags: ["AI", "Agents"]
 keywords: ["what are AI agents", "AI agents explained", "LLM agents", "agentic workflows", "AI agents for developers"]
 ---
 

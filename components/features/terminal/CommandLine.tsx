@@ -97,7 +97,7 @@ export default function CommandLine({
         if (!input) return { suggestions: [], ghostText: '' };
 
         const commands = ['help', 'cd', 'ls', 'theme', 'clear', 'reboot', 'snake', 'grep', 'neofetch', 'amp'];
-        const args = ['home', 'about', 'archive', 'projects', 'experience', ...availableThemes];
+        const args = ['home', 'about', 'posts', 'archive', 'projects', 'experience', ...availableThemes];
 
         const parts = input.toLowerCase().split(' ');
         const hasSpace = input.includes(' ');
@@ -110,7 +110,7 @@ export default function CommandLine({
 
             if (['cd', 'theme'].includes(command)) {
                 const relevantArgs = command === 'cd'
-                    ? ['home', 'about', 'archive', 'projects', 'experience']
+                    ? ['home', 'about', 'posts', 'archive', 'projects', 'experience']
                     : [...availableThemes];
 
                 matches = relevantArgs
@@ -147,7 +147,7 @@ export default function CommandLine({
                 setDisplayHistory((prev) => [
                     ...prev,
                     'Available commands:',
-                    '  cd [page]   - Navigate (home, about, archive, projects, experience)',
+                    '  cd [page]   - Navigate (home, about, posts, projects, experience)',
                     '  grep [term] - Search blog posts',
                     `  theme [opt] - Set theme (${availableThemes.join(' | ')})`,
                     '  amp         - Launch Audio Player',
@@ -203,7 +203,7 @@ export default function CommandLine({
                 } else {
                     const resultNodes = results.map((p) => (
                         <div key={p.id} style={{ margin: '4px 0' }}>
-                            <span style={{ color: 'var(--accent)' }}>./archive/{p.date}:</span>{' '}
+                            <span style={{ color: 'var(--accent)' }}>./posts/{p.date}:</span>{' '}
                             <button
                                 onClick={() => router.push(`/post/${p.slug}`)}
                                 style={{
@@ -225,14 +225,15 @@ export default function CommandLine({
             }
             case 'cd': {
                 if (!arg || arg === 'home') router.push('/');
-                else if (['about', 'archive', 'projects', 'experience'].includes(arg)) router.push(`/${arg}`);
+                else if (arg === 'archive' || arg === 'posts') router.push('/posts');
+                else if (['about', 'projects', 'experience'].includes(arg)) router.push(`/${arg}`);
                 else {
                     setDisplayHistory((prev) => [...prev, `Error: Directory '${arg}' not found`]);
                 }
                 break;
             }
             case 'ls': {
-                setDisplayHistory((prev) => [...prev, 'home/  about/  archive/  projects/  experience/']);
+                setDisplayHistory((prev) => [...prev, 'home/  about/  posts/  projects/  experience/']);
                 break;
             }
             case 'theme': {
@@ -334,8 +335,8 @@ export default function CommandLine({
                 <button className={`cli-tab ${pathname === '/' ? 'active' : ''}`} onClick={() => router.push('/')} title="Navigate to Home (Alt+1)">
                     <span className="tab-key">1</span> HOME
                 </button>
-                <button className={`cli-tab ${pathname === '/archive' ? 'active' : ''}`} onClick={() => router.push('/archive')} title="Navigate to Archive (Alt+2)">
-                    <span className="tab-key">2</span> ARCHIVE
+                <button className={`cli-tab ${pathname === '/posts' ? 'active' : ''}`} onClick={() => router.push('/posts')} title="Navigate to Posts (Alt+2)">
+                    <span className="tab-key">2</span> POSTS
                 </button>
                 <button className={`cli-tab ${pathname === '/about' ? 'active' : ''}`} onClick={() => router.push('/about')} title="Navigate to About (Alt+3)">
                     <span className="tab-key">3</span> ABOUT

@@ -59,8 +59,8 @@ export default function ArticleJsonLd({ post }: ArticleJsonLdProps) {
                     {
                         '@type': 'ListItem',
                         position: 2,
-                        name: 'Archive',
-                        item: `${SITE_CONFIG.url}/archive`,
+                        name: 'Posts',
+                        item: `${SITE_CONFIG.url}/posts`,
                     },
                     {
                         '@type': 'ListItem',

@@ -7,7 +7,7 @@ date: "2026-01-21"
 modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 8
-tags: ["AI", "Agents", "AGENTS.md", "Developer Experience"]
+tags: ["AI", "Agents", "Developer Experience"]
 keywords: ["AGENTS.md", "agents.md doesn't work", "AI agent instructions", "coding agent instructions", "agent documentation"]
 ---
 

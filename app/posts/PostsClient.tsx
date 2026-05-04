@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Terminal, Search, LayoutGrid, List, Calendar, Clock, FileText } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
-import './archive.css';
+import './posts.css';
 
 // Helper functions
 const groupPostsByYear = (posts: PostMeta[]) => {
@@ -94,12 +94,12 @@ const GridCard = ({ post }: { post: PostMeta }) => (
     </Link>
 );
 
-interface ArchiveClientProps {
+interface PostsClientProps {
     initialPosts: PostMeta[];
     allTags: string[];
 }
 
-export default function ArchiveClient({ initialPosts, allTags }: ArchiveClientProps) {
+export default function PostsClient({ initialPosts, allTags }: PostsClientProps) {
     const router = useRouter();
     const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
     const [searchQuery, setSearchQuery] = useState('');
@@ -130,18 +130,18 @@ export default function ArchiveClient({ initialPosts, allTags }: ArchiveClientPr
     }, [handleKeyDown]);
 
     return (
-        <div className="archive-root">
+        <div className="posts-root">
             <div className="grid-overlay" aria-hidden="true" />
 
-            <header className="archive-hud">
-                <div className="hud-title"><Terminal size={18} /><span>ARCHIVE_DB // ACCESS_LEVEL: PUBLIC</span></div>
+            <header className="posts-hud">
+                <div className="hud-title"><Terminal size={18} /><span>POSTS_DB // ACCESS_LEVEL: PUBLIC</span></div>
                 <div className="hud-stats">
                     <StatPill label="TOTAL_ENTRIES" value={initialPosts.length} />
                     <StatPill label="SYSTEM_TAGS" value={allTags.length} />
                 </div>
             </header>
 
-            <div className="archive-body">
+            <div className="posts-body">
                 <section className="activity-section">
                     <div className="section-label">ACTIVITY_LOG [LAST_52_WEEKS]</div>
                     <div className="heatmap-grid">

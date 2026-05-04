@@ -7,7 +7,7 @@ date: "2026-02-07"
 modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 7
-tags: ["AI", "Learning", "Career"]
+tags: ["AI", "Learning"]
 keywords: ["AI learning strategy", "AI for developers", "how developers can keep up with AI", "AI engineering fundamentals", "developer career AI"]
 ---
 

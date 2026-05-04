@@ -1,4 +1,4 @@
-/* Archive Theme Variables */
+/* Posts Theme Variables */
 :root {
     --arch-font: var(--font-primary);
     --arch-border: var(--border, #e5e5e5);
@@ -8,7 +8,7 @@
 }
 
 /* Layout */
-.archive-root {
+.posts-root {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: var(--space-lg);
@@ -20,7 +20,7 @@
     position: relative;
 }
 
-.archive-body {
+.posts-body {
     flex: 1;
 }
 
@@ -35,7 +35,7 @@
 }
 
 /* HUD Header */
-.archive-hud {
+.posts-hud {
     display: flex;
     justify-content: space-between;
     padding: var(--space-md) 0 1rem;
@@ -441,11 +441,11 @@
 
 /* Tablet (max-width: 768px) */
 @media (max-width: 768px) {
-    .archive-root {
+    .posts-root {
         padding: var(--space-md) var(--space-sm);
     }
 
-    .archive-hud {
+    .posts-hud {
         flex-direction: column;
         gap: var(--space-md);
         align-items: flex-start;
@@ -539,7 +539,7 @@
 
 /* Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
-    .archive-root {
+    .posts-root {
         padding: var(--space-xs);
         max-width: 100%;
         overflow-x: hidden;
@@ -549,7 +549,7 @@
         display: none;
     }
 
-    .archive-hud {
+    .posts-hud {
         font-size: var(--font-size-xxs);
         padding: var(--space-sm) 0;
         margin-bottom: var(--space-sm);

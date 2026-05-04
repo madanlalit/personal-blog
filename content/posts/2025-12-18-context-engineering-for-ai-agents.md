@@ -7,7 +7,7 @@ date: "2025-12-18"
 modifiedDate: "2026-05-03"
 category: "Technology"
 readTime: 18
-tags: ["AI", "LLM", "Context Engineering", "Agents", "Machine Learning"]
+tags: ["AI", "Agents", "Context Engineering"]
 keywords: ["context engineering", "context engineering for AI agents", "prompt engineering vs context engineering", "LLM agents", "agent context windows"]
 ---
 

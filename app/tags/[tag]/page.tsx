@@ -75,8 +75,8 @@ export default async function TagPage({ params }: Props) {
     return (
         <div className="tag-archive fade-in" style={{ padding: 'var(--space-lg)' }}>
             <header style={{ marginBottom: 'var(--space-lg)' }}>
-                <Link href="/archive" style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-sm)', display: 'inline-block' }}>
-                    ← Back to Archive
+                <Link href="/posts" style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-sm)', display: 'inline-block' }}>
+                    ← Back to Posts
                 </Link>
                 <h1 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Tag size={24} />

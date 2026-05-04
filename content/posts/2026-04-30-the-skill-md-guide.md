@@ -7,7 +7,7 @@ date: "2026-04-30"
 modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 28
-tags: ["AI", "Agents", "SKILL.md", "Developer Experience", "Context Engineering"]
+tags: ["AI", "Agents", "Developer Experience"]
 keywords: ["SKILL.md", "skill.md guide", "AI agent skills", "agent skills file", "coding agent instructions", "skills for AI agents"]
 ---
 

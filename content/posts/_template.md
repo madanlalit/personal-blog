@@ -21,7 +21,7 @@ excerpt: "A brief 1-2 sentence summary that appears in post listings and SEO met
 # OPTIONAL FIELDS
 subtitle: "An optional subtitle shown below the title"
 readTime: 5                           # Minutes to read (auto-calculated if omitted)
-tags: ["Tag1", "Tag2", "Tag3"]        # Array of tags for filtering
+tags: ["AI", "Agents"]                # Use the controlled tag set: AI, Agents, Context Engineering, Developer Experience, Learning
 keywords: ["Primary query", "Secondary query", "Related topic"]
 image: "/lm.png"
 

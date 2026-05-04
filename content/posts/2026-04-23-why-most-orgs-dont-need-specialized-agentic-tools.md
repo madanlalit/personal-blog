@@ -7,7 +7,7 @@ date: "2026-04-23"
 modifiedDate: "2026-05-03"
 category: "AI"
 readTime: 7
-tags: ["AI", "Agents", "Developer Experience", "SKILLS.md", "Context Engineering"]
+tags: ["AI", "Agents", "Developer Experience"]
 keywords: ["specialized agentic tools", "SKILLS.md", "AI agent platforms", "agentic tools for organizations", "AI agent workflows"]
 ---
 

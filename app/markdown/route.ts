@@ -31,7 +31,7 @@ This site is a public notebook of experiments, implementation notes, and lessons
 
 - [About](${SITE_CONFIG.url}/about)
 - [Projects](${SITE_CONFIG.url}/projects)
-- [Archive](${SITE_CONFIG.url}/archive)
+- [Posts](${SITE_CONFIG.url}/posts)
 - [RSS](${SITE_CONFIG.url}/rss.xml)
 - [LLMs guide](${SITE_CONFIG.url}/llms.txt)
 

@@ -5,7 +5,7 @@
 - [Home](https://lalitmadan.com): AI engineering notes from Lalit Madan.
 - [About](https://lalitmadan.com/about): Background, focus areas, and contact links for Lalit Madan.
 - [Projects](https://lalitmadan.com/projects): AI engineering, Python, open source, and developer tooling projects.
-- [Archive](https://lalitmadan.com/archive): Complete blog archive.
+- [Posts](https://lalitmadan.com/posts): Complete blog post index.
 - [RSS](https://lalitmadan.com/rss.xml): RSS feed for new posts.
 
 ## Featured Writing
@@ -20,7 +20,7 @@
 - [Agents](https://lalitmadan.com/tags/agents): Posts focused on AI agents and agentic workflows.
 - [Context Engineering](https://lalitmadan.com/tags/context-engineering): Posts about context design for LLM systems.
 - [Developer Experience](https://lalitmadan.com/tags/developer-experience): Posts about tools, workflows, and engineering ergonomics.
-- [SKILL.md](https://lalitmadan.com/tags/skill-md): Posts about agent skill design.
+- [Learning](https://lalitmadan.com/tags/learning): Posts about learning strategy and career adaptation.
 
 ## Author
 - [GitHub](https://github.com/madanlalit)
