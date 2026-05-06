@@ -42,6 +42,14 @@ export default function CommandLine({
         );
     };
 
+    const getStoredTheme = () => {
+        try {
+            return localStorage.getItem('app-theme') || 'light';
+        } catch {
+            return 'light';
+        }
+    };
+
     // Focus on '/'
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -184,7 +192,7 @@ export default function CommandLine({
                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div><strong style={{ color: 'var(--text-primary)' }}>OS:</strong> NextReactOS v16.0</div>
                             <div><strong style={{ color: 'var(--text-primary)' }}>Framework:</strong> Next.js App Router</div>
-                            <div><strong style={{ color: 'var(--text-primary)' }}>Theme:</strong> {typeof localStorage !== 'undefined' ? localStorage.getItem('app-theme') || 'openai' : 'openai'}</div>
+                            <div><strong style={{ color: 'var(--text-primary)' }}>Theme:</strong> {getStoredTheme()}</div>
                             <div><strong style={{ color: 'var(--text-primary)' }}>Shell:</strong> ReactCLI</div>
                         </div>
                     </div>

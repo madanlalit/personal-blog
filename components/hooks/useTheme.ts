@@ -14,17 +14,25 @@ export const useTheme = () => {
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
-        const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-        const isValidTheme = THEMES.includes(storedTheme as Theme);
-        if (isValidTheme) {
-            setThemeState(storedTheme as Theme);
+        try {
+            const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+            const isValidTheme = THEMES.includes(storedTheme as Theme);
+            if (isValidTheme) {
+                setThemeState(storedTheme as Theme);
+            }
+        } catch {
+            // Storage can be unavailable in private/restricted browser contexts.
         }
     }, []);
 
     useEffect(() => {
         if (mounted) {
             document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem(THEME_STORAGE_KEY, theme);
+            try {
+                localStorage.setItem(THEME_STORAGE_KEY, theme);
+            } catch {
+                // Keep the live theme even when persistence is blocked.
+            }
         }
     }, [theme, mounted]);
 
