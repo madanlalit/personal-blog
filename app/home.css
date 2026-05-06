@@ -203,19 +203,6 @@
     font-family: var(--font-primary);
 }
 
-.mod-action {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: var(--font-size-xs);
-}
-
-.mod-text {
-    font-size: var(--font-size-body);
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
 .availability-beacon {
     display: flex;
     align-items: center;
@@ -326,7 +313,10 @@
 .skill-fill {
     height: 100%;
     background: var(--text-tertiary);
-    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: var(--skill-level);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: skillFill 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
 }
 
 .skill-row:nth-child(-n+2) .skill-fill {
@@ -369,6 +359,10 @@
     display: flex;
     gap: 0.75rem;
     align-items: flex-start;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: logReveal 0.3s ease forwards;
+    animation-delay: var(--log-delay);
 }
 
 .log-time {
@@ -404,17 +398,6 @@
 .log-cursor {
     color: var(--accent);
     margin-top: 0.25rem;
-}
-
-.log-hidden {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.log-visible {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .timeline-entry {
@@ -503,13 +486,6 @@
     box-shadow: none !important;
 }
 
-.newsletter-box {
-    background: var(--bg-secondary);
-    border: 1px dashed var(--border);
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
 /* --- NOW WORKING ON --- */
 .now-working {
     display: flex;
@@ -550,44 +526,6 @@
     50% {
         opacity: 0.3;
     }
-}
-
-.nl-head {
-    font-size: var(--font-size-small);
-    color: var(--accent);
-    margin: 0 0 0.25rem 0;
-    text-transform: uppercase;
-}
-
-.nl-text {
-    font-size: var(--font-size-xs);
-    color: var(--text-secondary);
-    margin: 0 0 0.75rem 0;
-}
-
-.nl-form {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.nl-form input {
-    flex: 1;
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    padding: 0.4rem;
-    font-size: var(--font-size-xs);
-    font-family: var(--font-primary);
-}
-
-.nl-form button {
-    background: var(--text-primary);
-    color: var(--bg-primary);
-    border: none;
-    font-weight: 700;
-    font-size: var(--font-size-xs);
-    padding: 0 0.75rem;
-    cursor: pointer;
 }
 
 /* --- FOOTER --- */
@@ -639,6 +577,19 @@
 
     50% {
         box-shadow: 0 0 8px 4px rgba(168, 185, 168, 0.2);
+    }
+}
+
+@keyframes skillFill {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes logReveal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -946,16 +897,6 @@
         justify-content: center;
     }
 
-    .nl-form {
-        flex-direction: column;
-    }
-
-    .nl-form input,
-    .nl-form button {
-        width: 100%;
-        padding: 0.6rem;
-    }
-
     /* Module Headers */
     .mod-header {
         font-size: 0.6rem;
@@ -1087,11 +1028,6 @@
     .post-excerpt {
         word-break: break-word;
         overflow-wrap: break-word;
-    }
-
-    .post-tags {
-        flex-wrap: wrap !important;
-        max-width: 100%;
     }
 
 }

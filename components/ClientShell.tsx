@@ -1,17 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { useTheme } from '@/components/hooks/useTheme';
 import useSound from '@/components/hooks/useSound';
-import Commander from '@/components/features/terminal/Commander';
 import CommandLine from '@/components/features/terminal/CommandLine';
-import SnakeGame from '@/components/features/terminal/SnakeGame';
-import AudioPlayer from '@/components/features/terminal/AudioPlayer';
-import SystemAlert from '@/components/features/system/SystemAlert';
-import Screensaver from '@/components/features/system/Screensaver';
 import StatusBar from '@/components/ui/StatusBar';
 import type { PostMeta } from '@/lib/types';
 import '@/app/app.css';
+
+const Commander = dynamic(() => import('@/components/features/terminal/Commander'), { ssr: false });
+const SnakeGame = dynamic(() => import('@/components/features/terminal/SnakeGame'), { ssr: false });
+const AudioPlayer = dynamic(() => import('@/components/features/terminal/AudioPlayer'), { ssr: false });
 
 interface ClientShellProps {
     children: React.ReactNode;
@@ -73,17 +73,16 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
                     overflow: 'hidden',
                 }}
             >
-                <SystemAlert />
-                <Screensaver />
-
                 {/* Commander Modal */}
-                <Commander
-                    isOpen={commanderOpen}
-                    onClose={() => setCommanderOpen(false)}
-                    setTheme={setTheme}
-                    availableThemes={availableThemes}
-                    posts={posts}
-                />
+                {commanderOpen && (
+                    <Commander
+                        isOpen={commanderOpen}
+                        onClose={() => setCommanderOpen(false)}
+                        setTheme={setTheme}
+                        availableThemes={availableThemes}
+                        posts={posts}
+                    />
+                )}
 
                 {/* Snake Game Modal */}
                 {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}

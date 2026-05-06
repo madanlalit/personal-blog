@@ -1,12 +1,11 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
 import PostCard from '@/components/ui/PostCard';
+import HomeClock from './HomeClock';
+import HomeLogTime from './HomeLogTime';
 import './home.css';
-import '@/components/ui/Typewriter.css';
 
 const SKILLS = [
     { name: 'Python / AI', level: 75 },
@@ -27,32 +26,7 @@ interface HomeClientProps {
 }
 
 export default function HomeClient({ initialPosts }: HomeClientProps) {
-    const [time, setTime] = useState<Date | null>(null);
-    const [skillsAnimated, setSkillsAnimated] = useState(false);
-    const [visibleLogs, setVisibleLogs] = useState<number[]>([]);
-
-    // --- LIVE CLOCK ---
-    useEffect(() => {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setTime(new Date());
-        const timer = setInterval(() => setTime(new Date()), 1000);
-        return () => clearInterval(timer);
-    }, []);
-
-    // --- SKILL BAR ANIMATION ---
-    useEffect(() => {
-        const timer = setTimeout(() => setSkillsAnimated(true), 300);
-        return () => clearTimeout(timer);
-    }, []);
-
-    // --- LOG TYPING EFFECT ---
-    useEffect(() => {
-        SYSTEM_LOGS.forEach((log, index) => {
-            setTimeout(() => {
-                setVisibleLogs((prev) => [...prev, log.id]);
-            }, 500 + index * 400);
-        });
-    }, []);
+    const currentYear = new Date().getFullYear();
 
     return (
         <div className="home-container fade-in">
@@ -83,9 +57,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                     </div>
                     <div className="tele-row">
                         <span className="t-label">TICK</span>
-                        <span className="t-val numeric">
-                            {time ? time.toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' }) : '--:--'}
-                        </span>
+                        <HomeClock className="t-val numeric" />
                     </div>
                     <div className="tele-row">
                         <span className="t-label">MODE</span>
@@ -141,7 +113,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                                     <div className="skill-track">
                                         <div
                                             className="skill-fill"
-                                            style={{ width: skillsAnimated ? `${skill.level}%` : '0%' }}
+                                            style={{ '--skill-level': `${skill.level}%` } as CSSProperties}
                                         ></div>
                                     </div>
                                 </div>
@@ -208,16 +180,13 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                             <span className="mod-meta">TAIL -F</span>
                         </h2>
                         <div className="system-log-terminal">
-                            {SYSTEM_LOGS.map((log) => (
+                            {SYSTEM_LOGS.map((log, index) => (
                                 <div
                                     key={log.id}
-                                    className={`log-row ${visibleLogs.includes(log.id) ? 'log-visible' : 'log-hidden'}`}
+                                    className="log-row"
+                                    style={{ '--log-delay': `${500 + index * 400}ms` } as CSSProperties}
                                 >
-                                    <span className="log-time">
-                                        {time
-                                            ? `[${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes() - (SYSTEM_LOGS.length - log.id)).padStart(2, '0')}]`
-                                            : '[--:--]'}
-                                    </span>
+                                    <HomeLogTime minuteOffset={index - SYSTEM_LOGS.length + 1} />
                                     <span className={`log-type ${log.type}`}>{log.type}</span>
                                     <span className="log-msg">{log.msg}</span>
                                 </div>
@@ -261,7 +230,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
                 <div className="f-right">
                     <span>v1.0.0</span>
                     <span className="sep">/</span>
-                    <span>{time ? time.getFullYear() : '----'}</span>
+                    <span>{currentYear}</span>
                 </div>
             </footer>
         </div>
