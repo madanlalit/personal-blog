@@ -15,15 +15,15 @@
     "update-data": "node scripts/update-github-data.js && node scripts/update-public-repos.js"
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.4",
+    "@next/third-parties": "^16.2.6",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.561.0",
     "mermaid": "^11.14.0",
-    "next": "^16.2.4",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-markdown": "^10.1.0",
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1"
@@ -34,7 +34,7 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.2",
-    "eslint-config-next": "^16.2.4",
+    "eslint-config-next": "^16.2.6",
     "eslint-plugin-react-hooks": "^7.0.1",
     "gray-matter": "^4.0.3",
     "typescript": "~5.9.3"
