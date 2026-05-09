@@ -1,8 +1,29 @@
 {
-  "lastUpdated": 1777482794495,
+  "lastUpdated": 1778334000830,
   "repos": [
     {
       "id": "REPO-01",
+      "name": "cpython",
+      "fullName": "madanlalit/cpython",
+      "description": "The Python programming language",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/cpython",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": true,
+      "homepage": "https://www.python.org",
+      "createdAt": "2026-05-01T02:20:59Z",
+      "updatedAt": "2026-05-08T17:01:03Z",
+      "pushedAt": "2026-05-08T18:27:51Z"
+    },
+    {
+      "id": "REPO-02",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
       "description": "A retro-style personal blog with an interactive terminal interface.",
@@ -19,11 +40,11 @@
       "fork": false,
       "homepage": "https://lalitmadan.com",
       "createdAt": "2025-12-13T07:34:33Z",
-      "updatedAt": "2026-04-29T17:12:50Z",
-      "pushedAt": "2026-04-29T17:12:36Z"
+      "updatedAt": "2026-05-08T01:08:31Z",
+      "pushedAt": "2026-05-08T01:08:28Z"
     },
     {
-      "id": "REPO-02",
+      "id": "REPO-03",
       "name": "agentskills",
       "fullName": "madanlalit/agentskills",
       "description": "A simple, focused repository of reusable skills for AI agents.",
@@ -52,7 +73,7 @@
       "pushedAt": "2026-04-25T13:19:32Z"
     },
     {
-      "id": "REPO-03",
+      "id": "REPO-04",
       "name": "pydantic-ai",
       "fullName": "madanlalit/pydantic-ai",
       "description": "GenAI Agent Framework, the Pydantic way",
@@ -73,7 +94,7 @@
       "pushedAt": "2026-04-24T21:49:45Z"
     },
     {
-      "id": "REPO-04",
+      "id": "REPO-05",
       "name": "heimdall",
       "fullName": "madanlalit/heimdall",
       "description": "The all-seeing agent for web automation.",
@@ -106,7 +127,7 @@
       "pushedAt": "2026-04-19T09:03:31Z"
     },
     {
-      "id": "REPO-05",
+      "id": "REPO-06",
       "name": "gemini-cli",
       "fullName": "madanlalit/gemini-cli",
       "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
@@ -127,7 +148,7 @@
       "pushedAt": "2026-04-20T04:04:23Z"
     },
     {
-      "id": "REPO-06",
+      "id": "REPO-07",
       "name": "formatkit",
       "fullName": "madanlalit/formatkit",
       "description": "A minimal formatter and diff tool.",
@@ -152,7 +173,7 @@
       "pushedAt": "2026-04-16T16:27:35Z"
     },
     {
-      "id": "REPO-07",
+      "id": "REPO-08",
       "name": "opentelemetry-python",
       "fullName": "madanlalit/opentelemetry-python",
       "description": "OpenTelemetry Python API and SDK ",
@@ -173,7 +194,7 @@
       "pushedAt": "2026-04-14T13:09:50Z"
     },
     {
-      "id": "REPO-08",
+      "id": "REPO-09",
       "name": "Archon",
       "fullName": "madanlalit/Archon",
       "description": "The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.",
@@ -194,7 +215,7 @@
       "pushedAt": "2026-04-13T16:06:14Z"
     },
     {
-      "id": "REPO-09",
+      "id": "REPO-10",
       "name": "claude-code",
       "fullName": "madanlalit/claude-code",
       "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
@@ -215,7 +236,7 @@
       "pushedAt": "2026-03-31T10:58:21Z"
     },
     {
-      "id": "REPO-10",
+      "id": "REPO-11",
       "name": "cdp-cli",
       "fullName": "madanlalit/cdp-cli",
       "description": "No description available",
@@ -236,7 +257,7 @@
       "pushedAt": "2026-03-23T01:43:48Z"
     },
     {
-      "id": "REPO-11",
+      "id": "REPO-12",
       "name": "parameter-golf",
       "fullName": "madanlalit/parameter-golf",
       "description": "Train the smallest LM you can that fits in 16MB. Best model wins!",
@@ -257,7 +278,7 @@
       "pushedAt": "2026-03-19T23:30:22Z"
     },
     {
-      "id": "REPO-12",
+      "id": "REPO-13",
       "name": "madanlalit",
       "fullName": "madanlalit/madanlalit",
       "description": "No description available",
@@ -278,7 +299,7 @@
       "pushedAt": "2026-03-17T18:27:17Z"
     },
     {
-      "id": "REPO-13",
+      "id": "REPO-14",
       "name": "progress",
       "fullName": "madanlalit/progress",
       "description": "Python CLI for generating wallpapers that visualize yearly progress with custom themes and automatic daily updates.",
@@ -304,7 +325,7 @@
       "pushedAt": "2026-02-08T18:14:47Z"
     },
     {
-      "id": "REPO-14",
+      "id": "REPO-15",
       "name": "odin",
       "fullName": "madanlalit/odin",
       "description": "Odin is an AI Agent that can see your screen and click, type, and scroll to help do computer tasks for you.",
@@ -329,7 +350,7 @@
       "pushedAt": "2026-02-05T20:47:29Z"
     },
     {
-      "id": "REPO-15",
+      "id": "REPO-16",
       "name": "original_performance_takehome",
       "fullName": "madanlalit/original_performance_takehome",
       "description": "Anthropic's original performance take-home, now open for you to try!",
@@ -350,7 +371,7 @@
       "pushedAt": "2026-01-22T01:11:08Z"
     },
     {
-      "id": "REPO-16",
+      "id": "REPO-17",
       "name": "python-checklist",
       "fullName": "madanlalit/python-checklist",
       "description": "No description available",
@@ -371,7 +392,7 @@
       "pushedAt": "2026-01-20T09:17:28Z"
     },
     {
-      "id": "REPO-17",
+      "id": "REPO-18",
       "name": "homebrew-tap",
       "fullName": "madanlalit/homebrew-tap",
       "description": "No description available",
@@ -396,7 +417,7 @@
       "pushedAt": "2026-01-17T20:02:16Z"
     },
     {
-      "id": "REPO-18",
+      "id": "REPO-19",
       "name": "exo",
       "fullName": "madanlalit/exo",
       "description": "Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚",
@@ -417,7 +438,7 @@
       "pushedAt": "2026-01-12T07:13:38Z"
     },
     {
-      "id": "REPO-19",
+      "id": "REPO-20",
       "name": "langchain",
       "fullName": "madanlalit/langchain",
       "description": "🦜🔗 The platform for reliable agents.",
@@ -438,7 +459,7 @@
       "pushedAt": "2026-01-12T07:13:07Z"
     },
     {
-      "id": "REPO-20",
+      "id": "REPO-21",
       "name": "no-mouse",
       "fullName": "madanlalit/no-mouse",
       "description": "NoMouse lets you control your Mac cursor entirely with your keyboard",
@@ -465,7 +486,7 @@
       "pushedAt": "2025-12-25T05:40:24Z"
     },
     {
-      "id": "REPO-21",
+      "id": "REPO-22",
       "name": "Bootstrap-Portfolio",
       "fullName": "madanlalit/Bootstrap-Portfolio",
       "description": "No description available",
@@ -486,7 +507,7 @@
       "pushedAt": "2023-04-07T05:28:31Z"
     },
     {
-      "id": "REPO-22",
+      "id": "REPO-23",
       "name": "tinker-api",
       "fullName": "madanlalit/tinker-api",
       "description": "No description available",
@@ -507,7 +528,7 @@
       "pushedAt": "2025-12-21T09:39:57Z"
     },
     {
-      "id": "REPO-23",
+      "id": "REPO-24",
       "name": "iscrape",
       "fullName": "madanlalit/iscrape",
       "description": "iscrape is a powerful Python-based web scraper and dataset generator. It recursively crawls websites (handling redirects and subdomains), extracts content using crawl4ai and modern browser tooling, and distills the raw data into fine-tuning ready datasets (JSONL, Markdown, JSON) using LLM providers like Gemini or OpenAI.",
@@ -528,7 +549,7 @@
       "pushedAt": "2025-12-21T07:12:10Z"
     },
     {
-      "id": "REPO-24",
+      "id": "REPO-25",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -549,7 +570,7 @@
       "pushedAt": "2025-11-08T06:24:29Z"
     },
     {
-      "id": "REPO-25",
+      "id": "REPO-26",
       "name": "todo-app",
       "fullName": "madanlalit/todo-app",
       "description": "This is a todo-app ",
