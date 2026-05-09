@@ -14,12 +14,14 @@ import {
     AlertCircle,
     ArrowDownAZ,
     ArrowUpDown,
+    Activity,
 } from 'lucide-react';
 import './projects.css';
 
 // --- Constants ---
 const GITHUB_USERNAME = 'madanlalit';
 const MAX_DESCRIPTION_LENGTH = 100;
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 // --- Types ---
 interface PublicRepo {
@@ -43,6 +45,34 @@ interface PublicReposData {
     repos: PublicRepo[];
 }
 
+interface GitHubContribution {
+    date: string;
+    count: number;
+    level: 0 | 1 | 2 | 3 | 4;
+}
+
+interface GitHubData {
+    lastUpdated: number;
+    source?: string;
+    total?: number;
+    contributions: GitHubContribution[];
+}
+
+interface ActivityDay {
+    dateKey: string;
+    label: string;
+    count: number;
+    level: number;
+}
+
+interface ActivitySummary {
+    days: ActivityDay[];
+    monthLabels: Array<{ label: string; column: number }>;
+    totalContributions: number;
+    activeDays: number;
+    maxCount: number;
+}
+
 type SortOption = 'stars' | 'forks' | 'name';
 
 // --- Helper ---
@@ -52,34 +82,105 @@ const truncateText = (text: string, maxLength: number): string => {
     return text.slice(0, maxLength).trim() + '...';
 };
 
+const formatDateKey = (date: Date): string => date.toISOString().slice(0, 10);
+
+const buildGithubActivity = (contributions: GitHubContribution[]): ActivitySummary => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const startDate = new Date(today);
+    startDate.setDate(today.getDate() - 364);
+    startDate.setDate(startDate.getDate() - startDate.getDay());
+    startDate.setHours(0, 0, 0, 0);
+
+    const totalDays = Math.floor((today.getTime() - startDate.getTime()) / DAY_MS) + 1;
+    const contributionMap = new Map(
+        contributions.map((contribution) => [contribution.date, contribution])
+    );
+
+    const monthLabels: Array<{ label: string; column: number }> = [];
+    const days: ActivityDay[] = Array.from({ length: totalDays }, (_, index) => {
+        const date = new Date(startDate.getTime() + index * DAY_MS);
+        const dateKey = formatDateKey(date);
+        const contribution = contributionMap.get(dateKey);
+        const count = contribution?.count ?? 0;
+
+        if (date.getDate() <= 7) {
+            const column = Math.floor(index / 7);
+            const label = date.toLocaleDateString('en-US', { month: 'short' });
+            const previous = monthLabels[monthLabels.length - 1];
+
+            if (!previous || previous.label !== label) {
+                monthLabels.push({ label, column });
+            }
+        }
+
+        return {
+            dateKey,
+            label: date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+            }),
+            count,
+            level: contribution?.level ?? 0,
+        };
+    });
+
+    const maxCount = Math.max(...days.map((day) => day.count), 0);
+
+    return {
+        days,
+        monthLabels,
+        totalContributions: days.reduce((sum, day) => sum + day.count, 0),
+        activeDays: days.filter((day) => day.count > 0).length,
+        maxCount,
+    };
+};
+
 export default function ProjectsClient() {
     const [repos, setRepos] = useState<PublicRepo[]>([]);
+    const [githubContributions, setGithubContributions] = useState<GitHubContribution[]>([]);
+    const [githubLastUpdated, setGithubLastUpdated] = useState<number | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [filter, setFilter] = useState('ALL');
     const [sortBy, setSortBy] = useState<SortOption>('stars');
 
     useEffect(() => {
-        const fetchRepos = async () => {
+        const fetchPageData = async () => {
             try {
-                const response = await fetch(`/public-repos.json?t=${Date.now()}`);
-                if (!response.ok) {
+                const [reposResponse, githubResponse] = await Promise.all([
+                    fetch(`/public-repos.json?t=${Date.now()}`),
+                    fetch(`/github-data.json?t=${Date.now()}`),
+                ]);
+
+                if (!reposResponse.ok) {
                     throw new Error('Failed to load public repos');
                 }
-                const data: PublicReposData = await response.json();
+
+                if (!githubResponse.ok) {
+                    throw new Error('Failed to load GitHub activity');
+                }
+
+                const data: PublicReposData = await reposResponse.json();
+                const githubData: GitHubData = await githubResponse.json();
                 const myRepos = data.repos.filter(
                     (repo) => repo.owner.login === GITHUB_USERNAME
                 );
+
                 setRepos(myRepos);
+                setGithubContributions(githubData.contributions ?? []);
+                setGithubLastUpdated(githubData.lastUpdated ?? null);
             } catch (err) {
-                console.error('Failed to load public repos:', err);
-                setError('Failed to load projects');
+                console.error('Failed to load repository page data:', err);
+                setError('Failed to load repositories');
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchRepos();
+        fetchPageData();
     }, []);
 
     const languages = useMemo(
@@ -105,6 +206,17 @@ export default function ProjectsClient() {
 
         return result;
     }, [repos, filter, sortBy]);
+
+    const activity = useMemo(() => buildGithubActivity(githubContributions), [githubContributions]);
+    const lastUpdatedLabel = useMemo(() => {
+        if (!githubLastUpdated) return 'UNKNOWN';
+
+        return new Date(githubLastUpdated).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+        });
+    }, [githubLastUpdated]);
 
     if (loading) {
         return (
@@ -157,6 +269,47 @@ export default function ProjectsClient() {
             </header>
 
             <main className="sys-content" style={{ display: 'flex', flexDirection: 'column' }}>
+                <section className="github-activity-panel" aria-label="GitHub activity heatmap">
+                    <div className="activity-panel-header">
+                        <div className="activity-panel-title">
+                            <Activity size={14} />
+                            <span>GITHUB_CONTRIBUTIONS // LAST_52_WEEKS</span>
+                        </div>
+                        <div className="activity-panel-meta">SYNCED: {lastUpdatedLabel}</div>
+                    </div>
+
+                    <div className="activity-summary">
+                        <span>{activity.totalContributions} contributions</span>
+                        <span>{activity.activeDays} active days</span>
+                        <span>peak {activity.maxCount}/day</span>
+                    </div>
+
+                    <div className="activity-heatmap-shell">
+                        <div className="activity-months" aria-hidden="true">
+                            {activity.monthLabels.map((month) => (
+                                <span
+                                    key={`${month.label}-${month.column}`}
+                                    className="activity-month-label"
+                                    style={{ gridColumn: `${month.column + 1}` }}
+                                >
+                                    {month.label}
+                                </span>
+                            ))}
+                        </div>
+
+                        <div className="activity-heatmap" role="img" aria-label="GitHub activity heatmap for the last 52 weeks">
+                            {activity.days.map((day) => (
+                                <div
+                                    key={day.dateKey}
+                                    className={`activity-cell level-${day.level}`}
+                                    title={`${day.label}: ${day.count} contribution${day.count === 1 ? '' : 's'}`}
+                                    aria-label={`${day.label}: ${day.count} contribution${day.count === 1 ? '' : 's'}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 <div className="repo-controls">
                     <div className="control-group">
                         <div className="control-label">

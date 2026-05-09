@@ -55,6 +55,102 @@
     color: var(--text-secondary);
 }
 
+.github-activity-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.1rem 1.1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--arch-border);
+}
+
+.activity-panel-header,
+.activity-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.activity-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--arch-text);
+}
+
+.activity-panel-meta,
+.activity-summary {
+    font-size: var(--font-size-xs);
+    color: var(--arch-muted);
+    text-transform: uppercase;
+}
+
+.activity-summary {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed var(--arch-border);
+}
+
+.activity-heatmap-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.activity-months {
+    display: grid;
+    grid-template-columns: repeat(53, minmax(0, 1fr));
+    padding-left: 1px;
+    font-size: 0.68rem;
+    color: var(--arch-muted);
+    text-transform: uppercase;
+}
+
+.activity-month-label {
+    transform: translateX(-0.1rem);
+}
+
+.activity-heatmap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 12px);
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 3px;
+}
+
+.activity-cell {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.activity-cell:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--arch-accent) 65%, var(--arch-border));
+}
+
+.activity-cell.level-1 {
+    background: color-mix(in srgb, var(--arch-accent) 30%, transparent);
+}
+
+.activity-cell.level-2 {
+    background: color-mix(in srgb, var(--arch-accent) 50%, transparent);
+}
+
+.activity-cell.level-3 {
+    background: color-mix(in srgb, var(--arch-accent) 72%, transparent);
+}
+
+.activity-cell.level-4 {
+    background: color-mix(in srgb, var(--arch-accent) 92%, transparent);
+}
+
 /* Controls Row */
 .repo-controls {
     display: flex;
@@ -118,6 +214,19 @@
         padding: var(--space-lg) var(--space-md);
     }
 
+    .github-activity-panel {
+        padding: 0.9rem;
+    }
+
+    .activity-months {
+        font-size: 0.62rem;
+    }
+
+    .activity-heatmap {
+        grid-template-rows: repeat(7, 10px);
+        gap: 2px;
+    }
+
     .repo-controls {
         flex-direction: column;
         gap: 1rem;
@@ -133,6 +242,10 @@
 @media (max-width: 640px) {
     .repo-grid {
         grid-template-columns: 1fr;
+    }
+
+    .activity-summary {
+        gap: 0.45rem 0.75rem;
     }
 }
 
