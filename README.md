@@ -68,7 +68,7 @@ The application will be available at `http://localhost:3000` unless Next.js sele
 - `npm run build`: Builds the app for production.
 - `npm run start`: Starts the production server after a build.
 - `npm run lint`: Lints the code using ESLint.
-- `npm run update-data`: Refreshes GitHub repository data in `public/`.
+- `npm run update-data`: Refreshes GitHub contributions and public repository data in `public/`.
 
 ## License
 
