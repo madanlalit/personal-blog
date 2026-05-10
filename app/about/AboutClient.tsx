@@ -4,7 +4,6 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Github, Linkedin, X, ArrowRight, MapPin, Briefcase, GraduationCap, Heart, Download, Send } from 'lucide-react';
 import Frame from '@/components/ui/Frame';
-import Typewriter from '@/components/ui/Typewriter';
 import { useCounter } from '@/components/hooks/useCounter';
 import './about.css';
 
@@ -109,7 +108,7 @@ export default function AboutClient() {
                     <div className="hero-main">
                         <div className="hero-badge">ABOUT_ME.md</div>
                         <h1 className="hero-name"><span className="name-line">LALIT</span><span className="name-line accent">MADAN</span></h1>
-                        <div className="hero-tagline"><Typewriter text="Engineer. Builder. AI Enthusiast." delay={500} /></div>
+                        <div className="hero-tagline">Engineer. Builder. AI Enthusiast.</div>
                         <div className="hero-meta">
                             <span className="meta-item"><MapPin size={14} /> India</span>
                             <span className="meta-item"><Briefcase size={14} /> Open to Work</span>

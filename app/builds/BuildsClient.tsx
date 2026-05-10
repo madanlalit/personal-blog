@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useMemo, useState, type ElementType } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import {
     Activity,
     AlertCircle,
@@ -272,12 +271,7 @@ function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
     const badge = STATUS_CONFIG[narrative.status];
 
     return (
-        <motion.article
-            className="spotlight-dossier"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-        >
+        <article className="spotlight-dossier">
             <div className="dossier-header">
                 <span className="atlas-kicker">
                     <Compass size={13} />
@@ -319,7 +313,7 @@ function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
                     </a>
                 )}
             </div>
-        </motion.article>
+        </article>
     );
 }
 
@@ -403,23 +397,9 @@ function AtlasCard({ repo, lead = false }: { repo: PublicRepo; lead?: boolean })
     const tags = narrative.highlights ?? repo.topics;
 
     return (
-        <motion.article
-            className={`atlas-card${lead ? ' lead' : ''}`}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.35 }}
-        >
-            <AnimatePresence mode="wait">
-                {isFlipped ? (
-                    <motion.div
-                        key="back"
-                        className="atlas-card-content"
-                        initial={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
-                        animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-                        exit={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
-                        transition={{ duration: 0.2 }}
-                    >
+        <article className={`atlas-card${lead ? ' lead' : ''}`}>
+            {isFlipped ? (
+                <div className="atlas-card-content">
                         <div className="build-notes-content">
                             <span>Current state</span>
                             <p>{narrative.currentState}</p>
@@ -435,16 +415,9 @@ function AtlasCard({ repo, lead = false }: { repo: PublicRepo; lead?: boolean })
                                 Close build notes −
                             </button>
                         </div>
-                    </motion.div>
-                ) : (
-                    <motion.div
-                        key="front"
-                        className="atlas-card-content"
-                        initial={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
-                        animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-                        exit={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
-                        transition={{ duration: 0.2 }}
-                    >
+                </div>
+            ) : (
+                <div className="atlas-card-content">
                         <header className="atlas-card-header">
                             <div>
                                 <span>{repo.language && repo.language !== 'Unknown' ? repo.language : 'Repository'}</span>
@@ -486,10 +459,9 @@ function AtlasCard({ repo, lead = false }: { repo: PublicRepo; lead?: boolean })
                                 </a>
                             )}
                         </footer>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.article>
+                </div>
+            )}
+        </article>
     );
 }
 
@@ -532,14 +504,7 @@ function RepoIndexCard({ repo }: { repo: PublicRepo }) {
         : repo.topics;
 
     return (
-        <motion.article
-            layout
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.98 }}
-            transition={{ duration: 0.2 }}
-            className={`index-card${repo.archived ? ' muted' : ''}`}
-        >
+        <article className={`index-card${repo.archived ? ' muted' : ''}`}>
             <header>
                 <div>
                     <span>{repo.language && repo.language !== 'Unknown' ? repo.language : 'Repository'}</span>
@@ -575,7 +540,7 @@ function RepoIndexCard({ repo }: { repo: PublicRepo }) {
                 {repo.archived && <span>Archived</span>}
                 {narrative && <span>{STATUS_CONFIG[narrative.status].label}</span>}
             </footer>
-        </motion.article>
+        </article>
     );
 }
 
@@ -758,15 +723,8 @@ export default function BuildsClient() {
                     <strong>{filtered.length} repos</strong>
                 </button>
 
-                <AnimatePresence>
-                    {showIndex && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.28 }}
-                            className="index-panel"
-                        >
+                {showIndex && (
+                    <div className="index-panel">
                             <div className="index-controls">
                                 <div className="control-group">
                                     <span>Filter</span>
@@ -805,15 +763,12 @@ export default function BuildsClient() {
                             </div>
 
                             <div className="index-grid">
-                                <AnimatePresence mode="popLayout">
-                                    {filtered.map((repo) => (
-                                        <RepoIndexCard key={repo.id} repo={repo} />
-                                    ))}
-                                </AnimatePresence>
+                                {filtered.map((repo) => (
+                                    <RepoIndexCard key={repo.id} repo={repo} />
+                                ))}
                             </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                    </div>
+                )}
             </section>
         </div>
     );

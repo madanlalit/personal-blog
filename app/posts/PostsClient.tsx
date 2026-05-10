@@ -3,7 +3,6 @@
 import { useDeferredValue, useEffect, useEffectEvent, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Terminal, Search, LayoutGrid, List, Calendar, Clock, FileText } from 'lucide-react';
 import type { PostMeta } from '@/lib/types';
 import './posts.css';
@@ -236,26 +235,24 @@ export default function PostsClient({ initialPosts, allTags }: PostsClientProps)
                 </nav>
 
                 <main className="content-viewport">
-                    <AnimatePresence mode="wait">
-                        {filteredPosts.length === 0 ? (
-                            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="empty-buffer">[!] ERR_NO_RESULTS_FOUND</motion.div>
-                        ) : viewMode === 'list' ? (
-                            <motion.div key="list" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="view-list">
-                                {Object.entries(postsByYear).sort(([a], [b]) => parseInt(b) - parseInt(a)).map(([year, posts]) => (
-                                    <div key={year} className="year-block">
-                                        <div className="year-marker"><span className="bracket">[</span>{year}<span className="bracket">]</span></div>
-                                        <div className="file-tree">
-                                            {posts.map((post) => <FileRow key={post.id} post={post} isSelected={post.id === selectedPost?.id} />)}
-                                        </div>
+                    {filteredPosts.length === 0 ? (
+                        <div className="empty-buffer">[!] ERR_NO_RESULTS_FOUND</div>
+                    ) : viewMode === 'list' ? (
+                        <div className="view-list">
+                            {Object.entries(postsByYear).sort(([a], [b]) => parseInt(b) - parseInt(a)).map(([year, posts]) => (
+                                <div key={year} className="year-block">
+                                    <div className="year-marker"><span className="bracket">[</span>{year}<span className="bracket">]</span></div>
+                                    <div className="file-tree">
+                                        {posts.map((post) => <FileRow key={post.id} post={post} isSelected={post.id === selectedPost?.id} />)}
                                     </div>
-                                ))}
-                            </motion.div>
-                        ) : (
-                            <motion.div key="grid" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="view-grid">
-                                {filteredPosts.map((post) => <GridCard key={post.id} post={post} />)}
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="view-grid">
+                            {filteredPosts.map((post) => <GridCard key={post.id} post={post} />)}
+                        </div>
+                    )}
                 </main>
             </div>
 

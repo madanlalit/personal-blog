@@ -1,23 +1,24 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Frame from '@/components/ui/Frame';
-import Typewriter from '@/components/ui/Typewriter';
-import TableOfContents from '@/components/features/post/TableOfContents';
 import PostNavigation from '@/components/features/post/PostNavigation';
 import RelatedPosts from '@/components/features/post/RelatedPosts';
-import ShareButtons from '@/components/features/post/ShareButtons';
-import ReadingProgress from '@/components/features/post/ReadingProgress';
-import ScrollToTop from '@/components/features/post/ScrollToTop';
 import CodeBlock from '@/components/features/post/CodeBlock';
-import Mermaid from '@/components/features/post/Mermaid';
 import type { Post } from '@/lib/types';
 import { slugifyTag } from '@/lib/slug';
 import '@/components/features/terminal/SyntaxTheme.css';
 import './post.css';
+
+const TableOfContents = dynamic(() => import('@/components/features/post/TableOfContents'), { ssr: false });
+const ShareButtons = dynamic(() => import('@/components/features/post/ShareButtons'), { ssr: false });
+const ReadingProgress = dynamic(() => import('@/components/features/post/ReadingProgress'), { ssr: false });
+const ScrollToTop = dynamic(() => import('@/components/features/post/ScrollToTop'), { ssr: false });
+const Mermaid = dynamic(() => import('@/components/features/post/Mermaid'), { ssr: false });
 
 interface PostClientProps {
     post: Post;
@@ -149,7 +150,7 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts, sha
                         <span className="entry-category">[{post.category}]</span>
                         {post.readTime && <span className="entry-read-time">{post.readTime} MIN READ</span>}
                     </div>
-                    <h1 className="entry-title"><Typewriter text={post.title} /></h1>
+                    <h1 className="entry-title">{post.title}</h1>
                     {post.subtitle && <h2 className="entry-subtitle">{post.subtitle}</h2>}
                 </Frame>
 
