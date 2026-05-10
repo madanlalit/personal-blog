@@ -14,7 +14,6 @@ Personal blog built with Next.js, React, and TypeScript, featuring a retro termi
 - **SEO Optimized**: Includes metadata, canonical URLs, structured data, robots.txt, and a dynamic sitemap.
 - **RSS Feed**: Automatically generates an `rss.xml` file for content syndication.
 - **Syntax Highlighting**: Code blocks in posts are highlighted for readability.
-- **Analytics**: Includes Vercel Analytics, Speed Insights, Ahrefs Analytics, and Google Analytics.
 
 ## Tech Stack
 

@@ -4,12 +4,8 @@ import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
 import JsonLd from '@/components/JsonLd';
 import WebMCPProvider from '@/components/WebMCPProvider';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import './app.css';
-const GOOGLE_ANALYTICS_ID = 'G-25B25C48S4';
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_CONFIG.url),
@@ -68,9 +64,6 @@ export default function RootLayout({
                 <ClientShell posts={posts}>
                     {children}
                 </ClientShell>
-                <Analytics />
-                <SpeedInsights />
-                <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
             </body>
         </html>
     );
