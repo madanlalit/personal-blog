@@ -10,11 +10,11 @@ import './app.css';
 
 const jetbrainsMono = localFont({
     src: [
-        { path: './fonts/JetBrainsMono-Regular.ttf', weight: '400', style: 'normal' },
-        { path: './fonts/JetBrainsMono-Italic.ttf', weight: '400', style: 'italic' },
-        { path: './fonts/JetBrainsMono-Medium.ttf', weight: '500', style: 'normal' },
-        { path: './fonts/JetBrainsMono-Bold.ttf', weight: '700', style: 'normal' },
-        { path: './fonts/JetBrainsMono-ExtraBold.ttf', weight: '800', style: 'normal' },
+        { path: './fonts/JetBrainsMono-Regular.woff2', weight: '400', style: 'normal' },
+        { path: './fonts/JetBrainsMono-Italic.woff2', weight: '400', style: 'italic' },
+        { path: './fonts/JetBrainsMono-Medium.woff2', weight: '500', style: 'normal' },
+        { path: './fonts/JetBrainsMono-Bold.woff2', weight: '700', style: 'normal' },
+        { path: './fonts/JetBrainsMono-ExtraBold.woff2', weight: '800', style: 'normal' },
     ],
     variable: '--font-mono',
     display: 'swap',
