@@ -350,7 +350,7 @@ export default function CommandLine({
                     <span className="tab-key">3</span> ABOUT
                 </button>
                 <button className={`cli-tab ${pathname === '/builds' ? 'active' : ''}`} onClick={() => router.push('/builds')} title="Navigate to Builds (Alt+4)">
-                    <span className="tab-key">4</span> WORK
+                    <span className="tab-key">4</span> BUILDS
                 </button>
 
                 <div className="tab-spacer"></div>
