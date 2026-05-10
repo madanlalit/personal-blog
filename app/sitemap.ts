@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${SITE_CONFIG.url}/about`,
         },
         {
-            url: `${SITE_CONFIG.url}/projects`,
+            url: `${SITE_CONFIG.url}/builds`,
         },
         {
             url: `${SITE_CONFIG.url}/experience`,

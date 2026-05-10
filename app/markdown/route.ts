@@ -30,7 +30,7 @@ This site is a public notebook of experiments, implementation notes, and lessons
 ## Core Pages
 
 - [About](${SITE_CONFIG.url}/about)
-- [Work](${SITE_CONFIG.url}/projects)
+- [Builds](${SITE_CONFIG.url}/builds)
 - [Posts](${SITE_CONFIG.url}/posts)
 - [RSS](${SITE_CONFIG.url}/rss.xml)
 - [LLMs guide](${SITE_CONFIG.url}/llms.txt)

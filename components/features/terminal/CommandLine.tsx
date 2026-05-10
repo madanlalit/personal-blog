@@ -234,14 +234,14 @@ export default function CommandLine({
             case 'cd': {
                 if (!arg || arg === 'home') router.push('/');
                 else if (arg === 'archive' || arg === 'posts') router.push('/posts');
-                else if (['about', 'projects', 'experience'].includes(arg)) router.push(`/${arg}`);
+                else if (['about', 'builds', 'experience'].includes(arg)) router.push(`/${arg}`);
                 else {
                     setDisplayHistory((prev) => [...prev, `Error: Directory '${arg}' not found`]);
                 }
                 break;
             }
             case 'ls': {
-                setDisplayHistory((prev) => [...prev, 'home/  about/  posts/  projects/  experience/']);
+                setDisplayHistory((prev) => [...prev, 'home/  about/  posts/  builds/  experience/']);
                 break;
             }
             case 'theme': {
@@ -349,7 +349,7 @@ export default function CommandLine({
                 <button className={`cli-tab ${pathname === '/about' ? 'active' : ''}`} onClick={() => router.push('/about')} title="Navigate to About (Alt+3)">
                     <span className="tab-key">3</span> ABOUT
                 </button>
-                <button className={`cli-tab ${pathname === '/projects' ? 'active' : ''}`} onClick={() => router.push('/projects')} title="Navigate to Work (Alt+4)">
+                <button className={`cli-tab ${pathname === '/builds' ? 'active' : ''}`} onClick={() => router.push('/builds')} title="Navigate to Builds (Alt+4)">
                     <span className="tab-key">4</span> WORK
                 </button>
 

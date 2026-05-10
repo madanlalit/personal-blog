@@ -24,7 +24,7 @@ import {
     Zap,
 } from 'lucide-react';
 import { REPO_NARRATIVES, type RepoCategory, type RepoStatus } from '@/lib/repo-narratives';
-import './projects.css';
+import './builds.css';
 
 const GITHUB_USERNAME = 'madanlalit';
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -581,7 +581,7 @@ function RepoIndexCard({ repo }: { repo: PublicRepo }) {
     );
 }
 
-export default function ProjectsClient() {
+export default function BuildsClient() {
     const [repos, setRepos] = useState<PublicRepo[]>([]);
     const [contributions, setContributions] = useState<GitHubContribution[]>([]);
     const [ghTotal, setGhTotal] = useState(0);

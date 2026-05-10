@@ -4,7 +4,7 @@
 ## Core Pages
 - [Home](https://lalitmadan.com): AI engineering notes from Lalit Madan.
 - [About](https://lalitmadan.com/about): Background, focus areas, and contact links for Lalit Madan.
-- [Work](https://lalitmadan.com/projects): Projects, open source work, and experiments in AI engineering and developer tooling.
+- [Builds](https://lalitmadan.com/builds): Builds, open source work, and experiments in AI engineering and developer tooling.
 - [Posts](https://lalitmadan.com/posts): Complete blog post index.
 - [RSS](https://lalitmadan.com/rss.xml): RSS feed for new posts.
 
