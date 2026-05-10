@@ -349,8 +349,8 @@ export default function CommandLine({
                 <button className={`cli-tab ${pathname === '/about' ? 'active' : ''}`} onClick={() => router.push('/about')} title="Navigate to About (Alt+3)">
                     <span className="tab-key">3</span> ABOUT
                 </button>
-                <button className={`cli-tab ${pathname === '/projects' ? 'active' : ''}`} onClick={() => router.push('/projects')} title="Navigate to Projects (Alt+4)">
-                    <span className="tab-key">4</span> PROJECTS
+                <button className={`cli-tab ${pathname === '/projects' ? 'active' : ''}`} onClick={() => router.push('/projects')} title="Navigate to Work (Alt+4)">
+                    <span className="tab-key">4</span> WORK
                 </button>
 
                 <div className="tab-spacer"></div>

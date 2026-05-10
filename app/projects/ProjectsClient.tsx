@@ -225,7 +225,7 @@ export default function ProjectsClient() {
                 <header className="sys-header">
                     <h1 className="sys-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>
                         <Folder size={18} />
-                        <span>./REPOSITORIES // MY_PROJECTS</span>
+                        <span>./WORK // INDEX</span>
                     </h1>
                     <div className="sys-meta">LOADING...</div>
                 </header>
@@ -244,7 +244,7 @@ export default function ProjectsClient() {
                 <header className="sys-header">
                     <h1 className="sys-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>
                         <Folder size={18} />
-                        <span>./REPOSITORIES // MY_PROJECTS</span>
+                        <span>./WORK // INDEX</span>
                     </h1>
                     <div className="sys-meta">ERROR</div>
                 </header>
@@ -263,7 +263,7 @@ export default function ProjectsClient() {
             <header className="sys-header">
                 <h1 className="sys-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>
                     <Folder size={18} />
-                    <span>./REPOSITORIES // MY_PROJECTS</span>
+                    <span>./WORK // INDEX</span>
                 </h1>
                 <div className="sys-meta">INDEXED: {processedRepos.length}</div>
             </header>

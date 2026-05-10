@@ -97,7 +97,7 @@ export default function NotFound() {
                 <p>Try one of these commands:</p>
                 <p>  <code>cd /</code> — return to home</p>
                 <p>  <code>ls /posts</code> — browse all posts</p>
-                <p>  <code>ls /projects</code> — view projects</p>
+                <p>  <code>ls /projects</code> — view work</p>
             </div>
 
             <Link href="/" className="not-found-link">

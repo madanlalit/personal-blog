@@ -41,7 +41,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
 
                     <div className="hero-actions">
                         <Link href="/projects" className="hero-btn primary">
-                            <span className="bracket">[</span> EXECUTE_PROJECTS{' '}
+                            <span className="bracket">[</span> OPEN_WORK{' '}
                             <span className="bracket">]</span>
                         </Link>
                         <Link href="/about" className="hero-btn secondary">
