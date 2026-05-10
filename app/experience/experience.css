@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: var(--space-xl) var(--space-lg);
     min-height: 100vh;
+    font-family: var(--font-family-body);
 }
 
 /* ===========================================
@@ -21,11 +22,12 @@
     margin-bottom: var(--space-lg);
     font-size: var(--font-size-small);
     color: var(--text-tertiary);
-    font-weight: 500;
+    font-family: var(--font-family-ui);
+    font-weight: var(--font-weight-medium);
     transition: all 0.2s;
     text-decoration: none;
-    font-family: var(--font-primary);
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .back-link:hover {
@@ -34,9 +36,11 @@
 }
 
 .page-title {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-hero);
     margin: 0 0 var(--space-sm) 0;
-    letter-spacing: -0.02em;
+    letter-spacing: var(--letter-spacing-heading);
+    line-height: var(--line-height-tight);
     text-transform: uppercase;
 }
 
@@ -49,9 +53,11 @@
 }
 
 .page-subtitle {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--text-secondary);
     margin: 0;
+    line-height: var(--line-height-copy);
 }
 
 /* ===========================================
@@ -63,9 +69,10 @@
 }
 
 .section-header {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
-    letter-spacing: 0.1em;
+    letter-spacing: var(--letter-spacing-wide);
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -177,14 +184,15 @@
 
 /* Meta Row */
 .job-meta-row {
-    font-family: var(--font-primary);
+    font-family: var(--font-family-ui);
     display: flex;
     gap: 12px;
     font-size: var(--font-size-small);
     color: var(--text-tertiary);
     margin-bottom: 12px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-label);
     border-bottom: 1px dashed var(--border);
     padding-bottom: 8px;
     align-items: center;
@@ -203,11 +211,12 @@
 
 /* Title */
 .job-title {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-subtitle);
-    font-weight: 700;
-    line-height: 1.25;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
     margin: 0 0 8px 0;
-    letter-spacing: -0.01em;
+    letter-spacing: var(--letter-spacing-heading);
     color: var(--text-primary);
     text-transform: uppercase;
 }
@@ -230,16 +239,20 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     margin-bottom: 12px;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 /* Excerpt */
 .job-excerpt {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: var(--line-height-copy);
     margin-bottom: 16px;
 }
 
@@ -249,9 +262,10 @@
 }
 
 .achievements-label {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--text-tertiary);
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-label);
     display: block;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -260,9 +274,10 @@
 .job-achievements ul {
     margin: 0;
     padding-left: 20px;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-small);
     color: var(--text-secondary);
-    line-height: 1.8;
+    line-height: var(--line-height-copy-relaxed);
 }
 
 .job-achievements li {
@@ -282,10 +297,13 @@
 
 .tech-tag {
     color: var(--accent);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     text-decoration: none;
     border: 1px solid var(--border);
     padding: 2px 8px;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
     transition: all 0.2s;
 }
 
@@ -346,21 +364,27 @@
 }
 
 .cert-name {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-small);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-heading);
 }
 
 .cert-issuer {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-xs);
     color: var(--text-secondary);
 }
 
 .cert-year {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--accent);
     margin-top: 4px;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 /* ===========================================
@@ -376,9 +400,11 @@
 }
 
 .exp-cta p {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--text-secondary);
     margin: 0 0 var(--space-lg) 0;
+    line-height: var(--line-height-copy);
 }
 
 .cta-buttons {
@@ -392,12 +418,14 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-small);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     border: 1px solid var(--border);
     padding: 8px 16px;
     text-decoration: none;
+    letter-spacing: var(--letter-spacing-label);
     transition: all 0.2s;
 }
 

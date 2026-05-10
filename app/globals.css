@@ -32,11 +32,33 @@
   --color-error: #FF5555;
   --color-info: var(--text-secondary);
 
-  /* Typography - Monospace */
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography */
+  /* --font-mono is injected by next/font/google */
   --font-primary: var(--font-mono), monospace;
-  --font-serif: var(--font-mono), monospace;
+  --font-serif: var(--font-primary);
+  --font-family-body: var(--font-primary);
+  --font-family-display: var(--font-primary);
+  --font-family-ui: var(--font-primary);
+  --font-family-code: var(--font-primary);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  --line-height-tight: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-copy: 1.7;
+  --line-height-copy-relaxed: 1.8;
+  --line-height-ui: 1.5;
+
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-heading: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-label: 0.08em;
+  --letter-spacing-wide: 0.12em;
 
   /* Scale */
   /* Scale - Refined for "World Elegant" readability */
@@ -156,12 +178,14 @@
 }
 
 body {
-  font-family: var(--font-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: var(--line-height-copy);
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
   /* Prevent scrollbar flicker */
@@ -257,10 +281,27 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin-top: 0;
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
   text-transform: uppercase;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-family-code);
 }
 
 
@@ -279,6 +320,8 @@ a:hover {
 p {
   margin-bottom: 1.5rem;
   color: var(--text-primary);
+  font-family: var(--font-family-body);
+  line-height: var(--line-height-copy);
 }
 
 /* Utils */

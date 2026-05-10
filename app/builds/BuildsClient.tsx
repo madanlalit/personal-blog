@@ -269,7 +269,6 @@ function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
     const narrative = REPO_NARRATIVES[repo.name];
     if (!narrative) return null;
 
-    const activity = getActivity(repo.pushedAt);
     const badge = STATUS_CONFIG[narrative.status];
 
     return (
@@ -375,7 +374,6 @@ function ChapterNavigator({
                     {activePreview.length > 0 ? (
                         activePreview.map((repo) => {
                             const narrative = REPO_NARRATIVES[repo.name];
-                            const activity = getActivity(repo.pushedAt);
                             return (
                                 <a key={repo.id} href={repo.url} target="_blank" rel="noopener noreferrer" className="chapter-preview-row">
                                     <span>

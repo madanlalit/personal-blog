@@ -5,9 +5,9 @@
     --atlas-faint: var(--text-tertiary);
     --atlas-line: color-mix(in srgb, var(--border) 72%, transparent);
     --atlas-line-strong: color-mix(in srgb, var(--border) 86%, var(--text-tertiary));
-    --atlas-display-font: var(--font-primary);
-    --atlas-copy-font: var(--font-sans);
-    --atlas-ui-font: var(--font-primary);
+    --atlas-display-font: var(--font-family-display);
+    --atlas-copy-font: var(--font-family-body);
+    --atlas-ui-font: var(--font-family-ui);
     max-width: min(1240px, calc(100vw - 2rem));
     min-height: 100vh;
     margin: 0 auto;
@@ -26,8 +26,8 @@
     color: var(--accent);
     font-family: var(--atlas-ui-font);
     font-size: var(--font-size-xxs);
-    font-weight: 800;
-    letter-spacing: 0.13em;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--letter-spacing-wide);
     text-transform: uppercase;
 }
 
@@ -43,8 +43,8 @@
     padding: 0.48rem 0.68rem;
     font-family: var(--atlas-ui-font);
     font-size: var(--font-size-xxs);
-    font-weight: 800;
-    letter-spacing: 0.07em;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--letter-spacing-label);
     text-transform: uppercase;
     cursor: pointer;
     transition: border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, background 0.18s ease;
@@ -106,9 +106,9 @@
     color: var(--atlas-ink);
     font-family: var(--atlas-display-font);
     font-size: var(--font-size-hero);
-    font-weight: 900;
-    letter-spacing: -0.05em;
-    line-height: 1.1;
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: var(--line-height-tight);
     text-transform: uppercase;
 }
 
@@ -124,7 +124,7 @@
     color: var(--atlas-muted);
     font-family: var(--atlas-copy-font);
     font-size: clamp(0.92rem, 1.5vw, 1.05rem);
-    line-height: 1.7;
+    line-height: var(--line-height-copy);
 }
 
 .hero-actions {
@@ -167,9 +167,9 @@
     color: var(--atlas-ink);
     font-family: var(--atlas-display-font);
     font-size: var(--font-size-title);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: var(--line-height-tight);
     text-transform: uppercase;
 }
 
@@ -183,7 +183,7 @@
     color: var(--atlas-muted);
     font-family: var(--atlas-copy-font);
     font-size: var(--font-size-small);
-    line-height: 1.75;
+    line-height: var(--line-height-copy);
 }
 
 .dossier-facts {
@@ -205,7 +205,8 @@
     color: var(--atlas-faint);
     font-family: var(--atlas-ui-font);
     font-size: var(--font-size-xxs);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-label);
     text-transform: uppercase;
 }
 

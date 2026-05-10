@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { JetBrains_Mono } from 'next/font/google';
 import { SITE_CONFIG } from '@/lib/config';
 import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
@@ -6,6 +7,12 @@ import JsonLd from '@/components/JsonLd';
 import WebMCPProvider from '@/components/WebMCPProvider';
 import './globals.css';
 import './app.css';
+
+const jetbrainsMono = JetBrains_Mono({
+    subsets: ['latin'],
+    variable: '--font-mono',
+    display: 'swap',
+});
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_CONFIG.url),
@@ -57,7 +64,7 @@ export default function RootLayout({
     const posts = getAllPostsMeta();
 
     return (
-        <html lang={SITE_CONFIG.language}>
+        <html lang={SITE_CONFIG.language} className={jetbrainsMono.variable}>
             <body>
                 <JsonLd />
                 <WebMCPProvider />

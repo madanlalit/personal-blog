@@ -5,6 +5,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-family-body);
 }
 
 .sys-grid {
@@ -42,10 +43,11 @@
     width: fit-content;
     margin: 0;
     color: var(--text-tertiary);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: 0.08em;
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-ui);
+    letter-spacing: var(--letter-spacing-label);
     text-transform: uppercase;
 }
 
@@ -69,14 +71,15 @@
 .hero-btn {
     display: flex;
     align-items: center;
-    font-family: var(--font-primary);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
     padding: 0.6rem 1.25rem;
     border: 1px solid var(--border);
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-    letter-spacing: 0.05em;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .hero-btn.primary {
@@ -112,7 +115,7 @@
 
 .hero-telemetry {
     text-align: right;
-    font-family: var(--font-primary);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     display: flex;
     flex-direction: column;
@@ -128,8 +131,9 @@
 
 .t-label {
     color: var(--text-tertiary);
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
+    font-size: var(--font-size-xxs);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .t-val {
@@ -156,25 +160,29 @@
 
 .signal-kicker {
     color: var(--text-tertiary);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1.6;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: var(--line-height-ui);
+    text-transform: uppercase;
 }
 
 .signal-content h2 {
     margin: 0 0 0.55rem;
     color: var(--text-primary);
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.45;
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-ui);
 }
 
 .signal-content p {
     margin: 0;
     color: var(--text-secondary);
+    font-family: var(--font-family-body);
     font-size: var(--font-size-small);
-    line-height: 1.7;
+    line-height: var(--line-height-copy);
     max-width: 68ch;
 }
 
@@ -188,15 +196,17 @@
 }
 
 .mod-header {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
-    letter-spacing: 0.1em;
+    letter-spacing: var(--letter-spacing-wide);
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
     margin: 0 0 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .mod-meta {
@@ -248,15 +258,20 @@
 }
 
 .status-label {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     color: var(--text-primary);
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .status-sub {
-    font-size: 0.65rem;
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-xxs);
     color: var(--text-tertiary);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .beacon-action {
@@ -270,9 +285,12 @@
     border: 1px solid var(--border);
     border-top: none;
     color: var(--text-secondary);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-label);
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 0.2s;
 }
 
@@ -296,9 +314,11 @@
 .skill-info {
     display: flex;
     justify-content: space-between;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--text-secondary);
-    font-family: var(--font-primary);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .skill-track {
@@ -332,10 +352,13 @@
 .comm-link {
     text-align: center;
     border: 1px solid var(--border);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     padding: 0.4rem 0;
     color: var(--text-secondary);
+    letter-spacing: var(--letter-spacing-label);
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 0.2s;
 }
 
@@ -348,7 +371,7 @@
 .system-log-terminal {
     border: 1px solid var(--border);
     padding: 1rem;
-    font-family: var(--font-primary);
+    font-family: var(--font-family-code);
     font-size: var(--font-size-xs);
     display: flex;
     flex-direction: column;
@@ -456,23 +479,31 @@
 
 .clean-card h3,
 .clean-card h2 {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-subtitle);
     margin: 0 0 0.25rem 0;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     color: var(--text-primary);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+    text-transform: uppercase;
 }
 
 .clean-card .date {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     display: block;
     margin-bottom: 2px;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .clean-card p {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-small);
     color: var(--text-secondary);
-    line-height: 1.4;
+    line-height: var(--line-height-ui);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -497,8 +528,11 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-secondary);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .nw-indicator {
@@ -513,7 +547,7 @@
 }
 
 .nw-text {
-    font-family: var(--font-primary);
+    font-family: var(--font-family-ui);
 }
 
 @keyframes nwPulse {
@@ -874,7 +908,7 @@
     }
 
     .clean-card h3 {
-        font-size: 1rem;
+        font-size: var(--font-size-body);
         word-break: break-word;
     }
 

@@ -12,7 +12,7 @@
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: var(--space-lg);
-    font-family: var(--arch-font);
+    font-family: var(--font-family-body);
     color: var(--arch-text);
     height: 100%;
     display: flex;
@@ -42,8 +42,9 @@
     border-bottom: 1px solid var(--arch-border);
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-family: var(--font-family-ui);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
     font-size: var(--font-size-subtitle);
 }
 
@@ -74,15 +75,19 @@
 }
 
 .stat-pill .label {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--arch-muted);
-    letter-spacing: 1px;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
 }
 
 .stat-pill .value {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-h4);
-    font-weight: bold;
-    line-height: 1;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-heading);
 }
 
 /* Heatmap */
@@ -91,9 +96,12 @@
 }
 
 .section-label {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     margin-bottom: var(--space-xs);
     color: var(--arch-muted);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .heatmap-grid {
@@ -124,12 +132,14 @@
     padding: var(--space-sm) var(--space-md-sm);
     font-size: var(--font-size-body);
     position: relative;
+    font-family: var(--font-family-body);
 }
 
 .search-wrapper .prompt {
     color: var(--arch-accent);
     margin-right: var(--space-sm);
-    font-weight: bold;
+    font-family: var(--font-family-ui);
+    font-weight: var(--font-weight-bold);
     user-select: none;
 }
 
@@ -159,9 +169,11 @@
     border: none;
     padding: 0 var(--space-md-sm);
     cursor: pointer;
-    font-family: inherit;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-small);
     color: var(--arch-muted);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
     transition: all 0.2s;
 }
 
@@ -188,10 +200,11 @@
     background: transparent;
     border: 1px solid var(--arch-border);
     padding: var(--space-xxs) var(--space-sm);
-    font-family: inherit;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     cursor: pointer;
     text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-label);
     color: var(--arch-muted);
     transition: all 0.2s;
 }
@@ -209,10 +222,14 @@
 }
 
 .year-marker {
-    font-weight: bold;
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-bold);
     margin-bottom: var(--space-md);
     font-size: var(--font-size-subtitle);
     color: var(--arch-text);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+    text-transform: uppercase;
 }
 
 .year-marker .bracket {
@@ -262,8 +279,11 @@
 .col-meta {
     display: flex;
     gap: var(--space-sm);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-small);
     color: var(--arch-muted);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .col-meta .hash {
@@ -272,11 +292,13 @@
 }
 
 .col-title {
-    font-weight: 500;
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-medium);
     font-size: var(--font-size-body);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: var(--line-height-ui);
 }
 
 .col-title .ext {
@@ -349,8 +371,11 @@
 
 .card-body h3 {
     margin: 0 0 var(--space-sm);
+    font-family: var(--font-family-display);
     font-size: var(--font-size-h3);
-    line-height: 1.4;
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+    text-transform: uppercase;
     overflow: hidden;
     max-height: 50px;
 }
@@ -358,8 +383,11 @@
 .meta-row {
     display: flex;
     gap: var(--space-md-sm);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-small);
     color: var(--arch-muted);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .meta-row span {
@@ -372,12 +400,15 @@
     margin-top: auto;
     padding-top: var(--space-md-sm);
     border-top: 1px dashed var(--arch-border);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     display: flex;
     align-items: center;
     gap: var(--space-xxs);
     color: var(--arch-accent);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 /* Footer */
@@ -385,16 +416,21 @@
     margin-top: var(--space-2xl);
     padding-top: var(--space-md);
     border-top: 1px solid var(--arch-border);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--arch-muted);
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
 }
 
 /* Animations */
 .search-status {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--arch-accent);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
     animation: scanPulse 0.6s ease-in-out infinite;
 }
 

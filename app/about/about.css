@@ -6,6 +6,7 @@
     margin: 0 auto;
     padding: var(--space-xl) var(--space-lg);
     min-height: 100vh;
+    font-family: var(--font-family-body);
 }
 
 /* Hero Frame */
@@ -42,20 +43,25 @@
 .hero-badge {
     display: inline-block;
     width: fit-content;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--accent);
     border: 1px solid var(--accent);
     padding: var(--space-xs) var(--space-sm);
-    letter-spacing: 1px;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
 }
 
 .hero-name {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
-    line-height: 1.1;
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-heading);
     margin: 0;
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
 }
 
 .hero-name::after {
@@ -73,7 +79,8 @@
 .hero-tagline {
     font-size: var(--font-size-body);
     color: var(--text-secondary);
-    font-family: var(--font-primary);
+    font-family: var(--font-family-body);
+    line-height: var(--line-height-copy);
     height: 1.5em;
 }
 
@@ -102,9 +109,12 @@
 .hero-meta {
     display: flex;
     gap: var(--space-md);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     margin-top: var(--space-sm);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .meta-item {
@@ -125,12 +135,13 @@
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
+    font-family: var(--font-family-ui);
     padding: 0.75rem 1.25rem;
     font-size: var(--font-size-xs);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-label);
     border: 1px solid var(--border);
     transition: all 0.2s;
 }
@@ -174,10 +185,12 @@
 }
 
 .stat-number {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-title);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--text-primary);
-    line-height: 1;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-heading);
 }
 
 .stat-number.small {
@@ -185,9 +198,10 @@
 }
 
 .stat-label {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--text-tertiary);
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-label);
     text-transform: uppercase;
     margin-top: var(--space-xxs);
 }
@@ -203,9 +217,10 @@
 }
 
 .bio-text {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--text-secondary);
-    line-height: 1.8;
+    line-height: var(--line-height-copy-relaxed);
     margin: 0 0 var(--space-md);
     max-width: 700px;
 }
@@ -226,11 +241,12 @@
     border-left: 3px solid var(--accent);
     margin: 0;
     padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-family-body);
     font-style: italic;
     font-size: var(--font-size-body);
     color: var(--text-secondary);
     background: var(--bg-secondary);
-    line-height: 1.7;
+    line-height: var(--line-height-copy);
     word-wrap: break-word;
 }
 
@@ -250,11 +266,14 @@
 }
 
 .skill-tag {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-primary);
     padding: var(--space-xs) var(--space-sm);
     border: 1px solid var(--border);
     background: transparent;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
     transition: all 0.3s ease;
     animation: skillFadeIn 0.5s ease forwards;
     opacity: 0;
@@ -304,8 +323,11 @@
     display: flex;
     align-items: center;
     gap: var(--space-xs);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--text-tertiary);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .legend-item .dot {
@@ -338,10 +360,13 @@
     display: flex;
     align-items: center;
     gap: var(--space-xs);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-secondary);
     padding: var(--space-xs) var(--space-sm);
     border: 1px solid var(--border);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
     transition: all 0.2s;
 }
 
@@ -370,18 +395,24 @@
 }
 
 .exp-count {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .view-all-link {
     display: flex;
     align-items: center;
     gap: var(--space-xs);
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xs);
     color: var(--accent);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
     transition: opacity 0.2s;
 }
 
@@ -410,24 +441,29 @@
 
 .exp-year {
     display: block;
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--accent);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     margin-bottom: var(--space-sm);
-    letter-spacing: 1px;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
 }
 
 .exp-role {
     display: block;
+    font-family: var(--font-family-display);
     font-size: var(--font-size-small);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-heading);
     margin-bottom: var(--space-xxs);
 }
 
 .exp-company {
     display: block;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-xs);
     color: var(--text-tertiary);
     margin-bottom: var(--space-sm);
@@ -440,11 +476,14 @@
 }
 
 .tech-tag {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--text-secondary);
     padding: 2px 6px;
     border: 1px solid var(--border);
     background: var(--bg-primary);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 /* Terminal */
@@ -481,14 +520,17 @@
 }
 
 .terminal-title {
+    font-family: var(--font-family-ui);
     font-size: var(--font-size-xxs);
     color: var(--text-tertiary);
     margin-left: var(--space-sm);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
 }
 
 .terminal-body {
     padding: var(--space-md);
-    font-family: var(--font-primary);
+    font-family: var(--font-family-code);
     font-size: var(--font-size-xs);
     background: var(--bg-primary);
 }
