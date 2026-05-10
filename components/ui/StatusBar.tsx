@@ -40,11 +40,11 @@ const StatusBar = ({ muted, onToggleMute }: StatusBarProps) => {
     }, []);
 
     useEffect(() => {
-        const contentArea = document.querySelector('.content-area');
-        if (!contentArea) return;
+        const scrollContainer = document.querySelector('.main-layout');
+        if (!scrollContainer) return;
 
         const handleScroll = () => {
-            const { scrollTop, scrollHeight, clientHeight } = contentArea;
+            const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
             if (scrollHeight <= clientHeight) {
                 setScrollPercent(100);
             } else {
@@ -53,10 +53,10 @@ const StatusBar = ({ muted, onToggleMute }: StatusBarProps) => {
             }
         };
 
-        contentArea.addEventListener('scroll', handleScroll);
+        scrollContainer.addEventListener('scroll', handleScroll);
         handleScroll();
 
-        return () => contentArea.removeEventListener('scroll', handleScroll);
+        return () => scrollContainer.removeEventListener('scroll', handleScroll);
     }, [pathname]);
 
     const formatPath = (path: string) => {

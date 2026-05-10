@@ -12,6 +12,11 @@
     user-select: none;
     letter-spacing: 0.4px;
     transition: border-color 0.2s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
 }
 
 .status-left,

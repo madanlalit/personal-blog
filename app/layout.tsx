@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import { SITE_CONFIG } from '@/lib/config';
 import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
@@ -8,8 +8,14 @@ import WebMCPProvider from '@/components/WebMCPProvider';
 import './globals.css';
 import './app.css';
 
-const jetbrainsMono = JetBrains_Mono({
-    subsets: ['latin'],
+const jetbrainsMono = localFont({
+    src: [
+        { path: './fonts/JetBrainsMono-Regular.ttf', weight: '400', style: 'normal' },
+        { path: './fonts/JetBrainsMono-Italic.ttf', weight: '400', style: 'italic' },
+        { path: './fonts/JetBrainsMono-Medium.ttf', weight: '500', style: 'normal' },
+        { path: './fonts/JetBrainsMono-Bold.ttf', weight: '700', style: 'normal' },
+        { path: './fonts/JetBrainsMono-ExtraBold.ttf', weight: '800', style: 'normal' },
+    ],
     variable: '--font-mono',
     display: 'swap',
 });

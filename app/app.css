@@ -1,7 +1,7 @@
 .app {
+  --shell-status-height: 39px;
+  --shell-cli-height: 95px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -9,11 +9,11 @@
 .app-shell {
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .app-shell__main {
-  flex: 1;
-  overflow: auto;
+  height: 100%;
 }
 
 /* TUI Status Bars */
@@ -22,10 +22,12 @@
 /* Main Layout (Sidebar + Content) */
 .main-layout {
   display: flex;
-  flex: 1;
+  height: calc(100vh - var(--shell-status-height) - var(--shell-cli-height));
   flex-direction: column;
   /* Mobile first */
   position: relative;
+  margin-top: var(--shell-status-height);
+  margin-bottom: var(--shell-cli-height);
   overflow-y: auto;
 }
 
@@ -74,6 +76,11 @@
 }
 
 @media (max-width: 1023px) {
+  .app {
+    --shell-status-height: 33px;
+    --shell-cli-height: 87px;
+  }
+
   .content-area {
     padding: var(--space-lg) var(--space-md);
   }
@@ -81,6 +88,11 @@
 
 /* Mobile devices - reduce padding further */
 @media (max-width: 480px) {
+  .app {
+    --shell-status-height: 28px;
+    --shell-cli-height: 75px;
+  }
+
   .content-area {
     padding: var(--space-md) var(--space-sm);
   }
@@ -88,6 +100,11 @@
 
 /* Ultra-small devices - minimal padding */
 @media (max-width: 360px) {
+  .app {
+    --shell-status-height: 24px;
+    --shell-cli-height: 70px;
+  }
+
   .content-area {
     padding: var(--space-sm) var(--space-xs);
   }
