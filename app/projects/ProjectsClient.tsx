@@ -1,28 +1,46 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useMemo, useState, type ElementType } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
     Activity,
     AlertCircle,
     ArrowDownAZ,
+    ArrowRight,
+    BookOpen,
+    Boxes,
     Clock,
-    Code,
+    Compass,
     ExternalLink,
     GitBranch,
     GitFork,
     Globe,
+    Lightbulb,
     Loader,
+    Rocket,
+    ShieldCheck,
     Star,
     Timer,
+    Zap,
 } from 'lucide-react';
-import { REPO_NARRATIVES, type RepoStatus } from '@/lib/repo-narratives';
+import { REPO_NARRATIVES, type RepoCategory, type RepoStatus } from '@/lib/repo-narratives';
 import './projects.css';
 
 const GITHUB_USERNAME = 'madanlalit';
 const DAY_MS = 24 * 60 * 60 * 1000;
-
-// --- Types ---
+const EXCLUDED_REPOS: string[] = [
+    // Matching is case-insensitive and supports "repo-name" or "owner/repo-name".
+    'arc-cli',
+    'cdp-cli',
+    'i-scrape',
+    'iscrape',
+    'parameter-golf',
+    'archon',
+    'opentelemetry-python',
+    'gemini-cli',
+    'langchain',
+];
+const EXCLUDED_REPO_NAMES = new Set(EXCLUDED_REPOS.map((repo) => repo.toLowerCase()));
 
 interface PublicRepo {
     id: string;
@@ -53,12 +71,48 @@ type SortOption = 'pushed' | 'stars' | 'forks' | 'name';
 
 const STATUS_CONFIG: Record<RepoStatus, { label: string; className: string }> = {
     shipping: { label: 'SHIPPING', className: 'badge-shipping' },
+    shipped: { label: 'SHIPPED', className: 'badge-shipped' },
     experiment: { label: 'EXPERIMENT', className: 'badge-experiment' },
     learning: { label: 'LEARNING', className: 'badge-learning' },
     maintenance: { label: 'MAINTENANCE', className: 'badge-maintenance' },
+    archived: { label: 'ARCHIVED', className: 'badge-archived' },
 };
 
-// --- Helpers ---
+const CATEGORY_META: Record<
+    RepoCategory,
+    { label: string; shortLabel: string; icon: ElementType; desc: string; thesis: string }
+> = {
+    building: {
+        label: 'Currently Building',
+        shortLabel: 'Build',
+        icon: Rocket,
+        desc: 'Active work that is still changing shape.',
+        thesis: 'Projects in motion: useful enough to keep alive, unfinished enough to keep improving.',
+    },
+    shipped: {
+        label: 'Shipped Systems',
+        shortLabel: 'Ship',
+        icon: Zap,
+        desc: 'Tools that reached a stable useful form.',
+        thesis: 'Small durable utilities and systems that survived contact with real usage.',
+    },
+    experiment: {
+        label: 'Research Lab',
+        shortLabel: 'Lab',
+        icon: Lightbulb,
+        desc: 'Prototypes built to answer a specific question.',
+        thesis: 'The weird shelf: screen agents, accessibility tools, scrapers, and proofs of concept.',
+    },
+    oss: {
+        label: 'Source Studies',
+        shortLabel: 'Study',
+        icon: BookOpen,
+        desc: 'Open-source forks used as reading material.',
+        thesis: 'A reading list made of codebases: agent frameworks, runtimes, and infrastructure patterns.',
+    },
+};
+
+const CATEGORY_ORDER: RepoCategory[] = ['building', 'shipped', 'experiment', 'oss'];
 
 const formatDateKey = (date: Date): string => date.toISOString().slice(0, 10);
 
@@ -94,6 +148,12 @@ const getActivity = (pushedAt: string): 'recent' | 'moderate' | 'idle' => {
     return 'idle';
 };
 
+const isExcludedRepo = (repo: PublicRepo) => {
+    const name = repo.name.toLowerCase();
+    const fullName = repo.fullName.toLowerCase();
+    return EXCLUDED_REPO_NAMES.has(name) || EXCLUDED_REPO_NAMES.has(fullName);
+};
+
 const buildActivity = (contributions: GitHubContribution[]) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -101,6 +161,7 @@ const buildActivity = (contributions: GitHubContribution[]) => {
     start.setDate(today.getDate() - 364);
     start.setDate(start.getDate() - start.getDay());
     start.setHours(0, 0, 0, 0);
+
     const totalDays = Math.floor((today.getTime() - start.getTime()) / DAY_MS) + 1;
     const map = new Map(contributions.map((c) => [c.date, c]));
     const labels: Array<{ label: string; column: number }> = [];
@@ -109,12 +170,14 @@ const buildActivity = (contributions: GitHubContribution[]) => {
         const key = formatDateKey(date);
         const entry = map.get(key);
         const count = entry?.count ?? 0;
+
         if (date.getDate() <= 7) {
             const col = Math.floor(i / 7);
             const label = date.toLocaleDateString('en-US', { month: 'short' });
             const prev = labels[labels.length - 1];
             if (!prev || prev.label !== label) labels.push({ label, column: col });
         }
+
         return {
             key,
             label: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
@@ -122,6 +185,7 @@ const buildActivity = (contributions: GitHubContribution[]) => {
             level: entry?.level ?? 0,
         };
     });
+
     return {
         cells,
         labels,
@@ -130,8 +194,6 @@ const buildActivity = (contributions: GitHubContribution[]) => {
         peak: Math.max(...cells.map((c) => c.count), 0),
     };
 };
-
-// --- ActivityPulse (compact heatmap) ---
 
 function ActivityPulse({
     cells,
@@ -149,259 +211,375 @@ function ActivityPulse({
     synced: string;
 }) {
     return (
-        <div className="work-activity">
-            <div className="activity-header">
-                <span className="activity-title">
-                    <Activity size={13} /> CONTRIBUTION_PULSE · LAST_52_WEEKS
+        <section className="pulse-panel" aria-label="GitHub contribution pulse">
+            <div className="pulse-copy">
+                <span className="atlas-kicker">
+                    <Activity size={13} />
+                    Contribution Pulse
                 </span>
-                <span className="activity-summary">
-                    {total} contribs · {activeDays} days · peak {peak}/day · synced {synced}
-                </span>
+                <p>{total} contributions across {activeDays} active days. Peak: {peak}/day. Synced {synced}.</p>
             </div>
-            <div className="activity-months" aria-hidden="true">
-                {labels.map((m) => (
-                    <span
-                        key={`${m.label}-${m.column}`}
-                        className="activity-month"
-                        style={{ gridColumn: `${m.column + 1}` }}
-                    >
-                        {m.label}
-                    </span>
-                ))}
+            <div className="pulse-map-wrap">
+                <div className="activity-months" aria-hidden="true">
+                    {labels.map((m) => (
+                        <span
+                            key={`${m.label}-${m.column}`}
+                            className="activity-month"
+                            style={{ gridColumn: `${m.column + 1}` }}
+                        >
+                            {m.label}
+                        </span>
+                    ))}
+                </div>
+                <div className="activity-grid" role="img" aria-label="GitHub contribution heatmap">
+                    {cells.map((cell) => (
+                        <div
+                            key={cell.key}
+                            className={`activity-cell lvl-${cell.level}`}
+                            title={`${cell.label}: ${cell.count}`}
+                        />
+                    ))}
+                </div>
             </div>
-            <div className="activity-grid" role="img" aria-label="GitHub contribution heatmap">
-                {cells.map((cell) => (
-                    <div
-                        key={cell.key}
-                        className={`activity-cell lvl-${cell.level}`}
-                        title={`${cell.label}: ${cell.count}`}
-                    />
-                ))}
-            </div>
+        </section>
+    );
+}
+
+function MetricTile({
+    icon: Icon,
+    value,
+    label,
+}: {
+    icon: ElementType;
+    value: string | number;
+    label: string;
+}) {
+    return (
+        <div className="metric-tile">
+            <Icon size={14} />
+            <strong>{value}</strong>
+            <span>{label}</span>
         </div>
     );
 }
 
-// --- StoryCard (featured narrative) ---
+function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
+    if (!repo) return null;
 
-function StoryCard({ repo, num }: { repo: PublicRepo; num: number }) {
     const narrative = REPO_NARRATIVES[repo.name];
     if (!narrative) return null;
 
+    const activity = getActivity(repo.pushedAt);
     const badge = STATUS_CONFIG[narrative.status];
-    const activity = getActivity(repo.pushedAt);
-    const age = repoAge(repo.createdAt);
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.05 * num }}
-            className="story-card"
+        <motion.article
+            className="spotlight-dossier"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
         >
-            <div className="story-num">{String(num).padStart(2, '0')}</div>
-            <div className="story-main">
-                <div className="story-header">
-                    <h3 className="story-name">
-                        <Code size={15} />
-                        {repo.name}
-                    </h3>
-                    <span className={`status-badge ${badge.className}`}>{badge.label}</span>
-                </div>
-
-                <p className="story-text">{narrative.story}</p>
-
-                {narrative.highlights.length > 0 && (
-                    <ul className="story-highlights">
-                        {narrative.highlights.map((h, i) => (
-                            <li key={i}>{h}</li>
-                        ))}
-                    </ul>
-                )}
-
-                <div className="story-meta">
-                    {repo.language && repo.language !== 'Unknown' && (
-                        <span>{repo.language}</span>
-                    )}
-                    <span className="meta-dot" />
-                    <span>{age}</span>
-                    <span className="meta-dot" />
-                    <span className={`activity-indicator activity-${activity}`} />
-                    <span>pushed {timeAgo(repo.pushedAt)}</span>
-                </div>
-
-                <div className="story-actions">
-                    {repo.stars > 0 && (
-                        <span className="story-stat">
-                            <Star size={13} /> {repo.stars}
-                        </span>
-                    )}
-                    <span className="story-stat">
-                        <GitBranch size={13} /> {repo.forks}
-                    </span>
-                    <span className="story-stat">{repo.language}</span>
-                    <a
-                        href={repo.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="story-link"
-                    >
-                        SOURCE <ExternalLink size={12} />
-                    </a>
-                    {repo.homepage && (
-                        <a
-                            href={repo.homepage}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="story-link demo"
-                        >
-                            DEMO <Globe size={12} />
-                        </a>
-                    )}
-                </div>
-            </div>
-        </motion.div>
-    );
-}
-
-// --- OSSCard (open source contribution) ---
-
-function OSSCard({ repo }: { repo: PublicRepo }) {
-    const activity = getActivity(repo.pushedAt);
-    const age = repoAge(repo.createdAt);
-    const topics = repo.language && repo.language !== 'Unknown'
-        ? [repo.language, ...repo.topics]
-        : repo.topics;
-
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
-            className="oss-card"
-        >
-            <div className="oss-header">
-                <GitFork size={14} className="oss-icon" />
-                <h3 className="oss-name">{repo.name}</h3>
-                <span className="oss-badge">OSS</span>
+            <div className="dossier-header">
+                <span className="atlas-kicker">
+                    <Compass size={13} />
+                    Selected Dossier
+                </span>
+                <span className={`status-badge ${badge.className}`}>{badge.label}</span>
             </div>
 
-            <p className="oss-desc">{repo.description}</p>
+            <h2>{repo.name}</h2>
+            <p className="dossier-story">{narrative.story}</p>
 
-            {topics.length > 0 && (
-                <div className="oss-topics">
-                    {topics.map((t) => (
-                        <span
-                            key={t}
-                            className={t === repo.language ? 'oss-tag lang' : 'oss-tag'}
-                        >
-                            #{t}
-                        </span>
+            <div className="dossier-facts">
+                <span><Activity size={11} /> {getActivity(repo.pushedAt)}</span>
+                <span><Clock size={11} /> {timeAgo(repo.pushedAt)}</span>
+                <span><Star size={11} /> {repo.stars}</span>
+                <span><GitBranch size={11} /> {repo.forks}</span>
+            </div>
+
+            {narrative.highlights && narrative.highlights.length > 0 && (
+                <div className="dossier-tags">
+                    {narrative.highlights.slice(0, 3).map((highlight) => (
+                        <span key={highlight}>{highlight}</span>
                     ))}
                 </div>
             )}
 
-            <div className="oss-meta">
-                <span className="oss-stat">
-                    <Star size={12} /> {repo.stars}
-                </span>
-                <span className="oss-stat">
-                    <GitBranch size={12} /> {repo.forks}
-                </span>
-                {repo.language && repo.language !== 'Unknown' && (
-                    <span className="oss-stat">{repo.language}</span>
-                )}
-                <span className="meta-sep">|</span>
-                <Clock size={11} />
-                <span className="oss-stat">{age}</span>
-                <span className="meta-sep">|</span>
-                <span className={`activity-indicator activity-${activity}`} />
-                <span className="oss-stat">pushed {timeAgo(repo.pushedAt)}</span>
+            <div className="dossier-origin">
+                <span>Why it exists</span>
+                <p>{narrative.origin}</p>
             </div>
 
-            <a
-                href={repo.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="oss-link"
-            >
-                VIEW REPO <ExternalLink size={12} />
-            </a>
-        </motion.div>
+            <div className="dossier-actions">
+                <a href={repo.url} target="_blank" rel="noopener noreferrer" className="atlas-link primary">
+                    Open source <ExternalLink size={12} />
+                </a>
+                {repo.homepage && (
+                    <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="atlas-link">
+                        Live surface <Globe size={12} />
+                    </a>
+                )}
+            </div>
+        </motion.article>
     );
 }
 
-// --- RepoCard (index grid) ---
+function ChapterNavigator({
+    summaries,
+    activeCategory,
+    setActiveCategory,
+}: {
+    summaries: Array<{ category: RepoCategory; repos: PublicRepo[] }>;
+    activeCategory: RepoCategory;
+    setActiveCategory: (category: RepoCategory) => void;
+}) {
+    const active = summaries.find((summary) => summary.category === activeCategory) ?? summaries[0];
+    const activePreview = active?.repos.slice(0, 4) ?? [];
+    const meta = CATEGORY_META[active.category];
+    const Icon = meta.icon;
 
-function RepoCard({ repo }: { repo: PublicRepo }) {
-    const activity = getActivity(repo.pushedAt);
+    return (
+        <section className="chapter-navigator" aria-label="Project chapters">
+            <div className="chapter-tabs">
+                {summaries.map(({ category, repos }) => {
+                    const config = CATEGORY_META[category];
+                    const TabIcon = config.icon;
+                    return (
+                        <button
+                            key={category}
+                            type="button"
+                            className={`chapter-tab${activeCategory === category ? ' active' : ''}`}
+                            onClick={() => setActiveCategory(category)}
+                        >
+                            <TabIcon size={14} />
+                            <span>{config.shortLabel}</span>
+                            <strong>{repos.length}</strong>
+                        </button>
+                    );
+                })}
+            </div>
+
+            <div className="chapter-stage">
+                <div className="chapter-stage-copy">
+                    <span className="atlas-kicker">
+                        <Icon size={13} />
+                        {meta.label}
+                    </span>
+                    <h2>{meta.thesis}</h2>
+                    <a href={`#work-${active.category}`} className="atlas-link">
+                        Jump to chapter <ArrowRight size={12} />
+                    </a>
+                </div>
+
+                <div className="chapter-preview-list">
+                    {activePreview.length > 0 ? (
+                        activePreview.map((repo) => {
+                            const narrative = REPO_NARRATIVES[repo.name];
+                            const activity = getActivity(repo.pushedAt);
+                            return (
+                                <a key={repo.id} href={repo.url} target="_blank" rel="noopener noreferrer" className="chapter-preview-row">
+                                    <span>
+                                        <strong>{repo.name}</strong>
+                                        <small>{narrative.story}</small>
+                                    </span>
+                                    <ExternalLink size={12} />
+                                </a>
+                            );
+                        })
+                    ) : (
+                        <span className="chapter-empty">No entries in this chapter yet.</span>
+                    )}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function AtlasCard({ repo, lead = false }: { repo: PublicRepo; lead?: boolean }) {
+    const narrative = REPO_NARRATIVES[repo.name];
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    if (!narrative) return null;
+
+    const badge = STATUS_CONFIG[narrative.status];
+    const tags = narrative.highlights ?? repo.topics;
+
+    return (
+        <motion.article
+            className={`atlas-card${lead ? ' lead' : ''}`}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.35 }}
+        >
+            <AnimatePresence mode="wait">
+                {isFlipped ? (
+                    <motion.div
+                        key="back"
+                        className="atlas-card-content"
+                        initial={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
+                        animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+                        exit={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <div className="build-notes-content">
+                            <span>Current state</span>
+                            <p>{narrative.currentState}</p>
+                            {narrative.lessons.length > 0 && (
+                                <>
+                                    <span>Lessons</span>
+                                    <p>{narrative.lessons.slice(0, 2).join(' / ')}</p>
+                                </>
+                            )}
+                        </div>
+                        <div className="build-notes-toggle-wrap">
+                            <button className="build-notes-toggle" onClick={() => setIsFlipped(false)}>
+                                Close build notes −
+                            </button>
+                        </div>
+                    </motion.div>
+                ) : (
+                    <motion.div
+                        key="front"
+                        className="atlas-card-content"
+                        initial={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
+                        animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+                        exit={{ opacity: 0, filter: 'blur(4px)', scale: 0.98 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <header className="atlas-card-header">
+                            <div>
+                                <span>{repo.language && repo.language !== 'Unknown' ? repo.language : 'Repository'}</span>
+                                <h3>{repo.name}</h3>
+                            </div>
+                            <span className={`status-badge ${badge.className}`}>{badge.label}</span>
+                        </header>
+
+                        <p className="atlas-card-story">{narrative.story}</p>
+
+                        <div className="atlas-card-meta">
+                            <span><Clock size={11} /> {repoAge(repo.createdAt)}</span>
+                            <span><Activity size={11} /> {timeAgo(repo.pushedAt)}</span>
+                            <span><Star size={11} /> {repo.stars}</span>
+                            <span><GitBranch size={11} /> {repo.forks}</span>
+                        </div>
+
+                        {tags.length > 0 && (
+                            <div className="atlas-tags">
+                                {tags.slice(0, lead ? 4 : 3).map((tag) => (
+                                    <span key={tag}>{tag}</span>
+                                ))}
+                            </div>
+                        )}
+
+                        <div className="build-notes-toggle-wrap">
+                            <button className="build-notes-toggle" onClick={() => setIsFlipped(true)}>
+                                Read build notes +
+                            </button>
+                        </div>
+
+                        <footer className="atlas-card-actions">
+                            <a href={repo.url} target="_blank" rel="noopener noreferrer" className="atlas-link primary">
+                                Source <ExternalLink size={12} />
+                            </a>
+                            {repo.homepage && (
+                                <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="atlas-link">
+                                    Live <Globe size={12} />
+                                </a>
+                            )}
+                        </footer>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.article>
+    );
+}
+
+function ChapterSection({ category, repos }: { category: RepoCategory; repos: PublicRepo[] }) {
+    if (repos.length === 0) return null;
+
+    const config = CATEGORY_META[category];
+    const Icon = config.icon;
+    const [lead, ...rest] = repos;
+
+    return (
+        <section className="atlas-chapter" id={`work-${category}`}>
+            <div className="chapter-heading">
+                <span className="chapter-number">0{CATEGORY_ORDER.indexOf(category) + 1}</span>
+                <div>
+                    <span className="atlas-kicker">
+                        <Icon size={13} />
+                        {config.label}
+                    </span>
+                    <h2>{config.thesis}</h2>
+                    <p>{config.desc}</p>
+                </div>
+            </div>
+
+            <div className="chapter-card-grid">
+                <AtlasCard repo={lead} lead />
+                {rest.map((repo) => (
+                    <AtlasCard key={repo.id} repo={repo} />
+                ))}
+            </div>
+        </section>
+    );
+}
+
+function RepoIndexCard({ repo }: { repo: PublicRepo }) {
     const age = repoAge(repo.createdAt);
+    const narrative = REPO_NARRATIVES[repo.name];
     const topics = repo.language && repo.language !== 'Unknown'
         ? [repo.language, ...repo.topics]
         : repo.topics;
 
     return (
-        <motion.div
+        <motion.article
             layout
-            initial={{ opacity: 0, scale: 0.97 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.97 }}
+            exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.2 }}
-            className={`repo-card${repo.archived ? ' muted' : ''}`}
+            className={`index-card${repo.archived ? ' muted' : ''}`}
         >
-            <div className="rc-top">
-                <span className="rc-name">{repo.name}</span>
-                <div className="rc-activity">
-                    {repo.fork && (
-                        <span className="rc-fork-tag"><GitFork size={10} /> FORK</span>
-                    )}
-                    {repo.archived && <span className="rc-archive-tag">ARCHIVED</span>}
-                    <span className={`activity-indicator activity-${activity}`} />
-                    <span className="rc-pushed">{timeAgo(repo.pushedAt)}</span>
+            <header>
+                <div>
+                    <span>{repo.language && repo.language !== 'Unknown' ? repo.language : 'Repository'}</span>
+                    <strong>{repo.name}</strong>
                 </div>
-            </div>
-
-            <div className="rc-mid">
-                <p className="rc-desc">{repo.description}</p>
-                {topics.length > 0 && (
-                    <div className="rc-topics">
-                        {topics.map((t) => (
-                            <span key={t} className={t === repo.language ? 'rc-tag lang' : 'rc-tag'}>
-                                #{t}
-                            </span>
-                        ))}
-                    </div>
-                )}
-            </div>
-
-            <div className="rc-bottom">
-                <span className="rc-stat">
-                    <Star size={12} /> {repo.stars.toLocaleString()}
-                </span>
-                <span className="rc-stat">
-                    <GitBranch size={12} /> {repo.forks.toLocaleString()}
-                </span>
-                <span className="rc-stat rc-age">
-                    <Clock size={11} /> {age}
-                </span>
-                <div className="rc-links">
+                <div className="index-card-links">
                     {repo.homepage && (
-                        <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="rc-link" title="Demo">
+                        <a href={repo.homepage} target="_blank" rel="noopener noreferrer" title="Live">
                             <Globe size={13} />
                         </a>
                     )}
-                    <a href={repo.url} target="_blank" rel="noopener noreferrer" className="rc-link" title="Source">
+                    <a href={repo.url} target="_blank" rel="noopener noreferrer" title="Source">
                         <ExternalLink size={13} />
                     </a>
                 </div>
-            </div>
-        </motion.div>
+            </header>
+
+            <p>{repo.description}</p>
+
+            {topics.length > 0 && (
+                <div className="index-topics">
+                    {topics.slice(0, 5).map((topic) => (
+                        <span key={topic}>{topic}</span>
+                    ))}
+                </div>
+            )}
+
+            <footer>
+                <span><Star size={11} /> {repo.stars.toLocaleString()}</span>
+                <span><GitBranch size={11} /> {repo.forks.toLocaleString()}</span>
+                <span><Clock size={11} /> {age}</span>
+                {repo.fork && <span><GitFork size={10} /> Fork</span>}
+                {repo.archived && <span>Archived</span>}
+                {narrative && <span>{STATUS_CONFIG[narrative.status].label}</span>}
+            </footer>
+        </motion.article>
     );
 }
-
-// --- Main ---
 
 export default function ProjectsClient() {
     const [repos, setRepos] = useState<PublicRepo[]>([]);
@@ -412,6 +590,8 @@ export default function ProjectsClient() {
     const [error, setError] = useState<string | null>(null);
     const [filter, setFilter] = useState('ALL');
     const [sortBy, setSortBy] = useState<SortOption>('pushed');
+    const [showIndex, setShowIndex] = useState(false);
+    const [activeCategory, setActiveCategory] = useState<RepoCategory>('building');
 
     useEffect(() => {
         (async () => {
@@ -420,13 +600,14 @@ export default function ProjectsClient() {
                     fetch(`/public-repos.json?t=${Date.now()}`),
                     fetch(`/github-data.json?t=${Date.now()}`),
                 ]);
+
                 if (!rRes.ok) throw new Error('Failed to load repos');
                 if (!gRes.ok) throw new Error('Failed to load activity');
 
                 const { repos: raw } = await rRes.json();
                 const gh = await gRes.json();
 
-                setRepos(raw.filter((r: PublicRepo) => r.owner.login === GITHUB_USERNAME));
+                setRepos(raw.filter((r: PublicRepo) => r.owner.login === GITHUB_USERNAME && !isExcludedRepo(r)));
                 setContributions(gh.contributions ?? []);
                 setGhTotal(gh.total ?? 0);
                 setGhUpdated(gh.lastUpdated ?? null);
@@ -472,43 +653,42 @@ export default function ProjectsClient() {
     );
 
     const totalStars = useMemo(() => repos.reduce((s, r) => s + r.stars, 0), [repos]);
+    const totalForks = useMemo(() => repos.reduce((s, r) => s + r.forks, 0), [repos]);
 
-    const storyRepos = useMemo(
-        () => repos.filter((r) => REPO_NARRATIVES[r.name] && !r.fork && !r.archived),
+    const narrativeRepos = useMemo(
+        () => repos.filter((r) => REPO_NARRATIVES[r.name] && !r.archived),
         [repos],
     );
 
-    const ossRepos = useMemo(
-        () => repos.filter((r) => r.fork && !r.archived),
-        [repos],
+    const chapterSummaries = useMemo(
+        () => CATEGORY_ORDER.map((category) => ({
+            category,
+            repos: narrativeRepos.filter((repo) => REPO_NARRATIVES[repo.name].category === category),
+        })),
+        [narrativeRepos],
     );
 
-    // --- Loading ---
+    const featuredRepo = useMemo(
+        () => chapterSummaries.find((summary) => summary.category === 'building')?.repos[0]
+            ?? chapterSummaries.find((summary) => summary.category === 'shipped')?.repos[0]
+            ?? narrativeRepos[0],
+        [chapterSummaries, narrativeRepos],
+    );
+
     if (loading) {
         return (
             <div className="work-page fade-in">
-                <div className="grid-bg" />
-                <header className="work-hero">
-                    <h1 className="work-title">./WORK /// THE_BENCH</h1>
-                    <p className="work-intro">BOOTING_UP...</p>
-                </header>
                 <div className="work-loading">
                     <Loader className="spin" size={24} />
-                    <span>FETCHING REPOSITORIES...</span>
+                    <span>Assembling project atlas...</span>
                 </div>
             </div>
         );
     }
 
-    // --- Error ---
     if (error) {
         return (
             <div className="work-page fade-in">
-                <div className="grid-bg" />
-                <header className="work-hero">
-                    <h1 className="work-title">./WORK /// THE_BENCH</h1>
-                    <p className="work-intro">SYSTEM_ERROR</p>
-                </header>
                 <div className="work-loading error">
                     <AlertCircle size={24} />
                     <span>{error}</span>
@@ -517,110 +697,125 @@ export default function ProjectsClient() {
         );
     }
 
-    // --- Main ---
     return (
         <div className="work-page fade-in">
-            <div className="grid-bg" />
+            <section className="atlas-hero">
+                <div className="hero-copy">
+                    <span className="atlas-kicker">
+                        <ShieldCheck size={13} />
+                        Public Workbench
+                    </span>
+                    <h1>
+                        Systems that hold up when you inspect the seams.
+                    </h1>
+                    <p>
+                        A curated atlas of AI agents, robust tooling, and codebase studies organized by intent and built for the real world.
+                    </p>
 
-            {/* ── Hero ── */}
-            <header className="work-hero">
-                <h1 className="work-title">./WORK /// THE_BENCH</h1>
-                <p className="work-intro">
-                    A collection of what I&apos;m building, contributing to, and learning from.
-                    Each project has a story.
-                </p>
-                <div className="work-stats">
-                    <div className="work-stat"><strong>{repos.length}</strong> repos</div>
-                    <div className="work-stat"><strong>{totalStars}</strong> stars</div>
-                    <div className="work-stat"><strong>{activeCount}</strong> active</div>
-                    <div className="work-stat"><strong>{ghTotal.toLocaleString()}</strong> contribs</div>
-                </div>
-
-                <ActivityPulse
-                    cells={activity.cells}
-                    labels={activity.labels}
-                    total={activity.total}
-                    activeDays={activity.activeDays}
-                    peak={activity.peak}
-                    synced={lastSynced}
-                />
-            </header>
-
-            {/* ── Stories ── */}
-            {storyRepos.length > 0 && (
-                <section className="work-section">
-                    <div className="section-divider">
-                        <span>STORIES</span>
-                    </div>
-                    <div className="stories-list">
-                        {storyRepos.map((repo, i) => (
-                            <StoryCard key={repo.id} repo={repo} num={i + 1} />
-                        ))}
-                    </div>
-                </section>
-            )}
-
-            {/* ── Open Source ── */}
-            {ossRepos.length > 0 && (
-                <section className="work-section">
-                    <div className="section-divider">
-                        <span>OPEN_SOURCE</span>
-                    </div>
-                    <div className="oss-grid">
-                        {ossRepos.map((repo) => (
-                            <OSSCard key={repo.id} repo={repo} />
-                        ))}
-                    </div>
-                </section>
-            )}
-
-            {/* ── Index ── */}
-            <section className="work-section">
-                <div className="section-divider">
-                    <span>INDEX</span>
-                </div>
-
-                <div className="index-controls">
-                    <div className="control-group">
-                        <span className="control-label">FILTER:</span>
-                        {languages.map((lang) => (
-                            <button
-                                key={lang}
-                                onClick={() => setFilter(lang)}
-                                className={`ctrl-btn${filter === lang ? ' active' : ''}`}
-                            >
-                                {lang}
-                            </button>
-                        ))}
-                    </div>
-                    <div className="control-group">
-                        <span className="control-label">SORT:</span>
-                        {(
-                            [
-                                ['pushed', 'Recent', Timer],
-                                ['stars', 'Stars', Star],
-                                ['forks', 'Forks', GitBranch],
-                                ['name', 'Name', ArrowDownAZ],
-                            ] as const
-                        ).map(([key, label, Icon]) => (
-                            <button
-                                key={key}
-                                onClick={() => setSortBy(key)}
-                                className={`ctrl-btn${sortBy === key ? ' active' : ''}`}
-                            >
-                                <Icon size={12} /> {label}
-                            </button>
-                        ))}
+                    <div className="hero-actions">
+                        <a href="https://github.com/madanlalit" target="_blank" rel="noopener noreferrer" className="atlas-link primary">
+                            View GitHub <GitFork size={12} />
+                        </a>
+                        <button type="button" className="atlas-link" onClick={() => setShowIndex(true)}>
+                            Browse full index <ArrowRight size={12} />
+                        </button>
                     </div>
                 </div>
 
-                <div className="repo-grid">
-                    <AnimatePresence mode="popLayout">
-                        {filtered.map((repo) => (
-                            <RepoCard key={repo.id} repo={repo} />
-                        ))}
-                    </AnimatePresence>
-                </div>
+                <SpotlightDossier repo={featuredRepo} />
+            </section>
+
+            <section className="atlas-metrics" aria-label="Repository metrics">
+                <MetricTile icon={Boxes} value={repos.length} label="tracked repos" />
+                <MetricTile icon={Zap} value={activeCount} label="active in 90d" />
+                <MetricTile icon={Star} value={totalStars} label="stars" />
+                <MetricTile icon={GitBranch} value={totalForks} label="forks" />
+                <MetricTile icon={Activity} value={ghTotal.toLocaleString()} label="yearly contribs" />
+            </section>
+
+            <ActivityPulse
+                cells={activity.cells}
+                labels={activity.labels}
+                total={activity.total}
+                activeDays={activity.activeDays}
+                peak={activity.peak}
+                synced={lastSynced}
+            />
+
+            <ChapterNavigator
+                summaries={chapterSummaries}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+            />
+
+            <main className="atlas-chapters">
+                {chapterSummaries.map(({ category, repos: chapterRepos }) => (
+                    <ChapterSection key={category} category={category} repos={chapterRepos} />
+                ))}
+            </main>
+
+            <section className="index-section">
+                <button className="index-toggle" type="button" onClick={() => setShowIndex((s) => !s)}>
+                    <span>{showIndex ? 'Close repository index' : 'Open repository index'}</span>
+                    <strong>{filtered.length} repos</strong>
+                </button>
+
+                <AnimatePresence>
+                    {showIndex && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.28 }}
+                            className="index-panel"
+                        >
+                            <div className="index-controls">
+                                <div className="control-group">
+                                    <span>Filter</span>
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang}
+                                            type="button"
+                                            onClick={() => setFilter(lang)}
+                                            className={`ctrl-btn${filter === lang ? ' active' : ''}`}
+                                        >
+                                            {lang}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <div className="control-group">
+                                    <span>Sort</span>
+                                    {(
+                                        [
+                                            ['pushed', 'Recent', Timer],
+                                            ['stars', 'Stars', Star],
+                                            ['forks', 'Forks', GitBranch],
+                                            ['name', 'Name', ArrowDownAZ],
+                                        ] as const
+                                    ).map(([key, label, Icon]) => (
+                                        <button
+                                            key={key}
+                                            type="button"
+                                            onClick={() => setSortBy(key)}
+                                            className={`ctrl-btn${sortBy === key ? ' active' : ''}`}
+                                        >
+                                            <Icon size={12} /> {label}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="index-grid">
+                                <AnimatePresence mode="popLayout">
+                                    {filtered.map((repo) => (
+                                        <RepoIndexCard key={repo.id} repo={repo} />
+                                    ))}
+                                </AnimatePresence>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </section>
         </div>
     );
