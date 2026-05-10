@@ -6,6 +6,16 @@
   color: var(--text-primary);
 }
 
+.app-shell {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-shell__main {
+  flex: 1;
+  overflow: auto;
+}
+
 /* TUI Status Bars */
 /* TUI Status Bars - Moved to StatusBar.css */
 

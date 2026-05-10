@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useDeferredValue, useEffect, useEffectEvent, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,7 +8,8 @@ import { Terminal, Search, LayoutGrid, List, Calendar, Clock, FileText } from 'l
 import type { PostMeta } from '@/lib/types';
 import './posts.css';
 
-// Helper functions
+type ViewMode = 'list' | 'grid';
+
 const groupPostsByYear = (posts: PostMeta[]) => {
     return posts.reduce((acc, post) => {
         const year = new Date(post.date).getFullYear().toString();
@@ -101,33 +102,69 @@ interface PostsClientProps {
 
 export default function PostsClient({ initialPosts, allTags }: PostsClientProps) {
     const router = useRouter();
-    const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+    const [viewMode, setViewMode] = useState<ViewMode>('list');
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTag, setActiveTag] = useState<string | null>(null);
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const deferredSearchQuery = useDeferredValue(searchQuery);
 
-    const filteredPosts = useMemo(() =>
-        initialPosts
-            .filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) && (!activeTag || post.tags?.includes(activeTag)))
-            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
-        [initialPosts, searchQuery, activeTag]
+    const normalizedSearchQuery = deferredSearchQuery.trim().toLowerCase();
+    const filteredPosts = useMemo(
+        () =>
+            initialPosts.filter(
+                (post) =>
+                    post.title.toLowerCase().includes(normalizedSearchQuery) &&
+                    (!activeTag || post.tags?.includes(activeTag))
+            ),
+        [activeTag, initialPosts, normalizedSearchQuery]
     );
+    const selectedPost = filteredPosts[Math.min(selectedIndex, Math.max(filteredPosts.length - 1, 0))];
 
     const postsByYear = useMemo(() => groupPostsByYear(filteredPosts), [filteredPosts]);
     const heatmapOpacities = useMemo(() => getHeatmapOpacities(initialPosts), [initialPosts]);
 
-    const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    const handleKeyDown = useEffectEvent((e: KeyboardEvent) => {
+        const activeElement = document.activeElement;
+        const activeHtmlElement =
+            activeElement instanceof HTMLElement ? activeElement : null;
+        if (
+            activeElement instanceof HTMLInputElement ||
+            activeElement instanceof HTMLTextAreaElement ||
+            activeElement instanceof HTMLSelectElement ||
+            activeHtmlElement?.isContentEditable
+        ) {
+            return;
+        }
+
         if (filteredPosts.length === 0) return;
-        if (e.key === 'ArrowDown') { e.preventDefault(); setSelectedIndex((prev) => (prev + 1) % filteredPosts.length); }
-        else if (e.key === 'ArrowUp') { e.preventDefault(); setSelectedIndex((prev) => (prev - 1 + filteredPosts.length) % filteredPosts.length); }
-        else if (e.key === 'Enter' && filteredPosts[selectedIndex]) router.push(`/post/${filteredPosts[selectedIndex].slug}`);
-        else if (e.key === 'Escape') { setActiveTag(null); setSearchQuery(''); }
-    }, [filteredPosts, selectedIndex, router]);
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            setSelectedIndex((prev) => (prev + 1) % filteredPosts.length);
+            return;
+        }
+
+        if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            setSelectedIndex((prev) => (prev - 1 + filteredPosts.length) % filteredPosts.length);
+            return;
+        }
+
+        if (e.key === 'Enter' && selectedPost) {
+            router.push(`/post/${selectedPost.slug}`);
+            return;
+        }
+
+        if (e.key === 'Escape') {
+            setActiveTag(null);
+            setSearchQuery('');
+        }
+    });
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [handleKeyDown]);
+    }, []);
 
     return (
         <div className="posts-root">
@@ -152,7 +189,16 @@ export default function PostsClient({ initialPosts, allTags }: PostsClientProps)
                 <section className="control-module" role="search" aria-label="Search and filter posts">
                     <div className="search-wrapper">
                         <span className="prompt" aria-hidden="true">root@blog:~$</span>
-                        <input type="text" placeholder="query_database..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} aria-label="Search posts" />
+                        <input
+                            type="text"
+                            placeholder="query_database..."
+                            value={searchQuery}
+                            onChange={(e) => {
+                                setSearchQuery(e.target.value);
+                                setSelectedIndex(0);
+                            }}
+                            aria-label="Search posts"
+                        />
                         {searchQuery ? <span className="search-status" aria-live="polite">SCANNING...</span> : <Search size={14} className="icon-right" aria-hidden="true" />}
                     </div>
                     <div className="view-toggles" role="group" aria-label="View mode">
@@ -164,9 +210,28 @@ export default function PostsClient({ initialPosts, allTags }: PostsClientProps)
                 <div id="search-results-count" className="visually-hidden" aria-live="polite">{filteredPosts.length} posts found</div>
 
                 <nav className="tag-rail" role="group" aria-label="Filter by tag">
-                    <button className={`tag-chip ${!activeTag ? 'active' : ''}`} onClick={() => setActiveTag(null)} aria-pressed={!activeTag}>[*] ALL</button>
+                    <button
+                        className={`tag-chip ${!activeTag ? 'active' : ''}`}
+                        onClick={() => {
+                            setActiveTag(null);
+                            setSelectedIndex(0);
+                        }}
+                        aria-pressed={!activeTag}
+                    >
+                        [*] ALL
+                    </button>
                     {allTags.map((tag) => (
-                        <button key={tag} className={`tag-chip ${activeTag === tag ? 'active' : ''}`} onClick={() => setActiveTag(tag)} aria-pressed={activeTag === tag}>[{tag}]</button>
+                        <button
+                            key={tag}
+                            className={`tag-chip ${activeTag === tag ? 'active' : ''}`}
+                            onClick={() => {
+                                setActiveTag(tag);
+                                setSelectedIndex(0);
+                            }}
+                            aria-pressed={activeTag === tag}
+                        >
+                            [{tag}]
+                        </button>
                     ))}
                 </nav>
 
@@ -180,7 +245,7 @@ export default function PostsClient({ initialPosts, allTags }: PostsClientProps)
                                     <div key={year} className="year-block">
                                         <div className="year-marker"><span className="bracket">[</span>{year}<span className="bracket">]</span></div>
                                         <div className="file-tree">
-                                            {posts.map((post) => <FileRow key={post.id} post={post} isSelected={post.id === filteredPosts[selectedIndex]?.id} />)}
+                                            {posts.map((post) => <FileRow key={post.id} post={post} isSelected={post.id === selectedPost?.id} />)}
                                         </div>
                                     </div>
                                 ))}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useEffectEvent, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useTheme } from '@/components/hooks/useTheme';
 import useSound from '@/components/hooks/useSound';
@@ -25,90 +25,76 @@ export default function ClientShell({ children, posts }: ClientShellProps) {
     const { playHoverSound, playKeySound, toggleMute, muted } = useSound();
     const { setTheme, availableThemes } = useTheme();
 
-    // Global hover sounds
+    const handleMouseOver = useEffectEvent((e: MouseEvent) => {
+        const target = e.target as HTMLElement;
+        if (
+            target.tagName === 'A' ||
+            target.tagName === 'BUTTON' ||
+            target.closest('.cli-tab')
+        ) {
+            playHoverSound();
+        }
+    });
+
     useEffect(() => {
-        const handleMouseOver = (e: MouseEvent) => {
-            const target = e.target as HTMLElement;
-            if (
-                target.tagName === 'A' ||
-                target.tagName === 'BUTTON' ||
-                target.closest('.cli-tab')
-            ) {
-                playHoverSound();
-            }
-        };
         document.addEventListener('mouseover', handleMouseOver);
         return () => document.removeEventListener('mouseover', handleMouseOver);
-    }, [playHoverSound]);
+    }, []);
 
-    // Toggle Commander with Shift + M
+    const handleGlobalKeyDown = useEffectEvent((e: KeyboardEvent) => {
+        if (e.shiftKey && e.code === 'KeyM') {
+            e.preventDefault();
+            setCommanderOpen((prev) => !prev);
+        }
+    });
+
     useEffect(() => {
-        const handleKey = (e: KeyboardEvent) => {
-            if (e.shiftKey && e.code === 'KeyM') {
-                e.preventDefault();
-                setCommanderOpen(prev => !prev);
-            }
-        };
-        window.addEventListener('keydown', handleKey);
-        return () => window.removeEventListener('keydown', handleKey);
+        window.addEventListener('keydown', handleGlobalKeyDown);
+        return () => window.removeEventListener('keydown', handleGlobalKeyDown);
     }, []);
 
     const handleCommand = (cmd: string) => {
-        if (cmd === 'snake') {
-            setSnakeGameOpen(true);
-        }
-        if (cmd === 'amp') {
-            setAmpOpen(true);
+        switch (cmd) {
+            case 'snake':
+                setSnakeGameOpen(true);
+                break;
+            case 'amp':
+                setAmpOpen(true);
+                break;
+            default:
+                break;
         }
     };
 
     return (
-        <>
-            <div
-                className="app tui-window fade-in"
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '100vh',
-                    overflow: 'hidden',
-                }}
-            >
-                {/* Commander Modal */}
-                {commanderOpen && (
-                    <Commander
-                        isOpen={commanderOpen}
-                        onClose={() => setCommanderOpen(false)}
-                        setTheme={setTheme}
-                        availableThemes={availableThemes}
-                        posts={posts}
-                    />
-                )}
-
-                {/* Snake Game Modal */}
-                {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}
-
-                {/* Audio Player */}
-                {ampOpen && <AudioPlayer onExit={() => setAmpOpen(false)} />}
-
-                {/* Status Bar */}
-                <StatusBar muted={muted} onToggleMute={toggleMute} />
-
-                {/* Main Content */}
-                <div className="main-layout" style={{ flex: 1, display: 'flex', overflow: 'auto' }}>
-                    <main className="content-area" style={{ flex: 1, padding: '20px' }}>
-                        {children}
-                    </main>
-                </div>
-
-                {/* Command Line Bar */}
-                <CommandLine
-                    onKey={playKeySound}
-                    onCommand={handleCommand}
+        <div className="app app-shell tui-window fade-in">
+            {commanderOpen && (
+                <Commander
+                    isOpen={commanderOpen}
+                    onClose={() => setCommanderOpen(false)}
                     setTheme={setTheme}
                     availableThemes={availableThemes}
                     posts={posts}
                 />
+            )}
+
+            {snakeGameOpen && <SnakeGame onExit={() => setSnakeGameOpen(false)} />}
+
+            {ampOpen && <AudioPlayer onExit={() => setAmpOpen(false)} />}
+
+            <StatusBar muted={muted} onToggleMute={toggleMute} />
+
+            <div className="main-layout app-shell__main">
+                <main className="content-area">{children}</main>
             </div>
-        </>
+
+            <CommandLine
+                onKey={playKeySound}
+                onCommand={handleCommand}
+                setTheme={setTheme}
+                availableThemes={availableThemes}
+                posts={posts}
+            />
+        </div>
     );
 }
