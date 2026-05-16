@@ -200,7 +200,7 @@ function TableData({ data, col1, col2, formatValue }: {
     formatValue?: (v: number) => string;
 }) {
     if (data.length === 0) return null;
-    const fmt = formatValue ?? ((v: number) => v.toLocaleString());
+    const fmt = formatValue ?? ((v: number) => (v ?? 0).toLocaleString());
     return (
         <table className="analytics-table">
             <thead>
@@ -313,7 +313,7 @@ export default function AnalyticsClient() {
 
             <p className="subtitle">
                 Privacy-first · No cookies · No third parties ·{' '}
-                {stats.totalPageviews.toLocaleString()} total page views
+                                {(stats.totalPageviews ?? 0).toLocaleString()} total page views
             </p>
 
             {/* Key Metrics */}
@@ -391,7 +391,7 @@ export default function AnalyticsClient() {
                         extra: ` · ${formatTime(p.avgTime)} · Score ${p.engagementScore}`,
                     }))}
                     label="Content Engagement"
-                    formatValue={(v) => v.toLocaleString()}
+                    formatValue={(v) => (v ?? 0).toLocaleString()}
                 />
             )}
 
