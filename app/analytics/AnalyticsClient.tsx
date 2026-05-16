@@ -10,19 +10,19 @@ const DATE_RANGES = [
 ];
 
 function formatTime(s: number): string {
-    if (s < 60) return `${s}s`;
+    if (!s || s < 60) return `${s || 0}s`;
     if (s < 3600) return `${Math.round(s / 60)}m ${s % 60}s`;
     return `${Math.floor(s / 3600)}h ${Math.round((s % 3600) / 60)}m`;
 }
 
 function formatCount(n: number): string {
-    if (n >= 1000000) return `${(n / 1000000).toFixed(1)}M`;
+    if (n == null || isNaN(n)) return '0';
     if (n >= 1000) return `${(n / 1000).toFixed(1)}K`;
     return String(n);
 }
 
 function pctChange(current: number, previous: number): { pct: number; up: boolean } {
-    if (previous === 0) return { pct: current > 0 ? 100 : 0, up: current > 0 };
+    if (current == null || previous == null) return { pct: 0, up: false };
     const pct = Math.round(((current - previous) / previous) * 100);
     return { pct: Math.abs(pct), up: pct >= 0 };
 }
@@ -33,15 +33,16 @@ function StatCard({ label, value, previous, format }: {
     previous?: number;
     format?: 'time' | 'pct';
 }) {
-    const change = previous !== undefined ? pctChange(value, previous) : null;
-    const display = format === 'time' ? formatTime(value) : format === 'pct' ? `${value}%` : value.toLocaleString();
+    const val = value ?? 0;
+    const change = previous !== undefined ? pctChange(val, previous) : null;
+    const display = format === 'time' ? formatTime(val) : format === 'pct' ? `${val}%` : val.toLocaleString();
 
     return (
         <div className="tui-card stat-card">
             <span className="stat-value">{display}</span>
             <span className="stat-label">
                 {label}
-                {change && value > 0 && (
+                {change && val > 0 && (
                     <span className={`stat-change ${change.up ? 'up' : 'down'}`}>
                         {change.up ? '↑' : '↓'} {change.pct}%
                     </span>
