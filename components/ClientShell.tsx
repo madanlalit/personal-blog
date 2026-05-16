@@ -1,6 +1,11 @@
+'use client';
+
+'use client';
+
 import type { ReactNode } from 'react';
 import type { PostMeta } from '@/lib/types';
 import ShellChrome from '@/components/ShellChrome';
+import { useAnalytics } from '@/components/hooks/useAnalytics';
 import '@/app/app.css';
 
 interface ClientShellProps {
@@ -9,6 +14,8 @@ interface ClientShellProps {
 }
 
 export default function ClientShell({ children, posts }: ClientShellProps) {
+    useAnalytics();
+    useAnalytics();
     return (
         <div className="app app-shell tui-window fade-in">
             <ShellChrome posts={posts} />
