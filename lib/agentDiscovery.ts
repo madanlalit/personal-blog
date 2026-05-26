@@ -145,3 +145,52 @@ See [llmstxt.org](https://llmstxt.org/) and
 - Include an \`x-markdown-tokens\` header with the token count if available
 `;
 
+export const CONTENT_SIGNALS_SKILL = `---
+name: content-signals
+description: Declare AI content usage preferences in your robots.txt using Content Signals.
+---
+
+# Implement Content Signals
+
+Declare AI content usage preferences in your robots.txt using [Content Signals](https://contentsignals.org/) ([IETF draft](https://datatracker.ietf.org/doc/draft-romm-aipref-contentsignals/)).
+
+## Requirements
+
+- Add \`Content-Signal\` directives to your robots.txt under the relevant \`User-agent\` block
+- Declare preferences for \`ai-train\`, \`search\`, and \`ai-input\`
+- Example: \`Content-Signal: ai-train=no, search=yes, ai-input=no\`
+`;
+
+export const OAUTH_DISCOVERY_SKILL = `---
+name: oauth-discovery
+description: Publish OAuth or OpenID Connect discovery metadata so agents can authenticate with your APIs.
+---
+
+# Implement OAuth/OIDC Discovery
+
+Publish OAuth or OpenID Connect discovery metadata so agents can authenticate with your APIs.
+See [OpenID Connect Discovery](http://openid.net/specs/openid-connect-discovery-1_0.html) and [RFC 8414](https://www.rfc-editor.org/rfc/rfc8414).
+
+## Requirements
+
+- Serve JSON at \`/.well-known/openid-configuration\` (OIDC) or \`/.well-known/oauth-authorization-server\` (OAuth 2.0)
+- Include \`issuer\`, \`authorization_endpoint\`, \`token_endpoint\`, \`jwks_uri\`
+- List \`grant_types_supported\` and \`response_types_supported\`
+`;
+
+export const OAUTH_PROTECTED_RESOURCE_SKILL = `---
+name: oauth-protected-resource
+description: Publish OAuth Protected Resource Metadata so agents can discover how to authenticate per RFC 9728.
+---
+
+# Implement OAuth Protected Resource Metadata
+
+Publish OAuth Protected Resource Metadata so agents can discover how to authenticate per [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728).
+
+## Requirements
+
+- Serve JSON at \`/.well-known/oauth-protected-resource\` with HTTP 200
+- Include \`resource\` (your resource identifier URL)
+- Include \`authorization_servers\` (array of OAuth/OIDC issuer URLs)
+- Optionally include \`scopes_supported\`
+`;

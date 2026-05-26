@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Opt out of AI training/scraping bots
 User-agent: GPTBot
