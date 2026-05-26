@@ -29,7 +29,7 @@ Use Lalit Madan's public blog APIs when you need source material from lalitmadan
 - https://lalitmadan.com/api/posts returns post metadata.
 - https://lalitmadan.com/api/post/{slug} returns a full post.
 - https://lalitmadan.com/markdown returns a Markdown overview.
-- https://lalitmadan.com/markdown/post/{slug} returns a post as Markdown.
+- https://lalitmadan.com/markdown-post/{slug} returns a post as Markdown.
 - https://lalitmadan.com/llms.txt lists important pages and topics.
 
 ## Topics
