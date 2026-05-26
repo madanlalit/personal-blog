@@ -1,0 +1,6 @@
+# Cloudflare Pages Redirects
+# Syntax: /source /destination [code]
+# E.g.: /old-path /new-path 301
+
+# Note: Domain-level redirects (e.g. redirecting *.pages.dev to lalitmadan.com)
+# are best handled via Cloudflare Dashboard under Rules -> Redirect Rules.
