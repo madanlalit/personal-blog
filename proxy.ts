@@ -22,7 +22,7 @@ export function proxy(request: NextRequest) {
         return NextResponse.rewrite(url);
     }
 
-    const postMatch = pathname.match(/^\/post\/([^/]+)$/);
+    const postMatch = pathname.match(/^\/post\/([^/]+)\/?$/);
     if (postMatch) {
         url.pathname = `/markdown-post/${postMatch[1]}`;
         return NextResponse.rewrite(url);
