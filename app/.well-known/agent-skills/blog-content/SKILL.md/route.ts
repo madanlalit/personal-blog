@@ -17,7 +17,3 @@ export async function GET() {
 export async function HEAD() {
     return new NextResponse(null, { headers: responseHeaders });
 }
-
-export async function OPTIONS() {
-    return new NextResponse(null, { headers: responseHeaders });
-}

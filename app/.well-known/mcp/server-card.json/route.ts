@@ -19,9 +19,3 @@ export async function HEAD() {
         headers: responseHeaders,
     });
 }
-
-export async function OPTIONS() {
-    return new NextResponse(null, {
-        headers: responseHeaders,
-    });
-}
