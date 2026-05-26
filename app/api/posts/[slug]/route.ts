@@ -1,8 +1,17 @@
 import { NextResponse } from 'next/server';
-import { getPostBySlug } from '@/lib/posts';
+import { getAllPosts, getPostBySlug } from '@/lib/posts';
+
+export const dynamic = 'force-static';
 
 interface Props {
     params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+    const posts = getAllPosts();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
 }
 
 export async function GET(_request: Request, { params }: Props) {
