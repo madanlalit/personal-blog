@@ -15,7 +15,7 @@ const apiCatalog = {
                     title: 'Blog posts index',
                 },
                 {
-                    href: `${SITE_CONFIG.url}/api/posts/{slug}`,
+                    href: `${SITE_CONFIG.url}/api/post/{slug}`,
                     type: 'application/json',
                     title: 'Blog post by slug',
                 },

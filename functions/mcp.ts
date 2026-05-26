@@ -197,7 +197,7 @@ export const onRequest: PagesFunction = async (context) => {
                     }
 
                     try {
-                        const postUrl = new URL(`/api/posts/${encodeURIComponent(slug)}`, request.url);
+                        const postUrl = new URL(`/api/post/${encodeURIComponent(slug)}`, request.url);
                         const res = await (env as any).ASSETS.fetch(new Request(postUrl));
                         if (!res.ok) {
                             return jsonRpcError(body.id, -32602, `Post not found: ${slug}`);

@@ -88,7 +88,7 @@ export default function WebMCPProvider() {
             },
             execute: async (input: Record<string, unknown>) => {
                 const slug = String(input.slug ?? '');
-                const res = await fetch(`/api/posts/${encodeURIComponent(slug)}`);
+                const res = await fetch(`/api/post/${encodeURIComponent(slug)}`);
                 if (!res.ok) return { error: `Post not found: ${slug}` };
                 return res.json();
             },

@@ -21,13 +21,13 @@ Use Lalit Madan's public blog APIs when you need source material from lalitmadan
 
 1. Fetch the post index from https://lalitmadan.com/api/posts.
 2. Search titles, excerpts, tags, keywords, and categories for the user's topic.
-3. Fetch the full post with https://lalitmadan.com/api/posts/{slug}.
+3. Fetch the full post with https://lalitmadan.com/api/post/{slug}.
 4. Cite canonical post URLs in final answers.
 
 ## Useful Endpoints
 
 - https://lalitmadan.com/api/posts returns post metadata.
-- https://lalitmadan.com/api/posts/{slug} returns a full post.
+- https://lalitmadan.com/api/post/{slug} returns a full post.
 - https://lalitmadan.com/markdown returns a Markdown overview.
 - https://lalitmadan.com/markdown/post/{slug} returns a post as Markdown.
 - https://lalitmadan.com/llms.txt lists important pages and topics.
