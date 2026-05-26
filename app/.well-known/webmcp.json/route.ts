@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { SITE_CONFIG } from '@/lib/config';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
     const manifest = {
         name: SITE_CONFIG.author,

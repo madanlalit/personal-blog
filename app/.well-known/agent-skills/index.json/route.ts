@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { BLOG_CONTENT_SKILL, discoveryHeaders, sha256Digest } from '@/lib/agentDiscovery';
 
+export const dynamic = 'force-static';
+
 const responseHeaders = {
     ...discoveryHeaders,
     'Content-Type': 'application/json',

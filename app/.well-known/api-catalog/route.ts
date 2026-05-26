@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 
 import { SITE_CONFIG } from '@/lib/config';
 
+export const dynamic = 'force-static';
+
 const apiCatalog = {
     linkset: [
         {

@@ -2,6 +2,8 @@ import { getAllPostsMeta } from '@/lib/posts';
 import { SITE_CONFIG } from '@/lib/config';
 import { markdownResponse } from '@/lib/markdownResponse';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
     const latestPosts = getAllPostsMeta().slice(0, 3);
     const postsMarkdown = latestPosts

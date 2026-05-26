@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { BLOG_CONTENT_SKILL, discoveryHeaders } from '@/lib/agentDiscovery';
 
+export const dynamic = 'force-static';
+
 const responseHeaders = {
     ...discoveryHeaders,
     'Content-Type': 'text/markdown; charset=utf-8',
