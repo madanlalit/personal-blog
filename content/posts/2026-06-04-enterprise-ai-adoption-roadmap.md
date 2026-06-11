@@ -29,7 +29,6 @@ Many enterprises are currently burning millions of dollars on AI token usage and
 
 For smaller, agile organizations, this enterprise chaos is not a warning to stay away. It is a roadmap. By studying how large organizations waste resource budgets, smaller engineering teams can build a high-signal, targeted tooling roadmap that delivers a massive developer multiplier at a fraction of the cost.
 
----
 
 ## When Adoption Metrics Become a Cost Multiplier
 
@@ -50,7 +49,6 @@ The fix is not to disable these features. It is to ensure developers understand 
 > [!TIP]
 > **Use a Model Router:** A model router — like the one built into Devin Desktop — can automatically route requests to the appropriate model tier based on task complexity, keeping simple tasks cheap and reserving expensive inference for work that actually demands it.
 
----
 
 ## The Unlimited Credits Mistake
 
@@ -68,7 +66,6 @@ The alternative is not to starve developers of resources. It is to make cost vis
 * **Make usage transparent**: Give developers a dashboard showing their token spend by model, by task category, and by tool mode. Most developers will self-correct once they see the numbers.
 * **Expand access based on results**: Developers who consistently ship well — who use agents to close tickets faster, reduce review cycles, or automate repetitive tasks — earn higher budgets and access to additional tools. This is not punishment. It is investment directed at the people who have proven they know how to use it.
 
----
 
 ## The "Delegate Everything" Trap
 
@@ -86,7 +83,6 @@ The problem is not that the agent failed. It is that the human never scoped the 
 > [!IMPORTANT]
 > **The 10x Agent Rule:** An agent that ships one well-scoped change in 500 tokens is infinitely more valuable than an agent that rewrites three files in 50,000 tokens. Define the task boundary before you hit enter. Set token limits. Review the agent's plan before it executes.
 
----
 
 ## The Starter Toolkit: Which Tools to Adopt First
 
@@ -106,7 +102,6 @@ Conduct org-wide demo sessions on how to set up **Ollama**, **LM Studio**, or **
 ### 4. Integrate Automated Code Review Agents (CodeRabbit, Greptile, or Devin Review)
 Get a license for an automated code review agent like **CodeRabbit**, **Greptile**, or **Devin Review** (or create a basic one yourself using GitHub Actions). These tools are highly effective at checking logic, catching bugs, and verifying conventions, working as automated gatekeepers to review code before developers merge.
 
----
 
 ## The Lean Adoption Roadmap: A Progressive Trust Model
 
@@ -156,7 +151,6 @@ This is not gatekeeping. It is directed investment. You are putting more resourc
 
 Developers who are burning budget without measurable output do not need punishment. They need better onboarding, tighter task scoping, and structured context in their workspace. The progressive model naturally surfaces who needs support and who needs headroom.
 
----
 
 ## Recommended Tooling Categories for High-ROI Teams
 
@@ -176,7 +170,6 @@ Tools like **Claude Code** and **Gemini CLI** run directly inside your local dev
 As I explored in the [SKILL.md Playbook](/post/the-skill-md-guide), creating discoverable operating manuals for specific classes of work is the highest leverage task optimization method available today.
 * **Why it saves money**: Instead of the developer explaining the setup instructions in every prompt, the agent automatically discovers the skill when it matches the workspace context, loading only the necessary scripts and parameters.
 
----
 
 ## Making the Shift: A Guide for Engineering Leaders
 

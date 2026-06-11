@@ -104,8 +104,6 @@
     line-height: var(--line-height-heading);
     letter-spacing: var(--letter-spacing-label);
     color: var(--text-primary);
-    padding-bottom: var(--space-sm);
-    border-bottom: 1px dashed var(--border);
 }
 
 .entry-content h3 {
