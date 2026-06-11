@@ -1,27 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState, type ElementType } from 'react';
-import {
-    Activity,
-    AlertCircle,
-    ArrowDownAZ,
-    ArrowRight,
-    BookOpen,
-    Boxes,
-    Clock,
-    Compass,
-    ExternalLink,
-    GitBranch,
-    GitFork,
-    Globe,
-    Lightbulb,
-    Loader,
-    Rocket,
-    ShieldCheck,
-    Star,
-    Timer,
-    Zap,
-} from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
 import { REPO_NARRATIVES, type RepoCategory, type RepoStatus } from '@/lib/repo-narratives';
 import './builds.css';
 
@@ -79,33 +58,29 @@ const STATUS_CONFIG: Record<RepoStatus, { label: string; className: string }> = 
 
 const CATEGORY_META: Record<
     RepoCategory,
-    { label: string; shortLabel: string; icon: ElementType; desc: string; thesis: string }
+    { label: string; shortLabel: string; desc: string; thesis: string }
 > = {
     building: {
         label: 'Currently Building',
         shortLabel: 'Build',
-        icon: Rocket,
         desc: 'Active work that is still changing shape.',
         thesis: 'Projects in motion: useful enough to keep alive, unfinished enough to keep improving.',
     },
     shipped: {
         label: 'Shipped Systems',
         shortLabel: 'Ship',
-        icon: Zap,
         desc: 'Tools that reached a stable useful form.',
         thesis: 'Small durable utilities and systems that survived contact with real usage.',
     },
     experiment: {
         label: 'Research Lab',
         shortLabel: 'Lab',
-        icon: Lightbulb,
         desc: 'Prototypes built to answer a specific question.',
         thesis: 'The weird shelf: screen agents, accessibility tools, scrapers, and proofs of concept.',
     },
     oss: {
         label: 'Source Studies',
         shortLabel: 'Study',
-        icon: BookOpen,
         desc: 'Open-source forks used as reading material.',
         thesis: 'A reading list made of codebases: agent frameworks, runtimes, and infrastructure patterns.',
     },
@@ -213,7 +188,6 @@ function ActivityPulse({
         <section className="pulse-panel" aria-label="GitHub contribution pulse">
             <div className="pulse-copy">
                 <span className="atlas-kicker">
-                    <Activity size={13} />
                     Contribution Pulse
                 </span>
                 <p>{total} contributions across {activeDays} active days. Peak: {peak}/day. Synced {synced}.</p>
@@ -245,17 +219,14 @@ function ActivityPulse({
 }
 
 function MetricTile({
-    icon: Icon,
     value,
     label,
 }: {
-    icon: ElementType;
     value: string | number;
     label: string;
 }) {
     return (
         <div className="metric-tile">
-            <Icon size={14} />
             <strong>{value}</strong>
             <span>{label}</span>
         </div>
@@ -274,7 +245,6 @@ function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
         <article className="spotlight-dossier">
             <div className="dossier-header">
                 <span className="atlas-kicker">
-                    <Compass size={13} />
                     Selected Dossier
                 </span>
                 <span className={`status-badge ${badge.className}`}>{badge.label}</span>
@@ -284,10 +254,10 @@ function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
             <p className="dossier-story">{narrative.story}</p>
 
             <div className="dossier-facts">
-                <span><Activity size={11} /> {getActivity(repo.pushedAt)}</span>
-                <span><Clock size={11} /> {timeAgo(repo.pushedAt)}</span>
-                <span><Star size={11} /> {repo.stars}</span>
-                <span><GitBranch size={11} /> {repo.forks}</span>
+                <span>{getActivity(repo.pushedAt)}</span>
+                <span>{timeAgo(repo.pushedAt)}</span>
+                <span>Stars: {repo.stars}</span>
+                <span>Forks: {repo.forks}</span>
             </div>
 
             {narrative.highlights && narrative.highlights.length > 0 && (
@@ -305,11 +275,11 @@ function SpotlightDossier({ repo }: { repo: PublicRepo | undefined }) {
 
             <div className="dossier-actions">
                 <a href={repo.url} target="_blank" rel="noopener noreferrer" className="atlas-link primary">
-                    Open source <ExternalLink size={12} />
+                    Open source
                 </a>
                 {repo.homepage && (
                     <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="atlas-link">
-                        Live surface <Globe size={12} />
+                        Live surface
                     </a>
                 )}
             </div>
@@ -329,14 +299,12 @@ function ChapterNavigator({
     const active = summaries.find((summary) => summary.category === activeCategory) ?? summaries[0];
     const activePreview = active?.repos.slice(0, 4) ?? [];
     const meta = CATEGORY_META[active.category];
-    const Icon = meta.icon;
 
     return (
         <section className="chapter-navigator" aria-label="Project chapters">
             <div className="chapter-tabs">
                 {summaries.map(({ category, repos }) => {
                     const config = CATEGORY_META[category];
-                    const TabIcon = config.icon;
                     return (
                         <button
                             key={category}
@@ -344,7 +312,6 @@ function ChapterNavigator({
                             className={`chapter-tab${activeCategory === category ? ' active' : ''}`}
                             onClick={() => setActiveCategory(category)}
                         >
-                            <TabIcon size={14} />
                             <span>{config.shortLabel}</span>
                             <strong>{repos.length}</strong>
                         </button>
@@ -355,12 +322,11 @@ function ChapterNavigator({
             <div className="chapter-stage">
                 <div className="chapter-stage-copy">
                     <span className="atlas-kicker">
-                        <Icon size={13} />
                         {meta.label}
                     </span>
                     <h2>{meta.thesis}</h2>
                     <a href={`#work-${active.category}`} className="atlas-link">
-                        Jump to chapter <ArrowRight size={12} />
+                        Jump to chapter
                     </a>
                 </div>
 
@@ -374,7 +340,6 @@ function ChapterNavigator({
                                         <strong>{repo.name}</strong>
                                         <small>{narrative.story}</small>
                                     </span>
-                                    <ExternalLink size={12} />
                                 </a>
                             );
                         })
@@ -429,10 +394,10 @@ function AtlasCard({ repo, lead = false }: { repo: PublicRepo; lead?: boolean })
                         <p className="atlas-card-story">{narrative.story}</p>
 
                         <div className="atlas-card-meta">
-                            <span><Clock size={11} /> {repoAge(repo.createdAt)}</span>
-                            <span><Activity size={11} /> {timeAgo(repo.pushedAt)}</span>
-                            <span><Star size={11} /> {repo.stars}</span>
-                            <span><GitBranch size={11} /> {repo.forks}</span>
+                            <span>{repoAge(repo.createdAt)}</span>
+                            <span>{timeAgo(repo.pushedAt)}</span>
+                            <span>Stars: {repo.stars}</span>
+                            <span>Forks: {repo.forks}</span>
                         </div>
 
                         {tags.length > 0 && (
@@ -451,11 +416,11 @@ function AtlasCard({ repo, lead = false }: { repo: PublicRepo; lead?: boolean })
 
                         <footer className="atlas-card-actions">
                             <a href={repo.url} target="_blank" rel="noopener noreferrer" className="atlas-link primary">
-                                Source <ExternalLink size={12} />
+                                Source
                             </a>
                             {repo.homepage && (
                                 <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="atlas-link">
-                                    Live <Globe size={12} />
+                                    Live
                                 </a>
                             )}
                         </footer>
@@ -469,7 +434,6 @@ function ChapterSection({ category, repos }: { category: RepoCategory; repos: Pu
     if (repos.length === 0) return null;
 
     const config = CATEGORY_META[category];
-    const Icon = config.icon;
     const [lead, ...rest] = repos;
 
     return (
@@ -478,7 +442,6 @@ function ChapterSection({ category, repos }: { category: RepoCategory; repos: Pu
                 <span className="chapter-number">0{CATEGORY_ORDER.indexOf(category) + 1}</span>
                 <div>
                     <span className="atlas-kicker">
-                        <Icon size={13} />
                         {config.label}
                     </span>
                     <h2>{config.thesis}</h2>
@@ -512,12 +475,12 @@ function RepoIndexCard({ repo }: { repo: PublicRepo }) {
                 </div>
                 <div className="index-card-links">
                     {repo.homepage && (
-                        <a href={repo.homepage} target="_blank" rel="noopener noreferrer" title="Live">
-                            <Globe size={13} />
+                        <a href={repo.homepage} target="_blank" rel="noopener noreferrer" style={{ fontSize: 'var(--font-size-xxs)', textTransform: 'uppercase', padding: '0.2rem 0.4rem' }}>
+                            Live
                         </a>
                     )}
-                    <a href={repo.url} target="_blank" rel="noopener noreferrer" title="Source">
-                        <ExternalLink size={13} />
+                    <a href={repo.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 'var(--font-size-xxs)', textTransform: 'uppercase', padding: '0.2rem 0.4rem' }}>
+                        Source
                     </a>
                 </div>
             </header>
@@ -533,10 +496,10 @@ function RepoIndexCard({ repo }: { repo: PublicRepo }) {
             )}
 
             <footer>
-                <span><Star size={11} /> {repo.stars.toLocaleString()}</span>
-                <span><GitBranch size={11} /> {repo.forks.toLocaleString()}</span>
-                <span><Clock size={11} /> {age}</span>
-                {repo.fork && <span><GitFork size={10} /> Fork</span>}
+                <span>Stars: {repo.stars.toLocaleString()}</span>
+                <span>Forks: {repo.forks.toLocaleString()}</span>
+                <span>{age}</span>
+                {repo.fork && <span>Fork</span>}
                 {repo.archived && <span>Archived</span>}
                 {narrative && <span>{STATUS_CONFIG[narrative.status].label}</span>}
             </footer>
@@ -642,7 +605,6 @@ export default function BuildsClient() {
         return (
             <div className="work-page fade-in">
                 <div className="work-loading">
-                    <Loader className="spin" size={24} />
                     <span>Assembling project atlas...</span>
                 </div>
             </div>
@@ -653,7 +615,6 @@ export default function BuildsClient() {
         return (
             <div className="work-page fade-in">
                 <div className="work-loading error">
-                    <AlertCircle size={24} />
                     <span>{error}</span>
                 </div>
             </div>
@@ -665,7 +626,6 @@ export default function BuildsClient() {
             <section className="atlas-hero">
                 <div className="hero-copy">
                     <span className="atlas-kicker">
-                        <ShieldCheck size={13} />
                         Public Workbench
                     </span>
                     <h1>
@@ -677,10 +637,10 @@ export default function BuildsClient() {
 
                     <div className="hero-actions">
                         <a href="https://github.com/madanlalit" target="_blank" rel="noopener noreferrer" className="atlas-link primary">
-                            View GitHub <GitFork size={12} />
+                            View GitHub
                         </a>
                         <button type="button" className="atlas-link" onClick={() => setShowIndex(true)}>
-                            Browse full index <ArrowRight size={12} />
+                            Browse full index
                         </button>
                     </div>
                 </div>
@@ -689,11 +649,11 @@ export default function BuildsClient() {
             </section>
 
             <section className="atlas-metrics" aria-label="Repository metrics">
-                <MetricTile icon={Boxes} value={repos.length} label="tracked repos" />
-                <MetricTile icon={Zap} value={activeCount} label="active in 90d" />
-                <MetricTile icon={Star} value={totalStars} label="stars" />
-                <MetricTile icon={GitBranch} value={totalForks} label="forks" />
-                <MetricTile icon={Activity} value={ghTotal.toLocaleString()} label="yearly contribs" />
+                <MetricTile value={repos.length} label="tracked repos" />
+                <MetricTile value={activeCount} label="active in 90d" />
+                <MetricTile value={totalStars} label="stars" />
+                <MetricTile value={totalForks} label="forks" />
+                <MetricTile value={ghTotal.toLocaleString()} label="yearly contribs" />
             </section>
 
             <ActivityPulse
@@ -744,19 +704,19 @@ export default function BuildsClient() {
                                     <span>Sort</span>
                                     {(
                                         [
-                                            ['pushed', 'Recent', Timer],
-                                            ['stars', 'Stars', Star],
-                                            ['forks', 'Forks', GitBranch],
-                                            ['name', 'Name', ArrowDownAZ],
+                                            ['pushed', 'Recent'],
+                                            ['stars', 'Stars'],
+                                            ['forks', 'Forks'],
+                                            ['name', 'Name'],
                                         ] as const
-                                    ).map(([key, label, Icon]) => (
+                                    ).map(([key, label]) => (
                                         <button
                                             key={key}
                                             type="button"
                                             onClick={() => setSortBy(key)}
                                             className={`ctrl-btn${sortBy === key ? ' active' : ''}`}
                                         >
-                                            <Icon size={12} /> {label}
+                                            {label}
                                         </button>
                                     ))}
                                 </div>
