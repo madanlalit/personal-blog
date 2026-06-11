@@ -1,7 +1,7 @@
 .home-container {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-lg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
