@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1781350766444,
+  "lastUpdated": 1788133298977,
   "repos": [
     {
       "id": "REPO-01",
@@ -19,18 +19,66 @@
       "fork": false,
       "homepage": "https://lalitmadan.com",
       "createdAt": "2025-12-13T07:34:33Z",
-      "updatedAt": "2026-06-11T15:35:09Z",
-      "pushedAt": "2026-06-11T15:34:17Z"
+      "updatedAt": "2026-08-24T08:52:33Z",
+      "pushedAt": "2026-08-24T08:50:43Z"
     },
     {
       "id": "REPO-02",
-      "name": "headroom",
-      "fullName": "madanlalit/headroom",
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "name": "pi-phoenix-otel",
+      "fullName": "madanlalit/pi-phoenix-otel",
+      "description": "Zero-dependency OpenTelemetry tracing for the Pi coding agent stream sessions to Arize Phoenix and see every prompt, tool call, token & cost.",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/pi-phoenix-otel",
+      "topics": [
+        "arize-phoenix",
+        "llm-observability",
+        "opentelemetry",
+        "pi",
+        "tracing"
+      ],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": "https://www.npmjs.com/package/pi-phoenix-otel",
+      "createdAt": "2026-08-22T20:04:04Z",
+      "updatedAt": "2026-08-22T20:48:17Z",
+      "pushedAt": "2026-08-22T20:44:39Z"
+    },
+    {
+      "id": "REPO-03",
+      "name": "netpulse",
+      "fullName": "madanlalit/netpulse",
+      "description": "Lightweight macOS menu bar network speed monitor",
+      "language": "Swift",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/netpulse",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "createdAt": "2026-08-21T07:31:47Z",
+      "updatedAt": "2026-08-22T18:05:19Z",
+      "pushedAt": "2026-08-22T18:05:12Z"
+    },
+    {
+      "id": "REPO-04",
+      "name": "system-design-notes",
+      "fullName": "madanlalit/system-design-notes",
+      "description": "Notes of the book System Desgin Interview - An Insider's Guide",
       "language": "Unknown",
       "stars": 0,
       "forks": 0,
-      "url": "https://github.com/madanlalit/headroom",
+      "url": "https://github.com/madanlalit/system-design-notes",
       "topics": [],
       "owner": {
         "login": "madanlalit",
@@ -38,13 +86,168 @@
       },
       "archived": false,
       "fork": true,
-      "homepage": "https://headroom-docs.vercel.app/docs",
-      "createdAt": "2026-06-08T13:38:10Z",
-      "updatedAt": "2026-06-08T13:38:10Z",
-      "pushedAt": "2026-06-08T08:16:26Z"
+      "homepage": "https://pagefy.io/system-design/system-design-interview-by-alex-xu",
+      "createdAt": "2026-08-11T17:57:14Z",
+      "updatedAt": "2026-08-11T17:57:14Z",
+      "pushedAt": "2026-06-02T14:41:55Z"
     },
     {
-      "id": "REPO-03",
+      "id": "REPO-05",
+      "name": "dsa-resources",
+      "fullName": "madanlalit/dsa-resources",
+      "description": "No description available",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/dsa-resources",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "createdAt": "2026-07-11T12:23:27Z",
+      "updatedAt": "2026-08-08T15:41:18Z",
+      "pushedAt": "2026-08-08T15:41:11Z"
+    },
+    {
+      "id": "REPO-06",
+      "name": "agentskills",
+      "fullName": "madanlalit/agentskills",
+      "description": "A simple, focused repository of reusable skills for AI agents.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/agentskills",
+      "topics": [
+        "anthropic",
+        "claude",
+        "codex",
+        "gemini",
+        "grok",
+        "openai",
+        "skills"
+      ],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "createdAt": "2026-01-12T16:59:51Z",
+      "updatedAt": "2026-08-04T08:10:43Z",
+      "pushedAt": "2026-08-04T08:10:16Z"
+    },
+    {
+      "id": "REPO-07",
+      "name": "cpython",
+      "fullName": "madanlalit/cpython",
+      "description": "The Python programming language",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/cpython",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": true,
+      "homepage": "https://www.python.org",
+      "createdAt": "2026-05-01T02:20:59Z",
+      "updatedAt": "2026-08-01T07:47:10Z",
+      "pushedAt": "2026-08-01T07:46:28Z"
+    },
+    {
+      "id": "REPO-08",
+      "name": "pydantic-ai",
+      "fullName": "madanlalit/pydantic-ai",
+      "description": "GenAI Agent Framework, the Pydantic way",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/pydantic-ai",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": true,
+      "homepage": "https://ai.pydantic.dev",
+      "createdAt": "2026-01-09T18:58:30Z",
+      "updatedAt": "2026-08-01T07:46:40Z",
+      "pushedAt": "2026-08-01T07:46:17Z"
+    },
+    {
+      "id": "REPO-09",
+      "name": "madanlalit",
+      "fullName": "madanlalit/madanlalit",
+      "description": "No description available",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/madanlalit",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "createdAt": "2025-12-28T14:33:41Z",
+      "updatedAt": "2026-07-09T14:56:24Z",
+      "pushedAt": "2026-07-09T14:55:19Z"
+    },
+    {
+      "id": "REPO-10",
+      "name": "exo",
+      "fullName": "madanlalit/exo",
+      "description": "Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/exo",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": true,
+      "homepage": null,
+      "createdAt": "2025-12-23T04:58:26Z",
+      "updatedAt": "2026-06-19T12:52:22Z",
+      "pushedAt": "2026-06-19T12:51:17Z"
+    },
+    {
+      "id": "REPO-11",
+      "name": "antigravity-config",
+      "fullName": "madanlalit/antigravity-config",
+      "description": "No description available",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/antigravity-config",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "createdAt": "2026-06-16T16:27:06Z",
+      "updatedAt": "2026-06-16T16:28:20Z",
+      "pushedAt": "2026-06-16T16:27:15Z"
+    },
+    {
+      "id": "REPO-12",
       "name": "odin",
       "fullName": "madanlalit/odin",
       "description": " AI-powered computer automation agent for macOS using vision LLMs and accessibility context.",
@@ -73,183 +276,7 @@
       "pushedAt": "2026-06-07T20:10:45Z"
     },
     {
-      "id": "REPO-04",
-      "name": "agentskills",
-      "fullName": "madanlalit/agentskills",
-      "description": "A simple, focused repository of reusable skills for AI agents.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/agentskills",
-      "topics": [
-        "anthropic",
-        "claude",
-        "codex",
-        "gemini",
-        "grok",
-        "openai",
-        "skills"
-      ],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": false,
-      "homepage": null,
-      "createdAt": "2026-01-12T16:59:51Z",
-      "updatedAt": "2026-06-06T09:39:12Z",
-      "pushedAt": "2026-06-06T09:39:09Z"
-    },
-    {
-      "id": "REPO-05",
-      "name": "madanlalit",
-      "fullName": "madanlalit/madanlalit",
-      "description": "No description available",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/madanlalit",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": false,
-      "homepage": null,
-      "createdAt": "2025-12-28T14:33:41Z",
-      "updatedAt": "2026-06-05T03:38:29Z",
-      "pushedAt": "2026-06-05T03:38:25Z"
-    },
-    {
-      "id": "REPO-06",
-      "name": "system-design-101",
-      "fullName": "madanlalit/system-design-101",
-      "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
-      "language": "Unknown",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/system-design-101",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://bytebytego.com/guides",
-      "createdAt": "2026-06-03T09:11:24Z",
-      "updatedAt": "2026-06-03T09:11:24Z",
-      "pushedAt": "2025-04-04T17:30:30Z"
-    },
-    {
-      "id": "REPO-07",
-      "name": "pydantic-ai",
-      "fullName": "madanlalit/pydantic-ai",
-      "description": "GenAI Agent Framework, the Pydantic way",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/pydantic-ai",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://ai.pydantic.dev",
-      "createdAt": "2026-01-09T18:58:30Z",
-      "updatedAt": "2026-05-31T07:41:04Z",
-      "pushedAt": "2026-06-08T22:28:30Z"
-    },
-    {
-      "id": "REPO-08",
-      "name": "letta-code",
-      "fullName": "madanlalit/letta-code",
-      "description": "The memory-first coding agent",
-      "language": "Unknown",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/letta-code",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://docs.letta.com/letta-code",
-      "createdAt": "2026-05-27T12:42:42Z",
-      "updatedAt": "2026-05-27T12:42:42Z",
-      "pushedAt": "2026-06-09T20:17:24Z"
-    },
-    {
-      "id": "REPO-09",
-      "name": "antigravity-sdk-python",
-      "fullName": "madanlalit/antigravity-sdk-python",
-      "description": "No description available",
-      "language": "Unknown",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/antigravity-sdk-python",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": null,
-      "createdAt": "2026-05-19T19:21:23Z",
-      "updatedAt": "2026-05-19T19:21:24Z",
-      "pushedAt": "2026-05-19T18:53:52Z"
-    },
-    {
-      "id": "REPO-10",
-      "name": "genai-prices",
-      "fullName": "madanlalit/genai-prices",
-      "description": "Calculate prices for calling LLM inference APIs.",
-      "language": "Unknown",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/genai-prices",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": null,
-      "createdAt": "2026-05-19T17:41:09Z",
-      "updatedAt": "2026-05-19T17:41:10Z",
-      "pushedAt": "2026-05-19T19:16:29Z"
-    },
-    {
-      "id": "REPO-11",
-      "name": "cpython",
-      "fullName": "madanlalit/cpython",
-      "description": "The Python programming language",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/cpython",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://www.python.org",
-      "createdAt": "2026-05-01T02:20:59Z",
-      "updatedAt": "2026-05-13T15:03:57Z",
-      "pushedAt": "2026-05-13T14:27:39Z"
-    },
-    {
-      "id": "REPO-12",
+      "id": "REPO-13",
       "name": "heimdall",
       "fullName": "madanlalit/heimdall",
       "description": "The all-seeing agent for web automation.",
@@ -280,27 +307,6 @@
       "createdAt": "2025-12-24T06:01:56Z",
       "updatedAt": "2026-04-20T12:40:39Z",
       "pushedAt": "2026-04-19T09:03:31Z"
-    },
-    {
-      "id": "REPO-13",
-      "name": "gemini-cli",
-      "fullName": "madanlalit/gemini-cli",
-      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/gemini-cli",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://geminicli.com",
-      "createdAt": "2026-02-20T23:38:16Z",
-      "updatedAt": "2026-04-20T04:04:34Z",
-      "pushedAt": "2026-04-20T04:04:23Z"
     },
     {
       "id": "REPO-14",
@@ -443,27 +449,6 @@
     },
     {
       "id": "REPO-20",
-      "name": "exo",
-      "fullName": "madanlalit/exo",
-      "description": "Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/exo",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": null,
-      "createdAt": "2025-12-23T04:58:26Z",
-      "updatedAt": "2026-01-12T07:13:49Z",
-      "pushedAt": "2026-01-12T07:13:38Z"
-    },
-    {
-      "id": "REPO-21",
       "name": "no-mouse",
       "fullName": "madanlalit/no-mouse",
       "description": "NoMouse lets you control your Mac cursor entirely with your keyboard",
@@ -490,7 +475,7 @@
       "pushedAt": "2025-12-25T05:40:24Z"
     },
     {
-      "id": "REPO-22",
+      "id": "REPO-21",
       "name": "Bootstrap-Portfolio",
       "fullName": "madanlalit/Bootstrap-Portfolio",
       "description": "No description available",
@@ -511,7 +496,7 @@
       "pushedAt": "2023-04-07T05:28:31Z"
     },
     {
-      "id": "REPO-23",
+      "id": "REPO-22",
       "name": "tinker-api",
       "fullName": "madanlalit/tinker-api",
       "description": "No description available",
@@ -532,7 +517,7 @@
       "pushedAt": "2025-12-21T09:39:57Z"
     },
     {
-      "id": "REPO-24",
+      "id": "REPO-23",
       "name": "iscrape",
       "fullName": "madanlalit/iscrape",
       "description": "iscrape is a powerful Python-based web scraper and dataset generator. It recursively crawls websites (handling redirects and subdomains), extracts content using crawl4ai and modern browser tooling, and distills the raw data into fine-tuning ready datasets (JSONL, Markdown, JSON) using LLM providers like Gemini or OpenAI.",
@@ -553,7 +538,7 @@
       "pushedAt": "2025-12-21T07:12:10Z"
     },
     {
-      "id": "REPO-25",
+      "id": "REPO-24",
       "name": "arc-cli",
       "fullName": "madanlalit/arc-cli",
       "description": "is a command-line interface for developers to generate, edit, and explain code from the terminal using natural language.",
@@ -574,7 +559,7 @@
       "pushedAt": "2025-11-08T06:24:29Z"
     },
     {
-      "id": "REPO-26",
+      "id": "REPO-25",
       "name": "todo-app",
       "fullName": "madanlalit/todo-app",
       "description": "This is a todo-app ",
