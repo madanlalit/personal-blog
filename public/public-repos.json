@@ -1,8 +1,29 @@
 {
-  "lastUpdated": 1789397381898,
+  "lastUpdated": 1790002537030,
   "repos": [
     {
       "id": "REPO-01",
+      "name": "personal-blog",
+      "fullName": "madanlalit/personal-blog",
+      "description": "A retro-style personal blog with an interactive terminal interface.",
+      "language": "TypeScript",
+      "stars": 4,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/personal-blog",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": "https://lalitmadan.com",
+      "createdAt": "2025-12-13T07:34:33Z",
+      "updatedAt": "2026-09-14T14:49:52Z",
+      "pushedAt": "2026-09-14T14:49:45Z"
+    },
+    {
+      "id": "REPO-02",
       "name": "pdfcn",
       "fullName": "madanlalit/pdfcn",
       "description": "Beautiful pdf components, built on Takumi and Forme. 100% Free, Zero config, one command setup.",
@@ -20,10 +41,10 @@
       "homepage": "https://pdfcn.dev",
       "createdAt": "2026-09-14T11:30:33Z",
       "updatedAt": "2026-09-14T11:30:33Z",
-      "pushedAt": "2026-09-12T16:33:29Z"
+      "pushedAt": "2026-09-16T16:02:25Z"
     },
     {
-      "id": "REPO-02",
+      "id": "REPO-03",
       "name": "pi-cursor-themes",
       "fullName": "madanlalit/pi-cursor-themes",
       "description": "Cursor IDE themes (Light, Dark & Dark Midnight) for the pi coding agent",
@@ -44,7 +65,7 @@
       "pushedAt": "2026-09-12T16:07:15Z"
     },
     {
-      "id": "REPO-03",
+      "id": "REPO-04",
       "name": "dsa-resources",
       "fullName": "madanlalit/dsa-resources",
       "description": "No description available",
@@ -65,7 +86,7 @@
       "pushedAt": "2026-09-12T16:07:10Z"
     },
     {
-      "id": "REPO-04",
+      "id": "REPO-05",
       "name": "pi-phoenix-otel",
       "fullName": "madanlalit/pi-phoenix-otel",
       "description": "Zero-dependency OpenTelemetry tracing for the Pi coding agent stream sessions to Arize Phoenix and see every prompt, tool call, token & cost.",
@@ -90,27 +111,6 @@
       "createdAt": "2026-08-22T20:04:04Z",
       "updatedAt": "2026-09-08T05:17:56Z",
       "pushedAt": "2026-09-08T05:17:54Z"
-    },
-    {
-      "id": "REPO-05",
-      "name": "personal-blog",
-      "fullName": "madanlalit/personal-blog",
-      "description": "A retro-style personal blog with an interactive terminal interface.",
-      "language": "TypeScript",
-      "stars": 4,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/personal-blog",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": false,
-      "homepage": "https://lalitmadan.com",
-      "createdAt": "2025-12-13T07:34:33Z",
-      "updatedAt": "2026-09-07T14:04:35Z",
-      "pushedAt": "2026-09-07T14:04:11Z"
     },
     {
       "id": "REPO-06",
