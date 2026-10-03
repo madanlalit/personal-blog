@@ -144,7 +144,7 @@ export default function PostClient({ post, prevPost, nextPost, relatedPosts, sha
             <ReadingProgress />
             <ScrollToTop />
 
-            <article className="post-article fade-in">
+            <article className="post-article">
                 <Link href="/posts" className="back-link">← Back to Posts</Link>
 
                 <Frame label="HEADER" className="post-header-frame">

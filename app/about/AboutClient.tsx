@@ -100,7 +100,7 @@ export default function AboutClient() {
     };
 
     return (
-        <div className="about-container fade-in">
+        <div className="about-container">
             {/* Hero */}
             <Frame label="PROFILE" className="hero-frame">
                 <div className="hero-grid-bg" />

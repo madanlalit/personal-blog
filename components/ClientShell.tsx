@@ -10,7 +10,7 @@ interface ClientShellProps {
 
 export default function ClientShell({ children, posts }: ClientShellProps) {
     return (
-        <div className="app app-shell tui-window fade-in">
+        <div className="app app-shell tui-window">
             <ShellChrome posts={posts} />
 
             <div className="main-layout app-shell__main">

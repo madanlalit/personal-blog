@@ -33,8 +33,8 @@
   --color-info: var(--text-secondary);
 
   /* Typography */
-  /* --font-mono is injected by next/font/google */
-  --font-primary: var(--font-mono), monospace;
+  /* --font-mono is injected by next/font/local */
+  --font-primary: var(--font-mono), var(--font-mono-secondary), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-serif: var(--font-primary);
   --font-family-body: var(--font-primary);
   --font-family-display: var(--font-primary);
@@ -342,17 +342,23 @@ p {
 }
 
 .fade-in {
-  animation: fadeIn 0.4s ease-out forwards;
+  animation: fadeIn 0.2s ease-out forwards;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(4px);
+    opacity: 0.85;
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

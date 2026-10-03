@@ -79,7 +79,7 @@ const CERTIFICATIONS = [
 
 export default function ExperienceClient() {
     return (
-        <div className="experience-page fade-in">
+        <div className="experience-page">
             {/* Header */}
             <header className="exp-page-header">
                 <Link href="/about" className="back-link">

@@ -20,7 +20,7 @@ const EXCLUDED_REPOS: string[] = [
 ];
 const EXCLUDED_REPO_NAMES = new Set(EXCLUDED_REPOS.map((repo) => repo.toLowerCase()));
 
-interface PublicRepo {
+export interface PublicRepo {
     id: string;
     name: string;
     fullName: string;
@@ -39,10 +39,17 @@ interface PublicRepo {
     pushedAt: string;
 }
 
-interface GitHubContribution {
+export interface GitHubContribution {
     date: string;
     count: number;
     level: 0 | 1 | 2 | 3 | 4;
+}
+
+export interface BuildsClientProps {
+    initialRepos?: PublicRepo[];
+    initialContributions?: GitHubContribution[];
+    initialGhTotal?: number;
+    initialGhUpdated?: number | null;
 }
 
 type SortOption = 'pushed' | 'stars' | 'forks' | 'name';
@@ -507,12 +514,17 @@ function RepoIndexCard({ repo }: { repo: PublicRepo }) {
     );
 }
 
-export default function BuildsClient() {
-    const [repos, setRepos] = useState<PublicRepo[]>([]);
-    const [contributions, setContributions] = useState<GitHubContribution[]>([]);
-    const [ghTotal, setGhTotal] = useState(0);
-    const [ghUpdated, setGhUpdated] = useState<number | null>(null);
-    const [loading, setLoading] = useState(true);
+export default function BuildsClient({
+    initialRepos = [],
+    initialContributions = [],
+    initialGhTotal = 0,
+    initialGhUpdated = null,
+}: BuildsClientProps = {}) {
+    const [repos, setRepos] = useState<PublicRepo[]>(initialRepos);
+    const [contributions, setContributions] = useState<GitHubContribution[]>(initialContributions);
+    const [ghTotal, setGhTotal] = useState(initialGhTotal);
+    const [ghUpdated, setGhUpdated] = useState<number | null>(initialGhUpdated);
+    const [loading, setLoading] = useState(initialRepos.length === 0);
     const [error, setError] = useState<string | null>(null);
     const [filter, setFilter] = useState('ALL');
     const [sortBy, setSortBy] = useState<SortOption>('pushed');
@@ -520,11 +532,13 @@ export default function BuildsClient() {
     const [activeCategory, setActiveCategory] = useState<RepoCategory>('building');
 
     useEffect(() => {
+        if (initialRepos.length > 0) return;
+
         (async () => {
             try {
                 const [rRes, gRes] = await Promise.all([
-                    fetch(`/public-repos.json?t=${Date.now()}`),
-                    fetch(`/github-data.json?t=${Date.now()}`),
+                    fetch('/public-repos.json'),
+                    fetch('/github-data.json'),
                 ]);
 
                 if (!rRes.ok) throw new Error('Failed to load repos');
@@ -544,7 +558,7 @@ export default function BuildsClient() {
                 setLoading(false);
             }
         })();
-    }, []);
+    }, [initialRepos.length]);
 
     const languages = useMemo(
         () => ['ALL', ...Array.from(new Set(repos.map((r) => r.language).filter(Boolean)))],
@@ -624,7 +638,7 @@ export default function BuildsClient() {
     }
 
     return (
-        <div className="work-page fade-in">
+        <div className="work-page">
             <section className="atlas-hero">
                 <div className="hero-copy">
                     <span className="atlas-kicker">

@@ -29,7 +29,7 @@ export default function HomeClient({ initialPosts }: HomeClientProps) {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div className="home-container fade-in">
+        <div className="home-container">
             {/* --- HERO SECTION --- */}
             <header className="hero-section">
                 <div className="hero-main">
