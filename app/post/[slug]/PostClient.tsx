@@ -16,11 +16,12 @@ import { slugifyTag } from '@/lib/slug';
 import '@/components/features/terminal/SyntaxTheme.css';
 import './post.css';
 
+import Mermaid from '@/components/features/post/Mermaid';
+
 const TableOfContents = dynamic(() => import('@/components/features/post/TableOfContents'), { ssr: false });
 const ShareButtons = dynamic(() => import('@/components/features/post/ShareButtons'), { ssr: false });
 const ReadingProgress = dynamic(() => import('@/components/features/post/ReadingProgress'), { ssr: false });
 const ScrollToTop = dynamic(() => import('@/components/features/post/ScrollToTop'), { ssr: false });
-const Mermaid = dynamic(() => import('@/components/features/post/Mermaid'), { ssr: false });
 
 interface PostClientProps {
     post: Post;

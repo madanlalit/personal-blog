@@ -22,8 +22,6 @@ Personal blog built with Next.js, React, and TypeScript, featuring a retro termi
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Markdown](https://github.com/remarkjs/react-markdown) for rendering Markdown content
 - [Mermaid](https://mermaid.js.org/) for diagrams
-- [Framer Motion](https://www.framer.com/motion/) for animations
-- [ESLint](https://eslint.org/) for code linting
 
 ## Getting Started
 

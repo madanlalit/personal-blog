@@ -1,3 +1,30 @@
+interface CloudflareEnv {
+    ASSETS?: { fetch: (request: Request) => Promise<Response> };
+    [key: string]: unknown;
+}
+
+interface JsonRpcRequest {
+    jsonrpc?: string;
+    id?: unknown;
+    method?: string;
+    params?: {
+        name?: string;
+        arguments?: Record<string, unknown>;
+        [key: string]: unknown;
+    };
+    [key: string]: unknown;
+}
+
+interface BlogPostSummary {
+    title?: string;
+    seoTitle?: string;
+    excerpt?: string;
+    category?: string;
+    tags?: string[];
+    keywords?: string[];
+    [key: string]: unknown;
+}
+
 export const onRequest: PagesFunction = async (context) => {
     const { request, env } = context;
 
@@ -25,14 +52,14 @@ export const onRequest: PagesFunction = async (context) => {
     }
 
     if (request.method === 'POST') {
-        let body: any;
+        let body: JsonRpcRequest;
         try {
-            body = await request.json();
+            body = (await request.json()) as JsonRpcRequest;
         } catch {
             return jsonRpcError(null, -32700, 'Parse error');
         }
 
-        function jsonRpcResult(id: any, result: unknown) {
+        function jsonRpcResult(id: unknown, result: unknown) {
             return new Response(
                 JSON.stringify({
                     jsonrpc: '2.0',
@@ -43,7 +70,7 @@ export const onRequest: PagesFunction = async (context) => {
             );
         }
 
-        function jsonRpcError(id: any, code: number, message: string) {
+        function jsonRpcError(id: unknown, code: number, message: string) {
             return new Response(
                 JSON.stringify({
                     jsonrpc: '2.0',
@@ -125,12 +152,15 @@ export const onRequest: PagesFunction = async (context) => {
             case 'tools/call': {
                 const toolName = body.params?.name;
                 const args = body.params?.arguments || {};
+                const cloudflareEnv = env as CloudflareEnv;
+                const assetsFetcher = cloudflareEnv.ASSETS;
 
                 if (toolName === 'get_all_posts') {
                     try {
                         const postsUrl = new URL('/api/posts', request.url);
                         // Fetching static asset via local Pages ASSETS binding
-                        const res = await (env as any).ASSETS.fetch(new Request(postsUrl));
+                        if (!assetsFetcher) throw new Error('Failed to access ASSETS binding');
+                        const res = await assetsFetcher.fetch(new Request(postsUrl));
                         if (!res.ok) throw new Error('Failed to fetch posts from assets');
                         const posts = await res.json();
 
@@ -142,8 +172,9 @@ export const onRequest: PagesFunction = async (context) => {
                                 },
                             ],
                         });
-                    } catch (err: any) {
-                        return jsonRpcError(body.id, -32603, `Internal error fetching posts: ${err.message}`);
+                    } catch (err: unknown) {
+                        const message = err instanceof Error ? err.message : String(err);
+                        return jsonRpcError(body.id, -32603, `Internal error fetching posts: ${message}`);
                     }
                 }
 
@@ -156,9 +187,10 @@ export const onRequest: PagesFunction = async (context) => {
 
                     try {
                         const postsUrl = new URL('/api/posts', request.url);
-                        const res = await (env as any).ASSETS.fetch(new Request(postsUrl));
+                        if (!assetsFetcher) throw new Error('Failed to access ASSETS binding');
+                        const res = await assetsFetcher.fetch(new Request(postsUrl));
                         if (!res.ok) throw new Error('Failed to fetch posts from assets');
-                        const posts: any[] = await res.json();
+                        const posts = (await res.json()) as BlogPostSummary[];
 
                         const filtered = posts.filter((post) => {
                             const searchableText = [
@@ -184,8 +216,9 @@ export const onRequest: PagesFunction = async (context) => {
                                 },
                             ],
                         });
-                    } catch (err: any) {
-                        return jsonRpcError(body.id, -32603, `Internal error: ${err.message}`);
+                    } catch (err: unknown) {
+                        const message = err instanceof Error ? err.message : String(err);
+                        return jsonRpcError(body.id, -32603, `Internal error: ${message}`);
                     }
                 }
 
@@ -198,7 +231,8 @@ export const onRequest: PagesFunction = async (context) => {
 
                     try {
                         const postUrl = new URL(`/api/post/${encodeURIComponent(slug)}`, request.url);
-                        const res = await (env as any).ASSETS.fetch(new Request(postUrl));
+                        if (!assetsFetcher) throw new Error('Failed to access ASSETS binding');
+                        const res = await assetsFetcher.fetch(new Request(postUrl));
                         if (!res.ok) {
                             return jsonRpcError(body.id, -32602, `Post not found: ${slug}`);
                         }
@@ -212,8 +246,9 @@ export const onRequest: PagesFunction = async (context) => {
                                 },
                             ],
                         });
-                    } catch (err: any) {
-                        return jsonRpcError(body.id, -32603, `Internal error: ${err.message}`);
+                    } catch (err: unknown) {
+                        const message = err instanceof Error ? err.message : String(err);
+                        return jsonRpcError(body.id, -32603, `Internal error: ${message}`);
                     }
                 }
 

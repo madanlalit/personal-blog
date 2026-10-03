@@ -573,9 +573,11 @@ export default function BuildsClient() {
         return new Date(ghUpdated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }, [ghUpdated]);
 
+    const [now] = useState(() => Date.now());
+
     const activeCount = useMemo(
-        () => repos.filter((r) => !r.archived && Date.now() - new Date(r.pushedAt).getTime() < 90 * DAY_MS).length,
-        [repos],
+        () => repos.filter((r) => !r.archived && now - new Date(r.pushedAt).getTime() < 90 * DAY_MS).length,
+        [repos, now],
     );
 
     const totalStars = useMemo(() => repos.reduce((s, r) => s + r.stars, 0), [repos]);
