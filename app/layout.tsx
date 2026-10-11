@@ -5,6 +5,8 @@ import { getAllPostsMeta } from '@/lib/posts';
 import ClientShell from '@/components/ClientShell';
 import JsonLd from '@/components/JsonLd';
 import WebMCPProvider from '@/components/WebMCPProvider';
+import { PostHogProvider } from '@/components/PostHogProvider';
+import PostHogPageView from '@/components/PostHogPageView';
 import './globals.css';
 import './app.css';
 
@@ -81,11 +83,14 @@ export default function RootLayout({
     return (
         <html lang={SITE_CONFIG.language} className={`${jetbrainsMono.variable} ${jetbrainsMonoSecondary.variable}`}>
             <body>
-                <JsonLd />
-                <WebMCPProvider />
-                <ClientShell posts={posts}>
-                    {children}
-                </ClientShell>
+                <PostHogProvider>
+                    <PostHogPageView />
+                    <JsonLd />
+                    <WebMCPProvider />
+                    <ClientShell posts={posts}>
+                        {children}
+                    </ClientShell>
+                </PostHogProvider>
             </body>
         </html>
     );

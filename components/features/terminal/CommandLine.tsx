@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import posthog from 'posthog-js';
 import type { PostMeta } from '@/lib/types';
 import type { Theme } from '@/components/hooks/useTheme';
 import './CommandLine.css';
@@ -143,6 +144,12 @@ export default function CommandLine({
         setCommandHistory((prev) => [...prev, trimmed]);
         setHistoryIndex(-1);
         setTempInput('');
+
+        try {
+            posthog.capture('terminal_command', { command: trimmed });
+        } catch {
+            // Safe fallback if analytics not initialized
+        }
 
         const parts = trimmed.split(' ');
         const command = parts[0];
