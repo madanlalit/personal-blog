@@ -1,8 +1,58 @@
 {
-  "lastUpdated": 1791219299250,
+  "lastUpdated": 1791826242825,
   "repos": [
     {
       "id": "REPO-01",
+      "name": "agentskills",
+      "fullName": "madanlalit/agentskills",
+      "description": "A simple, focused repository of reusable skills for AI agents.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/agentskills",
+      "topics": [
+        "anthropic",
+        "claude",
+        "codex",
+        "gemini",
+        "grok",
+        "openai",
+        "skills"
+      ],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "createdAt": "2026-01-12T16:59:51Z",
+      "updatedAt": "2026-10-12T11:29:01Z",
+      "pushedAt": "2026-10-12T11:28:57Z"
+    },
+    {
+      "id": "REPO-02",
+      "name": "cpython",
+      "fullName": "madanlalit/cpython",
+      "description": "The Python programming language",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/cpython",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": true,
+      "homepage": "https://www.python.org",
+      "createdAt": "2026-05-01T02:20:59Z",
+      "updatedAt": "2026-10-12T04:52:09Z",
+      "pushedAt": "2026-10-12T04:49:10Z"
+    },
+    {
+      "id": "REPO-03",
       "name": "personal-blog",
       "fullName": "madanlalit/personal-blog",
       "description": "A retro-style personal blog with an interactive terminal interface.",
@@ -19,11 +69,11 @@
       "fork": false,
       "homepage": "https://lalitmadan.com",
       "createdAt": "2025-12-13T07:34:33Z",
-      "updatedAt": "2026-10-03T15:28:23Z",
-      "pushedAt": "2026-10-03T15:28:19Z"
+      "updatedAt": "2026-10-11T18:21:06Z",
+      "pushedAt": "2026-10-11T18:21:03Z"
     },
     {
-      "id": "REPO-02",
+      "id": "REPO-04",
       "name": "pdfcn",
       "fullName": "madanlalit/pdfcn",
       "description": "Beautiful pdf components, built on Takumi and Forme. 100% Free, Zero config, one command setup.",
@@ -44,7 +94,7 @@
       "pushedAt": "2026-09-22T12:55:40Z"
     },
     {
-      "id": "REPO-03",
+      "id": "REPO-05",
       "name": "pi-cursor-themes",
       "fullName": "madanlalit/pi-cursor-themes",
       "description": "Cursor IDE themes (Light, Dark & Dark Midnight) for the pi coding agent",
@@ -65,7 +115,7 @@
       "pushedAt": "2026-09-12T16:07:15Z"
     },
     {
-      "id": "REPO-04",
+      "id": "REPO-06",
       "name": "dsa-resources",
       "fullName": "madanlalit/dsa-resources",
       "description": "No description available",
@@ -86,7 +136,7 @@
       "pushedAt": "2026-09-12T16:07:10Z"
     },
     {
-      "id": "REPO-05",
+      "id": "REPO-07",
       "name": "pi-phoenix-otel",
       "fullName": "madanlalit/pi-phoenix-otel",
       "description": "Zero-dependency OpenTelemetry tracing for the Pi coding agent stream sessions to Arize Phoenix and see every prompt, tool call, token & cost.",
@@ -113,7 +163,7 @@
       "pushedAt": "2026-09-08T05:17:54Z"
     },
     {
-      "id": "REPO-06",
+      "id": "REPO-08",
       "name": "pydantic-ai",
       "fullName": "madanlalit/pydantic-ai",
       "description": "GenAI Agent Framework, the Pydantic way",
@@ -134,7 +184,7 @@
       "pushedAt": "2026-09-06T05:01:11Z"
     },
     {
-      "id": "REPO-07",
+      "id": "REPO-09",
       "name": "opentraces",
       "fullName": "madanlalit/opentraces",
       "description": "Sell your coding agent's traces. ot push → scrubbed training data for labs.",
@@ -155,28 +205,7 @@
       "pushedAt": "2026-09-05T12:29:00Z"
     },
     {
-      "id": "REPO-08",
-      "name": "cpython",
-      "fullName": "madanlalit/cpython",
-      "description": "The Python programming language",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/cpython",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://www.python.org",
-      "createdAt": "2026-05-01T02:20:59Z",
-      "updatedAt": "2026-09-03T01:52:41Z",
-      "pushedAt": "2026-09-03T01:51:30Z"
-    },
-    {
-      "id": "REPO-09",
+      "id": "REPO-10",
       "name": "netpulse",
       "fullName": "madanlalit/netpulse",
       "description": "Lightweight macOS menu bar network speed monitor",
@@ -197,7 +226,7 @@
       "pushedAt": "2026-08-22T18:05:12Z"
     },
     {
-      "id": "REPO-10",
+      "id": "REPO-11",
       "name": "system-design-notes",
       "fullName": "madanlalit/system-design-notes",
       "description": "Notes of the book System Desgin Interview - An Insider's Guide",
@@ -216,35 +245,6 @@
       "createdAt": "2026-08-11T17:57:14Z",
       "updatedAt": "2026-08-11T17:57:14Z",
       "pushedAt": "2026-06-02T14:41:55Z"
-    },
-    {
-      "id": "REPO-11",
-      "name": "agentskills",
-      "fullName": "madanlalit/agentskills",
-      "description": "A simple, focused repository of reusable skills for AI agents.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/agentskills",
-      "topics": [
-        "anthropic",
-        "claude",
-        "codex",
-        "gemini",
-        "grok",
-        "openai",
-        "skills"
-      ],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": false,
-      "homepage": null,
-      "createdAt": "2026-01-12T16:59:51Z",
-      "updatedAt": "2026-08-04T08:10:43Z",
-      "pushedAt": "2026-08-04T08:10:16Z"
     },
     {
       "id": "REPO-12",
