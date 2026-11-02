@@ -1,8 +1,50 @@
 {
-  "lastUpdated": 1793026567610,
+  "lastUpdated": 1793642296404,
   "repos": [
     {
       "id": "REPO-01",
+      "name": "graphify",
+      "fullName": "madanlalit/graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/graphify",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": true,
+      "homepage": "https://www.graphify.com",
+      "createdAt": "2026-10-21T20:09:24Z",
+      "updatedAt": "2026-10-27T07:14:41Z",
+      "pushedAt": "2026-10-27T08:05:00Z"
+    },
+    {
+      "id": "REPO-02",
+      "name": "personal-blog",
+      "fullName": "madanlalit/personal-blog",
+      "description": "A retro-style personal blog with an interactive terminal interface.",
+      "language": "TypeScript",
+      "stars": 4,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/personal-blog",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": "https://lalitmadan.com",
+      "createdAt": "2025-12-13T07:34:33Z",
+      "updatedAt": "2026-10-26T14:56:15Z",
+      "pushedAt": "2026-10-26T14:56:11Z"
+    },
+    {
+      "id": "REPO-03",
       "name": "multica",
       "fullName": "madanlalit/multica",
       "description": "Make humans and AI agents work as one team — open-source and self-hostable.",
@@ -20,31 +62,10 @@
       "homepage": "https://multica.ai",
       "createdAt": "2026-10-25T02:06:48Z",
       "updatedAt": "2026-10-25T02:06:49Z",
-      "pushedAt": "2026-10-25T03:07:39Z"
+      "pushedAt": "2026-10-28T08:50:05Z"
     },
     {
-      "id": "REPO-02",
-      "name": "graphify",
-      "fullName": "madanlalit/graphify",
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "language": "Unknown",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/graphify",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": true,
-      "homepage": "https://www.graphify.com",
-      "createdAt": "2026-10-21T20:09:24Z",
-      "updatedAt": "2026-10-21T20:09:24Z",
-      "pushedAt": "2026-10-23T23:09:53Z"
-    },
-    {
-      "id": "REPO-03",
+      "id": "REPO-04",
       "name": "agentskills",
       "fullName": "madanlalit/agentskills",
       "description": "A simple, focused repository of reusable skills for AI agents.",
@@ -73,7 +94,7 @@
       "pushedAt": "2026-10-21T14:40:17Z"
     },
     {
-      "id": "REPO-04",
+      "id": "REPO-05",
       "name": "pi-phoenix-otel",
       "fullName": "madanlalit/pi-phoenix-otel",
       "description": "Zero-dependency OpenTelemetry tracing for the Pi coding agent stream sessions to Arize Phoenix and see every prompt, tool call, token & cost.",
@@ -98,27 +119,6 @@
       "createdAt": "2026-08-22T20:04:04Z",
       "updatedAt": "2026-10-21T14:11:23Z",
       "pushedAt": "2026-10-21T14:11:19Z"
-    },
-    {
-      "id": "REPO-05",
-      "name": "personal-blog",
-      "fullName": "madanlalit/personal-blog",
-      "description": "A retro-style personal blog with an interactive terminal interface.",
-      "language": "TypeScript",
-      "stars": 4,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/personal-blog",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": false,
-      "homepage": "https://lalitmadan.com",
-      "createdAt": "2025-12-13T07:34:33Z",
-      "updatedAt": "2026-10-19T15:22:04Z",
-      "pushedAt": "2026-10-19T15:21:17Z"
     },
     {
       "id": "REPO-06",
