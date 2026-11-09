@@ -1,8 +1,29 @@
 {
-  "lastUpdated": 1793642296404,
+  "lastUpdated": 1794248899347,
   "repos": [
     {
       "id": "REPO-01",
+      "name": "personal-blog",
+      "fullName": "madanlalit/personal-blog",
+      "description": "A retro-style personal blog with an interactive terminal interface.",
+      "language": "TypeScript",
+      "stars": 4,
+      "forks": 0,
+      "url": "https://github.com/madanlalit/personal-blog",
+      "topics": [],
+      "owner": {
+        "login": "madanlalit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
+      },
+      "archived": false,
+      "fork": false,
+      "homepage": "https://lalitmadan.com",
+      "createdAt": "2025-12-13T07:34:33Z",
+      "updatedAt": "2026-11-02T17:58:25Z",
+      "pushedAt": "2026-11-02T17:58:20Z"
+    },
+    {
+      "id": "REPO-02",
       "name": "graphify",
       "fullName": "madanlalit/graphify",
       "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
@@ -20,28 +41,7 @@
       "homepage": "https://www.graphify.com",
       "createdAt": "2026-10-21T20:09:24Z",
       "updatedAt": "2026-10-27T07:14:41Z",
-      "pushedAt": "2026-10-27T08:05:00Z"
-    },
-    {
-      "id": "REPO-02",
-      "name": "personal-blog",
-      "fullName": "madanlalit/personal-blog",
-      "description": "A retro-style personal blog with an interactive terminal interface.",
-      "language": "TypeScript",
-      "stars": 4,
-      "forks": 0,
-      "url": "https://github.com/madanlalit/personal-blog",
-      "topics": [],
-      "owner": {
-        "login": "madanlalit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116655920?v=4"
-      },
-      "archived": false,
-      "fork": false,
-      "homepage": "https://lalitmadan.com",
-      "createdAt": "2025-12-13T07:34:33Z",
-      "updatedAt": "2026-10-26T14:56:15Z",
-      "pushedAt": "2026-10-26T14:56:11Z"
+      "pushedAt": "2026-11-09T13:26:04Z"
     },
     {
       "id": "REPO-03",
